@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Index from '@/page-components/Index';
 
+// ─── SEO Metadata ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Centience — AI & Technology Governance for Regulated Organizations",
-  description: "Centience implements, integrates, and manages technology governance for regulated organizations — infrastructure, cybersecurity, and AI. We work alongside your existing CISO, vCISO, CTO, or outside firm. Full management or co-management.",
-  keywords: ["AI governance", "technology governance", "cybersecurity governance", "regulated organizations", "co-managed IT", "CISO collaboration", "compliance", "NIST AI RMF", "ISO 42001", "SEC FINRA HIPAA"],
+  description: "Centience implements, integrates, and manages AI governance, cybersecurity, and infrastructure for regulated organizations. We work with your existing CISO, vCISO, or outside firm. Full management or co-management available.",
+  keywords: ["AI governance","technology governance","cybersecurity governance","regulated organizations","compliance","NIST AI RMF","ISO 42001","co-managed IT","vCISO partner","SEC compliance","FINRA compliance","HIPAA compliance"],
   alternates: { canonical: "https://centience.ai/" },
   openGraph: {
     title: "Centience — AI & Technology Governance for Regulated Organizations",
-    description: "We implement, integrate, and manage technology governance for regulated organizations — working alongside your existing team or taking the lead. Full management or co-management.",
+    description: "Centience implements, integrates, and manages AI governance, cybersecurity, and infrastructure for regulated organizations. Full management or co-management with your existing team.",
     url: "https://centience.ai/",
     type: 'website',
     siteName: 'Centience',
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Centience — AI & Technology Governance for Regulated Organizations",
-    description: "We implement, integrate, and manage technology governance for regulated organizations. Full management or co-management available.",
+    description: "Centience implements, integrates, and manages AI governance, cybersecurity, and infrastructure for regulated organizations.",
     images: ["https://centience.ai/og-image.png"],
   },
 };
