@@ -2,13 +2,14 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
-import { ArrowRight, Server, Monitor, Cloud, HardDrive, RefreshCw, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Server, Monitor, Cloud, RefreshCw, Users, CheckCircle2 } from "lucide-react";
 
 const capabilities = [
-  { icon: Server, title: "Managed Infrastructure Platform", description: "Fully managed infrastructure with proactive monitoring, patch management, and performance optimization — the foundation of the governance program." },
-  { icon: Monitor, title: "Infrastructure Monitoring & Resilience", description: "24/7 monitoring with defined SLAs, uptime commitments, and automated alerting to ensure infrastructure remains resilient and available." },
-  { icon: Cloud, title: "Endpoint & Cloud Management", description: "Centralized management of endpoints, cloud environments, and hybrid infrastructure with governance controls and compliance tracking." },
-  { icon: RefreshCw, title: "Disaster Recovery Governance", description: "Documented disaster recovery procedures, regular testing, and governance oversight ensuring business continuity plans meet regulatory expectations." },
+  { icon: Server, title: "Managed Infrastructure Platform", description: "Fully managed infrastructure with proactive monitoring, patch management, and performance optimization. We implement and manage your environment daily — the foundation the governance program is built on." },
+  { icon: Monitor, title: "Infrastructure Monitoring & Resilience", description: "24/7 monitoring with defined SLAs, uptime commitments, and automated alerting. We manage this operationally and integrate monitoring into your broader governance reporting." },
+  { icon: Cloud, title: "Endpoint & Cloud Management", description: "Centralized implementation and management of endpoints, cloud environments, and hybrid infrastructure — with governance controls and compliance tracking maintained continuously." },
+  { icon: RefreshCw, title: "Disaster Recovery Governance", description: "We implement documented disaster recovery procedures, manage regular testing, and maintain governance oversight — ensuring your business continuity plans meet regulatory expectations and are tested, not just documented." },
+  { icon: Users, title: "Co-Management Program", description: "For organizations with internal IT resources, Centience offers co-managed infrastructure governance. We integrate into your existing team structure, manage the governance and compliance layer, and ensure the whole environment meets regulatory standards — without replacing your internal team." },
 ];
 
 const stats = [
@@ -32,10 +33,10 @@ const InfrastructurePage = () => (
             Infrastructure <span className="text-gradient-gold">Governance</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Centience manages computers, networks, cloud environments, endpoints, and disaster recovery systems — all governed to meet your specific regulatory requirements. This is not infrastructure monitoring from the outside. We own and operate the environment.
+            We implement and manage your infrastructure — computers, networks, cloud environments, endpoints, and disaster recovery — as the operational foundation your entire governance program runs on.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Managed infrastructure providing the resilient, monitored foundation that the entire governance program is built upon — ensuring technology environments remain compliant, available, and audit-ready.
+            Full management or co-management with your existing IT team. Either way, every device, server, and cloud resource is inventoried, implemented to governance standards, integrated into monitoring, and maintained daily.
           </p>
           <Button variant="cta" size="xl" asChild>
             <Link href="/ai-governance-risk-assessment">Schedule Infrastructure Assessment <ArrowRight size={16} /></Link>
@@ -58,19 +59,19 @@ const InfrastructurePage = () => (
       </div>
     </section>
 
-    {/* Why Foundation Matters */}
+    {/* Foundation */}
     <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto max-w-3xl">
         <div className="flex items-center gap-3 mb-4">
           <div className="gold-line" />
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Foundation</p>
         </div>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Governance Starts With Infrastructure</h2>
-        <p className="text-muted-foreground leading-relaxed mb-6">
-          You can't govern what you can't see or control. Infrastructure governance is the foundational layer — providing the visibility, stability, and control that cybersecurity and AI governance programs depend on.
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">You Can't Govern What Nobody Is Managing</h2>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Infrastructure governance is the foundational layer. Cybersecurity controls, AI governance programs, and compliance frameworks are only enforceable if the infrastructure they run on is managed, monitored, and controlled every day.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          Our managed infrastructure platform ensures that every device, server, and cloud resource is inventoried, monitored, and maintained to governance standards before layering cybersecurity and AI oversight on top.
+          For organizations with existing internal IT teams, we offer co-management — handling the governance layer, compliance controls, and documentation while your internal team manages day-to-day operations. We integrate with your existing environment, not around it.
         </p>
       </div>
     </section>
@@ -85,7 +86,6 @@ const InfrastructurePage = () => (
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Infrastructure Governance Program</h2>
         </div>
-
         <div className="grid md:grid-cols-2 gap-6">
           {capabilities.map((cap, i) => (
             <motion.div key={cap.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="card-premium p-8">
@@ -103,8 +103,8 @@ const InfrastructurePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Build a Resilient Foundation</h2>
-        <p className="text-lg opacity-70 mb-10">Start with an infrastructure assessment to evaluate your current environment and establish the governance foundation your organization needs.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Full Management or Co-Management — Built Around Your Team</h2>
+        <p className="text-lg opacity-70 mb-10">We work with your existing infrastructure or build from scratch. Either way, the governance is enforced at the infrastructure level.</p>
         <Button variant="cta" size="xl" asChild>
           <Link href="/ai-governance-risk-assessment">Schedule Assessment <ArrowRight size={16} /></Link>
         </Button>
