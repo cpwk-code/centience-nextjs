@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Server, Lock, BarChart3, Brain } from "lucide-react";
@@ -52,12 +52,12 @@ const HeroSection = () => (
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 w-full">
             <Button variant="cta" size="xl" asChild className="w-full sm:w-auto">
-              <Link to="/ai-governance-risk-assessment">
+              <Link href="/ai-governance-risk-assessment">
                 Book Your AI Governance Assessment <ArrowRight size={16} />
               </Link>
             </Button>
             <Button variant="cta-outline" size="xl" asChild className="w-full sm:w-auto">
-              <Link to="/ai-governance-risk-assessment">Download the AI Governance Guide</Link>
+              <Link href="/ai-governance-risk-assessment">Download the AI Governance Guide</Link>
             </Button>
           </div>
 

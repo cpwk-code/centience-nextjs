@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import centienceLogoLight from "@/assets/centience-logo-light.png";
@@ -127,7 +127,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 lg:h-36">
-        <Link to="/" className="flex items-center gap-3 shrink-0">
+        <Link href="/" className="flex items-center gap-3 shrink-0">
           <img
             src={scrolled ? centienceLogoLight : centienceLogoDark}
             alt="Centience — AI & Technology Governance"
@@ -164,7 +164,7 @@ const Navbar = () => {
           </a>
           <span className={`text-xs ${scrolled ? "text-foreground/20" : "text-warm-white/20"}`}>|</span>
           <Button variant="cta-nav" size="sm" asChild className="whitespace-nowrap shrink-0">
-            <Link to="/ai-governance-risk-assessment">Book Assessment</Link>
+            <Link href="/ai-governance-risk-assessment">Book Assessment</Link>
           </Button>
         </div>
 
@@ -239,7 +239,7 @@ const Navbar = () => {
                 (877) 945-7177
               </a>
               <Button variant="cta" size="default" className="w-full" asChild>
-                <Link to="/ai-governance-risk-assessment">Book Your Assessment</Link>
+                <Link href="/ai-governance-risk-assessment">Book Your Assessment</Link>
               </Button>
             </div>
           </nav>
