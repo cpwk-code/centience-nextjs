@@ -1,2 +1,3 @@
-# centience-nextjs
-Centience.ai Next.js SSR site with full SEO optimization
+# Centience Next.js
+
+SSR site for centience.ai — AI & Technology Governance for Regulated Organizations.
