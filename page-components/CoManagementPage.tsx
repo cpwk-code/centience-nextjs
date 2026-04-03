@@ -1,39 +1,44 @@
 "use client";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Users, Shield, Cpu, Building2, CheckCircle2, HandshakeIcon } from "lucide-react";
+import { ArrowRight, Users, Shield, Cpu, Building2, CheckCircle2, Handshake } from "lucide-react";
 
 const models = [
   {
+    icon: Building2,
     label: "Model 1",
     title: "Governance Layer Over Internal IT",
     you: "An internal IT team managing day-to-day operations.",
-    gap: "No structured governance layer — controls aren't documented, evidence isn't collected, audit readiness depends on scrambling before an exam.",
-    centience: "We implement the governance program on top of your existing infrastructure. Your internal IT team continues managing day-to-day operations. We own the governance layer — controls documentation, compliance tracking, AI oversight, security posture reporting, and audit-ready evidence collection.",
+    gap: "No structured governance layer — controls aren't documented, evidence isn't collected, and audit readiness depends on scrambling before an exam.",
+    how: "We implement the governance program on top of your existing infrastructure. Your internal IT team continues managing day-to-day operations. We own the governance layer — controls documentation, compliance tracking, AI oversight, security posture reporting, and audit-ready evidence collection.",
   },
   {
+    icon: Shield,
     label: "Model 2",
     title: "Implementation Arm for Security Leadership",
     you: "A CISO, vCISO, or outside security firm setting strategy and direction.",
     gap: "No operational arm to implement the controls, manage the infrastructure, and maintain day-to-day execution.",
-    centience: "Your security leader sets the program. We implement it. We manage the infrastructure, deploy the controls, maintain continuous monitoring, and deliver the documentation and evidence your security leader needs to report to leadership and regulators.",
+    how: "Your security leader sets the program. We implement it. We manage the infrastructure, deploy the controls, maintain continuous monitoring, and deliver the documentation and evidence your security leader needs to report to leadership and regulators.",
   },
   {
+    icon: Handshake,
     label: "Model 3",
     title: "Partner Co-Delivery",
-    you: "An outside firm — compliance consultant, fractional CISO, cybersecurity advisory firm, or technology partner — already engaged with the client.",
+    you: "An outside firm — compliance consultant, fractional CISO, cybersecurity advisory, or technology partner — already engaged with the client.",
     gap: "The engagement needs an implementation and managed operations layer the outside firm doesn't provide.",
-    centience: "We co-deliver with the referring partner. The partner retains the client relationship and advisory role. Centience handles implementation, managed infrastructure, security governance operations, and AI program management. The partner relationship is protected — always.",
+    how: "We co-deliver with the referring partner. The partner retains the client relationship and advisory role. Centience handles implementation, managed infrastructure, security governance operations, and AI program management. The client gets a complete program. The partner relationship is protected — always.",
   },
 ];
 
-const whoWeWorkWith = [
-  { icon: Shield, title: "CISOs and vCISOs", description: "We handle implementation and operational management so your security leader can focus on strategy and oversight." },
-  { icon: Users, title: "CTOs and IT Leadership", description: "We implement technical controls that align with your organizational direction and integrate into your existing stack." },
-  { icon: Building2, title: "Outside Security Firms", description: "We serve as the managed implementation and operations arm for firms that advise but don't operate day-to-day." },
-  { icon: Cpu, title: "Compliance and Legal Counsel", description: "We ensure security posture and documentation maps directly to your regulatory obligations." },
+const partners = [
+  { title: "CISOs & vCISOs", body: "We handle implementation and operational management so your security leader can focus on strategy and oversight." },
+  { title: "CTOs & IT Leadership", body: "We implement technical controls that align with your organizational direction and integrate into your existing stack." },
+  { title: "Outside Security Firms", body: "We serve as the managed implementation and operations arm for firms that advise but don't operate day-to-day." },
+  { title: "Compliance & Legal Counsel", body: "We ensure security posture and documentation maps directly to your regulatory obligations." },
+  { title: "MSPs & Technology Partners", body: "We provide the AI governance, cybersecurity governance, and compliance layer on top of your managed environment." },
+  { title: "Fractional CTOs", body: "You define the technology direction. Centience implements the governance around it — compliant, documented, and audit-ready." },
 ];
 
 const CoManagementPage = () => (
@@ -48,7 +53,8 @@ const CoManagementPage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">How We Work</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            We Work With Your Team — <span className="text-gradient-gold">Not Around It</span>
+            We Work With Your Team —{" "}
+            <span className="text-gradient-gold">Not Around It</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
             Centience is built for co-management. Whether you have an internal IT team, an existing CISO or vCISO, a CTO driving strategy, or an outside firm already engaged — we implement, integrate, and manage the governance layer alongside the people and relationships already in place.
@@ -61,14 +67,14 @@ const CoManagementPage = () => (
               <Link href="/ai-governance-risk-assessment">Book a Governance Assessment <ArrowRight size={16} /></Link>
             </Button>
             <Button variant="outline" size="xl" asChild>
-              <Link href="/partners">Partner With Us <ArrowRight size={16} /></Link>
+              <Link href="/partners">Partner With Centience <ArrowRight size={16} /></Link>
             </Button>
           </div>
         </motion.div>
       </div>
     </section>
 
-    {/* How It Works */}
+    {/* How it works intro */}
     <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto max-w-3xl">
         <div className="flex items-center gap-3 mb-4">
@@ -77,7 +83,7 @@ const CoManagementPage = () => (
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Built Around Your Existing Structure</h2>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          Every organization arrives with a different team configuration. Some have internal IT but no governance layer. Some have a vCISO who sets strategy but no operational arm to execute. Some have an outside firm on compliance but nothing managing the infrastructure underneath it.
+          Every organization arrives with a different team configuration. Some have internal IT but no governance layer. Some have a vCISO who sets strategy but no operational arm to execute. Some have an outside firm engaged on compliance but nothing managing the infrastructure underneath it.
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Centience maps your existing team first. Then we identify precisely where governance execution and oversight are missing — and plug in there. Nothing more, nothing displaced.
@@ -85,33 +91,8 @@ const CoManagementPage = () => (
       </div>
     </section>
 
-    {/* Who We Work With */}
+    {/* Three models */}
     <section className="py-24 lg:py-32 bg-muted">
-      <div className="container mx-auto">
-        <div className="max-w-2xl mb-16">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="gold-line" />
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Collaboration</p>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Who We Work Alongside</h2>
-          <p className="text-muted-foreground leading-relaxed">Full co-management available. If your organization has partial security coverage and needs operational execution and governance enforcement for the rest — that's exactly where Centience operates.</p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          {whoWeWorkWith.map((item, i) => (
-            <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="card-premium p-8">
-              <div className="w-11 h-11 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-5">
-                <item.icon size={20} />
-              </div>
-              <h3 className="font-display font-bold text-primary text-lg mb-3">{item.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* Three Models */}
-    <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto">
         <div className="max-w-2xl mb-16">
           <div className="flex items-center gap-3 mb-4">
@@ -119,25 +100,28 @@ const CoManagementPage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Engagement Models</p>
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Three Co-Management Models</h2>
-          <p className="text-muted-foreground leading-relaxed">We structure every engagement around your existing team — not a fixed service package.</p>
+          <p className="text-muted-foreground leading-relaxed">We structure the engagement around your team — not the other way around.</p>
         </div>
-        <div className="space-y-8">
+        <div className="grid lg:grid-cols-3 gap-6">
           {models.map((model, i) => (
-            <motion.div key={model.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="card-premium p-8 lg:p-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent mb-3">{model.label}</p>
-              <h3 className="font-display font-bold text-primary text-xl mb-6">{model.title}</h3>
-              <div className="grid md:grid-cols-3 gap-6">
+            <motion.div key={model.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="card-premium p-8 flex flex-col">
+              <div className="w-11 h-11 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-5">
+                <model.icon size={20} />
+              </div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">{model.label}</p>
+              <h3 className="font-display font-bold text-primary text-xl mb-6 leading-tight">{model.title}</h3>
+              <div className="space-y-4 flex-1">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">You Have</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">You have</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">{model.you}</p>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">The Gap</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">The gap</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">{model.gap}</p>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Centience Plugs In</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{model.centience}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-1">How Centience plugs in</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{model.how}</p>
                 </div>
               </div>
             </motion.div>
@@ -146,8 +130,8 @@ const CoManagementPage = () => (
       </div>
     </section>
 
-    {/* AI Co-Management */}
-    <section className="py-24 lg:py-32 bg-muted">
+    {/* AI — We Lead */}
+    <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
@@ -156,27 +140,33 @@ const CoManagementPage = () => (
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">AI Governance</p>
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">AI Governance — We Lead</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              For AI implementation, integration, and governance management, Centience takes the lead. AI governance in regulated environments requires a single accountable operator who understands both the regulatory requirements and the technical environment.
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              For AI implementation, integration, and governance management, Centience takes the lead. This is deliberate. AI governance in regulated environments requires a single accountable operator who understands both the regulatory requirements and the technical environment.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Fragmented AI governance — where strategy, implementation, and monitoring are split across multiple parties — creates gaps that regulators find. Centience owns the operational governance of AI. That accountability is what makes the program enforceable and defensible.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Your existing team — internal IT, vCISO, compliance counsel, outside firms — remains involved and informed. Centience owns the operational governance of AI. That accountability is what makes the program enforceable and defensible.
+              Your existing team remains involved and informed. We run the program.
             </p>
           </div>
           <div className="card-premium p-8">
             <Cpu size={24} className="text-accent mb-5" />
-            <h3 className="font-display font-bold text-primary text-lg mb-4">What AI Leadership Covers</h3>
-            <ul className="space-y-3">
+            <h3 className="font-display font-bold text-primary text-lg mb-5">What AI Leadership Looks Like</h3>
+            <ul className="space-y-4">
               {[
-                "Discovery — identify all AI usage, sanctioned and unsanctioned",
-                "Framework — build governance aligned to NIST AI RMF and regulatory requirements",
-                "Implementation — deploy approved AI tools inside your governed infrastructure",
-                "Integration — connect AI to your existing workflows and systems",
-                "Day-to-day management — monitoring, enforcement, vendor evaluation, and reporting",
-              ].map((item) => (
-                <li key={item} className="text-sm text-muted-foreground flex items-start gap-3">
-                  <CheckCircle2 size={14} className="text-accent mt-0.5 shrink-0" />
-                  {item}
+                ["Discovery", "We identify all AI usage across the organization — sanctioned and unsanctioned."],
+                ["Framework", "We build the governance framework aligned to NIST AI RMF, ISO/IEC 42001, and applicable regulatory requirements."],
+                ["Implementation", "We deploy approved AI tools inside your governed infrastructure."],
+                ["Integration", "We connect AI capabilities to your existing workflows and systems."],
+                ["Day-to-day management", "We run the program operationally — monitoring, enforcement, vendor evaluation, regulatory tracking, and reporting."],
+              ].map(([label, desc]) => (
+                <li key={label} className="flex items-start gap-3">
+                  <CheckCircle2 size={14} className="text-accent mt-1 shrink-0" />
+                  <div>
+                    <p className="text-sm font-semibold text-primary">{label}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -185,22 +175,38 @@ const CoManagementPage = () => (
       </div>
     </section>
 
-    {/* Partner Reference */}
-    <section className="py-20 lg:py-24 bg-background border-t border-border">
-      <div className="container mx-auto max-w-3xl">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="gold-line" />
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">For Partners</p>
+    {/* Who we work with */}
+    <section className="py-24 lg:py-32 bg-muted">
+      <div className="container mx-auto">
+        <div className="max-w-2xl mb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="gold-line" />
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Who We Work With</p>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">We Fit Into Your Team — Whatever That Looks Like</h2>
         </div>
-        <h2 className="text-3xl font-display font-bold text-primary mb-5">Referring a Client? Here's How We Protect the Relationship.</h2>
-        <p className="text-muted-foreground leading-relaxed mb-6">
-          Centience is built to work alongside the partners who introduce us. We don't displace existing relationships — we extend them. When a partner refers a client into a co-managed engagement, the partner retains their advisory role and client relationship. Centience handles the implementation and governance operations layer.
-        </p>
-        <p className="text-muted-foreground leading-relaxed mb-8">
-          We operate with a formal partner program covering referral arrangements, co-delivery structures, and commission terms.
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {partners.map((p, i) => (
+            <motion.div key={p.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="card-premium p-6">
+              <Users size={18} className="text-accent mb-4" />
+              <h3 className="font-display font-bold text-primary text-base mb-2">{p.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{p.body}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Partner reference */}
+    <section className="py-20 bg-background border-y border-border">
+      <div className="container mx-auto max-w-3xl text-center">
+        <Handshake size={32} className="text-accent mx-auto mb-5" />
+        <h2 className="text-2xl md:text-3xl font-display font-bold text-primary mb-4">Referring a Client? We Protect the Relationship.</h2>
+        <p className="text-muted-foreground leading-relaxed mb-8 max-w-xl mx-auto">
+          Centience is built to work alongside the partners who introduce us. We don't displace existing relationships — we extend them. When a partner refers a client into a co-managed engagement, the partner retains their advisory role and client relationship.
         </p>
         <Button variant="outline" size="lg" asChild>
-          <Link href="/partners">Learn More About the Partner Program <ArrowRight size={16} /></Link>
+          <Link href="/partners">Learn About the Partner Program <ArrowRight size={16} /></Link>
         </Button>
       </div>
     </section>
@@ -209,7 +215,7 @@ const CoManagementPage = () => (
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Let's Map Where Centience Fits In Your Structure</h2>
-        <p className="text-lg opacity-70 mb-10">Every co-management engagement starts with a governance assessment — including a mapping of your existing team and outside relationships. No displacement. No disruption. Just governance that works.</p>
+        <p className="text-lg opacity-70 mb-10">Every co-management engagement starts with a governance assessment — including a mapping of your existing team. We identify the gaps, propose where we plug in, and build a program around your structure.</p>
         <Button variant="cta" size="xl" asChild>
           <Link href="/ai-governance-risk-assessment">Book Your Governance Assessment <ArrowRight size={16} /></Link>
         </Button>
