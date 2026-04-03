@@ -1,82 +1,78 @@
 "use client";
-'use client';
-import { Mail, Phone, ArrowUpRight, Linkedin, Facebook, Youtube } from "lucide-react";
+import { Mail, Phone, ArrowUpRight, Linkedin, Youtube } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import logo from "@/assets/logo-white.png";
+import Image from "next/image";
+import logo from "@/assets/centience-logo-dark.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { label: "Cybersecurity & Compliance", href: "/services/cybersecurity" },
-    { label: "Managed IT Services", href: "/services/managed-it-services" },
-    { label: "Cloud Solutions", href: "/services/cloud-solutions" },
-    { label: "Disaster Recovery", href: "/services/disaster-recovery" },
-    { label: "AI Governance & Compliance", href: "/services/ai-compliance" },
-    { label: "AI Integration", href: "/services/ai-integration" },
-    { label: "Communication Compliance", href: "/services/communication-compliance" },
-    { label: "GRC", href: "/services/grc" },
-    { label: "24/7 Help Desk", href: "/services/help-desk" },
+    { label: "AI Governance", href: "/ai-governance" },
+    { label: "Cybersecurity Governance", href: "/cybersecurity" },
+    { label: "Infrastructure Governance", href: "/infrastructure" },
+    { label: "Technology Governance", href: "/governance" },
+    { label: "Co-Management", href: "/co-management" },
   ];
 
   const industries = [
+    { label: "Accounting & CPA", href: "/industries/accounting-cpa" },
     { label: "Financial Services", href: "/industries/financial-services" },
     { label: "Healthcare", href: "/industries/healthcare" },
-    { label: "Legal", href: "/industries/legal" },
-    { label: "Professional Services", href: "/industries/professional-services" },
+    { label: "Law Firms", href: "/industries/law-firms" },
     { label: "Non-Profit", href: "/industries/non-profit" },
+    { label: "Private Equity", href: "/industries/private-equity" },
   ];
 
   const company = [
-    { label: "About Us", href: "/about" },
+    { label: "About", href: "/about" },
+    { label: "Partners", href: "/partners" },
     { label: "Contact", href: "/contact" },
-    { label: "Blogs", href: "/blogs" },
-    { label: "Risk Assessment", href: "/free-risk-assessment" },
-    { label: "Referral Program", href: "/referral" },
+    { label: "Insights", href: "/insights" },
   ];
 
-  const locations = [
-    { label: "West Palm Beach", href: "/locations/managed-it-services-west-palm-beach" },
-    { label: "Boca Raton", href: "/locations/managed-it-services-boca-raton" },
-    { label: "Florida", href: "/locations/managed-it-services-florida" },
-    { label: "New York", href: "/locations/managed-it-services-new-york" },
-    { label: "Miami", href: "/locations/managed-it-services-miami" },
+  const resources = [
+    { label: "Governance Guides", href: "/resources/guides" },
+    { label: "Industry Assessments", href: "/resources/assessments" },
+    { label: "Newsletter", href: "/resources/newsletter" },
+    { label: "AI Governance Assessment", href: "/ai-governance-risk-assessment" },
   ];
 
   return (
-    <footer id="contact" className="bg-primary py-20 relative overflow-hidden">
-      {/* Background Pattern */}
+    <footer className="bg-primary py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-5" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
+
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <motion.img 
-                whileHover={{ scale: 1.05 }}
-                src={logo.src} 
-                alt="Compuwork" 
-                className="h-14 sm:h-16 lg:h-[4.5rem] w-auto drop-shadow-md"
-              />
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <Image
+                  src={logo}
+                  alt="Centience — AI & Technology Governance"
+                  className="h-14 sm:h-16 lg:h-[4.5rem] w-auto drop-shadow-md"
+                />
+              </motion.div>
             </Link>
             <p className="text-primary-foreground/60 mb-8 max-w-sm leading-relaxed">
-              Audit-ready IT and Cybersecurity for Financial, Legal, Healthcare and Professional services organizations.
+              Technology governance for regulated organizations — built on managed infrastructure, enforced through continuous oversight.
             </p>
             <div className="space-y-4 mb-6">
-              <motion.a 
+              <motion.a
                 whileHover={{ x: 5 }}
-                href="mailto:info@compuwork.ai" 
+                href="mailto:info@centience.ai"
                 className="flex items-center gap-3 text-primary-foreground/60 hover:text-gold transition-colors group"
               >
                 <Mail className="w-5 h-5" />
-                <span>info@compuwork.ai</span>
+                <span>info@centience.ai</span>
                 <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.a>
-              <motion.a 
+              <motion.a
                 whileHover={{ x: 5 }}
-                href="tel:+18779457177" 
+                href="tel:+18779457177"
                 className="flex items-center gap-3 text-primary-foreground/60 hover:text-gold transition-colors group"
               >
                 <Phone className="w-5 h-5" />
@@ -84,12 +80,11 @@ const Footer = () => {
                 <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.a>
             </div>
-            
-            {/* Social Media Links - Side by Side */}
+            <p className="text-primary-foreground/40 text-sm mb-6">New York · South Florida · Nationwide</p>
             <div className="flex items-center gap-4">
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://www.linkedin.com/company/compuwork/"
+                href="https://www.linkedin.com/company/centience-ai/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center text-primary-foreground/60 hover:text-gold hover:bg-gold/10 transition-all"
@@ -97,19 +92,9 @@ const Footer = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </motion.a>
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://www.facebook.com/compuworknyc/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center text-primary-foreground/60 hover:text-gold hover:bg-gold/10 transition-all"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </motion.a>
-              <motion.a 
-                whileHover={{ scale: 1.1 }}
-                href="https://www.youtube.com/@Compuwork"
+                href="https://www.youtube.com/@Centience"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center text-primary-foreground/60 hover:text-gold hover:bg-gold/10 transition-all"
@@ -126,8 +111,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((link) => (
                 <li key={link.label}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-primary-foreground/60 hover:text-gold transition-colors inline-flex items-center gap-1 group"
                   >
                     {link.label}
@@ -144,8 +129,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {industries.map((link) => (
                 <li key={link.label}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-primary-foreground/60 hover:text-gold transition-colors inline-flex items-center gap-1 group"
                   >
                     {link.label}
@@ -162,8 +147,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {company.map((link) => (
                 <li key={link.label}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-primary-foreground/60 hover:text-gold transition-colors inline-flex items-center gap-1 group"
                   >
                     {link.label}
@@ -174,14 +159,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Locations */}
+          {/* Resources */}
           <div>
-            <h4 className="text-primary-foreground font-semibold font-display mb-6">Locations</h4>
+            <h4 className="text-primary-foreground font-semibold font-display mb-6">Resources</h4>
             <ul className="space-y-3">
-              {locations.map((link) => (
+              {resources.map((link) => (
                 <li key={link.label}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-primary-foreground/60 hover:text-gold transition-colors inline-flex items-center gap-1 group"
                   >
                     {link.label}
@@ -191,12 +176,13 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/40 text-sm">
-            © 2026 Compuwork™. All rights reserved.
+            © {currentYear} Centience. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="text-primary-foreground/40 hover:text-gold text-sm transition-colors">
