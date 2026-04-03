@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import AboutPage from '@/page-components/AboutPage';
 
+// ─── SEO Metadata ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "About Centience — 20 Years Governing Regulated Technology",
-  description: "Centience was built on 20+ years of hands-on technology operations inside regulated industries. We implement, integrate, and manage governance programs — working alongside existing teams or taking the lead. Founded by Orville Matias, architect of OfficeSafe and Bridge Compliance.",
-  keywords: ["about Centience", "Orville Matias", "technology governance firm", "regulated industries", "AI governance company", "compliance firm", "OfficeSafe", "Bridge Compliance", "CyberGRID"],
+  description: "Centience was built from 20 years of hands-on work inside regulated organizations. We implement, integrate, and manage technology governance programs — working alongside your existing team, not around it.",
+  keywords: ["about Centience","Centience mission","technology governance firm","AI governance company","compliance firm","Orville Matias","regulated industries","SEC FINRA HIPAA governance"],
   alternates: { canonical: "https://centience.ai/about" },
   openGraph: {
     title: "About Centience — 20 Years Governing Regulated Technology",
-    description: "Built on 20+ years of hands-on technology operations inside regulated industries. We implement, integrate, and manage governance programs — working alongside your existing team.",
+    description: "Built from 20 years inside regulated organizations. Centience implements and manages technology governance programs — working alongside your existing team, not around it.",
     url: "https://centience.ai/about",
     type: 'website',
     siteName: 'Centience',
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "About Centience — 20 Years Governing Regulated Technology",
-    description: "Built on 20+ years inside regulated industries. We implement and manage governance programs alongside your existing team.",
+    description: "Built from 20 years inside regulated organizations. We implement and manage technology governance — working alongside your existing team.",
     images: ["https://centience.ai/og-image.png"],
   },
 };
