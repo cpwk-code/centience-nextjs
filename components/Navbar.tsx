@@ -1,10 +1,7 @@
-"use client";
 import { useState, useEffect, useRef } from "react";
-import { useRouter, usePathname } from "next/navigation";
-import Link from "next/link";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
-import Image from "next/image";
 import centienceLogoLight from "@/assets/centience-logo-light.png";
 import centienceLogoDark from "@/assets/centience-logo-dark.png";
 
@@ -86,7 +83,7 @@ const DropdownMenu = ({ item, scrolled }: { item: NavItem; scrolled: boolean }) 
             {item.children!.map((child) => (
               <Link
                 key={child.label}
-                href={child.href}
+                to={child.href}
                 className="block px-5 py-3 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-muted transition-colors"
                 onClick={() => setOpen(false)}
               >
@@ -104,7 +101,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const pathname = usePathname();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -115,7 +112,7 @@ const Navbar = () => {
   useEffect(() => {
     setMobileOpen(false);
     setMobileExpanded(null);
-  }, [pathname]);
+  }, [location]);
 
   const linkClasses = scrolled
     ? "text-foreground/80 hover:text-foreground hover:bg-muted"
@@ -130,8 +127,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 lg:h-36">
-        <Link href="/" className="flex items-center gap-3 shrink-0">
-          <Image
+        <Link to="/" className="flex items-center gap-3 shrink-0">
+          <img
             src={scrolled ? centienceLogoLight : centienceLogoDark}
             alt="Centience — AI & Technology Governance"
             className="h-16 sm:h-20 lg:h-28 w-auto transition-opacity duration-300"
@@ -146,7 +143,7 @@ const Navbar = () => {
             ) : (
               <Link
                 key={item.label}
-                href={item.href!}
+                to={item.href!}
                 className={`px-3 py-2 text-sm font-semibold transition-colors duration-200 rounded-lg ${linkClasses}`}
               >
                 {item.label}
@@ -167,7 +164,7 @@ const Navbar = () => {
           </a>
           <span className={`text-xs ${scrolled ? "text-foreground/20" : "text-warm-white/20"}`}>|</span>
           <Button variant="cta-nav" size="sm" asChild className="whitespace-nowrap shrink-0">
-            <Link href="/ai-governance-risk-assessment">Book Assessment</Link>
+            <Link to="/ai-governance-risk-assessment">Book Assessment</Link>
           </Button>
         </div>
 
@@ -214,7 +211,7 @@ const Navbar = () => {
                       {item.children.map((child) => (
                         <Link
                           key={child.label}
-                          href={child.href}
+                          to={child.href}
                           className="block px-4 py-2.5 text-sm text-foreground/60 hover:text-foreground hover:bg-muted rounded-lg transition-colors"
                         >
                           {child.label}
@@ -226,7 +223,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   key={item.label}
-                  href={item.href!}
+                  to={item.href!}
                   className="px-4 py-3 text-sm font-semibold text-foreground/80 hover:text-foreground hover:bg-muted rounded-lg transition-colors"
                 >
                   {item.label}
@@ -242,7 +239,7 @@ const Navbar = () => {
                 (877) 945-7177
               </a>
               <Button variant="cta" size="default" className="w-full" asChild>
-                <Link href="/ai-governance-risk-assessment">Book Your Assessment</Link>
+                <Link to="/ai-governance-risk-assessment">Book Your Assessment</Link>
               </Button>
             </div>
           </nav>

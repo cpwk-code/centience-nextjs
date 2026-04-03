@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Building2, Heart, Scale, Briefcase, Calculator, HandHeart, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -33,7 +33,8 @@ const IndustriesSection = () => (
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >
-            <Link href={ind.href}
+            <Link
+              to={ind.href}
               className="card-premium p-7 block group h-full"
             >
               <div className="flex items-start justify-between mb-5">

@@ -1,8 +1,7 @@
-"use client";
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Mail, CheckCircle, AlertTriangle, XCircle } from "lucide-react";
 import LeadCaptureModal, { hasLeadCookie } from "@/components/LeadCaptureModal";
@@ -157,7 +156,7 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
 
               <div className="text-center space-y-4">
                 <Button variant="cta" size="xl" asChild>
-                  <Link href="/ai-governance-risk-assessment">
+                  <Link to="/ai-governance-risk-assessment">
                     {result.cta} <ArrowRight size={16} />
                   </Link>
                 </Button>
