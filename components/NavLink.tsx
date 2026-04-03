@@ -1,4 +1,4 @@
-import { NavLink as RouterNavLink, NavLinkProps } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 
