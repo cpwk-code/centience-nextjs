@@ -1,3 +1,4 @@
+"use client";
 import { useRouter } from "next/navigation";
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
