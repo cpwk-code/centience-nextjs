@@ -1,0 +1,308 @@
+name: SEO Auto-Push on Deploy
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TRIGGER: Fires automatically after every push to main (which triggers a
+# Vercel deployment). Waits for the deployment to be live, then notifies
+# all major search engines about the updated content.
+# ─────────────────────────────────────────────────────────────────────────────
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      force_full_submit:
+        description: 'Force submit all URLs (not just changed pages)'
+        required: false
+        default: 'false'
+        type: boolean
+
+concurrency:
+  group: seo-auto-push
+  cancel-in-progress: false
+
+env:
+  SITE_URL: https://centience.ai
+  SITEMAP_URL: https://centience.ai/sitemap.xml
+
+jobs:
+  # ── Job 1: Wait for Vercel deployment to go live ──────────────────────────
+  wait-for-deployment:
+    name: Wait for Vercel Deployment
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      deployment_ready: ${{ steps.check.outputs.ready }}
+
+    steps:
+      - name: Wait for site to reflect new deployment
+        id: check
+        run: |
+          echo "Waiting for Vercel deployment to complete..."
+          MAX_ATTEMPTS=20
+          ATTEMPT=0
+          SLEEP_SECONDS=15
+
+          while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
+            ATTEMPT=$((ATTEMPT + 1))
+            echo "Attempt $ATTEMPT/$MAX_ATTEMPTS — checking $SITE_URL..."
+
+            HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$SITE_URL" || echo "000")
+
+            if [ "$HTTP_STATUS" = "200" ]; then
+              echo "✅ Site is live (HTTP $HTTP_STATUS)"
+              echo "ready=true" >> $GITHUB_OUTPUT
+              exit 0
+            else
+              echo "   Site returned HTTP $HTTP_STATUS — waiting ${SLEEP_SECONDS}s..."
+              sleep $SLEEP_SECONDS
+            fi
+          done
+
+          echo "⚠️  Deployment check timed out — proceeding with SEO push anyway."
+          echo "ready=true" >> $GITHUB_OUTPUT
+
+  # ── Job 2: Submit to IndexNow (Bing, Yandex, DuckDuckGo, etc.) ───────────
+  # NOTE: The old /ping?sitemap= endpoints are deprecated.
+  # Google (404) and Bing (410) no longer support them.
+  # IndexNow and the Google Indexing API are the modern replacements.
+  indexnow-submit:
+    name: Submit URLs via IndexNow
+    runs-on: ubuntu-latest
+    needs: wait-for-deployment
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch sitemap and extract URLs
+        id: urls
+        run: |
+          echo "Fetching sitemap from $SITEMAP_URL..."
+          SITEMAP_CONTENT=$(curl -s --max-time 30 "$SITEMAP_URL")
+
+          # Extract all <loc> URLs from the sitemap
+          URLS=$(echo "$SITEMAP_CONTENT" | grep -oP '(?<=<loc>)[^<]+' | head -100)
+          URL_COUNT=$(echo "$URLS" | wc -l)
+          echo "Found $URL_COUNT URLs in sitemap."
+
+          # Save URLs to file for next step
+          echo "$URLS" > /tmp/sitemap_urls.txt
+          echo "url_count=$URL_COUNT" >> $GITHUB_OUTPUT
+
+      - name: Submit URLs to IndexNow (Bing)
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          if [ -z "$INDEXNOW_KEY" ]; then
+            echo "⚠️  INDEXNOW_KEY secret not set — skipping IndexNow submission."
+            echo "    See setup guide to configure this secret."
+            exit 0
+          fi
+
+          echo "Submitting URLs to IndexNow..."
+
+          # Build JSON array of URLs
+          URLS_JSON=$(cat /tmp/sitemap_urls.txt | python3 -c "
+          import sys, json
+          urls = [u.strip() for u in sys.stdin if u.strip()]
+          print(json.dumps(urls))
+          ")
+
+          # Submit to IndexNow API (covers Bing, Yandex, DuckDuckGo, etc.)
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+            "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{
+              \"host\": \"centience.ai\",
+              \"key\": \"${INDEXNOW_KEY}\",
+              \"keyLocation\": \"https://centience.ai/${INDEXNOW_KEY}.txt\",
+              \"urlList\": ${URLS_JSON}
+            }")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | head -1)
+
+          echo "IndexNow response: HTTP $HTTP_CODE"
+          if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "202" ]; then
+            echo "✅ IndexNow submission successful!"
+          else
+            echo "⚠️  IndexNow returned HTTP $HTTP_CODE: $BODY"
+          fi
+
+  # ── Job 4: Google Indexing API (for job pages and key content) ────────────
+  google-indexing-api:
+    name: Notify Google Indexing API
+    runs-on: ubuntu-latest
+    needs: wait-for-deployment
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install google-auth google-auth-httplib2 requests
+
+      - name: Submit URLs to Google Indexing API
+        env:
+          GCP_SERVICE_ACCOUNT_KEY: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+        run: |
+          if [ -z "$GCP_SERVICE_ACCOUNT_KEY" ]; then
+            echo "⚠️  GCP_SERVICE_ACCOUNT_KEY secret not set — skipping Google Indexing API."
+            echo "    See setup guide to configure this secret."
+            exit 0
+          fi
+
+          # Write service account key to file
+          echo "$GCP_SERVICE_ACCOUNT_KEY" > /tmp/service_account.json
+
+          python3 << 'PYTHON_SCRIPT'
+          import json
+          import requests
+          from google.oauth2 import service_account
+          from google.auth.transport.requests import Request
+
+          SCOPES = ['https://www.googleapis.com/auth/indexing']
+          ENDPOINT = 'https://indexing.googleapis.com/v3/urlNotifications:publish'
+          SITEMAP_URL = 'https://centience.ai/sitemap.xml'
+
+          # Authenticate with Google
+          credentials = service_account.Credentials.from_service_account_file(
+              '/tmp/service_account.json',
+              scopes=SCOPES
+          )
+          credentials.refresh(Request())
+
+          # Fetch sitemap and extract URLs
+          print(f"Fetching sitemap from {SITEMAP_URL}...")
+          resp = requests.get(SITEMAP_URL, timeout=30)
+          resp.raise_for_status()
+
+          import re
+          urls = re.findall(r'<loc>([^<]+)</loc>', resp.text)
+          print(f"Found {len(urls)} URLs to submit.")
+
+          # Submit each URL to Google Indexing API
+          headers = {
+              'Authorization': f'Bearer {credentials.token}',
+              'Content-Type': 'application/json'
+          }
+
+          success_count = 0
+          error_count = 0
+
+          for url in urls:
+              payload = {
+                  'url': url.strip(),
+                  'type': 'URL_UPDATED'
+              }
+              r = requests.post(ENDPOINT, headers=headers, json=payload)
+              if r.status_code in (200, 201):
+                  success_count += 1
+              else:
+                  error_count += 1
+                  print(f"  ⚠️  Failed ({r.status_code}): {url.strip()}")
+
+          print(f"\n✅ Google Indexing API: {success_count} submitted, {error_count} errors.")
+          PYTHON_SCRIPT
+
+  # ── Job 5: Validate SEO health after deployment ───────────────────────────
+  seo-health-check:
+    name: Post-Deploy SEO Health Check
+    runs-on: ubuntu-latest
+    needs: wait-for-deployment
+    timeout-minutes: 10
+
+    steps:
+      - name: Check critical pages return 200
+        run: |
+          PAGES=(
+            "/"
+            "/about"
+            "/services/managed-it-services"
+            "/services/cybersecurity"
+            "/industries/financial-services"
+            "/blogs"
+            "/contact"
+            "/sitemap.xml"
+            "/robots.txt"
+          )
+
+          PASS=0
+          FAIL=0
+
+          for PAGE in "${PAGES[@]}"; do
+            URL="${SITE_URL}${PAGE}"
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$URL" || echo "000")
+            if [ "$STATUS" = "200" ]; then
+              echo "  ✅ $URL → HTTP $STATUS"
+              PASS=$((PASS + 1))
+            else
+              echo "  ❌ $URL → HTTP $STATUS"
+              FAIL=$((FAIL + 1))
+            fi
+          done
+
+          echo ""
+          echo "SEO Health Check: $PASS passed, $FAIL failed."
+
+          if [ $FAIL -gt 0 ]; then
+            echo "⚠️  Some pages returned non-200 status. Review above."
+            exit 1
+          fi
+
+      - name: Check canonical URLs and meta tags on homepage
+        run: |
+          echo "Checking homepage for canonical URL and meta description..."
+          HTML=$(curl -s --max-time 15 "$SITE_URL")
+
+          # Check canonical
+          if echo "$HTML" | grep -q 'rel="canonical"'; then
+            echo "  ✅ Canonical tag found"
+          else
+            echo "  ⚠️  No canonical tag found on homepage"
+          fi
+
+          # Check meta description
+          if echo "$HTML" | grep -q 'name="description"'; then
+            echo "  ✅ Meta description found"
+          else
+            echo "  ⚠️  No meta description found on homepage"
+          fi
+
+          # Check og:title
+          if echo "$HTML" | grep -q 'og:title'; then
+            echo "  ✅ OG title found"
+          else
+            echo "  ⚠️  No OG title found on homepage"
+          fi
+
+          # Check structured data
+          if echo "$HTML" | grep -q 'application/ld+json'; then
+            echo "  ✅ Structured data (JSON-LD) found"
+          else
+            echo "  ⚠️  No structured data found on homepage"
+          fi
+
+          echo ""
+          echo "✅ SEO health check complete."
+
+      - name: Verify sitemap is valid XML
+        run: |
+          echo "Validating sitemap XML..."
+          SITEMAP=$(curl -s --max-time 15 "$SITEMAP_URL")
+
+          if echo "$SITEMAP" | python3 -c "import sys; import xml.etree.ElementTree as ET; ET.parse(sys.stdin)" 2>/dev/null; then
+            URL_COUNT=$(echo "$SITEMAP" | grep -c '<loc>' || echo 0)
+            echo "  ✅ Sitemap is valid XML with $URL_COUNT URLs"
+          else
+            echo "  ❌ Sitemap XML is invalid!"
+            exit 1
+          fi

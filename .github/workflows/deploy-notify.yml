@@ -1,0 +1,69 @@
+name: Vercel Deploy Status
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TRIGGER: Vercel automatically deploys on every push to main.
+# This workflow provides a GitHub Actions status check that confirms the
+# Vercel deployment succeeded before marking the push as "passing".
+# ─────────────────────────────────────────────────────────────────────────────
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  SITE_URL: https://centience.ai
+
+jobs:
+  verify-deployment:
+    name: Verify Vercel Deployment
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Wait for Vercel to deploy and verify site is live
+        run: |
+          echo "Waiting for Vercel deployment to go live at $SITE_URL..."
+          MAX_ATTEMPTS=24
+          ATTEMPT=0
+          SLEEP_SECONDS=15
+
+          while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
+            ATTEMPT=$((ATTEMPT + 1))
+            echo "Attempt $ATTEMPT/$MAX_ATTEMPTS..."
+
+            HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+              --max-time 10 \
+              -H "Cache-Control: no-cache" \
+              "$SITE_URL" || echo "000")
+
+            if [ "$HTTP_STATUS" = "200" ]; then
+              echo "✅ Deployment verified — site is live (HTTP $HTTP_STATUS)"
+              exit 0
+            fi
+
+            echo "   HTTP $HTTP_STATUS — retrying in ${SLEEP_SECONDS}s..."
+            sleep $SLEEP_SECONDS
+          done
+
+          echo "❌ Deployment verification timed out after $((MAX_ATTEMPTS * SLEEP_SECONDS))s"
+          exit 1
+
+      - name: Confirm Next.js SSR is working
+        run: |
+          echo "Confirming server-side rendering is active..."
+          HEADERS=$(curl -sI --max-time 10 "$SITE_URL")
+
+          if echo "$HEADERS" | grep -qi "x-nextjs"; then
+            echo "✅ Next.js SSR headers detected"
+          else
+            echo "⚠️  Next.js headers not found — check deployment"
+          fi
+
+          # Confirm HTML contains actual content (not just a loading spinner)
+          HTML=$(curl -s --max-time 15 "$SITE_URL")
+          if echo "$HTML" | grep -q "Centience"; then
+            echo "✅ Page content confirmed in server-rendered HTML"
+          else
+            echo "⚠️  Expected content not found in HTML"
+          fi
