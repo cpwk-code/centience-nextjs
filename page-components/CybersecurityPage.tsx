@@ -1,24 +1,23 @@
-"use client";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import Link from 'next/link';
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Eye, Lock, FileSearch, Users, CheckCircle2, Handshake } from "lucide-react";
+import { ArrowRight, Shield, Eye, Lock, FileSearch, Users, CheckCircle2, Building2, Cpu } from "lucide-react";
 
 const capabilities = [
   { icon: Eye, title: "Security Posture Monitoring", description: "Continuous monitoring of your security posture with regular assessments, gap analysis, and remediation tracking. We manage this operationally — not as a quarterly report, but as a daily function." },
-  { icon: FileSearch, title: "Vulnerability Oversight", description: "Structured vulnerability management ensuring identified risks are tracked, prioritized, and resolved. We implement the remediation, not just identify the gap." },
+  { icon: FileSearch, title: "Vulnerability Oversight", description: "Structured vulnerability management ensuring identified risks are tracked, prioritized, and resolved. We implement the remediation — not just identify the gap." },
   { icon: Users, title: "Vendor Risk Management", description: "We evaluate and monitor your third-party vendors and supply chain continuously — integrating vendor risk into your broader governance posture." },
   { icon: Lock, title: "Compliance Readiness", description: "Audit-ready documentation and controls mapping for SOC 2, HIPAA, CMMC, and regulatory requirements — assembled continuously, not when you get the audit notice." },
   { icon: Shield, title: "Incident Response Governance", description: "Documented incident response procedures, defined escalation paths, and governance oversight — implemented and tested, not written and filed." },
-  { icon: FileSearch, title: "Security Awareness Governance", description: "Training program governance ensuring your organization's security awareness posture is tracked, documented, and reportable to leadership and regulators." },
+  { icon: Cpu, title: "Security Awareness Governance", description: "Training program governance ensuring your organization's security awareness posture is tracked, documented, and reportable to leadership and regulators." },
 ];
 
-const worksWith = [
-  { role: "CISOs & vCISOs", desc: "We handle implementation and operational management so your security leader can focus on strategy and oversight. Your CISO sets the program. We execute it." },
-  { role: "CTOs & IT Leadership", desc: "We implement technical controls that align with your organizational direction and integrate into your existing stack without displacing your internal team." },
-  { role: "Outside Security Firms", desc: "We serve as the managed implementation and operations arm for firms that advise but don't operate day-to-day. You advise. We build and manage." },
-  { role: "Compliance & Legal Counsel", desc: "We ensure security posture and documentation maps directly to your regulatory obligations — giving your counsel the evidence trail they need." },
+const teamTypes = [
+  { title: "CISOs and vCISOs", description: "We handle implementation and operational management so your security leader can focus on strategy and oversight. Your program gets enforced, not just designed." },
+  { title: "CTOs and IT Leadership", description: "We implement technical controls that align with your organizational direction and integrate into your existing stack — no displacement of existing leadership." },
+  { title: "Outside Security Firms", description: "We serve as the managed implementation and operations arm for firms that advise but don't operate day-to-day. You stay in the engagement." },
+  { title: "Compliance and Legal Counsel", description: "We ensure security posture and documentation maps directly to your regulatory obligations, producing the evidence your counsel needs." },
 ];
 
 const CybersecurityPage = () => (
@@ -36,10 +35,10 @@ const CybersecurityPage = () => (
             Cybersecurity <span className="text-gradient-gold">Governance</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            We implement security controls, integrate them into your environment, and manage your security posture continuously — working alongside your existing CISO, vCISO, CTO, or outside security firm. Not a replacement. The implementation and operational arm your security program needs.
+            We implement security controls, integrate them into your environment, and manage your security posture continuously — working alongside your existing security leadership or serving as your primary security governance partner.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Full co-management available. We take the lead where you don't have existing security leadership. Either way, the result is the same: enforced controls, continuous monitoring, and audit-ready documentation.
+            We work with your CISO, vCISO, CTO, or outside security firm. We co-manage where you need operational support. We take the lead where you don't have existing security leadership. The outcome is the same: enforced controls, continuous monitoring, and audit-ready documentation.
           </p>
           <Button variant="cta" size="xl" asChild>
             <Link href="/ai-governance-risk-assessment">Schedule Security Assessment <ArrowRight size={16} /></Link>
@@ -48,7 +47,7 @@ const CybersecurityPage = () => (
       </div>
     </section>
 
-    {/* We work with your team */}
+    {/* Work With Your Team */}
     <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -58,27 +57,22 @@ const CybersecurityPage = () => (
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Approach</p>
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">We Work With Your Team — Not Around It</h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Many of our clients already have a CISO, vCISO, CTO, or outside security firm in place. That's not a conflict — it's exactly where we fit. Centience operates as the implementation and governance layer: executing the controls your security leadership defines, integrating them into your managed infrastructure, and maintaining continuous monitoring and documentation.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-6">
               Full co-management available. If your organization has partial security coverage and needs operational execution and governance enforcement for the rest — that's exactly where Centience operates.
             </p>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/co-management">See How Co-Management Works <ArrowRight size={16} /></Link>
+              <Link href="/co-management">See How Co-Management Works <ArrowRight size={14} /></Link>
             </Button>
           </div>
           <div className="space-y-4">
-            {worksWith.map((item) => (
-              <div key={item.role} className="card-premium p-6">
-                <div className="flex items-start gap-3">
-                  <Handshake size={16} className="text-accent mt-1 shrink-0" />
-                  <div>
-                    <p className="font-display font-bold text-primary text-sm mb-1">{item.role}</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              </div>
+            {teamTypes.map((item, i) => (
+              <motion.div key={item.title} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }} className="card-premium p-6">
+                <h3 className="font-display font-bold text-primary text-base mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -94,7 +88,7 @@ const CybersecurityPage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Capabilities</p>
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Cybersecurity Governance Program</h2>
-          <p className="text-muted-foreground leading-relaxed">Implemented, integrated, and managed daily — not a framework delivered once.</p>
+          <p className="text-muted-foreground leading-relaxed">Implemented, integrated, and managed — not delivered as a policy binder.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {capabilities.map((cap, i) => (
@@ -113,10 +107,10 @@ const CybersecurityPage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Already Have a Security Team? Good.</h2>
-        <p className="text-lg opacity-70 mb-10">We don't replace security leadership. We implement, integrate, and manage the operational layer — making your existing security program enforceable and audit-ready. Start with a security governance assessment.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Already Have a Security Team? Good. Let's Talk About Where Centience Fits.</h2>
+        <p className="text-lg opacity-70 mb-10">We don't replace security leadership. We implement, integrate, and manage the operational layer — making your existing security program enforceable and audit-ready.</p>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Schedule Assessment <ArrowRight size={16} /></Link>
+          <Link href="/ai-governance-risk-assessment">Schedule Security Assessment <ArrowRight size={16} /></Link>
         </Button>
       </div>
     </section>
