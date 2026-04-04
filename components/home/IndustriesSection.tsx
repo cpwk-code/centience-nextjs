@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { Building2, Heart, Scale, Briefcase, Calculator, HandHeart, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
