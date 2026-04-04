@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import AssessmentsPage from '@/page-components/resources/AssessmentsPage';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Technology & AI Governance Assessments | Centience",
