@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import FinancialServicesPage from '@/page-components/industries/FinancialServicesPage';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "AI & Technology Governance for Financial Services | Centience",
