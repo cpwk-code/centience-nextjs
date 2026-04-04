@@ -421,7 +421,7 @@ const NewYorkPage = () => {
             <AnimatedSection>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
                 <img 
-                  src={newYorkImage} 
+                  src={newYorkImage.src} 
                   alt="Compuwork office located in New York City, providing professional managed IT services in New York."
                   className="w-full h-full object-cover"
                 />
@@ -467,7 +467,7 @@ const NewYorkPage = () => {
             <AnimatedSection className="h-full">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl h-full min-h-[480px]">
                 <img 
-                  src={newYorkImage} 
+                  src={newYorkImage.src} 
                   alt="Compuwork office located in New York City, providing professional managed IT services in New York."
                   className="absolute inset-0 w-full h-full object-cover object-center"
                 />
