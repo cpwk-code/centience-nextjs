@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import AboutPage from '@/page-components/AboutPage';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "About Centience — Our Story & Mission",

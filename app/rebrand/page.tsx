@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
-import PrivacyPolicyPage from '@/page-components/PrivacyPolicyPage';
+import RebrandPage from '@/page-components/RebrandPage';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Privacy Policy | Centience",
+  title: "Rebrand | Centience",
   description: "AI and technology governance for regulated organizations.",
   keywords: ["AI governance","technology governance","compliance"],
   alternates: {
-    canonical: "https://centience.ai/privacy-policy",
+    canonical: "https://centience.ai/rebrand",
   },
   openGraph: {
-    title: "Privacy Policy | Centience",
+    title: "Rebrand | Centience",
     description: "AI and technology governance for regulated organizations.",
-    url: "https://centience.ai/privacy-policy",
+    url: "https://centience.ai/rebrand",
     type: 'website',
     siteName: 'Centience',
     images: [
@@ -20,18 +20,18 @@ export const metadata: Metadata = {
         url: "https://centience.ai/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Privacy Policy | Centience",
+        alt: "Rebrand | Centience",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Privacy Policy | Centience",
+    title: "Rebrand | Centience",
     description: "AI and technology governance for regulated organizations.",
     images: ["https://centience.ai/og-image.png"],
   },
 };
 
 export default function Page() {
-  return <PrivacyPolicyPage />;
+  return <RebrandPage />;
 }

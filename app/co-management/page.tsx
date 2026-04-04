@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import CoManagementPage from '@/page-components/CoManagementPage';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Co Management | Centience",
