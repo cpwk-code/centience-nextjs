@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
-import { Inter, Space_Grotesk } from 'next/font/google';
+import { Plus_Jakarta_Sans, DM_Sans } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { Toaster as Sonner } from '@/components/ui/sonner';
@@ -10,17 +10,17 @@ import { AuthProvider } from '@/contexts/AuthContext';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import ScrollToTop from '@/components/ScrollToTop';
 
-const inter = Inter({
+const inter = DM_Sans({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
 });
 
-const spaceGrotesk = Space_Grotesk({
+const spaceGrotesk = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-space-grotesk',
   display: 'swap',
-  weight: ['600', '700'],
+  weight: ['500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
