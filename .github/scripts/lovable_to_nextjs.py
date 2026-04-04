@@ -235,6 +235,26 @@ def run():
             lines.insert(insert_idx, "\nexport const dynamic = 'force-dynamic';")
             write(fp, "\n".join(lines))
 
+
+    # ── 10. Validate next.config.ts — no self-referencing redirects ──────────────
+    print("\n[10] Checking next.config.ts for self-referencing redirects...")
+    nc = os.path.join(BASE, "next.config.ts")
+    if os.path.exists(nc):
+        content = read(nc)
+        # Remove any redirect that sends centience.ai to centience.ai (infinite loop)
+        bad_block = """      // Old domain centience.ai -> centience.ai (preserves SEO equity)
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'centience.ai' }],
+        destination: 'https://centience.ai/:path*',
+        permanent: true,
+      },"""
+        if bad_block in content:
+            write(nc, content.replace(bad_block, ""))
+            print("  Removed self-referencing centience.ai redirect loop")
+        else:
+            print("  OK — no self-referencing redirects found")
+
     print("\n=== Conversion complete ===")
 
 
