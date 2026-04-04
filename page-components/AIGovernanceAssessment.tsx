@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Search, BookOpen, Cog, FileText, ArrowRight, CheckCircle } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox";
+import HCaptcha from "@/components/HCaptcha";
 
 const deliverables = [
   "AI usage discovery",
@@ -35,11 +35,11 @@ const processSteps = [
 
 const AIGovernanceAssessment = () => {
   const [submitted, setSubmitted] = useState(false);
-  const [captcha, setCaptcha] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!captcha) return;
+    if (!captchaToken) return;
     setSubmitted(true);
   };
 
@@ -209,19 +209,15 @@ const AIGovernanceAssessment = () => {
                   </SelectContent>
                 </Select>
               </div>
-              {/* Captcha checkbox */}
-              <div className="flex items-center gap-3 border border-border rounded-lg p-4 bg-muted/50">
-                <Checkbox
-                  id="assess-captcha"
-                  checked={captcha}
-                  onCheckedChange={(checked) => setCaptcha(!!checked)}
+              {/* hCaptcha */}
+              <div className="flex justify-center">
+                <HCaptcha
+                  onVerify={(token) => setCaptchaToken(token)}
+                  onExpire={() => setCaptchaToken("")}
                 />
-                <Label htmlFor="assess-captcha" className="text-sm font-normal cursor-pointer select-none">
-                  I am human
-                </Label>
               </div>
 
-              <Button variant="cta" size="lg" type="submit" className="w-full mt-4" disabled={!captcha}>
+              <Button variant="cta" size="lg" type="submit" className="w-full mt-4" disabled={!captchaToken}>
                 Book My Governance Assessment <ArrowRight size={18} />
               </Button>
               <p className="text-xs text-muted-foreground text-center mt-3">
