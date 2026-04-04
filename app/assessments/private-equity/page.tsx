@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import PrivateEquityAssessment from '@/page-components/assessments/PrivateEquityAssessment';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Private Equity Technology Governance Assessment | Centience",
