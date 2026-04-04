@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import CybersecurityPage from '@/page-components/CybersecurityPage';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Cybersecurity Governance for Regulated Industries | Centience",
