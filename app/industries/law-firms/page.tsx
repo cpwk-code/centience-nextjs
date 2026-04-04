@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import LawFirmsPage from '@/page-components/industries/LawFirmsPage';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Technology Governance for Law Firms | Centience",
