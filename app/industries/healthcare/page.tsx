@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import HealthcarePage from '@/page-components/industries/HealthcarePage';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "AI & Technology Governance for Healthcare | Centience",
