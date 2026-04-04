@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Server-side 301 redirects
+  // Server-side 301 redirects — self-referencing loop removed
   async redirects() {
     return [
       // www to non-www (permanent 301)
