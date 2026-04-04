@@ -113,7 +113,7 @@ const Navbar = () => {
   useEffect(() => {
     setMobileOpen(false);
     setMobileExpanded(null);
-  }, [location]);
+  }, [pathname]);
 
   const linkClasses = scrolled
     ? "text-foreground/80 hover:text-foreground hover:bg-muted"
