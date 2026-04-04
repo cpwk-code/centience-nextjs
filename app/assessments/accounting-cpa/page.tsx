@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+
+export const dynamic = 'force-dynamic';
 import AccountingCpaAssessment from '@/page-components/assessments/AccountingCpaAssessment';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
