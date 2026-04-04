@@ -30,19 +30,6 @@ const nextConfig: NextConfig = {
         destination: 'https://centience.ai/:path*',
         permanent: true,
       },
-      // Old domain centience.ai -> centience.ai (preserves SEO equity)
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'centience.ai' }],
-        destination: 'https://centience.ai/:path*',
-        permanent: true,
-      },
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.centience.ai' }],
-        destination: 'https://centience.ai/:path*',
-        permanent: true,
-      },
       // Blog listing redirect: /blog -> /blogs (canonical listing page)
       {
         source: '/blog',
