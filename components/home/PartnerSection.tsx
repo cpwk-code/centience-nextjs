@@ -1,3 +1,4 @@
+"use client";
 import { Users, ShieldCheck, Scale, Calculator } from "lucide-react";
 import { motion } from "framer-motion";
 
