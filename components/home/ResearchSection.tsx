@@ -1,3 +1,4 @@
+"use client";
 import { Brain, Shield, Server } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
