@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+
+export const dynamic = 'force-dynamic';
 import HealthcareAssessment from '@/page-components/assessments/HealthcareAssessment';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
