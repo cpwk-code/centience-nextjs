@@ -1,32 +1,29 @@
-name: Fix Guardian – Next.js Compatibility Auto-Fix
+name: Fix Guardian – Next.js Conversion Engine
+
 # ─────────────────────────────────────────────────────────────────────────────
-# PURPOSE: The Lovable sync bot pushes directly to main using React Router DOM
-# syntax which is incompatible with this Next.js project. This workflow
-# automatically re-applies all Next.js compatibility fixes after every push,
-# ensuring the Vercel build always succeeds.
+# PURPOSE: Converts Lovable (Vite/React Router) syntax to Next.js 15 App Router
+# after every push to main. This is the single source of truth for all
+# Lovable → Next.js compatibility fixes.
 #
-# FIXES APPLIED:
-#   - react-router-dom → next/link and next/navigation (all components)
-#   - <Link to= → <Link href= (all components)
-#   - useNavigate/navigate() → useRouter/router.push() (all components)
-#   - router.push(x, {replace:true}) → router.replace(x)
-#   - "use client" directives on all 70+ client-side components
-#   - window.pathname → window.location.pathname
-#   - SEO.tsx restored as no-op stub (react-helmet-async not installed)
-#   - calendar.tsx restored for react-day-picker v9 (Chevron API)
-#   - StaticImageData img src → .src property
-#   - BlogsPage getSrc() for ImageSrc type
-#   - AboutPage orville-matias-about.jpeg extension
-#   - CMS editor null guards for postId/industryId/serviceId
-#   - AnimatedSection mobile layout fixes
-#   - globals.css overflow-x hidden
-#   - blogPosts getSrc() helper
-#   - GetAIAssessmentPage layout fixes
+# WHAT IT FIXES:
+#   1. react-router-dom → next/link + next/navigation
+#   2. <Link to= → <Link href=
+#   3. useNavigate → useRouter
+#   4. useLocation → usePathname
+#   5. "use client" directives — smart detection via hook/event patterns
+#   6. export metadata + "use client" conflict in page.tsx files
+#   7. window.pathname → window.location.pathname
+#   8. Restores protected files: SEO.tsx, calendar.tsx, AnimatedSection.tsx
+#   9. globals.css overflow-x hidden
+#  10. blogPosts getSrc() helper
+#  11. StaticImageData .src unwrap
+#  12. CMS editor null guards
+#  13. AboutPage image extension
 # ─────────────────────────────────────────────────────────────────────────────
+
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch: {}
 
 permissions:
@@ -37,31 +34,31 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  apply-nextjs-fixes:
-    name: Apply Next.js Compatibility Fixes
+  convert:
+    name: Convert Lovable → Next.js
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 2
 
-      - name: Skip if this commit is already a fix commit
+      - name: Skip if already a fix commit
         id: check_skip
         run: |
           LAST_MSG=$(git log -1 --pretty=%s)
           echo "Last commit: $LAST_MSG"
-          if echo "$LAST_MSG" | grep -qE "^fix\(guardian\)|^fix: re-apply|^fix: restore|^fix: correct"; then
+          if echo "$LAST_MSG" | grep -qE "^fix\(guardian\)"; then
             echo "skip=true" >> $GITHUB_OUTPUT
-            echo "This is a fix commit — skipping to avoid infinite loop."
+            echo "Fix commit — skipping to prevent loop."
           else
             echo "skip=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Configure git identity
+      - name: Configure git
         if: steps.check_skip.outputs.skip != 'true'
         run: |
           git config user.name "Fix Guardian"
@@ -73,298 +70,372 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Restore SEO.tsx stub
+      # ── Restore protected files Lovable must never overwrite ───────────────
+      - name: Restore SEO.tsx (Next.js no-op stub)
         if: steps.check_skip.outputs.skip != 'true'
         run: |
-          echo "InVzZSBjbGllbnQiOwppbXBvcnQgUmVhY3QgZnJvbSAicmVhY3QiOwoKaW50ZXJmYWNlIFNFT1Byb3BzIHsKICB0aXRsZT86IHN0cmluZzsKICBkZXNjcmlwdGlvbj86IHN0cmluZzsKICBjYW5vbmljYWw/OiBzdHJpbmc7CiAgb2dJbWFnZT86IHN0cmluZzsKICBvZ1R5cGU/OiBzdHJpbmc7CiAga2V5d29yZHM/OiBzdHJpbmdbXTsKICBzdHJ1Y3R1cmVkRGF0YT86IG9iamVjdDsKICBicmVhZGNydW1icz86IEFycmF5PHsgbmFtZTogc3RyaW5nOyB1cmw6IHN0cmluZyB9PjsKICBlbnRpdHlOYW1lPzogc3RyaW5nOwogIGVudGl0eVR5cGU/OiBzdHJpbmc7CiAgd2Vic2l0ZT86IHN0cmluZzsKICBwaG9uZT86IHN0cmluZzsKICBhZGRyZXNzPzogb2JqZWN0OwogIHNhbWVBcz86IHN0cmluZ1tdOwogIHNlcnZpY2VzPzogc3RyaW5nW107CiAgYXJlYVNlcnZlZD86IHN0cmluZ1tdOwogIGZhcUl0ZW1zPzogQXJyYXk8eyBxdWVzdGlvbjogc3RyaW5nOyBhbnN3ZXI6IHN0cmluZyB9PjsKICBmYXE/OiBBcnJheTx7IHF1ZXN0aW9uOiBzdHJpbmc7IGFuc3dlcjogc3RyaW5nIH0+OwogIG5vaW5kZXg/OiBib29sZWFuOwogIHNlcnZpY2U/OiB7CiAgICBzZXJ2aWNlVHlwZT86IHN0cmluZzsKICAgIHByb3ZpZGVyPzogc3RyaW5nOwogICAgYXJlYVNlcnZlZD86IHN0cmluZ1tdOwogICAgW2tleTogc3RyaW5nXTogdW5rbm93bjsKICB9OwogIFtrZXk6IHN0cmluZ106IHVua25vd247Cn0KCi8qKgogKiBTRU8gY29tcG9uZW50IC0gbm8tb3Agc3R1YiBmb3IgTmV4dC5qcy4KICogTWV0YWRhdGEgaXMgaGFuZGxlZCB2aWEgZ2VuZXJhdGVNZXRhZGF0YSgpIGluIGFwcC9sYXlvdXQudHN4IGFuZCBwYWdlIGZpbGVzLgogKi8KY29uc3QgU0VPOiBSZWFjdC5GQzxTRU9Qcm9wcz4gPSAoKSA9PiBudWxsOwoKZXhwb3J0IGRlZmF1bHQgU0VPOwo=" | base64 -d > components/SEO.tsx
+          cat > components/SEO.tsx << 'SEOEOF'
+"use client";
+import React from "react";
+
+interface SEOProps {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  keywords?: string[];
+  structuredData?: object;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  noindex?: boolean;
+  [_key: string]: unknown;
+}
+
+/**
+ * SEO component — no-op stub for Next.js.
+ * Metadata is handled via generateMetadata() in app/layout.tsx and page files.
+ */
+const SEO: React.FC<SEOProps> = () => null;
+export default SEO;
+SEOEOF
           echo "Restored SEO.tsx"
 
       - name: Restore calendar.tsx (react-day-picker v9)
         if: steps.check_skip.outputs.skip != 'true'
         run: |
-          echo "InVzZSBjbGllbnQiCgppbXBvcnQgKiBhcyBSZWFjdCBmcm9tICJyZWFjdCIKaW1wb3J0IHsgQ2hldnJvbkxlZnQsIENoZXZyb25SaWdodCB9IGZyb20gImx1Y2lkZS1yZWFjdCIKaW1wb3J0IHsgRGF5UGlja2VyIH0gZnJvbSAicmVhY3QtZGF5LXBpY2tlciIKCmltcG9ydCB7IGNuIH0gZnJvbSAiQC9saWIvdXRpbHMiCmltcG9ydCB7IGJ1dHRvblZhcmlhbnRzIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2J1dHRvbiIKCmV4cG9ydCB0eXBlIENhbGVuZGFyUHJvcHMgPSBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgRGF5UGlja2VyPgoKZnVuY3Rpb24gQ2FsZW5kYXIoewogIGNsYXNzTmFtZSwKICBjbGFzc05hbWVzLAogIHNob3dPdXRzaWRlRGF5cyA9IHRydWUsCiAgLi4ucHJvcHMKfTogQ2FsZW5kYXJQcm9wcykgewogIHJldHVybiAoCiAgICA8RGF5UGlja2VyCiAgICAgIHNob3dPdXRzaWRlRGF5cz17c2hvd091dHNpZGVEYXlzfQogICAgICBjbGFzc05hbWU9e2NuKCJwLTMiLCBjbGFzc05hbWUpfQogICAgICBjbGFzc05hbWVzPXt7CiAgICAgICAgbW9udGhzOiAiZmxleCBmbGV4LWNvbCBzbTpmbGV4LXJvdyBzcGFjZS15LTQgc206c3BhY2UteC00IHNtOnNwYWNlLXktMCIsCiAgICAgICAgbW9udGg6ICJzcGFjZS15LTQiLAogICAgICAgIGNhcHRpb246ICJmbGV4IGp1c3RpZnktY2VudGVyIHB0LTEgcmVsYXRpdmUgaXRlbXMtY2VudGVyIiwKICAgICAgICBjYXB0aW9uX2xhYmVsOiAidGV4dC1zbSBmb250LW1lZGl1bSIsCiAgICAgICAgbmF2OiAic3BhY2UteC0xIGZsZXggaXRlbXMtY2VudGVyIiwKICAgICAgICBuYXZfYnV0dG9uOiBjbigKICAgICAgICAgIGJ1dHRvblZhcmlhbnRzKHsgdmFyaWFudDogIm91dGxpbmUiIH0pLAogICAgICAgICAgImgtNyB3LTcgYmctdHJhbnNwYXJlbnQgcC0wIG9wYWNpdHktNTAgaG92ZXI6b3BhY2l0eS0xMDAiCiAgICAgICAgKSwKICAgICAgICBuYXZfYnV0dG9uX3ByZXZpb3VzOiAiYWJzb2x1dGUgbGVmdC0xIiwKICAgICAgICBuYXZfYnV0dG9uX25leHQ6ICJhYnNvbHV0ZSByaWdodC0xIiwKICAgICAgICB0YWJsZTogInctZnVsbCBib3JkZXItY29sbGFwc2Ugc3BhY2UteS0xIiwKICAgICAgICBoZWFkX3JvdzogImZsZXgiLAogICAgICAgIGhlYWRfY2VsbDoKICAgICAgICAgICJ0ZXh0LW11dGVkLWZvcmVncm91bmQgcm91bmRlZC1tZCB3LTkgZm9udC1ub3JtYWwgdGV4dC1bMC44cmVtXSIsCiAgICAgICAgcm93OiAiZmxleCB3LWZ1bGwgbXQtMiIsCiAgICAgICAgY2VsbDogImgtOSB3LTkgdGV4dC1jZW50ZXIgdGV4dC1zbSBwLTAgcmVsYXRpdmUgWyY6aGFzKFthcmlhLXNlbGVjdGVkXS5kYXktcmFuZ2UtZW5kKV06cm91bmRlZC1yLW1kIFsmOmhhcyhbYXJpYS1zZWxlY3RlZF0uZGF5LW91dHNpZGUpXTpiZy1hY2NlbnQvNTAgWyY6aGFzKFthcmlhLXNlbGVjdGVkXSldOmJnLWFjY2VudCBmaXJzdDpbJjpoYXMoW2FyaWEtc2VsZWN0ZWRdKV06cm91bmRlZC1sLW1kIGxhc3Q6WyY6aGFzKFthcmlhLXNlbGVjdGVkXSldOnJvdW5kZWQtci1tZCBmb2N1cy13aXRoaW46cmVsYXRpdmUgZm9jdXMtd2l0aGluOnotMjAiLAogICAgICAgIGRheTogY24oCiAgICAgICAgICBidXR0b25WYXJpYW50cyh7IHZhcmlhbnQ6ICJnaG9zdCIgfSksCiAgICAgICAgICAiaC05IHctOSBwLTAgZm9udC1ub3JtYWwgYXJpYS1zZWxlY3RlZDpvcGFjaXR5LTEwMCIKICAgICAgICApLAogICAgICAgIGRheV9yYW5nZV9lbmQ6ICJkYXktcmFuZ2UtZW5kIiwKICAgICAgICBkYXlfc2VsZWN0ZWQ6CiAgICAgICAgICAiYmctcHJpbWFyeSB0ZXh0LXByaW1hcnktZm9yZWdyb3VuZCBob3ZlcjpiZy1wcmltYXJ5IGhvdmVyOnRleHQtcHJpbWFyeS1mb3JlZ3JvdW5kIGZvY3VzOmJnLXByaW1hcnkgZm9jdXM6dGV4dC1wcmltYXJ5LWZvcmVncm91bmQiLAogICAgICAgIGRheV90b2RheTogImJnLWFjY2VudCB0ZXh0LWFjY2VudC1mb3JlZ3JvdW5kIiwKICAgICAgICBkYXlfb3V0c2lkZToKICAgICAgICAgICJkYXktb3V0c2lkZSB0ZXh0LW11dGVkLWZvcmVncm91bmQgb3BhY2l0eS01MCBhcmlhLXNlbGVjdGVkOmJnLWFjY2VudC81MCBhcmlhLXNlbGVjdGVkOnRleHQtbXV0ZWQtZm9yZWdyb3VuZCBhcmlhLXNlbGVjdGVkOm9wYWNpdHktMzAiLAogICAgICAgIGRheV9kaXNhYmxlZDogInRleHQtbXV0ZWQtZm9yZWdyb3VuZCBvcGFjaXR5LTUwIiwKICAgICAgICBkYXlfcmFuZ2VfbWlkZGxlOgogICAgICAgICAgImFyaWEtc2VsZWN0ZWQ6YmctYWNjZW50IGFyaWEtc2VsZWN0ZWQ6dGV4dC1hY2NlbnQtZm9yZWdyb3VuZCIsCiAgICAgICAgZGF5X2hpZGRlbjogImludmlzaWJsZSIsCiAgICAgICAgLi4uY2xhc3NOYW1lcywKICAgICAgfX0KICAgICAgY29tcG9uZW50cz17ewogICAgICAgIENoZXZyb246ICh7IG9yaWVudGF0aW9uIH0pID0+IHsKICAgICAgICAgIGlmIChvcmllbnRhdGlvbiA9PT0gImxlZnQiKSB7CiAgICAgICAgICAgIHJldHVybiA8Q2hldnJvbkxlZnQgY2xhc3NOYW1lPSJoLTQgdy00IiAvPjsKICAgICAgICAgIH0KICAgICAgICAgIHJldHVybiA8Q2hldnJvblJpZ2h0IGNsYXNzTmFtZT0iaC00IHctNCIgLz47CiAgICAgICAgfSwKICAgICAgfX0KICAgICAgey4uLnByb3BzfQogICAgLz4KICApCn0KQ2FsZW5kYXIuZGlzcGxheU5hbWUgPSAiQ2FsZW5kYXIiCgpleHBvcnQgeyBDYWxlbmRhciB9Cg==" | base64 -d > components/ui/calendar.tsx
+          cat > components/ui/calendar.tsx << 'CALEOF'
+"use client"
+
+import * as React from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { DayPicker } from "react-day-picker"
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
+
+export type CalendarProps = React.ComponentProps<typeof DayPicker>
+
+function Calendar({
+  className,
+  classNames,
+  showOutsideDays = true,
+  ...props
+}: CalendarProps) {
+  return (
+    <DayPicker
+      showOutsideDays={showOutsideDays}
+      className={cn("p-3", className)}
+      classNames={{
+        months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
+        month: "space-y-4",
+        caption: "flex justify-center pt-1 relative items-center",
+        caption_label: "text-sm font-medium",
+        nav: "space-x-1 flex items-center",
+        nav_button: cn(buttonVariants({ variant: "outline" }), "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"),
+        nav_button_previous: "absolute left-1",
+        nav_button_next: "absolute right-1",
+        table: "w-full border-collapse space-y-1",
+        head_row: "flex",
+        head_cell: "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",
+        row: "flex w-full mt-2",
+        cell: "h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20",
+        day: cn(buttonVariants({ variant: "ghost" }), "h-9 w-9 p-0 font-normal aria-selected:opacity-100"),
+        day_range_end: "day-range-end",
+        day_selected: "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
+        day_today: "bg-accent text-accent-foreground",
+        day_outside: "day-outside text-muted-foreground opacity-50",
+        day_disabled: "text-muted-foreground opacity-50",
+        day_hidden: "invisible",
+        ...classNames,
+      }}
+      components={{
+        Chevron: ({ orientation }) =>
+          orientation === "left"
+            ? <ChevronLeft className="h-4 w-4" />
+            : <ChevronRight className="h-4 w-4" />,
+      }}
+      {...props}
+    />
+  )
+}
+Calendar.displayName = "Calendar"
+export { Calendar }
+CALEOF
           echo "Restored calendar.tsx"
 
       - name: Restore AnimatedSection.tsx
         if: steps.check_skip.outputs.skip != 'true'
         run: |
-          echo "InVzZSBjbGllbnQiOwondXNlIGNsaWVudCc7CmltcG9ydCB7IG1vdGlvbiwgdXNlSW5WaWV3IH0gZnJvbSAiZnJhbWVyLW1vdGlvbiI7CmltcG9ydCB7IHVzZVJlZiwgUmVhY3ROb2RlLCB1c2VFZmZlY3QsIHVzZVN0YXRlIH0gZnJvbSAicmVhY3QiOwoKaW50ZXJmYWNlIEFuaW1hdGVkU2VjdGlvblByb3BzIHsKICBjaGlsZHJlbjogUmVhY3ROb2RlOwogIGNsYXNzTmFtZT86IHN0cmluZzsKICBkZWxheT86IG51bWJlcjsKICBkaXJlY3Rpb24/OiAidXAiIHwgImRvd24iIHwgImxlZnQiIHwgInJpZ2h0IiB8ICJzY2FsZSI7Cn0KCmNvbnN0IEFuaW1hdGVkU2VjdGlvbiA9ICh7IAogIGNoaWxkcmVuLCAKICBjbGFzc05hbWUgPSAiIiwgCiAgZGVsYXkgPSAwLAogIGRpcmVjdGlvbiA9ICJ1cCIgCn06IEFuaW1hdGVkU2VjdGlvblByb3BzKSA9PiB7CiAgY29uc3QgcmVmID0gdXNlUmVmKG51bGwpOwogIGNvbnN0IFtpc01vYmlsZSwgc2V0SXNNb2JpbGVdID0gdXNlU3RhdGUoZmFsc2UpOwoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgY29uc3QgY2hlY2tNb2JpbGUgPSAoKSA9PiBzZXRJc01vYmlsZSh3aW5kb3cuaW5uZXJXaWR0aCA8IDc2OCk7CiAgICBjaGVja01vYmlsZSgpOwogICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ3Jlc2l6ZScsIGNoZWNrTW9iaWxlKTsKICAgIHJldHVybiAoKSA9PiB3aW5kb3cucmVtb3ZlRXZlbnRMaXN0ZW5lcigncmVzaXplJywgY2hlY2tNb2JpbGUpOwogIH0sIFtdKTsKCiAgLy8gVXNlIDBweCBtYXJnaW4gdG8gZW5zdXJlIGVsZW1lbnRzIGFsd2F5cyBiZWNvbWUgdmlzaWJsZSB3aGVuIHRoZXkgZW50ZXIgdGhlIHZpZXdwb3J0LgogIC8vIEEgbmVnYXRpdmUgbWFyZ2luIChsaWtlIC0xMDBweCkgY2FuIGNhdXNlIGVsZW1lbnRzIHRvIG5ldmVyIHRyaWdnZXIgb24gc2hvcnQgbW9iaWxlIHNjcmVlbnMKICAvLyB3aGVyZSB0aGUgZWxlbWVudCBtYXkgbmV2ZXIgcmVhY2ggdGhlIHJlcXVpcmVkIGRpc3RhbmNlIGluc2lkZSB0aGUgdmlld3BvcnQuCiAgY29uc3QgaXNJblZpZXcgPSB1c2VJblZpZXcocmVmLCB7IAogICAgb25jZTogdHJ1ZSwgCiAgICBtYXJnaW46ICIwcHgiCiAgfSk7CgogIC8vIE9uIG1vYmlsZSwgY29udmVydCBsZWZ0L3JpZ2h0IGFuaW1hdGlvbnMgdG8gdXAvZG93biB0byBwcmV2ZW50IGhvcml6b250YWwgb3ZlcmZsb3cKICBjb25zdCBlZmZlY3RpdmVEaXJlY3Rpb24gPSBpc01vYmlsZSAmJiAoZGlyZWN0aW9uID09PSAnbGVmdCcgfHwgZGlyZWN0aW9uID09PSAncmlnaHQnKSA/ICd1cCcgOiBkaXJlY3Rpb247CgogIGNvbnN0IHZhcmlhbnRzID0gewogICAgdXA6IHsKICAgICAgaGlkZGVuOiB7IG9wYWNpdHk6IDAsIHk6IDQwIH0sCiAgICAgIHZpc2libGU6IHsgb3BhY2l0eTogMSwgeTogMCB9CiAgICB9LAogICAgZG93bjogewogICAgICBoaWRkZW46IHsgb3BhY2l0eTogMCwgeTogLTQwIH0sCiAgICAgIHZpc2libGU6IHsgb3BhY2l0eTogMSwgeTogMCB9CiAgICB9LAogICAgbGVmdDogewogICAgICBoaWRkZW46IHsgb3BhY2l0eTogMCwgeDogLTYwIH0sCiAgICAgIHZpc2libGU6IHsgb3BhY2l0eTogMSwgeDogMCB9CiAgICB9LAogICAgcmlnaHQ6IHsKICAgICAgaGlkZGVuOiB7IG9wYWNpdHk6IDAsIHg6IDYwIH0sCiAgICAgIHZpc2libGU6IHsgb3BhY2l0eTogMSwgeDogMCB9CiAgICB9LAogICAgc2NhbGU6IHsKICAgICAgaGlkZGVuOiB7IG9wYWNpdHk6IDAsIHNjYWxlOiAwLjggfSwKICAgICAgdmlzaWJsZTogeyBvcGFjaXR5OiAxLCBzY2FsZTogMSB9CiAgICB9CiAgfTsKCiAgcmV0dXJuICgKICAgIDxtb3Rpb24uZGl2CiAgICAgIHJlZj17cmVmfQogICAgICBjbGFzc05hbWU9e2NsYXNzTmFtZX0KICAgICAgaW5pdGlhbD0iaGlkZGVuIgogICAgICBhbmltYXRlPXtpc0luVmlldyA/ICJ2aXNpYmxlIiA6ICJoaWRkZW4ifQogICAgICB2YXJpYW50cz17dmFyaWFudHNbZWZmZWN0aXZlRGlyZWN0aW9uXX0KICAgICAgdHJhbnNpdGlvbj17eyAKICAgICAgICBkdXJhdGlvbjogMC42LCAKICAgICAgICBkZWxheSwKICAgICAgICBlYXNlOiBbMC4yNSwgMC40NiwgMC40NSwgMC45NF0KICAgICAgfX0KICAgID4KICAgICAge2NoaWxkcmVufQogICAgPC9tb3Rpb24uZGl2PgogICk7Cn07CgpleHBvcnQgZGVmYXVsdCBBbmltYXRlZFNlY3Rpb247Cg==" | base64 -d > components/AnimatedSection.tsx
+          cat > components/AnimatedSection.tsx << 'ANIMEOF'
+"use client";
+import { motion, useInView } from "framer-motion";
+import { useRef, ReactNode, useEffect, useState } from "react";
+
+interface AnimatedSectionProps {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+  direction?: "up" | "down" | "left" | "right" | "scale";
+}
+
+const AnimatedSection = ({
+  children,
+  className = "",
+  delay = 0,
+  direction = "up",
+}: AnimatedSectionProps) => {
+  const ref = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const isInView = useInView(ref, { once: true, margin: "0px" });
+  const effectiveDirection =
+    isMobile && (direction === "left" || direction === "right") ? "up" : direction;
+
+  const variants = {
+    up:    { hidden: { opacity: 0, y: 40 },      visible: { opacity: 1, y: 0 } },
+    down:  { hidden: { opacity: 0, y: -40 },     visible: { opacity: 1, y: 0 } },
+    left:  { hidden: { opacity: 0, x: -60 },     visible: { opacity: 1, x: 0 } },
+    right: { hidden: { opacity: 0, x: 60 },      visible: { opacity: 1, x: 0 } },
+    scale: { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={variants[effectiveDirection]}
+      transition={{ duration: 0.6, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+export default AnimatedSection;
+ANIMEOF
           echo "Restored AnimatedSection.tsx"
 
-      - name: Run comprehensive Next.js compatibility fix script
+      # ── Main conversion Python script ─────────────────────────────────────
+      - name: Run Lovable → Next.js conversion
         if: steps.check_skip.outputs.skip != 'true'
         run: |
-          python3 - << 'FIXEOF'
-          import os, re
+          python3 << 'PYEOF'
+import os
+import re
 
-          BASE = os.getcwd()
+BASE = os.getcwd()
 
-          def read(path):
-              with open(path, "r", encoding="utf-8", errors="ignore") as f:
-                  return f.read()
+def read(path):
+    with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        return f.read()
 
-          def write(path, content):
-              with open(path, "w", encoding="utf-8") as f:
-                  f.write(content)
-              print(f"  Fixed: {path.replace(BASE+'/', '')}")
+def write(path, content):
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"  fixed: {path.replace(BASE+'/', '')}")
 
-          def ensure_use_client(path):
-              content = read(path)
-              if not content.startswith('"use client"'):
-                  write(path, '"use client";\n' + content)
+def has_use_client(content):
+    first_non_empty = next((l for l in content.split("\n") if l.strip()), "")
+    return "use client" in first_non_empty
 
-          def fix_react_router_dom(path):
-              content = read(path)
-              original = content
-              content = re.sub(r'import\s*\{\s*Link\s*\}\s*from\s*["\'\']react-router-dom["\'\'];?', 'import Link from "next/link";', content)
-              content = re.sub(r'import\s*\{\s*useNavigate\s*\}\s*from\s*["\'\']react-router-dom["\'\'];?', 'import { useRouter } from "next/navigation";', content)
-              content = re.sub(r'import\s*\{\s*useNavigate,\s*useParams\s*\}\s*from\s*["\'\']react-router-dom["\'\'];?', 'import { useRouter, useParams } from "next/navigation";', content)
-              content = re.sub(r'import\s*\{\s*useParams,\s*useNavigate\s*\}\s*from\s*["\'\']react-router-dom["\'\'];?', 'import { useRouter, useParams } from "next/navigation";', content)
-              content = re.sub(r'import\s*\{\s*useParams\s*\}\s*from\s*["\'\']react-router-dom["\'\'];?', 'import { useParams } from "next/navigation";', content)
-              content = re.sub(r'import\s*\{[^}]+\}\s*from\s*["\'\']react-router-dom["\'\'];?\n?', 'import { useRouter } from "next/navigation";\n', content)
-              content = content.replace('const navigate = useNavigate();', 'const router = useRouter();')
-              content = content.replace('const navigate = useNavigate()', 'const router = useRouter()')
-              content = re.sub(r'\bnavigate\(', 'router.push(', content)
-              content = re.sub(r'router\.push\(([^,)]+),\s*\{\s*replace:\s*true\s*\}\)', r'router.replace(\1)', content)
-              content = re.sub(r'<Link\s+to=', '<Link href=', content)
-              content = re.sub(r'<Link\n(\s+)to=', r'<Link\n\1href=', content)
-              content = content.replace('}, [navigate]);', '}, [router]);')
-              content = re.sub(r'\bwindow\.pathname\b', 'window.location.pathname', content)
-              if content != original:
-                  write(path, content)
+def needs_use_client(content):
+    patterns = [
+        "useState", "useEffect", "useRef", "useCallback", "useMemo",
+        "useReducer", "useContext", "useRouter", "usePathname",
+        "useSearchParams", "framer-motion", "motion.",
+        "onClick", "onChange", "onSubmit", "onKeyDown", "onMouseEnter",
+        "addEventListener", "window.", "document.",
+    ]
+    return any(p in content for p in patterns)
 
-          print("=== Applying Next.js fixes ===")
+def fix_router_dom(content):
+    original = content
 
-          # Fix react-router-dom in all components and page-components
-          for d in [f"{BASE}/components", f"{BASE}/page-components"]:
-              if not os.path.exists(d): continue
-              for root, dirs, files in os.walk(d):
-                  for fname in files:
-                      if fname.endswith((".tsx", ".ts")):
-                          fpath = os.path.join(root, fname)
-                          content = read(fpath)
-                          if "react-router-dom" in content or "useNavigate" in content:
-                              fix_react_router_dom(fpath)
+    # Link import
+    content = re.sub(
+        r'import\s*\{\s*Link\s*\}\s*from\s*["\']react-router-dom["\'];?\n?',
+        'import Link from "next/link";\n',
+        content
+    )
+    # useNavigate only
+    content = re.sub(
+        r'import\s*\{\s*useNavigate\s*\}\s*from\s*["\']react-router-dom["\'];?\n?',
+        'import { useRouter } from "next/navigation";\n',
+        content
+    )
+    # useLocation only
+    content = re.sub(
+        r'import\s*\{\s*useLocation\s*\}\s*from\s*["\']react-router-dom["\'];?\n?',
+        'import { usePathname } from "next/navigation";\n',
+        content
+    )
+    # useParams only
+    content = re.sub(
+        r'import\s*\{\s*useParams\s*\}\s*from\s*["\']react-router-dom["\'];?\n?',
+        'import { useParams } from "next/navigation";\n',
+        content
+    )
+    # Catch-all for remaining react-router-dom imports
+    content = re.sub(
+        r'import\s*\{[^}]+\}\s*from\s*["\']react-router-dom["\'];?\n?',
+        'import { useRouter, usePathname } from "next/navigation";\n',
+        content
+    )
 
-          # Add "use client" to all client-side components
-          client_files = [
-              "components/About.tsx", "components/BlogAuthorCard.tsx", "components/CTA.tsx",
-              "components/CountUp.tsx", "components/FAQ.tsx", "components/FloatingCard.tsx",
-              "components/GlowOrb.tsx", "components/GoogleAnalytics.tsx", "components/Header.tsx",
-              "components/Hero.tsx", "components/Industries.tsx", "components/LocationsSection.tsx",
-              "components/NativeContactForm.tsx", "components/ParticleBackground.tsx",
-              "components/ScrollToTop.tsx", "components/Services.tsx",
-              "components/admin/MFAVerification.tsx",
-              "components/admin/cms/CMSBlogEditor.tsx", "components/admin/cms/CMSBlogList.tsx",
-              "components/admin/cms/CMSIndustriesList.tsx", "components/admin/cms/CMSIndustryEditor.tsx",
-              "components/admin/cms/CMSPageContentEditor.tsx", "components/admin/cms/CMSSEOEditor.tsx",
-              "components/admin/cms/CMSServiceEditor.tsx", "components/admin/cms/CMSServicesList.tsx",
-              "components/ui/carousel.tsx", "components/ui/chart.tsx", "components/ui/form.tsx",
-              "components/ui/input-otp.tsx", "components/ui/sidebar.tsx", "components/ui/sonner.tsx",
-              "components/ui/toaster.tsx", "components/ui/toggle-group.tsx",
-              "page-components/AIComplianceAssessmentPage.tsx", "page-components/AICompliancePage.tsx",
-              "page-components/AIGovernanceCompliancePage.tsx", "page-components/AIIntegrationPage.tsx",
-              "page-components/AIReadinessAssessmentPage.tsx", "page-components/AboutPage.tsx",
-              "page-components/AccountingPage.tsx", "page-components/BlogPostPage.tsx",
-              "page-components/BlogsPage.tsx", "page-components/CloudSolutionsPage.tsx",
-              "page-components/CoManagedITPage.tsx", "page-components/ComplianceCommunicationPage.tsx",
-              "page-components/CybersecurityPage.tsx", "page-components/DisasterRecoveryChecklistPage.tsx",
-              "page-components/DisasterRecoveryPage.tsx", "page-components/FinancialServicesPage.tsx",
-              "page-components/FreeRiskAssessmentPage.tsx", "page-components/GRCPage.tsx",
-              "page-components/GetAIAssessmentPage.tsx", "page-components/GetAIComplianceAssessmentPage.tsx",
-              "page-components/GetCloudAssessmentPage.tsx", "page-components/GetDRAssessmentPage.tsx",
-              "page-components/GetPartnershipOptionsPage.tsx", "page-components/GetStartedPage.tsx",
-              "page-components/HIPAAComplianceChecklistPage.tsx", "page-components/HealthcarePage.tsx",
-              "page-components/HelpDeskPage.tsx", "page-components/LegalPage.tsx",
-              "page-components/MSSPCybersecurityPage.tsx", "page-components/ManagedITPage.tsx",
-              "page-components/NonProfitPage.tsx", "page-components/ProfessionalServicesPage.tsx",
-              "page-components/ReferralPage.tsx",
-              "page-components/locations/BocaRatonNewPage.tsx", "page-components/locations/BocaRatonPage.tsx",
-              "page-components/locations/FloridaPage.tsx", "page-components/locations/MiamiPage.tsx",
-              "page-components/locations/NewYorkPage.tsx",
-              "page-components/locations/WestPalmBeachNewPage.tsx", "page-components/locations/WestPalmBeachPage.tsx",
-          ]
-          for rel in client_files:
-              fp = f"{BASE}/{rel}"
-              if os.path.exists(fp): ensure_use_client(fp)
+    # Usage
+    content = content.replace("const navigate = useNavigate();", "const router = useRouter();")
+    content = content.replace("const navigate = useNavigate()", "const router = useRouter()")
+    content = content.replace("const location = useLocation();", "const pathname = usePathname();")
+    content = content.replace("const location = useLocation()", "const pathname = usePathname()")
+    content = content.replace("location.pathname", "pathname")
+    content = re.sub(r'\bnavigate\(', 'router.push(', content)
+    content = re.sub(
+        r'router\.push\(([^,)]+),\s*\{\s*replace:\s*true\s*\}\)',
+        r'router.replace(\1)',
+        content
+    )
+    content = re.sub(r'<Link\s+to=', '<Link href=', content)
+    content = re.sub(r'<Link\n(\s+)to=', r'<Link\n\1href=', content)
+    content = content.replace("}, [navigate]);", "}, [router]);")
+    content = content.replace("window.pathname", "window.location.pathname")
 
-          # Fix window.pathname
-          for root, dirs, files in os.walk(f"{BASE}/page-components"):
-              for fname in files:
-                  if fname.endswith(".tsx"):
-                      fpath = os.path.join(root, fname)
-                      content = read(fpath)
-                      if "window.pathname" in content:
-                          write(fpath, content.replace("window.pathname", "window.location.pathname"))
+    return content
 
-          # Fix navigate deps
-          for root, dirs, files in os.walk(f"{BASE}/page-components"):
-              for fname in files:
-                  if fname.endswith(".tsx"):
-                      fpath = os.path.join(root, fname)
-                      content = read(fpath)
-                      if "}, [navigate]);" in content:
-                          write(fpath, content.replace("}, [navigate]);", "}, [router]);"))
+# ── 1. Fix react-router-dom ──────────────────────────────────────────────────
+print("\n[1] Fixing react-router-dom...")
+for d in ["components", "page-components"]:
+    fp = os.path.join(BASE, d)
+    if not os.path.exists(fp): continue
+    for root, _, files in os.walk(fp):
+        for fname in files:
+            if not fname.endswith((".tsx", ".ts")): continue
+            fpath = os.path.join(root, fname)
+            content = read(fpath)
+            if "react-router-dom" in content:
+                fixed = fix_router_dom(content)
+                if fixed != content:
+                    write(fpath, fixed)
 
-          # Fix router.push replace option
-          for d in [f"{BASE}/page-components", f"{BASE}/components"]:
-              if not os.path.exists(d): continue
-              for root, dirs, files in os.walk(d):
-                  for fname in files:
-                      if fname.endswith(".tsx"):
-                          fpath = os.path.join(root, fname)
-                          content = read(fpath)
-                          new = re.sub(r'router\.push\(([^,)]+),\s*\{\s*replace:\s*true\s*\}\)', r'router.replace(\1)', content)
-                          if new != content: write(fpath, new)
+# ── 2. Add "use client" where needed ────────────────────────────────────────
+print("\n[2] Adding 'use client' directives...")
+for d in ["components", "page-components"]:
+    fp = os.path.join(BASE, d)
+    if not os.path.exists(fp): continue
+    for root, _, files in os.walk(fp):
+        for fname in files:
+            if not fname.endswith(".tsx"): continue
+            fpath = os.path.join(root, fname)
+            content = read(fpath)
+            if not has_use_client(content) and needs_use_client(content):
+                write(fpath, '"use client";\n' + content)
 
-          # Fix StaticImageData
-          for rel in ["components/BlogAuthorCard.tsx", "components/LocationsSection.tsx",
-                      "page-components/AboutPage.tsx",
-                      "page-components/locations/BocaRatonNewPage.tsx", "page-components/locations/BocaRatonPage.tsx",
-                      "page-components/locations/FloridaPage.tsx", "page-components/locations/MiamiPage.tsx",
-                      "page-components/locations/WestPalmBeachNewPage.tsx", "page-components/locations/WestPalmBeachPage.tsx"]:
-              fp = f"{BASE}/{rel}"
-              if not os.path.exists(fp): continue
-              content = read(fp)
-              original = content
-              content = content.replace('src={authorPhoto}', 'src={typeof authorPhoto === "string" ? authorPhoto : (authorPhoto as any).src}')
-              content = re.sub(r'<img\s+src={([a-zA-Z_][a-zA-Z0-9_]*)}', r'<img src={typeof \1 === "string" ? \1 : (\1 as any).src}', content)
-              if content != original: write(fp, content)
+# ── 3. Fix metadata + "use client" conflict in page.tsx ─────────────────────
+print("\n[3] Fixing metadata conflicts...")
+app_dir = os.path.join(BASE, "app")
+if os.path.exists(app_dir):
+    for root, _, files in os.walk(app_dir):
+        for fname in files:
+            if fname != "page.tsx": continue
+            fpath = os.path.join(root, fname)
+            content = read(fpath)
+            if has_use_client(content) and "export const metadata" in content:
+                fixed = content.replace('"use client";\n', '').replace("'use client';\n", '')
+                write(fpath, fixed)
 
-          # Fix BlogsPage getSrc
-          bp = f"{BASE}/page-components/BlogsPage.tsx"
-          if os.path.exists(bp):
-              content = read(bp)
-              original = content
-              if 'getSrc' not in content:
-                  content = content.replace('import { blogPosts } from "@/data/blogPosts";', 'import { blogPosts, getSrc } from "@/data/blogPosts";')
-              content = content.replace('src={blog.image}', 'src={getSrc(blog.image)}')
-              if content != original: write(bp, content)
+# ── 4. globals.css overflow-x hidden ────────────────────────────────────────
+print("\n[4] Checking globals.css...")
+gp = os.path.join(BASE, "app/globals.css")
+if os.path.exists(gp):
+    content = read(gp)
+    if "overflow-x: hidden" not in content:
+        # Insert after body { line
+        content = re.sub(r'(body\s*\{)', r'\1\n  overflow-x: hidden;', content)
+        write(gp, content)
 
-          # Fix AboutPage image extension
-          ap = f"{BASE}/page-components/AboutPage.tsx"
-          if os.path.exists(ap):
-              content = read(ap)
-              if "orville-matias-about.png" in content:
-                  write(ap, content.replace('import orvillePhoto from "@/assets/orville-matias-about.png"', 'import orvillePhoto from "@/assets/orville-matias-about.jpeg"'))
+# ── 5. blogPosts getSrc() helper ─────────────────────────────────────────────
+print("\n[5] Checking blogPosts getSrc...")
+bpts = os.path.join(BASE, "data/blogPosts.ts")
+if os.path.exists(bpts):
+    content = read(bpts)
+    if "export function getSrc" not in content and "export const getSrc" not in content:
+        content += '\nexport function getSrc(image: any): string {\n  if (typeof image === "string") return image;\n  return image.src;\n}\n'
+        write(bpts, content)
 
-          # Fix CMS editor null guards
-          for rel, fn, id_var in [
-              ("components/admin/cms/CMSBlogEditor.tsx", "fetchPost", "postId"),
-              ("components/admin/cms/CMSIndustryEditor.tsx", "fetchIndustry", "industryId"),
-              ("components/admin/cms/CMSServiceEditor.tsx", "fetchService", "serviceId"),
-          ]:
-              fp = f"{BASE}/{rel}"
-              if not os.path.exists(fp): continue
-              content = read(fp)
-              original = content
-              guard = f"if (!{id_var}) return;\n    "
-              marker = f"const {fn} = async () => {{\n    setIsLoading(true);"
-              if guard not in content and marker in content:
-                  content = content.replace(marker, f"const {fn} = async () => {{\n    {guard}setIsLoading(true);")
-                  if content != original: write(fp, content)
+# ── 6. StaticImageData .src unwrap ───────────────────────────────────────────
+print("\n[6] StaticImageData fix...")
+for rel in [
+    "components/BlogAuthorCard.tsx",
+    "page-components/AboutPage.tsx",
+]:
+    fp = os.path.join(BASE, rel)
+    if not os.path.exists(fp): continue
+    content = read(fp)
+    original = content
+    content = re.sub(
+        r'<img\s+src={([a-zA-Z_][a-zA-Z0-9_]*)}',
+        lambda m: f'<img src={{typeof {m.group(1)} === "string" ? {m.group(1)} : ({m.group(1)} as any).src}}',
+        content
+    )
+    if content != original: write(fp, content)
 
-          # globals.css overflow-x hidden
-          gp = f"{BASE}/app/globals.css"
-          if os.path.exists(gp):
-              content = read(gp)
-              if "overflow-x: hidden" not in content:
-                  content = content.replace("html,\nbody {", "html,\nbody {\n  overflow-x: hidden;")
-                  write(gp, content)
+# ── 7. CMS editor null guards ────────────────────────────────────────────────
+print("\n[7] CMS null guards...")
+for rel, id_var in [
+    ("components/admin/cms/CMSBlogEditor.tsx", "postId"),
+    ("components/admin/cms/CMSIndustryEditor.tsx", "industryId"),
+    ("components/admin/cms/CMSServiceEditor.tsx", "serviceId"),
+]:
+    fp = os.path.join(BASE, rel)
+    if not os.path.exists(fp): continue
+    content = read(fp)
+    original = content
+    guard = f"if (!{id_var}) return;\n    "
+    if guard not in content and "setIsLoading(true);" in content:
+        content = content.replace("setIsLoading(true);", f"{guard}setIsLoading(true);", 1)
+        if content != original: write(fp, content)
 
-          # blogPosts getSrc helper
-          bpts = f"{BASE}/data/blogPosts.ts"
-          if os.path.exists(bpts):
-              content = read(bpts)
-              if "export function getSrc" not in content and "export const getSrc" not in content:
-                  insert = '\nexport function getSrc(image: any): string {\n  if (typeof image === "string") return image;\n  return image.src;\n}\n'
-                  content += insert
-                  write(bpts, content)
+# ── 8. AboutPage image extension ─────────────────────────────────────────────
+ap = os.path.join(BASE, "page-components/AboutPage.tsx")
+if os.path.exists(ap):
+    content = read(ap)
+    if "orville-matias-about.png" in content:
+        write(ap, content.replace(
+            'import orvillePhoto from "@/assets/orville-matias-about.png"',
+            'import orvillePhoto from "@/assets/orville-matias-about.jpeg"'
+        ))
 
-          # Fix fonts: Space Grotesk instead of Playfair Display
-          import re as _re
-          tc = f"{BASE}/tailwind.config.ts"
-          if os.path.exists(tc):
-              content = read(tc)
-              original = content
-              content = _re.sub(
-                  r'display:\s*\["Playfair Display"[^\]]*\]',
-                  'display: ["var(--font-space-grotesk)", "Space Grotesk", "Inter", "system-ui", "sans-serif"]',
-                  content
-              )
-              if content != original: write(tc, content)
-          lt = f"{BASE}/app/layout.tsx"
-          if os.path.exists(lt):
-              content = read(lt)
-              original = content
-              content = content.replace(
-                  "import { Inter, Playfair_Display } from 'next/font/google';",
-                  "import { Inter, Space_Grotesk } from 'next/font/google';"
-              )
-              content = content.replace(
-                  'import { Inter, Playfair_Display } from "next/font/google";',
-                  'import { Inter, Space_Grotesk } from "next/font/google";'
-              )
-              content = _re.sub(
-                  r'const playfair = Playfair_Display\(\{[^}]+\}\);',
-                  "const spaceGrotesk = Space_Grotesk({\n  subsets: ['latin'],\n  variable: '--font-space-grotesk',\n  display: 'swap',\n  weight: ['600', '700'],\n});",
-                  content
-              )
-              content = _re.sub(
-                  r'className=\{`\$\{inter\.variable\} \$\{playfair\.variable\}`\}',
-                  'className={`${inter.variable} ${spaceGrotesk.variable}`}',
-                  content
-              )
-              if content != original: write(lt, content)
+print("\n=== Conversion complete ===")
+PYEOF
 
-          print("=== All fixes applied! ===")
-          FIXEOF
-
-      - name: Check for changes and commit
+      # ── Commit ───────────────────────────────────────────────────────────
+      - name: Commit and push changes
         if: steps.check_skip.outputs.skip != 'true'
-        id: commit_fixes
+        id: commit
         run: |
           git add -A
           if git diff --cached --quiet; then
-            echo "All Next.js fixes are already in place — no changes needed."
-            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes — all fixes already in place."
+            echo "changed=false" >> $GITHUB_OUTPUT
           else
-            CHANGED_FILES=$(git diff --cached --name-only | wc -l)
-            git commit -m "fix(guardian): auto-restore Next.js compatibility fixes [${CHANGED_FILES} files]"
+            N=$(git diff --cached --name-only | wc -l | tr -d ' ')
+            git commit -m "fix(guardian): auto-restore Next.js compatibility fixes [${N} files]"
             git push
-            echo "Pushed Next.js compatibility fixes for ${CHANGED_FILES} files."
-            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Pushed fixes for ${N} files."
+            echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Trigger Vercel Deploy Hook (when no file changes needed)
-        if: steps.check_skip.outputs.skip != 'true' && steps.commit_fixes.outputs.changes == 'false'
+      # ── If no file changes, trigger Vercel deploy hook directly ──────────
+      - name: Trigger Vercel deploy hook (if no file changes)
+        if: steps.check_skip.outputs.skip != 'true' && steps.commit.outputs.changed == 'false'
         run: |
-          # Vercel now skips bot commits (chore(sync):) via the Ignored Build Step setting.
-          # When Fix Guardian has no file changes to push, Vercel won't deploy automatically.
-          # We trigger the Deploy Hook to ensure the current HEAD (already correct) gets deployed.
-          echo "No file changes needed — triggering Vercel Deploy Hook to deploy current HEAD..."
-          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+          HTTP=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
             "https://api.vercel.com/v1/integrations/deploy/prj_JOtoF40htnddIgFupyOkiF60DeSc/PyTjsrRsTf")
-          echo "Deploy hook response: HTTP $HTTP_STATUS"
-          if [ "$HTTP_STATUS" = "200" ] || [ "$HTTP_STATUS" = "201" ]; then
-            echo "Deploy hook triggered successfully."
-          else
-            echo "Warning: Deploy hook returned HTTP $HTTP_STATUS"
-          fi
-
-      - name: Fix SEO health check URLs
-        run: |
-          FILE=".github/workflows/seo-auto-push.yml"
-          CHANGED=false
-          if grep -q '"/services/managed-it"' "$FILE" 2>/dev/null; then
-            sed -i 's|"/services/managed-it"|"/services/managed-it-services"|g' "$FILE"
-            CHANGED=true
-          fi
-          if grep -q '"/blog"' "$FILE" 2>/dev/null; then
-            sed -i 's|"/blog"|"/blogs"|g' "$FILE"
-            CHANGED=true
-          fi
-          if [ "$CHANGED" = "true" ]; then
-            git add .github/workflows/seo-auto-push.yml
-            git diff --cached --quiet || git commit -m "fix(guardian): correct SEO health check URLs" && git push
-          fi
+          echo "Deploy hook: HTTP $HTTP"
