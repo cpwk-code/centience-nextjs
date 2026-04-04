@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+
+export const dynamic = 'force-dynamic';
 import LawFirmsAssessment from '@/page-components/assessments/LawFirmsAssessment';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
