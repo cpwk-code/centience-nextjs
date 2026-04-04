@@ -71,7 +71,7 @@ const DropdownMenu = ({ item, scrolled }: { item: NavItem; scrolled: boolean }) 
       <button
         className={`px-4 py-2 text-sm font-semibold transition-colors duration-200 rounded-lg flex items-center gap-1.5 ${
           scrolled
-            ? "text-foreground/80 hover:text-foreground hover:bg-muted"
+            ? "text-[hsl(220,40%,13%)]/80 hover:text-[hsl(220,40%,13%)] hover:bg-[hsl(220,14%,94%)]"
             : "text-warm-white/90 hover:text-warm-white hover:bg-warm-white/10"
         }`}
       >
@@ -117,14 +117,14 @@ const Navbar = () => {
   }, [pathname]);
 
   const linkClasses = scrolled
-    ? "text-foreground/80 hover:text-foreground hover:bg-muted"
+    ? "text-[hsl(220,40%,13%)]/80 hover:text-[hsl(220,40%,13%)] hover:bg-[hsl(220,14%,94%)]"
     : "text-warm-white/90 hover:text-warm-white hover:bg-warm-white/10";
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[hsl(220,20%,97%)]/95 backdrop-blur-xl shadow-sm border-b border-border"
+          ? "bg-[hsl(220,20%,97%)]/95 backdrop-blur-xl shadow-sm border-b border-[hsl(220,13%,90%)]"
           : "bg-transparent"
       }`}
     >
@@ -164,7 +164,7 @@ const Navbar = () => {
             <Phone size={14} />
             (877) 945-7177
           </a>
-          <span className={`text-xs ${scrolled ? "text-foreground/20" : "text-warm-white/20"}`}>|</span>
+          <span className={`text-xs ${scrolled ? "text-[hsl(220,40%,13%)]/20" : "text-warm-white/20"}`}>|</span>
           <Button variant="cta-nav" size="sm" asChild className="whitespace-nowrap shrink-0">
             <Link href="/ai-governance-risk-assessment">Book Assessment</Link>
           </Button>
@@ -182,7 +182,7 @@ const Navbar = () => {
             <span>(877) 945-7177</span>
           </a>
           <button
-            className={`p-2 ${scrolled ? "text-foreground" : "text-warm-white"}`}
+            className={`p-2 ${scrolled ? "text-[hsl(220,40%,13%)]" : "text-warm-white"}`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
