@@ -51,7 +51,7 @@ const Footer = () => {
             <Link href="/" className="flex items-center gap-3 mb-6">
               <motion.div whileHover={{ scale: 1.05 }}>
                 <Image
-                  src={logo}
+                  src={logo.src}
                   alt="Centience — AI & Technology Governance"
                   className="h-14 sm:h-16 lg:h-[4.5rem] w-auto drop-shadow-md"
                 />
