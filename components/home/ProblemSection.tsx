@@ -1,4 +1,3 @@
-"use client";
 import { ShieldAlert, Scale, Brain, Server } from "lucide-react";
 import { motion } from "framer-motion";
 

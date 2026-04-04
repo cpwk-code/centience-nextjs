@@ -1,4 +1,3 @@
-"use client";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { X, Loader2 } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const COOKIE_NAME = "centience_lead_captured";
 const COOKIE_DAYS = 90;
@@ -77,6 +77,7 @@ const LeadCaptureModal = ({
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [captcha, setCaptcha] = useState(false);
 
   useEffect(() => {
     if (!open) {
@@ -97,6 +98,7 @@ const LeadCaptureModal = ({
     form.company.trim() &&
     form.jobTitle.trim() &&
     form.industry &&
+    captcha &&
     (isGuide || (form.orgSize && form.regulatoryFramework));
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -322,6 +324,18 @@ const LeadCaptureModal = ({
                     </div>
                   </>
                 )}
+
+                {/* Captcha checkbox */}
+                <div className="flex items-center gap-3 border border-border rounded-lg p-4 bg-muted/50">
+                  <Checkbox
+                    id="gate-captcha"
+                    checked={captcha}
+                    onCheckedChange={(checked) => setCaptcha(!!checked)}
+                  />
+                  <Label htmlFor="gate-captcha" className="text-sm font-normal cursor-pointer select-none">
+                    I am human
+                  </Label>
+                </div>
 
                 <Button
                   variant="cta"

@@ -1,7 +1,5 @@
-"use client";
-import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import centienceLogoLight from "@/assets/centience-logo-light.png";
@@ -71,7 +69,7 @@ const DropdownMenu = ({ item, scrolled }: { item: NavItem; scrolled: boolean }) 
       <button
         className={`px-4 py-2 text-sm font-semibold transition-colors duration-200 rounded-lg flex items-center gap-1.5 ${
           scrolled
-            ? "text-[hsl(220,40%,13%)]/80 hover:text-[hsl(220,40%,13%)] hover:bg-[hsl(220,14%,94%)]"
+            ? "text-foreground/80 hover:text-foreground hover:bg-muted"
             : "text-warm-white/90 hover:text-warm-white hover:bg-warm-white/10"
         }`}
       >
@@ -85,7 +83,7 @@ const DropdownMenu = ({ item, scrolled }: { item: NavItem; scrolled: boolean }) 
             {item.children!.map((child) => (
               <Link
                 key={child.label}
-                href={child.href}
+                to={child.href}
                 className="block px-5 py-3 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-muted transition-colors"
                 onClick={() => setOpen(false)}
               >
@@ -103,7 +101,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const pathname = usePathname();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -114,24 +112,24 @@ const Navbar = () => {
   useEffect(() => {
     setMobileOpen(false);
     setMobileExpanded(null);
-  }, [pathname]);
+  }, [location]);
 
   const linkClasses = scrolled
-    ? "text-[hsl(220,40%,13%)]/80 hover:text-[hsl(220,40%,13%)] hover:bg-[hsl(220,14%,94%)]"
+    ? "text-foreground/80 hover:text-foreground hover:bg-muted"
     : "text-warm-white/90 hover:text-warm-white hover:bg-warm-white/10";
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[hsl(220,20%,97%)]/95 backdrop-blur-xl shadow-sm border-b border-[hsl(220,13%,90%)]"
+          ? "bg-card/95 backdrop-blur-xl shadow-sm border-b border-border"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 lg:h-36">
-        <Link href="/" className="flex items-center gap-3 shrink-0">
+        <Link to="/" className="flex items-center gap-3 shrink-0">
           <img
-            src={scrolled ? centienceLogoLight.src : centienceLogoDark.src}
+            src={scrolled ? centienceLogoLight : centienceLogoDark}
             alt="Centience — AI & Technology Governance"
             className="h-16 sm:h-20 lg:h-28 w-auto transition-opacity duration-300"
           />
@@ -145,7 +143,7 @@ const Navbar = () => {
             ) : (
               <Link
                 key={item.label}
-                href={item.href!}
+                to={item.href!}
                 className={`px-3 py-2 text-sm font-semibold transition-colors duration-200 rounded-lg ${linkClasses}`}
               >
                 {item.label}
@@ -164,9 +162,9 @@ const Navbar = () => {
             <Phone size={14} />
             (877) 945-7177
           </a>
-          <span className={`text-xs ${scrolled ? "text-[hsl(220,40%,13%)]/20" : "text-warm-white/20"}`}>|</span>
+          <span className={`text-xs ${scrolled ? "text-foreground/20" : "text-warm-white/20"}`}>|</span>
           <Button variant="cta-nav" size="sm" asChild className="whitespace-nowrap shrink-0">
-            <Link href="/ai-governance-risk-assessment">Book Assessment</Link>
+            <Link to="/ai-governance-risk-assessment">Book Assessment</Link>
           </Button>
         </div>
 
@@ -182,7 +180,7 @@ const Navbar = () => {
             <span>(877) 945-7177</span>
           </a>
           <button
-            className={`p-2 ${scrolled ? "text-[hsl(220,40%,13%)]" : "text-warm-white"}`}
+            className={`p-2 ${scrolled ? "text-foreground" : "text-warm-white"}`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -213,7 +211,7 @@ const Navbar = () => {
                       {item.children.map((child) => (
                         <Link
                           key={child.label}
-                          href={child.href}
+                          to={child.href}
                           className="block px-4 py-2.5 text-sm text-foreground/60 hover:text-foreground hover:bg-muted rounded-lg transition-colors"
                         >
                           {child.label}
@@ -225,7 +223,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   key={item.label}
-                  href={item.href!}
+                  to={item.href!}
                   className="px-4 py-3 text-sm font-semibold text-foreground/80 hover:text-foreground hover:bg-muted rounded-lg transition-colors"
                 >
                   {item.label}
@@ -241,7 +239,7 @@ const Navbar = () => {
                 (877) 945-7177
               </a>
               <Button variant="cta" size="default" className="w-full" asChild>
-                <Link href="/ai-governance-risk-assessment">Book Your Assessment</Link>
+                <Link to="/ai-governance-risk-assessment">Book Your Assessment</Link>
               </Button>
             </div>
           </nav>

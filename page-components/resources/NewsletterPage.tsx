@@ -13,9 +13,11 @@ import {
 } from "@/components/ui/select";
 import { Mail } from "lucide-react";
 import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const NewsletterPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [captcha, setCaptcha] = useState(false);
 
   return (
     <Layout>
@@ -47,7 +49,7 @@ const NewsletterPage = () => {
             </div>
           ) : (
             <form
-              onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
+              onSubmit={(e) => { e.preventDefault(); if (!captcha) return; setSubmitted(true); }}
               className="space-y-4 text-left"
             >
               <div>
@@ -75,7 +77,19 @@ const NewsletterPage = () => {
                   </SelectContent>
                 </Select>
               </div>
-              <Button variant="cta" size="lg" type="submit" className="w-full">
+              {/* Captcha checkbox */}
+              <div className="flex items-center gap-3 border border-border rounded-lg p-4 bg-muted/50">
+                <Checkbox
+                  id="nl-captcha"
+                  checked={captcha}
+                  onCheckedChange={(checked) => setCaptcha(!!checked)}
+                />
+                <Label htmlFor="nl-captcha" className="text-sm font-normal cursor-pointer select-none">
+                  I am human
+                </Label>
+              </div>
+
+              <Button variant="cta" size="lg" type="submit" className="w-full" disabled={!captcha}>
                 Send Me Governance Updates
               </Button>
               <p className="text-xs text-muted-foreground text-center">

@@ -1,7 +1,6 @@
-"use client";
 import { Server, Shield, Brain, FileCheck, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const cards = [
@@ -102,7 +101,7 @@ const TechnicalFoundation = () => (
         </div>
         <div className="text-center mt-10">
           <Button variant="cta" size="xl" asChild>
-            <Link href="/governance">
+            <Link to="/governance">
               See How It Works <ArrowRight size={16} />
             </Link>
           </Button>

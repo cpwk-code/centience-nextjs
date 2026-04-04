@@ -15,6 +15,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
 import LeadCaptureModal, { hasLeadCookie } from "@/components/LeadCaptureModal";
 
 const guides = [
@@ -66,6 +67,7 @@ const assessments = [
 
 const InsightsPage = () => {
   const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+  const [newsletterCaptcha, setNewsletterCaptcha] = useState(false);
   const [gateOpen, setGateOpen] = useState(false);
   const [selectedGuide, setSelectedGuide] = useState<typeof guides[0] | null>(null);
 
@@ -209,7 +211,7 @@ const InsightsPage = () => {
             </div>
           ) : (
             <form
-              onSubmit={(e) => { e.preventDefault(); setNewsletterSubmitted(true); }}
+              onSubmit={(e) => { e.preventDefault(); if (!newsletterCaptcha) return; setNewsletterSubmitted(true); }}
               className="space-y-4 text-left"
             >
               <div>
@@ -237,7 +239,19 @@ const InsightsPage = () => {
                   </SelectContent>
                 </Select>
               </div>
-              <Button variant="cta" size="lg" type="submit" className="w-full">
+              {/* Captcha checkbox */}
+              <div className="flex items-center gap-3 border border-border rounded-lg p-4 bg-muted/50">
+                <Checkbox
+                  id="insights-nl-captcha"
+                  checked={newsletterCaptcha}
+                  onCheckedChange={(checked) => setNewsletterCaptcha(!!checked)}
+                />
+                <Label htmlFor="insights-nl-captcha" className="text-sm font-normal cursor-pointer select-none">
+                  I am human
+                </Label>
+              </div>
+
+              <Button variant="cta" size="lg" type="submit" className="w-full" disabled={!newsletterCaptcha}>
                 Send Me Governance Updates
               </Button>
               <p className="text-xs text-muted-foreground text-center">

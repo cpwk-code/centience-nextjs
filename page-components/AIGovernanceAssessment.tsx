@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Search, BookOpen, Cog, FileText, ArrowRight, CheckCircle } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const deliverables = [
   "AI usage discovery",
@@ -34,9 +35,11 @@ const processSteps = [
 
 const AIGovernanceAssessment = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [captcha, setCaptcha] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!captcha) return;
     setSubmitted(true);
   };
 
@@ -206,7 +209,19 @@ const AIGovernanceAssessment = () => {
                   </SelectContent>
                 </Select>
               </div>
-              <Button variant="cta" size="lg" type="submit" className="w-full mt-4">
+              {/* Captcha checkbox */}
+              <div className="flex items-center gap-3 border border-border rounded-lg p-4 bg-muted/50">
+                <Checkbox
+                  id="assess-captcha"
+                  checked={captcha}
+                  onCheckedChange={(checked) => setCaptcha(!!checked)}
+                />
+                <Label htmlFor="assess-captcha" className="text-sm font-normal cursor-pointer select-none">
+                  I am human
+                </Label>
+              </div>
+
+              <Button variant="cta" size="lg" type="submit" className="w-full mt-4" disabled={!captcha}>
                 Book My Governance Assessment <ArrowRight size={18} />
               </Button>
               <p className="text-xs text-muted-foreground text-center mt-3">
