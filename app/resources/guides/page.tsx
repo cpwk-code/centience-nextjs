@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import GuidesPage from '@/page-components/resources/GuidesPage';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Governance Guides & Frameworks | Centience",
