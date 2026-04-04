@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import AccountingCpaAssessment from '@/page-components/assessments/AccountingCpaAssessment';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Accounting & CPA Firm Governance Assessment | Centience",
