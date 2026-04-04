@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { getCMSSEO } from '@/lib/cms-seo';
 import LegalPage from '@/page-components/LegalPage';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata (CMS-overridable) ─────────────────────────────────────────
 export async function generateMetadata(): Promise<Metadata> {
   // ── CMS Override: fetch from Supabase admin panel ──────────────────────
