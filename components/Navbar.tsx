@@ -131,7 +131,7 @@ const Navbar = () => {
           <img
             src={scrolled ? centienceLogoLight : centienceLogoDark}
             alt="Centience — AI & Technology Governance"
-            className="h-16 sm:h-20 lg:h-28 w-auto transition-opacity duration-300"
+            className="h-20 sm:h-24 lg:h-32 w-auto transition-opacity duration-300"
           />
         </Link>
 
