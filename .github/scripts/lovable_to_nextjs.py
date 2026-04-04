@@ -204,6 +204,37 @@ def run():
                 'import orvillePhoto from "@/assets/orville-matias-about.jpeg"'
             ))
 
+
+    # ── 9. force-dynamic on assessment + industry pages ─────────────────────────
+    print("\n[9] Adding force-dynamic to assessment/industry pages...")
+    dynamic_pages = [
+        "app/assessments/accounting-cpa/page.tsx",
+        "app/assessments/financial-services/page.tsx",
+        "app/assessments/healthcare/page.tsx",
+        "app/assessments/law-firms/page.tsx",
+        "app/assessments/non-profit/page.tsx",
+        "app/assessments/private-equity/page.tsx",
+        "app/industries/accounting-cpa/page.tsx",
+        "app/industries/financial-services/page.tsx",
+        "app/industries/healthcare/page.tsx",
+        "app/industries/law-firms/page.tsx",
+        "app/industries/non-profit/page.tsx",
+        "app/industries/private-equity/page.tsx",
+        "app/co-management/page.tsx",
+    ]
+    for rel in dynamic_pages:
+        fp = os.path.join(BASE, rel)
+        if not os.path.exists(fp): continue
+        content = read(fp)
+        if "force-dynamic" not in content:
+            lines = content.split("\n")
+            insert_idx = 0
+            for i, line in enumerate(lines):
+                if line.startswith("import ") or "use client" in line:
+                    insert_idx = i + 1
+            lines.insert(insert_idx, "\nexport const dynamic = 'force-dynamic';")
+            write(fp, "\n".join(lines))
+
     print("\n=== Conversion complete ===")
 
 
