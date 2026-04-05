@@ -1,4 +1,4 @@
-// build-cache-bust: 1775356727
+// build-cache-bust: 1775362900
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
@@ -30,6 +30,12 @@ const nextConfig: NextConfig = {
         has: [{ type: 'host', value: 'www.centience.ai' }],
         destination: 'https://centience.ai/:path*',
         permanent: true,
+      },
+      // Guide deep-link redirect — specific guide URLs → guides listing
+      {
+        source: '/resources/guides/:slug',
+        destination: '/resources/guides',
+        permanent: false,
       },
       // Blog listing redirect: /blog -> /blogs (canonical listing page)
       {

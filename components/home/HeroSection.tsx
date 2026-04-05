@@ -58,7 +58,7 @@ const HeroSection = () => (
               </Link>
             </Button>
             <Button variant="cta-outline" size="xl" asChild className="w-full sm:w-auto">
-              <Link href="/resources/guides/ai-governance">Download the AI Governance Guide</Link>
+              <Link href="/resources/guides">Download the AI Governance Guide</Link>
             </Button>
           </div>
 
