@@ -43,7 +43,8 @@ def needs_use_client(content):
     patterns = [
         "useState", "useEffect", "useRef", "useCallback", "useMemo",
         "useReducer", "useContext", "useRouter", "usePathname",
-        "useSearchParams", "framer-motion", "motion.",
+        "useSearchParams", "useToast", "useTheme", "useFormContext",
+        "framer-motion", "motion.",
         "onClick", "onChange", "onSubmit", "onKeyDown", "onMouseEnter",
         "addEventListener", "window.", "document.",
     ]
@@ -303,6 +304,61 @@ def run():
             if line.startswith("import "): last_import = i
         lines.insert(last_import + 1, "\nexport const dynamic = 'force-dynamic';")
         write(fp, "\n".join(lines))
+
+
+    # ── 13. Enforce "use client" on known UI components (Issue 3 from fix log) ──
+    print("\n[13] Enforcing use client on UI components...")
+    required_client_files = [
+        "components/ui/sonner.tsx",
+        "components/ui/toaster.tsx",
+        "components/ui/form.tsx",
+        "components/ui/input-otp.tsx",
+        "components/ui/toggle-group.tsx",
+        "components/ui/carousel.tsx",
+        "components/ui/chart.tsx",
+        "components/ui/sidebar.tsx",
+        "components/Navbar.tsx",
+        "components/Header.tsx",
+        "components/Footer.tsx",
+        "components/Layout.tsx",
+        "components/LeadCaptureModal.tsx",
+        "components/IndustryAssessment.tsx",
+        "components/ScrollToTop.tsx",
+        "components/NavLink.tsx",
+    ]
+    for rel in required_client_files:
+        fp = os.path.join(BASE, rel)
+        if not os.path.exists(fp): continue
+        content = read(fp)
+        if not has_use_client(content):
+            write(fp, '"use client";\n' + content)
+
+    # ── 14. Fix window.location usage in Navbar (Issue 4 from fix log) ──────────
+    print("\n[14] Checking Navbar for SSR-unsafe location usage...")
+    navbar = os.path.join(BASE, "components/Navbar.tsx")
+    if os.path.exists(navbar):
+        content = read(navbar)
+        original = content
+        # }, [location] → }, [pathname] for useEffect deps
+        content = content.replace("}, [location]);", "}, [pathname]);")
+        content = content.replace("}, [location])", "}, [pathname])")
+        # window.location.pathname usage is fine, bare location is not
+        if content != original:
+            write(navbar, content)
+
+    # ── 15. Fix StaticImageData in Navbar logo (Issue 5 from fix log) ───────────
+    print("\n[15] Checking Navbar for StaticImageData logo src...")
+    if os.path.exists(navbar):
+        content = read(navbar)
+        original = content
+        # Fix: src={centienceLogoLight} → src={centienceLogoLight.src || centienceLogoLight}
+        content = re.sub(
+            r'src=\{(centienceLogoLight|centienceLogoDark)\}',
+            lambda m: f'src={{typeof {m.group(1)} === "string" ? {m.group(1)} : {m.group(1)}.src}}',
+            content
+        )
+        if content != original:
+            write(navbar, content)
 
     print("\n=== Conversion complete ===")
 
