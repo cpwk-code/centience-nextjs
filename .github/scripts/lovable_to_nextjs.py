@@ -275,6 +275,35 @@ def run():
         else:
             print("  OK — Centience logo already in place")
 
+
+    # ── 12. Add force-dynamic to all page routes that import page-components ─────
+    print("\n[12] Adding force-dynamic to page routes...")
+    import re as _re
+    def _scan_pages(base, path="app"):
+        import os
+        result = []
+        full = os.path.join(base, path)
+        if not os.path.exists(full): return result
+        for entry in os.listdir(full):
+            entry_path = os.path.join(full, entry)
+            if os.path.isfile(entry_path) and entry == "page.tsx":
+                result.append(os.path.join(path, entry))
+            elif os.path.isdir(entry_path):
+                result.extend(_scan_pages(base, os.path.join(path, entry)))
+        return result
+
+    for rel in _scan_pages(BASE):
+        fp = os.path.join(BASE, rel)
+        content = read(fp)
+        if "force-dynamic" in content: continue
+        if "page-components" not in content: continue
+        lines = content.split("\n")
+        last_import = 0
+        for i, line in enumerate(lines):
+            if line.startswith("import "): last_import = i
+        lines.insert(last_import + 1, "\nexport const dynamic = 'force-dynamic';")
+        write(fp, "\n".join(lines))
+
     print("\n=== Conversion complete ===")
 
 
