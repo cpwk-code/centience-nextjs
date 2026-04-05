@@ -1,12 +1,12 @@
-
+"use client";
 import Link from 'next/link';
-import Header from '@/components/Header';
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <Header />
+      <Navbar />
       <main className="flex-1 flex items-center justify-center px-4">
         <div className="text-center max-w-lg">
           <h1 className="text-6xl font-bold text-primary mb-4">404</h1>
@@ -16,9 +16,9 @@ export default function NotFound() {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center justify-center px-6 py-3 bg-gold text-primary font-semibold rounded-lg hover:bg-gold-dark transition-colors"
+            className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
-            Return to Home
+            Return Home
           </Link>
         </div>
       </main>

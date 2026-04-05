@@ -1,3 +1,4 @@
+// build-cache-bust: 1775356727
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
