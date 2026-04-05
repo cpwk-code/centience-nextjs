@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import RebrandPage from '@/page-components/RebrandPage';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Rebrand | Centience",

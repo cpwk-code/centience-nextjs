@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import PartnerProgram from '@/page-components/PartnerProgram';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Partner Program | Centience",

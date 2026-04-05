@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import TermsOfServicePage from '@/page-components/TermsOfServicePage';
 
+export const dynamic = 'force-dynamic';
+
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Terms Of Service | Centience",
