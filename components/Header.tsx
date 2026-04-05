@@ -1,12 +1,12 @@
 "use client";
-'use client';
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/logo.png";
+import centienceLogoLight from "@/assets/centience-logo-light.png";
+import centienceLogoDark from "@/assets/centience-logo-dark.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -67,8 +67,8 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img 
-              src={logo.src} 
-              alt="Compuwork" 
+              src={centienceLogoDark.src} 
+              alt="Centience" 
               className="h-14 sm:h-16 lg:h-[4.5rem] w-auto drop-shadow-md transition-transform duration-300 group-hover:scale-105"
               fetchPriority="high"
               width="180"
