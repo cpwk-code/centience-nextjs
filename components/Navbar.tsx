@@ -4,8 +4,10 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
-import centienceLogoLight from "@/assets/centience-logo-light.png";
-import centienceLogoDark from "@/assets/centience-logo-dark.png";
+import centienceLogoLightSrc from "@/assets/centience-logo-light.png";
+import centienceLogoDarkSrc from "@/assets/centience-logo-dark.png";
+const centienceLogoLight = typeof centienceLogoLightSrc === 'string' ? centienceLogoLightSrc : (centienceLogoLightSrc as { src: string }).src;
+const centienceLogoDark = typeof centienceLogoDarkSrc === 'string' ? centienceLogoDarkSrc : (centienceLogoDarkSrc as { src: string }).src;
 
 interface DropdownItem {
   label: string;
