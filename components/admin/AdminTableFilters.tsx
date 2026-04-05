@@ -1,3 +1,4 @@
+"use client";
 import { format } from "date-fns";
 import { Search, Filter, CalendarIcon, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
