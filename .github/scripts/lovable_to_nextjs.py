@@ -255,6 +255,26 @@ def run():
         else:
             print("  OK — no self-referencing redirects found")
 
+
+    # ── 11. Replace Compuwork logo in Header.tsx with Centience logo ─────────────
+    print("\n[11] Checking Header.tsx for old Compuwork logo...")
+    header_path = os.path.join(BASE, "components/Header.tsx")
+    if os.path.exists(header_path):
+        content = read(header_path)
+        original = content
+        content = content.replace(
+            'import logo from "@/assets/logo.png";',
+            'import centienceLogoLight from "@/assets/centience-logo-light.png";\nimport centienceLogoDark from "@/assets/centience-logo-dark.png";'
+        )
+        content = content.replace('src={logo.src}', 'src={centienceLogoDark.src}')
+        content = content.replace('src={logo}', 'src={centienceLogoDark.src}')
+        content = content.replace('alt="Compuwork"', 'alt="Centience"')
+        content = content.replace("alt='Compuwork'", "alt='Centience'")
+        if content != original:
+            write(header_path, content)
+        else:
+            print("  OK — Centience logo already in place")
+
     print("\n=== Conversion complete ===")
 
 
