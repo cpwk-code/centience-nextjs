@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
@@ -84,7 +85,7 @@ const DropdownMenu = ({ item, scrolled }: { item: NavItem; scrolled: boolean }) 
             {item.children!.map((child) => (
               <Link
                 key={child.label}
-                to={child.href}
+                href={child.href}
                 className="block px-5 py-3 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-muted transition-colors"
                 onClick={() => setOpen(false)}
               >
@@ -113,7 +114,7 @@ const Navbar = () => {
   useEffect(() => {
     setMobileOpen(false);
     setMobileExpanded(null);
-  }, [location]);
+  }, [pathname]);
 
   const linkClasses = scrolled
     ? "text-foreground/80 hover:text-foreground hover:bg-muted"
@@ -144,7 +145,7 @@ const Navbar = () => {
             ) : (
               <Link
                 key={item.label}
-                to={item.href!}
+                href={item.href!}
                 className={`px-3 py-2 text-sm font-semibold transition-colors duration-200 rounded-lg ${linkClasses}`}
               >
                 {item.label}
@@ -212,7 +213,7 @@ const Navbar = () => {
                       {item.children.map((child) => (
                         <Link
                           key={child.label}
-                          to={child.href}
+                          href={child.href}
                           className="block px-4 py-2.5 text-sm text-foreground/60 hover:text-foreground hover:bg-muted rounded-lg transition-colors"
                         >
                           {child.label}
@@ -224,7 +225,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   key={item.label}
-                  to={item.href!}
+                  href={item.href!}
                   className="px-4 py-3 text-sm font-semibold text-foreground/80 hover:text-foreground hover:bg-muted rounded-lg transition-colors"
                 >
                   {item.label}
