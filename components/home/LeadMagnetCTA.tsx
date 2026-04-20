@@ -1,5 +1,4 @@
-"use client";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -37,7 +36,7 @@ const LeadMagnetCTA = () => (
       </div>
 
       <Button variant="cta" size="xl" asChild>
-        <Link href="/ai-governance-risk-assessment">
+        <Link to="/ai-governance-risk-assessment">
           Book Your AI Governance Assessment <ArrowRight size={16} />
         </Link>
       </Button>

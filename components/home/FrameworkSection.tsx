@@ -1,7 +1,6 @@
-"use client";
 import { Server, Shield, Brain } from "lucide-react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const layers = [
@@ -107,7 +106,7 @@ const FrameworkSection = () => (
 
       <div className="text-center">
         <Button variant="cta-outline" size="lg" asChild>
-          <Link href="/governance">See How the Governance Stack Works</Link>
+          <Link to="/governance">See How the Governance Stack Works</Link>
         </Button>
       </div>
     </div>

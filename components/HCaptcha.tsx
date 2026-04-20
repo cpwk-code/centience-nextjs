@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useRef, useCallback } from "react";
 
 const SITE_KEY = "192c995a-cf56-4420-9c18-d6c8353845e8";

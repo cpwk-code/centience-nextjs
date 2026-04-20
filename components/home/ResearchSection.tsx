@@ -1,7 +1,6 @@
-"use client";
 import { Brain, Shield, Server } from "lucide-react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const services = [
@@ -61,7 +60,7 @@ const ResearchSection = () => (
 
       <div className="text-center">
         <Button variant="cta-outline" size="lg" asChild>
-          <Link href="/governance">See All Services</Link>
+          <Link to="/governance">See All Services</Link>
         </Button>
       </div>
     </div>
