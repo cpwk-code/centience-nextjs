@@ -1,4 +1,5 @@
 "use client";
+// footer-logo-size: h-36 sm:h-44 lg:h-52 (202604212333)
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Linkedin, Youtube } from "lucide-react";
 import centienceLogoDark from "@/assets/centience-logo-dark.png";
