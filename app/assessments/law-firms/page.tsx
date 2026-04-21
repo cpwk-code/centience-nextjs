@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import LawFirmsAssessment from '@/page-components/assessments/LawFirmsAssessment';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Law Firm Technology Governance Assessment | Centience",

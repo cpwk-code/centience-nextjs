@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import GovernancePage from '@/page-components/GovernancePage';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Technology Governance Programs | Centience",

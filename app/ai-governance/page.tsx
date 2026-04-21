@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import AIGovernancePage from '@/page-components/AIGovernancePage';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "AI Governance for Responsible Adoption | Centience",

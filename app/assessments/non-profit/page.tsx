@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import NonProfitAssessment from '@/page-components/assessments/NonProfitAssessment';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Non-Profit Technology Governance Assessment | Centience",

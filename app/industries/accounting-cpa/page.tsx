@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import AccountingCpaPage from '@/page-components/industries/AccountingCpaPage';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Technology Governance for Accounting & CPA Firms | Centience",

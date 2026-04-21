@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Index from '@/page-components/Index';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Centience — AI & Technology Governance for Regulated Organizations",

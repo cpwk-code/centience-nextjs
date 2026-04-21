@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import HealthcareAssessment from '@/page-components/assessments/HealthcareAssessment';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Healthcare Governance Assessment | Centience",

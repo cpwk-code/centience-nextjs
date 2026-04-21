@@ -1,5 +1,3 @@
-'use client'
-
 import Layout from "@/components/Layout";
 import orvillePhoto from "@/assets/orville-matias.png";
 import { Button } from "@/components/ui/button";
@@ -250,7 +248,7 @@ const AboutPage = () => (
           <div className="lg:col-span-1">
             <div className="rounded-xl overflow-hidden bg-muted aspect-[3/4] flex items-center justify-center mb-4">
               <img
-                src={typeof orvillePhoto === "string" ? orvillePhoto : orvillePhoto.src}
+                src={orvillePhoto}
                 alt="Orville Matias — Founder & CEO, Centience"
                 className="w-full h-full object-cover"
               />

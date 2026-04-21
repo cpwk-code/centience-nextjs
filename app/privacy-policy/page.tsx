@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import PrivacyPolicyPage from '@/page-components/PrivacyPolicyPage';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Privacy Policy | Centience",

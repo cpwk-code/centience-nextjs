@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import FinancialServicesAssessment from '@/page-components/assessments/FinancialServicesAssessment';
 
-export const dynamic = 'force-dynamic';
-
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Financial Services Governance Assessment | Centience",
