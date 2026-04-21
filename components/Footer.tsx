@@ -1,4 +1,3 @@
-"use client";
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Linkedin, Youtube } from "lucide-react";
 import centienceLogoDark from "@/assets/centience-logo-dark.png";
@@ -43,7 +42,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
-              <img src={centienceLogoDark.src} alt="Centience" className="h-24 sm:h-28 lg:h-32 w-auto object-contain" />
+              <img src={centienceLogoDark} alt="Centience" className="h-24 sm:h-28 lg:h-32 w-auto object-contain" />
             </Link>
             <p className="text-sm text-warm-white/50 leading-relaxed mb-6 max-w-xs">
               Technology governance for regulated organizations — built on managed infrastructure, enforced through continuous oversight.
