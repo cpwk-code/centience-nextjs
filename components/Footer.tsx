@@ -44,7 +44,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
-              <img src={centienceLogoDark} alt="Centience" className="h-36 sm:h-44 lg:h-52 w-auto object-contain" />
+              <img src={centienceLogoDark} alt="Centience" className="w-auto object-contain" style={{height: "120px", maxWidth: "300px"}} />
             </Link>
             <p className="text-sm text-warm-white/50 leading-relaxed mb-6 max-w-xs">
               Technology governance for regulated organizations — built on managed infrastructure, enforced through continuous oversight.
