@@ -1,3 +1,4 @@
+"use client";
 import IndustryAssessment from "@/components/IndustryAssessment";
 
 const questions = [

@@ -1,3 +1,4 @@
+"use client";
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/home/HeroSection";
 import ProblemSection from "@/components/home/ProblemSection";

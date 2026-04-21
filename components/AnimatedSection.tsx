@@ -26,15 +26,11 @@ const AnimatedSection = ({
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Use 0px margin to ensure elements always become visible when they enter the viewport.
-  // A negative margin (like -100px) can cause elements to never trigger on short mobile screens
-  // where the element may never reach the required distance inside the viewport.
   const isInView = useInView(ref, { 
     once: true, 
     margin: "0px"
   });
 
-  // On mobile, convert left/right animations to up/down to prevent horizontal overflow
   const effectiveDirection = isMobile && (direction === 'left' || direction === 'right') ? 'up' : direction;
 
   const variants = {

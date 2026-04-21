@@ -1,3 +1,4 @@
+"use client";
 import Layout from "@/components/Layout";
 import orvillePhoto from "@/assets/orville-matias.png";
 import { Button } from "@/components/ui/button";
