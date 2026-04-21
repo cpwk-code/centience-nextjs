@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
@@ -17,6 +18,26 @@ const continuityItems = [
 ];
 
 const RebrandPage = () => {
+  useEffect(() => {
+    const prevTitle = document.title;
+    document.title = "Compuwork is Now Centience";
+    let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+    const prevDesc = meta?.getAttribute("content") ?? null;
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute(
+      "content",
+      "Compuwork USA has rebranded as Centience. Same team, same services, full focus on AI and Technology Governance for regulated industries."
+    );
+    return () => {
+      document.title = prevTitle;
+      if (prevDesc !== null) meta!.setAttribute("content", prevDesc);
+    };
+  }, []);
+
   return (
     <Layout>
       {/* Hero */}
@@ -44,7 +65,7 @@ const RebrandPage = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto font-['DM_Sans']"
           >
-            Same leadership. Same team. Same commitment to compliance outcomes in regulated industries. We've evolved our name to reflect the full scope of what we do.
+            Same leadership. Same team. Same commitment to compliance outcomes in regulated industries. We've sharpened our focus — AI and Technology Governance is the heart of everything we build and deliver.
           </motion.p>
         </div>
       </section>
@@ -85,10 +106,10 @@ const RebrandPage = () => {
                   Why the Change
                 </span>
                 <h2 className="text-xl md:text-2xl font-bold text-foreground mt-3 mb-4 font-['Plus_Jakarta_Sans']">
-                  AI & Governance Is Our Core
+                  AI & Technology Governance Is Our Core
                 </h2>
                 <p className="text-muted-foreground font-['DM_Sans'] leading-relaxed">
-                  Our work has always centered on risk, compliance, and governance for regulated industries. Centience better reflects our focus on AI governance, cybersecurity, and technology compliance — where precision and intelligence meet.
+                  Our work has always centered on risk, compliance, and governance for regulated industries. Centience reflects our full focus — AI governance, technology governance, and cybersecurity compliance — built for organizations where the stakes are real.
                 </p>
               </CardContent>
             </Card>
@@ -158,7 +179,7 @@ const RebrandPage = () => {
           >
             <Button variant="cta" size="lg" asChild>
               <Link href="/">
-                Go to centience.ai <ArrowRight className="ml-1 w-4 h-4" />
+                Explore Centience <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </Button>
             <Button variant="cta-outline" size="lg" asChild className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
@@ -171,7 +192,7 @@ const RebrandPage = () => {
       {/* Footer Note */}
       <section className="py-6 bg-primary border-t border-primary-foreground/10">
         <p className="text-center text-primary-foreground/50 text-sm font-['DM_Sans']">
-          © 2026 Centience (formerly Compuwork) · centience.ai
+          © 2026 Centience (formerly Compuwork USA Inc.) · centience.ai
         </p>
       </section>
     </Layout>
