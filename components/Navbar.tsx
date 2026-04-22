@@ -137,8 +137,8 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-0.5">
+        {/* Desktop nav — only on xl (1280px+) */}
+        <nav className="hidden xl:flex items-center gap-0.5">
           {navItems.map((item) =>
             item.children ? (
               <DropdownMenu key={item.label} item={item} scrolled={scrolled} />
@@ -154,7 +154,8 @@ const Navbar = () => {
           )}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3 shrink-0">
+        {/* Desktop phone + CTA — only on xl (1280px+) */}
+        <div className="hidden xl:flex items-center gap-3 shrink-0">
           <a
             href="tel:+18779457177"
             className={`flex items-center gap-1.5 text-sm font-semibold whitespace-nowrap transition-colors ${
@@ -170,8 +171,8 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile toggle */}
-        <div className="lg:hidden flex items-center gap-2">
+        {/* Mobile/tablet toggle — shows below xl (below 1280px) */}
+        <div className="xl:hidden flex items-center gap-2">
           <a
             href="tel:+18779457177"
             className={`flex items-center gap-1.5 text-xs sm:text-sm font-bold whitespace-nowrap transition-colors ${
@@ -191,9 +192,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile/tablet menu — shows below xl (below 1280px) */}
       {mobileOpen && (
-        <div className="lg:hidden bg-card border-t border-border shadow-lg">
+        <div className="xl:hidden bg-card border-t border-border shadow-lg">
           <nav className="container mx-auto py-4 flex flex-col gap-0.5">
             {navItems.map((item) =>
               item.children ? (
