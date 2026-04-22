@@ -128,17 +128,17 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between h-16 lg:h-36">
+      <div className="container mx-auto flex items-center justify-between h-14">
         <Link href="/" className="flex items-center gap-3 shrink-0">
           <img
             src={scrolled ? centienceLogoLight.src : centienceLogoDark.src}
             alt="Centience — AI & Technology Governance"
-            className="h-20 sm:h-24 lg:h-32 w-auto transition-opacity duration-300"
+            className="h-7 w-auto transition-opacity duration-300"
           />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden xl:flex items-center gap-0.5">
+        <nav className="hidden lg:flex items-center gap-0.5">
           {navItems.map((item) =>
             item.children ? (
               <DropdownMenu key={item.label} item={item} scrolled={scrolled} />
@@ -154,7 +154,7 @@ const Navbar = () => {
           )}
         </nav>
 
-        <div className="hidden xl:flex items-center gap-3 shrink-0">
+        <div className="hidden lg:flex items-center gap-3 shrink-0">
           <a
             href="tel:+18779457177"
             className={`flex items-center gap-1.5 text-sm font-semibold whitespace-nowrap transition-colors ${
@@ -171,7 +171,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <div className="xl:hidden flex items-center gap-2">
+        <div className="lg:hidden flex items-center gap-2">
           <a
             href="tel:+18779457177"
             className={`flex items-center gap-1.5 text-xs sm:text-sm font-bold whitespace-nowrap transition-colors ${
@@ -193,7 +193,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="xl:hidden bg-card border-t border-border shadow-lg">
+        <div className="lg:hidden bg-card border-t border-border shadow-lg">
           <nav className="container mx-auto py-4 flex flex-col gap-0.5">
             {navItems.map((item) =>
               item.children ? (
