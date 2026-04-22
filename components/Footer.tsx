@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Linkedin, Youtube } from "lucide-react";
-import centienceLogoDark from "@/assets/centience-logo-dark.png";
+import centienceLogoDark from "@/assets/centience-logo-dark-v2.png";
 
 const footerLinks = {
   Services: [
