@@ -26,7 +26,7 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
   const [answers, setAnswers] = useState<Answer[]>(new Array(questions.length).fill(null));
   const [showResults, setShowResults] = useState(false);
   const [gateOpen, setGateOpen] = useState(false);
-  const [gated, setGated] = useState(!hasLeadCookie());
+  const [gated, setGated] = useState(() => typeof window !== 'undefined' ? !hasLeadCookie() : true);
   const [leadName, setLeadName] = useState("");
 
   const setAnswer = (index: number, value: string) => {

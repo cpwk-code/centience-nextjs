@@ -16,12 +16,14 @@ const COOKIE_NAME = "centience_lead_captured";
 const COOKIE_DAYS = 90;
 
 function setCookie(name: string, value: string, days: number) {
+  if (typeof document === 'undefined') return;
   const d = new Date();
   d.setTime(d.getTime() + days * 86400000);
   document.cookie = `${name}=${value};expires=${d.toUTCString()};path=/;SameSite=Lax`;
 }
 
 function getCookie(name: string): string | null {
+  if (typeof document === 'undefined') return null;
   const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
   return match ? match[1] : null;
 }
