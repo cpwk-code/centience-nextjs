@@ -1,8 +1,9 @@
-// cache-bust: 2026-04-21 23:29:09 UTC
-// build-cache-bust: 1775362900
+// cache-bust: 2026-04-22 04:10:00 UTC
+// build-cache-bust: 1776832200
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  generateBuildId: async () => `build-1776832200`,
   // Ignore TypeScript and ESLint errors during build (non-critical type issues)
   typescript: {
     ignoreBuildErrors: true,
