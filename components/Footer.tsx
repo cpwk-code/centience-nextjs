@@ -1,5 +1,4 @@
 "use client";
-// footer-logo-size: h-36 sm:h-44 lg:h-52 (202604212333)
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Linkedin, Youtube } from "lucide-react";
 import centienceLogoDark from "@/assets/centience-logo-dark.png";
@@ -44,7 +43,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
-              <img src={centienceLogoDark} alt="Centience" className="w-auto object-contain" style={{height: "120px", maxWidth: "300px"}} />
+              <img src={centienceLogoDark} alt="Centience" className="h-10 sm:h-12 lg:h-14 w-auto object-contain" />
             </Link>
             <p className="text-sm text-warm-white/50 leading-relaxed mb-6 max-w-xs">
               Technology governance for regulated organizations — built on managed infrastructure, enforced through continuous oversight.
