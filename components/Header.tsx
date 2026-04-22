@@ -129,12 +129,12 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between h-16 lg:h-36">
+      <div className="container mx-auto flex items-center justify-between h-16 lg:h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0">
           <img
             src={scrolled ? centienceLogoLight.src : centienceLogoDark.src}
             alt="Centience — AI & Technology Governance"
-            className="h-20 sm:h-24 lg:h-32 w-auto transition-opacity duration-300"
+            className="h-8 sm:h-9 lg:h-10 w-auto transition-opacity duration-300"
           />
         </Link>
 
