@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1929"/>
+      <stop offset="100%" style="stop-color:#0d1f35"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8b84b"/>
+      <stop offset="100%" style="stop-color:#f5d070"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#e8b84b;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#e8b84b;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Glow center -->
+  <ellipse cx="820" cy="300" rx="300" ry="260" fill="url(#glow)"/>
+
+  <!-- Hexagonal lock graphic -->
+  <g transform="translate(820, 300)">
+    <!-- Hex outline -->
+    <polygon points="0,-160 138,-80 138,80 0,160 -138,80 -138,-80"
+             fill="none" stroke="#e8b84b" stroke-opacity="0.15" stroke-width="1.5"/>
+    <polygon points="0,-120 104,-60 104,60 0,120 -104,60 -104,-60"
+             fill="none" stroke="#e8b84b" stroke-opacity="0.1" stroke-width="1"/>
+    <!-- Lock body -->
+    <rect x="-36" y="-10" width="72" height="58" rx="8"
+          fill="#e8b84b" fill-opacity="0.12" stroke="#e8b84b" stroke-opacity="0.6" stroke-width="1.5"/>
+    <!-- Lock shackle -->
+    <path d="M-22 -10 L-22 -38 Q-22 -68 0 -68 Q22 -68 22 -38 L22 -10"
+          fill="none" stroke="#e8b84b" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round"/>
+    <!-- Keyhole -->
+    <circle cx="0" cy="22" r="8" fill="#e8b84b" fill-opacity="0.5"/>
+    <rect x="-4" y="22" width="8" height="16" rx="2" fill="#e8b84b" fill-opacity="0.5"/>
+    <!-- Corner nodes -->
+    <circle cx="0" cy="-160" r="5" fill="#e8b84b" fill-opacity="0.6"/>
+    <circle cx="138" cy="-80" r="4" fill="#e8b84b" fill-opacity="0.4"/>
+    <circle cx="138" cy="80" r="4" fill="#e8b84b" fill-opacity="0.4"/>
+    <circle cx="0" cy="160" r="5" fill="#e8b84b" fill-opacity="0.6"/>
+    <circle cx="-138" cy="80" r="4" fill="#e8b84b" fill-opacity="0.4"/>
+    <circle cx="-138" cy="-80" r="4" fill="#e8b84b" fill-opacity="0.4"/>
+  </g>
+
+  <!-- Connecting lines to left content -->
+  <g stroke="#e8b84b" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="4 6">
+    <line x1="682" y1="220" x2="400" y2="200"/>
+    <line x1="682" y1="300" x2="400" y2="300"/>
+    <line x1="682" y1="380" x2="400" y2="400"/>
+  </g>
+
+  <!-- Three pillars on left -->
+  <g transform="translate(60, 180)">
+    <rect x="0" y="0" width="300" height="60" rx="8" fill="#e8b84b" fill-opacity="0.06" stroke="#e8b84b" stroke-opacity="0.2" stroke-width="1"/>
+    <rect x="6" y="20" width="3" height="20" rx="2" fill="#e8b84b"/>
+    <text x="24" y="35" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#f7f4ef" fill-opacity="0.8">Technical Safeguards</text>
+
+    <rect x="0" y="80" width="300" height="60" rx="8" fill="#e8b84b" fill-opacity="0.06" stroke="#e8b84b" stroke-opacity="0.2" stroke-width="1"/>
+    <rect x="6" y="100" width="3" height="20" rx="2" fill="#e8b84b"/>
+    <text x="24" y="115" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#f7f4ef" fill-opacity="0.8">Administrative Controls</text>
+
+    <rect x="0" y="160" width="300" height="60" rx="8" fill="#e8b84b" fill-opacity="0.06" stroke="#e8b84b" stroke-opacity="0.2" stroke-width="1"/>
+    <rect x="6" y="180" width="3" height="20" rx="2" fill="#e8b84b"/>
+    <text x="24" y="195" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#f7f4ef" fill-opacity="0.8">Physical Safeguards</text>
+  </g>
+
+  <!-- Gold accent line -->
+  <rect x="0" y="0" width="4" height="630" fill="url(#gold)"/>
+
+  <!-- Category tag -->
+  <rect x="60" y="60" width="160" height="32" rx="16" fill="#e8b84b" fill-opacity="0.12" stroke="#e8b84b" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="140" y="81" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e8b84b" text-anchor="middle" letter-spacing="1.5">CYBERSECURITY</text>
+
+  <text x="60" y="510" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#f7f4ef">Cybersecurity Governance</text>
+  <text x="60" y="558" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#e8b84b">for HIPAA Organizations</text>
+
+  <text x="1140" y="590" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#e8b84b" fill-opacity="0.5" text-anchor="end" letter-spacing="2">CENTIENCE</text>
+</svg>

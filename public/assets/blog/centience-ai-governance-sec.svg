@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1929"/>
+      <stop offset="100%" style="stop-color:#1a2540"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8b84b"/>
+      <stop offset="100%" style="stop-color:#f5d070"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle dot grid -->
+  <g fill="#e8b84b" fill-opacity="0.06">
+    <circle cx="100" cy="100" r="2"/><circle cx="200" cy="100" r="2"/><circle cx="300" cy="100" r="2"/>
+    <circle cx="400" cy="100" r="2"/><circle cx="500" cy="100" r="2"/><circle cx="600" cy="100" r="2"/>
+    <circle cx="700" cy="100" r="2"/><circle cx="800" cy="100" r="2"/><circle cx="900" cy="100" r="2"/>
+    <circle cx="1000" cy="100" r="2"/><circle cx="1100" cy="100" r="2"/>
+    <circle cx="100" cy="200" r="2"/><circle cx="200" cy="200" r="2"/><circle cx="300" cy="200" r="2"/>
+    <circle cx="400" cy="200" r="2"/><circle cx="500" cy="200" r="2"/><circle cx="600" cy="200" r="2"/>
+    <circle cx="700" cy="200" r="2"/><circle cx="800" cy="200" r="2"/><circle cx="900" cy="200" r="2"/>
+    <circle cx="1000" cy="200" r="2"/><circle cx="1100" cy="200" r="2"/>
+    <circle cx="100" cy="300" r="2"/><circle cx="200" cy="300" r="2"/><circle cx="300" cy="300" r="2"/>
+    <circle cx="400" cy="300" r="2"/><circle cx="500" cy="300" r="2"/><circle cx="600" cy="300" r="2"/>
+    <circle cx="700" cy="300" r="2"/><circle cx="800" cy="300" r="2"/><circle cx="900" cy="300" r="2"/>
+    <circle cx="1000" cy="300" r="2"/><circle cx="1100" cy="300" r="2"/>
+    <circle cx="100" cy="400" r="2"/><circle cx="200" cy="400" r="2"/><circle cx="300" cy="400" r="2"/>
+    <circle cx="400" cy="400" r="2"/><circle cx="500" cy="400" r="2"/><circle cx="600" cy="400" r="2"/>
+    <circle cx="700" cy="400" r="2"/><circle cx="800" cy="400" r="2"/><circle cx="900" cy="400" r="2"/>
+    <circle cx="1000" cy="400" r="2"/><circle cx="1100" cy="400" r="2"/>
+    <circle cx="100" cy="500" r="2"/><circle cx="200" cy="500" r="2"/><circle cx="300" cy="500" r="2"/>
+    <circle cx="400" cy="500" r="2"/><circle cx="500" cy="500" r="2"/><circle cx="600" cy="500" r="2"/>
+    <circle cx="700" cy="500" r="2"/><circle cx="800" cy="500" r="2"/><circle cx="900" cy="500" r="2"/>
+    <circle cx="1000" cy="500" r="2"/><circle cx="1100" cy="500" r="2"/>
+  </g>
+
+  <!-- Large "SEC" text watermark -->
+  <text x="650" y="380" font-family="system-ui, sans-serif" font-size="280" font-weight="900"
+        fill="#e8b84b" fill-opacity="0.04" text-anchor="middle" letter-spacing="-10">SEC</text>
+
+  <!-- Document stack visual (right side) -->
+  <rect x="780" y="140" width="300" height="380" rx="8" fill="#1a2540" stroke="#e8b84b" stroke-opacity="0.15" stroke-width="1"/>
+  <rect x="760" y="155" width="300" height="380" rx="8" fill="#0f1929" stroke="#e8b84b" stroke-opacity="0.1" stroke-width="1"/>
+  <rect x="740" y="170" width="300" height="380" rx="8" fill="#162030" stroke="#e8b84b" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- Document lines -->
+  <g stroke="#e8b84b" stroke-opacity="0.2" stroke-width="1.5">
+    <line x1="770" y1="230" x2="1010" y2="230"/>
+    <line x1="770" y1="260" x2="1010" y2="260"/>
+    <line x1="770" y1="290" x2="950" y2="290"/>
+    <line x1="770" y1="340" x2="1010" y2="340"/>
+    <line x1="770" y1="370" x2="1010" y2="370"/>
+    <line x1="770" y1="400" x2="920" y2="400"/>
+    <line x1="770" y1="450" x2="1010" y2="450"/>
+    <line x1="770" y1="480" x2="860" y2="480"/>
+  </g>
+  <!-- Compliance checkmark -->
+  <circle cx="890" cy="210" r="20" fill="#e8b84b" fill-opacity="0.15" stroke="#e8b84b" stroke-opacity="0.5" stroke-width="1.5"/>
+  <polyline points="878,210 887,220 903,200" fill="none" stroke="#e8b84b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Gold accent line -->
+  <rect x="0" y="0" width="4" height="630" fill="url(#gold)"/>
+
+  <!-- Category tag -->
+  <rect x="60" y="60" width="160" height="32" rx="16" fill="#e8b84b" fill-opacity="0.12" stroke="#e8b84b" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="140" y="81" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e8b84b" text-anchor="middle" letter-spacing="1.5">AI GOVERNANCE</text>
+
+  <text x="60" y="500" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#f7f4ef">AI Governance for</text>
+  <text x="60" y="548" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#e8b84b">SEC-Registered RIAs</text>
+
+  <text x="1140" y="590" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#e8b84b" fill-opacity="0.5" text-anchor="end" letter-spacing="2">CENTIENCE</text>
+</svg>
