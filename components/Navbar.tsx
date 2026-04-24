@@ -50,6 +50,7 @@ const navItems: NavItem[] = [
       { label: "Newsletter", href: "/resources/newsletter" },
     ],
   },
+  { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];
 
