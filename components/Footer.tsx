@@ -24,6 +24,7 @@ const footerLinks = {
     { label: "Partners", href: "/partners" },
     { label: "Contact", href: "/contact" },
     { label: "Insights", href: "/insights" },
+    { label: "Articles", href: "/insights/articles" },
   ],
 };
 
