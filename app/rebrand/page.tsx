@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: "Rebrand | Centience",
   description: "AI and technology governance for regulated organizations.",
   keywords: ["AI governance","technology governance","compliance"],
+  robots: {
+    index: false,
+    follow: false,
+  },
   alternates: {
     canonical: "https://centience.ai/rebrand",
   },

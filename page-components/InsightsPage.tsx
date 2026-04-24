@@ -107,6 +107,28 @@ const InsightsPage = () => {
         </div>
       </section>
 
+      {/* Articles */}
+      <section id="articles" className="py-16 lg:py-20 bg-muted border-b border-border">
+        <div className="container mx-auto max-w-4xl text-center px-4">
+          <div className="flex items-center gap-3 justify-center mb-4">
+            <div className="gold-line" />
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Articles</p>
+            <div className="gold-line" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
+            AI Governance &amp; Cybersecurity Analysis
+          </h2>
+          <p className="text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
+            Practitioner-level breakdowns of SEC enforcement actions, FINRA examination priorities, HIPAA AI requirements, and cybersecurity governance for regulated organizations.
+          </p>
+          <Button variant="cta" size="lg" asChild>
+            <Link href="/insights/articles">
+              Browse All Articles <ArrowRight size={16} className="ml-2" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
       {/* Downloadable Guides */}
       <section id="guides" className="py-24 lg:py-32 bg-background">
         <div className="container mx-auto">

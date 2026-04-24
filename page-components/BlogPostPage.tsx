@@ -27,7 +27,7 @@ const BlogPostPage = () => {
           <h1 className="text-4xl font-bold text-foreground mb-4">Post Not Found</h1>
           <p className="text-muted-foreground mb-8">The blog post you're looking for doesn't exist.</p>
           <Button variant="gold" asChild>
-            <Link href="/blogs">Back to Blog</Link>
+            <Link href="/insights">Back to Insights</Link>
           </Button>
         </div>
         <Footer />
@@ -68,7 +68,7 @@ const BlogPostPage = () => {
       <SEO
         title={seoTitle}
         description={seoDescription}
-        canonical={`/blog/${post.slug}`}
+        canonical={`/insights/${post.slug}`}
         type="article"
         image={getSrc(post.image)}
         keywords={[
@@ -96,8 +96,8 @@ const BlogPostPage = () => {
         }}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'Blog', url: '/blogs' },
-          { name: post.title, url: `/blog/${post.slug}` },
+          { name: 'Blog', url: '/insights' },
+          { name: post.title, url: `/insights/${post.slug}` },
         ]}
         faq={(() => {
           // Extract FAQ items from [FAQ_ACCORDION] tags in blog content
@@ -125,14 +125,14 @@ const BlogPostPage = () => {
           { label: "Author", value: post.author },
           { label: "Category", value: post.category },
           { label: "Topics", value: extractKeyTopics().join(", ") },
-          { label: "Publisher", value: "Compuwork" },
+          { label: "Publisher", value: "Centience" },
           { label: "Target Audience", value: "IT Professionals, Compliance Officers, Business Leaders" },
         ]}
         services={extractKeyTopics()}
         contactInfo={{
           phone: "(877) 945-7177",
-          email: "info@compuwork.ai",
-          website: `https://compuwork.ai/blog/${post.slug}`,
+          email: "info@centience.ai",
+          website: `https://centience.ai/insights/${post.slug}`,
         }}
       />
 
@@ -143,11 +143,11 @@ const BlogPostPage = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Link
-            href="/blogs"
+            href="/insights"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Blog
+            Back to Insights
           </Link>
 
           <AnimatedSection className="max-w-4xl">
@@ -293,6 +293,29 @@ const BlogPostPage = () => {
                   .replace(/\[CTA_BOX\]([\s\S]*?)\[\/CTA_BOX\]/g, '<div style="max-width:48rem;margin:2.5rem auto;padding:2rem;background:linear-gradient(135deg,#fffbeb,#fef3c7);border-radius:1rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;border:1px solid rgba(245,158,11,0.3);">$1</div>')
                   .replace(/\[CTA_BUTTON:(.*?)\|(.*?)\]/g, '<a href="$2" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 28px;background:linear-gradient(to right,#f97316,#f59e0b);color:#ffffff;font-weight:600;border-radius:9999px;box-shadow:0 4px 15px rgba(249,115,22,0.4);text-decoration:none;font-size:1rem;transition:all 0.3s ease;">$1</a>')
                   .replace(/\[PRO_TIP\]([\s\S]*?)\[\/PRO_TIP\]/g, '<div class="my-8 p-6 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-xl"><p class="text-sm font-bold text-blue-700 dark:text-blue-400 mb-2 uppercase tracking-wide">💡 Pro Tip</p><div class="text-muted-foreground">$1</div></div>')
+                  .replace(/\[CALLOUT:(.*?)\]([\s\S]*?)\[\/CALLOUT\]/g, (_m: string, label: string, body: string) => {
+                    const icons: Record<string,string> = { warning: '⚠️', key: '🔑', important: '📌', rule: '⚖️', stat: '📊', penalty: '🚨', action: '✅' };
+                    const icon = icons[label.toLowerCase()] || '📌';
+                    return `<div class="my-8 p-6 bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 rounded-r-xl"><p class="text-sm font-bold text-amber-700 dark:text-amber-400 mb-2 uppercase tracking-wide">${icon} ${label}</p><div class="text-muted-foreground">${body.trim()}</div></div>`;
+                  })
+                  .replace(/\[STAT_CARDS\]([\s\S]*?)\[\/STAT_CARDS\]/g, (_m: string, content: string) => {
+                    const cards = content.trim().split('\n').filter((l: string) => l.includes('|'));
+                    const cardHtml = cards.map((card: string) => {
+                      const [stat, label, sub] = card.split('|').map((s: string) => s.trim());
+                      return `<div class="p-5 bg-card border border-border rounded-2xl text-center shadow-sm"><p class="text-3xl font-bold text-gold mb-1">${stat}</p><p class="font-semibold text-foreground text-sm mb-1">${label}</p>${sub ? `<p class="text-xs text-muted-foreground">${sub}</p>` : ''}</div>`;
+                    }).join('');
+                    return `<div class="my-10 grid grid-cols-2 md:grid-cols-4 gap-4 not-prose">${cardHtml}</div>`;
+                  })
+                  .replace(/\[TIMELINE\]([\s\S]*?)\[\/TIMELINE\]/g, (_m: string, content: string) => {
+                    const steps = content.trim().split('\n').filter((l: string) => l.includes('|'));
+                    const total = steps.length;
+                    const stepHtml = steps.map((step: string, idx: number) => {
+                      const [title, desc] = step.split('|').map((s: string) => s.trim());
+                      const connector = idx < total - 1 ? '<div class="w-0.5 bg-border flex-1 my-1 min-h-[1.5rem]"></div>' : '';
+                      return `<div class="flex gap-4"><div class="flex flex-col items-center"><div class="w-8 h-8 rounded-full bg-gold/20 border-2 border-gold flex items-center justify-center text-gold font-bold text-sm flex-shrink-0">${idx + 1}</div>${connector}</div><div class="pb-6"><p class="font-semibold text-foreground mb-1">${title}</p><p class="text-sm text-muted-foreground">${desc}</p></div></div>`;
+                    }).join('');
+                    return `<div class="my-10 p-6 bg-card border border-border rounded-2xl not-prose"><div class="space-y-0">${stepHtml}</div></div>`;
+                  })
                   .replace(/\[RELATED_SERVICE:(.*?)\|(.*?)\|(.*?)\]/g, '<div class="my-8 p-5 bg-gold/5 border border-gold/20 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"><div><p class="font-bold text-foreground mb-1">🔗 Related Service: $1</p><p class="text-sm text-muted-foreground mb-0">$2</p></div><a href="$3" class="inline-flex items-center gap-1 px-4 py-2 bg-gold/10 text-gold font-semibold rounded-lg hover:bg-gold/20 transition-colors no-underline text-sm whitespace-nowrap">Learn More →</a></div>')
                   .replace(/\[YOUTUBE:(.*?)\|(.*?)\]/g, '<div class="my-10"><div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-border"><iframe src="$1" title="$2" class="absolute inset-0 w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>')
                   .replace(/\n\n/g, '</p><p class="mb-4">')
@@ -333,14 +356,14 @@ const BlogPostPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold font-display text-primary-foreground mb-4">
-              Ready to Improve Your IT Security?
+              Ready to Build a Defensible Governance Program?
             </h2>
             <p className="text-primary-foreground/70 mb-8">
-              Schedule a free assessment with our team and discover how we can help protect your business.
+              Centience delivers AI and technology governance built on managed infrastructure — enforceable, not just documented.
             </p>
             <Button variant="gold" size="lg" className="shadow-gold" asChild>
-              <Link href="/free-risk-assessment">
-                Get Your Free Risk Assessment
+              <Link href="/ai-governance-risk-assessment">
+                Book Your AI Governance Assessment
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
@@ -363,7 +386,7 @@ const BlogPostPage = () => {
                 <AnimatedSection key={relatedPost.id} delay={index * 0.1}>
                   <motion.div whileHover={{ y: -8 }}>
                     <Link
-                      href={`/blog/${relatedPost.slug}`}
+                      href={`/insights/${relatedPost.slug}`}
                       className="block bg-card border border-border rounded-2xl overflow-hidden group h-full"
                     >
                       <div className="relative aspect-video overflow-hidden">

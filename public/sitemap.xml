@@ -148,13 +148,63 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Secondary pages -->
+  <!-- Insights / Blog hub -->
   <url>
     <loc>https://centience.ai/insights</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://centience.ai/insights/articles</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Blog posts -->
+  <url>
+    <loc>https://centience.ai/insights/ai-governance-framework-hipaa-regulated-organizations</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://centience.ai/insights/ai-governance-framework-sec-registered-investment-advisers</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://centience.ai/insights/ai-governance-finra-member-firms-2026</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://centience.ai/insights/cybersecurity-governance-hipaa-healthcare-organizations</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://centience.ai/insights/cybersecurity-governance-sec-regulated-firms</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://centience.ai/insights/cybersecurity-governance-finra-member-firms</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://centience.ai/insights/sec-ai-washing-enforcement-actions-what-investment-firms-must-know</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Secondary pages -->
   <url>
     <loc>https://centience.ai/partners</loc>
     <lastmod>2026-03-26</lastmod>

@@ -4436,6 +4436,778 @@ Schedule a free risk assessment with CompuWork's cybersecurity compliance expert
 [/CTA_BOX]
     `,
   },
+  // ─── Centience Blog Posts ──────────────────────────────────────────────────
+  {
+    id: 11,
+    slug: "ai-governance-framework-hipaa-regulated-organizations",
+    category: "AI Governance",
+    title: "AI Governance Under HIPAA: What Regulated Healthcare Organizations Must Do Now",
+    excerpt: "HIPAA's Privacy and Security Rules apply to AI tools handling protected health information. Here is what a defensible AI governance framework looks like for healthcare organizations operating under federal oversight.",
+    image: "/assets/blog/cybersecurity-financial-firms.png",
+    author: "Orville Matias",
+    date: "April 2026",
+    metaTitle: "AI Governance Framework for HIPAA Compliance | Centience",
+    metaDescription: "Learn how to build an AI governance framework that satisfies HIPAA Privacy and Security Rule requirements. Practical steps for healthcare organizations deploying AI tools.",
+    content: `
+AI tools are now embedded in clinical documentation, revenue cycle management, patient scheduling, and internal communications at healthcare organizations across the country. Most were deployed without a governance framework. That is the problem.
+
+[STAT_CARDS]
+$10,000 | Minimum HIPAA Penalty | Per violation, willful neglect
+$50,000 | Maximum Per Violation | Per violation category per year
+$1.9M | Average Healthcare Breach Cost | 2024 IBM Cost of Data Breach Report
+5 Days | Assessment Turnaround | Centience AI Governance Assessment
+[/STAT_CARDS]
+
+HIPAA's Privacy Rule and Security Rule do not carve out an exception for artificial intelligence. If a tool touches, processes, transmits, or stores protected health information (PHI), it falls under HIPAA's obligations — regardless of whether the vendor calls it "AI," "automation," or "intelligent workflow."
+
+Here is what a defensible AI governance program looks like for a HIPAA-regulated organization.
+
+## Why AI Creates New HIPAA Exposure
+
+Most healthcare organizations have existing policies for data access, breach notification, and vendor management. Those policies were written before generative AI existed. They do not account for the way AI tools ingest context, retain conversation history, train on user inputs by default, or expose PHI through prompt injection.
+
+The specific exposures include:
+
+**PHI ingestion through AI prompts.** Staff using tools like ChatGPT, Microsoft Copilot, or Google Gemini may inadvertently include patient names, dates of service, diagnosis codes, or account numbers in prompts. Without technical controls preventing this, every prompt becomes a potential breach event.
+
+**Business Associate Agreements.** Under HIPAA, any vendor that creates, receives, maintains, or transmits PHI on your behalf is a Business Associate and requires a signed BAA. Many AI vendors — including major platforms — either do not offer HIPAA-compliant configurations or have BAA terms that shift liability in ways most compliance officers have not reviewed.
+
+**Audit trail gaps.** The HIPAA Security Rule requires covered entities to implement audit controls — hardware, software, and procedural mechanisms that record and examine activity in systems containing PHI. Most AI tools generate no audit log accessible to the covered entity.
+
+**Proposed 2025 HIPAA Security Rule Update.** HHS OCR has a proposed Security Rule modernization on the May 2026 agenda that includes explicit requirements for technology asset inventories and access controls. Organizations without an AI inventory today will be non-compliant under the proposed rule before it finalizes.
+
+## The Four Pillars of an AI Governance Framework Under HIPAA
+
+[TIMELINE]
+AI Inventory | Discover every AI tool touching PHI — licensed, embedded, or employee-accessed. Classify by risk level.
+BAA Audit | Verify executed Business Associate Agreements cover every AI vendor processing PHI. Remediate gaps immediately.
+Technical Controls | Deploy DLP, endpoint policies, and approved tool lists enforced at the network level — not just in documentation.
+Workforce Training | Train all workforce members on AI acceptable use and PHI handling. Document acknowledgment.
+[/TIMELINE]
+
+### 1. AI Inventory
+
+You cannot govern what you cannot see. The first step is a complete discovery of every AI tool in use across the organization — including tools deployed by individual departments, embedded in third-party software, or accessed via personal devices.
+
+[CALLOUT:Important]
+OCR guidance since 2023 explicitly includes AI among technologies that must be addressed in the required Security Rule risk analysis. An AI inventory is not optional — it is the foundation of a defensible risk analysis.
+[/CALLOUT]
+
+Each tool in the inventory should be evaluated for:
+- Whether it can access, process, or store PHI
+- Whether a BAA exists with the vendor
+- Whether the tool operates in a HIPAA-compliant configuration
+- Who authorized deployment and when
+
+Organizations that skip this step will discover exposure during an HHS OCR investigation, not before it.
+
+### 2. Business Associate Agreement Audit
+
+Every AI vendor that touches PHI requires a valid BAA. This is non-negotiable under 45 CFR §164.308(b).
+
+A BAA audit for AI should cover:
+- Which AI platforms currently have executed BAAs
+- Whether those BAAs cover the specific AI features in use (enterprise AI agreements often have narrower scope than the tools employees actually use)
+- Which platforms have no BAA at all and must be restricted immediately
+- Renewal dates and termination clauses
+
+Microsoft 365 Copilot, Google Workspace with Gemini, and several major EHR vendors now offer HIPAA-aligned AI configurations — but only under specific licensing tiers and only when BAAs are executed correctly.
+
+### 3. Technical Controls
+
+Governance without enforcement is just documentation. Technical controls operationalize your policies:
+
+- **Endpoint policies** that block PHI from being submitted to non-approved AI platforms
+- **Data loss prevention (DLP) rules** configured to detect and block PHI patterns (SSNs, MRNs, dates of service, diagnosis codes) from reaching external AI endpoints
+- **Approved AI tool list** enforced at the network and device level, not just in a policy document
+- **Session logging** for approved AI tools that creates the audit trail required under the Security Rule
+
+### 4. Workforce Training and Policy
+
+HIPAA requires covered entities to train all workforce members on policies and procedures. That obligation extends to AI usage.
+
+Workforce training should address:
+- What constitutes PHI and why it must not enter unapproved AI tools
+- Which AI tools are approved, under what conditions, and with what restrictions
+- How to report suspected PHI incidents involving AI tools
+- Consequences of policy violation
+
+A written AI Acceptable Use Policy specific to PHI should be documented, dated, and acknowledged by all workforce members. This document is one of the first things an OCR investigator will request.
+
+## What OCR Looks for in an AI Governance Examination
+
+HHS OCR investigations have increasingly focused on whether covered entities have conducted thorough risk analyses that account for new technologies. The 2013 HIPAA Omnibus Rule expanded this obligation, and OCR guidance since 2023 has explicitly included AI among technologies that must be addressed in the required Security Rule risk analysis.
+
+The documentation OCR expects includes:
+- A current, dated risk analysis that includes AI tools
+- Policies and procedures addressing AI use and PHI
+- Evidence of workforce training
+- BAA inventory including AI vendors
+- Remediation plans for identified gaps
+
+Organizations without this documentation face penalties under 45 CFR §164.308(a)(1). Willful neglect violations carry a minimum civil penalty of $10,000 per violation with a maximum of $50,000 — per violation category, per year.
+
+## The Centience Approach
+
+Most governance programs fail not because policies are wrong, but because policies cannot be enforced. If you do not control the infrastructure, you cannot enforce the controls.
+
+Centience builds AI governance programs on managed infrastructure. That means DLP rules are active on your endpoints, not just written in a policy. AI tool access is governed at the network level. Audit logs are assembled in advance, not reconstructed after an incident.
+
+The starting point is an AI Governance Assessment that identifies every tool, maps PHI exposure, and delivers a prioritized roadmap before your next OCR examination.
+
+[CTA_BOX]
+## Is your organization ready for a HIPAA AI governance examination?
+
+Schedule your AI Governance Assessment. Results delivered within 5 business days.
+
+[CTA_BUTTON:Book Your AI Governance Assessment|/ai-governance-risk-assessment]
+[/CTA_BOX]
+    `,
+  },
+  {
+    id: 12,
+    slug: "ai-governance-framework-sec-registered-investment-advisers",
+    category: "AI Governance",
+    title: "AI Governance for SEC-Registered Investment Advisers: What the Examination Program Is Actually Looking For",
+    excerpt: "The SEC's Division of Examinations has made AI governance a priority examination area. Here is a practitioner-level breakdown of what examiners look for and how registered investment advisers should structure their governance programs.",
+    image: "/assets/blog/compliance-mistakes-financial-firms.png",
+    author: "Orville Matias",
+    date: "April 2026",
+    metaTitle: "AI Governance for SEC Registered Investment Advisers | Centience",
+    metaDescription: "SEC examiners are reviewing AI governance at registered investment advisers. Learn what documentation, controls, and policies satisfy examination requirements.",
+    content: `
+The SEC's Division of Examinations included AI in its 2024 and 2025 examination priorities. The 2026 examination cycle continues that focus. For registered investment advisers (RIAs), this is not an abstract regulatory development. Examiners are actively reviewing AI governance programs — or the absence of them — during routine inspections.
+
+[STAT_CARDS]
+$225K | Delphia Penalty | SEC AI washing, March 2024
+$175K | Global Predictions | SEC AI washing, March 2024
+$1.6M | Rockwell Capital | Disgorgement + penalties
+$8.2B | Total SEC Fines FY2024 | Record enforcement year
+[/STAT_CARDS]
+
+This article covers what the examination program is looking for, where RIAs are most exposed, and what a defensible AI governance structure looks like under existing securities law.
+
+## The Regulatory Framework Is Already in Place
+
+The SEC has not issued AI-specific regulations. It does not need to. The existing regulatory framework applies fully to AI:
+
+**Investment Advisers Act of 1940.** Section 206 prohibits fraudulent or deceptive practices. The SEC's AI washing enforcement actions (Delphia, Global Predictions, Rockwell Capital) were brought under Section 206 and the Marketing Rule — not new AI regulations.
+
+**Regulation S-P.** Governs the safeguarding of customer financial information. If AI tools process client data, Reg S-P applies. Examiners will ask whether client information is being submitted to AI platforms without appropriate safeguards.
+
+**Books and Records Rules (Rule 204-2).** If AI tools generate or assist in creating client communications, investment recommendations, or research, those outputs may be required books and records. Most RIAs have not updated their recordkeeping policies to address AI-generated content.
+
+**Marketing Rule (Rule 206(4)-1).** All AI-generated marketing content is subject to the same substantiation, fair and balanced presentation, and anti-testimonial requirements as human-generated content. This is the specific rule under which AI washing penalties were assessed.
+
+## What SEC Examiners Are Reviewing
+
+Based on SEC examination priority letters and enforcement actions through early 2026, examination staff are specifically reviewing:
+
+**1. AI Representations vs. Reality**
+
+The first AI washing cases established that examiners will verify whether firms actually use AI the way they claim. If your ADV, marketing materials, website, or client presentations describe AI-driven portfolio management, automated rebalancing, or AI-enhanced research — examiners will ask for technical documentation that the AI does what you say it does.
+
+Firms that cannot substantiate their AI claims face Marketing Rule violations. The Delphia penalty was $225,000; Global Predictions paid $175,000. These were settled without admission of wrongdoing. Litigated cases carry substantially higher exposure.
+
+**2. Written Supervisory Procedures Covering AI**
+
+FINRA Rule 3110 (for broker-dealers) and the general supervisory framework for RIAs under the Advisers Act require firms to supervise all business activities of supervised persons. This obligation does not stop at AI-generated content or AI-assisted decision-making.
+
+Examiners will ask whether your WSPs address:
+- Who is authorized to use AI tools in client-facing work
+- What review process exists for AI-generated communications before they are sent
+- How AI-assisted investment recommendations are documented and supervised
+- What disclosure obligations exist when AI influences advice given to clients
+
+**3. AI Vendor Due Diligence**
+
+If your firm uses third-party AI tools — including tools embedded in your portfolio management software, CRM, or communications platforms — you are responsible for governance of those tools. Examiners will ask what vendor due diligence you performed, whether you understand how client data is handled, and whether your contractual arrangements adequately protect client information.
+
+**4. AI Inventory**
+
+A recurring theme in SEC examination requests is a demand for an inventory of all technology systems in use. AI tools — whether licensed, subscribed, or embedded — must be in that inventory. Firms that cannot produce one face examination criticism even before substantive compliance issues are assessed.
+
+## Where RIAs Are Most Exposed Right Now
+
+**Shadow AI.** Employees using personal AI accounts (ChatGPT Plus, Claude Pro, Google One AI) to perform client-related work. These tools are outside the firm's supervisory framework, generate no recordable audit trail, and frequently involve submission of client information to third-party platforms without appropriate data handling agreements.
+
+[CALLOUT:Warning]
+Shadow AI is the highest-frequency undetected compliance gap in registered investment adviser firms today. Without infrastructure-level controls blocking unauthorized AI access, your WSPs are unenforceable against the tools employees use every day.
+[/CALLOUT]
+
+**Unapproved AI in client communications.** Advisers using AI to draft emails, letters, or reports to clients without disclosure or supervisory review. If those communications contain investment recommendations or performance information, they are subject to the Marketing Rule.
+
+**AI in marketing without substantiation files.** Websites and marketing materials referencing AI capabilities without a contemporaneous record of the factual basis for those representations. This is the exact pattern that triggered the 2024 AI washing enforcement actions.
+
+**Missing or outdated CCO policies.** Chief Compliance Officers who have not updated their compliance programs to address AI since 2023 have a documented gap. Examiners who identify it will cite it as a failure of the firm's compliance program under the Compliance Rule (Rule 206(4)-7).
+
+## What a Defensible AI Governance Program Looks Like
+
+A defensible AI governance program for an SEC-registered investment adviser has five components:
+
+[TIMELINE]
+AI Inventory | Document every AI tool in use — by employees and embedded vendors. Review quarterly.
+AI Policy | Written policies: authorized tools, prohibited uses, client data handling, disclosure requirements, supervisory review.
+Updated WSPs | Written Supervisory Procedures explicitly addressing AI tool usage and AI-assisted processes.
+Marketing Review | Documented pre-approval workflow for AI-generated content with substantiation files for all capability claims.
+Annual Review Documentation | Evidence AI governance is included in the Rule 206(4)-7 annual compliance program review.
+[/TIMELINE] A documented, current list of every AI tool in use across the firm — by employees and by embedded vendors. Maintained as a living document, reviewed at least quarterly.
+
+**AI Policy.** Written policies addressing authorized AI tools, prohibited uses, client data handling, disclosure requirements, and supervisory review of AI-generated content. Incorporated into the firm's overall compliance policies.
+
+**Updated WSPs.** Written Supervisory Procedures that explicitly address AI tool usage, AI-generated communications review, and AI-assisted investment processes.
+
+**Marketing Review Process.** A documented review workflow for any AI-generated marketing content, with substantiation files maintained for any AI-related capability claims.
+
+**Annual Review Documentation.** Evidence that AI governance is included in the firm's annual compliance program review required under Rule 206(4)-7.
+
+## Why Infrastructure Control Matters
+
+Most compliance consultants can write the policies. What they cannot do is enforce them. A WSP that says employees must not use unapproved AI tools is unenforceable without technical controls that block access to unapproved platforms.
+
+Centience builds AI governance programs on managed infrastructure. Your endpoints, network, and cloud environment are under our management — which means DLP rules blocking unauthorized AI access are technically active, not aspirational. When an examiner asks whether controls are in place, the answer is documented in system logs, not just policy documents.
+
+[CTA_BOX]
+## Is your RIA ready for an AI governance examination?
+
+Schedule your AI Governance Assessment. We identify gaps before the examiner does.
+
+[CTA_BUTTON:Book Your AI Governance Assessment|/ai-governance-risk-assessment]
+[/CTA_BOX]
+    `,
+  },
+  {
+    id: 13,
+    slug: "ai-governance-finra-member-firms-2026",
+    category: "AI Governance",
+    title: "FINRA's 2026 Regulatory Oversight Report and AI Governance: What Broker-Dealers Must Address",
+    excerpt: "FINRA's 2026 Annual Regulatory Oversight Report added a dedicated Generative AI section for the first time. Here is what broker-dealers need to build into their governance programs in response.",
+    image: "/assets/blog/data-protection-financial-firms.png",
+    author: "Orville Matias",
+    date: "April 2026",
+    metaTitle: "FINRA 2026 AI Governance Requirements for Broker-Dealers | Centience",
+    metaDescription: "FINRA's 2026 Annual Regulatory Oversight Report includes new GenAI governance requirements. Learn what broker-dealers must implement to satisfy examination expectations.",
+    content: `
+FINRA's 2026 Annual Regulatory Oversight Report, published in December 2025, added a dedicated Generative AI section for the first time in the report's history. This is a significant signal. When FINRA creates a standalone section on a topic in the AROR, it becomes an examination priority across the member firm population.
+
+[STAT_CARDS]
+2026 | FINRA AROR | First dedicated GenAI section
+Rule 3110 | Supervision | Applies to all AI activity
+Rule 2210 | Communications | AI content same standard as human
+Rule 4511 | Books & Records | AI outputs may be required records
+[/STAT_CARDS]
+
+This article breaks down what the 2026 AROR requires, what it means operationally for broker-dealers, and where the specific compliance gaps are most likely to appear during examinations.
+
+## What FINRA's 2026 AROR Actually Says
+
+The 2026 report specifies several expectations for broker-dealers deploying or considering GenAI tools:
+
+**Governance and model risk frameworks.** FINRA expects firms to establish supervision, governance, or model risk management frameworks with clear policies and procedures for developing, implementing, using, and monitoring GenAI. Documentation must be maintained throughout the AI lifecycle — from evaluation to deployment to retirement.
+
+**Controls for hallucinations, bias, and cybersecurity risks.** The report explicitly calls out AI hallucinations and bias as compliance risks that require active controls. Firms deploying AI in client-facing applications, research, or supervision must have mechanisms to detect and address AI outputs that are inaccurate or biased.
+
+**Ongoing human oversight.** FINRA is unambiguous that human monitoring of AI model outputs is essential. This is not a transitional requirement pending better AI technology. It is a structural expectation — AI-assisted decisions and communications require human review before they affect customers.
+
+**Agentic AI oversight.** The 2026 report specifically addresses autonomous AI agents as a novel oversight challenge. FINRA notes that agentic AI may require tracking of system actions and restrictions on system access. This is forward-looking language, but firms piloting or deploying AI agents that take autonomous actions on behalf of the firm or its customers need written frameworks now.
+
+**Accurate AI-related disclosures.** FINRA reiterates the requirement — consistent with the SEC's AI washing enforcement actions — that descriptions of GenAI capabilities in customer communications and marketing materials must be accurate, balanced, and not overstated. The report specifically references the "AI washing charges brought by other regulators" as context.
+
+## The Operational Implications for Broker-Dealers
+
+FINRA's technology-neutral regulatory approach means existing rules apply to AI without modification. That has specific operational implications:
+
+**FINRA Rule 3110 (Supervision).** Every use of AI in a business activity of the firm is subject to supervisory oversight. If a registered representative uses an AI tool to assist in drafting customer communications, that output must be reviewed under the same supervisory framework as communications written entirely by the representative. There is no AI exception to Rule 3110.
+
+**FINRA Rule 2210 (Communications with the Public).** AI-generated marketing content, social media posts, newsletters, or customer-facing materials are subject to Rule 2210's requirements for fair, balanced, and not misleading content. AI tools that generate marketing content without a review process create Rule 2210 exposure.
+
+**Books and Records (Rules 4511-4514).** If AI tools generate content that constitutes a business record — including customer communications, research, trade justifications, or compliance documentation — those records are subject to retention requirements. Most firms have not updated their recordkeeping policies to explicitly address AI-generated content.
+
+**Vendor Management.** FINRA's rules apply whether firms use AI directly or through third-party vendors. If your order management system, CRM, or compliance surveillance platform has embedded AI features, your firm is responsible for governance of those features. Vendor agreements should address data handling, model transparency, audit trail availability, and the firm's ability to supervise AI-generated outputs.
+
+## Where Examination Gaps Are Most Likely
+
+Based on FINRA's stated priorities and the patterns emerging from early AI-related examinations, broker-dealers are most at risk in the following areas:
+
+**No AI inventory.** FINRA examiners will ask for a list of AI tools in use across the firm. Firms that cannot produce one — including AI embedded in third-party tools — will face examination criticism before any substantive compliance question is reached.
+
+**WSPs that predate GenAI.** If your Written Supervisory Procedures were last updated before 2024 and do not address GenAI, you have a documented compliance program gap. FINRA expects WSPs to be living documents updated as the firm's business and risk profile changes. AI adoption at the firm level triggers that update obligation.
+
+[CALLOUT:Rule]
+FINRA Rule 3110 is technology-neutral. There is no AI exception. Every AI tool used in the business activities of the firm — by any registered person — requires supervision under the same standards as any other business activity.
+[/CALLOUT]
+
+**Undisclosed AI use in customer communications.** Registered representatives using personal AI accounts to draft customer emails or proposals — with no supervisory review and no disclosure — creates simultaneous Rule 3110, Rule 2210, and potentially Rule 4511 exposure.
+
+**AI in advertising with no substantiation.** Firms that reference AI capabilities in their advertising or customer materials without contemporaneous substantiation files are exposed to the same Marketing Rule violations that resulted in SEC AI washing enforcement actions against investment advisers.
+
+**No training documentation.** FINRA expects firms to train personnel on the firm's AI governance policies. Firms without documented training programs will face criticism during examination for inadequate compliance culture around AI.
+
+## Building a FINRA-Compliant AI Governance Program
+
+A FINRA-compliant AI governance program for a broker-dealer has the following components:
+
+An **AI inventory** documenting every tool in use, including embedded AI in third-party platforms, with classification by risk level and customer-facing designation.
+
+**Updated WSPs** that address GenAI usage, supervision of AI-generated communications, review processes for AI-assisted customer interactions, and escalation procedures for AI-related incidents.
+
+**Technical controls** enforcing the WSPs — including DLP rules blocking submission of customer data to unauthorized AI platforms and logging of AI tool usage by employees.
+
+**Annual compliance review** documentation showing that AI governance was explicitly included in the firm's Rule 3110 supervisory review.
+
+**Training records** showing all registered persons received training on the firm's AI usage policies and the applicable regulatory obligations.
+
+Most firms can write the policies. The harder problem is enforcement — and enforcement requires infrastructure control.
+
+[CTA_BOX]
+## Does your broker-dealer have a FINRA-compliant AI governance program?
+
+Schedule your AI Governance Assessment. We identify gaps before FINRA does.
+
+[CTA_BUTTON:Book Your AI Governance Assessment|/ai-governance-risk-assessment]
+[/CTA_BOX]
+    `,
+  },
+  {
+    id: 14,
+    slug: "cybersecurity-governance-hipaa-healthcare-organizations",
+    category: "Cybersecurity",
+    title: "Cybersecurity Governance for HIPAA-Regulated Organizations: Beyond the Checklist",
+    excerpt: "HIPAA's Security Rule requires more than annual risk assessments and a policies binder. Here is what a technically enforced cybersecurity governance program looks like for covered entities and business associates.",
+    image: "/assets/blog/cybersecurity-expert-prevent-breach.png",
+    author: "Orville Matias",
+    date: "April 2026",
+    metaTitle: "Cybersecurity Governance for HIPAA Compliance | Centience",
+    metaDescription: "HIPAA Security Rule compliance requires technically enforced cybersecurity controls, not just documentation. Learn what a defensible cybersecurity governance program looks like for covered entities.",
+    content: `
+Healthcare organizations are among the most targeted by ransomware groups and data extortion actors in the United States. The combination of high-value PHI, aging infrastructure, and compliance programs that prioritize documentation over technical enforcement creates an attractive target profile.
+
+[STAT_CARDS]
+#1 | Most Targeted Sector | Healthcare leads all industries for ransomware
+$10.9M | Avg. Healthcare Breach | 2024 IBM Cost of Data Breach Report
+2003 | HIPAA Security Rule | Technical controls required since inception
+2026 | Proposed Update | HHS OCR Security Rule modernization on agenda
+[/STAT_CARDS]
+
+The HIPAA Security Rule has required healthcare organizations to implement cybersecurity controls since 2003. The proposed 2025 Security Rule update — on the HHS OCR enforcement agenda for 2026 — would make those requirements significantly more prescriptive. What has not changed is the core problem: most healthcare organizations treat HIPAA cybersecurity compliance as a documentation exercise rather than a technical security program.
+
+This article addresses what HIPAA's Security Rule actually requires from a technical controls standpoint, where the most common gaps occur, and what a defensible cybersecurity governance program looks like.
+
+## What the HIPAA Security Rule Actually Requires
+
+The Security Rule establishes three categories of safeguards for electronic PHI (ePHI): administrative, physical, and technical. Most compliance programs focus heavily on administrative safeguards (policies, training, risk analysis) and neglect the technical safeguard requirements that require actual implementation and ongoing management.
+
+**Technical Safeguards (45 CFR §164.312)**
+
+The technical safeguard requirements include:
+
+*Access Controls.* Unique user identification for all users who access ePHI. Emergency access procedures. Automatic logoff. Encryption and decryption of ePHI. These are not aspirational standards — they are required specifications with documented implementation requirements.
+
+*Audit Controls.* Hardware, software, and procedural mechanisms that record and examine activity in systems containing ePHI. This requirement is not satisfied by a system that logs activity — it requires that logs are examined. Organizations with no log review process are non-compliant with this requirement regardless of what their documentation says.
+
+[CALLOUT:Important]
+Generating audit logs is not enough. HIPAA requires that logs are examined. An organization with active logging but no documented log review process is non-compliant with 45 CFR §164.312(b) — and OCR investigators know to ask for both.
+[/CALLOUT]
+
+*Integrity Controls.* Mechanisms to authenticate ePHI and ensure it has not been improperly altered or destroyed. This includes file integrity monitoring in systems containing patient records.
+
+*Transmission Security.* Encryption of ePHI transmitted over networks. This applies to email containing PHI, API calls between systems, cloud storage synchronization, and remote access to clinical systems.
+
+**The Proposed 2025 Security Rule Update**
+
+HHS OCR's proposed update — which was on the May 2026 regulatory agenda — includes several changes that would significantly strengthen technical requirements:
+
+- Mandatory technology asset inventories with explicit coverage of AI tools
+- Enhanced vulnerability scanning and penetration testing requirements with defined frequency
+- Mandatory multi-factor authentication for all systems containing ePHI
+- Specific requirements for network segmentation
+- Enhanced incident response plan requirements with defined recovery time objectives
+
+Organizations that are already operating to these standards have minimal exposure to the proposed update. Organizations that are not will face a compliance gap when the rule finalizes.
+
+## Where Healthcare Organizations Are Most Exposed
+
+**Unmanaged endpoints accessing ePHI.** Clinical staff accessing patient records from personal devices, unmanaged laptops, or shared workstations with no MDM (Mobile Device Management) enrollment. Each unmanaged device is a potential breach vector and an uncontrolled access point for ePHI.
+
+**Legacy systems without patch management.** EHR platforms, medical devices, and clinical workstations running outdated operating systems or unpatched software. Many healthcare organizations have legacy clinical systems that cannot be updated without vendor certification — and the compensating controls for those systems (network segmentation, enhanced monitoring) are frequently absent.
+
+**Insufficient audit log review.** Organizations that generate audit logs but have no process for reviewing them regularly. Security incidents detected through log review are stopped earlier, with lower breach impact, than incidents detected by patients, external parties, or ransomware deployment.
+
+**Weak privileged access controls.** Shared administrative credentials for clinical systems and EHR platforms. Service accounts with excessive permissions. IT staff with standing privileged access to systems containing ePHI without just-in-time access controls.
+
+**Third-party and vendor access.** EHR vendors, billing companies, medical device manufacturers, and IT support providers with ongoing access to ePHI systems. Vendor access that is not monitored, not time-limited, and not scoped to minimum necessary access is one of the most frequent breach vectors in healthcare.
+
+**No incident response testing.** Organizations with written incident response plans that have never been tested. An untested IR plan is discovery documentation that shows you knew what to do but did not verify you could do it.
+
+## What Technically Enforced Cybersecurity Governance Looks Like
+
+The gap between a documented cybersecurity program and a technically enforced cybersecurity program is the gap between what your policies say and what your systems actually do.
+
+A technically enforced cybersecurity governance program for a HIPAA-regulated organization includes:
+
+**Managed endpoint security.** Every device accessing ePHI — workstations, laptops, tablets, mobile devices — under active management with EDR (Endpoint Detection and Response), enforced disk encryption, automatic patching, and MDM enrollment. Controls are active, not aspirational.
+
+**Identity and access management.** Unique credentials for every user, MFA enforced on all systems containing ePHI, privileged access managed through a PAM (Privileged Access Management) platform, quarterly access reviews. No shared credentials, no standing privilege.
+
+**Network segmentation.** Clinical systems containing ePHI on isolated network segments with firewall rules preventing lateral movement. Medical devices on separate VLANs. Remote access through VPN with MFA — not open RDP.
+
+**Continuous monitoring.** Security event logs from all systems containing ePHI forwarded to a SIEM (Security Information and Event Management) platform with active monitoring and alerting. Anomalous access patterns, failed authentication attempts, and unusual data transfers generate alerts reviewed by security personnel.
+
+**Vulnerability management.** Regular authenticated vulnerability scanning of all systems containing ePHI, with defined remediation SLAs based on severity. Critical vulnerabilities remediated within 15 days. High severity within 30 days. Evidence maintained for audit.
+
+**Incident response with tested playbooks.** A written IR plan with specific procedures for ransomware, unauthorized access to ePHI, and vendor-related incidents — tested at least annually through a tabletop exercise with documented results.
+
+## Why Governance Without Infrastructure Control Fails
+
+Most healthcare organizations engage compliance consultants who deliver a risk analysis, update their policies, and leave. Twelve months later, the policies exist but the technical controls were never implemented, or were implemented once and never maintained.
+
+Governance that is not built on managed infrastructure is advisory. It tells you what to do without the operational capacity to verify it is being done.
+
+Centience builds cybersecurity governance programs on the infrastructure we manage. That means vulnerability scans run on schedule and evidence is collected automatically. Endpoint controls are active on every device we manage. Audit logs are reviewed and anomalies are escalated. When OCR requests documentation, it has already been assembled.
+
+[CTA_BOX]
+## Is your cybersecurity governance program technically enforced or just documented?
+
+Schedule your AI Governance Assessment. We evaluate cybersecurity controls alongside AI governance.
+
+[CTA_BUTTON:Book Your Assessment|/ai-governance-risk-assessment]
+[/CTA_BOX]
+    `,
+  },
+  {
+    id: 15,
+    slug: "cybersecurity-governance-sec-regulated-firms",
+    category: "Cybersecurity",
+    title: "Cybersecurity Governance for SEC-Regulated Firms: What the 2023 Rules Require and Where Most Firms Fall Short",
+    excerpt: "The SEC's 2023 cybersecurity rules for public companies and the Division of Examinations' ongoing focus on registered advisers and broker-dealers mean cybersecurity governance is no longer optional for SEC-regulated organizations. Here is what the rules actually require.",
+    image: "/assets/blog/cybersecurity-financial-firms.png",
+    author: "Orville Matias",
+    date: "April 2026",
+    metaTitle: "Cybersecurity Governance for SEC Regulated Firms | Centience",
+    metaDescription: "SEC cybersecurity rules require registered investment advisers and broker-dealers to have technically enforced cybersecurity programs. Learn what the rules require and where firms fall short.",
+    content: `
+The SEC's cybersecurity regulatory activity between 2023 and 2026 has been more significant than any prior period in the agency's history. For SEC-regulated organizations — registered investment advisers, broker-dealers, and public companies — cybersecurity is now a formal regulatory compliance obligation with specific documentation, disclosure, and incident response requirements.
+
+[STAT_CARDS]
+4 Days | 8-K Disclosure Deadline | Material incident after materiality determination
+30 Days | Reg S-P Notification | Customer notice after covered incident
+$8.2B | SEC Fines FY2024 | Record enforcement year
+2024 | Reg S-P Amended | Enhanced customer data protection rules
+[/STAT_CARDS]
+
+This article covers the current regulatory framework, what examination staff are reviewing, and where SEC-regulated firms most frequently have compliance gaps in their cybersecurity governance programs.
+
+## The Current Regulatory Framework
+
+**SEC Cybersecurity Rules for Public Companies (2023)**
+
+The SEC adopted new cybersecurity disclosure rules for public reporting companies in July 2023, effective December 2023. These rules require:
+
+*Material incident disclosure.* Public companies must disclose material cybersecurity incidents on Form 8-K within four business days of determining an incident is material. The determination of materiality is the company's responsibility and must be made promptly.
+
+*Annual disclosure of cybersecurity risk management.* Form 10-K must now include disclosures about the company's processes for identifying, assessing, and managing material cybersecurity risks, whether those processes are integrated into the company's overall risk management, and the role of the board and management in cybersecurity oversight.
+
+*Board oversight disclosure.* Public companies must disclose the board's role in oversight of cybersecurity risk and whether any board member has cybersecurity expertise.
+
+**SEC Examination Priorities for RIAs and Broker-Dealers**
+
+The Division of Examinations' cybersecurity priorities for registered advisers and broker-dealers focus on:
+
+- Identity and access management controls protecting client accounts and data
+- The security of customer information under Reg S-P
+- Cybersecurity incident response planning and testing
+- Third-party and vendor cybersecurity risk management
+- The security of client-facing portals and digital systems
+
+The Division has consistently cited cybersecurity as an examination priority since 2015. The 2026 examination priorities continue this focus with specific attention to AI-related cybersecurity risks — including threat actors using AI to conduct more sophisticated phishing, social engineering, and credential attacks against financial services firms.
+
+**Reg S-P Amendments (2024)**
+
+The SEC adopted amendments to Regulation S-P in May 2024 that significantly strengthened customer information protection requirements for broker-dealers and investment advisers:
+
+- Extended the safeguards rule to cover more categories of customer information
+- Added an incident response program requirement with specific elements
+- Required notification to affected customers within 30 days of discovering a covered incident
+- Extended Reg S-P obligations to transfer agents
+
+These amendments are not aspirational guidance. They are enforceable rules. Firms without compliant incident response programs face examination criticism and potential enforcement action.
+
+## Where SEC-Regulated Firms Are Most Exposed
+
+**Inadequate incident response programs.** The most common cybersecurity governance gap in SEC-regulated firms is an incident response plan that exists on paper but has never been tested and lacks the operational specificity required by the amended Reg S-P. Examiners will ask for the plan, ask when it was last tested, and ask for documentation of that test.
+
+**No materiality assessment process.** For public companies subject to the 2023 cybersecurity rules, the absence of a documented process for making materiality determinations following a cybersecurity incident is an immediate disclosure control deficiency. Companies that experience an incident and cannot demonstrate a prompt, documented materiality assessment risk both late disclosure violations and potential securities fraud exposure.
+
+**Third-party vendor gaps.** Most financial services cybersecurity incidents originate with third-party vendors — technology providers, cloud platforms, payroll processors, or service firms with access to the firm's systems. Examiners review vendor management programs for evidence of cybersecurity due diligence, contractual protections, and ongoing vendor monitoring.
+
+**Insufficient access controls.** Shared credentials, dormant accounts with active access, former employees with system access, service accounts with excessive privileges. Access control deficiencies are among the most consistent examination findings across the financial services sector.
+
+**No board-level cybersecurity reporting.** For public companies, the 2023 rules created formal board oversight disclosure obligations. For RIAs and broker-dealers, FINRA and SEC examination staff expect evidence that senior management and, for larger firms, the board is actively engaged in cybersecurity oversight — not merely informed after incidents occur.
+
+## What a Defensible Cybersecurity Governance Program Requires
+
+**Risk assessment with defined methodology.** An annual cybersecurity risk assessment using a recognized framework (NIST CSF, ISO 27001, or CIS Controls) with documented findings and remediation tracking. The assessment must be current — examiners will review the date and scope.
+
+**Technically enforced access controls.** MFA on all systems, including email and client portals. Quarterly access reviews with documented results. Privileged account management. Automated deprovisioning for terminated employees. These controls must be active and verifiable — not just described in a policy.
+
+**Incident response program with documented testing.** A written IR plan addressing the specific incident types relevant to the firm (ransomware, credential compromise, wire fraud, vendor breach) with annual tabletop exercise documentation and an escalation matrix that reaches senior management and the board where required.
+
+**Vendor cybersecurity due diligence.** A documented process for evaluating the cybersecurity posture of vendors with access to firm systems or client data, including contract provisions requiring breach notification, security standards, and audit rights.
+
+**Customer notification procedures.** Under the amended Reg S-P, firms must have documented procedures for identifying affected customers following a covered incident and notifying them within 30 days. This requires knowing what data each vendor and system holds about which customers — which requires a data inventory most firms have not built.
+
+**Board and senior management reporting.** Regular cybersecurity reporting to senior management with documented board oversight for firms subject to the 2023 disclosure rules.
+
+## The Enforcement Environment
+
+The SEC collected $8.2 billion in financial remedies in fiscal year 2024 — the highest in agency history. Cybersecurity-related enforcement actions included penalties against SolarWinds and its CISO for cybersecurity disclosure fraud, R.R. Donnelley for inadequate cybersecurity controls and incident disclosure, and multiple broker-dealers for Reg S-P violations related to customer data protection.
+
+The enforcement signal is clear: cybersecurity governance gaps that result in customer harm, inadequate disclosure, or demonstrable non-compliance with applicable rules will be pursued.
+
+Centience builds cybersecurity governance programs for SEC-regulated organizations on managed infrastructure. Technical controls are active and verifiable. Documentation is assembled in advance of examinations. When the examiner asks for evidence, it exists.
+
+[CTA_BOX]
+## Is your cybersecurity governance program examination-ready?
+
+Schedule your AI Governance Assessment — we evaluate cybersecurity governance alongside AI governance.
+
+[CTA_BUTTON:Book Your Assessment|/ai-governance-risk-assessment]
+[/CTA_BOX]
+    `,
+  },
+  {
+    id: 16,
+    slug: "cybersecurity-governance-finra-member-firms",
+    category: "Cybersecurity",
+    title: "Cybersecurity Governance for FINRA Member Firms: What the 2026 Examination Program Expects",
+    excerpt: "FINRA's 2026 Annual Regulatory Oversight Report outlines specific cybersecurity governance expectations for member firms. Here is a practitioner breakdown of what examiners look for and where most broker-dealers fall short.",
+    image: "/assets/blog/it-compliance-services-florida.svg",
+    author: "Orville Matias",
+    date: "April 2026",
+    metaTitle: "Cybersecurity Governance for FINRA Member Firms 2026 | Centience",
+    metaDescription: "FINRA's 2026 examination program includes specific cybersecurity governance expectations. Learn what broker-dealers must implement to satisfy examination requirements and avoid findings.",
+    content: `
+Cybersecurity has appeared in FINRA's Annual Regulatory Oversight Report every year since 2015. The 2026 report does not break that pattern — it expands expectations, adding AI-related cybersecurity risks and autonomous agent oversight to the existing framework.
+
+[STAT_CARDS]
+2015 | FINRA Cyber Priority | Every AROR since has included cybersecurity
+Rule 4511 | Books & Records | Log data is a regulatory obligation
+Rule 3110 | Supervision | All cybersecurity controls subject to oversight
+Annual | IR Plan Testing | FINRA expects documented tabletop results
+[/STAT_CARDS]
+
+For FINRA member firms, cybersecurity is not a technology department concern. It is a compliance and supervision obligation. This article covers what the 2026 AROR requires, what examination staff will review, and what a FINRA-compliant cybersecurity governance program looks like.
+
+## What the 2026 AROR Requires on Cybersecurity
+
+The 2026 FINRA AROR identifies the following cybersecurity governance expectations:
+
+**Identity and access management.** FINRA expects firms to enforce least-privilege access principles, require multi-factor authentication, and perform comprehensive access reviews covering both human and non-human accounts (service accounts, API keys, automated processes). This is not new guidance — it is a recurring AROR finding because most firms still have gaps.
+
+**Risk assessments.** Firms should regularly reassess their technology risk profile as the business and systems evolve. FINRA expects this to be a living process, not an annual checkbox. Significant technology changes — new AI tools, cloud migrations, new vendor relationships — should trigger interim risk assessments.
+
+**IT governance for AI and LLMs.** The 2026 AROR specifically calls out governance and model risk frameworks for AI and LLM development and use, with strong documentation and data management controls. Cybersecurity requirements for AI include data quality, integrity, retention, and security — reflecting that AI systems introduce cybersecurity risks distinct from traditional software.
+
+**Configuration management.** Firms must maintain an inventory of desktops, laptops, applications, and servers configured to firm standards. This is a foundational requirement that examination staff consistently find incomplete — particularly for remote endpoints and cloud-hosted applications.
+
+**Log management.** Capture and retain log data from relevant sources based on regulatory and business needs. The 2026 AROR specifies that log data is both a cybersecurity tool (for incident detection) and a regulatory obligation (for examination and books and records purposes).
+
+**IT resiliency.** Test both firm and vendor controls to confirm that critical systems can maintain acceptable service levels during disruptions. This includes documented business continuity and disaster recovery testing with results — not just a written plan.
+
+**Branch office procedures.** For firms with branch offices, limit branch-managed servers, confirm devices are fully inventoried, and ensure branch technology is under the same governance framework as the home office. Branch cybersecurity governance gaps are a consistent examination finding.
+
+**Data backups.** Regular encrypted, off-network backups with tested restoration capabilities. Examiners will ask when backups were last tested — not just whether they exist.
+
+## FINRA's Cybersecurity Enforcement Posture
+
+FINRA cybersecurity enforcement actions result from either examination findings or breach incidents that reveal pre-existing governance failures. Common enforcement patterns include:
+
+**Off-channel communications and recordkeeping.** While not exclusively a cybersecurity issue, the SEC and FINRA's enforcement focus on off-channel communications (WhatsApp, personal email, personal AI tools) reflects a broader concern about uncontrolled communications channels that create both compliance and cybersecurity risk. Firms with employees using personal devices for business communications without MDM enrollment and monitoring have both a recordkeeping problem and a cybersecurity problem.
+
+**Inadequate identity controls leading to customer account takeovers.** FINRA examination findings consistently cite inadequate identity verification, insufficient MFA enrollment for customer accounts, and weak internal access controls as factors in customer harm events that result in enforcement referrals.
+
+**Vendor incidents revealing inadequate due diligence.** When a vendor breach affects a FINRA member firm's customers, examiners review what due diligence the firm performed on the vendor's cybersecurity posture. Firms without documented vendor cybersecurity assessments face findings even when they were not the party that was breached.
+
+## The Specific Gaps Most FINRA Member Firms Have
+
+Based on FINRA AROR language and examination finding patterns, the most common cybersecurity governance gaps at member firms are:
+
+**Incomplete asset inventories.** Firms cannot manage cybersecurity risk for systems they do not know exist. Undocumented endpoints, cloud applications subscribed by individual employees, and shadow IT represent unmanaged attack surface. FINRA examination staff will ask for a current asset inventory.
+
+**MFA not fully deployed.** Most firms have MFA on email and VPN but have not extended it to internal applications, cloud storage, trading systems, and administrative portals. Examiners will ask specifically about MFA coverage — not just whether MFA policy exists.
+
+**No formal vendor cybersecurity due diligence process.** Vendor relationships that were established without cybersecurity assessment and that continue without ongoing monitoring. For firms using SaaS trading platforms, cloud CRM systems, or third-party compliance tools, the absence of vendor security documentation creates examination exposure.
+
+[CALLOUT:Warning]
+When a vendor breach affects a FINRA member firm's customers, examiners review what due diligence the firm performed on the vendor's cybersecurity posture. Firms without documented vendor cybersecurity assessments face findings even when they were not the party that was breached.
+[/CALLOUT]
+
+**Access reviews not performed or not documented.** Quarterly access reviews are a standard expectation but are frequently not documented. Former employees with active accounts, over-privileged service accounts, and dormant user accounts with system access are consistent examination findings.
+
+**IR plan not tested.** A written incident response plan with no evidence of testing is a documentation exercise, not a governance control. FINRA expects documented tabletop exercise results or simulation testing on at least an annual basis.
+
+## Building a FINRA-Compliant Cybersecurity Governance Program
+
+[TIMELINE]
+Asset Inventory | Document all hardware, software, cloud apps, and non-human accounts. Maintain continuously, review quarterly.
+MFA Deployment | Enforce MFA on all systems — email, VPN, trading platforms, CRM, compliance tools, admin portals. No undocumented exceptions.
+Access Reviews | Quarterly reviews with documentation. Automated deprovisioning tied to HR termination workflows.
+Risk Assessment | Annual assessment using a recognized framework with findings tracked to remediation for examination.
+Vendor Due Diligence | Documented evaluation process for all vendors with system access. Include contractual security provisions and ongoing monitoring.
+IR Plan Testing | Annual tabletop exercise documentation, escalation matrix, and playbooks for ransomware, credential compromise, account takeover, and vendor breach.
+Log Management | Security event logs from all critical systems to a centralized platform with alert rules and documented review.
+[/TIMELINE]
+
+The gap between having these components documented and having them technically enforced is the operational gap that creates the most examination and breach exposure. Policies describe intent. Infrastructure determines reality.
+
+**Log management and monitoring** — security event logs from all critical systems forwarded to a centralized platform with alert rules and documented review process.
+
+The gap between having these components documented and having them technically enforced is the operational gap that creates the most examination and breach exposure. Policies describe intent. Infrastructure determines reality.
+
+[CTA_BOX]
+## Is your FINRA member firm's cybersecurity governance examination-ready?
+
+Schedule your AI Governance Assessment. We evaluate cybersecurity and AI governance together.
+
+[CTA_BUTTON:Book Your Assessment|/ai-governance-risk-assessment]
+[/CTA_BOX]
+    `,
+  },
+  {
+    id: 17,
+    slug: "sec-ai-washing-enforcement-actions-what-investment-firms-must-know",
+    category: "AI Governance",
+    title: "SEC AI Washing Enforcement: Every Action, Every Penalty, and What Investment Firms Must Do Now",
+    excerpt: "The SEC has brought multiple AI washing enforcement actions since 2024, with penalties ranging from $175,000 to over $1.8 million. Here is a complete breakdown of every action, the specific violations cited, and what registered firms must do to avoid the same exposure.",
+    image: "/assets/blog/nydfs-part-500-compliance.jpg",
+    author: "Orville Matias",
+    date: "April 2026",
+    metaTitle: "SEC AI Washing Enforcement Actions | Complete Guide for Investment Firms",
+    metaDescription: "Complete breakdown of every SEC AI washing enforcement action, penalties assessed, and violations cited. Learn what registered investment advisers and broker-dealers must do to avoid AI washing exposure.",
+    content: `
+The SEC has made AI washing one of its highest-profile enforcement priorities. Between February 2024 and April 2026, the Commission brought enforcement actions against multiple investment advisers and companies for making false or misleading statements about their use of artificial intelligence. The penalties have ranged from $175,000 to over $1.8 million per action.
+
+[STAT_CARDS]
+$225K | Delphia | SEC AI washing penalty, March 2024
+$175K | Global Predictions | SEC AI washing penalty, March 2024
+$1.8M+ | Rockwell Capital | Disgorgement + civil penalty
+$42M | Nate Inc. | Capital raised on fabricated AI claims
+[/STAT_CARDS]
+
+Understanding exactly what triggered each enforcement action — and the specific regulatory provisions cited — is the most practical guide to what registered investment advisers and broker-dealers must document and control.
+
+## The Enforcement Actions: A Complete Record
+
+### Delphia (USA) Inc. — March 18, 2024
+**Penalty:** $225,000 civil penalty plus censure and cease-and-desist order
+
+**What Delphia claimed:** Delphia marketed itself to retail advisory clients as using AI and machine learning to analyze customer transaction data and social media activity to make investment decisions. Its marketing stated the firm used client data to "predict which companies and trends are about to make it big" through AI.
+
+**What the SEC found:** Delphia was not using AI in the manner described. Its actual investment process did not use the client data or AI capabilities represented in its marketing materials. The statements were false and misleading.
+
+**Violations cited:** Section 206(2) and Section 206(4) of the Investment Advisers Act (fraud); Rule 206(4)-1 (the Marketing Rule) for false and misleading statements in advertisements.
+
+**Key takeaway:** The SEC's first explicit AI enforcement action established that AI capability claims in marketing materials — including website copy, pitch decks, and client presentations — must be substantiated. The fact that Delphia did not intend to defraud clients was irrelevant. Negligent misrepresentation under Section 206(2) does not require intent.
+
+[CALLOUT:Penalty]
+Section 206(2) of the Advisers Act does not require intent to defraud. Negligent misrepresentation is sufficient for enforcement. Every AI claim in your marketing materials is a potential Section 206(2) exposure if it cannot be substantiated.
+[/CALLOUT]
+
+---
+
+### Global Predictions, Inc. — March 18, 2024
+**Penalty:** $175,000 civil penalty plus censure and cease-and-desist order
+
+**What Global Predictions claimed:** The firm marketed itself as the "first regulated AI financial advisor" and claimed to provide "expert AI-driven forecasts." Its marketing included claims about AI providing "accurate" predictions.
+
+**What the SEC found:** The "first regulated AI financial advisor" claim was unsubstantiated. The AI forecast accuracy claims were misleading. The firm's disclosures did not adequately address the limitations of its AI models.
+
+**Violations cited:** Section 206(2) and Section 206(4) of the Advisers Act; Rule 206(4)-1.
+
+**Key takeaway:** Superlative AI claims ("first," "most advanced," "most accurate") require the same substantiation as any other advertising claim under the Marketing Rule. The absence of a competing firm with the same regulatory status does not make "first regulated AI advisor" accurate — the claim was found misleading in context.
+
+---
+
+### Rockwell Capital Management — February 2, 2024
+**Penalty:** $1,602,089 in disgorgement and prejudgment interest (Rockwell Capital); $223,229 civil penalty (Brian Sewell, founder)
+
+**What Rockwell claimed:** Rockwell raised $1.2 million for a cryptocurrency trading fund, representing to investors that the fund employed AI and machine learning technology for trading.
+
+**What the SEC found:** The AI and machine learning technology did not exist. The fund was fraudulent. Sewell made false representations to investors about AI capabilities that were never implemented.
+
+**Violations cited:** Securities Act fraud; Exchange Act fraud. This was a criminal fraud case, not merely a Marketing Rule violation.
+
+**Key takeaway:** The most severe AI washing cases involve complete fabrication of AI capabilities to raise investor capital. These cases receive criminal referrals and carry disgorgement obligations that dwarf civil penalties.
+
+---
+
+### Presto Automation — January 14, 2025
+**Penalty:** $100,000 civil penalty
+
+**What Presto claimed:** Presto marketed its "Presto Voice" product as an AI-powered drive-through ordering system. Public statements represented the system as highly automated with AI handling customer orders.
+
+**What the SEC found:** Presto made misleading public statements about Presto Voice's AI capabilities and the degree of automation in its operations. The reality of the product's AI capabilities did not match the public representations.
+
+**Violations cited:** Securities Exchange Act Section 10(b) and Rule 10b-5 (antifraud provisions for public company disclosures).
+
+**Key takeaway:** AI washing exposure extends beyond investment advisers to any public company making material statements about AI capabilities. For public companies, AI capability claims in earnings calls, press releases, and SEC filings are subject to the full securities antifraud framework.
+
+---
+
+### Nathan Saniger / Nate Inc. — April 2025
+**Status:** Complaint filed; criminal charges by DOJ filed simultaneously
+
+**What Nate claimed:** Saniger raised more than $42 million from investors by claiming Nate's shopping app used AI to autonomously complete online purchases. He represented automation rates above 90% to investors.
+
+**What the SEC found:** Nearly all orders were manually completed by human workers in the Philippines and elsewhere. The claimed AI automation was essentially nonexistent. Saniger fabricated success metrics in investor communications.
+
+**Violations cited:** Securities Act and Exchange Act antifraud provisions; wire fraud (DOJ charges).
+
+**Key takeaway:** The scale of fundraising in AI washing cases has attracted parallel DOJ prosecution. AI washing that constitutes investor fraud is not exclusively an SEC matter — it can result in criminal charges independent of civil penalties.
+
+---
+
+## The Common Pattern Across All Actions
+
+Every SEC AI washing enforcement action shares a common structure:
+
+1. A firm makes specific, affirmative representations about its use of AI in marketing materials, public disclosures, or investor communications
+2. The actual AI capabilities are either nonexistent, materially different from what was represented, or cannot be substantiated
+3. The misrepresentation influences investor decisions, client relationships, or capital raising
+4. Existing antifraud and marketing rule provisions apply — no AI-specific regulation is needed
+
+The SEC's enforcement posture is settled: AI capability claims are treated identically to any other material representation about an investment adviser's business, investment process, or product capabilities.
+
+## What Registered Firms Must Do Right Now
+
+[TIMELINE]
+Audit Every AI Claim | Review your website, ADV Part 2, pitch decks, client letters, and social media for any AI, ML, or algorithmic capability reference.
+Build Substantiation Files | For each claim you keep: document what the AI does, what data it uses, its limitations, how it was tested, and who validated it.
+Review Disclosures for Accuracy | Check for misleading implications — not just outright falsehoods. Global Predictions' "first regulated AI advisor" claim was misleading in context.
+Update Marketing Review Workflow | AI-generated and AI-related content must go through pre-approval with a substantiation check specific to AI claims.
+Train CCO and Marketing Team | Staff producing AI content must understand Marketing Rule substantiation requirements apply to AI capability claims identically to performance claims.
+Document the Review Process | Even for claims you remove — documenting your review process demonstrates compliance culture that mitigates penalty exposure.
+[/TIMELINE] Review your website, ADV Part 2, pitch decks, client letters, and social media for any reference to AI, machine learning, algorithmic processes, or "intelligent" capabilities. Every claim must have a contemporaneous substantiation file that documents the factual basis.
+
+**Build substantiation files.** For each AI capability claim you intend to keep, document: what the AI actually does, what data it uses, what its limitations are, how it was tested, and who internally validated the capability description. This documentation is your defense in an examination or enforcement inquiry.
+
+**Review disclosures for accuracy.** Global Predictions' "first regulated AI advisor" claim was misleading not because it was factually false in isolation but because it created a misleading impression in context. Review AI-related disclosures for misleading implications, not just outright falsehoods.
+
+**Update your Marketing Rule review workflow.** Any AI-generated or AI-related marketing content should go through the same pre-approval workflow as all other advertising. That workflow must include a substantiation check specific to AI claims.
+
+**Train your CCO and marketing team.** The Marketing Rule applies to all statements in all media. Staff producing AI-related content need to understand that the same substantiation requirements that apply to performance claims apply to AI capability claims.
+
+**Document the review.** In every enforcement action, the absence of a documented review process was a factor in the examination finding. Documenting your substantiation process — even for claims you ultimately remove — demonstrates a compliance culture that mitigates penalty exposure.
+
+[CTA_BOX]
+## Does your firm have an AI governance program that protects against enforcement exposure?
+
+Schedule your AI Governance Assessment. We identify gaps before the SEC does.
+
+[CTA_BUTTON:Book Your AI Governance Assessment|/ai-governance-risk-assessment]
+[/CTA_BOX]
+    `,
+  },
 ];
 
 export function getSrc(image: any): string {
