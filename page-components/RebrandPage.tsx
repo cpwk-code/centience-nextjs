@@ -29,7 +29,7 @@ const RebrandPage = () => {
     }
     meta.setAttribute(
       "content",
-      "Compuwork USA has rebranded as Centience. Same team, same services, full focus on AI and Technology Governance for regulated industries."
+      "Compuwork has rebranded as Centience. Same team, same services, full focus on AI and Technology Governance for regulated industries."
     );
     return () => {
       document.title = prevTitle;
@@ -56,7 +56,7 @@ const RebrandPage = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6 font-['Plus_Jakarta_Sans'] leading-tight"
           >
-            Compuwork USA is now Centience.
+            Compuwork is now Centience.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -87,7 +87,7 @@ const RebrandPage = () => {
                   A Name Built for What We Do
                 </h2>
                 <p className="text-muted-foreground font-['DM_Sans'] leading-relaxed">
-                  Compuwork USA has been renamed Centience. Our domain is now centience.ai. All prior links and materials referencing Compuwork or compuwork.ai will continue to redirect here.
+                  Compuwork has been renamed Centience. Our domain is now centience.ai. All prior links and materials referencing Compuwork or compuwork.ai will continue to redirect here.
                 </p>
               </CardContent>
             </Card>
@@ -191,7 +191,7 @@ const RebrandPage = () => {
       {/* Footer Note */}
       <section className="py-6 bg-primary border-t border-primary-foreground/10">
         <p className="text-center text-primary-foreground/50 text-sm font-['DM_Sans']">
-          © 2026 Centience (formerly Compuwork USA Inc.) · centience.ai
+          © 2026 Centience · centience.ai
         </p>
       </section>
     </Layout>
