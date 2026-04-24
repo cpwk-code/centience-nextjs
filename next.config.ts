@@ -1,5 +1,5 @@
-// cache-bust: 2026-04-22 04:10:00 UTC
-// build-cache-bust: 1776832200
+// cache-bust: 2026-04-23 18:00:00 UTC
+// build-cache-bust: 1776921600
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {

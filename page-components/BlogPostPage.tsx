@@ -36,9 +36,12 @@ const BlogPostPage = () => {
   }
 
   // Get related posts (3 most recent, excluding current post)
-  const relatedPosts = blogPosts
-    .filter((p) => p.id !== post.id)
-    .slice(0, 3);
+  // Related posts: Centience posts only (id >= 11), same category first
+  const centiencePosts = blogPosts.filter((p) => p.id >= 11 && p.id !== post.id);
+  const relatedPosts = [
+    ...centiencePosts.filter((p) => p.category === post.category),
+    ...centiencePosts.filter((p) => p.category !== post.category),
+  ].slice(0, 3);
 
   // Extract key topics from title and excerpt for KeyFacts
   const extractKeyTopics = () => {
