@@ -48,5 +48,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function Page({ params }: Props) {
   const post = blogPosts.find((p) => p.slug === params.slug);
   if (!post) notFound();
-  return <BlogPostPage />;
+  return <BlogPostPage slug={params.slug} />;
 }

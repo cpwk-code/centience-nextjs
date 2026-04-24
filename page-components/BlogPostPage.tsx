@@ -14,9 +14,9 @@ import KeyFacts from "@/components/KeyFacts";
 import BlogFAQAccordion from "@/components/BlogFAQAccordion";
 import BlogAuthorCard from "@/components/BlogAuthorCard";
 
-const BlogPostPage = () => {
+const BlogPostPage = ({ slug: slugProp }: { slug?: string }) => {
   const params = useParams();
-  const slug = params?.slug as string;
+  const slug = slugProp || (params?.slug as string);
   const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
