@@ -47,6 +47,7 @@ const navItems: NavItem[] = [
     children: [
       { label: "Governance Guides", href: "/resources/guides" },
       { label: "Industry Assessments", href: "/resources/assessments" },
+      { label: "Insights & Articles", href: "/insights/articles" },
       { label: "Newsletter", href: "/resources/newsletter" },
     ],
   },
