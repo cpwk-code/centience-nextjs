@@ -34,11 +34,11 @@ const InsightsArticlesPage = () => {
             <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-semibold tracking-wide mb-6 uppercase">
               Insights
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-warm-white leading-tight mb-6">
               AI Governance &{" "}
               <span className="text-gradient-gold">Cybersecurity Articles</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-warm-white/70 max-w-2xl mx-auto leading-relaxed">
               Practitioner-level analysis on AI governance, cybersecurity, and regulatory compliance for SEC, FINRA, and HIPAA regulated organizations.
             </p>
           </motion.div>
