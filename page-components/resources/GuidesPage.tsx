@@ -1,9 +1,8 @@
 "use client";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import Link from 'next/link';
 import { motion } from "framer-motion";
-import { ArrowRight, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { useState } from "react";
 import { GUIDES_LIST } from "@/data/guideContent";
 import LeadCaptureModal, { hasLeadCookie } from "@/components/LeadCaptureModal";
@@ -81,19 +80,13 @@ const GuidesPage = () => {
                 )}
 
                 <div className="flex gap-2 mt-auto">
-                  <Button variant="outline" size="sm" asChild className="flex-1">
-                    <Link href={`/resources/guides/${guide.slug}`}>
-                      Download Guide <ArrowRight size={14} className="ml-2" />
-                    </Link>
-                  </Button>
                   <Button
-                    variant="ghost"
+                    variant="outline"
                     size="sm"
                     onClick={() => handleDownload(guide)}
-                    className="px-3"
-                    title="Download PDF"
+                    className="flex-1"
                   >
-                    <Download size={14} />
+                    Download Guide <Download size={14} className="ml-2" />
                   </Button>
                 </div>
               </motion.div>
