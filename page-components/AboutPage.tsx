@@ -249,7 +249,7 @@ const AboutPage = () => (
           <div className="lg:col-span-1">
             <div className="rounded-xl overflow-hidden bg-muted aspect-[3/4] flex items-center justify-center mb-4">
               <img
-                src={orvillePhoto}
+                src={orvillePhoto.src}
                 alt="Orville Matias — Founder & CEO, Centience"
                 className="w-full h-full object-cover"
               />
