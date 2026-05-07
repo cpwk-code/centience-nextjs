@@ -95,6 +95,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#0f172a" />
+        <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
         <Suspense fallback={null}><GoogleAnalytics /></Suspense>
