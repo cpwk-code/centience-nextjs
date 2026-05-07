@@ -134,7 +134,7 @@ const BlogPostPage = ({ slug: slugProp }: { slug?: string } = {}) => {
         services={extractKeyTopics()}
         contactInfo={{
           phone: "(877) 945-7177",
-          email: "info@centience.ai",
+          email: "hello@centience.ai",
           website: `https://centience.ai/insights/${post.slug}`,
         }}
       />

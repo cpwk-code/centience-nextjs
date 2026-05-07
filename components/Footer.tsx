@@ -50,8 +50,8 @@ const Footer = () => {
               Technology governance for regulated organizations — built on managed infrastructure, enforced through continuous oversight.
             </p>
             <div className="space-y-3 mb-6">
-              <a href="mailto:info@centience.ai" className="flex items-center gap-2 text-sm text-warm-white/50 hover:text-gold transition-colors">
-                <Mail size={14} /> info@centience.ai
+              <a href="mailto:hello@centience.ai" className="flex items-center gap-2 text-sm text-warm-white/50 hover:text-gold transition-colors">
+                <Mail size={14} /> hello@centience.ai
               </a>
               <a href="tel:+18779457177" className="flex items-center gap-2 text-sm text-warm-white/50 hover:text-gold transition-colors">
                 <Phone size={14} /> (877) 945-7177

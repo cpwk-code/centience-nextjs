@@ -189,7 +189,7 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
                   <p className="text-sm text-muted-foreground flex items-center gap-2">
                     <Mail size={14} className="text-accent" />
                     Or email:{" "}
-                    <a href="mailto:info@centience.ai" className="text-accent font-semibold">info@centience.ai</a>
+                    <a href="mailto:hello@centience.ai" className="text-accent font-semibold">hello@centience.ai</a>
                   </p>
                 </div>
 

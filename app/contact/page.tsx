@@ -127,7 +127,7 @@ export default function Page() {
       "name": "How can I contact Centience for IT support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can contact Centience via email at info@centience.ai or by phone at 877.945.7177. Our support team is available 24/7."
+        "text": "You can contact Centience via email at hello@centience.ai or by phone at 877.945.7177. Our support team is available 24/7."
       }
     },
     {
@@ -194,7 +194,7 @@ export default function Page() {
       },
       {
             "label": "Contact Email",
-            "value": "info@centience.ai"
+            "value": "hello@centience.ai"
       }
 ]}
         services={[

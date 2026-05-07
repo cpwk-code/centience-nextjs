@@ -137,12 +137,12 @@ const ContactPage = () => {
       <section className="py-8 bg-muted border-b border-border">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center gap-8 lg:gap-16">
-            <motion.a whileHover={{ scale: 1.05 }} href="mailto:info@centience.ai"
+            <motion.a whileHover={{ scale: 1.05 }} href="mailto:hello@centience.ai"
               className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group">
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                 <Mail className="w-5 h-5 text-accent" />
               </div>
-              <span className="font-medium">info@centience.ai</span>
+              <span className="font-medium">hello@centience.ai</span>
             </motion.a>
             <motion.a whileHover={{ scale: 1.05 }} href="tel:+18779457177"
               className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group">

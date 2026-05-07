@@ -363,8 +363,8 @@ const LeadCaptureModal = ({
                     (877) 945-7177
                   </a>
                   {" · "}
-                  <a href="mailto:info@centience.ai" className="text-accent font-semibold">
-                    info@centience.ai
+                  <a href="mailto:hello@centience.ai" className="text-accent font-semibold">
+                    hello@centience.ai
                   </a>
                 </p>
               </form>

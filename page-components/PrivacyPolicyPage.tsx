@@ -142,7 +142,7 @@ const PrivacyPolicyPage = () => {
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-4">
               To exercise any of these rights, please contact us at{" "}
-              <a href="mailto:info@centience.ai" className="text-accent hover:underline">info@centience.ai</a>.
+              <a href="mailto:hello@centience.ai" className="text-accent hover:underline">hello@centience.ai</a>.
             </p>
           </div>
 
@@ -164,7 +164,7 @@ const PrivacyPolicyPage = () => {
             <h2 className="text-2xl font-bold text-foreground mb-4">Making a Complaint</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               If you are not satisfied with how we handle your personal information or have concerns about our privacy practices, please contact us at{" "}
-              <a href="mailto:info@centience.ai" className="text-accent hover:underline">info@centience.ai</a>{" "}
+              <a href="mailto:hello@centience.ai" className="text-accent hover:underline">hello@centience.ai</a>{" "}
               with the details explaining your concerns.
             </p>
             <p className="text-muted-foreground leading-relaxed">
@@ -186,7 +186,7 @@ const PrivacyPolicyPage = () => {
             </p>
             <div className="space-y-2 text-muted-foreground">
               <p><strong>Email:</strong>{" "}
-                <a href="mailto:info@centience.ai" className="text-accent hover:underline">info@centience.ai</a>
+                <a href="mailto:hello@centience.ai" className="text-accent hover:underline">hello@centience.ai</a>
               </p>
               <p><strong>Phone:</strong>{" "}
                 <a href="tel:+18779457177" className="text-accent hover:underline">(877) 945-7177</a>

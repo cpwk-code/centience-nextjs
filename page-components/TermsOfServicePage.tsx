@@ -171,7 +171,7 @@ const TermsOfServicePage = () => {
             <div className="space-y-2 text-muted-foreground">
               <p><strong>Centience</strong></p>
               <p><strong>Email:</strong>{" "}
-                <a href="mailto:info@centience.ai" className="text-accent hover:underline">info@centience.ai</a>
+                <a href="mailto:hello@centience.ai" className="text-accent hover:underline">hello@centience.ai</a>
               </p>
               <p><strong>Phone:</strong>{" "}
                 <a href="tel:+18779457177" className="text-accent hover:underline">(877) 945-7177</a>
