@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
       try {
         const resend = new Resend(resendKey);
         await resend.emails.send({
-          from: 'Centience Leads <notifications@centience.ai>',
+          from: 'Centience Leads <notifications@website.cpwk.com>',
           to: 'hello@centience.ai',
           subject: `New Guide Download: ${guideTitle || guideSlug || 'Governance Guide'} — ${fullName}`,
           html: `
