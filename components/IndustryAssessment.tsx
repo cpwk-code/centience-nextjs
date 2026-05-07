@@ -60,9 +60,28 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
     // If not gated, assessment is already visible
   };
 
-  const handleGateSuccess = (data: LeadFormData) => {
+  const handleGateSuccess = async (data: LeadFormData) => {
     setGated(false);
     setLeadName(data.firstName);
+    // Submit lead data to backend
+    try {
+      await fetch("/api/assessment-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          company: data.company,
+          jobTitle: data.jobTitle,
+          industry: data.industry,
+          phone: data.phone,
+          assessmentType: headline,
+        }),
+      });
+    } catch (err) {
+      console.error("Assessment lead submission error (non-fatal):", err);
+    }
   };
 
   const allAnswered = answers.every((a) => a !== null);

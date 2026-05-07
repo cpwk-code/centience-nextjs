@@ -2,7 +2,6 @@
 import { useState, useRef } from "react";
 import { toast } from "sonner";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import { supabase } from "@/integrations/supabase/client";
 import { useHCaptchaSiteKey } from "@/hooks/useHCaptchaSiteKey";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -52,25 +51,24 @@ const NativeContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.functions.invoke("submit-contact", {
-        body: {
-          fullName: formData.fullName,
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.fullName,
           email: formData.email,
           phone: formData.phone,
           company: formData.company,
-          reason: formData.reason,
+          service: formData.reason,
           message: formData.message,
-          website: honeypot,
-          formStartTime,
-          submissionTime: Date.now(),
-          captchaToken,
           referringPage: window.location.pathname,
-        },
+        }),
       });
+      const data = await res.json();
 
-      if (error) {
-        console.error("Submission error:", error);
-        toast.error("Failed to send message. Please try again.");
+      if (!res.ok) {
+        console.error("Submission error:", data.error);
+        toast.error(data.error || "Failed to send message. Please try again.");
         captchaRef.current?.resetCaptcha();
         setCaptchaToken(null);
         setIsSubmitting(false);

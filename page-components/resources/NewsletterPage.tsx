@@ -13,10 +13,39 @@ import {
 import { Mail } from "lucide-react";
 import { useState } from "react";
 import HCaptcha from "@/components/HCaptcha";
+import { toast } from "sonner";
 
 const NewsletterPage = () => {
   const [submitted, setSubmitted] = useState(false);
   const [captchaToken, setCaptchaToken] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", industry: "" });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!captchaToken) {
+      toast.error("Please complete the captcha verification.");
+      return;
+    }
+    setLoading(true);
+    try {
+      const res = await fetch("/api/newsletter-signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        toast.error(data.error || "Failed to subscribe. Please try again.");
+        return;
+      }
+      setSubmitted(true);
+    } catch {
+      toast.error("Failed to subscribe. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <Layout>
@@ -47,32 +76,42 @@ const NewsletterPage = () => {
               <p className="text-sm text-muted-foreground">We'll send quarterly governance updates. Never more.</p>
             </div>
           ) : (
-            <form
-              onSubmit={(e) => { e.preventDefault(); if (!captchaToken) return; setSubmitted(true); }}
-              className="space-y-4 text-left"
-            >
+            <form onSubmit={handleSubmit} className="space-y-4 text-left">
               <div>
                 <Label htmlFor="nl-name">Name</Label>
-                <Input id="nl-name" required placeholder="Full name" />
+                <Input
+                  id="nl-name"
+                  required
+                  placeholder="Full name"
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                />
               </div>
               <div>
                 <Label htmlFor="nl-email">Email</Label>
-                <Input id="nl-email" type="email" required placeholder="Work email" />
+                <Input
+                  id="nl-email"
+                  type="email"
+                  required
+                  placeholder="Work email"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                />
               </div>
               <div>
                 <Label>Industry</Label>
-                <Select>
+                <Select onValueChange={(val) => setForm({ ...form, industry: val })}>
                   <SelectTrigger>
                     <SelectValue placeholder="Select industry" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="financial">Financial Services</SelectItem>
-                    <SelectItem value="healthcare">Healthcare</SelectItem>
-                    <SelectItem value="legal">Law Firms</SelectItem>
-                    <SelectItem value="pe">Private Equity</SelectItem>
-                    <SelectItem value="accounting">Accounting & CPA</SelectItem>
-                    <SelectItem value="nonprofit">Non-Profit</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
+                    <SelectItem value="Financial Services">Financial Services</SelectItem>
+                    <SelectItem value="Healthcare">Healthcare</SelectItem>
+                    <SelectItem value="Law Firms">Law Firms</SelectItem>
+                    <SelectItem value="Private Equity">Private Equity</SelectItem>
+                    <SelectItem value="Accounting & CPA">Accounting & CPA</SelectItem>
+                    <SelectItem value="Non-Profit">Non-Profit</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -84,8 +123,14 @@ const NewsletterPage = () => {
                 />
               </div>
 
-              <Button variant="cta" size="lg" type="submit" className="w-full" disabled={!captchaToken}>
-                Send Me Governance Updates
+              <Button
+                variant="cta"
+                size="lg"
+                type="submit"
+                className="w-full"
+                disabled={!captchaToken || loading}
+              >
+                {loading ? "Subscribing..." : "Send Me Governance Updates"}
               </Button>
               <p className="text-xs text-muted-foreground text-center">
                 We send quarterly updates. Never more.
