@@ -42,6 +42,8 @@ interface LeadCaptureModalProps {
   title: string;
   /** For guide gates: the PDF URL to trigger download */
   guideHref?: string;
+  /** For guide gates: the slug used to identify which guide was downloaded */
+  guideSlug?: string;
   /** For assessment gates: callback after form submit */
   onSuccess?: (data: LeadFormData) => void;
 }
@@ -64,6 +66,7 @@ const LeadCaptureModal = ({
   type,
   title,
   guideHref,
+  guideSlug,
   onSuccess,
 }: LeadCaptureModalProps) => {
   const [form, setForm] = useState<LeadFormData>({
@@ -103,40 +106,36 @@ const LeadCaptureModal = ({
     !!captchaToken &&
     (isGuide || (form.orgSize && form.regulatoryFramework));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!requiredFilled) return;
     setLoading(true);
-
-    // Store lead data in localStorage for now (replace with DB later)
-    const leads = JSON.parse(localStorage.getItem("centience_leads") || "[]");
-    leads.push({
-      ...form,
-      type,
-      title,
-      timestamp: new Date().toISOString(),
-      sourceUrl: window.location.href,
-    });
-    localStorage.setItem("centience_leads", JSON.stringify(leads));
-
+    try {
+      await fetch('/api/guide-leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...form,
+          guideTitle: title,
+          guideSlug: guideSlug || null,
+          sourceUrl: window.location.href,
+        }),
+      });
+    } catch (err) {
+      console.error('Lead submission error (non-fatal):', err);
+    }
     setCookie(COOKIE_NAME, "1", COOKIE_DAYS);
-
-    setTimeout(() => {
-      setLoading(false);
-      setSuccess(true);
-
-      if (isGuide && guideHref) {
-        const a = document.createElement("a");
-        a.href = guideHref;
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        a.click();
-      }
-
-      onSuccess?.(form);
-
-      setTimeout(() => onClose(), 3000);
-    }, 1200);
+    setLoading(false);
+    setSuccess(true);
+    if (isGuide && guideHref) {
+      const a = document.createElement("a");
+      a.href = guideHref;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.click();
+    }
+    onSuccess?.(form);
+    setTimeout(() => onClose(), 3000);
   };
 
   if (!open) return null;

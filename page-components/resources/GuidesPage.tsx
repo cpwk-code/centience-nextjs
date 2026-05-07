@@ -28,6 +28,7 @@ const GuidesPage = () => {
         type="guide"
         title={selectedGuide ? `${selectedGuide.title} — Download Now` : ""}
         guideHref={selectedGuide?.file}
+        guideSlug={selectedGuide?.slug}
       />
 
       {/* Hero */}
