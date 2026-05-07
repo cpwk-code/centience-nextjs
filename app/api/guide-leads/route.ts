@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
     const supabase = getSupabase();
     if (supabase) {
       try {
-        await supabase.from('guide_leads').insert({
+        const { error: dbError } = await supabase.from('guide_leads').insert({
           first_name: firstName,
           last_name: lastName,
           full_name: fullName,
@@ -41,6 +41,7 @@ export async function POST(req: NextRequest) {
           guide_slug: guideSlug || null,
           created_at: submittedAt,
         });
+        if (dbError) console.error('Supabase insert error:', dbError.message);
       } catch (dbErr) {
         console.error('Supabase insert error (non-fatal):', dbErr);
       }
@@ -53,7 +54,7 @@ export async function POST(req: NextRequest) {
         const resend = new Resend(resendKey);
         await resend.emails.send({
           from: 'Centience Leads <notifications@centience.ai>',
-          to: 'orvillem@centience.ai',
+          to: 'hello@centience.ai',
           subject: `New Guide Download: ${guideTitle || guideSlug || 'Governance Guide'} — ${fullName}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; background: #f9f9f9; border-radius: 8px;">
@@ -76,7 +77,7 @@ export async function POST(req: NextRequest) {
                   <a href="mailto:${email}?subject=Re: ${guideTitle || 'Governance Guide'} Download" style="display: inline-block; background: #e8a820; color: #0f1f3d; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px;">Reply to ${firstName}</a>
                 </div>
               </div>
-              <p style="color: #999; font-size: 11px; text-align: center; margin-top: 16px;">Centience · centience.ai · orvillem@centience.ai</p>
+              <p style="color: #999; font-size: 11px; text-align: center; margin-top: 16px;">Centience · centience.ai</p>
             </div>
           `,
         });

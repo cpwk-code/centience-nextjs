@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     const supabase = getSupabase();
     if (supabase) {
       try {
-        await supabase.from('assessment_leads').insert({
+        const { error: dbError } = await supabase.from('assessment_leads').insert({
           first_name: firstName,
           last_name: lastName,
           full_name: fullName,
@@ -39,6 +39,7 @@ export async function POST(req: NextRequest) {
           assessment_type: assessmentType || null,
           created_at: submittedAt,
         });
+        if (dbError) console.error('Supabase insert error:', dbError.message);
       } catch (dbErr) {
         console.error('Supabase insert error (non-fatal):', dbErr);
       }
@@ -51,7 +52,7 @@ export async function POST(req: NextRequest) {
         const resend = new Resend(resendKey);
         await resend.emails.send({
           from: 'Centience <notifications@centience.ai>',
-          to: 'orvillem@centience.ai',
+          to: 'hello@centience.ai',
           subject: `New Assessment Lead: ${fullName} — ${assessmentType || industry}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; background: #f9f9f9; border-radius: 8px;">

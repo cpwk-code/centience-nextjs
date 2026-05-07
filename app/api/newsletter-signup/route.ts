@@ -26,12 +26,13 @@ export async function POST(req: NextRequest) {
     const supabase = getSupabase();
     if (supabase) {
       try {
-        await supabase.from('newsletter_subscribers').insert({
+        const { error: dbError } = await supabase.from('newsletter_subscribers').insert({
           name,
           email,
           industry: industry || null,
           created_at: submittedAt,
         });
+        if (dbError) console.error('Supabase insert error:', dbError.message);
       } catch (dbErr) {
         console.error('Supabase insert error (non-fatal):', dbErr);
       }
@@ -44,7 +45,7 @@ export async function POST(req: NextRequest) {
         const resend = new Resend(resendKey);
         await resend.emails.send({
           from: 'Centience <notifications@centience.ai>',
-          to: 'orvillem@centience.ai',
+          to: 'hello@centience.ai',
           subject: `New Newsletter Subscriber: ${name}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; background: #f9f9f9; border-radius: 8px;">
