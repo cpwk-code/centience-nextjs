@@ -4582,6 +4582,9 @@ Centience delivers a Reg S-P readiness assessment and program build for smaller 
     title: "AI Governance Under HIPAA: What Regulated Healthcare Organizations Must Do Now",
     excerpt: "HIPAA's Privacy and Security Rules apply to AI tools handling protected health information. Here is what a defensible AI governance framework looks like for healthcare organizations operating under federal oversight.",
     image: "/assets/blog/centience-ai-governance-hipaa.svg",
+    author: "Orville Matias",
+    date: "March 2026",
+    metaTitle: "AI Governance Framework for HIPAA Compliance | Centience",
     metaDescription: "Learn how to build an AI governance framework that satisfies HIPAA Privacy and Security Rule requirements. Practical steps for healthcare organizations deploying AI tools.",
     content: `
 AI tools are now embedded in clinical documentation, revenue cycle management, patient scheduling, and internal communications at healthcare organizations across the country. Most were deployed without a governance framework. That is the problem.

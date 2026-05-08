@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { blogPosts } from '@/data/blogPosts';
-import BlogPostPage from '@/page-components/BlogPostPage';
+import dynamic from 'next/dynamic';
 
-// Force dynamic rendering — BlogPostPage is a client component using useParams()
-export const dynamic = 'force-dynamic';
+// Render BlogPostPage client-only — it uses useParams() and cannot run server-side
+const BlogPostPage = dynamic(() => import('@/page-components/BlogPostPage'), { ssr: false });
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug && p.id >= 11);
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default function Page({ params }: { params: { slug: string } }) {
   const post = blogPosts.find((p) => p.slug === params.slug && p.id >= 11);
 
-  const articleJsonLd = post ? {
+  const articleJsonLd = post ? JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.metaTitle || post.title,
@@ -51,9 +51,9 @@ export default function Page({ params }: { params: { slug: string } }) {
     url: `https://centience.ai/insights/${post.slug}`,
     mainEntityOfPage: { '@type': 'WebPage', '@id': `https://centience.ai/insights/${post.slug}` },
     image: `https://centience.ai${typeof post.image === 'string' ? post.image : (post.image as any).src}`,
-  } : null;
+  }) : null;
 
-  const breadcrumbJsonLd = post ? {
+  const breadcrumbJsonLd = post ? JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
@@ -61,22 +61,12 @@ export default function Page({ params }: { params: { slug: string } }) {
       { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://centience.ai/insights/articles' },
       { '@type': 'ListItem', position: 3, name: post.title, item: `https://centience.ai/insights/${post.slug}` },
     ],
-  } : null;
+  }) : null;
 
   return (
     <>
-      {articleJsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-        />
-      )}
-      {breadcrumbJsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-        />
-      )}
+      {articleJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: articleJsonLd }} />}
+      {breadcrumbJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />}
       <BlogPostPage />
     </>
   );
