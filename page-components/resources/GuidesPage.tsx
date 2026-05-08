@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import { useState } from "react";
 import { GUIDES_LIST } from "@/data/guideContent";
-import LeadCaptureModal, { hasLeadCookie } from "@/components/LeadCaptureModal";
+import LeadCaptureModal, { hasLeadCookie, trackGuideDownload } from "@/components/LeadCaptureModal";
 
 const GuidesPage = () => {
   const [gateOpen, setGateOpen] = useState(false);
@@ -13,7 +13,7 @@ const GuidesPage = () => {
 
   const handleDownload = (guide: typeof GUIDES_LIST[0]) => {
     if (hasLeadCookie()) {
-      window.open(guide.file, "_blank", "noopener,noreferrer");
+      trackGuideDownload(guide.title, guide.slug ?? null, guide.file);
     } else {
       setSelectedGuide(guide);
       setGateOpen(true);

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Mail, CheckCircle, AlertTriangle, XCircle } from "lucide-react";
-import LeadCaptureModal, { hasLeadCookie } from "@/components/LeadCaptureModal";
+import LeadCaptureModal, { hasLeadCookie, trackAssessmentStart } from "@/components/LeadCaptureModal";
 import type { LeadFormData } from "@/components/LeadCaptureModal";
 
 export interface AssessmentQuestion {
@@ -53,11 +53,14 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleStartAssessment = () => {
+  const handleStartAssessment = async () => {
     if (gated) {
       setGateOpen(true);
+    } else {
+      // Returning user: silently log the assessment start with stored contact info
+      const data = await trackAssessmentStart(headline);
+      if (data) setLeadName(data.firstName);
     }
-    // If not gated, assessment is already visible
   };
 
   const handleGateSuccess = async (data: LeadFormData) => {

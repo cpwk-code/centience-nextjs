@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select";
 import { useState } from "react";
 import HCaptcha from "@/components/HCaptcha";
-import LeadCaptureModal, { hasLeadCookie } from "@/components/LeadCaptureModal";
+import LeadCaptureModal, { hasLeadCookie, trackGuideDownload } from "@/components/LeadCaptureModal";
 
 const guides = [
   {
@@ -72,7 +72,7 @@ const InsightsPage = () => {
 
   const handleGuideClick = (guide: typeof guides[0]) => {
     if (hasLeadCookie()) {
-      window.open(guide.file, "_blank", "noopener,noreferrer");
+      trackGuideDownload(guide.title, guide.id, guide.file);
     } else {
       setSelectedGuide(guide);
       setGateOpen(true);

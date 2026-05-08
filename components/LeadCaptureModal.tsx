@@ -13,6 +13,7 @@ import { X, Loader2 } from "lucide-react";
 import HCaptcha from "@/components/HCaptcha";
 
 const COOKIE_NAME = "centience_lead_captured";
+const LEAD_DATA_KEY = "centience_lead_data";
 const COOKIE_DAYS = 90;
 
 function setCookie(name: string, value: string, days: number) {
@@ -30,6 +31,70 @@ function getCookie(name: string): string | null {
 
 export function hasLeadCookie(): boolean {
   return getCookie(COOKIE_NAME) === "1";
+}
+
+/** Store lead data in localStorage so repeat actions can be tracked silently */
+function saveLeadData(data: LeadFormData) {
+  if (typeof window === 'undefined') return;
+  try { localStorage.setItem(LEAD_DATA_KEY, JSON.stringify(data)); } catch {}
+}
+
+/** Retrieve stored lead data for silent tracking */
+export function getStoredLeadData(): LeadFormData | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = localStorage.getItem(LEAD_DATA_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
+/** Silently log a guide download for a returning user (no form shown) */
+export async function trackGuideDownload(guideTitle: string, guideSlug: string | null, guideHref: string) {
+  const data = getStoredLeadData();
+  if (!data) return;
+  try {
+    await fetch('/api/guide-leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        ...data,
+        guideTitle,
+        guideSlug: guideSlug || null,
+        sourceUrl: typeof window !== 'undefined' ? window.location.href : '',
+        returning: true,
+      }),
+    });
+  } catch {}
+  // Trigger the download
+  const a = document.createElement('a');
+  a.href = guideHref;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  a.click();
+}
+
+/** Silently log an assessment start for a returning user (no form shown) */
+export async function trackAssessmentStart(assessmentType: string): Promise<LeadFormData | null> {
+  const data = getStoredLeadData();
+  if (!data) return null;
+  try {
+    await fetch('/api/assessment-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        company: data.company,
+        jobTitle: data.jobTitle,
+        industry: data.industry,
+        phone: data.phone,
+        assessmentType,
+        returning: true,
+      }),
+    });
+  } catch {}
+  return data;
 }
 
 export type GateType = "guide" | "assessment";
@@ -125,6 +190,7 @@ const LeadCaptureModal = ({
       console.error('Lead submission error (non-fatal):', err);
     }
     setCookie(COOKIE_NAME, "1", COOKIE_DAYS);
+    saveLeadData(form);
     setLoading(false);
     setSuccess(true);
     if (isGuide && guideHref) {
