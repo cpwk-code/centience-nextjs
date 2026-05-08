@@ -14,7 +14,7 @@ function getSupabase() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { firstName, lastName, email, company, jobTitle, industry, phone, assessmentType } = body;
+    const { firstName, lastName, email, company, jobTitle, industry, phone, assessmentType, is_returning: isReturning } = body;
 
     if (!firstName || !lastName || !email || !company || !jobTitle || !industry) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -37,6 +37,7 @@ export async function POST(req: NextRequest) {
           industry,
           phone: phone || null,
           assessment_type: assessmentType || null,
+          is_returning: isReturning || false,
           created_at: submittedAt,
         });
         if (dbError) console.error('Supabase insert error:', dbError.message);

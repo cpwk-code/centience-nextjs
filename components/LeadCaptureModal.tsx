@@ -61,7 +61,7 @@ export async function trackGuideDownload(guideTitle: string, guideSlug: string |
         guideTitle,
         guideSlug: guideSlug || null,
         sourceUrl: typeof window !== 'undefined' ? window.location.href : '',
-        returning: true,
+        is_returning: true,
       }),
     });
   } catch {}
@@ -90,7 +90,7 @@ export async function trackAssessmentStart(assessmentType: string): Promise<Lead
         industry: data.industry,
         phone: data.phone,
         assessmentType,
-        returning: true,
+        is_returning: true,
       }),
     });
   } catch {}

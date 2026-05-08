@@ -14,7 +14,7 @@ function getSupabase() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { firstName, lastName, email, company, jobTitle, industry, phone, guideTitle, guideSlug } = body;
+    const { firstName, lastName, email, company, jobTitle, industry, phone, guideTitle, guideSlug, sourceUrl, is_returning: isReturning } = body;
 
     // Validate required fields
     if (!firstName || !lastName || !email || !company || !jobTitle || !industry) {
@@ -39,6 +39,8 @@ export async function POST(req: NextRequest) {
           phone: phone || null,
           guide_title: guideTitle || null,
           guide_slug: guideSlug || null,
+          source_url: sourceUrl || null,
+          is_returning: isReturning || false,
           created_at: submittedAt,
         });
         if (dbError) console.error('Supabase insert error:', dbError.message);
