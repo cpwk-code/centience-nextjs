@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { blogPosts } from '@/data/blogPosts';
-import dynamic from 'next/dynamic';
+import BlogPostClient from './BlogPostClient';
 
-// Render BlogPostPage client-only — it uses useParams() and cannot run server-side
-const BlogPostPage = dynamic(() => import('@/page-components/BlogPostPage'), { ssr: false });
+// Force dynamic rendering — BlogPostPage uses useParams() and cannot be statically prerendered
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug && p.id >= 11);
@@ -67,7 +67,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     <>
       {articleJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: articleJsonLd }} />}
       {breadcrumbJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />}
-      <BlogPostPage />
+      <BlogPostClient />
     </>
   );
 }
