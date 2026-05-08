@@ -8,7 +8,7 @@ import { blogPosts, getSrc } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
 
 // Only show Centience-authored posts (ids 11+)
-const centiencePosts = blogPosts.filter((p) => p.id >= 11).reverse();
+const centiencePosts = blogPosts.filter((p) => p.id >= 11).sort((a, b) => b.id - a.id);
 
 const categories = ["All", ...Array.from(new Set(centiencePosts.map((p) => p.category)))];
 
