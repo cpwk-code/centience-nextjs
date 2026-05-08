@@ -4436,7 +4436,145 @@ Schedule a free risk assessment with CompuWork's cybersecurity compliance expert
 [/CTA_BOX]
     `,
   },
-  // ─── Centience Blog Posts ──────────────────────────────────────────────────
+  // ─── Reg S-P June 3 Deadline Post ─────────────────────────────────────────
+  {
+    id: 18,
+    slug: "reg-sp-june-3-2026-deadline-smaller-ria-compliance",
+    category: "AI Governance",
+    title: "Reg S-P June 3, 2026 Deadline: What Smaller RIAs Must Do in the Next 26 Days",
+    excerpt: "June 3, 2026 is the mandatory compliance deadline for smaller SEC-registered investment advisers under the 2024 Reg S-P amendments. Here is exactly what is required, who it applies to, and what firms must have documented before the deadline.",
+    image: "/assets/blog/centience-reg-sp-june-2026-deadline.svg",
+    author: "Orville Matias",
+    date: "May 2026",
+    metaTitle: "Reg S-P June 3 2026 Deadline: Smaller RIA Compliance Checklist | Centience",
+    metaDescription: "June 3, 2026 is the SEC Reg S-P compliance deadline for smaller RIAs under $1.5B AUM. Learn exactly what incident response, vendor oversight, and customer notification requirements must be in place.",
+    content: `
+[STAT_CARDS]
+June 3 | Compliance Deadline | Smaller RIAs under $1.5B AUM
+30 Days | Customer Notification | After discovering a qualifying breach
+72 Hours | Vendor Notification | Service providers must notify the RIA
+5 Years | Records Retention | Policies, incidents, and correspondence
+[/STAT_CARDS]
+
+The SEC's 2024 amendments to Regulation S-P created a two-tier compliance schedule. Larger registered investment advisers — those with $1.5 billion or more in regulatory assets under management — were required to comply by December 3, 2025. Smaller RIAs have until June 3, 2026.
+
+That deadline is 26 days away.
+
+If your firm has fewer than $1.5 billion in AUM and has not yet built a compliant Reg S-P program, this article covers exactly what the rule requires, where firms are most commonly falling short, and what needs to be in place before June 3.
+
+[CALLOUT:Important]
+The SEC Division of Examinations listed Reg S-P compliance as a 2026 examination priority. Examiners who have already reviewed larger firms under the December 2025 deadline are entering smaller firm exams from June onward with documented expectations. June 3 is when "do you have a Reg S-P incident response program?" stops being a question and starts being a finding.
+[/CALLOUT]
+
+## What Changed: The 2024 Reg S-P Amendments
+
+Regulation S-P has governed the treatment of nonpublic personal information at financial institutions since 2000. The SEC amended it for the first time in over 20 years on May 16, 2024. The amendments are not incremental — they fundamentally expand what the rule covers, what firms must build, and what they must do when something goes wrong.
+
+The four core changes every smaller RIA must understand:
+
+**1. Expanded Definition of Customer Information**
+
+The original Regulation S-P protected the records and information of an RIA's direct customers. The amended rule replaces "customer records and information" with "customer information" — a materially broader term defined as any record containing nonpublic personal information about a customer of a financial institution that is in the RIA's possession, regardless of whether it pertains to the RIA's own clients or the clients of another financial institution.
+
+In practical terms: if your firm receives nonpublic personal information about limited partners in a private fund, individuals referred through a placement agent, or clients of another firm in any capacity — that information is now covered by Reg S-P. This expansion brings many RIAs that advise solely private funds into the rule's scope for the first time.
+
+**2. Mandatory Incident Response Program**
+
+The amendments require RIAs to develop, implement, and maintain written policies and procedures for an incident response program reasonably designed to detect, respond to, and recover from unauthorized access to or use of customer information.
+
+This is not a general cybersecurity policy. The incident response program must specifically address:
+- Detection of unauthorized access to customer information
+- Containment procedures
+- Investigation and assessment protocols
+- Recovery procedures
+- Escalation and notification chains
+
+A general IT security policy does not satisfy this requirement. The program must be written, specific, and tested.
+
+**3. 30-Day Customer Notification Requirement**
+
+When a breach occurs involving customer information that is reasonably likely to result in substantial harm or inconvenience to affected individuals, the RIA must notify affected or potentially affected clients as soon as practicable — and no later than 30 days after discovering the breach.
+
+The 30-day clock starts at discovery, not at confirmation. Firms cannot extend the notification window by delaying their internal investigation.
+
+The notification must include specific information about the incident and the steps clients should take to protect themselves. Firms must have pre-drafted notification templates in place before an incident occurs — writing them during an active incident is not a viable approach.
+
+**4. Service Provider Oversight and 72-Hour Notification**
+
+This is the amendment that creates the most operational complexity for smaller firms. RIAs must establish, maintain, and enforce written policies and procedures reasonably designed to ensure that service providers protect customer information in their possession and notify the RIA of breaches involving that information.
+
+Specifically: service providers must agree in writing to notify the RIA as soon as practicable — but no later than 72 hours after discovering a breach involving customer information.
+
+This requirement means RIAs must:
+- Audit every service provider that has access to customer information
+- Negotiate and execute contract amendments adding the 72-hour notification obligation
+- Document those negotiations and the results
+
+For smaller firms with multiple technology vendors, CRM platforms, cloud storage providers, custodians, and third-party administrators — this is a significant vendor management undertaking.
+
+[CALLOUT:Warning]
+Service providers do not automatically agree to 72-hour notification SLAs. Major technology vendors, custodians, and SaaS platforms have their own breach notification timelines built into standard contract terms — often 30, 60, or 90 days. Renegotiating these provisions takes time. Firms that have not started this process have a narrow window before June 3.
+[/CALLOUT]
+
+## Who Qualifies as a Smaller Entity
+
+The June 3, 2026 deadline applies to SEC-registered investment advisers with fewer than $1.5 billion in regulatory assets under management. This captures the majority of boutique RIAs, independent advisory firms, family offices, and mid-market asset managers.
+
+The rule also now applies to RIAs that advise solely private funds — a category that was largely outside Reg S-P's scope under the prior definition of "customer records and information." If your firm manages a private fund and receives nonpublic personal information about fund investors from any source, the amended rule applies.
+
+Exempt reporting advisers and unregistered investment advisers are generally not covered by Reg S-P — but may be subject to similar FTC privacy rules. If there is any uncertainty about whether your firm qualifies, confirm with counsel before June 3.
+
+## What Must Be in Place by June 3
+
+[TIMELINE]
+Data Mapping | Identify every system, vendor, and process that touches customer information. You cannot build an incident response program around data you have not mapped.
+Written Incident Response Program | Document detection, containment, investigation, recovery, escalation, and notification procedures specific to customer information breaches.
+Customer Notification Templates | Draft pre-approved notification letters for affected clients. The 30-day clock starts at discovery — you cannot draft during an active incident.
+Vendor Audit and Contract Review | Identify every service provider with access to customer information. Initiate contract amendments requiring 72-hour breach notification in writing.
+Tabletop Exercise | Run a simulated breach scenario. Document the results. SEC examiners expect evidence of testing, not just a written plan.
+Records Documentation | Ensure your recordkeeping system captures policies, incident responses, notification decisions, vendor oversight activities, and correspondence for five-year retention.
+[/TIMELINE]
+
+## The Examination Reality After June 3
+
+The SEC Division of Examinations listed Reg S-P as an examination priority for fiscal year 2026. Examiners who conducted reviews of larger firms under the December 2025 deadline have established their baseline expectations. From June 3 onward, smaller firm examinations will include Reg S-P documentation requests as a standard component.
+
+What examiners will ask for:
+
+- Your written incident response program — dated, version-controlled, and current
+- Evidence of a data mapping exercise identifying systems that contain customer information
+- Vendor oversight policies and contract documentation showing 72-hour notification provisions
+- Notification templates and procedures
+- Evidence of testing — tabletop exercise notes, simulation results, or equivalent documentation
+- Records retention policies and evidence of implementation
+
+Firms that cannot produce this documentation on day one of an examination will face deficiency letters. Firms that experienced a breach and cannot demonstrate compliant response protocols face potential enforcement referrals.
+
+## The Infrastructure Gap
+
+Most smaller RIAs engage their compliance consultant or outside counsel to write the policies. The policies get written. The examination request arrives. And then the firm discovers the gap: the policies describe what should happen, but there is no evidence that the technical infrastructure to execute them is in place.
+
+A Reg S-P incident response program requires:
+- Endpoint monitoring capable of detecting unauthorized access to systems containing customer information
+- Log retention sufficient to reconstruct what happened during an incident
+- Access controls that limit who can reach customer information and generate an audit trail
+- Vendor integrations that can receive 72-hour notifications and route them to the appropriate internal owner
+
+You cannot demonstrate a compliant incident response without the underlying technical controls. The policy is the documentation. The infrastructure is the compliance.
+
+Centience builds Reg S-P compliance programs on managed infrastructure. Your endpoint controls, log management, and access controls are active and documented before the examination request arrives. When the examiner asks for evidence, it exists in system logs — not just policy documents.
+
+[CTA_BOX]
+## June 3 is 26 days away. Is your Reg S-P program examination-ready?
+
+Centience delivers a Reg S-P readiness assessment and program build for smaller RIAs — documentation, technical controls, and vendor review completed before your deadline.
+
+[CTA_BUTTON:Book Your Reg S-P Assessment|/ai-governance-risk-assessment]
+[/CTA_BOX]
+    `,
+  },
+
+
   {
     id: 11,
     slug: "ai-governance-framework-hipaa-regulated-organizations",
