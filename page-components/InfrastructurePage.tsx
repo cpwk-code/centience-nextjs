@@ -33,14 +33,16 @@ const InfrastructurePage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Resilience</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Governance Starts With Infrastructure.{" "}
-            <span className="text-gradient-gold">Build the Foundation First.</span>
+            The Foundation Your Governance Program Is Built On —{" "}
+            <span className="text-gradient-gold">Managed, Monitored, and Always Running.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Every governance program Centience builds runs on infrastructure we manage. That is not incidental — it is the model. Cybersecurity controls, AI governance frameworks, and compliance documentation are only enforceable if the infrastructure they run on is under active management and continuous oversight.
-          </p>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            We implement and manage your infrastructure — computers, networks, cloud environments, endpoints, and disaster recovery — as the operational foundation your entire governance program runs on. Full management or co-management with your existing IT team.
+            You cannot govern what you do not control. Infrastructure governance is the foundational
+            layer of the Centience model — providing the visibility, stability, and technical control that
+            cybersecurity governance and AI oversight depend on. Centience manages your computers,
+            networks, cloud environments, endpoints, and disaster recovery systems — fully governed to
+            your specific regulatory requirements. This is not infrastructure monitoring from the outside.
+            We own and operate the environment.
           </p>
           <Button variant="cta" size="xl" asChild>
             <Link href="/ai-governance-risk-assessment">Book Your Infrastructure Assessment <ArrowRight size={16} /></Link>
@@ -76,16 +78,22 @@ const InfrastructurePage = () => (
           <div className="gold-line" />
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Infrastructure First</p>
         </div>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">You Cannot Govern What Nobody Is Managing.</h2>
-        <p className="text-muted-foreground leading-relaxed mb-4">
-          Most governance firms deliver frameworks and policies without ever touching the technology environment those policies are supposed to govern. The result is a compliance program that looks complete on paper but has no technical enforcement behind it.
-        </p>
-        <p className="text-muted-foreground leading-relaxed mb-4">
-          Centience starts at the infrastructure level — because that is where governance is either enforced or not. When we manage your infrastructure, we control the environment where your data lives, your AI tools operate, and your regulatory obligations are either met or missed.
-        </p>
-        <p className="text-muted-foreground leading-relaxed">
-          For organizations with existing internal IT teams, we offer co-management — handling the governance layer, compliance controls, and documentation while your internal team manages day-to-day operations.
-        </p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Infrastructure That Supports Growth — Without Creating Governance Gaps.</h2>
+        <ul className="space-y-3 text-muted-foreground">
+          {[
+            "Operational continuity with monitored, resilient systems",
+            "A single managed environment where governance controls can be technically enforced",
+            "Endpoint and cloud governance that scales as your organization grows",
+            "Disaster recovery governance that satisfies regulators and actually works when tested",
+            "The technical foundation that makes every cybersecurity and AI governance layer above it enforceable",
+            "Consolidated infrastructure management — one accountable firm, not a patchwork of vendors",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <CheckCircle2 size={16} className="text-accent mt-0.5 shrink-0" />
+              <span className="leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
 

@@ -32,18 +32,35 @@ const PartnerProgramPage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Partner Program</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Built to Work With Partners.{" "}
-            <span className="text-gradient-gold">Not Compete With Them.</span>
+            Extend What You Offer.{" "}
+            <span className="text-gradient-gold">Protect What You've Built.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Centience operates a formal partner program for vCISOs, cybersecurity firms, compliance consultants, fractional technology executives, and MSPs who serve regulated industries. We implement and manage the governance layer. You retain the client relationship. Our model is co-delivery, not displacement.
+            Centience operates a formal partner program for vCISOs, cybersecurity firms, compliance
+            consultants, fractional technology executives, and MSPs who serve regulated industries. We
+            implement and manage the governance layer. You retain the client relationship. Our model is
+            co-delivery, not displacement.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Partners who work with Centience expand their offering, strengthen client relationships, and generate referral revenue — without building the governance operations capability themselves.
+            Partners who work with Centience expand their offering, strengthen client relationships, and
+            generate referral revenue — without building the governance operations capability themselves.
+            The AI governance opportunity is significant. Regulated industries are under active regulatory
+            pressure to govern AI adoption. Centience is built to deliver that governance program — and
+            partners who introduce us are positioned to capture that opportunity with their existing clients.
           </p>
-          <Button variant="cta" size="xl" asChild>
-            <Link href="/contact">Schedule a Partner Call <ArrowRight size={16} /></Link>
-          </Button>
+          <div className="border-l-4 border-gold pl-5 py-2 mb-8 max-w-2xl">
+            <p className="text-sm font-semibold opacity-90">
+              We don't arrive to replace your relationship. We arrive to make your client's governance program enforceable.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <Button variant="cta" size="xl" asChild>
+              <Link href="/contact">Become a Partner <ArrowRight size={16} /></Link>
+            </Button>
+            <Button variant="outline" size="xl" asChild>
+              <Link href="/contact">Contact Us to Discuss</Link>
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>
@@ -57,15 +74,16 @@ const PartnerProgramPage = () => (
               <div className="gold-line" />
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Partners Choose Us</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">What Centience Brings to the Partnership</h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">When you refer a client to Centience, your role does not shrink — it gets stronger. We bring the implementation, managed infrastructure, and governance operations your clients need. You bring the strategic relationship and advisory expertise. The client gets a complete, integrated governance program without replacing either party.</p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">A Governed AI Operations Capability — Without Building It Yourself.</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">Regulated organizations need governance that is technically enforced — not just documented. Most advisory firms can design the program. Centience operates it. Partnering with Centience gives you a delivery capability for the governance layer your clients need — without hiring staff, building infrastructure, or taking on operational liability.</p>
           </div>
           <div className="space-y-4">
             {[
-              { title: "Implement what you design", body: "You set the strategy. We execute it. Your program becomes enforceable, not just advisory." },
-              { title: "Fill gaps without replacing your engagement", body: "Centience fills the implementation and management gap without touching your advisory relationship." },
-              { title: "Expand your offering without adding headcount", body: "Offer your clients a full governance program and co-deliver it — without building the operations capability yourself." },
-              { title: "Referral revenue on a formal structure", body: "Centience operates a two-tier partner program with defined commission terms. Referrals are tracked, protected, and compensated." },
+              { title: "A governed AI operations capability you can offer clients", body: "Offer clients in regulated industries a complete, technically enforced governance program — without building the operations capability yourself." },
+              { title: "Recurring revenue from co-delivered managed governance engagements", body: "Centience operates a two-tier partner program with defined commission terms. Referrals are tracked, protected, and compensated." },
+              { title: "Operational delivery for governance programs you design but do not staff", body: "You set the strategy. Centience executes it. Your program becomes enforceable, not just advisory." },
+              { title: "Client relationship protection — your advisory role is never displaced", body: "Centience fills the implementation and management gap without touching your advisory relationship. That is not a policy. It is how the program is structured." },
+              { title: "A trusted delivery partner with a 100% audit success rate", body: "20+ years in regulated industries. Every client engagement is governed by a written partner agreement that defines scope, protects the referral relationship, and establishes compensation terms." },
             ].map((item, i) => (
               <motion.div key={item.title} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }} className="card-premium p-6">
                 <h3 className="font-display font-bold text-primary text-base mb-2">{item.title}</h3>
@@ -109,7 +127,11 @@ const PartnerProgramPage = () => (
             <div className="gold-line" />
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Process</p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Simple to Start. Structured to Last.</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Simple. Protected. Recurring.</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">Every co-delivery engagement begins with a governance assessment of the shared client. The assessment leads to a governance roadmap. The roadmap leads to an ongoing governance program. The partner retains their advisory role. Centience handles implementation and managed operations. Revenue is shared.</p>
+          <div className="border-l-4 border-accent pl-5 py-2 mb-8">
+            <p className="text-sm font-semibold text-primary">The partner relationship is protected — always. That is not a policy. It is how the program is structured.</p>
+          </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, i) => (
@@ -170,11 +192,19 @@ const PartnerProgramPage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Let's Talk About Whether This Fits Your Practice.</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Extend Your Advisory Practice With a Governed Operations Delivery Capability.</h2>
         <p className="text-lg opacity-70 mb-10">Centience works best with firms and practitioners already engaged in regulated industries who have clients with real governance gaps. If that describes your practice, the conversation is worth having.</p>
-        <Button variant="cta" size="xl" asChild>
-          <Link href="/contact">Schedule a Partner Call <ArrowRight size={16} /></Link>
-        </Button>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Button variant="cta" size="xl" asChild>
+            <Link href="/contact">Become a Partner <ArrowRight size={16} /></Link>
+          </Button>
+        </div>
+        <p className="text-sm opacity-50 mt-5">
+          Or call us directly:{" "}
+          <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+            (877) 945-7177
+          </a>
+        </p>
       </div>
     </section>
   </Layout>

@@ -38,14 +38,20 @@ const HealthcarePage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Healthcare</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            HIPAA Compliance Is Not a Policy. <span className="text-gradient-gold">It Is a Technical Obligation.</span>
+            Adopt AI Across Your Clinical and Operational Environment —{" "}
+            <span className="text-gradient-gold">With HIPAA-Compliant Governance Already in Place.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Healthcare organizations that govern their technology environment effectively — technically enforced HIPAA safeguards, AI oversight, and vendor risk management — are better positioned for HHS audits, breach response, and the operational demands of AI-enabled care delivery. The question is not whether HIPAA applies. It is whether your safeguards are technically enforced or just documented.
+            Healthcare organizations are under pressure to deploy AI in clinical decision support,
+            revenue cycle management, patient communication, and administrative operations. The
+            organizations that do it right are not the ones that move slowest — they are the ones that
+            govern AI from the moment it enters their environment. Centience delivers HIPAA-compliant
+            governance programs that manage the technical environment where patient data lives —
+            ensuring AI adoption is documented, controlled, and defensible from day one.
           </p>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Centience manages the infrastructure where patient data lives, governs the AI tools that touch it, and maintains the compliance documentation that proves it — continuously, not in response to an audit notice.
-          </p>
+          <div className="inline-block border-l-4 border-accent pl-4 mb-8">
+            <p className="text-sm font-semibold text-gold">Our founder built OfficeSafe — a HIPAA compliance platform that scaled to 5,000+ healthcare practices before its acquisition by Rectangle Health. Healthcare governance is not a service we added. It is where Centience began.</p>
+          </div>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild>
               <Link href="/ai-governance-risk-assessment">Book Your Healthcare Governance Assessment <ArrowRight size={16} /></Link>
@@ -66,9 +72,14 @@ const HealthcarePage = () => (
       <div className="container mx-auto">
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Challenge</p></div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">The Healthcare Governance Opportunity</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">What Healthcare Organizations Gain From Governed AI Operations.</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">Healthcare organizations that invest in technically enforced governance — not just policy documentation — build a durable operational advantage: faster breach response, cleaner HHS audits, stronger vendor oversight, and the ability to deploy AI tools with documented oversight rather than regulatory exposure.</p>
           <p className="text-muted-foreground leading-relaxed">AI tools are now used in clinical decision support, revenue cycle management, patient communication, and administrative operations. Remote care has expanded the infrastructure perimeter. Third-party vendor relationships have multiplied. And HHS enforcement actions have made clear that technical safeguards — not policies — are what auditors assess.</p>
+          <blockquote className="mt-8 border-l-4 border-accent pl-5 py-3 bg-card rounded-r-lg">
+            <p className="text-primary font-semibold leading-relaxed">
+              Governed AI is not a constraint on modernization. It is what makes modernization sustainable.
+            </p>
+          </blockquote>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {pressurePoints.map((p, i) => (
@@ -113,7 +124,7 @@ const HealthcarePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">HIPAA Compliance Is Not a Policy. It Is a Technical Obligation.</h2>
+        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">AI Adoption in Healthcare Is Moving Fast. Governance Needs to Keep Pace.</h2>
         <p className="text-lg opacity-70 mb-8">Our healthcare governance assessment identifies technical safeguard gaps, AI governance exposures, and vendor risk vulnerabilities — and delivers a prioritized roadmap to HIPAA readiness.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>

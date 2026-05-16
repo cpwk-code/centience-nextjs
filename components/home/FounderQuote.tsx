@@ -14,9 +14,9 @@ const FounderQuote = () => (
         <div className="gold-line" />
       </div>
       <blockquote className="text-xl md:text-2xl font-display font-medium text-primary leading-relaxed mb-6 italic">
-        "After 20 years inside regulated organizations, I kept seeing the same problem: governance
-        frameworks that couldn't be enforced because nobody controlled the technology. Centience was
-        built to close that gap."
+        &ldquo;After 20 years inside regulated organizations, I kept seeing the same problem: governance
+        frameworks that couldn&apos;t be enforced because nobody controlled the technology. Centience was
+        built to close that gap &mdash; and to give regulated organizations a way to move forward, not just stay compliant.&rdquo;
       </blockquote>
       <p className="text-sm text-muted-foreground font-semibold uppercase tracking-wider">
         — Orville Matias, Founder & CEO, Centience

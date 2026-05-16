@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, Building2, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Building2, CheckCircle, AlertCircle, Loader2, ArrowRight } from "lucide-react";
 
 declare global {
   interface Window {
@@ -123,11 +123,16 @@ const ContactPage = () => {
               <div className="gold-line" />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-              Start With a Governance Assessment.{" "}
-              <span className="text-gradient-gold">No Commitment Required.</span>
+              Let's Talk About What Governance Looks Like{" "}
+              <span className="text-gradient-gold">for Your Organization.</span>
             </h1>
             <p className="text-lg leading-relaxed opacity-70 max-w-2xl mx-auto">
-              Tell us about your organization and what you are trying to govern. A Centience specialist will follow up to schedule your assessment and discuss your specific regulatory environment.
+              Whether you are responding to an upcoming regulatory examination, deploying AI across
+              your organization, or simply trying to understand where your governance gaps are — the
+              right starting point is a conversation. Centience serves regulated organizations across
+              financial services, healthcare, private equity, legal, accounting, and non-profit sectors.
+              Every engagement starts with a governance assessment — a clear picture of where you
+              stand, delivered within 5 business days.
             </p>
           </motion.div>
         </div>
@@ -158,6 +163,48 @@ const ContactPage = () => {
               <span className="font-medium">24/7 Support Available</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Three Ways to Engage */}
+      <section className="py-16 lg:py-20 bg-background">
+        <div className="container mx-auto">
+          <div className="max-w-2xl mx-auto mb-12 text-center">
+            <div className="flex items-center justify-center gap-3 mb-4"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Three Ways to Engage</p><div className="gold-line" /></div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="card-premium p-8 text-center">
+              <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mx-auto mb-5"><CheckCircle className="w-6 h-6" /></div>
+              <h3 className="font-display font-bold text-primary text-lg mb-3">I want to understand my governance gaps</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5">Start with the governance assessment. No commitment required. Results delivered within 5 business days.</p>
+              <a href="/ai-governance-risk-assessment" className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:opacity-80 transition-opacity">Book Your Governance Assessment <ArrowRight className="w-4 h-4" /></a>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="card-premium p-8 text-center">
+              <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mx-auto mb-5"><Phone className="w-6 h-6" /></div>
+              <h3 className="font-display font-bold text-primary text-lg mb-3">I'm preparing for an examination or audit</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5">Call us directly. Examination timelines are specific and we will tell you honestly what is achievable in the time available.</p>
+              <a href="tel:+18779457177" className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:opacity-80 transition-opacity"><Phone className="w-4 h-4" /> (877) 945-7177</a>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="card-premium p-8 text-center">
+              <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mx-auto mb-5"><Building2 className="w-6 h-6" /></div>
+              <h3 className="font-display font-bold text-primary text-lg mb-3">I'm a partner or advisor</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5">Contact us through the form or call directly. We will walk you through the co-delivery model.</p>
+              <a href="/partners" className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:opacity-80 transition-opacity">Contact Us About Partnership <ArrowRight className="w-4 h-4" /></a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Happens Next */}
+      <section className="py-16 lg:py-20 bg-muted">
+        <div className="container mx-auto max-w-3xl">
+          <div className="flex items-center gap-3 mb-4"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">What Happens Next</p></div>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">No Pressure. No Obligation. A Straight Conversation.</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">When you contact Centience, you will hear back within one business day. We will ask a few questions about your organization, your regulatory environment, and what is prompting the conversation. Then we will tell you honestly whether a governance assessment makes sense and what it would cover.</p>
+          <p className="text-muted-foreground leading-relaxed mb-8">If it does — most assessments complete within 5 business days and you leave with a clear, prioritized roadmap regardless of whether you engage further.</p>
+          <blockquote className="border-l-4 border-accent pl-5 py-3 bg-card rounded-r-lg">
+            <p className="text-primary font-semibold leading-relaxed">This is where most firms stop — at the assessment. This is where Centience starts.</p>
+          </blockquote>
         </div>
       </section>
 

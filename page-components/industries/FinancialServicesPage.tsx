@@ -116,15 +116,20 @@ const FinancialServicesPage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Financial Services</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Financial Services Governance That{" "}
-            <span className="text-gradient-gold">Holds Up Under Examination.</span>
+            Operate With Examination Confidence.{" "}
+            <span className="text-gradient-gold">Adopt AI Without Regulatory Exposure.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Financial services firms that govern their technology environment effectively — infrastructure, cybersecurity, AI, and communications — enter examinations with confidence, not contingency plans. Centience builds and operates governance programs that are technically enforced, continuously monitored, and documented to satisfy SEC and FINRA examiners before they arrive.
+            Financial services firms that govern their technology environment effectively don&apos;t just pass
+            their exams. They operate more efficiently, adopt AI with documented oversight in place, and
+            build the kind of institutional credibility that regulators — and clients — recognize. Centience
+            delivers governance programs that are technically enforced across your entire technology
+            environment — built specifically for the SEC, FINRA, and state regulatory requirements your
+            firm answers to.
           </p>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Centience delivers governance programs that are technically enforced across your entire technology environment — managed infrastructure, cybersecurity oversight, AI governance, and communication compliance — as a single continuously operated program.
-          </p>
+          <div className="inline-block border-l-4 border-accent pl-4 mb-8">
+            <p className="text-sm font-semibold text-gold">100% audit success rate across all financial services engagements.</p>
+          </div>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild>
               <Link href="/ai-governance-risk-assessment">Book Your Financial Services Assessment <ArrowRight size={16} /></Link>
@@ -149,7 +154,7 @@ const FinancialServicesPage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Regulatory Reality</p>
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-            What Regulators Are Looking For — And Finding
+            What Governed Financial Services Operations Actually Looks Like.
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             SEC and FINRA examiners have expanded their technology governance scope significantly. Modern examinations look beyond cybersecurity policies to assess actual technical controls: how is data being accessed, how is AI being used, how are communications being archived, and what evidence exists that governance controls are operating.
@@ -160,6 +165,11 @@ const FinancialServicesPage = () => (
           <p className="text-muted-foreground leading-relaxed font-semibold">
             Centience closes that gap — by managing the infrastructure where the controls must live.
           </p>
+          <blockquote className="mt-8 border-l-4 border-accent pl-5 py-3 bg-card rounded-r-lg">
+            <p className="text-primary font-semibold leading-relaxed">
+              Governed AI is not a constraint on modernization. It is what makes modernization sustainable.
+            </p>
+          </blockquote>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -263,7 +273,7 @@ const FinancialServicesPage = () => (
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
         <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">
-          Financial Services Governance That Holds Up Under Examination.
+          FINRA and SEC Examiners Are Expanding Their Technology Governance Scope. Know Where You Stand Before They Ask.
         </h2>
         <p className="text-lg opacity-70 mb-8">
           Our financial services governance assessment identifies gaps across your infrastructure, cybersecurity posture, communication compliance, and AI environment — and delivers a prioritized roadmap before your next examination.

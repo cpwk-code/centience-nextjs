@@ -33,6 +33,7 @@ const LeadMagnetCTA = () => (
         <span>✓ No commitment required</span>
         <span>✓ Results delivered within 5 business days</span>
         <span>✓ 100% audit success rate across all client engagements</span>
+        <span>✓ Ongoing governance program available immediately following assessment</span>
       </div>
 
       <Button variant="cta" size="xl" asChild>

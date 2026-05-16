@@ -216,6 +216,12 @@ const AboutPage = () => (
           <p className="text-muted-foreground leading-relaxed font-semibold text-primary">
             That is why Centience maintains a 100% audit success rate across all client engagements.
           </p>
+          <p className="text-muted-foreground leading-relaxed mt-4">
+            This is not a consulting engagement with an end date. Centience operates as your ongoing
+            governance function — a continuously managed program that scales with your organization
+            and evolves with the regulatory environment around it. That is why our average client
+            relationship exceeds 10 years.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">

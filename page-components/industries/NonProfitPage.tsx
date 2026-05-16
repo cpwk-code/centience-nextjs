@@ -31,14 +31,23 @@ const NonProfitPage = () => (
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Non-Profit</p></div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Donor Trust Is Your Most Valuable Asset. <span className="text-gradient-gold">Technology Governance Is How You Protect It.</span>
+            Protect Donor Trust.{" "}
+            <span className="text-gradient-gold">Govern AI. Keep Your Mission Running.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Non-profit organizations that govern their technology environment effectively — technically enforced donor data controls, AI oversight, and federal grant compliance — protect mission integrity, maintain donor confidence, and demonstrate to funders and boards that their obligations are being met. Technology governance is not a luxury for non-profits. It is a fiduciary responsibility.
+            Non-profit organizations handle sensitive donor information, beneficiary data, and grant-related
+            financial records — all of which carry governance obligations that most organizations
+            underestimate. A data breach, a federal grant compliance failure, or an ungoverned AI tool does
+            not just create a regulatory problem. It creates a donor trust problem that is significantly harder
+            to recover from. Centience delivers governance programs scaled for non-profit organizations —
+            protecting mission integrity and donor confidence without overwhelming operational capacity or
+            budget.
           </p>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Centience delivers governance programs scaled for non-profits — protecting mission integrity and donor trust without overwhelming operational capacity or budget.
-          </p>
+          <div className="border-l-4 border-gold pl-5 py-2 mb-8 max-w-2xl">
+            <p className="text-sm font-semibold opacity-90">
+              Governance does not have to be enterprise-scale to be effective. It has to be right for your organization.
+            </p>
+          </div>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Non-Profit Governance Assessment <ArrowRight size={16} /></Link></Button>
           </div>
@@ -56,7 +65,7 @@ const NonProfitPage = () => (
       <div className="container mx-auto">
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Challenge</p></div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">Technology Governance Protects Mission. It Also Enables It.</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">What Non-Profit Organizations Gain From Governed Technology Operations.</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">Non-profits that invest in governance build a stronger foundation for mission delivery: donor confidence is protected, federal grant compliance is maintained, AI tools are deployed with oversight, and boards can demonstrate they are meeting their fiduciary obligations.</p>
           <p className="text-muted-foreground leading-relaxed">Non-profits handle donor financial data subject to PCI compliance. They hold beneficiary information that may be subject to HIPAA if health services are involved. Federal grant recipients face specific cybersecurity requirements from agencies like HHS, DOJ, and NSF. And state charitable registration requirements increasingly include data protection obligations.</p>
         </div>
@@ -100,7 +109,7 @@ const NonProfitPage = () => (
 
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">Donor Trust Is Your Most Valuable Asset. Technology Governance Is How You Protect It.</h2>
+        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">Donor Trust Is Your Most Valuable Asset. Governance Is How You Protect It.</h2>
         <p className="text-lg opacity-70 mb-8">Our non-profit governance assessment identifies donor data exposure, federal grant compliance gaps, and AI governance vulnerabilities — and delivers a prioritized roadmap scaled to your organization's capacity and budget.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
