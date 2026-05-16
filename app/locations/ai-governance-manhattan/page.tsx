@@ -107,7 +107,7 @@ export default function Page() {
                 <Button variant="cta" size="lg" asChild>
                   <Link href="/ai-governance-risk-assessment">Schedule a Governance Assessment <ArrowRight size={16} /></Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="lg" className="text-white border-white/40 hover:bg-white/10" asChild>
                   <a href="tel:+18779457177">(877) 945-7177</a>
                 </Button>
               </div>
