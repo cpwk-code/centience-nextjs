@@ -41,7 +41,7 @@ const HealthcarePage = () => (
             HIPAA Compliance Is Not a Policy. <span className="text-gradient-gold">It Is a Technical Obligation.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Healthcare organizations are deploying AI tools across clinical workflows, revenue cycle management, and patient communication — often without governance frameworks that assess privacy risk, accuracy bias, or regulatory exposure. HIPAA requires technically enforced safeguards. Most organizations have policies. Fewer have verified the controls are operating.
+            Healthcare organizations that govern their technology environment effectively — technically enforced HIPAA safeguards, AI oversight, and vendor risk management — are better positioned for HHS audits, breach response, and the operational demands of AI-enabled care delivery. The question is not whether HIPAA applies. It is whether your safeguards are technically enforced or just documented.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
             Centience manages the infrastructure where patient data lives, governs the AI tools that touch it, and maintains the compliance documentation that proves it — continuously, not in response to an audit notice.
@@ -66,8 +66,8 @@ const HealthcarePage = () => (
       <div className="container mx-auto">
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Challenge</p></div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">Why Healthcare Technology Governance Is More Complex Than Ever</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">Healthcare organizations have always operated under strict data governance requirements. HIPAA established the foundational framework — but the environment it must govern has changed dramatically.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">The Healthcare Governance Opportunity</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">Healthcare organizations that invest in technically enforced governance — not just policy documentation — build a durable operational advantage: faster breach response, cleaner HHS audits, stronger vendor oversight, and the ability to deploy AI tools with documented oversight rather than regulatory exposure.</p>
           <p className="text-muted-foreground leading-relaxed">AI tools are now used in clinical decision support, revenue cycle management, patient communication, and administrative operations. Remote care has expanded the infrastructure perimeter. Third-party vendor relationships have multiplied. And HHS enforcement actions have made clear that technical safeguards — not policies — are what auditors assess.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -113,7 +113,7 @@ const HealthcarePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">HHS enforcement actions are increasing. AI adoption is accelerating. Is your HIPAA governance technically enforced?</h2>
+        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">HIPAA Compliance Is Not a Policy. It Is a Technical Obligation.</h2>
         <p className="text-lg opacity-70 mb-8">Our healthcare governance assessment identifies technical safeguard gaps, AI governance exposures, and vendor risk vulnerabilities — and delivers a prioritized roadmap to HIPAA readiness.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>

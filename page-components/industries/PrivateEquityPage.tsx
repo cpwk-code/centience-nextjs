@@ -34,10 +34,10 @@ const PrivateEquityPage = () => (
             Technology Governance Across the Portfolio — <span className="text-gradient-gold">From Hold Period Through Exit.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Private equity firms face a dual governance challenge: managing technology risk at the firm level while ensuring each portfolio company operates with governance controls that meet regulatory expectations and hold up through exit due diligence.
+            Private equity firms that invest in technology governance during the hold period realize a measurable return: cleaner exits, stronger due diligence outcomes, reduced regulatory exposure, and portfolio companies that enter the market with documented governance programs — not governance gaps.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Without standardized governance oversight, technology risk accumulates invisibly across the portfolio — surfacing at the worst possible time: during due diligence, at exit, or during a regulatory examination. Centience delivers governance programs that operate at the firm level and scale across portfolio companies.
+            Centience delivers governance programs that operate at the firm level and scale across portfolio companies — standardized, continuously monitored, and documented to hold up through SEC examinations and exit due diligence.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Portfolio Governance Assessment <ArrowRight size={16} /></Link></Button>
@@ -56,9 +56,9 @@ const PrivateEquityPage = () => (
       <div className="container mx-auto">
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Challenge</p></div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">Why Portfolio Technology Risk Is a Governance Priority</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">Private equity firms are increasingly subject to SEC oversight — particularly those registered as investment advisers. The SEC has expanded its examination scope to include technology governance at both the firm level and, increasingly, at the portfolio company level.</p>
-          <p className="text-muted-foreground leading-relaxed">Beyond regulatory pressure, technology risk directly affects portfolio value. Cybersecurity incidents, compliance failures, and governance gaps discovered during due diligence create material valuation impacts. The absence of governance documentation at exit can delay transactions and reduce realized value.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">Technology Governance Is a Portfolio Value Driver.</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">Firms that govern technology across the portfolio — not just at the firm level — enter exit processes with a material advantage. Governance documentation is ready. Cybersecurity posture is defensible. AI usage is supervised. Due diligence does not surface surprises.</p>
+          <p className="text-muted-foreground leading-relaxed">Beyond exit value, portfolio governance reduces regulatory exposure for registered investment advisers, protects LP relationships, and gives portfolio company management teams the governance infrastructure they need to scale without creating undisclosed risk.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {pressurePoints.map((p, i) => (
@@ -100,7 +100,7 @@ const PrivateEquityPage = () => (
 
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">Technology governance gaps surface at the worst possible time. Identify and close them before due diligence does.</h2>
+        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">Technology Governance Across the Portfolio. From Hold Period Through Exit.</h2>
         <p className="text-lg opacity-70 mb-8">Our private equity governance assessment evaluates firm-level and portfolio-level technology governance — delivering a consolidated risk view and prioritized remediation roadmap.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>

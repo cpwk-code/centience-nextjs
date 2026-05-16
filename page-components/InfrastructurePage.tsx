@@ -33,10 +33,11 @@ const InfrastructurePage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Resilience</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Governance Without Infrastructure Control <span className="text-gradient-gold">Is Just a Policy Document.</span>
+            Governance Starts With Infrastructure.{" "}
+            <span className="text-gradient-gold">Build the Foundation First.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Cybersecurity controls, AI governance programs, and compliance frameworks are only enforceable if the infrastructure they run on is managed, monitored, and controlled every day. That is the foundation Centience builds first.
+            Every governance program Centience builds runs on infrastructure we manage. That is not incidental — it is the model. Cybersecurity controls, AI governance frameworks, and compliance documentation are only enforceable if the infrastructure they run on is under active management and continuous oversight.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
             We implement and manage your infrastructure — computers, networks, cloud environments, endpoints, and disaster recovery — as the operational foundation your entire governance program runs on. Full management or co-management with your existing IT team.
@@ -115,8 +116,8 @@ const InfrastructurePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Full Management or Co-Management — Built Around Your Team.</h2>
-        <p className="text-lg opacity-70 mb-6">We work with your existing infrastructure or build from scratch. Either way, governance is enforced at the infrastructure level — and the evidence is assembled before you need it.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Governance Starts With Infrastructure. Build the Foundation First.</h2>
+        <p className="text-lg opacity-70 mb-6">Start with an infrastructure assessment to evaluate your current environment and establish the technical foundation your governance program requires. Results delivered within 5 business days.</p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>
           <span>✓ Results within 5 business days</span>

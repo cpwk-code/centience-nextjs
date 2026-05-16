@@ -116,10 +116,11 @@ const FinancialServicesPage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Financial Services</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Examination Confidence Starts With <span className="text-gradient-gold">Governance That Is Actually Enforced.</span>
+            Financial Services Governance That{" "}
+            <span className="text-gradient-gold">Holds Up Under Examination.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Broker-dealers, RIAs, and wealth management firms operate under the most demanding regulatory technology requirements of any industry. SEC examinations, FINRA inspections, and state-level oversight all require demonstrable governance controls — not documentation that governance is planned.
+            Financial services firms that govern their technology environment effectively — infrastructure, cybersecurity, AI, and communications — enter examinations with confidence, not contingency plans. Centience builds and operates governance programs that are technically enforced, continuously monitored, and documented to satisfy SEC and FINRA examiners before they arrive.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
             Centience delivers governance programs that are technically enforced across your entire technology environment — managed infrastructure, cybersecurity oversight, AI governance, and communication compliance — as a single continuously operated program.
@@ -154,7 +155,7 @@ const FinancialServicesPage = () => (
             SEC and FINRA examiners have expanded their technology governance scope significantly. Modern examinations look beyond cybersecurity policies to assess actual technical controls: how is data being accessed, how is AI being used, how are communications being archived, and what evidence exists that governance controls are operating.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Most financial services firms are technically compliant on paper but operationally exposed in practice. Policies exist. Enforcement often does not.
+            Firms that demonstrate technically enforced governance — not just documented policies — move through examinations faster, with fewer deficiency findings, and with a stronger regulatory relationship. That is the operational advantage Centience is built to deliver.
           </p>
           <p className="text-muted-foreground leading-relaxed font-semibold">
             Centience closes that gap — by managing the infrastructure where the controls must live.
@@ -262,7 +263,7 @@ const FinancialServicesPage = () => (
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
         <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">
-          FINRA and SEC examiners are expanding their technology governance scope. Is your firm ready?
+          Financial Services Governance That Holds Up Under Examination.
         </h2>
         <p className="text-lg opacity-70 mb-8">
           Our financial services governance assessment identifies gaps across your infrastructure, cybersecurity posture, communication compliance, and AI environment — and delivers a prioritized roadmap before your next examination.

@@ -32,13 +32,14 @@ const PartnerProgramPage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Partner Program</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Built to Work With Partners — <span className="text-gradient-gold">Not Compete With Them</span>
+            Built to Work With Partners.{" "}
+            <span className="text-gradient-gold">Not Compete With Them.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Centience operates a formal partner program for CISOs, vCISOs, cybersecurity firms, compliance consultants, fractional technology executives, and MSPs who serve regulated industries.
+            Centience operates a formal partner program for vCISOs, cybersecurity firms, compliance consultants, fractional technology executives, and MSPs who serve regulated industries. We implement and manage the governance layer. You retain the client relationship. Our model is co-delivery, not displacement.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            We implement and manage the governance layer. You retain the client relationship. Our model is co-delivery, not displacement.
+            Partners who work with Centience expand their offering, strengthen client relationships, and generate referral revenue — without building the governance operations capability themselves.
           </p>
           <Button variant="cta" size="xl" asChild>
             <Link href="/contact">Schedule a Partner Call <ArrowRight size={16} /></Link>
@@ -57,7 +58,7 @@ const PartnerProgramPage = () => (
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Partners Choose Us</p>
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">What Centience Brings to the Partnership</h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">When you refer a client to Centience, your role doesn't shrink — it gets stronger. We bring the implementation, managed infrastructure, and governance operations your clients need. You bring the strategic relationship and advisory expertise.</p>
+            <p className="text-muted-foreground leading-relaxed mb-8">When you refer a client to Centience, your role does not shrink — it gets stronger. We bring the implementation, managed infrastructure, and governance operations your clients need. You bring the strategic relationship and advisory expertise. The client gets a complete, integrated governance program without replacing either party.</p>
           </div>
           <div className="space-y-4">
             {[
@@ -169,8 +170,8 @@ const PartnerProgramPage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Let's Talk About Whether This Fits Your Practice</h2>
-        <p className="text-lg opacity-70 mb-10">We work best with firms and practitioners already engaged in regulated industries who have clients with real governance gaps.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Let's Talk About Whether This Fits Your Practice.</h2>
+        <p className="text-lg opacity-70 mb-10">Centience works best with firms and practitioners already engaged in regulated industries who have clients with real governance gaps. If that describes your practice, the conversation is worth having.</p>
         <Button variant="cta" size="xl" asChild>
           <Link href="/contact">Schedule a Partner Call <ArrowRight size={16} /></Link>
         </Button>

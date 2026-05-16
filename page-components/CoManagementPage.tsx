@@ -10,7 +10,7 @@ const models = [
     label: "Model 1",
     title: "Governance Layer Over Internal IT",
     you: "An internal IT team managing day-to-day operations.",
-    gap: "No structured governance layer — controls aren't documented, evidence isn't collected, audit readiness depends on scrambling before an exam.",
+    gap: "No structured governance layer — controls are not documented, evidence is not collected continuously, and audit readiness depends on scrambling before an exam. The technology is managed. The governance is not.",
     centience: "We implement the governance program on top of your existing infrastructure. Your internal IT team continues managing day-to-day operations. We own the governance layer — controls documentation, compliance tracking, AI oversight, security posture reporting, and audit-ready evidence collection.",
   },
   {
@@ -54,7 +54,7 @@ const CoManagementPage = () => (
             Centience is built for co-management. Whether you have an internal IT team, an existing CISO or vCISO, a CTO driving strategy, or an outside firm already engaged — we implement, integrate, and manage the governance layer alongside the people and relationships already in place.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            We don't arrive to replace your team. We arrive to make your governance program enforceable.
+            We don't arrive to replace your team. We arrive to make your governance program enforceable — and to operate it continuously, not deliver it once.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild>
@@ -155,7 +155,7 @@ const CoManagementPage = () => (
               <div className="gold-line" />
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">AI Governance</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">AI Governance — We Lead</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">AI Governance — Centience Takes Operational Accountability.</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               For AI implementation, integration, and governance management, Centience takes the lead. AI governance in regulated environments requires a single accountable operator who understands both the regulatory requirements and the technical environment.
             </p>
@@ -194,7 +194,7 @@ const CoManagementPage = () => (
         </div>
         <h2 className="text-3xl font-display font-bold text-primary mb-5">Referring a Client? Here's How We Protect the Relationship.</h2>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          Centience is built to work alongside the partners who introduce us. We don't displace existing relationships — we extend them. When a partner refers a client into a co-managed engagement, the partner retains their advisory role and client relationship. Centience handles the implementation and governance operations layer.
+          Centience is built to work alongside the partners who introduce us. We don't displace existing relationships — we extend them. When a partner refers a client into a co-managed engagement, the partner retains their advisory role and client relationship. Centience handles the implementation and ongoing governance operations layer — continuously managed, not delivered once.
         </p>
         <Button variant="outline" size="lg" asChild>
           <Link href="/partners">Learn More About the Partner Program <ArrowRight size={16} /></Link>
@@ -205,7 +205,7 @@ const CoManagementPage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Let's Map Where Centience Fits In Your Structure</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Let's Map Where Centience Fits In Your Structure. No Displacement. No Disruption.</h2>
         <p className="text-lg opacity-70 mb-10">Every co-management engagement starts with a governance assessment — including a mapping of your existing team and outside relationships. No displacement. No disruption. Just governance that works.</p>
         <Button variant="cta" size="xl" asChild>
           <Link href="/ai-governance-risk-assessment">Book Your Governance Assessment <ArrowRight size={16} /></Link>

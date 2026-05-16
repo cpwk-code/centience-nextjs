@@ -1,68 +1,65 @@
-import { ShieldAlert, Scale, Brain, Server } from "lucide-react";
+import { TrendingUp, Shield, Brain, Server } from "lucide-react";
 import { motion } from "framer-motion";
 
-const problems = [
+const opportunities = [
   {
     icon: Brain,
-    title: "AI tools are deployed without governance",
-    description: "Employees are using AI across your organization today — often without disclosure, risk assessment, or governance controls. Every unsanctioned AI tool is a regulatory liability.",
+    title: "Deploy AI with documented oversight from day one",
+    description: "Deploy AI tools across your organization with documented oversight from day one — not reactive governance after a regulator flags them.",
   },
   {
-    icon: ShieldAlert,
-    title: "Policies exist. Enforcement doesn't.",
-    description: "Most organizations have AI and cybersecurity policies. Few have programs that technically enforce them. The gap between policy and enforcement is where incidents and regulatory findings originate.",
+    icon: TrendingUp,
+    title: "Accelerate client service workflows",
+    description: "Accelerate client service workflows without creating undocumented AI exposure. Governed AI adoption is a competitive advantage, not a constraint.",
   },
   {
-    icon: Scale,
-    title: "Regulators are demanding evidence, not documentation",
-    description: "SEC, FINRA, HIPAA, and emerging AI frameworks now require demonstrable governance controls — not policy documents. Regulators want to see what you actually do, not what you say you do.",
+    icon: Shield,
+    title: "Onboard new technology inside an existing framework",
+    description: "Onboard new technology vendors inside an existing governance framework — not after the fact. Every new tool enters a program that is already running.",
   },
   {
     icon: Server,
-    title: "No single firm owns the full governance stack",
-    description: "Infrastructure, cybersecurity, and AI governance are typically managed by separate vendors with no unified oversight. That fragmentation creates gaps that regulators and attackers exploit.",
+    title: "Scale operations without scaling headcount",
+    description: "Scale operations without scaling headcount — governed automation with enforced controls already in place. Demonstrate responsible AI use to clients, counterparties, and regulators.",
   },
 ];
 
 const ProblemSection = () => (
   <section className="py-24 lg:py-32 bg-background">
     <div className="container mx-auto">
-      {/* What is AI Governance intro */}
+      {/* What is Technology Governance intro */}
       <div className="max-w-3xl mb-20">
         <div className="flex items-center gap-3 mb-4">
           <div className="gold-line" />
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">What is AI Governance</p>
         </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Oversight for AI, Cybersecurity & Infrastructure — Technically Enforced
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
+          One Integrated Governance Program. Three Layers. Continuously Operated.
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          AI governance is the discipline of overseeing AI systems, cybersecurity posture, and infrastructure controls to ensure regulatory compliance, operational resilience, and audit readiness.
+          Centience does not deliver governance frameworks and walk away. We build and operate the governance program — managing your infrastructure, governing your cybersecurity, and overseeing your AI environment as a single continuously enforced model.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Effective AI governance requires control over the infrastructure running the organization. Without operational ownership of systems, governance becomes theoretical rather than enforceable.
-        </p>
-        <p className="text-muted-foreground leading-relaxed">
-          Centience delivers AI and technology governance programs built on managed infrastructure — allowing organizations to enforce AI policies, monitor usage, and maintain regulatory readiness continuously.
+          Every layer works together. Every control is technically enforced. Every piece of audit evidence is assembled in real time — not reconstructed before an exam.
         </p>
       </div>
 
-      {/* The Problem */}
+      {/* The Opportunity */}
       <div className="max-w-2xl mb-16">
         <div className="flex items-center gap-3 mb-4">
           <div className="gold-line" />
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The challenge</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Opportunity</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Most regulated organizations are exposed to AI governance risk — and don't know it yet.
+          AI Is Reshaping How Regulated Organizations Operate. Governance Is What Makes It Stick.
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Most organizations have adopted AI tools faster than they have implemented governance controls. Without a structured AI governance program, organizations expose themselves to regulatory penalties, security incidents, and operational failures that are difficult to defend to auditors.
+          Organizations that build governed AI operations gain a durable operational advantage: they can move faster than competitors because their governance infrastructure keeps pace with their technology adoption. Every new AI tool, every new workflow, every new vendor is onboarded into a framework that is already running.
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {problems.map((item, i) => (
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
+        {opportunities.map((item, i) => (
           <motion.div
             key={item.title}
             initial={{ opacity: 0, y: 20 }}
@@ -78,6 +75,33 @@ const ProblemSection = () => (
             <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
           </motion.div>
         ))}
+      </div>
+
+      {/* Regulatory Stakes */}
+      <div className="max-w-3xl">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="gold-line" />
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Governance Gap Has a Price Tag</p>
+        </div>
+        <p className="text-muted-foreground leading-relaxed mb-6">
+          SEC, FINRA, and HIPAA enforcement is accelerating — and regulators are now using AI to surface governance gaps faster than manual examination ever could.
+        </p>
+        <div className="grid sm:grid-cols-2 gap-4 mb-8">
+          {[
+            { stat: "$2M+", label: "HIPAA civil penalty annual caps per violation category as of January 2026" },
+            { stat: "Feb 2025", label: "SEC Cyber and Emerging Technologies Unit launched with explicit AI governance authority" },
+            { stat: "$2.3M", label: "FINRA fines in 2025 for automated monitoring and off-channel communications failures" },
+            { stat: "$90M", label: "Two Sigma paid to SEC for failing to address known system vulnerabilities" },
+          ].map((item) => (
+            <div key={item.stat} className="card-premium p-6 flex items-start gap-4">
+              <p className="text-2xl font-display font-bold text-gold shrink-0">{item.stat}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.label}</p>
+            </div>
+          ))}
+        </div>
+        <blockquote className="border-l-2 border-accent pl-6 italic text-primary font-medium">
+          "The firms that modernize successfully are not the ones that avoid AI. They are the ones that govern it."
+        </blockquote>
       </div>
     </div>
   </section>

@@ -123,11 +123,11 @@ const ContactPage = () => {
               <div className="gold-line" />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-              Have One of Our Experts{" "}
-              <span className="text-gradient-gold">Contact You</span>
+              Start With a Governance Assessment.{" "}
+              <span className="text-gradient-gold">No Commitment Required.</span>
             </h1>
             <p className="text-lg leading-relaxed opacity-70 max-w-2xl mx-auto">
-              Tell us a little bit about yourself, your business &amp; project and a specialist will reach out to discuss.
+              Tell us about your organization and what you are trying to govern. A Centience specialist will follow up to schedule your assessment and discuss your specific regulatory environment.
             </p>
           </motion.div>
         </div>

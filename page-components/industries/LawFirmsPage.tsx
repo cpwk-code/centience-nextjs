@@ -34,7 +34,7 @@ const LawFirmsPage = () => (
             Client Confidentiality Is a Professional Obligation. <span className="text-gradient-gold">Technology Governance Is How You Enforce It.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Law firms hold sensitive client information across hundreds of matters. AI tools are being adopted for research, drafting, and document review without governance frameworks that assess confidentiality risk, privilege exposure, or professional responsibility implications.
+            Law firms that govern their technology environment effectively — technically enforced access controls, AI oversight, and breach preparedness — protect client confidentiality, reduce professional liability exposure, and demonstrate to clients and bar authorities that their obligations are being met. Technology governance is not a compliance exercise. It is a professional responsibility.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
             Centience manages the technical environment where client data lives, governs the AI tools that touch it, and maintains the documentation that demonstrates your firm is meeting its professional responsibility obligations.
@@ -56,8 +56,8 @@ const LawFirmsPage = () => (
       <div className="container mx-auto">
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Challenge</p></div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">Why Technology Governance Is a Professional Responsibility for Law Firms</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">The American Bar Association Model Rules of Professional Conduct require lawyers to make reasonable efforts to prevent the inadvertent or unauthorized disclosure of client information. Technology governance is not optional — it is an ethical obligation.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">Technology Governance Is a Professional Responsibility — and a Competitive Differentiator.</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">Law firms that invest in technically enforced governance build a durable advantage: they protect client confidentiality more reliably, respond to breaches more effectively, and demonstrate to sophisticated clients that their data is being protected at the technical level — not just the policy level.</p>
           <p className="text-muted-foreground leading-relaxed">Beyond professional responsibility, law firms face an expanding threat landscape. Attackers specifically target law firms for the high-value client data they hold. Ransomware attacks against legal practices have increased significantly. And the adoption of AI tools — for research, drafting, document review, and client communication — has introduced new confidentiality, privilege, and ethical risks that most firms have not yet formally assessed.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -100,7 +100,7 @@ const LawFirmsPage = () => (
 
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">Client confidentiality is a professional obligation. Is your technology governance technically enforced?</h2>
+        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">Client Confidentiality Is a Professional Obligation. Technology Governance Is How You Enforce It.</h2>
         <p className="text-lg opacity-70 mb-8">Our law firm governance assessment identifies client data exposure, AI governance gaps, and cybersecurity vulnerabilities — and delivers a prioritized roadmap aligned to ABA and state bar requirements.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>

@@ -34,7 +34,7 @@ const NonProfitPage = () => (
             Donor Trust Is Your Most Valuable Asset. <span className="text-gradient-gold">Technology Governance Is How You Protect It.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Non-profit organizations handle sensitive donor information, beneficiary data, and grant-related financial records — all of which carry governance obligations that many organizations underestimate. Federal grant recipients face specific cybersecurity requirements. Boards carry fiduciary responsibility for technology risk management.
+            Non-profit organizations that govern their technology environment effectively — technically enforced donor data controls, AI oversight, and federal grant compliance — protect mission integrity, maintain donor confidence, and demonstrate to funders and boards that their obligations are being met. Technology governance is not a luxury for non-profits. It is a fiduciary responsibility.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
             Centience delivers governance programs scaled for non-profits — protecting mission integrity and donor trust without overwhelming operational capacity or budget.
@@ -56,8 +56,8 @@ const NonProfitPage = () => (
       <div className="container mx-auto">
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Challenge</p></div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">Why Technology Governance Matters More Than Non-Profits Realize</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">Non-profit organizations often believe that their governance obligations are lower than those of for-profit regulated entities. That assumption is incorrect — and it leaves organizations exposed.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">Technology Governance Protects Mission. It Also Enables It.</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">Non-profits that invest in governance build a stronger foundation for mission delivery: donor confidence is protected, federal grant compliance is maintained, AI tools are deployed with oversight, and boards can demonstrate they are meeting their fiduciary obligations.</p>
           <p className="text-muted-foreground leading-relaxed">Non-profits handle donor financial data subject to PCI compliance. They hold beneficiary information that may be subject to HIPAA if health services are involved. Federal grant recipients face specific cybersecurity requirements from agencies like HHS, DOJ, and NSF. And state charitable registration requirements increasingly include data protection obligations.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -100,7 +100,7 @@ const NonProfitPage = () => (
 
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">Donor trust is your most valuable asset. Is your technology governance protecting it?</h2>
+        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">Donor Trust Is Your Most Valuable Asset. Technology Governance Is How You Protect It.</h2>
         <p className="text-lg opacity-70 mb-8">Our non-profit governance assessment identifies donor data exposure, federal grant compliance gaps, and AI governance vulnerabilities — and delivers a prioritized roadmap scaled to your organization's capacity and budget.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>

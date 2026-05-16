@@ -82,10 +82,11 @@ const GovernancePage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Services</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            One Integrated Governance Program. <span className="text-gradient-gold">Three Layers. Continuously Operated.</span>
+            GRC Without Technical Enforcement{" "}
+            <span className="text-gradient-gold">Is Just Documentation.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Centience does not deliver governance frameworks and walk away. We build and operate the governance program — managing your infrastructure, governing your cybersecurity, and overseeing your AI environment as a single continuously enforced model.
+            Governance, risk, and compliance programs that exist only in documentation do not protect organizations. They protect the documentation. Centience builds governance programs that are technically enforced across your infrastructure, cybersecurity, and AI environment — and operates them continuously.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
             Every layer works together. Every control is technically enforced. Every piece of audit evidence is assembled in real time — not reconstructed before an exam.
@@ -168,8 +169,8 @@ const GovernancePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Ready to Establish Governed Operations?</h2>
-        <p className="text-lg opacity-70 mb-6">Start with a governance assessment to understand where your organization stands — and build the foundation for a continuously governed operation.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Governance Starts With an Assessment. Enforcement Starts With Centience.</h2>
+        <p className="text-lg opacity-70 mb-6">Start with a governance assessment to understand where your organization stands — and build the foundation for a continuously governed operation. Results delivered within 5 business days.</p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>
           <span>✓ Results within 5 business days</span>

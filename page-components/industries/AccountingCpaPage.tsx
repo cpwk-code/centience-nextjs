@@ -34,7 +34,7 @@ const AccountingCpaPage = () => (
             AI Is Transforming Tax and Audit Practice. <span className="text-gradient-gold">Governance Needs to Keep Pace.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Accounting and CPA firms hold some of the most sensitive financial data in existence — tax returns, financial statements, business valuations, and confidential client records. AI tools are now used for tax research, document analysis, audit sampling, and financial modeling. Without governance frameworks, firms face professional liability, client confidentiality risk, and potential independence issues.
+            Accounting and CPA firms that govern their technology environment effectively — technically enforced client data controls, AI oversight in tax and audit workflows, and vendor risk management — protect client confidentiality, reduce professional liability, and demonstrate to clients and regulators that their obligations are being met. AI adoption in accounting practice is accelerating. Governance needs to keep pace.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
             Centience governs the technology environment where that data lives — managing infrastructure, cybersecurity, and AI oversight as a single continuously enforced program aligned to AICPA standards and the FTC Safeguards Rule.
@@ -56,9 +56,9 @@ const AccountingCpaPage = () => (
       <div className="container mx-auto">
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Challenge</p></div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">What Makes Accounting Firm Governance Uniquely Complex</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">Accounting firms operate under overlapping professional and regulatory obligations. The AICPA establishes professional standards. State boards impose licensing and ethical requirements. Tax practice brings IRS obligations. And firms providing attest services face specific independence and confidentiality requirements that extend to their technology environments.</p>
-          <p className="text-muted-foreground leading-relaxed">The rapid adoption of AI tools for tax preparation, audit procedures, and financial analysis has introduced a new layer of governance complexity — one that most firms are managing informally, if at all.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">AI Is Transforming Accounting Practice. Governance Is the Competitive Advantage.</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">Firms that govern AI adoption effectively — with documented oversight, independence risk assessment, and client data controls — can deploy AI tools across tax and audit workflows with confidence. They move faster, serve clients better, and demonstrate professional responsibility at the technical level.</p>
+          <p className="text-muted-foreground leading-relaxed">The rapid adoption of AI tools for tax preparation, audit procedures, and financial analysis has introduced a new layer of governance complexity — one that most firms are managing informally, if at all. Centience closes that gap.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {pressurePoints.map((p, i) => (
@@ -100,7 +100,7 @@ const AccountingCpaPage = () => (
 
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">Client financial data is your highest liability. Is your technology governance keeping pace with AI adoption in your practice?</h2>
+        <h2 className="text-2xl md:text-3xl font-display font-bold mb-5">AI Is Transforming Tax and Audit Practice. Governance Needs to Keep Pace.</h2>
         <p className="text-lg opacity-70 mb-8">Our accounting firm governance assessment identifies client data exposure, AI governance gaps in tax and audit workflows, and technology vulnerabilities — and delivers a prioritized roadmap to AICPA and regulatory readiness.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>

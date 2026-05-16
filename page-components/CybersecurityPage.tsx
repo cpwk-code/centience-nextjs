@@ -35,13 +35,14 @@ const CybersecurityPage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Security</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Cybersecurity Governance That Operates <span className="text-gradient-gold">Continuously — Not Just When Something Goes Wrong.</span>
+            Cybersecurity Governance That{" "}
+            <span className="text-gradient-gold">Holds Up Under Examination.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Most organizations treat cybersecurity as a collection of tools and alerts. Centience treats it as a governance discipline — continuously monitored, technically enforced at the infrastructure level, and documented to satisfy the regulators who are now examining it directly.
+            A cybersecurity incident is a governance failure before it is a technical one. Organizations that govern their cybersecurity environment continuously — not just before an audit — are the ones that recover faster, satisfy regulators more completely, and avoid the reputational damage that follows a disclosed breach.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Because we operate your infrastructure, we do not advise on controls. We implement them, verify them, and maintain the evidence that proves they are running.
+            Centience delivers cybersecurity governance that is technically enforced at the infrastructure level — not documented in a policy binder and reviewed annually.
           </p>
           <Button variant="cta" size="xl" asChild>
             <Link href="/ai-governance-risk-assessment">Book Your Security Assessment <ArrowRight size={16} /></Link>
@@ -133,7 +134,7 @@ const CybersecurityPage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Security Governance That Holds Up When It Matters.</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Cybersecurity Governance That Holds Up Under Examination.</h2>
         <p className="text-lg opacity-70 mb-6">Start with a security assessment to evaluate your current posture and build a governance roadmap for structured, continuously enforced cybersecurity oversight.</p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>

@@ -44,10 +44,11 @@ const AIGovernancePage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">AI Oversight</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Deploy AI With Confidence. <span className="text-gradient-gold">Govern It From Day One.</span>
+            AI Governance Is Not a Policy.{" "}
+            <span className="text-gradient-gold">It Is an Operational Obligation.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Regulated organizations are under pressure to adopt AI — to increase productivity, reduce manual workload, accelerate client service, and compete with firms that are already moving. The question is no longer whether to adopt AI. It is how to adopt it without creating the governance gaps that regulators, clients, and auditors will eventually find.
+            Regulated organizations that govern AI effectively do not just avoid enforcement risk — they gain a measurable operational advantage. They deploy AI faster, adopt new tools with confidence, and demonstrate to regulators and clients that their AI environment is supervised. The question is not whether to govern AI. It is whether your governance program is technically enforced or just documented.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-6 max-w-2xl">
             Centience discovers AI usage across your organization, builds governance frameworks aligned to your regulatory requirements, and monitors compliance continuously — technically, not theoretically.
@@ -179,7 +180,7 @@ const AIGovernancePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Know What AI Is Running Across Your Organization. Govern It Before Regulators Ask.</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Governed AI Is Not a Constraint on Modernization. It Is What Makes Modernization Sustainable.</h2>
         <p className="text-lg opacity-70 mb-6">Our AI governance assessment identifies AI usage across your environment, evaluates governance gaps, and delivers a prioritized roadmap to regulatory readiness — typically within 5 business days.</p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>

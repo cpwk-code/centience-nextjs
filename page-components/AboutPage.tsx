@@ -118,8 +118,11 @@ const AboutPage = () => (
             Built From 20 Years Inside{" "}
             <span className="text-gradient-gold">Regulated Organizations</span>
           </h1>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
+          <p className="text-lg leading-relaxed opacity-70 mb-6 max-w-2xl">
             Centience is the evolution of two decades of hands-on technical work inside the most compliance-sensitive organizations in the country — financial services firms, healthcare organizations, and law firms that could not afford to get it wrong.
+          </p>
+          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
+            We have governed technology environments through FINRA examinations, HIPAA audits, SEC reviews, and the transition from traditional IT to AI-enabled operations. Every engagement has reinforced the same conviction: governance has to be technically enforced, not theoretically documented.
           </p>
           <Button variant="cta" size="xl" asChild>
             <Link href="/ai-governance-risk-assessment">
@@ -448,10 +451,12 @@ const AboutPage = () => (
         transition={{ duration: 0.6 }}
         className="container mx-auto text-center max-w-3xl relative z-10"
       >
-        <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 leading-tight italic">
-          "Regulators don't accept 'we're working on it.' Start with a governance assessment and know
-          exactly where you stand."
+        <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 leading-tight">
+          Start With a Governance Assessment. Know Exactly Where You Stand.
         </h2>
+        <p className="text-lg opacity-60 leading-relaxed mb-6 max-w-2xl mx-auto">
+          Most assessments complete within 5 business days. You leave with a clear, prioritized roadmap regardless of whether you engage further.
+        </p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>
           <span>✓ Results delivered within 5 business days</span>

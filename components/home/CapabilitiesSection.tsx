@@ -22,7 +22,7 @@ const lifecycle = [
     number: "03",
     label: "OPERATE",
     title: "Ongoing Governance Program",
-    description: "The roadmap transitions into a continuously managed governance program. Monitoring, evidence collection, AI oversight, and regulatory readiness — maintained as an ongoing function that evolves with your organization.",
+    description: "The roadmap transitions into a continuously managed governance program. Monitoring, evidence collection, AI oversight, and regulatory readiness — maintained as an ongoing function, not a one-time engagement.",
   },
 ];
 
@@ -122,7 +122,7 @@ const CapabilitiesSection = () => (
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-6 mb-10">
         {lifecycle.map((step, i) => (
           <motion.div
             key={step.label}
@@ -139,6 +139,9 @@ const CapabilitiesSection = () => (
           </motion.div>
         ))}
       </div>
+      <blockquote className="border-l-2 border-accent pl-6 italic text-primary font-medium text-lg">
+        &ldquo;This is where most firms stop — at the assessment. This is where Centience starts.&rdquo;
+      </blockquote>
     </div>
   </section>
 );

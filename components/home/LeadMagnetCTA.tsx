@@ -23,10 +23,10 @@ const LeadMagnetCTA = () => (
       </div>
 
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight">
-        SEC, FINRA, and HIPAA regulators are now scrutinizing AI governance. Most firms aren't ready.
+        Know Where You Stand Before Regulators Ask.
       </h2>
       <p className="text-lg opacity-60 leading-relaxed mb-8 max-w-2xl mx-auto">
-        Our assessment identifies AI usage across your organization, evaluates governance gaps, and delivers a prioritized roadmap to regulatory readiness — before your next exam. Most assessments complete within 5 business days.
+        Our governance assessment identifies AI usage across your organization, evaluates governance gaps, and delivers a prioritized roadmap — before your next exam. Most assessments complete within 5 business days. You leave with a clear picture of where you stand regardless of whether you engage further.
       </p>
 
       <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm opacity-50 mb-12">

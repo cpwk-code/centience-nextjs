@@ -9,7 +9,7 @@ const layers = [
     label: "FOUNDATION",
     title: "Managed Infrastructure",
     subtitle: "Managed Infrastructure",
-    description: "Governance begins with control over the infrastructure running the organization. Centience manages workstations, servers, cloud environments, endpoints, and disaster recovery frameworks — ensuring systems remain secure, resilient, and compliant.",
+    description: "What it enables: Operational continuity, resilient systems, and the technical foundation that makes every governance layer above it enforceable. You cannot govern what you do not control.",
     items: [
       "Managed workstations, servers, and cloud environments",
       "Endpoint detection and continuous monitoring",
@@ -22,7 +22,7 @@ const layers = [
     label: "OVERSIGHT",
     title: "Cybersecurity Governance",
     subtitle: "Security Oversight",
-    description: "Cybersecurity is a governance responsibility requiring continuous oversight. Centience provides cybersecurity governance programs that monitor security posture, evaluate risks, and ensure organizations maintain regulatory readiness — continuously, not just at audit time.",
+    description: "What it enables: Continuous security posture visibility, vendor risk control, and incident readiness — so a security event does not become a regulatory event.",
     items: [
       "Security posture monitoring and oversight",
       "Vulnerability management and remediation",
@@ -36,7 +36,7 @@ const layers = [
     label: "STRATEGIC LAYER",
     title: "AI Governance",
     subtitle: "Strategic Governance",
-    description: "AI governance is the strategic layer of the Centience model. We discover AI usage, build governance frameworks, implement approved AI tools, and manage ongoing AI oversight — ensuring every AI deployment is compliant, documented, and defensible to regulators.",
+    description: "What it enables: Confident AI adoption with documented oversight — so your organization can deploy, scale, and benefit from AI without creating the governance gaps regulators are now actively examining.",
     items: [
       "AI usage discovery and shadow AI identification",
       "AI governance framework development (NIST AI RMF, ISO 42001)",
@@ -68,7 +68,7 @@ const FrameworkSection = () => (
           The Centience Governance Stack
         </h2>
         <p className="opacity-60 leading-relaxed">
-          Centience structures AI and technology governance as a three-layer stack. Each layer is technically enforced, continuously monitored, and operationally managed — not delivered as a one-time assessment or policy document.
+          Three integrated governance programs — not separate engagements delivered by separate vendors. One accountable firm managing every layer of your technology environment as a single ongoing program.
         </p>
       </div>
 

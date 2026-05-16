@@ -5,9 +5,9 @@ import { ArrowRight, Server, Lock, BarChart3, Brain } from "lucide-react";
 
 const stats = [
   { value: "20+", label: "Years Governing Regulated IT" },
-  { value: "5,000+", label: "Compliance Assessments Delivered" },
-  { value: "99.9%", label: "Managed Infrastructure Uptime" },
+  { value: "1,000+", label: "Organizations Served" },
   { value: "100%", label: "Audit Success Rate — SEC, FINRA & HIPAA" },
+  { value: "10+", label: "Year Average Client Relationship" },
 ];
 
 const HeroSection = () => (
@@ -33,17 +33,17 @@ const HeroSection = () => (
           <div className="flex items-center gap-3 mb-8">
             <div className="gold-line" />
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              Governed AI Operations
+              Continuous AI &amp; Technology Governance
             </p>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-extrabold leading-[1.1] mb-6">
-            AI Governance for Regulated Organizations —{" "}
+            Govern Your AI. Modernize With Confidence.{" "}
             <span className="text-gradient-gold">Technically Enforced. Continuously Managed.</span>
           </h1>
 
           <p className="text-lg leading-relaxed mb-3 opacity-70">
-            Regulators are not asking whether you have an AI policy. They are asking whether your AI governance is technically enforced. Centience builds and operates AI and technology governance programs for regulated organizations — combining managed infrastructure, cybersecurity oversight, and AI governance into a single continuously enforced model.
+            Regulated organizations that get AI governance right don’t just avoid enforcement risk — they move faster, operate more efficiently, and adopt new technology with confidence their competitors can’t match. Centience builds and operates your governance program as a single continuously enforced model — combining AI oversight, cybersecurity governance, and managed infrastructure.
           </p>
 
           <p className="text-sm leading-relaxed mb-10 opacity-50 font-semibold uppercase tracking-wider">

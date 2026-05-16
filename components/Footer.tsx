@@ -47,7 +47,7 @@ const Footer = () => {
               <img src={centienceLogoDark.src} alt="Centience" className="h-10 sm:h-11 lg:h-12 w-auto object-contain" />
             </Link>
             <p className="text-sm text-warm-white/50 leading-relaxed mb-6 max-w-xs">
-              Technology governance for regulated organizations — built on managed infrastructure, enforced through continuous oversight.
+              Continuous AI & Technology Governance for regulated organizations — built on managed infrastructure, technically enforced, continuously operated.
             </p>
             <div className="space-y-3 mb-6">
               <a href="mailto:hello@centience.ai" className="flex items-center gap-2 text-sm text-warm-white/50 hover:text-gold transition-colors">
