@@ -93,8 +93,8 @@ const ProblemSection = () => (
             { stat: "$2.3M", label: "FINRA fines in 2025 for automated monitoring and off-channel communications failures" },
             { stat: "$90M", label: "Two Sigma paid to SEC for failing to address known system vulnerabilities" },
           ].map((item) => (
-            <div key={item.stat} className="card-premium p-6 flex items-start gap-4">
-              <p className="text-2xl font-display font-bold text-gold shrink-0">{item.stat}</p>
+            <div key={item.stat} className="card-premium p-6 flex items-center gap-4 min-h-[96px]">
+              <p className="text-2xl font-display font-bold text-gold shrink-0 w-[88px]">{item.stat}</p>
               <p className="text-sm text-muted-foreground leading-relaxed">{item.label}</p>
             </div>
           ))}
