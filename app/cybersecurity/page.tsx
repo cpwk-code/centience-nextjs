@@ -32,6 +32,34 @@ export const metadata: Metadata = {
   },
 };
 
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://centience.ai/cybersecurity/#service",
+  "name": "Cybersecurity Governance",
+  "url": "https://centience.ai/cybersecurity",
+  "description": "Centience Cybersecurity Governance — continuous cybersecurity oversight, vulnerability management, incident response, and examination-ready evidence for regulated organizations.",
+  "provider": { "@id": "https://centience.ai/#organization" },
+  "areaServed": "Nationwide"
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://centience.ai" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://centience.ai/governance" },
+    { "@type": "ListItem", "position": 3, "name": "Cybersecurity", "item": "https://centience.ai/cybersecurity" }
+  ]
+};
+
 export default function Page() {
-  return <CybersecurityPage />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <CybersecurityPage />
+    </>
+  );
 }

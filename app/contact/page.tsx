@@ -77,6 +77,58 @@ export default function Page() {
   return (
     <>
       {/* ── Structured Data (JSON-LD) ─────────────────────────────────── */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://centience.ai/#location-ny",
+  "name": "Centience",
+  "url": "https://centience.ai",
+  "telephone": "+18779457177",
+  "email": "hello@centience.ai",
+  "priceRange": "$$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1350 Ave of the Americas, Fl 3",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10019",
+    "addressCountry": "US"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 40.7614, "longitude": -73.9776},
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "serviceArea": ["New York City", "Manhattan", "Westchester County", "White Plains NY", "Greenwich CT", "Stamford CT", "Westport CT", "Norwalk CT"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Governance Programs",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Governance Program"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity Governance"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Infrastructure Governance"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Governance Assessment"}}
+    ]
+  }
+}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://centience.ai/#location-fl",
+  "name": "Centience — South Florida",
+  "url": "https://centience.ai",
+  "telephone": "+18779457177",
+  "email": "hello@centience.ai",
+  "priceRange": "$$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "200 S. Biscayne Blvd.",
+    "addressLocality": "Miami",
+    "addressRegion": "FL",
+    "postalCode": "33131",
+    "addressCountry": "US"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 25.7691, "longitude": -80.1873},
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "serviceArea": ["Miami", "Palm Beach County", "Palm Beach Gardens", "Broward County", "Fort Lauderdale"]
+}) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

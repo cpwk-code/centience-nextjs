@@ -25,6 +25,7 @@ const footerLinks = {
     { label: "Contact", href: "/contact" },
     { label: "Insights", href: "/insights" },
     { label: "Articles", href: "/insights/articles" },
+    { label: "Locations", href: "/locations" },
   ],
 };
 
@@ -44,7 +45,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
-              <img src={centienceLogoDark.src} alt="Centience" className="h-10 sm:h-11 lg:h-12 w-auto object-contain" />
+              <img src={centienceLogoDark.src} alt="Centience" className="h-10 sm:h-11 lg:h-12 w-auto object-contain" width={180} height={48} loading="lazy" />
             </Link>
             <p className="text-sm text-warm-white/50 leading-relaxed mb-6 max-w-xs">
               Continuous AI & Technology Governance for regulated organizations — built on managed infrastructure, technically enforced, continuously operated.

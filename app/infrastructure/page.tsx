@@ -32,6 +32,34 @@ export const metadata: Metadata = {
   },
 };
 
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://centience.ai/infrastructure/#service",
+  "name": "Infrastructure Governance",
+  "url": "https://centience.ai/infrastructure",
+  "description": "Centience Infrastructure Governance — managed infrastructure, 99.9% uptime, 24/7 monitoring, and the technical foundation that makes governance programs enforceable.",
+  "provider": { "@id": "https://centience.ai/#organization" },
+  "areaServed": "Nationwide"
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://centience.ai" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://centience.ai/governance" },
+    { "@type": "ListItem", "position": 3, "name": "Infrastructure", "item": "https://centience.ai/infrastructure" }
+  ]
+};
+
 export default function Page() {
-  return <InfrastructurePage />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <InfrastructurePage />
+    </>
+  );
 }

@@ -32,6 +32,34 @@ export const metadata: Metadata = {
   },
 };
 
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://centience.ai/ai-governance/#service",
+  "name": "AI Governance Program",
+  "url": "https://centience.ai/ai-governance",
+  "description": "Centience AI Governance Program — continuous AI oversight, policy enforcement, model monitoring, and audit-ready documentation for regulated organizations deploying AI.",
+  "provider": { "@id": "https://centience.ai/#organization" },
+  "areaServed": "Nationwide"
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://centience.ai" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://centience.ai/governance" },
+    { "@type": "ListItem", "position": 3, "name": "AI Governance", "item": "https://centience.ai/ai-governance" }
+  ]
+};
+
 export default function Page() {
-  return <AIGovernancePage />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <AIGovernancePage />
+    </>
+  );
 }

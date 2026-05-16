@@ -32,6 +32,64 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://centience.ai/#organization",
+  "name": "Centience",
+  "url": "https://centience.ai",
+  "logo": "https://centience.ai/assets/logo.png",
+  "description": "Continuous AI and technology governance for regulated organizations — combining managed infrastructure, cybersecurity oversight, and AI governance into a single continuously enforced model.",
+  "telephone": "+18779457177",
+  "email": "hello@centience.ai",
+  "foundingDate": "2026",
+  "founder": {
+    "@type": "Person",
+    "name": "Orville Matias",
+    "jobTitle": "Founder & CEO",
+    "sameAs": "https://www.linkedin.com/in/orville-matias-3b93393/"
+  },
+  "areaServed": [
+    "New York City", "Manhattan", "Westchester County",
+    "Greenwich CT", "Stamford CT", "Westport CT", "Norwalk CT",
+    "Miami", "Palm Beach County", "Broward County", "Nationwide"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/centience-ai/",
+    "https://www.youtube.com/@Centience"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://centience.ai/#website",
+  "url": "https://centience.ai",
+  "name": "Centience",
+  "description": "Continuous AI and technology governance for regulated organizations.",
+  "publisher": { "@id": "https://centience.ai/#organization" },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://centience.ai/?s={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+
 export default function Page() {
-  return <Index />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <Index />
+    </>
+  );
 }

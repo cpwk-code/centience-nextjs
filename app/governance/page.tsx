@@ -32,6 +32,34 @@ export const metadata: Metadata = {
   },
 };
 
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://centience.ai/governance/#service",
+  "name": "Technology Governance Programs",
+  "url": "https://centience.ai/governance",
+  "description": "Centience Technology Governance Programs — continuous GRC, AI governance, and cybersecurity governance for regulated organizations. Three programs, one continuously enforced model.",
+  "provider": { "@id": "https://centience.ai/#organization" },
+  "areaServed": "Nationwide"
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://centience.ai" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://centience.ai/governance" },
+    { "@type": "ListItem", "position": 3, "name": "Governance", "item": "https://centience.ai/governance" }
+  ]
+};
+
 export default function Page() {
-  return <GovernancePage />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GovernancePage />
+    </>
+  );
 }

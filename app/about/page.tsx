@@ -32,6 +32,32 @@ export const metadata: Metadata = {
   },
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Orville Matias",
+  "jobTitle": "Founder & Chief Executive Officer",
+  "worksFor": { "@type": "Organization", "name": "Centience", "url": "https://centience.ai" },
+  "description": "Founder of Centience. Previously built OfficeSafe, a HIPAA compliance platform scaled to 5,000+ healthcare practices before acquisition by Rectangle Health. 20+ years governing regulated IT environments. 100% audit success rate.",
+  "knowsAbout": ["AI Governance", "SEC FINRA Compliance", "HIPAA", "Technology Governance", "Cybersecurity Governance", "NIST Cybersecurity Framework"],
+  "sameAs": "https://www.linkedin.com/in/orville-matias-3b93393/"
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://centience.ai" },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://centience.ai/about" }
+  ]
+};
+
 export default function Page() {
-  return <AboutPage />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <AboutPage />
+    </>
+  );
 }

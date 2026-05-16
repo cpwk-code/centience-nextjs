@@ -95,6 +95,13 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#0f172a" />
+        {/* Preconnect for performance — reduces DNS + TLS handshake latency */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://js.hcaptcha.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://newassets.hcaptcha.com" />
         <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>

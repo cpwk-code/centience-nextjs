@@ -26,6 +26,51 @@ const operationalAdvantages = [
 const CybersecurityPage = () => (
   <Layout>
     {/* Hero */}
+    {/* Related Industries — Internal Linking */}
+    <section className="py-16 bg-muted/50 border-t border-border">
+      <div className="container mx-auto">
+        <div className="max-w-4xl">
+          <h2 className="text-xl font-display font-bold text-primary mb-2">Industries We Serve</h2>
+          <p className="text-sm text-muted-foreground mb-8">Centience delivers continuous governance programs for regulated organizations across multiple industries.</p>
+          <div className="grid sm:grid-cols-3 gap-4 mb-8">
+            <a href="/industries/financial-services" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">Financial Services</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">SEC Reg S-P and FINRA cybersecurity examination readiness.</p>
+            </a>
+            <a href="/industries/healthcare" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">Healthcare</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">HIPAA Security Rule and OCR audit readiness.</p>
+            </a>
+            <a href="/industries/private-equity" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">Private Equity</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">Portfolio-level cybersecurity governance through exit.</p>
+            </a>
+          </div>
+          <div className="flex flex-wrap gap-4 items-center">
+            <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Related Programs:</span>
+              <a href="/ai-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> AI Governance Program
+              </a>
+              <a href="/governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Technology Governance Programs
+              </a>
+              <a href="/infrastructure" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Infrastructure Governance
+              </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section className="section-navy relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "var(--gradient-gold)" }} />
       <div className="container mx-auto relative z-10 pt-32 pb-20 lg:pt-40 lg:pb-28">

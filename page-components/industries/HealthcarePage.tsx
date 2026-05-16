@@ -120,6 +120,48 @@ const HealthcarePage = () => (
         </div>
       </div>
     </section>
+    {/* Related Services — Internal Linking */}
+    <section className="py-16 bg-muted/50 border-t border-border">
+      <div className="container mx-auto">
+        <div className="max-w-4xl">
+          <h2 className="text-xl font-display font-bold text-primary mb-2">Related Governance Programs</h2>
+          <p className="text-sm text-muted-foreground mb-8">Centience delivers continuous governance across three interconnected programs — each reinforcing the others.</p>
+          <div className="grid sm:grid-cols-3 gap-4 mb-8">
+            <a href="/ai-governance" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">AI Governance Program</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">HIPAA-aligned AI oversight for clinical AI tools, diagnostic systems, and administrative automation.</p>
+            </a>
+            <a href="/cybersecurity" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">Cybersecurity Governance</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">OCR audit readiness and continuous HIPAA Security Rule enforcement.</p>
+            </a>
+            <a href="/infrastructure" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">Infrastructure Governance</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">Managed infrastructure with 99.9% uptime and 24/7 monitoring for healthcare environments.</p>
+            </a>
+          </div>
+          <div className="flex flex-wrap gap-4 items-center">
+            <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Other Industries:</span>
+              <a href="/industries/accounting-cpa" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Accounting & CPA Firms
+              </a>
+              <a href="/industries/non-profit" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Non-Profit Organizations
+              </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
