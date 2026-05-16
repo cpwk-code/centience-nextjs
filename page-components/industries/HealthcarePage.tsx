@@ -38,14 +38,25 @@ const HealthcarePage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Healthcare</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            HIPAA-Compliant Technology Governance for Healthcare Organizations <span className="text-gradient-gold">Navigating AI Adoption</span>
+            HIPAA Compliance Is Not a Policy. <span className="text-gradient-gold">It Is a Technical Obligation.</span>
           </h1>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Healthcare organizations face a convergence of pressures: HIPAA enforcement is increasing, AI tools are being adopted across clinical and operational functions, and infrastructure complexity is growing. Centience delivers governance programs that manage the technical environment where patient data lives — ensuring compliance is enforced, not just documented.
+          <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
+            Healthcare organizations are deploying AI tools across clinical workflows, revenue cycle management, and patient communication — often without governance frameworks that assess privacy risk, accuracy bias, or regulatory exposure. HIPAA requires technically enforced safeguards. Most organizations have policies. Fewer have verified the controls are operating.
           </p>
-          <Button variant="cta" size="xl" asChild>
-            <Link href="/ai-governance-risk-assessment">Book Your Healthcare Governance Assessment <ArrowRight size={16} /></Link>
-          </Button>
+          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
+            Centience manages the infrastructure where patient data lives, governs the AI tools that touch it, and maintains the compliance documentation that proves it — continuously, not in response to an audit notice.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button variant="cta" size="xl" asChild>
+              <Link href="/ai-governance-risk-assessment">Book Your Healthcare Governance Assessment <ArrowRight size={16} /></Link>
+            </Button>
+          </div>
+          <p className="text-sm opacity-50 mt-5">
+            Or call us directly:{" "}
+            <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+              (877) 945-7177
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
@@ -110,6 +121,12 @@ const HealthcarePage = () => (
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> 100% audit success rate across all healthcare engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Healthcare Governance Assessment <ArrowRight size={16} /></Link></Button>
+        <p className="text-sm opacity-50 mt-5">
+          Or call us directly:{" "}
+          <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+            (877) 945-7177
+          </a>
+        </p>
       </div>
     </section>
   </Layout>

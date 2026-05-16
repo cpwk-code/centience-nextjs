@@ -7,17 +7,17 @@ const services = [
   {
     icon: Brain,
     title: "AI Governance",
-    description: "Structured AI governance oversight including AI usage discovery, governance framework development, vendor AI risk evaluation, AI security controls, and regulatory readiness monitoring.",
+    description: "Discover AI usage across your organization, build governance frameworks aligned to NIST AI RMF and ISO 42001, implement approved AI tools inside governed infrastructure, and monitor compliance continuously. Aligned to SEC, FINRA, and HIPAA requirements.",
   },
   {
     icon: Shield,
     title: "Cybersecurity Governance",
-    description: "Cybersecurity integrated into the broader governance program through security monitoring oversight, vulnerability management review, incident response governance, and vendor security evaluation.",
+    description: "Continuous security posture monitoring, vulnerability management, vendor and third-party risk evaluation, incident response governance, and compliance readiness documentation — technically enforced at the infrastructure level, not advisory.",
   },
   {
     icon: Server,
     title: "Infrastructure Governance",
-    description: "Infrastructure governance ensuring technology environments remain resilient and compliant, including architecture oversight, disaster recovery governance, cloud governance, and resilience monitoring.",
+    description: "Managed workstations, servers, cloud environments, and endpoints with 24/7 monitoring, defined SLAs, and disaster recovery governance. The technical foundation that makes every cybersecurity and AI governance layer above it enforceable.",
   },
 ];
 
@@ -30,10 +30,10 @@ const ResearchSection = () => (
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Governance Services</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Governance Across Every Domain
+          One Integrated Governance Program. Three Layers. Continuously Operated.
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Centience provides structured governance oversight across AI, cybersecurity, and infrastructure.
+          Centience does not deliver governance frameworks and walk away. We build and operate the governance program — managing your infrastructure, governing your cybersecurity, and overseeing your AI environment as a single continuously enforced model.
         </p>
       </div>
 
@@ -60,7 +60,7 @@ const ResearchSection = () => (
 
       <div className="text-center">
         <Button variant="cta-outline" size="lg" asChild>
-          <Link href="/governance">See All Services</Link>
+          <Link href="/governance">See All Governance Programs</Link>
         </Button>
       </div>
     </div>

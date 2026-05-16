@@ -31,12 +31,23 @@ const LawFirmsPage = () => (
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Law Firms</p></div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Technology Governance That Protects <span className="text-gradient-gold">Client Confidentiality</span> and Governs Legal AI Adoption
+            Client Confidentiality Is a Professional Obligation. <span className="text-gradient-gold">Technology Governance Is How You Enforce It.</span>
           </h1>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Law firms operate under ethical and regulatory obligations that make technology governance a professional responsibility — not just an IT function. Client confidentiality, attorney-client privilege, and state bar requirements demand technically enforced data controls. And the rapid adoption of AI tools in legal practice has introduced governance obligations that most firms are not yet equipped to address.
+          <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
+            Law firms hold sensitive client information across hundreds of matters. AI tools are being adopted for research, drafting, and document review without governance frameworks that assess confidentiality risk, privilege exposure, or professional responsibility implications.
           </p>
-          <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Law Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
+          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
+            Centience manages the technical environment where client data lives, governs the AI tools that touch it, and maintains the documentation that demonstrates your firm is meeting its professional responsibility obligations.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Law Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
+          </div>
+          <p className="text-sm opacity-50 mt-5">
+            Or call us directly:{" "}
+            <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+              (877) 945-7177
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
@@ -97,6 +108,12 @@ const LawFirmsPage = () => (
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> 100% audit success rate across all legal engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Law Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
+        <p className="text-sm opacity-50 mt-5">
+          Or call us directly:{" "}
+          <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+            (877) 945-7177
+          </a>
+        </p>
       </div>
     </section>
   </Layout>

@@ -8,31 +8,66 @@ import { ArrowRight, Shield, Server, Brain, Search, BookOpen, Cog, CheckCircle2 
 const services = [
   {
     icon: Server,
-    title: "Infrastructure Governance",
+    title: "Managed Infrastructure",
     href: "/infrastructure",
-    description: "Managed infrastructure platform with monitoring, resilience, endpoint management, and disaster recovery governance.",
-    items: ["Managed infrastructure platform", "Infrastructure monitoring & resilience", "Endpoint and cloud management", "Disaster recovery governance"],
+    description: "What it enables: Operational continuity, resilient systems, and the technical foundation that makes every governance layer above it enforceable. You cannot govern what you do not control.",
+    items: [
+      "Managed infrastructure platform — computers, networks, cloud, endpoints",
+      "Infrastructure monitoring and resilience with defined SLAs",
+      "Endpoint and cloud management with governance controls",
+      "Disaster recovery governance and business continuity",
+    ],
   },
   {
     icon: Shield,
     title: "Cybersecurity Governance",
     href: "/cybersecurity",
-    description: "Security posture monitoring, vulnerability oversight, vendor risk management, and compliance readiness integrated into the governance program.",
-    items: ["Security posture monitoring", "Vulnerability oversight", "Vendor risk management", "Compliance readiness"],
+    description: "What it enables: Continuous security posture visibility, vendor risk control, and incident readiness — so a security event does not become a regulatory event.",
+    items: [
+      "Security posture monitoring and gap analysis",
+      "Vulnerability management oversight",
+      "Vendor and third-party risk evaluation",
+      "Incident response governance",
+      "Compliance readiness monitoring",
+    ],
   },
   {
     icon: Brain,
-    title: "AI & Technology Governance",
+    title: "AI Governance",
     href: "/ai-governance",
-    description: "AI governance frameworks, technology risk oversight, regulatory readiness, and executive reporting for boards and leadership.",
-    items: ["AI governance frameworks", "Technology risk oversight", "Regulatory readiness", "Executive & board-level reporting"],
+    description: "What it enables: Confident AI adoption with documented oversight — so your organization can deploy, scale, and benefit from AI without creating the governance gaps regulators are now actively examining.",
+    items: [
+      "AI usage discovery and monitoring across your entire environment",
+      "AI governance framework development aligned to SEC, FINRA, and HIPAA",
+      "Technology risk oversight",
+      "Regulatory readiness for emerging AI frameworks",
+      "Board and executive-level AI governance reporting",
+    ],
   },
 ];
 
 const lifecycle = [
-  { icon: Search, number: "01", label: "ASSESS", title: "Governance Assessment", description: "Identify risks across infrastructure, cybersecurity posture, AI usage, and compliance readiness." },
-  { icon: BookOpen, number: "02", label: "PLAN", title: "Governance Roadmap", description: "Develop a governance roadmap outlining the steps required to establish structured oversight." },
-  { icon: Cog, number: "03", label: "OPERATE", title: "Ongoing Governance Program", description: "Transition into a continuous governance program with monitoring and regulatory readiness." },
+  {
+    icon: Search,
+    number: "01",
+    label: "ASSESS",
+    title: "Governance Assessment",
+    description: "We identify gaps across infrastructure, cybersecurity posture, AI usage, and compliance readiness. Most assessments complete within 5 business days. You receive a prioritized roadmap and a clear picture of where you stand.",
+  },
+  {
+    icon: BookOpen,
+    number: "02",
+    label: "PLAN",
+    title: "Governance Roadmap",
+    description: "A structured plan sequenced by risk priority and aligned to your regulatory calendar and technology roadmap. Specific to your organization — not a generic framework.",
+  },
+  {
+    icon: Cog,
+    number: "03",
+    label: "OPERATE",
+    title: "Ongoing Governance Program",
+    description: "The roadmap transitions into a continuously managed governance program. Monitoring, evidence collection, AI oversight, and regulatory readiness — maintained as an ongoing function that evolves with your organization.",
+  },
 ];
 
 const GovernancePage = () => (
@@ -47,14 +82,23 @@ const GovernancePage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Services</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Technology Governance for <span className="text-gradient-gold">Regulated Organizations</span>
+            One Integrated Governance Program. <span className="text-gradient-gold">Three Layers. Continuously Operated.</span>
           </h1>
+          <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
+            Centience does not deliver governance frameworks and walk away. We build and operate the governance program — managing your infrastructure, governing your cybersecurity, and overseeing your AI environment as a single continuously enforced model.
+          </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            A structured governance program spanning AI oversight, cybersecurity, and managed infrastructure — built to withstand regulatory scrutiny and support operational resilience.
+            Every layer works together. Every control is technically enforced. Every piece of audit evidence is assembled in real time — not reconstructed before an exam.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <Link href="/ai-governance-risk-assessment">Schedule Governance Assessment <ArrowRight size={16} /></Link>
+            <Link href="/ai-governance-risk-assessment">Book Your Governance Assessment <ArrowRight size={16} /></Link>
           </Button>
+          <p className="text-sm opacity-50 mt-5">
+            Or call us directly:{" "}
+            <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+              (877) 945-7177
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
@@ -65,10 +109,10 @@ const GovernancePage = () => (
         <div className="max-w-2xl mb-16">
           <div className="flex items-center gap-3 mb-4">
             <div className="gold-line" />
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Programs</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Program</p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Governance Programs</h2>
-          <p className="text-muted-foreground leading-relaxed">Three integrated governance programs covering every layer of the technology stack — from foundational infrastructure to strategic AI oversight.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Three Integrated Governance Programs. One Accountable Firm.</h2>
+          <p className="text-muted-foreground leading-relaxed">Technology governance at Centience is structured as a three-layer stack. Each layer is managed as part of a single ongoing program — not separate engagements delivered by separate vendors.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -79,7 +123,7 @@ const GovernancePage = () => (
                   <svc.icon size={20} />
                 </div>
                 <h3 className="font-display font-bold text-primary text-lg mb-3">{svc.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-5">{svc.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-5 italic">{svc.description}</p>
                 <ul className="space-y-2">
                   {svc.items.map((item) => (
                     <li key={item} className="text-sm text-muted-foreground flex items-start gap-2">
@@ -101,10 +145,11 @@ const GovernancePage = () => (
         <div className="max-w-2xl mb-16">
           <div className="flex items-center gap-3 mb-4">
             <div className="gold-line" />
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Governance Lifecycle</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">How We Start</p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Assessment → Roadmap → Program</h2>
-          <p className="text-muted-foreground leading-relaxed">Every engagement follows a structured lifecycle designed to move organizations from initial assessment through to an ongoing governance program.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Assessment → Roadmap → Ongoing Program</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">Every engagement follows a structured lifecycle — from initial assessment through to a continuously managed governance program. The assessment is the starting point, not the deliverable.</p>
+          <p className="text-muted-foreground leading-relaxed font-medium">This is where most firms stop — at the assessment. This is where Centience starts.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -123,11 +168,22 @@ const GovernancePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Ready to Establish Governance?</h2>
-        <p className="text-lg opacity-70 mb-10">Start with a governance assessment to understand where your organization stands and build a roadmap for structured oversight.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Ready to Establish Governed Operations?</h2>
+        <p className="text-lg opacity-70 mb-6">Start with a governance assessment to understand where your organization stands — and build the foundation for a continuously governed operation.</p>
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
+          <span>✓ No commitment required</span>
+          <span>✓ Results within 5 business days</span>
+          <span>✓ 100% audit success rate</span>
+        </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Schedule Governance Assessment <ArrowRight size={16} /></Link>
+          <Link href="/ai-governance-risk-assessment">Book Your Governance Assessment <ArrowRight size={16} /></Link>
         </Button>
+        <p className="text-sm opacity-50 mt-5">
+          Or call us directly:{" "}
+          <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+            (877) 945-7177
+          </a>
+        </p>
       </div>
     </section>
   </Layout>

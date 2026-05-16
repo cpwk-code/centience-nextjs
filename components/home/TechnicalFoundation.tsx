@@ -48,21 +48,16 @@ const TechnicalFoundation = () => (
           </p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Governance Enforced at the Infrastructure Level
+          Governance Without Technical Control Is Just a Policy Document.
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Most governance firms deliver frameworks, policies, and documentation. Centience delivers
-          governance that is technically enforced — because we own and operate the infrastructure it
-          runs on.
+          There are firms that write governance frameworks. There are firms that conduct compliance assessments. There are firms that manage IT infrastructure. Centience is the only firm that does all three — because effective governance requires control of the environment being governed.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          We manage the computers, networks, cloud environments, endpoints, and communication
-          systems inside your organization. That operational control is what makes our governance
-          programs enforceable — not advisory.
+          When Centience manages your infrastructure, your cybersecurity, and your AI environment, governance is not theoretical. Controls are technically enforced. Evidence is continuously collected. When regulators arrive, the documentation is already assembled.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          When a policy is in place, we can verify it. When a control is required, we can implement
-          it. When an auditor requests evidence, we have already assembled it.
+          That is why Centience maintains a 100% audit success rate across all client engagements — and why our average client relationship exceeds 10 years.
         </p>
       </div>
 
@@ -101,7 +96,7 @@ const TechnicalFoundation = () => (
         </div>
         <div className="text-center mt-10">
           <Button variant="cta" size="xl" asChild>
-            <Link href="/governance">
+            <Link href="/ai-governance">
               See How It Works <ArrowRight size={16} />
             </Link>
           </Button>

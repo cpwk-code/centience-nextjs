@@ -82,12 +82,12 @@ const capabilities = [
 
 const pressurePoints = [
   {
-    title: "SEC AI Disclosure and Governance Guidance",
-    body: "The SEC has issued guidance on AI use in investment management and advisory functions. Firms using AI tools — for any purpose — face increasing obligations to disclose, monitor, and govern AI usage. Most firms have not yet inventoried what AI tools are in use across their organization.",
+    title: "SEC AI Examination Priorities",
+    body: "The SEC's FY2026 examination priorities explicitly flag AI technologies and automated investment tools as primary focus areas for broker-dealers and investment advisers. Firms using AI tools face obligations to disclose, monitor, and govern AI usage. Most firms have not yet inventoried what AI tools are in use across their organization.",
   },
   {
-    title: "FINRA Technology Governance Expectations",
-    body: "FINRA examinations now assess technology governance as a component of supervisory systems. Broker-dealers must demonstrate that technology controls — including cybersecurity, data access, and communication supervision — are technically enforced, not just documented.",
+    title: "FINRA Generative AI Governance",
+    body: "FINRA's 2026 Annual Regulatory Oversight Report introduced a dedicated Generative AI section for the first time — requiring documented governance over AI use cases, model risks, vendor oversight, and AI-enabled communications capture. Broker-dealers must demonstrate that technology controls are technically enforced, not just documented.",
   },
   {
     title: "Communication Compliance",
@@ -116,14 +116,25 @@ const FinancialServicesPage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Financial Services</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Technology Governance Built for <span className="text-gradient-gold">SEC, FINRA, and State Regulatory Requirements</span>
+            Examination Confidence Starts With <span className="text-gradient-gold">Governance That Is Actually Enforced.</span>
           </h1>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Financial services firms face the most demanding regulatory technology requirements of any industry. SEC examinations, FINRA inspections, and state-level oversight all require demonstrable governance controls — not documentation that governance is planned. Centience delivers governance programs that are technically enforced across your entire technology environment.
+          <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
+            Broker-dealers, RIAs, and wealth management firms operate under the most demanding regulatory technology requirements of any industry. SEC examinations, FINRA inspections, and state-level oversight all require demonstrable governance controls — not documentation that governance is planned.
           </p>
-          <Button variant="cta" size="xl" asChild>
-            <Link href="/ai-governance-risk-assessment">Book Your Financial Services Governance Assessment <ArrowRight size={16} /></Link>
-          </Button>
+          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
+            Centience delivers governance programs that are technically enforced across your entire technology environment — managed infrastructure, cybersecurity oversight, AI governance, and communication compliance — as a single continuously operated program.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button variant="cta" size="xl" asChild>
+              <Link href="/ai-governance-risk-assessment">Book Your Financial Services Assessment <ArrowRight size={16} /></Link>
+            </Button>
+          </div>
+          <p className="text-sm opacity-50 mt-5">
+            Or call us directly:{" "}
+            <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+              (877) 945-7177
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
@@ -264,6 +275,12 @@ const FinancialServicesPage = () => (
         <Button variant="cta" size="xl" asChild>
           <Link href="/ai-governance-risk-assessment">Book Your Financial Services Assessment <ArrowRight size={16} /></Link>
         </Button>
+        <p className="text-sm opacity-50 mt-5">
+          Or call us directly:{" "}
+          <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+            (877) 945-7177
+          </a>
+        </p>
       </div>
     </section>
   </Layout>

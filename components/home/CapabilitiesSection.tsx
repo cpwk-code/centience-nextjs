@@ -8,34 +8,34 @@ const lifecycle = [
     number: "01",
     label: "ASSESS",
     title: "Governance Assessment",
-    description: "Organizations begin with a governance assessment identifying risks across infrastructure, cybersecurity posture, AI usage, and compliance readiness.",
+    description: "We identify gaps across infrastructure, cybersecurity posture, AI usage, and compliance readiness. Most assessments complete within 5 business days. You receive a prioritized roadmap and a clear picture of where you stand.",
   },
   {
     icon: BookOpen,
     number: "02",
     label: "PLAN",
     title: "Governance Roadmap",
-    description: "Following the assessment, Centience develops a governance roadmap outlining the steps required to establish structured oversight.",
+    description: "A structured plan sequenced by risk priority and aligned to your regulatory calendar and technology roadmap. Specific to your organization — not a generic framework.",
   },
   {
     icon: Cog,
     number: "03",
     label: "OPERATE",
     title: "Ongoing Governance Program",
-    description: "The roadmap transitions into an ongoing governance program providing continuous monitoring and regulatory readiness.",
+    description: "The roadmap transitions into a continuously managed governance program. Monitoring, evidence collection, AI oversight, and regulatory readiness — maintained as an ongoing function that evolves with your organization.",
   },
 ];
 
 const programs = [
   {
     icon: Server,
-    title: "Infrastructure Governance",
+    title: "Managed Infrastructure",
     tag: "Foundation",
     items: [
-      "Managed infrastructure platform",
-      "Infrastructure monitoring and resilience",
-      "Endpoint and cloud management",
-      "Disaster recovery governance",
+      "Managed workstations, servers, and cloud environments",
+      "Endpoint detection and continuous monitoring",
+      "Disaster recovery and business continuity governance",
+      "Infrastructure resilience and uptime management",
     ],
   },
   {
@@ -43,21 +43,21 @@ const programs = [
     title: "Cybersecurity Governance",
     tag: "Oversight",
     items: [
-      "Security posture monitoring",
-      "Vulnerability oversight",
-      "Vendor risk management",
-      "Compliance readiness",
+      "Security posture monitoring and oversight",
+      "Vulnerability management and remediation",
+      "Vendor and third-party risk evaluation",
+      "Compliance readiness monitoring",
     ],
   },
   {
     icon: Brain,
-    title: "AI & Technology Governance",
+    title: "AI Governance",
     tag: "Strategic Layer",
     items: [
-      "AI governance frameworks",
-      "Technology risk oversight",
-      "Regulatory readiness",
-      "Executive and board-level reporting",
+      "AI usage discovery and shadow AI identification",
+      "AI governance framework development (NIST AI RMF, ISO 42001)",
+      "Ongoing AI monitoring and regulatory readiness",
+      "Board-level AI governance reporting",
     ],
   },
 ];
@@ -72,8 +72,11 @@ const CapabilitiesSection = () => (
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Programs</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Governance Programs
+          Three Integrated Governance Programs. One Accountable Firm.
         </h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Technology governance at Centience is structured as a three-layer stack. Each layer is managed as part of a single ongoing program — not separate engagements delivered by separate vendors.
+        </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6 mb-24">
@@ -112,8 +115,11 @@ const CapabilitiesSection = () => (
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Governance Lifecycle</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Assessment → Roadmap → Program
+          Assessment → Roadmap → Ongoing Program
         </h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Every engagement follows a structured lifecycle — from initial assessment through to a continuously managed governance program. This is where most firms stop — at the assessment. This is where Centience starts.
+        </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">

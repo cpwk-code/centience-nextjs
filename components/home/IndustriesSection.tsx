@@ -3,12 +3,12 @@ import { Building2, Heart, Scale, Briefcase, Calculator, HandHeart, ArrowUpRight
 import { motion } from "framer-motion";
 
 const industries = [
-  { icon: Calculator, title: "Accounting & CPA", description: "Financial data governance and AICPA readiness", href: "/industries/accounting-cpa" },
-  { icon: Building2, title: "Financial Services", description: "SEC, FINRA, and state regulatory alignment", href: "/industries/financial-services" },
-  { icon: Heart, title: "Healthcare", description: "HIPAA-compliant governance and AI oversight", href: "/industries/healthcare" },
-  { icon: Scale, title: "Law Firms", description: "Client data protection and legal AI governance", href: "/industries/law-firms" },
-  { icon: HandHeart, title: "Non-Profit", description: "Data governance and compliance for mission-driven organizations", href: "/industries/non-profit" },
-  { icon: Briefcase, title: "Private Equity", description: "Portfolio-level governance and oversight", href: "/industries/private-equity" },
+  { icon: Calculator, title: "Accounting & CPA", description: "AI governance for tax and audit workflows. AICPA standards, FTC Safeguards Rule, and client data protection.", href: "/industries/accounting-cpa" },
+  { icon: Building2, title: "Financial Services", description: "Examination confidence for broker-dealers, RIAs, and wealth managers. SEC, FINRA, and state regulatory alignment.", href: "/industries/financial-services" },
+  { icon: Heart, title: "Healthcare", description: "HIPAA-compliant governance and AI oversight for clinical and operational environments. OfficeSafe heritage.", href: "/industries/healthcare" },
+  { icon: Scale, title: "Law Firms", description: "Client confidentiality governance and legal AI oversight. ABA and state bar professional responsibility alignment.", href: "/industries/law-firms" },
+  { icon: HandHeart, title: "Non-Profit", description: "Donor trust protection, federal grant compliance, and AI governance scaled for non-profit organizations.", href: "/industries/non-profit" },
+  { icon: Briefcase, title: "Private Equity", description: "Portfolio-level governance from hold period through exit. SEC examination readiness for registered PE firms.", href: "/industries/private-equity" },
 ];
 
 const IndustriesSection = () => (

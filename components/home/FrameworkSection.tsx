@@ -7,14 +7,14 @@ const layers = [
   {
     icon: Server,
     label: "FOUNDATION",
-    title: "Infrastructure Governance",
+    title: "Managed Infrastructure",
     subtitle: "Managed Infrastructure",
-    description: "Technology governance begins with control over the infrastructure running the organization. Centience provides managed infrastructure governance to ensure systems, endpoints, cloud environments, and disaster recovery frameworks remain secure, resilient, and compliant.",
+    description: "Governance begins with control over the infrastructure running the organization. Centience manages workstations, servers, cloud environments, endpoints, and disaster recovery frameworks — ensuring systems remain secure, resilient, and compliant.",
     items: [
-      "Managed infrastructure platform",
-      "Infrastructure monitoring and resilience",
-      "Endpoint and cloud management",
-      "Disaster recovery governance",
+      "Managed workstations, servers, and cloud environments",
+      "Endpoint detection and continuous monitoring",
+      "Disaster recovery and business continuity governance",
+      "Infrastructure resilience and uptime management",
     ],
   },
   {
@@ -22,10 +22,10 @@ const layers = [
     label: "OVERSIGHT",
     title: "Cybersecurity Governance",
     subtitle: "Security Oversight",
-    description: "Cybersecurity is a governance responsibility requiring continuous oversight. Centience provides cybersecurity governance programs that monitor security posture, evaluate risks, and ensure organizations maintain regulatory readiness.",
+    description: "Cybersecurity is a governance responsibility requiring continuous oversight. Centience provides cybersecurity governance programs that monitor security posture, evaluate risks, and ensure organizations maintain regulatory readiness — continuously, not just at audit time.",
     items: [
-      "Security posture monitoring",
-      "Vulnerability management oversight",
+      "Security posture monitoring and oversight",
+      "Vulnerability management and remediation",
       "Vendor and third-party risk evaluation",
       "Incident response governance",
       "Compliance readiness monitoring",
@@ -34,15 +34,15 @@ const layers = [
   {
     icon: Brain,
     label: "STRATEGIC LAYER",
-    title: "AI & Technology Governance",
+    title: "AI Governance",
     subtitle: "Strategic Governance",
-    description: "As organizations adopt AI tools and advanced technologies, governance becomes critical to manage risk and regulatory exposure. Centience provides AI and technology governance frameworks ensuring AI usage, infrastructure systems, and data environments remain compliant and secure.",
+    description: "AI governance is the strategic layer of the Centience model. We discover AI usage, build governance frameworks, implement approved AI tools, and manage ongoing AI oversight — ensuring every AI deployment is compliant, documented, and defensible to regulators.",
     items: [
-      "AI usage discovery and monitoring",
-      "AI governance framework development",
-      "Technology risk oversight",
-      "Regulatory readiness for emerging AI regulations",
-      "Board-level technology governance reporting",
+      "AI usage discovery and shadow AI identification",
+      "AI governance framework development (NIST AI RMF, ISO 42001)",
+      "AI implementation inside governed infrastructure",
+      "Ongoing AI monitoring and regulatory readiness",
+      "Board-level AI governance reporting",
     ],
   },
 ];
@@ -68,7 +68,7 @@ const FrameworkSection = () => (
           The Centience Governance Stack
         </h2>
         <p className="opacity-60 leading-relaxed">
-          Technology governance at Centience is structured as a three-layer governance stack. This layered approach ensures organizations maintain operational stability, security oversight, and strategic governance across their entire technology environment.
+          Centience structures AI and technology governance as a three-layer stack. Each layer is technically enforced, continuously monitored, and operationally managed — not delivered as a one-time assessment or policy document.
         </p>
       </div>
 
@@ -106,7 +106,7 @@ const FrameworkSection = () => (
 
       <div className="text-center">
         <Button variant="cta-outline" size="lg" asChild>
-          <Link href="/governance">See How the Governance Stack Works</Link>
+          <Link href="/ai-governance">See How the Governance Stack Works</Link>
         </Button>
       </div>
     </div>

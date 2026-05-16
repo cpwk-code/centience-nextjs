@@ -31,12 +31,23 @@ const AccountingCpaPage = () => (
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Accounting & CPA Firms</p></div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Technology Governance for Accounting Firms Handling <span className="text-gradient-gold">Sensitive Client Financial Data</span> in an AI-Driven Environment
+            AI Is Transforming Tax and Audit Practice. <span className="text-gradient-gold">Governance Needs to Keep Pace.</span>
           </h1>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Accounting and CPA firms hold some of the most sensitive financial data in existence — tax returns, financial statements, business valuations, and confidential client records. That data is the target of increasingly sophisticated attacks. At the same time, AI tools are transforming how tax, audit, and advisory work gets done — creating governance obligations that most firms have not yet formally addressed. Centience governs the technology environment where that data lives.
+          <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
+            Accounting and CPA firms hold some of the most sensitive financial data in existence — tax returns, financial statements, business valuations, and confidential client records. AI tools are now used for tax research, document analysis, audit sampling, and financial modeling. Without governance frameworks, firms face professional liability, client confidentiality risk, and potential independence issues.
           </p>
-          <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Accounting Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
+          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
+            Centience governs the technology environment where that data lives — managing infrastructure, cybersecurity, and AI oversight as a single continuously enforced program aligned to AICPA standards and the FTC Safeguards Rule.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Accounting Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
+          </div>
+          <p className="text-sm opacity-50 mt-5">
+            Or call us directly:{" "}
+            <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+              (877) 945-7177
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
@@ -97,6 +108,12 @@ const AccountingCpaPage = () => (
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> 100% audit success rate across all accounting firm engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Accounting Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
+        <p className="text-sm opacity-50 mt-5">
+          Or call us directly:{" "}
+          <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+            (877) 945-7177
+          </a>
+        </p>
       </div>
     </section>
   </Layout>

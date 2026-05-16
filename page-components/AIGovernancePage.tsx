@@ -3,23 +3,33 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
-import { ArrowRight, Brain, Eye, FileText, AlertTriangle, BarChart3, CheckCircle2, Cpu, Zap } from "lucide-react";
+import { ArrowRight, Brain, Eye, FileText, AlertTriangle, BarChart3, CheckCircle2, Cpu, Zap, Shield } from "lucide-react";
 
 const capabilities = [
-  { icon: Eye, title: "AI Usage Discovery", description: "We identify where AI tools and models are being used across your organization — sanctioned and unsanctioned — to establish visibility before governance. This is the foundation everything else is built on." },
-  { icon: FileText, title: "AI Policy and Framework Development", description: "We develop AI usage policies, acceptable use guidelines, and governance frameworks tailored to your industry's regulatory requirements. Built on NIST AI RMF, ISO/IEC 42001, and applicable regulatory guidance." },
-  { icon: Zap, title: "AI Implementation", description: "We implement approved AI tools inside your governed infrastructure — ensuring every tool deployed is configured, documented, and integrated within your governance framework from day one." },
-  { icon: Cpu, title: "AI Integration", description: "We connect AI capabilities to your existing systems, workflows, and data environments. Implementation without integration creates shadow usage and governance gaps. We close both." },
-  { icon: AlertTriangle, title: "Day-to-Day AI Management", description: "We manage the ongoing AI governance program operationally — monitoring usage, maintaining policy enforcement, evaluating vendors for emerging risk, tracking regulatory changes, and producing the reporting your leadership and auditors require." },
-  { icon: BarChart3, title: "Executive and Board Reporting", description: "Structured AI governance reporting for leadership and boards — translating technical AI risk into business-level oversight metrics your executives can defend to regulators." },
+  { icon: Eye, title: "AI Usage Discovery", description: "Identify where AI tools and models are being used across the organization — sanctioned and unsanctioned — to establish visibility before governance. You cannot govern what you cannot see." },
+  { icon: FileText, title: "AI Policy Development", description: "Develop AI usage policies, acceptable use guidelines, and governance frameworks tailored to your industry's regulatory requirements and your organization's specific AI deployment profile." },
+  { icon: AlertTriangle, title: "AI Risk Assessment", description: "Evaluate AI-related risks including data privacy, model bias, vendor dependency, and regulatory exposure across all AI tools and platforms in your environment." },
+  { icon: Zap, title: "Ongoing AI Monitoring", description: "Continuous monitoring of AI usage across your organization — so new tools, new use cases, and new vendor AI integrations are captured and governed as they emerge, not discovered during an examination." },
+  { icon: BarChart3, title: "Executive and Board Reporting", description: "Structured AI governance reporting for leadership and boards, translating technical AI risk into business-level oversight metrics that regulators and directors can evaluate and act on." },
+  { icon: Cpu, title: "AI Implementation", description: "Deploy approved AI tools inside your governed infrastructure — ensuring every tool is configured, documented, and integrated within your governance framework from day one." },
 ];
 
 const frameworks = [
   "NIST AI Risk Management Framework (AI RMF)",
   "ISO/IEC 42001 — AI Management Systems",
   "EU AI Act compliance readiness",
-  "SEC guidance on AI disclosures",
+  "SEC guidance on AI disclosures and oversight",
+  "FINRA 2026 GenAI governance expectations",
   "Industry-specific AI regulatory requirements",
+];
+
+const advantages = [
+  "Deploy AI tools across your organization with documented oversight from day one",
+  "Accelerate client service workflows without creating undocumented AI exposure",
+  "Onboard AI vendors inside an existing governance framework — not after the fact",
+  "Demonstrate responsible AI use to clients, counterparties, and regulators",
+  "Build institutional confidence at the board and executive level",
+  "Scale AI operations with enforced controls already in place",
 ];
 
 const AIGovernancePage = () => (
@@ -34,49 +44,90 @@ const AIGovernancePage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">AI Oversight</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            AI Governance — <span className="text-gradient-gold">Implementation, Integration & Management</span>
+            Deploy AI With Confidence. <span className="text-gradient-gold">Govern It From Day One.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            We don't hand you a framework and walk away. We implement AI tools inside your governed environment, integrate them into your workflows, and manage the day-to-day oversight — so your organization captures the benefit of AI without the regulatory exposure.
+            Regulated organizations are under pressure to adopt AI — to increase productivity, reduce manual workload, accelerate client service, and compete with firms that are already moving. The question is no longer whether to adopt AI. It is how to adopt it without creating the governance gaps that regulators, clients, and auditors will eventually find.
           </p>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            AI governance is only enforceable if you know what's being used, by whom, on what infrastructure, and if someone is actively managing it. Centience does all of it — discovery, framework, implementation, integration, and ongoing management.
+          <p className="text-lg leading-relaxed opacity-70 mb-6 max-w-2xl">
+            Centience discovers AI usage across your organization, builds governance frameworks aligned to your regulatory requirements, and monitors compliance continuously — technically, not theoretically.
+          </p>
+          <p className="text-base leading-relaxed opacity-60 mb-10 max-w-2xl italic">
+            Governed AI is not a constraint on modernization. It is what makes modernization sustainable.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild>
-              <Link href="/ai-governance-risk-assessment">Schedule AI Governance Assessment <ArrowRight size={16} /></Link>
+              <Link href="/ai-governance-risk-assessment">Book Your AI Governance Assessment <ArrowRight size={16} /></Link>
             </Button>
           </div>
+          <p className="text-sm opacity-50 mt-5">
+            Or call us directly:{" "}
+            <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+              (877) 945-7177
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
 
-    {/* Challenge */}
+    {/* What Governed AI Enables */}
     <section className="py-24 lg:py-32 bg-background">
+      <div className="container mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="gold-line" />
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">What Governed AI Enables</p>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
+              AI Adoption Is a Competitive Advantage — When Governance Keeps Pace.
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Organizations that build governed AI operations gain a durable operational edge: they can move faster because their governance infrastructure keeps pace with their technology adoption. Every new AI tool, every new workflow, every new vendor enters a framework that is already running.
+            </p>
+          </div>
+          <div className="card-premium p-8">
+            <ul className="space-y-4">
+              {advantages.map((adv) => (
+                <li key={adv} className="text-sm text-muted-foreground flex items-start gap-3">
+                  <CheckCircle2 size={14} className="text-accent mt-0.5 shrink-0" />
+                  {adv}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Regulatory Context */}
+    <section className="py-24 lg:py-32 bg-muted">
       <div className="container mx-auto max-w-3xl">
         <div className="flex items-center gap-3 mb-4">
           <div className="gold-line" />
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Challenge</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">What Regulators Now Require</p>
         </div>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">AI Is Outpacing Governance — And Governance Without Management Is Just Paper</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
+          AI Is Now an Examination Priority. The Governance Gap Has a Price Tag.
+        </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Organizations are adopting AI tools faster than governance structures can keep up. Employees use AI daily — often without IT knowledge. Vendors embed AI into existing products without disclosure. Regulators are accelerating enforcement timelines.
+          FINRA's 2026 Annual Regulatory Oversight Report introduced a dedicated Generative AI section for the first time — requiring documented governance over AI use cases, model risks, vendor oversight, and AI-enabled communications capture. The SEC's FY2026 examination priorities explicitly flag AI technologies and automated investment tools as primary focus areas for broker-dealers and investment advisers.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          Most AI governance engagements end with a policy document. Yours won't. Centience builds the framework, implements the tooling, integrates AI into your governed environment, and manages the program operationally — so AI adoption doesn't outpace oversight.
+          Employees are using AI tools across your organization today. Without a governance framework, every AI tool is a potential regulatory liability — and regulators are now asking for documentation of how it is being supervised.
         </p>
       </div>
     </section>
 
     {/* Capabilities */}
-    <section className="py-24 lg:py-32 bg-muted">
+    <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto">
         <div className="max-w-2xl mb-16">
           <div className="flex items-center gap-3 mb-4">
             <div className="gold-line" />
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Capabilities</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The AI Governance Program</p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">AI Governance Program — From Discovery Through Daily Operations</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">What Centience Delivers</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {capabilities.map((cap, i) => (
@@ -93,20 +144,20 @@ const AIGovernancePage = () => (
     </section>
 
     {/* Frameworks */}
-    <section className="py-24 lg:py-32 bg-background">
+    <section className="py-24 lg:py-32 bg-muted">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="gold-line" />
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Frameworks</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Standards Alignment</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Aligned With Leading Standards</h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Aligned With Leading AI Governance Standards</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Our AI governance programs are built on recognized frameworks and standards — ensuring your governance approach meets current and emerging regulatory expectations.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Our governance frameworks aren't filing cabinet documents. They're the operational foundation we implement and manage against daily.
+              These are not filing cabinet documents. They are the operational foundation we implement and manage against daily.
             </p>
           </div>
           <div className="card-premium p-8">
@@ -128,11 +179,22 @@ const AIGovernancePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">AI Governance That Actually Gets Managed</h2>
-        <p className="text-lg opacity-70 mb-10">Most firms leave you with a framework. We implement it, integrate it, and manage it. Start with an AI governance assessment — and leave with a roadmap to a running program.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Know What AI Is Running Across Your Organization. Govern It Before Regulators Ask.</h2>
+        <p className="text-lg opacity-70 mb-6">Our AI governance assessment identifies AI usage across your environment, evaluates governance gaps, and delivers a prioritized roadmap to regulatory readiness — typically within 5 business days.</p>
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
+          <span>✓ No commitment required</span>
+          <span>✓ Results within 5 business days</span>
+          <span>✓ 100% audit success rate</span>
+        </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Schedule AI Governance Assessment <ArrowRight size={16} /></Link>
+          <Link href="/ai-governance-risk-assessment">Book Your AI Governance Assessment <ArrowRight size={16} /></Link>
         </Button>
+        <p className="text-sm opacity-50 mt-5">
+          Or call us directly:{" "}
+          <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+            (877) 945-7177
+          </a>
+        </p>
       </div>
     </section>
   </Layout>

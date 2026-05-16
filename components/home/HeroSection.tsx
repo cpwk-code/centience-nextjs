@@ -33,31 +33,31 @@ const HeroSection = () => (
           <div className="flex items-center gap-3 mb-8">
             <div className="gold-line" />
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              Governance · Security · Resilience
+              Governed AI Operations
             </p>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-extrabold leading-[1.1] mb-6">
-            Technology Governance for{" "}
-            <span className="text-gradient-gold">Regulated Organizations</span>
+            AI Governance for Regulated Organizations —{" "}
+            <span className="text-gradient-gold">Technically Enforced. Continuously Managed.</span>
           </h1>
 
           <p className="text-lg leading-relaxed mb-3 opacity-70">
-            One firm manages your entire technology stack — infrastructure, cybersecurity, and AI — governed to meet the exact requirements of your regulators.
+            Regulators are not asking whether you have an AI policy. They are asking whether your AI governance is technically enforced. Centience builds and operates AI and technology governance programs for regulated organizations — combining managed infrastructure, cybersecurity oversight, and AI governance into a single continuously enforced model.
           </p>
 
           <p className="text-sm leading-relaxed mb-10 opacity-50 font-semibold uppercase tracking-wider">
-            SEC, FINRA, HIPAA, and emerging AI regulations are increasing scrutiny. Most firms aren't ready.
+            Not a one-time engagement. A continuously governed operation.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 w-full">
             <Button variant="cta" size="xl" asChild className="w-full sm:w-auto">
-              <Link href="/ai-governance-risk-assessment">
-                Book Your AI Governance Assessment <ArrowRight size={16} />
+              <Link href="/assessments">
+                Book Your Governance Assessment <ArrowRight size={16} />
               </Link>
             </Button>
             <Button variant="cta-outline" size="xl" asChild className="w-full sm:w-auto">
-              <Link href="/resources/guides/ai-governance">Download the AI Governance Guide</Link>
+              <Link href="/resources/guides">Download the AI Governance Guide</Link>
             </Button>
           </div>
 

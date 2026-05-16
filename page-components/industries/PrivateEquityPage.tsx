@@ -31,12 +31,23 @@ const PrivateEquityPage = () => (
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Private Equity</p></div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Portfolio-Level Technology Governance Giving PE Firms <span className="text-gradient-gold">Visibility and Control</span> Across Every Company
+            Technology Governance Across the Portfolio — <span className="text-gradient-gold">From Hold Period Through Exit.</span>
           </h1>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Private equity firms face a dual governance challenge: managing technology risk at the portfolio level while ensuring each portfolio company operates with governance controls that meet regulatory expectations. Without standardized governance oversight, technology risk accumulates invisibly across the portfolio — surfacing at the worst possible time: during due diligence, at exit, or during a regulatory examination.
+          <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
+            Private equity firms face a dual governance challenge: managing technology risk at the firm level while ensuring each portfolio company operates with governance controls that meet regulatory expectations and hold up through exit due diligence.
           </p>
-          <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Portfolio Governance Assessment <ArrowRight size={16} /></Link></Button>
+          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
+            Without standardized governance oversight, technology risk accumulates invisibly across the portfolio — surfacing at the worst possible time: during due diligence, at exit, or during a regulatory examination. Centience delivers governance programs that operate at the firm level and scale across portfolio companies.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Portfolio Governance Assessment <ArrowRight size={16} /></Link></Button>
+          </div>
+          <p className="text-sm opacity-50 mt-5">
+            Or call us directly:{" "}
+            <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+              (877) 945-7177
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
@@ -97,6 +108,12 @@ const PrivateEquityPage = () => (
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> 100% audit success rate across all PE firm engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Portfolio Governance Assessment <ArrowRight size={16} /></Link></Button>
+        <p className="text-sm opacity-50 mt-5">
+          Or call us directly:{" "}
+          <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+            (877) 945-7177
+          </a>
+        </p>
       </div>
     </section>
   </Layout>

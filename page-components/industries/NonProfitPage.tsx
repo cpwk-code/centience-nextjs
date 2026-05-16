@@ -31,12 +31,23 @@ const NonProfitPage = () => (
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Non-Profit</p></div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Technology Governance That Protects <span className="text-gradient-gold">Donor Data, Program Operations, and Mission Integrity</span>
+            Donor Trust Is Your Most Valuable Asset. <span className="text-gradient-gold">Technology Governance Is How You Protect It.</span>
           </h1>
-          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Non-profit organizations handle sensitive donor information, beneficiary data, and grant-related financial records — all of which carry governance obligations that many organizations underestimate. Board accountability, funder requirements, and state charitable solicitation regulations create a compliance environment that demands organized, technically enforced governance. Centience delivers governance programs scaled for non-profits — protecting mission integrity without overwhelming operational capacity.
+          <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
+            Non-profit organizations handle sensitive donor information, beneficiary data, and grant-related financial records — all of which carry governance obligations that many organizations underestimate. Federal grant recipients face specific cybersecurity requirements. Boards carry fiduciary responsibility for technology risk management.
           </p>
-          <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Non-Profit Governance Assessment <ArrowRight size={16} /></Link></Button>
+          <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
+            Centience delivers governance programs scaled for non-profits — protecting mission integrity and donor trust without overwhelming operational capacity or budget.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Non-Profit Governance Assessment <ArrowRight size={16} /></Link></Button>
+          </div>
+          <p className="text-sm opacity-50 mt-5">
+            Or call us directly:{" "}
+            <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+              (877) 945-7177
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
@@ -97,6 +108,12 @@ const NonProfitPage = () => (
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Governance programs scaled for non-profit organizations</span>
         </div>
         <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Non-Profit Governance Assessment <ArrowRight size={16} /></Link></Button>
+        <p className="text-sm opacity-50 mt-5">
+          Or call us directly:{" "}
+          <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+            (877) 945-7177
+          </a>
+        </p>
       </div>
     </section>
   </Layout>

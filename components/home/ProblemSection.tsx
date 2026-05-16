@@ -4,46 +4,46 @@ import { motion } from "framer-motion";
 const problems = [
   {
     icon: Brain,
-    title: "AI tools are outpacing governance",
-    description: "Employees are using AI across your organization today. Without a governance framework, every AI tool is a regulatory liability.",
+    title: "AI tools are deployed without governance",
+    description: "Employees are using AI across your organization today — often without disclosure, risk assessment, or governance controls. Every unsanctioned AI tool is a regulatory liability.",
   },
   {
     icon: ShieldAlert,
-    title: "Attackers target regulated data",
-    description: "Regulated firms hold high-value data. Compliance documentation alone is not a security strategy — you need enforced controls.",
+    title: "Policies exist. Enforcement doesn't.",
+    description: "Most organizations have AI and cybersecurity policies. Few have programs that technically enforce them. The gap between policy and enforcement is where incidents and regulatory findings originate.",
   },
   {
     icon: Scale,
-    title: "Regulators are increasing AI scrutiny",
-    description: "SEC, FINRA, HIPAA, and emerging AI frameworks now demand demonstrable governance controls — not policies. Evidence.",
+    title: "Regulators are demanding evidence, not documentation",
+    description: "SEC, FINRA, HIPAA, and emerging AI frameworks now require demonstrable governance controls — not policy documents. Regulators want to see what you actually do, not what you say you do.",
   },
   {
     icon: Server,
-    title: "Technology moves faster than controls",
-    description: "Without infrastructure-level governance oversight, risk accumulates invisibly until an audit or incident reveals it.",
+    title: "No single firm owns the full governance stack",
+    description: "Infrastructure, cybersecurity, and AI governance are typically managed by separate vendors with no unified oversight. That fragmentation creates gaps that regulators and attackers exploit.",
   },
 ];
 
 const ProblemSection = () => (
   <section className="py-24 lg:py-32 bg-background">
     <div className="container mx-auto">
-      {/* What is Technology Governance intro */}
+      {/* What is AI Governance intro */}
       <div className="max-w-3xl mb-20">
         <div className="flex items-center gap-3 mb-4">
           <div className="gold-line" />
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">What is Technology Governance</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">What is AI Governance</p>
         </div>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Oversight for AI, Cybersecurity & Infrastructure
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
+          Oversight for AI, Cybersecurity & Infrastructure — Technically Enforced
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Technology governance is the discipline of overseeing AI systems, cybersecurity posture, and infrastructure controls to ensure regulatory compliance, operational resilience, and audit readiness.
+          AI governance is the discipline of overseeing AI systems, cybersecurity posture, and infrastructure controls to ensure regulatory compliance, operational resilience, and audit readiness.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Effective governance requires control over the infrastructure running the organization. Without operational oversight of systems, governance becomes theoretical rather than enforceable.
+          Effective AI governance requires control over the infrastructure running the organization. Without operational ownership of systems, governance becomes theoretical rather than enforceable.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          Centience delivers technology governance programs built on managed infrastructure, allowing organizations to enforce security policies, monitor AI usage, and maintain regulatory readiness.
+          Centience delivers AI and technology governance programs built on managed infrastructure — allowing organizations to enforce AI policies, monitor usage, and maintain regulatory readiness continuously.
         </p>
       </div>
 
@@ -54,10 +54,10 @@ const ProblemSection = () => (
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The challenge</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Most regulated firms are exposed — and don't know it yet.
+          Most regulated organizations are exposed to AI governance risk — and don't know it yet.
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Most organizations deploy technology faster than they can implement governance controls. Without structured governance oversight, organizations expose themselves to operational risk, regulatory penalties, and security incidents.
+          Most organizations have adopted AI tools faster than they have implemented governance controls. Without a structured AI governance program, organizations expose themselves to regulatory penalties, security incidents, and operational failures that are difficult to defend to auditors.
         </p>
       </div>
 

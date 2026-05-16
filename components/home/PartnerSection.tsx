@@ -5,22 +5,22 @@ const partners = [
   {
     icon: ShieldCheck,
     title: "Fractional CISOs",
-    description: "Security leaders who need operational governance infrastructure for their clients.",
+    description: "You set the security strategy and governance program direction. Centience handles implementation and operational management — so your clients have a program that is technically enforced, not just designed.",
   },
   {
     icon: Scale,
     title: "Compliance & Regulatory Consultants",
-    description: "Advisors ensuring clients meet regulatory requirements with enforceable governance controls.",
+    description: "You ensure clients meet regulatory requirements. Centience provides the operational governance infrastructure that makes those requirements enforceable — and assembles the audit evidence that proves it.",
   },
   {
     icon: Users,
     title: "Data Privacy Attorneys",
-    description: "Legal professionals requiring technology governance to support data privacy compliance.",
+    description: "You advise on data privacy obligations and strategy. Centience deploys the technical controls and governance documentation that makes your legal advice technically defensible.",
   },
   {
     icon: Calculator,
     title: "Accounting & Risk Firms",
-    description: "Firms advising on risk management who need structured technology governance for their clients.",
+    description: "You advise on risk management and financial governance. Centience delivers structured technology governance and AI oversight that extends your risk advisory capability into the technical environment.",
   },
 ];
 
@@ -33,10 +33,10 @@ const PartnerSection = () => (
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Partner Program</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Built for Trusted Advisors
+          Extend What You Offer. Protect What You've Built.
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Centience works with trusted advisors serving regulated organizations. Partners collaborate with Centience to provide technology governance programs for shared clients while generating recurring revenue opportunities.
+          Centience works with fractional CISOs, compliance consultants, data privacy attorneys, accounting and risk firms, and technology partners. When your clients need a governance program that is technically enforced and continuously operated, Centience delivers it — without displacing you. Partner relationships are protected. Always.
         </p>
       </div>
 

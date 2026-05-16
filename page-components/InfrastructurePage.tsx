@@ -3,20 +3,22 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
-import { ArrowRight, Server, Monitor, Cloud, RefreshCw, Users, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Server, Monitor, Cloud, RefreshCw, Users, CheckCircle2, Shield } from "lucide-react";
 
 const capabilities = [
-  { icon: Server, title: "Managed Infrastructure Platform", description: "Fully managed infrastructure with proactive monitoring, patch management, and performance optimization. We implement and manage your environment daily — the foundation the governance program is built on." },
-  { icon: Monitor, title: "Infrastructure Monitoring & Resilience", description: "24/7 monitoring with defined SLAs, uptime commitments, and automated alerting. We manage this operationally and integrate monitoring into your broader governance reporting." },
-  { icon: Cloud, title: "Endpoint & Cloud Management", description: "Centralized implementation and management of endpoints, cloud environments, and hybrid infrastructure — with governance controls and compliance tracking maintained continuously." },
-  { icon: RefreshCw, title: "Disaster Recovery Governance", description: "We implement documented disaster recovery procedures, manage regular testing, and maintain governance oversight — ensuring your business continuity plans meet regulatory expectations and are tested, not just documented." },
+  { icon: Server, title: "Managed Infrastructure Platform", description: "Fully managed computers, servers, networks, and cloud environments — implemented, monitored, and maintained with defined SLAs. Every device in your environment is inventoried, governed, and operating within documented standards." },
+  { icon: Monitor, title: "Infrastructure Monitoring & Resilience", description: "24/7 monitoring with automated alerting, performance tracking, and uptime management. Monitoring is integrated into your broader governance reporting — not siloed in a separate tool that nobody reviews." },
+  { icon: Cloud, title: "Endpoint & Cloud Management", description: "Centralized management of endpoints, cloud environments, and hybrid infrastructure with governance controls and compliance tracking maintained continuously. Every device, every user, every cloud resource — under governance." },
+  { icon: RefreshCw, title: "Disaster Recovery Governance", description: "Documented disaster recovery procedures, regular testing, and governance oversight — so your business continuity plans meet regulatory expectations and are tested, not just documented. When an examiner asks for your DR plan, it exists and it has been tested." },
   { icon: Users, title: "Co-Management Program", description: "For organizations with internal IT resources, Centience offers co-managed infrastructure governance. We integrate into your existing team structure, manage the governance and compliance layer, and ensure the whole environment meets regulatory standards — without replacing your internal team." },
+  { icon: Shield, title: "Governance-Aligned Architecture", description: "Infrastructure architecture designed and maintained to support cybersecurity controls, AI governance requirements, and regulatory compliance — not retrofitted after the fact. The foundation everything else runs on." },
 ];
 
 const stats = [
   { value: "99.9%", label: "Infrastructure Uptime" },
   { value: "24/7", label: "Monitoring & Support" },
   { value: "< 15min", label: "Critical Response Time" },
+  { value: "10+", label: "Avg. Client Relationship (Years)" },
 ];
 
 const InfrastructurePage = () => (
@@ -31,17 +33,23 @@ const InfrastructurePage = () => (
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Resilience</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
-            Infrastructure <span className="text-gradient-gold">Governance</span>
+            Governance Without Infrastructure Control <span className="text-gradient-gold">Is Just a Policy Document.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            We implement and manage your infrastructure — computers, networks, cloud environments, endpoints, and disaster recovery — as the operational foundation your entire governance program runs on.
+            Cybersecurity controls, AI governance programs, and compliance frameworks are only enforceable if the infrastructure they run on is managed, monitored, and controlled every day. That is the foundation Centience builds first.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
-            Full management or co-management with your existing IT team. Either way, every device, server, and cloud resource is inventoried, implemented to governance standards, integrated into monitoring, and maintained daily.
+            We implement and manage your infrastructure — computers, networks, cloud environments, endpoints, and disaster recovery — as the operational foundation your entire governance program runs on. Full management or co-management with your existing IT team.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <Link href="/ai-governance-risk-assessment">Schedule Infrastructure Assessment <ArrowRight size={16} /></Link>
+            <Link href="/ai-governance-risk-assessment">Book Your Infrastructure Assessment <ArrowRight size={16} /></Link>
           </Button>
+          <p className="text-sm opacity-50 mt-5">
+            Or call us directly:{" "}
+            <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+              (877) 945-7177
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
@@ -49,7 +57,7 @@ const InfrastructurePage = () => (
     {/* Stats */}
     <section className="py-16 bg-background border-b border-border">
       <div className="container mx-auto">
-        <div className="flex flex-wrap justify-center gap-16 lg:gap-24">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <p className="text-3xl font-display font-bold text-accent">{stat.value}</p>
@@ -65,14 +73,17 @@ const InfrastructurePage = () => (
       <div className="container mx-auto max-w-3xl">
         <div className="flex items-center gap-3 mb-4">
           <div className="gold-line" />
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Foundation</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Infrastructure First</p>
         </div>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">You Can't Govern What Nobody Is Managing</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">You Cannot Govern What Nobody Is Managing.</h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Infrastructure governance is the foundational layer. Cybersecurity controls, AI governance programs, and compliance frameworks are only enforceable if the infrastructure they run on is managed, monitored, and controlled every day.
+          Most governance firms deliver frameworks and policies without ever touching the technology environment those policies are supposed to govern. The result is a compliance program that looks complete on paper but has no technical enforcement behind it.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Centience starts at the infrastructure level — because that is where governance is either enforced or not. When we manage your infrastructure, we control the environment where your data lives, your AI tools operate, and your regulatory obligations are either met or missed.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          For organizations with existing internal IT teams, we offer co-management — handling the governance layer, compliance controls, and documentation while your internal team manages day-to-day operations. We integrate with your existing environment, not around it.
+          For organizations with existing internal IT teams, we offer co-management — handling the governance layer, compliance controls, and documentation while your internal team manages day-to-day operations.
         </p>
       </div>
     </section>
@@ -83,11 +94,11 @@ const InfrastructurePage = () => (
         <div className="max-w-2xl mb-16">
           <div className="flex items-center gap-3 mb-4">
             <div className="gold-line" />
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Capabilities</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Infrastructure Governance Program</p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Infrastructure Governance Program</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">What Centience Delivers</h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {capabilities.map((cap, i) => (
             <motion.div key={cap.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="card-premium p-8">
               <div className="w-11 h-11 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-5">
@@ -104,11 +115,22 @@ const InfrastructurePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Full Management or Co-Management — Built Around Your Team</h2>
-        <p className="text-lg opacity-70 mb-10">We work with your existing infrastructure or build from scratch. Either way, the governance is enforced at the infrastructure level.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Full Management or Co-Management — Built Around Your Team.</h2>
+        <p className="text-lg opacity-70 mb-6">We work with your existing infrastructure or build from scratch. Either way, governance is enforced at the infrastructure level — and the evidence is assembled before you need it.</p>
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
+          <span>✓ No commitment required</span>
+          <span>✓ Results within 5 business days</span>
+          <span>✓ 100% audit success rate</span>
+        </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Schedule Assessment <ArrowRight size={16} /></Link>
+          <Link href="/ai-governance-risk-assessment">Book Your Infrastructure Assessment <ArrowRight size={16} /></Link>
         </Button>
+        <p className="text-sm opacity-50 mt-5">
+          Or call us directly:{" "}
+          <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
+            (877) 945-7177
+          </a>
+        </p>
       </div>
     </section>
   </Layout>
