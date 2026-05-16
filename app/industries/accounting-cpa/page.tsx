@@ -3,15 +3,15 @@ import AccountingCpaPage from '@/page-components/industries/AccountingCpaPage';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Technology Governance for Accounting & CPA Firms | Centience",
-  description: "Centience helps accounting and CPA firms build technology governance programs aligned with AICPA standards, SOC 2 requirements, and client data protection obligations.",
-  keywords: ["accounting firm governance","CPA firm technology","AICPA compliance","SOC 2 compliance","accounting cybersecurity","client data protection"],
+  title: "AI Governance for CPA and Accounting Firms — Tax, Audit & Advisory Practice | Centience",
+  description: "Centience delivers AI and technology governance for CPA and accounting firms deploying AI in tax, audit, and advisory workflows — protecting client financial data, managing professional liability risk, and meeting AICPA standards and the FTC Safeguards Rule. Governing Gramm-Leach-Bliley subject firms.",
+  keywords: ["CPA AI governance","accounting firm AI governance","AICPA technology governance","FTC Safeguards Rule accounting","Gramm-Leach-Bliley CPA","tax firm AI governance","audit firm technology governance","CPA cybersecurity","accounting data governance","AI independence risk attest"],
   alternates: {
     canonical: "https://centience.ai/industries/accounting-cpa",
   },
   openGraph: {
-    title: "Technology Governance for Accounting & CPA Firms | Centience",
-    description: "Centience helps accounting and CPA firms build technology governance programs aligned with AICPA standards, SOC 2 requirements, and client data protection obligations.",
+    title: "AI Governance for CPA & Accounting Firms | Centience",
+    description: "AI and technology governance for CPA and accounting firms — protecting client financial data, managing AI professional liability, and meeting AICPA and FTC Safeguards Rule requirements. Gramm-Leach-Bliley compliant.",
     url: "https://centience.ai/industries/accounting-cpa",
     type: 'website',
     siteName: 'Centience',
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
         url: "https://centience.ai/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Technology Governance for Accounting & CPA Firms | Centience",
+        alt: "AI Governance for CPA & Accounting Firms | Centience",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Technology Governance for Accounting & CPA Firms | Centience",
-    description: "Centience helps accounting and CPA firms build technology governance programs aligned with AICPA standards, SOC 2 requirements, and client data protection obligations.",
+    title: "AI Governance for CPA & Accounting Firms | Centience",
+    description: "AI governance for tax, audit, and advisory practice. AICPA standards. FTC Safeguards Rule. Professional liability protection.",
     images: ["https://centience.ai/og-image.png"],
   },
 };
