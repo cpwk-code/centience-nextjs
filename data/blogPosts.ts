@@ -5345,6 +5345,7 @@ Schedule your AI Governance Assessment. We identify gaps before the SEC does.
     `,
   },
   {
+    id: 18,
     slug: "shadow-ai-sec-disclosure-what-regulated-organizations-must-know",
     category: "AI Governance",
     title: "One Employee. One Unauthorized AI Tool. One SEC Filing. Shadow AI Is No Longer a Theoretical Risk.",
