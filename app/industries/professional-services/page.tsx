@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata: Metadata = {
     title: "Managed IT & Cybersecurity for Professional Services | Centience",
     description: "Audit‑ready IT, cybersecurity, and SOC 2 compliance for accounting firms and consultancies. Secure client data and scale for busy seasons with Centience.",
-    keywords: ["managed IT services","cybersecurity","compliance"],
+    keywords: ["professional services IT","managed IT for consultancies","accounting firm IT services","SOC 2 compliance IT","audit-ready IT services","consulting firm cybersecurity","professional services data security","compliance IT professional services","managed security professional services"],
     alternates: {
       canonical: "https://centience.ai/industries/professional-services",
     },

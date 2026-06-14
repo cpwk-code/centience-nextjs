@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata: Metadata = {
     title: "Managed IT & Cybersecurity for Law Firms | Centience",
     description: "Protect attorney-client privilege with secure IT services for law firms. eDiscovery support, encrypted communications, and 24/7 legal IT support from Centience.",
-    keywords: ["managed IT services","cybersecurity","compliance"],
+    keywords: ["law firm IT services","legal IT support","managed IT for law firms","attorney-client privilege IT","eDiscovery IT support","legal cybersecurity","bar association compliance IT","law firm data security","legal managed services","HIPAA compliance law firms"],
     alternates: {
       canonical: "https://centience.ai/industries/legal",
     },

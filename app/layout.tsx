@@ -103,6 +103,27 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://newassets.hcaptcha.com" />
         <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://centience.ai/#organization",
+          "name": "Centience",
+          "url": "https://centience.ai",
+          "logo": { "@type": "ImageObject", "url": "https://centience.ai/favicon.png" },
+          "description": "AI & Technology Governance for Regulated Organizations",
+          "telephone": "+1-877-945-7177",
+          "contactPoint": { "@type": "ContactPoint", "telephone": "+1-877-945-7177", "contactType": "customer service", "areaServed": "US" },
+          "sameAs": ["https://www.linkedin.com/company/centience"]
+        }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://centience.ai/#website",
+          "url": "https://centience.ai",
+          "name": "Centience",
+          "description": "AI & Technology Governance for Regulated Organizations",
+          "publisher": { "@id": "https://centience.ai/#organization" }
+        }) }} />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
         <Suspense fallback={null}><GoogleAnalytics /></Suspense>
