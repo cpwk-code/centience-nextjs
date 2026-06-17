@@ -28,6 +28,7 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
   const [gateOpen, setGateOpen] = useState(false);
   const [gated, setGated] = useState(() => typeof window !== 'undefined' ? !hasLeadCookie() : true);
   const [leadName, setLeadName] = useState("");
+  const [leadEmail, setLeadEmail] = useState("");
 
   const setAnswer = (index: number, value: string) => {
     const next = [...answers];
@@ -51,6 +52,21 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
   const handleSubmit = () => {
     setShowResults(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    if (leadEmail) {
+      const { score, max } = calculateScore();
+      const normalized = max > 0 ? (score / max) * 10 : 0;
+      const resultSummary = normalized >= 8
+        ? "Strong Governance Posture"
+        : normalized >= 5
+        ? "Moderate Risk — Governance Gaps Identified"
+        : "Significant Governance Exposure";
+      fetch("/api/assessment-results", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: leadEmail, firstName: leadName, assessmentType: headline, score, max, resultSummary }),
+      }).catch(console.error);
+    }
   };
 
   const handleStartAssessment = async () => {
@@ -66,6 +82,7 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
   const handleGateSuccess = async (data: LeadFormData) => {
     setGated(false);
     setLeadName(data.firstName);
+    setLeadEmail(data.email);
     // Submit lead data to backend
     try {
       await fetch("/api/assessment-lead", {

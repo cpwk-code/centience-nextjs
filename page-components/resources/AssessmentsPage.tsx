@@ -6,12 +6,13 @@ import { motion } from "framer-motion";
 import { ArrowRight, ClipboardCheck } from "lucide-react";
 
 const assessments = [
-  { title: "Financial Services Governance Assessment", href: "/assessments/financial-services" },
-  { title: "Healthcare Governance Assessment", href: "/assessments/healthcare" },
-  { title: "Law Firm Governance Assessment", href: "/assessments/law-firms" },
-  { title: "Private Equity Governance Assessment", href: "/assessments/private-equity" },
-  { title: "Accounting & CPA Governance Assessment", href: "/assessments/accounting-cpa" },
-  { title: "Non-Profit Governance Assessment", href: "/assessments/non-profit" },
+  { title: "AI Governance Readiness Assessment", href: "/assessments/ai-governance", description: "Policy, vendor oversight, NIST AI RMF & ISO 42001 alignment." },
+  { title: "Financial Services Governance Assessment", href: "/assessments/financial-services", description: "SEC, FINRA, and OCC technology governance gaps." },
+  { title: "Healthcare Governance Assessment", href: "/assessments/healthcare", description: "HIPAA Security Rule, technical safeguards, and AI exposure." },
+  { title: "Law Firm Governance Assessment", href: "/assessments/law-firms", description: "Privilege protections, eDiscovery readiness, and data security." },
+  { title: "Private Equity Governance Assessment", href: "/assessments/private-equity", description: "Portfolio-level governance and SEC cybersecurity alignment." },
+  { title: "Accounting & CPA Governance Assessment", href: "/assessments/accounting-cpa", description: "IRS, AICPA, and SOC 2 compliance readiness." },
+  { title: "Non-Profit Governance Assessment", href: "/assessments/non-profit", description: "Governance foundations for mission-driven organizations." },
 ];
 
 const AssessmentsPage = () => (
@@ -49,7 +50,7 @@ const AssessmentsPage = () => (
               <ClipboardCheck size={24} className="text-accent mb-4" />
               <h3 className="font-display font-bold text-primary text-base mb-3">{a.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
-                Takes under 5 minutes. Immediate results.
+                {a.description} Takes under 5 minutes. Results emailed to you.
               </p>
               <Button variant="outline" size="sm" asChild className="w-fit">
                 <Link href={a.href}>
