@@ -8,6 +8,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import QueryProvider from '@/components/QueryProvider';
 import { AuthProvider } from '@/contexts/AuthContext';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import MicrosoftClarity from '@/components/MicrosoftClarity';
 import ScrollToTop from '@/components/ScrollToTop';
 
 const inter = DM_Sans({
@@ -127,6 +128,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
         <Suspense fallback={null}><GoogleAnalytics /></Suspense>
+        <MicrosoftClarity />
         <QueryProvider>
           <AuthProvider>
             <TooltipProvider>
