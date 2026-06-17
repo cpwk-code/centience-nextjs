@@ -45,6 +45,7 @@ const navItems: NavItem[] = [
   {
     label: "Resources",
     children: [
+      { label: "Free Governance Assessment", href: "/ai-governance-risk-assessment" },
       { label: "Governance Guides", href: "/resources/guides" },
       { label: "Industry Assessments", href: "/resources/assessments" },
       { label: "Newsletter", href: "/resources/newsletter" },
@@ -168,7 +169,7 @@ const Navbar = () => {
           </a>
           <span className={`text-xs ${scrolled ? "text-foreground/20" : "text-warm-white/20"}`}>|</span>
           <Button variant="cta-nav" size="sm" asChild className="whitespace-nowrap shrink-0">
-            <Link href="/ai-governance-risk-assessment">Book Assessment</Link>
+            <Link href="/ai-governance-risk-assessment">Free Assessment</Link>
           </Button>
         </div>
 
