@@ -1,6 +1,20 @@
 import type { MetadataRoute } from 'next';
 import { blogPosts } from '@/data/blogPosts';
 
+const MONTHS: Record<string, string> = {
+  January: '01', February: '02', March: '03', April: '04',
+  May: '05', June: '06', July: '07', August: '08',
+  September: '09', October: '10', November: '11', December: '12',
+};
+
+function toLastMod(dateStr: string | undefined): string {
+  if (!dateStr) return '2026-05-01';
+  if (/^\d{4}-\d{2}-\d{2}/.test(dateStr)) return dateStr.slice(0, 10);
+  const match = dateStr.match(/^(\w+)\s+(\d{4})$/);
+  if (match && MONTHS[match[1]]) return `${match[2]}-${MONTHS[match[1]]}-01`;
+  return '2026-05-01';
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     // Core
@@ -61,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((p) => p.id >= 11)
     .map((post) => ({
       url: `https://centience.ai/insights/${post.slug}`,
-      lastModified: post.date || '2026-05-01',
+      lastModified: toLastMod(post.date),
       changeFrequency: 'monthly' as const,
       priority: 0.75,
     }));
