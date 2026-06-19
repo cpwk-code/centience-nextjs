@@ -33,31 +33,31 @@ const HeroSection = () => (
           <div className="flex items-center gap-3 mb-8">
             <div className="gold-line" />
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              Continuous AI &amp; Technology Governance
+              Technology Governance — Infrastructure, Cybersecurity &amp; AI
             </p>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-extrabold leading-[1.1] mb-6">
-            Govern Your AI. Modernize With Confidence.{" "}
-            <span className="text-gradient-gold">Technically Enforced. Continuously Managed.</span>
+            We Run Your Technology Governance{" "}
+            <span className="text-gradient-gold">So You’re Ready Before Regulators Ask.</span>
           </h1>
 
           <p className="text-lg leading-relaxed mb-3 opacity-70">
-            Regulated organizations that get AI governance right don’t just avoid enforcement risk — they move faster, operate more efficiently, and adopt new technology with confidence their competitors can’t match. Centience builds and operates your governance program as a single continuously enforced model — combining AI oversight, cybersecurity governance, and managed infrastructure.
+            SEC examinations, FINRA reviews, HIPAA audits, and client due diligence all look for the same thing: controls that are operating, not just documented. Centience manages the technology governance layer across infrastructure, cybersecurity, and AI — continuously, for regulated organizations. Your evidence stays current. New tools have a framework. Your team is not rebuilding the program every time someone asks for proof.
           </p>
 
           <p className="text-sm leading-relaxed mb-10 opacity-50 font-semibold uppercase tracking-wider">
-            Not a one-time engagement. A continuously governed operation.
+            Not a vendor you call before an exam. A governance operation that never stops.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 w-full">
             <Button variant="cta" size="xl" asChild className="w-full sm:w-auto">
-              <Link href="/assessments">
-                Book Your Governance Assessment <ArrowRight size={16} />
+              <Link href="/resources/assessments">
+                Start Free Assessment <ArrowRight size={16} />
               </Link>
             </Button>
             <Button variant="cta-outline" size="xl" asChild className="w-full sm:w-auto">
-              <Link href="/resources/guides">Download the AI Governance Guide</Link>
+              <Link href="/resources/guides">Download the Governance Guide</Link>
             </Button>
           </div>
 
@@ -86,10 +86,10 @@ const HeroSection = () => (
         >
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: Server, title: "Managed Infrastructure", desc: "Resilient, monitored infrastructure with built-in governance" },
-              { icon: Lock, title: "Cybersecurity", desc: "Security monitoring & incident response governance" },
-              { icon: BarChart3, title: "Compliance", desc: "Audit-ready documentation & regulatory readiness" },
-              { icon: Brain, title: "AI Governance", desc: "Structured AI oversight & risk management" },
+              { icon: Server, title: "Infrastructure Governance", desc: "Managed infrastructure with technically enforced governance controls" },
+              { icon: Lock, title: "Cybersecurity Governance", desc: "Continuous security posture, vendor risk, and incident readiness" },
+              { icon: BarChart3, title: "Regulatory Readiness", desc: "Audit evidence maintained continuously — not reconstructed before an exam" },
+              { icon: Brain, title: "AI Governance", desc: "Policy, oversight, and ongoing monitoring for regulated AI adoption" },
             ].map((item, i) => (
               <div
                 key={item.title}
