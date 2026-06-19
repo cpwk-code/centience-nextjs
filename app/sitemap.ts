@@ -4,7 +4,7 @@ import { blogPosts } from '@/data/blogPosts';
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     // Core
-    { url: 'https://centience.ai/', lastModified: '2026-05-01', changeFrequency: 'weekly', priority: 1.0 },
+    { url: 'https://centience.ai', lastModified: '2026-05-01', changeFrequency: 'weekly', priority: 1.0 },
     // Programs
     { url: 'https://centience.ai/governance', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://centience.ai/ai-governance', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.9 },
@@ -25,7 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://centience.ai/industries/professional-services', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://centience.ai/industries/non-profit', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
     // Resources
-    { url: 'https://centience.ai/resources', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://centience.ai/resources/assessments', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://centience.ai/resources/guides', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://centience.ai/resources/newsletter', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.6 },
