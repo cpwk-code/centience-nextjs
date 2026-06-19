@@ -7,6 +7,18 @@ import { useState } from "react";
 import { blogPosts, getSrc } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
 
+const MONTHS: Record<string, string> = {
+  January: '01', February: '02', March: '03', April: '04',
+  May: '05', June: '06', July: '07', August: '08',
+  September: '09', October: '10', November: '11', December: '12',
+};
+
+function formatDate(dateStr: string): string {
+  const match = dateStr.match(/^(\w+)\s+(\d{4})$/);
+  if (match && MONTHS[match[1]]) return `${MONTHS[match[1]]}/01/${match[2]}`;
+  return dateStr;
+}
+
 // Only show Centience-authored posts (ids 11+)
 const centiencePosts = blogPosts.filter((p) => p.id >= 11).sort((a, b) => b.id - a.id);
 
@@ -103,7 +115,7 @@ const InsightsArticlesPage = () => {
                       </span>
                       <span className="flex items-center gap-1 text-xs text-muted-foreground">
                         <Calendar className="w-3 h-3" />
-                        {post.date}
+                        {formatDate(post.date)}
                       </span>
                     </div>
 
