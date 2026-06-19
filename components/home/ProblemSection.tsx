@@ -31,7 +31,7 @@ const ProblemSection = () => (
       <div className="max-w-3xl mb-20">
         <div className="flex items-center gap-3 mb-4">
           <div className="gold-line" />
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">What is AI Governance</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Technology Governance Gap</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
           One Integrated Governance Program. Three Layers. Continuously Operated.

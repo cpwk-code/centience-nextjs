@@ -26,19 +26,19 @@ const LeadMagnetCTA = () => (
         Know Where You Stand Before Regulators Ask.
       </h2>
       <p className="text-lg opacity-60 leading-relaxed mb-8 max-w-2xl mx-auto">
-        Our governance assessment identifies AI usage across your organization, evaluates governance gaps, and delivers a prioritized roadmap — before your next exam. Most assessments complete within 5 business days. You leave with a clear picture of where you stand regardless of whether you engage further.
+        Our governance assessment evaluates your technology governance gaps across infrastructure, cybersecurity, and AI — then delivers a prioritized roadmap before your next exam, audit, or client review. Results within 5 business days. No commitment required to proceed.
       </p>
 
       <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm opacity-50 mb-12">
         <span>✓ No commitment required</span>
         <span>✓ Results delivered within 5 business days</span>
-        <span>✓ 100% audit success rate across all client engagements</span>
+        <span>✓ Evidence-first governance built for regulated environments</span>
         <span>✓ Ongoing governance program available immediately following assessment</span>
       </div>
 
       <Button variant="cta" size="xl" asChild>
-        <Link href="/ai-governance-risk-assessment">
-          Book Your AI Governance Assessment <ArrowRight size={16} />
+        <Link href="/resources/assessments">
+          Start Free Assessment <ArrowRight size={16} />
         </Link>
       </Button>
       <p className="text-sm opacity-50 mt-6">
