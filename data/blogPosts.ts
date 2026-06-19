@@ -5463,6 +5463,378 @@ Centience conducts a structured 5-Day AI Governance Assessment for regulated org
 - Help Net Security — Financial Sector Cyber Threats Report (April 2026)
     `,
   },
+  {
+    id: 20,
+    slug: "sec-ai-governance-requirements-investment-advisers-2026",
+    category: "AI Governance",
+    title: "SEC AI Governance Requirements: What Investment Advisers Must Have in 2026",
+    excerpt: "The SEC has issued examination risk alerts, enforcement actions, and guidance that make AI governance a compliance requirement for registered investment advisers. This article covers exactly what the agency expects — and what a defensible program looks like.",
+    image: "/assets/blog/centience-ai-governance-sec.svg",
+    author: "Orville Matias",
+    date: "June 2026",
+    metaTitle: "SEC AI Governance Requirements for Investment Advisers 2026 | Centience",
+    metaDescription: "The SEC now expects registered investment advisers to have documented AI governance controls. Learn what the agency requires — supervision policies, records retention, disclosure obligations, and examination readiness.",
+    content: `
+[STAT_CARDS]
+$200M+ | AI Washing Fines | Delphia and Global Predictions (2024)
+2026 | Examination Priority | SEC lists AI governance in annual priorities
+30 Days | Breach Notification | Under amended Reg S-P (effective June 2026)
+5 Years | Records Retention | AI-related books and records under Rule 204-2
+[/STAT_CARDS]
+
+The Securities and Exchange Commission has spent the last two years making its expectations clear: if your firm uses artificial intelligence, you are responsible for governing it. That responsibility carries documentation requirements, supervision obligations, disclosure standards, and examination exposure that most registered investment advisers are not fully prepared for.
+
+This article covers what the SEC has said, what it has done, and what a defensible AI governance program looks like for an RIA in 2026.
+
+## The Regulatory Foundation: What Rules Apply to AI
+
+No single SEC rule is titled "AI Governance." What exists instead is a framework of existing rules — adopted decades before AI was a mainstream business tool — that the SEC has made clear apply fully to how your firm uses AI today.
+
+**Investment Advisers Act Rule 206(4)-7** requires every registered investment adviser to adopt and implement written policies and procedures reasonably designed to prevent violations of the Advisers Act. The SEC's position, articulated in multiple examination priority letters and risk alerts, is that AI use without governance controls is a failure of this requirement. If your firm uses AI to support investment decisions, client communications, compliance workflows, or any regulated activity — and you lack written policies governing that use — you have a Rule 206(4)-7 gap.
+
+**Rule 204-2 (Books and Records)** requires advisers to maintain specific records for defined retention periods. The SEC staff has stated that AI-generated outputs, AI system prompts, and the records of AI-assisted decisions qualify as required records. If your firm is using AI to research securities, draft client communications, or support compliance functions, those interactions may be required records under Rule 204-2 — and must be preserved accordingly.
+
+**Investment Advisers Act Section 206 (Anti-Fraud)** prohibits any adviser from employing any device, scheme, or artifice to defraud clients. In 2024, the SEC applied this provision directly to AI when it brought its first AI enforcement actions.
+
+## The 2024 Enforcement Actions: AI Washing Is a Violation
+
+In March 2024, the SEC settled charges against two investment advisers — Delphia (USA) Inc. and Global Predictions Inc. — in what the agency described as the first-ever AI washing cases.
+
+[CALLOUT:Important]
+The SEC's AI washing enforcement actions established a clear precedent: making false or misleading claims about your firm's AI capabilities is a securities law violation, not just a marketing problem. Advisers who overclaim AI sophistication in client materials or Form ADV disclosures face fraud exposure under Section 206.
+[/CALLOUT]
+
+**Delphia** claimed in marketing materials that it used client transaction data to train its AI, implying it had a proprietary data advantage that informed its investment process. The SEC found these claims were false — the firm did not use client data in its AI as described. Penalty: $225,000.
+
+**Global Predictions** claimed to provide "expert AI-driven forecasts" and called itself "the first regulated AI financial adviser." The SEC found the firm made false and misleading statements about its AI capabilities and use of certain predictive models. Penalty: $175,000.
+
+Both settlements required remediation of disclosures and policies. Neither firm's AI was sophisticated enough to justify the claims made — and the SEC treated that gap as fraud.
+
+The implication for every RIA: your Form ADV disclosures, your marketing materials, your website, and your client communications must accurately describe how your firm uses AI — or doesn't use it. Overclaiming is a Section 206 problem. Undisclosing material AI use is also a problem.
+
+## SEC Examination Priorities: AI Is on the List
+
+The SEC Division of Examinations published its fiscal year 2026 examination priorities explicitly listing investment adviser AI governance as an area of focus. Specifically, examiners will look at:
+
+- Whether advisers have adopted written policies governing AI use
+- Whether those policies address supervision of AI-generated outputs
+- Whether firms have appropriate disclosures in Form ADV regarding AI use
+- Whether records requirements are being met for AI-assisted activities
+- Whether compliance programs have been updated to account for AI-specific risks
+
+[CALLOUT:Warning]
+The 2026 examination priorities document reflects what experienced examiners will ask about on day one of a review. Firms that have not updated their compliance programs to address AI use will face deficiency letters. Firms that have made material representations about AI in their ADV without supporting infrastructure face enforcement referrals.
+[/CALLOUT]
+
+This is not a future concern. SEC examiners are currently visiting firms and asking about AI governance. If your CCO cannot answer basic questions about what AI tools your firm uses, what data flows through them, how outputs are reviewed, and how records are maintained — that is an examination finding in progress.
+
+## What the SEC Expects: The Five Core Requirements
+
+Based on published guidance, examination priorities, enforcement actions, and SEC staff statements, a defensible AI governance program for an RIA in 2026 addresses five areas:
+
+**1. Written Policies and Procedures**
+
+Your policies must identify every AI tool the firm uses in a business or compliance context. For each tool, the policy must address: who is authorized to use it, what data may be input, what types of decisions it may support, how outputs are reviewed before use, and what documentation is required. A general technology use policy that mentions AI in passing does not satisfy this requirement.
+
+**2. Supervision of AI-Assisted Outputs**
+
+AI tools do not absolve advisers of their supervisory obligations. If an employee uses AI to research a security recommendation, draft a client communication, or support a compliance determination — a supervisor must review the output before it is acted on. That review must be documented. The supervision framework must be written, assigned to specific roles, and tested.
+
+**3. Accurate Disclosure in Form ADV**
+
+Your Form ADV must accurately describe how your firm uses AI. If you use AI to support investment research, that should be disclosed. If you use AI in portfolio construction, that should be disclosed. If you market AI-driven capabilities, those capabilities must be what they appear to be. The SEC's AI washing enforcement actions established that inaccurate AI disclosures are a fraud risk, not just a marketing compliance issue.
+
+**4. Records Retention for AI Interactions**
+
+AI-generated outputs that support investment decisions or client communications are records under Rule 204-2. Your records management system must capture and retain those outputs — along with sufficient context to reconstruct the basis for the decision — for the applicable retention period (generally three years for most records, five years for certain records, with the first two years in an accessible location).
+
+**5. Vendor Oversight for Third-Party AI**
+
+Most RIAs are not building their own AI tools. They are using third-party platforms — portfolio management systems, CRM tools, research platforms — that have embedded AI features. Each of those vendors is a service provider who may be processing client data. Your vendor oversight policies must address AI-specific risks: what data is being processed by the vendor's AI, under what terms of service, and whether those terms are compatible with your regulatory obligations.
+
+## The Disclosure Trap Most RIAs Miss
+
+The most common AI governance failure for RIAs is not deliberate overclaiming. It is the gap between what the Form ADV says and what is actually happening in the firm.
+
+If your ADV says your firm does not use AI — but your analysts are using ChatGPT, your CRM has an AI assistant enabled, or your compliance monitoring tool uses AI to flag anomalies — your ADV disclosure is inaccurate. That inaccuracy is a compliance failure.
+
+[CALLOUT:Action]
+The right first step for any RIA is a complete AI inventory: identify every tool in the firm's technology stack that uses artificial intelligence, document what data it processes and what decisions it supports, then compare that inventory against your current ADV disclosure. Close the gaps before the examiner does.
+[/CALLOUT]
+
+The SEC does not require advisers to avoid using AI. It requires advisers to govern their AI use and disclose it accurately. Firms that have done the inventory, written the policies, and updated their ADV are in a defensible position. Firms that have not are accumulating examination risk with every month that passes.
+
+## What a Technically Enforced SEC AI Governance Program Looks Like
+
+Written policies are necessary but not sufficient. The SEC expects evidence of implementation — not just documentation of intent. A defensible program has three layers working together:
+
+**Governance layer**: Written policies, supervision procedures, disclosure review, and a compliance calendar that includes AI policy updates as regulatory guidance evolves.
+
+**Technical layer**: Controls that enforce the policies — approved AI tool lists enforced at the network level, data loss prevention rules that prevent client data from reaching unauthorized AI platforms, audit logs that capture AI interactions for records purposes.
+
+**Evidence layer**: Retained records that demonstrate the governance and technical controls are operating as described — examination-ready documentation that examiners can review in the first 24 hours of a visit.
+
+Firms that rely solely on the governance layer — policies without technical enforcement — will struggle in examinations because they cannot demonstrate that employees are actually following the policies. The CB Financial Form 8-K filed in May 2026 is the clearest available illustration of what happens when policies exist but technical controls are absent: one employee, one unauthorized AI tool, one SEC disclosure.
+
+[RELATED_SERVICE:AI Governance Program|Centience builds and operates SEC-ready AI governance programs for registered investment advisers — technically enforced, not just documented.|/governance]
+
+[FAQ_ACCORDION]
+What AI rules apply to SEC-registered investment advisers?|No single rule is titled "AI governance." The SEC applies existing rules — Rule 206(4)-7 (compliance policies), Rule 204-2 (books and records), and Section 206 (anti-fraud) — to AI use. The 2024 AI washing enforcement actions and 2026 examination priorities have made clear that AI governance is a compliance requirement, not optional.
+Does my Form ADV need to disclose AI use?|Yes. If your firm uses AI in investment research, portfolio construction, client communication, or compliance functions, that use should be disclosed in Form ADV. The SEC's AI washing enforcement actions established that inaccurate AI disclosures — including overclaiming AI capabilities — are a fraud risk under Section 206.
+Are AI-generated outputs books and records?|The SEC's position is that AI-generated outputs supporting investment decisions or client communications are records under Rule 204-2. They must be preserved for the applicable retention period with sufficient context to reconstruct the basis for the decision.
+What is "AI washing" and why does it matter?|AI washing is making false or misleading claims about your firm's AI capabilities. The SEC charged Delphia and Global Predictions in 2024 for AI washing — claiming AI-driven capabilities that did not exist as described. Penalties were $225,000 and $175,000 respectively. The enforcement actions established AI washing as a Section 206 fraud violation.
+What do SEC examiners ask about AI governance?|Based on 2026 examination priorities, examiners ask whether firms have written AI policies, whether those policies address supervision of outputs, whether ADV disclosures accurately reflect AI use, whether records requirements are being met, and whether vendor oversight addresses AI-specific risks.
+[/FAQ_ACCORDION]
+    `,
+  },
+  {
+    id: 21,
+    slug: "finra-books-and-records-ai-what-the-rule-requires",
+    category: "AI Governance",
+    title: "FINRA Books and Records: What the Rule Actually Requires When Your Firm Uses AI",
+    excerpt: "FINRA Rule 4511 and SEC Rule 17a-4 predate AI by decades — but they apply fully to AI-generated communications and outputs today. Here is what broker-dealers and dually registered firms must understand about books and records obligations when employees use AI.",
+    image: "/assets/blog/centience-ai-governance-finra.svg",
+    author: "Orville Matias",
+    date: "June 2026",
+    metaTitle: "FINRA Books and Records AI Requirements: What Broker-Dealers Must Know | Centience",
+    metaDescription: "FINRA Rule 4511 and SEC Rule 17a-4 require broker-dealers to retain AI-generated communications and outputs as business records. Learn what must be captured, for how long, and what FINRA examiners will ask about.",
+    content: `
+[STAT_CARDS]
+3 Years | Minimum Retention | Most FINRA books and records (first 2 years accessible)
+6 Years | Extended Retention | Customer account records and certain correspondence
+4511 | FINRA Rule | General books and records requirement for broker-dealers
+17a-4 | SEC Rule | Electronic records standards — applies to AI outputs
+[/STAT_CARDS]
+
+Your compliance officer drafted the firm's AI policy. It prohibits using personal AI accounts for business communications and requires employees to use only approved tools. It has been reviewed by outside counsel and circulated to the team.
+
+But here is the question FINRA examiners will ask: can you show me the records of what your AI tools are actually producing?
+
+If the answer is no — if your firm lacks a technical mechanism to capture, archive, and retrieve AI-generated outputs — you have a books and records problem. The policy exists. The records do not.
+
+## The Rule Hasn't Changed. The Technology Has.
+
+FINRA Rule 4511 requires every member firm to make and preserve books and records as required under FINRA rules, the Exchange Act, and applicable SEC rules and regulations. The rule does not specify AI. It was written in an era when "business records" meant paper documents and email threads.
+
+But records requirements follow the nature of the communication, not the medium that carries it. This principle was established when fax became standard, when email replaced fax, when instant messaging entered the office, and when mobile text messaging spread to every employee's pocket. FINRA and the SEC have issued billions of dollars in fines for firms that allowed business communications to migrate to new platforms without corresponding records controls.
+
+AI-generated content is the next migration. And the same principle applies.
+
+[CALLOUT:Rule]
+FINRA Rule 4511(a): "Each member shall make and preserve books and records as required under the FINRA rules, the Exchange Act and the applicable Exchange Act rules." The SEC has confirmed that this obligation extends to digital communications across all platforms — including AI tools that generate content used in business contexts.
+[/CALLOUT]
+
+When an employee uses an AI tool to draft a client email — even if the employee edits the draft before sending — the AI output is part of the record of how that communication was prepared. When an AI tool is used to research a security recommendation, summarize regulatory requirements, or generate compliance documentation, those outputs are records of the firm's business processes.
+
+## What Qualifies as a Record Under 17a-4
+
+SEC Rule 17a-4 establishes the technical standards for electronic records at broker-dealers. It applies to records required to be preserved under Exchange Act Rule 17a-3, and it governs format, indexing, auditability, and accessibility requirements.
+
+Under 17a-4, electronic records must be:
+
+**Preserved in non-rewritable, non-erasable format.** AI outputs that are simply kept in a chat interface or AI platform log — accessible to the vendor, potentially subject to the vendor's deletion policies — do not meet this standard. Records must be preserved in a format that prevents alteration.
+
+**Accessible and retrievable.** Records must be capable of being produced promptly in response to regulatory requests. If your AI interaction history lives in a vendor's interface and you cannot export it in an auditable format, you cannot produce it in an examination.
+
+**Available for the required retention period.** General correspondence: three years, with the first two years in an accessible location. Customer account records: six years. Some records have longer retention requirements. Your AI records must meet the same standard as their paper and email equivalents.
+
+**Auditable.** The system preserving the records must be capable of demonstrating that records have not been altered since they were created. Third-party AI platforms do not typically provide this guarantee as a standard feature.
+
+## The Supervision Problem: FINRA Rule 3110
+
+Books and records obligations do not exist in isolation. They intersect with FINRA Rule 3110, which requires broker-dealers to establish and maintain a system to supervise the activities of each registered representative and associated person.
+
+When AI tools are used to draft communications, generate research, or support compliance functions, the supervision obligation extends to reviewing those AI-generated outputs before they are used. That review must be documented. A supervisor cannot approve a client communication drafted with AI assistance without a record of that review.
+
+[CALLOUT:Warning]
+FINRA's examination findings on digital communications supervision have been some of the most expensive in recent years. Morgan Stanley paid $200 million in 2022 for failures to preserve business communications across multiple platforms. JPMorgan paid $200 million the same year. These penalties were not for what the employees said — they were for the firm's failure to capture and preserve what was said. AI introduces the same risk through a different channel.
+[/CALLOUT]
+
+The supervision failure FINRA is most likely to find is not a firm that has prohibited AI use. It is a firm that has policies governing AI use but lacks technical controls to verify those policies are being followed — and therefore cannot demonstrate to an examiner that its supervision system is working.
+
+## What FINRA Is Telling Firms About AI
+
+FINRA has been specific in recent guidance about AI and books and records. The key positions firms must understand:
+
+**AI-generated communications are communications.** If an AI tool drafts a message that is sent to a customer — whether edited or not — that is a customer communication subject to all applicable content standards, approval requirements, and records obligations. The fact that AI generated the first draft does not change the firm's responsibility for the final output.
+
+**AI tools that assist in research create records.** If an employee uses AI to research a security, summarize a company's financials, or identify regulatory requirements, those AI outputs are records of the research process. FINRA has made clear that firms cannot claim to have conducted adequate research while lacking the records of how that research was actually conducted.
+
+**Vendor contracts must address records obligations.** If your firm uses a third-party AI platform, your contract with that vendor must ensure that records can be captured and produced in compliance with 17a-4. Most standard AI vendor agreements do not include these provisions. Firms must negotiate them or choose platforms that support compliant records capture natively.
+
+## The Practical Records Gap Most Firms Have
+
+Here is the gap pattern FINRA examiners are finding at broker-dealers that have begun implementing AI tools:
+
+The firm has an AI policy. The policy says employees must use only approved AI tools and must not input customer data into unauthorized platforms. The firm has identified a set of approved tools.
+
+But the firm has not deployed any technical mechanism to capture what employees are doing with those approved tools. The AI interaction logs live in each employee's individual account on the AI platform. There is no centralized archive. There is no non-rewritable preservation. There is no ability to produce specific interactions in response to an examination request.
+
+The policy exists. The records do not.
+
+[CALLOUT:Action]
+The gap between "we have an AI policy" and "we can produce AI records in an examination" is the exact gap FINRA examiners are targeting. Closing that gap requires a technical solution — an archive that captures AI interactions, preserves them in a compliant format, and makes them retrievable by account, date, and content.
+[/CALLOUT]
+
+## What a Compliant FINRA AI Records Program Requires
+
+A books-and-records-compliant AI governance program for a broker-dealer has five technical components:
+
+[TIMELINE]
+AI Inventory | Identify every AI tool employees are using — approved and unapproved. Firms that do not know what tools are in use cannot build a compliant archive around them.
+Approved Tool Selection | Choose AI tools that support records export in formats compatible with your 17a-4 archive. Not all AI platforms provide this capability.
+Archive Integration | Configure your records management system to capture AI interactions in real time or at defined intervals. The archive must be non-rewritable and auditable.
+Supervision Workflow | Build supervisor review checkpoints for AI-assisted communications. Document the review. Maintain the documentation in the archive.
+Vendor Contract Review | Ensure every AI vendor's contract includes records access, breach notification, and data handling provisions compatible with your regulatory obligations.
+[/TIMELINE]
+
+Firms that have built this infrastructure are in a defensible position in examinations. Firms that have policies without infrastructure are accumulating records violations with each AI interaction that goes uncaptured.
+
+## The Dually Registered Firm: Two Sets of Standards
+
+Firms that are both broker-dealers (regulated by FINRA) and registered investment advisers (regulated by the SEC) face overlapping records requirements. Rule 17a-4 governs broker-dealer records. Rule 204-2 under the Investment Advisers Act governs adviser records. The standards are similar but not identical — and the intersection creates complexity for firms using AI across both business lines.
+
+For dually registered firms, the more conservative standard generally applies. AI records must be preserved in a format that satisfies both 17a-4 and 204-2 requirements. The retention period is the longer of the two applicable periods. Supervision documentation must satisfy FINRA Rule 3110 for broker-dealer activities and the compliance program requirements of Rule 206(4)-7 for advisory activities.
+
+[RELATED_SERVICE:AI Governance Program|Centience builds books-and-records-compliant AI governance programs for broker-dealers and dually registered firms — technically enforced, not just documented.|/governance]
+
+[FAQ_ACCORDION]
+Do FINRA books and records rules apply to AI tools?|Yes. FINRA Rule 4511 and SEC Rule 17a-4 apply to business records regardless of medium. AI-generated communications, research outputs, and compliance documentation qualify as records that must be preserved in compliant format and retained for required periods.
+How long must broker-dealers retain AI-generated records?|General business correspondence must be retained for three years, with the first two years in an accessible location. Customer account records must be retained for six years. Some records have longer requirements. AI records must meet the same retention standards as their paper and email equivalents.
+What does "non-rewritable, non-erasable" mean for AI records?|SEC Rule 17a-4 requires electronic records to be preserved in a format that cannot be altered after creation. AI interaction logs stored in a vendor's platform that the vendor controls do not satisfy this requirement. Records must be transferred to a compliant archive.
+What are the largest fines for books and records failures?|Morgan Stanley and JPMorgan each paid $200 million in 2022 for failures to preserve business communications across digital platforms. FINRA and the SEC have treated records preservation as a high-priority enforcement area. AI introduces the same risk through a new channel.
+What does FINRA expect firms to do about AI supervision?|Under Rule 3110, firms must supervise all business communications and activities, including those generated or assisted by AI. Supervisors must review AI-assisted communications before they are sent to customers, and that review must be documented and retained.
+[/FAQ_ACCORDION]
+    `,
+  },
+  {
+    id: 22,
+    slug: "hipaa-ai-compliance-healthcare-organizations-2026",
+    category: "AI Governance",
+    title: "HIPAA AI Compliance: What Healthcare Organizations Must Govern When Using AI in 2026",
+    excerpt: "Entering protected health information into an AI tool without a signed Business Associate Agreement is a direct HIPAA violation. Most consumer AI platforms do not offer BAAs, do not meet the Security Rule's technical safeguard requirements, and are not designed for healthcare use. Here is what compliant AI governance looks like.",
+    image: "/assets/blog/centience-ai-governance-hipaa.svg",
+    author: "Orville Matias",
+    date: "June 2026",
+    metaTitle: "HIPAA AI Compliance for Healthcare Organizations 2026 | Centience",
+    metaDescription: "Using AI with protected health information without a Business Associate Agreement is a HIPAA violation. Learn what healthcare organizations must govern — BAAs, Security Rule safeguards, shadow AI risks, and OCR enforcement trends — to use AI compliantly.",
+    content: `
+[STAT_CARDS]
+$7.4M | Average Healthcare Breach Cost | Highest of any industry, 14 consecutive years (IBM 2025)
+$1.5M | Maximum Civil Penalty | Per violation category per year under HIPAA
+57% | Healthcare Workers | Report encountering unauthorized AI tools at their organization (Wolters Kluwer 2025)
+35% | AI Data Flow Visibility | Average healthcare organization visibility into AI data flows
+[/STAT_CARDS]
+
+Here is a scenario playing out at healthcare organizations across the country right now: a clinical administrator pastes a patient's discharge summary into ChatGPT to help draft a follow-up letter. A billing coordinator uses an AI tool to summarize insurance claim details. A physician asks an AI assistant to help draft clinical documentation.
+
+In each case, protected health information has left the healthcare organization's environment and entered a third-party AI platform — without a signed Business Associate Agreement, without evaluation of the platform's security controls, and without any record of the disclosure.
+
+Each instance is a potential HIPAA violation. Depending on the volume and the nature of the information disclosed, each instance carries civil penalty exposure up to $1.5 million per violation category per year.
+
+## The Legal Foundation: Why AI and PHI Is a HIPAA Problem
+
+The Health Insurance Portability and Accountability Act's Privacy Rule and Security Rule were written in an era before AI was a mainstream business tool. But they apply fully to how healthcare organizations handle protected health information today — regardless of the technology involved.
+
+**The Business Associate Agreement requirement** is the most immediately relevant provision. Under HIPAA, any vendor or service provider that creates, receives, maintains, or transmits PHI on behalf of a covered entity is a "business associate" — and must sign a BAA before receiving any PHI.
+
+[CALLOUT:Rule]
+45 CFR § 164.502(e)(1): A covered entity may disclose PHI to a business associate only if the covered entity obtains satisfactory assurance, in the form of a written contract, that the business associate will appropriately safeguard the information. A Business Associate Agreement is not a nicety. It is a legal precondition for any PHI disclosure to a third-party service provider.
+[/CALLOUT]
+
+Consumer AI platforms — including the personal-use versions of ChatGPT, Claude, Gemini, and others — are not HIPAA business associates. They do not offer Business Associate Agreements as a standard feature. Their terms of service typically permit use of submitted data to improve their models, which is incompatible with HIPAA's use limitation requirements. Inputting PHI into these platforms is a direct HIPAA violation regardless of what the employee intended.
+
+Some AI platforms offer HIPAA-aligned enterprise versions with BAAs available. Even where BAAs exist, the healthcare organization must evaluate whether the platform's security architecture satisfies the Security Rule's technical safeguard requirements before using it for PHI.
+
+## What the Security Rule Requires for AI Systems Processing PHI
+
+The HIPAA Security Rule requires covered entities and business associates to implement administrative, physical, and technical safeguards to protect electronic PHI. When AI systems process PHI, those systems must satisfy the Security Rule's requirements.
+
+**Technical safeguards (45 CFR § 164.312)** are particularly relevant for AI:
+
+**Access Controls** — Only authorized individuals may access systems that process PHI. AI tools used for PHI processing must implement role-based access controls, unique user identification, and automatic logoff provisions. Consumer AI platforms accessible with a free account and no identity verification do not satisfy this requirement.
+
+**Audit Controls** — Organizations must implement hardware, software, and procedural mechanisms that record and examine activity in information systems that contain or use electronic PHI. AI systems must generate and retain audit logs of PHI access and processing. Most consumer AI platforms do not provide healthcare-grade audit logging.
+
+**Integrity Controls** — Electronic PHI must be protected from improper alteration or destruction. AI systems processing PHI must implement controls to verify that data has not been improperly modified.
+
+**Transmission Security** — When PHI is transmitted electronically, encryption is required. Data transmitted to AI APIs or platforms must be encrypted in transit, and the platform must implement appropriate encryption at rest.
+
+**Risk Analysis** — Before deploying any AI system that processes PHI, the organization must conduct a risk analysis under 45 CFR § 164.308(a)(1). The risk analysis must identify threats and vulnerabilities specific to the AI system, assess the likelihood and impact of those risks, and document mitigation measures.
+
+## Shadow AI in Healthcare: The Invisible Exposure
+
+The most significant HIPAA AI compliance risk for most healthcare organizations is not the AI tools they have formally evaluated and deployed. It is the AI tools their employees are using without authorization.
+
+The Wolters Kluwer 2025 Healthcare AI Readiness Report found that 57% of healthcare respondents had encountered or used an unauthorized AI tool at their organization. The IBM Cost of a Data Breach Report found that healthcare organizations have, on average, only 35% visibility into what AI tools are processing their data. The gap between what employees are doing with AI and what the organization knows about is the compliance gap.
+
+[CALLOUT:Warning]
+The CB Financial Form 8-K filed in May 2026 — the first SEC cybersecurity disclosure triggered by shadow AI rather than an external attack — is the most visible public illustration of the shadow AI risk. One employee, one unauthorized AI tool, one regulatory disclosure. Healthcare organizations face the same risk under HIPAA, where the consequences include OCR investigation, civil penalties, corrective action plans, and state attorney general actions.
+[/CALLOUT]
+
+The pattern is consistent: the unauthorized AI use happens at the level of individual employees trying to get their work done more efficiently. The breach is discovered after the fact — often through a vendor audit, a patient complaint, or an internal security review. By that point, the disclosure has occurred, the violation is complete, and the organization's options are limited to remediation and disclosure to OCR.
+
+## OCR Enforcement in 2025–2026: What the Agency Is Prioritizing
+
+The HHS Office for Civil Rights is the primary HIPAA enforcement agency. OCR's enforcement activity in recent years has focused heavily on areas where technical safeguards were absent or inadequate — the same category of failure that AI governance addresses.
+
+Recent enforcement trends relevant to AI governance:
+
+**Risk analysis failures** remain the most commonly cited HIPAA violation in OCR settlements. Organizations that deploy AI systems processing PHI without a documented risk analysis are accumulating the most common HIPAA enforcement risk.
+
+**Impermissible disclosures** — the unauthorized disclosure of PHI to third parties — are a direct consequence of employees using consumer AI platforms. Each instance of a covered employee inputting PHI into an unauthorized AI tool is a potential impermissible disclosure under 45 CFR § 164.502.
+
+**Lack of Business Associate Agreements** is specifically cited in enforcement actions where PHI was disclosed to vendors without a signed BAA. The absence of a BAA with an AI platform used to process PHI is a straightforward violation.
+
+**Audit control failures** — the absence of audit logging for systems that access PHI — are increasingly relevant as AI systems process clinical data without generating the audit logs OCR expects to review in investigations.
+
+## What HIPAA-Compliant AI Governance Requires
+
+A HIPAA-compliant AI governance program for a healthcare organization has five components:
+
+[TIMELINE]
+AI Inventory | Identify every AI tool employees are using — across clinical, administrative, and operational functions. Include embedded AI features in existing software platforms that may have been enabled by default.
+BAA Evaluation | For every AI tool that will process PHI, obtain a signed Business Associate Agreement before any PHI is transmitted. Verify that the BAA addresses HIPAA-required provisions, not just vendor-standard data processing terms.
+Risk Analysis | Conduct a HIPAA Security Rule risk analysis for each AI system that will process PHI. Document threats, vulnerabilities, likelihood, impact, and mitigation measures. Update the risk analysis when AI systems change.
+Technical Safeguards Review | Verify that each authorized AI platform implements required technical safeguards: access controls, audit logging, integrity controls, and transmission security. Document the evaluation.
+Employee Training and Technical Controls | Train employees on HIPAA obligations when using AI and implement technical controls — approved tool lists enforced at the network level, DLP rules that prevent PHI from reaching unauthorized platforms — to enforce the policy.
+[/TIMELINE]
+
+## The BAA Landscape for Enterprise AI Platforms
+
+Healthcare organizations frequently ask which AI platforms offer BAAs. The landscape has evolved significantly in the last 18 months:
+
+**Microsoft Azure OpenAI Service** offers a BAA as part of the Microsoft Online Services BAA for eligible Enterprise customers. Organizations using Microsoft 365 Copilot in a healthcare context must ensure their BAA covers the specific services they are using.
+
+**Google Cloud Healthcare API and Vertex AI** are covered under Google's BAA for healthcare customers. Standard Google Workspace AI features require evaluation of which specific features are covered.
+
+**Amazon Web Services** offers a BAA covering eligible AWS services, including certain AI and machine learning services. The BAA must be specifically activated; it is not automatic.
+
+**Anthropic, OpenAI, and others** — consumer-facing AI platforms from major AI developers do not uniformly offer BAAs. Enterprise agreements and healthcare-specific partnerships vary by vendor and are evolving. Verify current BAA availability directly with each vendor before any PHI processing.
+
+[CALLOUT:Important]
+A signed BAA is a necessary condition for HIPAA-compliant PHI processing by an AI platform — but it is not sufficient. The platform must also implement the technical safeguards the Security Rule requires. A BAA with a platform that lacks adequate access controls, audit logging, or encryption does not make your PHI processing compliant.
+[/CALLOUT]
+
+## The Telehealth and Remote Care Expansion
+
+The expansion of telehealth and AI-assisted remote monitoring has created new categories of PHI processing that healthcare organizations must govern. AI tools used in telehealth platforms, remote patient monitoring, clinical documentation assistance, and care coordination software all process PHI — often at greater scale and with less visibility than traditional electronic health record systems.
+
+The same principles apply: BAA required before PHI transmission, Security Rule safeguards required for PHI processing, risk analysis required before deployment, and audit logging required for PHI access. The telehealth context does not create HIPAA exceptions — it extends HIPAA obligations to a broader range of technology.
+
+Organizations that deployed telehealth platforms rapidly during and after the COVID-19 pandemic often did so without full HIPAA compliance evaluation. AI features added to those platforms since deployment may not have been evaluated at all. A comprehensive AI inventory should include every telehealth platform in the organization's technology stack.
+
+[RELATED_SERVICE:AI Governance Program|Centience builds HIPAA-compliant AI governance programs for healthcare organizations — BAA evaluation, risk analysis, technical safeguards, and audit-ready documentation.|/governance]
+
+[FAQ_ACCORDION]
+Is using ChatGPT with patient data a HIPAA violation?|Yes, in most cases. Consumer versions of ChatGPT and other consumer AI platforms are not HIPAA business associates and do not offer Business Associate Agreements. Inputting protected health information into these platforms is an impermissible disclosure under HIPAA's Privacy Rule. Enterprise versions of some AI platforms offer BAAs, but these must be specifically obtained and the platform must also satisfy the Security Rule's technical safeguard requirements.
+What is a Business Associate Agreement and why does it matter for AI?|A Business Associate Agreement (BAA) is a required written contract between a covered entity and any vendor that creates, receives, maintains, or transmits PHI on the covered entity's behalf. Under 45 CFR § 164.502(e)(1), a covered entity cannot legally disclose PHI to a business associate without a signed BAA. Any AI platform that will process PHI is a business associate and requires a BAA before any PHI is transmitted.
+What HIPAA penalties apply to AI-related violations?|HIPAA civil penalties range from $100 to $50,000 per violation, depending on culpability, with a maximum of $1.5 million per violation category per year. An impermissible disclosure of PHI to an unauthorized AI platform is a violation. If the disclosure affected multiple patients, each patient's information could be treated as a separate violation. State attorneys general can bring additional actions.
+What is shadow AI and why is it a HIPAA risk?|Shadow AI is the use of AI tools by employees without organizational authorization or oversight. In healthcare, shadow AI typically means employees using consumer AI platforms to process patient information without the organization's knowledge. Because these platforms lack BAAs and do not meet Security Rule requirements, each instance of PHI processing through an unauthorized AI tool is a potential HIPAA violation.
+How does HIPAA apply to AI features embedded in existing software?|Many software platforms used in healthcare — EHR systems, billing platforms, scheduling tools — have added AI features in recent years, often enabled by default. If these AI features process PHI, the covered entity must verify that its BAA with the vendor covers the AI features and that those features meet Security Rule requirements. Features enabled by default and not explicitly evaluated represent a common compliance gap.
+[/FAQ_ACCORDION]
+    `,
+  },
 ];
 
 export function getSrc(image: any): string {
