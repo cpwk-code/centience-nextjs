@@ -44,16 +44,16 @@ const cols = [
 
 const outcomes = [
   {
-    industry: "Financial Services",
-    result: "FINRA examination completed without remediation requests. The program was already running — exam prep time was zero.",
+    industry: "Investment Management",
+    result: "An institutional due diligence questionnaire surfaced three unmonitored AI tools in use across the firm — no policy, no DLP controls, no input/output log. Every gap was closed before the next questionnaire cycle. The answers were ready.",
   },
   {
-    industry: "Healthcare",
-    result: "HHS compliance documentation delivered within 48 hours of audit notice. AI governance framework already in place.",
+    industry: "Registered Investment Adviser",
+    result: "Client data was moving through AI without protection. Books and records requirements apply to every AI input and output — the same rules as email. Controls were live before the first SEC examination question arrived.",
   },
   {
-    industry: "Private Equity",
-    result: "Portfolio-wide governance program surfaced as an asset during exit due diligence — not a gap. Deal closed on schedule.",
+    industry: "Broker-Dealer",
+    result: "Shadow AI monitoring found staff using four unapproved platforms with firm data. No one knew the extent of it. The governance program was built and enforced before regulators asked. No remediation requests on examination.",
   },
 ];
 
