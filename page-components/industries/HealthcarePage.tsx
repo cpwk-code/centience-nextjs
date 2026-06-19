@@ -146,7 +146,7 @@ const HealthcarePage = () => (
                 <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
                 <span className="font-semibold text-primary text-sm">Infrastructure Governance</span>
               </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">Managed infrastructure with 99.9% uptime and 24/7 monitoring for healthcare environments.</p>
+              <p className="text-xs text-muted-foreground leading-relaxed">Infrastructure governance aligned to HIPAA Security Rule requirements — continuously monitored and audit-ready.</p>
             </a>
           </div>
           <div className="flex flex-wrap gap-4 items-center">

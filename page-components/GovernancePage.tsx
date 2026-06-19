@@ -13,7 +13,7 @@ const services = [
     description: "What it enables: Operational continuity, resilient systems, and the technical foundation that makes every governance layer above it enforceable. You cannot govern what you do not control.",
     items: [
       "Managed infrastructure platform — computers, networks, cloud, endpoints",
-      "Infrastructure monitoring and resilience with defined SLAs",
+      "Infrastructure monitoring and resilience aligned to your regulatory requirements",
       "Endpoint and cloud management with governance controls",
       "Disaster recovery governance and business continuity",
     ],

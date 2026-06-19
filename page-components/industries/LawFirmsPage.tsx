@@ -51,7 +51,7 @@ const LawFirmsPage = () => (
                 <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
                 <span className="font-semibold text-primary text-sm">Infrastructure Governance</span>
               </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">Managed infrastructure with the uptime and monitoring law firms require.</p>
+              <p className="text-xs text-muted-foreground leading-relaxed">Infrastructure governance built around data confidentiality, client privilege protection, and regulatory compliance requirements.</p>
             </a>
           </div>
           <div className="flex flex-wrap gap-4 items-center">

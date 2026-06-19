@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, Server, Monitor, Cloud, RefreshCw, Users, CheckCircle2, Shield } from "lucide-react";
 
 const capabilities = [
-  { icon: Server, title: "Managed Infrastructure Platform", description: "Fully managed computers, servers, networks, and cloud environments — implemented, monitored, and maintained with defined SLAs. Every device in your environment is inventoried, governed, and operating within documented standards." },
-  { icon: Monitor, title: "Infrastructure Monitoring & Resilience", description: "24/7 monitoring with automated alerting, performance tracking, and uptime management. Monitoring is integrated into your broader governance reporting — not siloed in a separate tool that nobody reviews." },
+  { icon: Server, title: "Governance-Ready Infrastructure", description: "Computers, servers, networks, and cloud environments implemented and operated within your regulatory compliance framework. Every device inventoried, every configuration documented, every change tracked — so the infrastructure layer supports audit readiness, not just uptime." },
+  { icon: Monitor, title: "Continuous Infrastructure Monitoring", description: "Continuous monitoring with automated alerting and performance tracking integrated into your governance reporting. Not siloed in a separate tool nobody reviews — visibility that flows directly into your compliance posture and examination evidence." },
   { icon: Cloud, title: "Endpoint & Cloud Management", description: "Centralized management of endpoints, cloud environments, and hybrid infrastructure with governance controls and compliance tracking maintained continuously. Every device, every user, every cloud resource — under governance." },
   { icon: RefreshCw, title: "Disaster Recovery Governance", description: "Documented disaster recovery procedures, regular testing, and governance oversight — so your business continuity plans meet regulatory expectations and are tested, not just documented. When an examiner asks for your DR plan, it exists and it has been tested." },
   { icon: Users, title: "Co-Management Program", description: "For organizations with internal IT resources, Centience offers co-managed infrastructure governance. We integrate into your existing team structure, manage the governance and compliance layer, and ensure the whole environment meets regulatory standards — without replacing your internal team." },
@@ -15,9 +15,9 @@ const capabilities = [
 ];
 
 const stats = [
-  { value: "99.9%", label: "Infrastructure Uptime" },
-  { value: "24/7", label: "Monitoring & Support" },
-  { value: "< 15min", label: "Critical Response Time" },
+  { value: "Continuous", label: "Evidence Maintenance" },
+  { value: "24/7", label: "Governance Monitoring" },
+  { value: "Real-Time", label: "Compliance Visibility" },
   { value: "10+", label: "Avg. Client Relationship (Years)" },
 ];
 
