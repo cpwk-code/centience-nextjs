@@ -1,4 +1,4 @@
-import { Server, Shield, Brain } from "lucide-react";
+import { Server, Shield, Brain, Database } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -29,6 +29,20 @@ const layers = [
       "Vendor and third-party risk evaluation",
       "Incident response governance",
       "Compliance readiness monitoring",
+    ],
+  },
+  {
+    icon: Database,
+    label: "CONTROL",
+    title: "Data Governance",
+    subtitle: "Data Control",
+    description: "What it enables: Documented classification, retention, lineage, and access controls across every system — so your data posture is defensible before a regulator, auditor, or client ever asks.",
+    items: [
+      "Data classification and sensitive data inventory",
+      "Records retention aligned to FINRA 17a-4, HIPAA, and SEC",
+      "Data lineage and AI audit trails",
+      "Access control governance and audit logs",
+      "Off-channel communications capture and retention",
     ],
   },
   {
@@ -68,11 +82,11 @@ const FrameworkSection = () => (
           The Centience Governance Stack
         </h2>
         <p className="opacity-60 leading-relaxed">
-          Three integrated governance programs — not separate engagements delivered by separate vendors. One accountable firm managing every layer of your technology environment as a single ongoing program.
+          Four integrated governance programs — not separate engagements delivered by separate vendors. One accountable firm managing every layer of your technology environment as a single ongoing program.
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-6 mb-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
         {layers.map((layer, i) => (
           <motion.div
             key={layer.label}

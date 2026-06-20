@@ -37,10 +37,10 @@ const ProblemSection = () => (
           One Integrated Governance Program. Three Layers. Continuously Operated.
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Centience does not deliver governance frameworks and walk away. We build and operate the governance program — managing your infrastructure, governing your cybersecurity, and overseeing your AI environment as a single continuously enforced model.
+          Centience does not deliver governance frameworks and walk away. We build and operate the governance program — managing your infrastructure, governing your cybersecurity, controlling your data, and overseeing your AI environment as a single continuously enforced model.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Every layer works together. Every control is technically enforced. Every piece of audit evidence is assembled in real time — not reconstructed before an exam.
+          Every layer works together. Data governance ties the stack together: classification, retention, lineage, and access controls that make your infrastructure defensible, your AI auditable, and your records exam-ready. Every control is technically enforced. Every piece of audit evidence is assembled in real time — not reconstructed before an exam.
         </p>
       </div>
 

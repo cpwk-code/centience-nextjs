@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Server, Lock, BarChart3, Brain } from "lucide-react";
+import { ArrowRight, Server, Lock, Database, Brain } from "lucide-react";
 
 const stats = [
   { value: "20+", label: "Years Governing Regulated IT" },
@@ -88,7 +88,7 @@ const HeroSection = () => (
             {[
               { icon: Server, title: "Infrastructure Governance", desc: "Managed infrastructure with technically enforced governance controls" },
               { icon: Lock, title: "Cybersecurity Governance", desc: "Continuous security posture, vendor risk, and incident readiness" },
-              { icon: BarChart3, title: "Regulatory Readiness", desc: "Audit evidence maintained continuously — not reconstructed before an exam" },
+              { icon: Database, title: "Data Governance", desc: "Classification, retention, lineage, and access controls — continuously maintained" },
               { icon: Brain, title: "AI Governance", desc: "Policy, oversight, and ongoing monitoring for regulated AI adoption" },
             ].map((item, i) => (
               <div

@@ -1,4 +1,4 @@
-import { Server, Shield, Brain } from "lucide-react";
+import { Server, Shield, Brain, Database } from "lucide-react";
 import { motion } from "framer-motion";
 import { Search, BookOpen, Cog } from "lucide-react";
 
@@ -50,6 +50,17 @@ const programs = [
     ],
   },
   {
+    icon: Database,
+    title: "Data Governance",
+    tag: "Control",
+    items: [
+      "Data classification and sensitive data inventory",
+      "Records retention aligned to FINRA 17a-4, HIPAA, and SEC",
+      "Data lineage and AI audit trails",
+      "Access control governance and audit logs",
+    ],
+  },
+  {
     icon: Brain,
     title: "AI Governance",
     tag: "Strategic Layer",
@@ -72,14 +83,14 @@ const CapabilitiesSection = () => (
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Programs</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Three Integrated Governance Programs. One Accountable Firm.
+          Four Integrated Governance Programs. One Accountable Firm.
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Technology governance at Centience is structured as a three-layer stack. Each layer is managed as part of a single ongoing program — not separate engagements delivered by separate vendors.
+          Technology governance at Centience is structured as a four-layer stack: infrastructure, cybersecurity, data, and AI. Each layer is managed as part of a single ongoing program — not separate engagements delivered by separate vendors.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 mb-24">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
         {programs.map((prog, i) => (
           <motion.div
             key={prog.title}
