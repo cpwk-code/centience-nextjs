@@ -29,6 +29,13 @@ const AccountingCpaPage = () => (
     <section className="py-16 bg-muted/50 border-t border-border">
       <div className="container mx-auto">
         <div className="max-w-4xl">
+          <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">CPA firms handling tax returns, financial statements, and audit workpapers are required to maintain IRS records retention schedules — and those obligations only work when data is classified by document type and client engagement. In multi-client environments, data governance enforces the access controls that prevent one client's financial data from being accessible to staff on a different engagement. Data classification is also the foundation for FTC Safeguards Rule compliance for firms subject to Gramm-Leach-Bliley.</p>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance Program
+            </a>
+          </div>
           <h2 className="text-xl font-display font-bold text-primary mb-2">Related Governance Programs</h2>
           <p className="text-sm text-muted-foreground mb-8">Centience delivers continuous governance across three interconnected programs — each reinforcing the others.</p>
           <div className="grid sm:grid-cols-3 gap-4 mb-8">
@@ -61,6 +68,9 @@ const AccountingCpaPage = () => (
               </a>
               <a href="/industries/non-profit" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
                 <ArrowRight size={12} /> Non-Profit Organizations
+              </a>
+              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Data Governance
               </a>
           </div>
         </div>

@@ -55,8 +55,18 @@ const CybersecurityPage = () => (
               <p className="text-xs text-muted-foreground leading-relaxed">Portfolio-level cybersecurity governance through exit.</p>
             </a>
           </div>
+          <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">Cybersecurity governs the perimeter — data governance governs what's inside it. When a breach occurs, regulators ask what data was exposed and whether classification and access controls were in place. Data governance answers both.</p>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance Program
+            </a>
+          </div>
           <div className="flex flex-wrap gap-4 items-center">
             <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Related Programs:</span>
+              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Data Governance
+              </a>
               <a href="/ai-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
                 <ArrowRight size={12} /> AI Governance Program
               </a>

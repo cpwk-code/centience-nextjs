@@ -65,7 +65,17 @@ const AIGovernancePage = () => (
             </a>
           </div>
           <div className="flex flex-wrap gap-4 items-center">
+            <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-4 w-full">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">AI governance requires data governance as its foundation. You cannot document what an AI model did without knowing what data it consumed. Data lineage, classification, and retention controls transform AI oversight from a policy document into an auditable record that holds up under examination.</p>
+              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Data Governance Program
+              </a>
+            </div>
             <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Related Programs:</span>
+              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Data Governance
+              </a>
               <a href="/cybersecurity" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
                 <ArrowRight size={12} /> Cybersecurity Governance
               </a>

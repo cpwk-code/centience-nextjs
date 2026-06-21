@@ -68,8 +68,18 @@ const CoManagementPage = () => (
               <p className="text-xs text-muted-foreground leading-relaxed">Co-managed governance for firms with existing technology partners.</p>
             </a>
           </div>
+          <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">When your internal team and Centience share IT responsibilities, data governance sets the shared framework. Classification policies, access controls, and retention schedules must be consistent regardless of who performs the work — co-management only works when both sides operate within the same data governance posture.</p>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance Program
+            </a>
+          </div>
           <div className="flex flex-wrap gap-4 items-center">
             <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Related Programs:</span>
+              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Data Governance
+              </a>
               <a href="/governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
                 <ArrowRight size={12} /> Technology Governance Programs
               </a>

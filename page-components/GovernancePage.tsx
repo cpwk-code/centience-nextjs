@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Server, Brain, Search, BookOpen, Cog, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Shield, Server, Brain, Database, Search, BookOpen, Cog, CheckCircle2 } from "lucide-react";
 
 const services = [
   {
@@ -29,6 +29,19 @@ const services = [
       "Vendor and third-party risk evaluation",
       "Incident response governance",
       "Compliance readiness monitoring",
+    ],
+  },
+  {
+    icon: Database,
+    title: "Data Governance",
+    href: "/data-governance",
+    description: "What it enables: Documented classification, retention, lineage, and access controls across every system — so your data posture is defensible before a regulator, auditor, or client ever asks.",
+    items: [
+      "Data classification and sensitive data inventory",
+      "Records retention aligned to FINRA 17a-4, HIPAA, and SEC",
+      "Data lineage and AI audit trails",
+      "Access control governance and audit logs",
+      "Off-channel communications capture and retention",
     ],
   },
   {
@@ -102,8 +115,18 @@ const GovernancePage = () => (
               <p className="text-xs text-muted-foreground leading-relaxed">Portfolio-level governance from hold period through exit.</p>
             </a>
           </div>
+          <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">Data governance is the control layer running through every program Centience manages. Infrastructure holds data. Cybersecurity protects it. AI consumes it. Data governance defines what it is, who can access it, and how long it exists — the thread that makes every other layer defensible.</p>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance Program
+            </a>
+          </div>
           <div className="flex flex-wrap gap-4 items-center">
             <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Related Programs:</span>
+              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Data Governance
+              </a>
               <a href="/ai-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
                 <ArrowRight size={12} /> AI Governance Program
               </a>

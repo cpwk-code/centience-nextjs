@@ -29,6 +29,13 @@ const PrivateEquityPage = () => (
     <section className="py-16 bg-muted/50 border-t border-border">
       <div className="container mx-auto">
         <div className="max-w-4xl">
+          <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">During due diligence, buyers assess whether target companies have defensible data classification policies and access control governance — and the absence of either creates negotiating leverage against the seller. At the firm level, SEC-registered PE firms must govern investor data classification and fund records retention aligned to SEC books-and-records requirements. Data governance also establishes the AI data lineage controls that document how portfolio companies are using AI in their operations — a growing diligence and regulatory focus area.</p>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance Program
+            </a>
+          </div>
           <h2 className="text-xl font-display font-bold text-primary mb-2">Related Governance Programs</h2>
           <p className="text-sm text-muted-foreground mb-8">Centience delivers continuous governance across three interconnected programs — each reinforcing the others.</p>
           <div className="grid sm:grid-cols-3 gap-4 mb-8">
@@ -61,6 +68,9 @@ const PrivateEquityPage = () => (
               </a>
               <a href="/industries/law-firms" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
                 <ArrowRight size={12} /> Law Firms
+              </a>
+              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Data Governance
               </a>
           </div>
         </div>

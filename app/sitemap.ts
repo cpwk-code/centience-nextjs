@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://centience.ai/cybersecurity', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://centience.ai/infrastructure', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://centience.ai/co-management', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://centience.ai/data-governance', lastModified: '2026-06-21', changeFrequency: 'monthly', priority: 0.9 },
     // Assessment
     { url: 'https://centience.ai/ai-governance-risk-assessment', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.85 },
     // Industries

@@ -29,6 +29,13 @@ const LawFirmsPage = () => (
     <section className="py-16 bg-muted/50 border-t border-border">
       <div className="container mx-auto">
         <div className="max-w-4xl">
+          <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">Attorney-client privilege protection starts with data classification — knowing which files are privileged, which are work product, and which carry specific matter-level access restrictions. Data governance also controls who across the firm can access each matter, making it the enforcement layer behind conflict-of-interest screens. When AI research tools are in use, data lineage governance tracks what client data the AI touched and when — which is the documentation a firm needs if privilege is ever challenged.</p>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance Program
+            </a>
+          </div>
           <h2 className="text-xl font-display font-bold text-primary mb-2">Related Governance Programs</h2>
           <p className="text-sm text-muted-foreground mb-8">Centience delivers continuous governance across three interconnected programs — each reinforcing the others.</p>
           <div className="grid sm:grid-cols-3 gap-4 mb-8">
@@ -61,6 +68,9 @@ const LawFirmsPage = () => (
               </a>
               <a href="/industries/accounting-cpa" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
                 <ArrowRight size={12} /> Accounting & CPA Firms
+              </a>
+              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Data Governance
               </a>
           </div>
         </div>

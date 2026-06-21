@@ -124,6 +124,13 @@ const HealthcarePage = () => (
     <section className="py-16 bg-muted/50 border-t border-border">
       <div className="container mx-auto">
         <div className="max-w-4xl">
+          <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">HIPAA's minimum necessary standard is a data governance obligation — you cannot enforce it without first classifying PHI by sensitivity and use case. Healthcare organizations also face a 6-year retention requirement under HIPAA, and breach scope determination depends entirely on whether PHI was correctly classified before the incident. Data classification and access control governance are the structural layer that makes every other HIPAA control work.</p>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance Program
+            </a>
+          </div>
           <h2 className="text-xl font-display font-bold text-primary mb-2">Related Governance Programs</h2>
           <p className="text-sm text-muted-foreground mb-8">Centience delivers continuous governance across three interconnected programs — each reinforcing the others.</p>
           <div className="grid sm:grid-cols-3 gap-4 mb-8">
@@ -156,6 +163,9 @@ const HealthcarePage = () => (
               </a>
               <a href="/industries/non-profit" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
                 <ArrowRight size={12} /> Non-Profit Organizations
+              </a>
+              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+                <ArrowRight size={12} /> Data Governance
               </a>
           </div>
         </div>
