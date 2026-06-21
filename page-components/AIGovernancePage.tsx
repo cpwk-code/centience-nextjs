@@ -34,63 +34,8 @@ const advantages = [
 
 const AIGovernancePage = () => (
   <Layout>
-    {/* Hero */}
-    {/* Related Industries — Internal Linking */}
-    <section className="py-16 bg-muted/50 border-t border-border">
-      <div className="container mx-auto">
-        <div className="max-w-4xl">
-          <h2 className="text-xl font-display font-bold text-primary mb-2">Industries We Serve</h2>
-          <p className="text-sm text-muted-foreground mb-8">Centience delivers continuous governance programs for regulated organizations across multiple industries.</p>
-          <div className="grid sm:grid-cols-3 gap-4 mb-8">
-            <a href="/industries/financial-services" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
-              <div className="flex items-center gap-2 mb-2">
-                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
-                <span className="font-semibold text-primary text-sm">Financial Services</span>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">SEC/FINRA AI governance requirements for broker-dealers and RIAs.</p>
-            </a>
-            <a href="/industries/healthcare" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
-              <div className="flex items-center gap-2 mb-2">
-                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
-                <span className="font-semibold text-primary text-sm">Healthcare</span>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">HIPAA-aligned AI governance for clinical and administrative AI tools.</p>
-            </a>
-            <a href="/industries/law-firms" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
-              <div className="flex items-center gap-2 mb-2">
-                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
-                <span className="font-semibold text-primary text-sm">Law Firms</span>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">AI governance for legal research, document review, and client communications.</p>
-            </a>
-          </div>
-          <div className="flex flex-wrap gap-4 items-center">
-            <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-4 w-full">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">AI governance requires data governance as its foundation. You cannot document what an AI model did without knowing what data it consumed. Data lineage, classification, and retention controls transform AI oversight from a policy document into an auditable record that holds up under examination.</p>
-              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
-                <ArrowRight size={12} /> Data Governance Program
-              </a>
-            </div>
-            <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Related Programs:</span>
-              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
-                <ArrowRight size={12} /> Data Governance
-              </a>
-              <a href="/cybersecurity" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
-                <ArrowRight size={12} /> Cybersecurity Governance
-              </a>
-              <a href="/governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
-                <ArrowRight size={12} /> Technology Governance Programs
-              </a>
-              <a href="/infrastructure" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
-                <ArrowRight size={12} /> Infrastructure Governance
-              </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section className="section-navy relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `linear-gradient(hsl(var(--warm-white)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--warm-white)) 1px, transparent 1px)`, backgroundSize: "60px 60px" }} />
       <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "var(--gradient-gold)" }} />
       <div className="container mx-auto relative z-10 pt-32 pb-20 lg:pt-40 lg:pb-28">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
@@ -227,6 +172,61 @@ const AIGovernancePage = () => (
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Related Industries */}
+    <section className="py-16 bg-muted/50 border-t border-border">
+      <div className="container mx-auto">
+        <div className="max-w-4xl">
+          <h2 className="text-xl font-display font-bold text-primary mb-2">Industries We Serve</h2>
+          <p className="text-sm text-muted-foreground mb-8">Centience delivers continuous governance programs for regulated organizations across multiple industries.</p>
+          <div className="grid sm:grid-cols-3 gap-4 mb-8">
+            <a href="/industries/financial-services" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">Financial Services</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">SEC/FINRA AI governance requirements for broker-dealers and RIAs.</p>
+            </a>
+            <a href="/industries/healthcare" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">Healthcare</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">HIPAA-aligned AI governance for clinical and administrative AI tools.</p>
+            </a>
+            <a href="/industries/law-firms" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">Law Firms</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">AI governance for legal research, document review, and client communications.</p>
+            </a>
+          </div>
+          <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">AI governance requires data governance as its foundation. You cannot document what an AI model did without knowing what data it consumed. Data lineage, classification, and retention controls transform AI oversight from a policy document into an auditable record that holds up under examination.</p>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance Program
+            </a>
+          </div>
+          <div className="flex flex-wrap gap-4 items-center">
+            <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Related Programs:</span>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance
+            </a>
+            <a href="/cybersecurity" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Cybersecurity Governance
+            </a>
+            <a href="/governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Technology Governance Programs
+            </a>
+            <a href="/infrastructure" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Infrastructure Governance
+            </a>
           </div>
         </div>
       </div>

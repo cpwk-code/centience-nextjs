@@ -25,59 +25,8 @@ const clientTypes = ["AmLaw 200 Regional Practices", "Mid-Size Multi-Practice Fi
 
 const LawFirmsPage = () => (
   <Layout>
-    {/* Related Services — Internal Linking */}
-    <section className="py-16 bg-muted/50 border-t border-border">
-      <div className="container mx-auto">
-        <div className="max-w-4xl">
-          <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-6">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-3">Attorney-client privilege protection starts with data classification — knowing which files are privileged, which are work product, and which carry specific matter-level access restrictions. Data governance also controls who across the firm can access each matter, making it the enforcement layer behind conflict-of-interest screens. When AI research tools are in use, data lineage governance tracks what client data the AI touched and when — which is the documentation a firm needs if privilege is ever challenged.</p>
-            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
-              <ArrowRight size={12} /> Data Governance Program
-            </a>
-          </div>
-          <h2 className="text-xl font-display font-bold text-primary mb-2">Related Governance Programs</h2>
-          <p className="text-sm text-muted-foreground mb-8">Centience delivers continuous governance across three interconnected programs — each reinforcing the others.</p>
-          <div className="grid sm:grid-cols-3 gap-4 mb-8">
-            <a href="/ai-governance" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
-              <div className="flex items-center gap-2 mb-2">
-                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
-                <span className="font-semibold text-primary text-sm">AI Governance Program</span>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">Governance for AI tools used in legal research, document review, and client communications.</p>
-            </a>
-            <a href="/cybersecurity" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
-              <div className="flex items-center gap-2 mb-2">
-                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
-                <span className="font-semibold text-primary text-sm">Cybersecurity Governance</span>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">Continuous cybersecurity oversight protecting attorney-client privilege and client data.</p>
-            </a>
-            <a href="/infrastructure" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
-              <div className="flex items-center gap-2 mb-2">
-                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
-                <span className="font-semibold text-primary text-sm">Infrastructure Governance</span>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">Infrastructure governance built around data confidentiality, client privilege protection, and regulatory compliance requirements.</p>
-            </a>
-          </div>
-          <div className="flex flex-wrap gap-4 items-center">
-            <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Other Industries:</span>
-              <a href="/industries/financial-services" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
-                <ArrowRight size={12} /> Financial Services
-              </a>
-              <a href="/industries/accounting-cpa" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
-                <ArrowRight size={12} /> Accounting & CPA Firms
-              </a>
-              <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
-                <ArrowRight size={12} /> Data Governance
-              </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section className="section-navy relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `linear-gradient(hsl(var(--warm-white)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--warm-white)) 1px, transparent 1px)`, backgroundSize: "60px 60px" }} />
       <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "var(--gradient-gold)" }} />
       <div className="container mx-auto relative z-10 pt-32 pb-20 lg:pt-40 lg:pb-28">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
@@ -153,6 +102,58 @@ const LawFirmsPage = () => (
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-10">Law Firm Types We Serve</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {clientTypes.map((t) => (<div key={t} className="card-premium p-5 flex items-center gap-3"><CheckCircle2 size={18} className="text-accent shrink-0" /><span className="text-primary font-medium">{t}</span></div>))}
+        </div>
+      </div>
+    </section>
+
+    {/* Related Services */}
+    <section className="py-16 bg-muted/50 border-t border-border">
+      <div className="container mx-auto">
+        <div className="max-w-4xl">
+          <div className="border border-accent/20 rounded-xl p-5 bg-accent/5 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-2">How Data Governance Connects</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">Attorney-client privilege protection starts with data classification — knowing which files are privileged, which are work product, and which carry specific matter-level access restrictions. Data governance also controls who across the firm can access each matter, making it the enforcement layer behind conflict-of-interest screens. When AI research tools are in use, data lineage governance tracks what client data the AI touched and when — which is the documentation a firm needs if privilege is ever challenged.</p>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance Program
+            </a>
+          </div>
+          <h2 className="text-xl font-display font-bold text-primary mb-2">Related Governance Programs</h2>
+          <p className="text-sm text-muted-foreground mb-8">Centience delivers continuous governance across three interconnected programs — each reinforcing the others.</p>
+          <div className="grid sm:grid-cols-3 gap-4 mb-8">
+            <a href="/ai-governance" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">AI Governance Program</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">Governance for AI tools used in legal research, document review, and client communications.</p>
+            </a>
+            <a href="/cybersecurity" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">Cybersecurity Governance</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">Continuous cybersecurity oversight protecting attorney-client privilege and client data.</p>
+            </a>
+            <a href="/infrastructure" className="card-premium p-5 block hover:border-accent/50 transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <ArrowRight size={14} className="text-accent group-hover:translate-x-1 transition-transform" />
+                <span className="font-semibold text-primary text-sm">Infrastructure Governance</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">Infrastructure governance built around data confidentiality, client privilege protection, and regulatory compliance requirements.</p>
+            </a>
+          </div>
+          <div className="flex flex-wrap gap-4 items-center">
+            <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Other Industries:</span>
+            <a href="/industries/financial-services" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Financial Services
+            </a>
+            <a href="/industries/accounting-cpa" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Accounting & CPA Firms
+            </a>
+            <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Data Governance
+            </a>
+          </div>
         </div>
       </div>
     </section>
