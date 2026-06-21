@@ -180,11 +180,11 @@ const GovernancePage = () => (
             <div className="gold-line" />
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Program</p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Three Integrated Governance Programs. One Accountable Firm.</h2>
-          <p className="text-muted-foreground leading-relaxed">Technology governance at Centience is structured as a three-layer stack. Each layer is managed as part of a single ongoing program — not separate engagements delivered by separate vendors.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Four Integrated Governance Programs. One Accountable Firm.</h2>
+          <p className="text-muted-foreground leading-relaxed">Technology governance at Centience is structured as a four-layer stack. Each layer is managed as part of a single ongoing program — not separate engagements delivered by separate vendors.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((svc, i) => (
             <motion.div key={svc.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
               <Link href={svc.href} className="card-premium p-8 block group h-full">
