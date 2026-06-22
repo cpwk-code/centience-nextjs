@@ -1,7 +1,7 @@
 "use client";
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowRight, Tag, User, Calendar } from "lucide-react";
+import { ArrowRight, Tag, User, Calendar, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { blogPosts, getSrc } from "@/data/blogPosts";
@@ -95,7 +95,11 @@ const InsightsArticlesPage = () => {
                   className="group flex flex-col bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg hover:border-gold/30 transition-all duration-300"
                 >
                   {/* Thumbnail */}
-                  <Link href={`/insights/${post.slug}`} className="block overflow-hidden aspect-video bg-muted flex-shrink-0">
+                  <a
+                    href={post.externalUrl ?? `/insights/${post.slug}`}
+                    {...(post.externalUrl ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="block overflow-hidden aspect-video bg-muted flex-shrink-0"
+                  >
                     <img
                       src={getSrc(post.image)}
                       alt={post.title}
@@ -103,7 +107,7 @@ const InsightsArticlesPage = () => {
                       loading="lazy"
                       decoding="async"
                     />
-                  </Link>
+                  </a>
 
                   {/* Content */}
                   <div className="flex flex-col flex-1 p-6">
@@ -120,11 +124,14 @@ const InsightsArticlesPage = () => {
                     </div>
 
                     {/* Title */}
-                    <Link href={`/insights/${post.slug}`}>
+                    <a
+                      href={post.externalUrl ?? `/insights/${post.slug}`}
+                      {...(post.externalUrl ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    >
                       <h2 className="font-display font-bold text-primary text-base leading-snug mb-3 group-hover:text-gold transition-colors line-clamp-3">
                         {post.title}
                       </h2>
-                    </Link>
+                    </a>
 
                     {/* Excerpt */}
                     <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1 line-clamp-3">
@@ -137,12 +144,17 @@ const InsightsArticlesPage = () => {
                         <User className="w-3 h-3" />
                         {post.author}
                       </span>
-                      <Link
-                        href={`/insights/${post.slug}`}
+                      <a
+                        href={post.externalUrl ?? `/insights/${post.slug}`}
+                        {...(post.externalUrl ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                         className="inline-flex items-center gap-1 text-gold text-sm font-semibold hover:gap-2 transition-all"
                       >
-                        Read <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
+                        {post.externalUrl ? (
+                          <><ExternalLink className="w-3.5 h-3.5" /> LinkedIn</>
+                        ) : (
+                          <>Read <ArrowRight className="w-3.5 h-3.5" /></>
+                        )}
+                      </a>
                     </div>
                   </div>
                 </motion.article>

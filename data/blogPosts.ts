@@ -148,6 +148,7 @@ export interface BlogPost {
   date: string;
   metaTitle?: string;
   metaDescription?: string;
+  externalUrl?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -6154,6 +6155,20 @@ What state bar guidance exists on AI and client confidentiality?|As of mid-2026,
 What is work product doctrine and why does it require separate classification from privilege?|The work product doctrine (FRCP 26(b)(3)) protects documents and tangible things prepared by or for an attorney in anticipation of litigation from discovery by opposing parties. Opinion work product — an attorney's mental impressions, legal theories, and strategies — receives near-absolute protection. Work product is governed by a different legal framework than attorney-client privilege, can be waived differently, and applies in different circumstances. Law firm data classification that distinguishes privilege from work product enables access controls and retention policies to be calibrated to the correct legal standard for each record type.
 [/FAQ_ACCORDION]
     `,
+  },
+  {
+    id: 25,
+    slug: "how-centience-builds-ai-governance-regulated-firms",
+    category: "AI Governance",
+    title: "How Centience Builds AI Governance for Regulated Firms",
+    excerpt: "Most AI governance programs fail before they start. They begin with a policy document nobody can enforce. Seven modules. Built around visibility, ownership, supervision, evidence, and continuous control. We wrote down exactly how we build it.",
+    image: "/assets/blog/centience-ai-governance-operating-model.svg",
+    author: "Centience AI",
+    date: "June 2026",
+    metaTitle: "How Centience Builds AI Governance for Regulated Firms | LinkedIn",
+    metaDescription: "Most AI governance programs fail before they start — they begin with a policy document nobody can enforce. Centience's seven-module operating model behind our 100% audit success rate across SEC, FINRA, and HIPAA engagements.",
+    externalUrl: "https://www.linkedin.com/pulse/how-centience-builds-ai-governance-regulated-firms-centience-ai-jmgme",
+    content: "",
   },
 ];
 
