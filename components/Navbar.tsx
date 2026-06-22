@@ -24,7 +24,6 @@ const navItems: NavItem[] = [
     children: [
       { label: "AI Governance", href: "/ai-governance" },
       { label: "Cybersecurity Governance", href: "/cybersecurity" },
-      { label: "Data Governance", href: "/data-governance" },
       { label: "Infrastructure Governance", href: "/infrastructure" },
       { label: "Technology Governance", href: "/governance" },
       { label: "Co-Management", href: "/co-management" },
