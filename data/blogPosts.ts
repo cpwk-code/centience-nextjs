@@ -18,8 +18,6 @@ import managedItFloridaPrivateEquityImage from "@/assets/blog/managed-it-florida
 import nydfsPart500ComplianceImage from "@/assets/blog/nydfs-part-500-compliance.jpg";
 import chatgptVsGeminiVsClaudeVsGrokImage from "@/assets/blog/chatgpt-vs-gemini-vs-claude-vs-grok.jpg";
 import aiIntegrationFinancialFirmsImage from "@/assets/blog/ai-integration-financial-firms.svg";
-import dataGovernanceFinancialServicesImage from "@/assets/blog/centience-data-governance-financial-services.svg";
-import dataGovernanceLawFirmsImage from "@/assets/blog/centience-data-governance-law-firms.svg";
 
 // Firm images for West Palm Beach blog post
 import firmCompuworkImage from "@/assets/blog/firm-compuwork.png";
@@ -5844,7 +5842,7 @@ How does HIPAA apply to AI features embedded in existing software?|Many software
     category: "Data Governance",
     title: "Data Governance for Financial Services Firms: FINRA 17a-4, SEC Records, and What Regulated Firms Must Control in 2026",
     excerpt: "Most financial firms have data. Few govern it. Data governance for regulated organizations means documented classification, retention aligned to FINRA 17a-4 and SEC Rule 17a-4, lineage that survives an examination, and access controls that prove your sensitive data posture — before a regulator asks.",
-    image: dataGovernanceFinancialServicesImage,
+    image: "/assets/blog/centience-data-governance-financial-services.svg",
     author: "Orville Matias",
     date: "June 2026",
     metaTitle: "Data Governance for Financial Services Firms: FINRA 17a-4 and SEC Records 2026 | Centience",
@@ -6013,7 +6011,7 @@ What are the largest FINRA and SEC fines for records failures?|FINRA and the SEC
     category: "Data Governance",
     title: "Data Governance for Law Firms: ABA Rule 1.6, Client Confidentiality, and What AI Changes About Matter Data in 2026",
     excerpt: "Law firms hold some of the most sensitive data in existence — privileged communications, work product, client files — governed by professional responsibility rules that predate digital infrastructure. AI has exposed how few firms actually govern that data. Here is what a defensible law firm data governance program requires.",
-    image: dataGovernanceLawFirmsImage,
+    image: "/assets/blog/centience-data-governance-law-firms.svg",
     author: "Orville Matias",
     date: "June 2026",
     metaTitle: "Data Governance for Law Firms: ABA Rule 1.6, Privilege, and AI in 2026 | Centience",
