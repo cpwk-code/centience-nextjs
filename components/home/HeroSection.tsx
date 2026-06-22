@@ -23,7 +23,7 @@ const HeroSection = () => (
     <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "var(--gradient-gold)" }} />
 
     <div className="container mx-auto relative z-10 pt-24 pb-16 lg:pt-40 lg:pb-32">
-      <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+      <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ const HeroSection = () => (
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="hidden lg:block"
+          className="hidden lg:block lg:pt-[52px]"
         >
           <div className="grid grid-cols-2 gap-4">
             {[
