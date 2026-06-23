@@ -68,7 +68,7 @@ const HeroSection = () => (
             </a>
           </p>
 
-          <div className="flex flex-wrap gap-x-8 gap-y-6 pt-8 border-t border-border/10">
+          <div className="grid grid-cols-4 gap-4 pt-8 border-t border-border/10">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <p className="text-2xl font-display font-bold text-gold">{stat.value}</p>
