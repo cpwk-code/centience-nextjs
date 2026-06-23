@@ -78,14 +78,16 @@ const ProblemSection = () => (
       </div>
 
       {/* Regulatory Stakes */}
-      <div className="max-w-3xl">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="gold-line" />
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Governance Gap Has a Price Tag</p>
+      <div>
+        <div className="max-w-3xl mb-6">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="gold-line" />
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Governance Gap Has a Price Tag</p>
+          </div>
+          <p className="text-muted-foreground leading-relaxed">
+            SEC, FINRA, and HIPAA enforcement is accelerating — and regulators are now using AI to surface governance gaps faster than manual examination ever could.
+          </p>
         </div>
-        <p className="text-muted-foreground leading-relaxed mb-6">
-          SEC, FINRA, and HIPAA enforcement is accelerating — and regulators are now using AI to surface governance gaps faster than manual examination ever could.
-        </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {[
             { stat: "$2M+", label: "HIPAA civil penalty annual caps per violation category as of January 2026" },
@@ -93,13 +95,13 @@ const ProblemSection = () => (
             { stat: "$2.3M", label: "FINRA fines in 2025 for automated monitoring and off-channel communications failures" },
             { stat: "$90M", label: "Two Sigma paid to SEC for failing to address known system vulnerabilities" },
           ].map((item) => (
-            <div key={item.stat} className="card-premium p-6 flex items-center gap-4 min-h-[96px]">
-              <p className="text-2xl font-display font-bold text-gold shrink-0 w-[88px]">{item.stat}</p>
+            <div key={item.stat} className="card-premium p-6 flex flex-col gap-3">
+              <p className="text-2xl font-display font-bold text-gold">{item.stat}</p>
               <p className="text-sm text-muted-foreground leading-relaxed">{item.label}</p>
             </div>
           ))}
         </div>
-        <blockquote className="border-l-2 border-accent pl-6 italic text-primary font-medium">
+        <blockquote className="border-l-2 border-accent pl-6 italic text-primary font-medium max-w-3xl">
           "The firms that modernize successfully are not the ones that avoid AI. They are the ones that govern it."
         </blockquote>
       </div>
