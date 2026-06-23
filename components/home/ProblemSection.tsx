@@ -86,7 +86,7 @@ const ProblemSection = () => (
         <p className="text-muted-foreground leading-relaxed mb-6">
           SEC, FINRA, and HIPAA enforcement is accelerating — and regulators are now using AI to surface governance gaps faster than manual examination ever could.
         </p>
-        <div className="grid sm:grid-cols-2 gap-4 mb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {[
             { stat: "$2M+", label: "HIPAA civil penalty annual caps per violation category as of January 2026" },
             { stat: "Feb 2025", label: "SEC Cyber and Emerging Technologies Unit launched with explicit AI governance authority" },
