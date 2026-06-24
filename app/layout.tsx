@@ -9,6 +9,7 @@ import QueryProvider from '@/components/QueryProvider';
 import { AuthProvider } from '@/contexts/AuthContext';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
+import ConsentBanner from '@/components/ConsentBanner';
 import ScrollToTop from '@/components/ScrollToTop';
 
 const inter = DM_Sans({
@@ -96,12 +97,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#0f172a" />
-        {/* Preconnect for performance — reduces DNS + TLS handshake latency */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://js.hcaptcha.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://newassets.hcaptcha.com" />
         <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -127,8 +125,10 @@ export default function RootLayout({
         }) }} />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
+        {/* Analytics only mount after explicit user consent — § 638.51(a) CIPA / CCPA */}
         <Suspense fallback={null}><GoogleAnalytics /></Suspense>
         <MicrosoftClarity />
+        <ConsentBanner />
         <QueryProvider>
           <AuthProvider>
             <TooltipProvider>
