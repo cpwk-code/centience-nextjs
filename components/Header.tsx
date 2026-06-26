@@ -50,7 +50,6 @@ const navItems: NavItem[] = [
       { label: "Governance Guides", href: "/resources/guides" },
       { label: "Industry Assessments", href: "/resources/assessments" },
       { label: "Newsletter", href: "/resources/newsletter" },
-      { label: "Insights & Articles", href: "/insights/articles" },
     ],
   },
   { label: "Contact", href: "/contact" },
