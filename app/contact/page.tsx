@@ -255,7 +255,7 @@ export default function Page() {
       "Compliance Support"
 ]}
         contactInfo={{
-          phone: '+1-800-CENTIENCE',
+          phone: '+1-877-945-7177',
           website: 'https://centience.ai',
         }}
       />

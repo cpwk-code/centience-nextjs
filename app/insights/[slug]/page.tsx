@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import { blogPosts } from '@/data/blogPosts';
 import BlogPostClient from './BlogPostClient';
 
-// Force dynamic rendering — BlogPostPage uses useParams() and cannot be statically prerendered
-export const dynamic = 'force-dynamic';
+export async function generateStaticParams() {
+  return blogPosts.filter((p) => p.id >= 11).map((p) => ({ slug: p.slug }));
+}
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug && p.id >= 11);
@@ -40,18 +41,32 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default function Page({ params }: { params: { slug: string } }) {
   const post = blogPosts.find((p) => p.slug === params.slug && p.id >= 11);
 
+  const postImagePath = typeof post?.image === 'string' ? post.image : (post?.image as any)?.src ?? '';
+  const postImageUrl = postImagePath.startsWith('http') ? postImagePath : `https://centience.ai${postImagePath}`;
+
+  const MONTHS: Record<string, string> = {
+    January: '01', February: '02', March: '03', April: '04',
+    May: '05', June: '06', July: '07', August: '08',
+    September: '09', October: '10', November: '11', December: '12',
+  };
+  function toIso(dateStr: string): string {
+    const m = dateStr.match(/^(\w+)\s+(\d{4})$/);
+    return m && MONTHS[m[1]] ? `${m[2]}-${MONTHS[m[1]]}-01` : dateStr;
+  }
+
   const articleJsonLd = post ? JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.metaTitle || post.title,
     description: post.metaDescription || post.excerpt,
+    keywords: post.category,
     author: { '@type': 'Person', name: post.author, url: 'https://www.linkedin.com/in/orvillematias/' },
     publisher: { '@type': 'Organization', name: 'Centience', url: 'https://centience.ai', logo: { '@type': 'ImageObject', url: 'https://centience.ai/assets/logo-white.png' } },
-    datePublished: post.date,
-    dateModified: post.date,
+    datePublished: toIso(post.date),
+    dateModified: toIso(post.date),
     url: `https://centience.ai/insights/${post.slug}`,
     mainEntityOfPage: { '@type': 'WebPage', '@id': `https://centience.ai/insights/${post.slug}` },
-    image: `https://centience.ai${typeof post.image === 'string' ? post.image : (post.image as any).src}`,
+    image: { '@type': 'ImageObject', url: postImageUrl, width: 1200, height: 630 },
   }) : null;
 
   const breadcrumbJsonLd = post ? JSON.stringify({

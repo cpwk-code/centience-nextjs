@@ -4,14 +4,14 @@ import TermsOfServicePage from '@/page-components/TermsOfServicePage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Terms Of Service | Centience",
-  description: "AI and technology governance for regulated organizations.",
-  keywords: ["AI governance","technology governance","compliance"],
+  description: "Read Centience's Terms of Service. Understand the terms governing use of Centience's AI governance, cybersecurity, and technology governance services.",
+  keywords: ["Centience terms of service","service agreement","governance services terms","technology governance agreement"],
   alternates: {
     canonical: "https://centience.ai/terms-of-service",
   },
   openGraph: {
     title: "Terms Of Service | Centience",
-    description: "AI and technology governance for regulated organizations.",
+    description: "Read Centience's Terms of Service. Understand the terms governing use of Centience's AI governance, cybersecurity, and technology governance services.",
     url: "https://centience.ai/terms-of-service",
     type: 'website',
     siteName: 'Centience',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Terms Of Service | Centience",
-    description: "AI and technology governance for regulated organizations.",
+    description: "Read Centience's Terms of Service. Understand the terms governing use of Centience's AI governance, cybersecurity, and technology governance services.",
     images: ["https://centience.ai/og-image.png"],
   },
 };

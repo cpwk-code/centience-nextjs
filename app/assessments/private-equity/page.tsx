@@ -33,5 +33,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PrivateEquityAssessment />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://centience.ai"},{"@type":"ListItem","position":2,"name":"Assessments","item":"https://centience.ai/resources/assessments"},{"@type":"ListItem","position":3,"name":"Private Equity Governance Assessment","item":"https://centience.ai/assessments/private-equity"}]}' }} />
+      <PrivateEquityAssessment />
+    </>
+  );
 }

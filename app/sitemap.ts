@@ -18,7 +18,7 @@ function toLastMod(dateStr: string | undefined): string {
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     // Core
-    { url: 'https://centience.ai', lastModified: '2026-05-01', changeFrequency: 'weekly', priority: 1.0 },
+    { url: 'https://centience.ai', lastModified: '2026-06-27', changeFrequency: 'weekly', priority: 1.0 },
     // Programs
     { url: 'https://centience.ai/governance', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://centience.ai/ai-governance', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.9 },
@@ -51,8 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://centience.ai/assessments/accounting-cpa', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://centience.ai/assessments/non-profit', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.7 },
     // Insights
-    { url: 'https://centience.ai/insights', lastModified: '2026-06-14', changeFrequency: 'weekly', priority: 0.8 },
-    { url: 'https://centience.ai/insights/articles', lastModified: '2026-06-14', changeFrequency: 'weekly', priority: 0.8 },
+    { url: 'https://centience.ai/insights', lastModified: '2026-06-27', changeFrequency: 'weekly', priority: 0.8 },
+    { url: 'https://centience.ai/insights/articles', lastModified: '2026-06-27', changeFrequency: 'weekly', priority: 0.8 },
     // Company
     { url: 'https://centience.ai/about', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://centience.ai/partners', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.65 },

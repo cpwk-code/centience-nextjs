@@ -90,16 +90,11 @@ export function mergeSEO(
   },
   cms: CMSSEOOverride | null
 ) {
-  const SITE_URL = 'https://compuwork.ai';
+  const SITE_URL = 'https://centience.ai';
   const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
-  // Determine the final title.
-  // If the CMS title already contains the brand name (e.g. "About Compuwork™ | ..."),
-  // we use it as an absolute title to prevent the layout template from appending
-  // "| Compuwork" a second time.
   const rawTitle = cms?.meta_title || lovable.title;
-  // Strip trailing "| Compuwork" suffix to avoid double-suffix when template was active
-  const cleanTitle = rawTitle.replace(/\s*\|\s*Compuwork\s*$/i, '').trim();
+  const cleanTitle = rawTitle.replace(/\s*\|\s*Centience\s*$/i, '').trim();
   // Always use the clean title as-is — the layout template is set to '%s' (pass-through)
   // so no suffix will be appended automatically.
   const title: string = cleanTitle;
