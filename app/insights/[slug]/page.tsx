@@ -12,7 +12,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const title = post.metaTitle || post.title;
   const description = post.metaDescription || post.excerpt;
   const url = `https://centience.ai/insights/${post.slug}`;
-  const ogImage = 'https://centience.ai/og-image.png';
+  const postImage = typeof post.image === 'string' ? post.image : (post.image as any).src;
+  const ogImage = postImage.startsWith('http') ? postImage : `https://centience.ai${postImage}`;
 
   return {
     title,
