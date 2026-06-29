@@ -3,15 +3,15 @@ import Index from '@/page-components/Index';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Centience — Continuous AI & Technology Governance for Regulated Organizations",
-  description: "Centience builds and operates continuous AI and technology governance programs for regulated organizations — combining managed infrastructure, cybersecurity oversight, and AI governance into a single continuously enforced model. Serving broker-dealers, RIAs, healthcare organizations, private equity firms, and legal and professional services firms.",
-  keywords: ["continuous AI governance","technology governance","AI governance for regulated organizations","cybersecurity governance","managed infrastructure","SEC FINRA compliance","HIPAA compliance","AI oversight","continuous technology governance"],
+  title: "The Centience Governance Program — AI & Technology Governance for Regulated Organizations",
+  description: "The Centience Governance Program builds and operates continuous AI and technology governance for regulated organizations — managed infrastructure, cybersecurity, AI oversight, and evidence assembly in one enrollment. Serving broker-dealers, RIAs, healthcare, private equity, and legal firms.",
+  keywords: ["Centience Governance Program","AI governance program","technology governance program","AI governance for regulated organizations","cybersecurity governance","managed infrastructure","SEC FINRA compliance","HIPAA compliance","AI oversight","continuous technology governance","governance program enrollment"],
   alternates: {
     canonical: "https://centience.ai",
   },
   openGraph: {
-    title: "Centience — Continuous AI & Technology Governance for Regulated Organizations",
-    description: "Centience builds and operates continuous AI and technology governance programs for regulated organizations. Technically enforced. Continuously managed. Serving financial services, healthcare, private equity, and legal firms.",
+    title: "The Centience Governance Program — AI & Technology Governance for Regulated Organizations",
+    description: "The Centience Governance Program: AI and technology governance for regulated organizations. Built, operated, and evidenced continuously. Serving financial services, healthcare, private equity, and legal firms.",
     url: "https://centience.ai",
     type: 'website',
     siteName: 'Centience',
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
         url: "https://centience.ai/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Centience — Continuous AI & Technology Governance for Regulated Organizations",
+        alt: "The Centience Governance Program — AI & Technology Governance for Regulated Organizations",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Centience — Continuous AI & Technology Governance for Regulated Organizations",
-    description: "Centience builds and operates continuous AI and technology governance programs for regulated organizations. Technically enforced. Continuously managed.",
+    title: "The Centience Governance Program — AI & Technology Governance for Regulated Organizations",
+    description: "The Centience Governance Program: AI and technology governance for regulated organizations. Built, operated, and evidenced continuously.",
     images: ["https://centience.ai/og-image.png"],
   },
 };

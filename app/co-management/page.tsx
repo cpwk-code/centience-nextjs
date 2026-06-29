@@ -3,15 +3,15 @@ import CoManagementPage from '@/page-components/CoManagementPage';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Co-Managed Technology Governance — We Work With Your Existing Team | Centience",
-  description: "Centience implements and operates the governance layer alongside your existing IT team, CISO, vCISO, or outside compliance firm. Three co-management models: governance layer over internal IT, implementation arm for security leadership, or partner co-delivery. No displacement.",
-  keywords: ["co-managed governance","co-management IT governance","vCISO governance support","CISO governance implementation","governance layer managed services","technology governance co-management","fractional CISO support","governance implementation partner"],
+  title: "Governance Support for Existing Teams | Centience",
+  description: "The Centience Governance Program works alongside your existing IT team, vCISO, compliance counsel, or cybersecurity providers. One accountable governance operator — no displacement required.",
+  keywords: ["governance support existing team","technology governance operator","vCISO governance support","CISO governance program","regulated technology governance","AI governance program","governance layer","governance accountability"],
   alternates: {
     canonical: "https://centience.ai/co-management",
   },
   openGraph: {
-    title: "Co-Managed Technology Governance | Centience",
-    description: "Centience works with your existing team — internal IT, CISO, vCISO, or outside firm. We implement and operate the governance layer. No displacement. Three co-management models available.",
+    title: "Governance Support for Existing Teams | Centience",
+    description: "The Centience Governance Program works with your existing IT team, vCISO, compliance counsel, and cybersecurity providers. One accountable governance operator. No displacement.",
     url: "https://centience.ai/co-management",
     type: 'website',
     siteName: 'Centience',
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
         url: "https://centience.ai/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Co-Managed Technology Governance | Centience",
+        alt: "Governance Support for Existing Teams | Centience",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Co-Managed Technology Governance | Centience",
-    description: "We work with your existing team. No displacement. We implement and operate the governance layer alongside whoever you already have in place.",
+    title: "Governance Support for Existing Teams | Centience",
+    description: "The Centience Governance Program works alongside whoever you already have in place. One accountable operator. No displacement required.",
     images: ["https://centience.ai/og-image.png"],
   },
 };
@@ -37,9 +37,9 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://centience.ai/co-management/#service",
-  "name": "Co-Managed Governance",
+  "name": "Governance Support for Existing Teams",
   "url": "https://centience.ai/co-management",
-  "description": "Centience Co-Managed Governance — three delivery models that work alongside your existing IT team, CISO, or fractional provider without displacement.",
+  "description": "The Centience Governance Program works alongside your existing IT team, vCISO, compliance counsel, and cybersecurity providers. One accountable governance operator. No displacement required.",
   "provider": { "@id": "https://centience.ai/#organization" },
   "areaServed": "Nationwide"
 };
@@ -49,8 +49,8 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://centience.ai" },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://centience.ai/governance" },
-    { "@type": "ListItem", "position": 3, "name": "Co-Management", "item": "https://centience.ai/co-management" }
+    { "@type": "ListItem", "position": 2, "name": "The Program", "item": "https://centience.ai/governance" },
+    { "@type": "ListItem", "position": 3, "name": "Works With Your Team", "item": "https://centience.ai/co-management" }
   ]
 };
 

@@ -228,7 +228,7 @@ const OperationalResiliencePage = () => {
             >
               <Button variant="gold" size="lg" className="shadow-gold" asChild>
                 <Link href="/schedule-assessment">
-                  Schedule Your Free Assessment
+                  Request a Governance Readiness Review
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
@@ -438,7 +438,7 @@ const OperationalResiliencePage = () => {
               Ready to Build <span className="text-gradient-gold">Operational Resilience?</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Schedule a free assessment and see how we can help you build board-level resilience across cloud infrastructure, disaster recovery, and business continuity.
+              Request a Governance Readiness Review and see how we can help you build board-level resilience across cloud infrastructure, disaster recovery, and business continuity.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button variant="gold" size="lg" className="shadow-gold" asChild>

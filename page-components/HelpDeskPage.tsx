@@ -182,7 +182,7 @@ const HelpDeskPage = () => {
             >
               <Button variant="gold" size="lg" className="shadow-gold" asChild>
                 <Link href="/schedule-assessment">
-                  Schedule Your Free Assessment
+                  Request a Governance Readiness Review
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>

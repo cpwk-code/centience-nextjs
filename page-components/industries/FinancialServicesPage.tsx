@@ -128,7 +128,7 @@ const FinancialServicesPage = () => (
             firm answers to.
           </p>
           <div className="inline-block border-l-4 border-accent pl-4 mb-8">
-            <p className="text-sm font-semibold text-gold">100% audit success rate across all financial services engagements.</p>
+            <p className="text-sm font-semibold text-gold">documented track record of successful outcomes across financial services engagements.</p>
           </div>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild>
@@ -256,7 +256,7 @@ const FinancialServicesPage = () => (
             When a FINRA examination begins or an SEC inquiry arrives, our clients do not scramble. The evidence package is already assembled. Controls are already documented. The technical record is already complete.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-10 font-semibold">
-            That operational posture is why Centience has maintained a 100% audit success rate across all client engagements.
+            That operational posture is why Centience has maintained a documented track record of successful outcomes across client engagements.
           </p>
 
           <blockquote className="border-l-4 border-accent pl-6 py-4 bg-card rounded-r-lg">
@@ -333,7 +333,7 @@ const FinancialServicesPage = () => (
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results delivered within 5 business days</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> 100% audit success rate across all financial services engagements</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> documented track record of successful outcomes across financial services engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild>
           <Link href="/ai-governance-risk-assessment">Book Your Financial Services Assessment <ArrowRight size={16} /></Link>

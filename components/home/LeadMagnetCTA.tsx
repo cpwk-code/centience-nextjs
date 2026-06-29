@@ -18,7 +18,7 @@ const LeadMagnetCTA = () => (
     >
       <div className="flex items-center gap-3 justify-center mb-6">
         <div className="gold-line" />
-        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">Governance Assessment</p>
+        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">Governance Readiness Review</p>
         <div className="gold-line" />
       </div>
 
@@ -26,19 +26,19 @@ const LeadMagnetCTA = () => (
         Know Where You Stand Before Regulators Ask.
       </h2>
       <p className="text-lg opacity-60 leading-relaxed mb-8 max-w-2xl mx-auto">
-        Our governance assessment evaluates your technology governance gaps across infrastructure, cybersecurity, and AI — then delivers a prioritized roadmap before your next exam, audit, or client review. Results within 5 business days. No commitment required to proceed.
+        The Governance Readiness Review evaluates your technology governance posture across infrastructure, cybersecurity, AI usage, and compliance readiness — then delivers a prioritized gap map and program enrollment recommendation. Available for qualified regulated organizations evaluating enrollment in the Centience Governance Program.
       </p>
 
       <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm opacity-50 mb-12">
-        <span>✓ No commitment required</span>
         <span>✓ Results delivered within 5 business days</span>
-        <span>✓ Evidence-first governance built for regulated environments</span>
-        <span>✓ Ongoing governance program available immediately following assessment</span>
+        <span>✓ Covers AI, cybersecurity, infrastructure, and vendor risk</span>
+        <span>✓ Evidence-first — built for regulated environments</span>
+        <span>✓ Program enrollment available immediately following review</span>
       </div>
 
       <Button variant="cta" size="xl" asChild>
         <Link href="/resources/assessments">
-          Start Free Assessment <ArrowRight size={16} />
+          Request a Governance Readiness Review <ArrowRight size={16} />
         </Link>
       </Button>
       <p className="text-sm opacity-50 mt-6">

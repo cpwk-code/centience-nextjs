@@ -130,7 +130,7 @@ export default function Page() {
                   Governance is not a project with an end date. It is an operational function that runs continuously — collecting evidence, enforcing controls, and maintaining the documentation regulators expect to find when they arrive.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Our clients in Manhattan have maintained a 100% audit success rate across all regulatory examinations. That result comes from governance that is technically enforced — not written in a policy document filed in a drawer.
+                  Our clients in Manhattan have maintained a documented track record of successful outcomes across regulatory examinations. That result comes from governance that is technically enforced — not written in a policy document filed in a drawer.
                 </p>
                 <blockquote className="border-l-4 border-accent pl-6 py-3 bg-card rounded-r-lg">
                   <p className="text-primary italic text-sm leading-relaxed mb-2">
@@ -209,7 +209,7 @@ export default function Page() {
             <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
               <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
               <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results within 5 business days</span>
-              <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> 100% audit success rate</span>
+              <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> documented track record of successful outcomes</span>
             </div>
             <Button variant="cta" size="xl" asChild>
               <Link href="/ai-governance-risk-assessment">Schedule Your Governance Assessment <ArrowRight size={16} /></Link>

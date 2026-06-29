@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, Server, Lock, Database, Brain, Shield, Users } from "lucide-react";
 
 const stats = [
-  { value: "20+", label: "Years Governing Regulated IT" },
+  { value: "20+", label: "Years Operating Governance Programs" },
   { value: "1,000+", label: "Organizations Served" },
-  { value: "100%", label: "Audit Success Rate — SEC, FINRA & HIPAA" },
+  { value: "100%", label: "Documented Track Record Across SEC, FINRA & HIPAA Reviews" },
   { value: "10+", label: "Year Average Client Relationship" },
 ];
 
@@ -33,31 +33,31 @@ const HeroSection = () => (
           <div className="flex items-center gap-3 mb-8">
             <div className="gold-line" />
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              Technology Governance — Infrastructure, Cybersecurity &amp; AI
+              The Centience Governance Program
             </p>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-extrabold leading-[1.1] mb-6">
-            We Run Your Technology Governance{" "}
-            <span className="text-gradient-gold">So You’re Ready Before Regulators Ask.</span>
+            Your AI &amp; Technology Governance Program —{" "}
+            <span className="text-gradient-gold">Built, Run, and Evidenced Continuously.</span>
           </h1>
 
           <p className="text-lg leading-relaxed mb-3 opacity-70">
-            SEC examinations, FINRA reviews, HIPAA audits, and client due diligence all look for the same thing: controls that are operating, not just documented. Centience manages the technology governance layer across infrastructure, cybersecurity, and AI — continuously, for regulated organizations. Your evidence stays current. New tools have a framework. Your team is not rebuilding the program every time someone asks for proof.
+            Centience builds and operates the governance program for regulated organizations — covering AI tools, cybersecurity controls, vendors, infrastructure, support operations, and evidence requirements. One continuously operated program with enforcement, reporting, and audit-ready evidence included.
           </p>
 
           <p className="text-sm leading-relaxed mb-10 opacity-50 font-semibold uppercase tracking-wider">
-            Not a vendor you call before an exam. A governance operation that never stops.
+            Not a vendor engagement. An ongoing governance program that regulated firms enroll in.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 w-full">
             <Button variant="cta" size="xl" asChild className="w-full sm:w-auto">
               <Link href="/resources/assessments">
-                Start Free Assessment <ArrowRight size={16} />
+                Request a Governance Readiness Review <ArrowRight size={16} />
               </Link>
             </Button>
             <Button variant="cta-outline" size="xl" asChild className="w-full sm:w-auto">
-              <Link href="/resources/guides">Download the Governance Guide</Link>
+              <Link href="/governance">See What the Program Includes</Link>
             </Button>
           </div>
 
@@ -91,7 +91,7 @@ const HeroSection = () => (
               { icon: Database, title: "Data Governance", desc: "Classification, retention, lineage, and access controls — continuously maintained", href: "/data-governance" },
               { icon: Brain, title: "AI Governance", desc: "Policy, oversight, and ongoing monitoring for regulated AI adoption", href: "/ai-governance" },
               { icon: Shield, title: "Technology Governance", desc: "Integrated GRC across infrastructure, cybersecurity, data, and AI — one accountable firm", href: "/governance" },
-              { icon: Users, title: "Co-Management", desc: "Embedded governance alongside your existing IT team — no rip-and-replace", href: "/co-management" },
+              { icon: Users, title: "Program Enrollment", desc: "Works with your existing IT team, vCISO, or compliance counsel — Centience is the accountable governance operator", href: "/co-management" },
             ].map((item, i) => (
               <Link
                 key={item.title}

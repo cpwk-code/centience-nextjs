@@ -184,7 +184,7 @@ const InfrastructurePage = () => (
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>
           <span>✓ Results within 5 business days</span>
-          <span>✓ 100% audit success rate</span>
+          <span>✓ documented track record of successful outcomes</span>
         </div>
         <Button variant="cta" size="xl" asChild>
           <Link href="/ai-governance-risk-assessment">Book Your Infrastructure Assessment <ArrowRight size={16} /></Link>

@@ -318,7 +318,7 @@ const ProfessionalServicesPage = () => {
               >
                 <Button variant="gold" size="lg" className="shadow-gold" asChild>
                   <Link href="/schedule-assessment">
-                    Schedule Your Free Assessment
+                    Request a Governance Readiness Review
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>
@@ -507,7 +507,7 @@ const ProfessionalServicesPage = () => {
               </p>
               <Button variant="gold" size="lg" className="shadow-gold" asChild>
                 <Link href="/contact">
-                  Get Your Free Assessment
+                  Request a Governance Readiness Review
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
@@ -545,7 +545,7 @@ const ProfessionalServicesPage = () => {
               <span className="text-gradient-gold">Your Practice</span>?
             </h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-              Schedule a free assessment and discover how Compuwork can transform your IT infrastructure into a competitive advantage.
+              Request a Governance Readiness Review and discover how Compuwork can transform your IT infrastructure into a competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="gold" size="xl" className="shadow-gold-lg" asChild>

@@ -326,7 +326,7 @@ const GovernanceMSPPage = () => {
             >
               <Button variant="gold" size="lg" className="shadow-gold" asChild>
                 <Link href="/schedule-assessment">
-                  Schedule Your Free Assessment
+                  Request a Governance Readiness Review
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
@@ -586,7 +586,7 @@ const GovernanceMSPPage = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Button variant="gold" size="lg" className="shadow-gold" asChild>
                 <Link href="/schedule-assessment">
-                  Schedule Your Free Assessment
+                  Request a Governance Readiness Review
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>

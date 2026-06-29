@@ -301,7 +301,7 @@ const AICompliancePage = () => {
             >
               <Button variant="gold" size="lg" className="shadow-gold" asChild>
                 <Link href="/schedule-assessment">
-                  Schedule Your Free Assessment
+                  Request a Governance Readiness Review
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
@@ -555,7 +555,7 @@ const AICompliancePage = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Button variant="gold" size="xl" className="shadow-gold-lg" asChild>
                 <Link href="/schedule-assessment">
-                  Schedule Your Free Assessment
+                  Request a Governance Readiness Review
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>

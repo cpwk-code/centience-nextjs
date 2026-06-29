@@ -57,7 +57,7 @@ const TechnicalFoundation = () => (
           When Centience manages your infrastructure, your cybersecurity, and your AI environment, governance is not theoretical. Controls are technically enforced. Evidence is continuously collected. When regulators arrive, the documentation is already assembled.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          That is why Centience maintains a 100% audit success rate across all client engagements — and why our average client relationship exceeds 10 years.
+          That is why Centience maintains a documented track record of successful outcomes across client engagements — and why our average client relationship exceeds 10 years.
         </p>
       </div>
 

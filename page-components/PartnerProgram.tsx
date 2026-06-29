@@ -83,7 +83,7 @@ const PartnerProgramPage = () => (
               { title: "Recurring revenue from co-delivered managed governance engagements", body: "Centience operates a two-tier partner program with defined commission terms. Referrals are tracked, protected, and compensated." },
               { title: "Operational delivery for governance programs you design but do not staff", body: "You set the strategy. Centience executes it. Your program becomes enforceable, not just advisory." },
               { title: "Client relationship protection — your advisory role is never displaced", body: "Centience fills the implementation and management gap without touching your advisory relationship. That is not a policy. It is how the program is structured." },
-              { title: "A trusted delivery partner with a 100% audit success rate", body: "20+ years in regulated industries. Every client engagement is governed by a written partner agreement that defines scope, protects the referral relationship, and establishes compensation terms." },
+              { title: "A trusted delivery partner with a documented track record of successful outcomes", body: "20+ years in regulated industries. Every client engagement is governed by a written partner agreement that defines scope, protects the referral relationship, and establishes compensation terms." },
             ].map((item, i) => (
               <motion.div key={item.title} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }} className="card-premium p-6">
                 <h3 className="font-display font-bold text-primary text-base mb-2">{item.title}</h3>

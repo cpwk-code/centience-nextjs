@@ -310,7 +310,7 @@ const NewYorkPage = () => {
               >
                 <Button variant="gold" size="lg" className="group animate-pulse-glow" asChild>
                   <Link href="/schedule-assessment">
-                    Schedule Your Free Assessment
+                    Request a Governance Readiness Review
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>

@@ -214,7 +214,7 @@ const AboutPage = () => (
             collected. When regulators arrive, the documentation is already assembled.
           </p>
           <p className="text-muted-foreground leading-relaxed font-semibold text-primary">
-            That is why Centience maintains a 100% audit success rate across all client engagements.
+            That is why Centience maintains a documented track record of successful outcomes across client engagements.
           </p>
           <p className="text-muted-foreground leading-relaxed mt-4">
             This is not a consulting engagement with an end date. Centience operates as your ongoing
@@ -466,7 +466,7 @@ const AboutPage = () => (
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>
           <span>✓ Results delivered within 5 business days</span>
-          <span>✓ 100% audit success rate across all client engagements</span>
+          <span>✓ documented track record of successful outcomes across client engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild>
           <Link href="/ai-governance-risk-assessment">

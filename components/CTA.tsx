@@ -12,7 +12,7 @@ const defaultContent = {
   headline: "Ready to Simplify",
   headline_highlight: "Compliance",
   description: "Schedule a free risk assessment and discover how we can transform your IT infrastructure into a compliance advantage.",
-  primary_cta: "Schedule Your Free Assessment",
+  primary_cta: "Request a Governance Readiness Review",
   secondary_cta: "Call Us (877) 945-7177",
 };
 

@@ -1,28 +1,49 @@
 import { Server, Shield, Brain, Database } from "lucide-react";
 import { motion } from "framer-motion";
-import { Search, BookOpen, Cog } from "lucide-react";
+import { Search, Layers, Cog, FileCheck, BarChart3, RefreshCw } from "lucide-react";
 
 const lifecycle = [
   {
     icon: Search,
     number: "01",
-    label: "ASSESS",
-    title: "Governance Assessment",
-    description: "We identify gaps across infrastructure, cybersecurity posture, AI usage, and compliance readiness. Most assessments complete within 5 business days. You receive a prioritized roadmap and a clear picture of where you stand.",
+    label: "BASELINE",
+    title: "Governance Readiness Review",
+    description: "We assess your current posture across infrastructure, cybersecurity, AI usage, vendor risk, and compliance readiness. You receive a prioritized gap map and a clear picture of where you stand before the program begins.",
   },
   {
-    icon: BookOpen,
+    icon: Layers,
     number: "02",
-    label: "PLAN",
-    title: "Governance Roadmap",
-    description: "A structured plan sequenced by risk priority and aligned to your regulatory calendar and technology roadmap. Specific to your organization — not a generic framework.",
+    label: "BUILD",
+    title: "Program Construction",
+    description: "Policies, control frameworks, evidence structures, AI registers, vendor risk processes, and reporting templates — built for your specific regulatory environment, not adapted from a generic template.",
   },
   {
     icon: Cog,
     number: "03",
     label: "OPERATE",
-    title: "Ongoing Governance Program",
-    description: "The roadmap transitions into a continuously managed governance program. Monitoring, evidence collection, AI oversight, and regulatory readiness — maintained as an ongoing function, not a one-time engagement.",
+    title: "Continuous Operation",
+    description: "The program runs continuously. Infrastructure is managed, controls are enforced, AI tools are monitored, vendors are assessed, and support is provided — as an ongoing function, not a project.",
+  },
+  {
+    icon: FileCheck,
+    number: "04",
+    label: "EVIDENCE",
+    title: "Real-Time Evidence Assembly",
+    description: "Audit evidence is assembled continuously — logs, access reviews, policy attestations, AI oversight records, and vendor assessments. Nothing is reconstructed before an exam.",
+  },
+  {
+    icon: BarChart3,
+    number: "05",
+    label: "REPORT",
+    title: "Monthly & Quarterly Reporting",
+    description: "Monthly governance status reports and quarterly executive control reports — so leadership always knows where the program stands and what is open.",
+  },
+  {
+    icon: RefreshCw,
+    number: "06",
+    label: "IMPROVE",
+    title: "Continuous Improvement",
+    description: "As regulations change, AI tools evolve, and your organization grows, the program adapts. New tools enter the framework. New requirements are addressed. The governance layer never falls behind.",
   },
 ];
 
@@ -123,17 +144,17 @@ const CapabilitiesSection = () => (
       <div className="max-w-2xl mb-16">
         <div className="flex items-center gap-3 mb-4">
           <div className="gold-line" />
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Governance Lifecycle</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">How the Program Works</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          Assessment → Roadmap → Ongoing Program
+          Baseline → Build → Operate → Evidence → Report → Improve
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Every engagement follows a structured lifecycle — from initial assessment through to a continuously managed governance program. This is where most firms stop — at the assessment. This is where Centience starts.
+          The Centience Governance Program follows a structured operating rhythm. Most firms stop at an assessment. Centience starts there and runs the program continuously from that point forward.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 mb-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
         {lifecycle.map((step, i) => (
           <motion.div
             key={step.label}
