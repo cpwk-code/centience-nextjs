@@ -28,7 +28,7 @@ const navItems: NavItem[] = [
       { label: "Cybersecurity Governance", href: "/cybersecurity" },
       { label: "Infrastructure Governance", href: "/infrastructure" },
       { label: "Technology Governance", href: "/governance" },
-      { label: "Works With Your Team", href: "/co-management" },
+      { label: "Co-Management", href: "/co-management" },
     ],
   },
   {
@@ -169,7 +169,7 @@ const Navbar = () => {
           </a>
           <span className={`text-xs ${scrolled ? "text-foreground/20" : "text-warm-white/20"}`}>|</span>
           <Button variant="cta-nav" size="sm" asChild className="whitespace-nowrap shrink-0">
-            <Link href="/resources/assessments">Governance Readiness Review</Link>
+            <Link href="/resources/assessments">Free Assessment</Link>
           </Button>
         </div>
 
@@ -244,7 +244,7 @@ const Navbar = () => {
                 (877) 945-7177
               </a>
               <Button variant="cta" size="default" className="w-full" asChild>
-                <Link href="/resources/assessments">Governance Readiness Review</Link>
+                <Link href="/resources/assessments">Free Assessment</Link>
               </Button>
             </div>
           </nav>
