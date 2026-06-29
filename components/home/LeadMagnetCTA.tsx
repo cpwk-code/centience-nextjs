@@ -37,7 +37,7 @@ const LeadMagnetCTA = () => (
       </div>
 
       <Button variant="cta" size="xl" asChild>
-        <Link href="/resources/assessments">
+        <Link href="/readiness">
           Request a Governance Readiness Review <ArrowRight size={16} />
         </Link>
       </Button>

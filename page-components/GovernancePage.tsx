@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Server, Brain, Database, Search, BookOpen, Cog, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Shield, Server, Brain, Database, Search, Layers, Cog, FileCheck, BarChart3, RefreshCw, CheckCircle2 } from "lucide-react";
 
 const services = [
   {
@@ -63,23 +63,44 @@ const lifecycle = [
   {
     icon: Search,
     number: "01",
-    label: "ASSESS",
-    title: "Governance Assessment",
-    description: "We identify gaps across infrastructure, cybersecurity posture, AI usage, and compliance readiness. Most assessments complete within 5 business days. You receive a prioritized roadmap and a clear picture of where you stand.",
+    label: "BASELINE",
+    title: "Governance Readiness Review",
+    description: "We assess your current posture across infrastructure, cybersecurity, AI usage, vendor risk, and compliance readiness. You receive a prioritized gap map and a clear picture of where you stand before the program begins.",
   },
   {
-    icon: BookOpen,
+    icon: Layers,
     number: "02",
-    label: "PLAN",
-    title: "Governance Roadmap",
-    description: "A structured plan sequenced by risk priority and aligned to your regulatory calendar and technology roadmap. Specific to your organization — not a generic framework.",
+    label: "BUILD",
+    title: "Program Construction",
+    description: "Policies, control frameworks, evidence structures, AI registers, vendor risk processes, and reporting templates — built for your specific regulatory environment, not adapted from a generic template.",
   },
   {
     icon: Cog,
     number: "03",
     label: "OPERATE",
-    title: "Ongoing Governance Program",
-    description: "The roadmap transitions into a continuously managed governance program. Monitoring, evidence collection, AI oversight, and regulatory readiness — maintained as an ongoing function that evolves with your organization.",
+    title: "Continuous Operation",
+    description: "The program runs continuously. Infrastructure is managed, controls are enforced, AI tools are monitored, vendors are assessed, and support is provided — as an ongoing function, not a project.",
+  },
+  {
+    icon: FileCheck,
+    number: "04",
+    label: "EVIDENCE",
+    title: "Real-Time Evidence Assembly",
+    description: "Audit evidence is assembled continuously — logs, access reviews, policy attestations, AI oversight records, and vendor assessments. Nothing is reconstructed before an exam.",
+  },
+  {
+    icon: BarChart3,
+    number: "05",
+    label: "REPORT",
+    title: "Monthly & Quarterly Reporting",
+    description: "Monthly governance status reports and quarterly executive control reports — so leadership always knows where the program stands and what is open.",
+  },
+  {
+    icon: RefreshCw,
+    number: "06",
+    label: "IMPROVE",
+    title: "Continuous Improvement",
+    description: "As regulations change, AI tools evolve, and your organization grows, the program adapts. New tools enter the framework. New requirements are addressed. The governance layer never falls behind.",
   },
 ];
 
@@ -92,7 +113,7 @@ const GovernancePage = () => (
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6">
             <div className="gold-line" />
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Services</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">The Centience Governance Program</p>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
             GRC Without Technical Enforcement{" "}
@@ -105,7 +126,7 @@ const GovernancePage = () => (
             Every layer works together. Every control is technically enforced. Every piece of audit evidence is assembled in real time — not reconstructed before an exam.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <Link href="/ai-governance-risk-assessment">Book Your Governance Assessment <ArrowRight size={16} /></Link>
+            <Link href="/readiness">Request a Governance Readiness Review <ArrowRight size={16} /></Link>
           </Button>
           <p className="text-sm opacity-50 mt-5">
             Or call us directly:{" "}
@@ -161,12 +182,12 @@ const GovernancePage = () => (
             <div className="gold-line" />
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">How We Start</p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Assessment → Roadmap → Ongoing Program</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">Every engagement follows a structured lifecycle — from initial assessment through to a continuously managed governance program. The assessment is the starting point, not the deliverable.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">Baseline → Build → Operate → Evidence → Report → Improve</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">The Centience Governance Program follows a structured operating rhythm. Most firms stop at an assessment. Centience starts there and runs the program continuously from that point forward.</p>
           <p className="text-muted-foreground leading-relaxed font-medium">This is where most firms stop — at the assessment. This is where Centience starts.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {lifecycle.map((step, i) => (
             <motion.div key={step.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="card-premium p-8">
               <span className="text-3xl font-display font-bold text-accent/15 block mb-3">{step.number}</span>
@@ -237,12 +258,12 @@ const GovernancePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Governance Starts With an Assessment. Enforcement Starts With Centience.</h2>
-        <p className="text-lg opacity-70 mb-6">Start with a governance assessment to understand where your organization stands — and build the foundation for a continuously governed operation. Results delivered within 5 business days.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">The Program Starts With a Readiness Review.</h2>
+        <p className="text-lg opacity-70 mb-6">The Governance Readiness Review evaluates your posture across infrastructure, cybersecurity, AI, and compliance — then delivers a prioritized gap map and program enrollment recommendation within 5 business days.</p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
-          <span>✓ No commitment required</span>
+          <span>✓ Available for qualified regulated organizations</span>
           <span>✓ Results within 5 business days</span>
-          <span>✓ documented track record of successful outcomes</span>
+          <span>✓ Documented track record of successful outcomes</span>
         </div>
         <Button variant="cta" size="xl" asChild>
           <Link href="/ai-governance-risk-assessment">Book Your Governance Assessment <ArrowRight size={16} /></Link>

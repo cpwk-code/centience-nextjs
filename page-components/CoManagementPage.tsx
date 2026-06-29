@@ -62,7 +62,7 @@ const CoManagementPage = () => (
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="cta" size="xl" asChild>
-              <Link href="/resources/assessments">
+              <Link href="/readiness">
                 Request a Governance Readiness Review <ArrowRight size={16} />
               </Link>
             </Button>
@@ -203,7 +203,7 @@ const CoManagementPage = () => (
           The Governance Readiness Review is the first step. Available for qualified regulated organizations. Results within 5 business days.
         </p>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/resources/assessments">
+          <Link href="/readiness">
             Request a Governance Readiness Review <ArrowRight size={16} />
           </Link>
         </Button>

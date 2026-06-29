@@ -101,7 +101,7 @@ const DataGovernancePage = () => (
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6">
             <Button variant="cta" size="xl" asChild className="w-full sm:w-auto">
-              <Link href="/resources/assessments">
+              <Link href="/readiness">
                 Request a Governance Readiness Review <ArrowRight size={16} />
               </Link>
             </Button>

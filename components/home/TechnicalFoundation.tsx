@@ -31,7 +31,7 @@ const cards = [
 ];
 
 const stats = [
-  { value: "100%", label: "Audit Success Rate" },
+  { value: "100%", label: "Documented Track Record" },
   { value: "24/7", label: "Infrastructure Monitoring" },
   { value: "20+", label: "Years Technical Operations" },
   { value: "1,000+", label: "Regulated Organizations Served" },
