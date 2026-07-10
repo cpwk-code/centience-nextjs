@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { redirect } from 'next/navigation';
+import GuideDetailPage from '@/page-components/resources/GuideDetailPage';
+import { GUIDE_CONTENT } from '@/data/guideContent';
 
 export const metadata: Metadata = {
   title: "Compliance Readiness Guide for Regulatory Examinations | Centience",
@@ -31,6 +32,23 @@ export const metadata: Metadata = {
   },
 };
 
+const guide = GUIDE_CONTENT.compliance_readiness;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://centience.ai" },
+    { "@type": "ListItem", "position": 2, "name": "Governance Guides", "item": "https://centience.ai/resources/guides" },
+    { "@type": "ListItem", "position": 3, "name": guide.title, "item": `https://centience.ai/resources/guides/${guide.slug}` }
+  ]
+};
+
 export default function Page() {
-  redirect('/resources/guides');
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GuideDetailPage guide={guide} />
+    </>
+  );
 }

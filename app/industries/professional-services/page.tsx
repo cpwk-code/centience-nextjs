@@ -11,15 +11,15 @@ export async function generateMetadata(): Promise<Metadata> {
 
   // ── Lovable defaults (extracted from <SEO> component at sync time) ──────
   const baseMetadata: Metadata = {
-    title: "Managed IT & Cybersecurity for Professional Services | Centience",
-    description: "Audit‑ready IT, cybersecurity, and SOC 2 compliance for accounting firms and consultancies. Secure client data and scale for busy seasons with Centience.",
-    keywords: ["professional services IT","managed IT for consultancies","accounting firm IT services","SOC 2 compliance IT","audit-ready IT services","consulting firm cybersecurity","professional services data security","compliance IT professional services","managed security professional services"],
+    title: "Technology Governance for Professional Services Firms | Centience",
+    description: "Continuous AI, cybersecurity, data, and infrastructure governance for accounting, consulting, and professional services firms — audit-ready, with SOC 2 and client-data protection built in.",
+    keywords: ["professional services technology governance","AI governance professional services","consulting firm governance","accounting firm governance","SOC 2 governance","cybersecurity governance professional services","client data governance","regulated professional services"],
     alternates: {
       canonical: "https://centience.ai/industries/professional-services",
     },
     openGraph: {
-      title: "Managed IT & Cybersecurity for Professional Services | Centience",
-      description: "Audit‑ready IT, cybersecurity, and SOC 2 compliance for accounting firms and consultancies. Secure client data and scale for busy seasons with Centience.",
+      title: "Technology Governance for Professional Services Firms | Centience",
+      description: "Continuous AI, cybersecurity, data, and infrastructure governance for accounting, consulting, and professional services firms — audit-ready, with SOC 2 and client-data protection built in.",
       url: "https://centience.ai/industries/professional-services",
       type: 'website',
       siteName: 'Centience',
@@ -28,14 +28,14 @@ export async function generateMetadata(): Promise<Metadata> {
           url: "https://centience.ai/og-image.png",
           width: 1200,
           height: 630,
-          alt: "Managed IT & Cybersecurity for Professional Services | Centience",
+          alt: "Technology Governance for Professional Services Firms | Centience",
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: "Managed IT & Cybersecurity for Professional Services | Centience",
-      description: "Audit‑ready IT, cybersecurity, and SOC 2 compliance for accounting firms and consultancies. Secure client data and scale for busy seasons with Centience.",
+      title: "Technology Governance for Professional Services Firms | Centience",
+      description: "Continuous AI, cybersecurity, data, and infrastructure governance for accounting, consulting, and professional services firms — audit-ready, with SOC 2 and client-data protection built in.",
       images: ["https://centience.ai/og-image.png"],
     },
   };

@@ -41,10 +41,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://centience.ai/industries/non-profit', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
     // Resources
     { url: 'https://centience.ai/resources/assessments', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
-    { url: 'https://centience.ai/resources/guides', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
-    // NOTE: /resources/guides/{ai-governance,cybersecurity,infrastructure,governance-program,compliance-readiness}
-    // are currently redirect stubs (redirect('/resources/guides')) with no content — intentionally
-    // NOT listed here. Build them into real content pages, then add to the sitemap.
+    { url: 'https://centience.ai/resources/guides', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.75 },
+    // Guide detail pages (full SEC/FINRA/HIPAA content + gated PDF download)
+    { url: 'https://centience.ai/resources/guides/ai-governance', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.75 },
+    { url: 'https://centience.ai/resources/guides/cybersecurity', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.75 },
+    { url: 'https://centience.ai/resources/guides/infrastructure', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://centience.ai/resources/guides/governance-program', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://centience.ai/resources/guides/compliance-readiness', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://centience.ai/resources/newsletter', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.6 },
     // Assessments
     { url: 'https://centience.ai/assessments/financial-services', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
