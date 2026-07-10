@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import Link from 'next/link';
 
 const PrivacyPolicyPage = () => {
-  const lastUpdated = "June 2026";
+  const lastUpdated = "July 2026";
 
   return (
     <Layout>
@@ -51,7 +51,7 @@ const PrivacyPolicyPage = () => {
             </p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
               <li><strong>Direct interactions:</strong> When you contact us regarding our services, request a consultation, complete a risk assessment, or submit a form on our website</li>
-              <li><strong>Automated technologies:</strong> As you navigate our website, we may automatically collect certain information including your IP address, browser type, operating system, and browsing patterns — but only after you have provided explicit consent through our cookie consent banner (see Analytics &amp; Consent below)</li>
+              <li><strong>Automated technologies:</strong> As you navigate our website, we collect limited, anonymous usage measurement (such as pages viewed, referring source, approximate region, and device type) using privacy-first, cookieless analytics that do not identify you. Detailed, cookie-based analytics and session insights are collected only after you provide explicit consent through our consent banner (see Analytics &amp; Consent below)</li>
               <li><strong>Third parties:</strong> We may receive information about you from business partners, marketing partners, or other third parties, but only if you have given them permission to share your information</li>
               <li><strong>Referrals:</strong> When someone refers your business to us through our referral program</li>
             </ul>
@@ -76,13 +76,37 @@ const PrivacyPolicyPage = () => {
           <div className="bg-card border border-border rounded-xl p-8">
             <h2 className="text-2xl font-bold text-foreground mb-4">Analytics &amp; Consent</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              We use two analytics tools — Google Analytics (GA4) and Microsoft Clarity — to understand how visitors use our site. <strong>Neither tool loads, and no data is transmitted to any third party, until you explicitly consent</strong> by clicking "Accept Analytics" in the banner displayed on your first visit.
+              We use analytics on a tiered, consent-aware basis. <strong>Anonymous, cookieless measurement runs by default</strong> — it sets no cookies, stores nothing on your device, and does not identify you. <strong>Cookie-based analytics and session insights are collected only after you explicitly consent</strong> by clicking "Accept" in the banner displayed on your first visit. The three tiers are described below.
             </p>
 
-            <h3 className="text-lg font-semibold text-foreground mb-3">Google Analytics (GA4)</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-3">Vercel Web Analytics (no consent required — cookieless)</h3>
             <p className="text-muted-foreground leading-relaxed mb-2">
-              Operated by Google LLC. When you consent, Google Analytics collects:
+              Operated by Vercel Inc., our hosting provider. This runs on every page regardless of your consent choice because it is privacy-preserving by design:
             </p>
+            <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-4 mb-4">
+              <li>Aggregate page views, referring source, and top pages</li>
+              <li>Approximate location (country/region level) and device/browser type</li>
+              <li><strong>No cookies, no persistent identifiers, and no personal data</strong> — visits are counted using a rotating, non-identifying hash that cannot be traced back to you</li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
+              Because it stores nothing on your device and collects no personal information, this measurement does not require consent under applicable law. Data is processed by Vercel in accordance with Vercel's Privacy Policy.
+            </p>
+
+            <h3 className="text-lg font-semibold text-foreground mb-3">Google Analytics (GA4) — Consent Mode v2</h3>
+            <p className="text-muted-foreground leading-relaxed mb-2">
+              Operated by Google LLC. Google Analytics loads on our pages but operates under Google Consent Mode v2 with all consent signals defaulted to <em>denied</em>. This means:
+            </p>
+            <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-4 mb-2">
+              <li><strong>Before you consent:</strong> GA sends only cookieless pings — no analytics or advertising cookies are set, no persistent identifiers are used, and advertising data is redacted. These pings support aggregate, modeled traffic measurement only.</li>
+              <li><strong>After you click "Accept":</strong> GA additionally collects the following via cookies:</li>
+            </ul>
+            <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-4 mb-4">
+              <li>Pages visited and time spent on each page</li>
+              <li>Referring website or search query</li>
+              <li>Device type, browser, and operating system</li>
+              <li>Anonymized IP address (IP anonymization is enabled)</li>
+              <li>General geographic location (country/region level)</li>
+            </ul>
             <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-4 mb-4">
               <li>Pages visited and time spent on each page</li>
               <li>Referring website or search query</li>
@@ -112,8 +136,8 @@ const PrivacyPolicyPage = () => {
               On your first visit to centience.ai, a consent banner appears at the bottom of the screen. Your choice is stored in your browser's local storage under the key <code className="bg-muted px-1 py-0.5 rounded text-xs">centience_consent</code>. If you:
             </p>
             <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-4 mb-4">
-              <li><strong>Accept Analytics:</strong> Both Google Analytics and Microsoft Clarity load and begin collecting data as described above. Your choice is remembered for future visits.</li>
-              <li><strong>Decline:</strong> No analytics scripts load. No data is sent to Google or Microsoft. Your choice is remembered for future visits.</li>
+              <li><strong>Accept:</strong> Google Analytics upgrades from cookieless pings to full cookie-based analytics, and Microsoft Clarity loads and begins collecting session insights as described above. Your choice is remembered for future visits.</li>
+              <li><strong>Decline:</strong> Microsoft Clarity does not load, and Google Analytics remains in cookieless mode — no analytics cookies are set and no session recording occurs. Cookieless, non-identifying measurement (Vercel Web Analytics, and GA's denied-state pings) continues, as it collects no personal data. Your choice is remembered for future visits.</li>
             </ul>
 
             <h3 className="text-lg font-semibold text-foreground mb-3">Withdrawing Consent</h3>
@@ -134,7 +158,10 @@ const PrivacyPolicyPage = () => {
                 <strong>Strictly necessary:</strong> Browser local storage is used to remember your analytics consent choice. No personal data is collected. This cannot be disabled as it is required for the consent mechanism to function.
               </li>
               <li>
-                <strong>Analytics (consent required):</strong> Google Analytics and Microsoft Clarity, as described in the Analytics &amp; Consent section above. These are not activated until you click "Accept Analytics."
+                <strong>Cookieless analytics (no consent required):</strong> Vercel Web Analytics, and Google Analytics operating in cookieless Consent Mode, set no cookies and store nothing on your device. See the Analytics &amp; Consent section above.
+              </li>
+              <li>
+                <strong>Cookie-based analytics (consent required):</strong> Google Analytics cookies and Microsoft Clarity session insights are activated only after you click "Accept" in the consent banner.
               </li>
               <li>
                 <strong>Security / bot protection:</strong> hCaptcha is used on our contact and assessment forms to prevent automated abuse. hCaptcha may set cookies and process your IP address for this purpose. See hCaptcha's Privacy Policy for details.
@@ -208,7 +235,7 @@ const PrivacyPolicyPage = () => {
                 <li><strong>Right to Delete:</strong> You may request deletion of personal information we have collected, subject to certain exceptions.</li>
                 <li><strong>Right to Opt Out of Sale:</strong> We do not sell personal information. No opt-out is required, but you may submit a request to confirm this.</li>
                 <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any CCPA right.</li>
-                <li><strong>Pen Register / Tracking:</strong> We do not activate any third-party tracking or analytics technology on your device without your prior affirmative consent. No Google Analytics, Microsoft Clarity, or similar session-recording tool fires on page load. Consent is collected through our banner before any such script is initialized. You may withdraw consent at any time as described in the Analytics &amp; Consent section.</li>
+                <li><strong>Pen Register / Tracking:</strong> We do not set cookies, use persistent identifiers, or record your session without your prior affirmative consent. Before you consent, only cookieless, non-identifying aggregate measurement occurs (Vercel Web Analytics and Google Analytics in denied-state Consent Mode); this collects no personal information and does not associate activity with you or your device. Cookie-based analytics and session-recording tools (Google Analytics cookies and Microsoft Clarity) are initialized only after you click "Accept" in our consent banner. You may withdraw consent at any time as described in the Analytics &amp; Consent section.</li>
               </ul>
               <p className="text-muted-foreground text-sm mt-3">
                 To exercise any California privacy right, contact us at{" "}
@@ -226,7 +253,7 @@ const PrivacyPolicyPage = () => {
           <div className="bg-card border border-border rounded-xl p-8">
             <h2 className="text-2xl font-bold text-foreground mb-4">Data Retention</h2>
             <p className="text-muted-foreground leading-relaxed">
-              We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including to satisfy legal, accounting, or reporting requirements. When determining retention periods, we consider the amount, nature, and sensitivity of the information, the potential risk of harm from unauthorized use or disclosure, and applicable legal requirements. Analytics data collected via Google Analytics and Microsoft Clarity is subject to the data retention settings of those platforms; we configure both services with the minimum available retention period.
+              We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including to satisfy legal, accounting, or reporting requirements. When determining retention periods, we consider the amount, nature, and sensitivity of the information, the potential risk of harm from unauthorized use or disclosure, and applicable legal requirements. Analytics data collected via Google Analytics and Microsoft Clarity is subject to the data retention settings of those platforms; we configure both services with the minimum available retention period. Cookieless aggregate measurement (Vercel Web Analytics) is not tied to any individual and is retained only in aggregate form.
             </p>
           </div>
 
