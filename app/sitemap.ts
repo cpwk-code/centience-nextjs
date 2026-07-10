@@ -18,30 +18,36 @@ function toLastMod(dateStr: string | undefined): string {
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     // Core
-    { url: 'https://centience.ai', lastModified: '2026-06-27', changeFrequency: 'weekly', priority: 1.0 },
+    { url: 'https://centience.ai', lastModified: '2026-07-10', changeFrequency: 'weekly', priority: 1.0 },
     // Programs
-    { url: 'https://centience.ai/governance', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://centience.ai/ai-governance', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://centience.ai/cybersecurity', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://centience.ai/infrastructure', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://centience.ai/co-management', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://centience.ai/governance', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://centience.ai/ai-governance', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://centience.ai/cybersecurity', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://centience.ai/infrastructure', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://centience.ai/co-management', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://centience.ai/data-governance', lastModified: '2026-06-21', changeFrequency: 'monthly', priority: 0.9 },
+    // Program enrollment — Governance Readiness Review (primary CTA)
+    { url: 'https://centience.ai/readiness', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.95 },
     // Assessment
     { url: 'https://centience.ai/ai-governance-risk-assessment', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.85 },
     // Industries
     { url: 'https://centience.ai/industries', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://centience.ai/industries/financial-services', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://centience.ai/industries/healthcare', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
-    { url: 'https://centience.ai/industries/legal', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
-    { url: 'https://centience.ai/industries/law-firms', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://centience.ai/industries/law-firms', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://centience.ai/industries/private-equity', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
-    { url: 'https://centience.ai/industries/accounting', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
-    { url: 'https://centience.ai/industries/accounting-cpa', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://centience.ai/industries/accounting-cpa', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://centience.ai/industries/professional-services', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://centience.ai/industries/non-profit', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
     // Resources
     { url: 'https://centience.ai/resources/assessments', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://centience.ai/resources/guides', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
+    // Guide detail pages
+    { url: 'https://centience.ai/resources/guides/ai-governance', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://centience.ai/resources/guides/cybersecurity', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://centience.ai/resources/guides/infrastructure', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://centience.ai/resources/guides/governance-program', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://centience.ai/resources/guides/compliance-readiness', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://centience.ai/resources/newsletter', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.6 },
     // Assessments
     { url: 'https://centience.ai/assessments/financial-services', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
@@ -73,7 +79,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogPosts
-    .filter((p) => p.id >= 11)
+    // Published Centience articles only, and exclude LinkedIn-only / empty stubs
+    .filter((p) => p.id >= 11 && !p.externalUrl && p.content && p.content.trim().length > 0)
     .map((post) => ({
       url: `https://centience.ai/insights/${post.slug}`,
       lastModified: toLastMod(post.date),

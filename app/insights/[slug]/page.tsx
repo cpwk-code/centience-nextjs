@@ -3,7 +3,10 @@ import { blogPosts } from '@/data/blogPosts';
 import BlogPostClient from './BlogPostClient';
 
 export async function generateStaticParams() {
-  return blogPosts.filter((p) => p.id >= 11).map((p) => ({ slug: p.slug }));
+  // Published articles only — exclude LinkedIn-only / empty stubs (they link out, not to a native page)
+  return blogPosts
+    .filter((p) => p.id >= 11 && !p.externalUrl && p.content && p.content.trim().length > 0)
+    .map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

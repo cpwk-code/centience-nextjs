@@ -4442,13 +4442,13 @@ Schedule a free risk assessment with CompuWork's cybersecurity compliance expert
     id: 18,
     slug: "reg-sp-june-3-2026-deadline-smaller-ria-compliance",
     category: "AI Governance",
-    title: "Reg S-P June 3, 2026 Deadline: What Smaller RIAs Must Do in the Next 26 Days",
-    excerpt: "June 3, 2026 is the mandatory compliance deadline for smaller SEC-registered investment advisers under the 2024 Reg S-P amendments. Here is exactly what is required, who it applies to, and what firms must have documented before the deadline.",
+    title: "Reg S-P: The June 3, 2026 Deadline Has Passed — What Smaller RIAs Must Show Examiners Now",
+    excerpt: "The June 3, 2026 Reg S-P compliance deadline for smaller SEC-registered investment advisers has passed. Here is exactly what the rule requires, where firms are most commonly falling short, and what examiners now expect to see documented.",
     image: "/assets/blog/centience-reg-sp-june-2026-deadline.png",
     author: "Orville Matias",
-    date: "May 2026",
-    metaTitle: "Reg S-P June 3 2026 Deadline: Smaller RIA Compliance Checklist | Centience",
-    metaDescription: "June 3, 2026 is the SEC Reg S-P compliance deadline for smaller RIAs under $1.5B AUM. Learn exactly what incident response, vendor oversight, and customer notification requirements must be in place.",
+    date: "July 2026",
+    metaTitle: "Reg S-P Compliance for Smaller RIAs: Post-Deadline Checklist | Centience",
+    metaDescription: "The June 3, 2026 SEC Reg S-P deadline for smaller RIAs under $1.5B AUM has passed. Learn exactly what incident response, vendor oversight, and customer notification requirements examiners now expect to be in place.",
     content: `
 [STAT_CARDS]
 June 3 | Compliance Deadline | Smaller RIAs under $1.5B AUM
@@ -4457,14 +4457,14 @@ June 3 | Compliance Deadline | Smaller RIAs under $1.5B AUM
 5 Years | Records Retention | Policies, incidents, and correspondence
 [/STAT_CARDS]
 
-The SEC's 2024 amendments to Regulation S-P created a two-tier compliance schedule. Larger registered investment advisers — those with $1.5 billion or more in regulatory assets under management — were required to comply by December 3, 2025. Smaller RIAs have until June 3, 2026.
+The SEC's 2024 amendments to Regulation S-P created a two-tier compliance schedule. Larger registered investment advisers — those with $1.5 billion or more in regulatory assets under management — were required to comply by December 3, 2025. Smaller RIAs had until June 3, 2026.
 
-That deadline is 26 days away.
+That deadline has now passed.
 
-If your firm has fewer than $1.5 billion in AUM and has not yet built a compliant Reg S-P program, this article covers exactly what the rule requires, where firms are most commonly falling short, and what needs to be in place before June 3.
+If your firm has fewer than $1.5 billion in AUM and has not yet built a compliant Reg S-P program, you are already past the deadline — and this article covers exactly what the rule requires, where firms are most commonly falling short, and what examiners now expect to see documented.
 
 [CALLOUT:Important]
-The SEC Division of Examinations listed Reg S-P compliance as a 2026 examination priority. Examiners who have already reviewed larger firms under the December 2025 deadline are entering smaller firm exams from June onward with documented expectations. June 3 is when "do you have a Reg S-P incident response program?" stops being a question and starts being a finding.
+The SEC Division of Examinations listed Reg S-P compliance as a 2026 examination priority. Examiners who reviewed larger firms under the December 2025 deadline are now conducting smaller firm exams with documented expectations. As of June 3, "do you have a Reg S-P incident response program?" has stopped being a question and started being a finding.
 [/CALLOUT]
 
 ## What Changed: The 2024 Reg S-P Amendments
@@ -4514,7 +4514,7 @@ This requirement means RIAs must:
 For smaller firms with multiple technology vendors, CRM platforms, cloud storage providers, custodians, and third-party administrators — this is a significant vendor management undertaking.
 
 [CALLOUT:Warning]
-Service providers do not automatically agree to 72-hour notification SLAs. Major technology vendors, custodians, and SaaS platforms have their own breach notification timelines built into standard contract terms — often 30, 60, or 90 days. Renegotiating these provisions takes time. Firms that have not started this process have a narrow window before June 3.
+Service providers do not automatically agree to 72-hour notification SLAs. Major technology vendors, custodians, and SaaS platforms have their own breach notification timelines built into standard contract terms — often 30, 60, or 90 days. Renegotiating these provisions takes time. Firms that have not started this process are already exposed and should prioritize it immediately.
 [/CALLOUT]
 
 ## Who Qualifies as a Smaller Entity
@@ -4566,9 +4566,9 @@ You cannot demonstrate a compliant incident response without the underlying tech
 Centience builds Reg S-P compliance programs on managed infrastructure. Your endpoint controls, log management, and access controls are active and documented before the examination request arrives. When the examiner asks for evidence, it exists in system logs — not just policy documents.
 
 [CTA_BOX]
-## June 3 is 26 days away. Is your Reg S-P program examination-ready?
+## The Reg S-P deadline has passed. Is your program examination-ready?
 
-Centience delivers a Reg S-P readiness assessment and program build for smaller RIAs — documentation, technical controls, and vendor review completed before your deadline.
+Centience delivers a Reg S-P readiness assessment and program build for smaller RIAs — documentation, technical controls, and vendor review assembled and ready before the examiner asks.
 
 [CTA_BUTTON:Book Your Reg S-P Assessment|/ai-governance-risk-assessment]
 [/CTA_BOX]

@@ -33,90 +33,104 @@ const nextConfig: NextConfig = {
         destination: 'https://centience.ai/:path*',
         permanent: true,
       },
-      // Guide deep-link redirect — specific guide URLs → guides listing
+      // Consolidate duplicate industry pages → canonical governance-era slugs (301)
       {
-        source: '/resources/guides/:slug',
-        destination: '/resources/guides',
-        permanent: false,
-      },
-      // Blog listing redirect: /blog -> /blogs (canonical listing page)
-      {
-        source: '/blog',
-        destination: '/blogs',
+        source: '/industries/legal',
+        destination: '/industries/law-firms',
         permanent: true,
       },
-      // Legacy service URL
+      {
+        source: '/industries/accounting',
+        destination: '/industries/accounting-cpa',
+        permanent: true,
+      },
+      // Legacy blog/listing URLs → canonical Insights listing (no /blog or /blogs route exists)
+      {
+        source: '/blog',
+        destination: '/insights/articles',
+        permanent: true,
+      },
+      {
+        source: '/blogs',
+        destination: '/insights/articles',
+        permanent: true,
+      },
+      {
+        source: '/blog/:slug*',
+        destination: '/insights/articles',
+        permanent: true,
+      },
+      // Legacy service URLs → live governance pages (no /services route exists)
       {
         source: '/services/co-managed-it',
-        destination: '/services/co-managed-it-services',
+        destination: '/co-management',
+        permanent: true,
+      },
+      {
+        source: '/services/co-managed-it-services',
+        destination: '/co-management',
         permanent: true,
       },
       {
         source: '/services/compliance-communication',
-        destination: '/services/communication-compliance',
+        destination: '/governance',
+        permanent: true,
+      },
+      {
+        source: '/services/communication-compliance',
+        destination: '/governance',
         permanent: true,
       },
       {
         source: '/services/it-services/managed-it-services',
-        destination: '/services/managed-it-services',
-        permanent: true,
-      },
-      // Legacy blog URLs
-      {
-        source: '/blog/it-compliance-services',
-        destination: '/blog/it-compliance-services-florida',
+        destination: '/infrastructure',
         permanent: true,
       },
       {
-        source: '/blog/top-4-managed-it-providers-miami-private-equity',
-        destination: '/blog/managed-it-providers-miami-private-equity-firms',
-        permanent: true,
-      },
-      {
-        source: '/blog/top-5-managed-it-providers-boca-raton-hedge-funds',
-        destination: '/blog/managed-it-services-in-boca-raton-for-hedge-funds',
+        source: '/services/managed-it-services',
+        destination: '/infrastructure',
         permanent: true,
       },
       {
         source: '/disaster-recovery-for-financial-firms',
-        destination: '/blog/disaster-recovery-financial-firms',
+        destination: '/infrastructure',
         permanent: true,
       },
-      // Old short-form location URLs -> canonical long-form URLs
-      // These duplicate pages are replaced by the SEO-optimized long-form versions
+      // Legacy short-form location URLs -> live governance location pages (301)
+      // Previous destinations (managed-it-services-*) never existed and 301'd into 404s.
       {
         source: '/locations/boca-raton',
-        destination: '/locations/managed-it-services-for-financial-firms-boca-raton',
+        destination: '/locations/ai-governance-palm-beach',
         permanent: true,
       },
       {
         source: '/locations/boca-raton-new',
-        destination: '/locations/managed-it-services-boca-raton',
+        destination: '/locations/ai-governance-palm-beach',
         permanent: true,
       },
       {
         source: '/locations/florida',
-        destination: '/locations/managed-it-services-florida',
+        destination: '/locations/ai-governance-miami',
         permanent: true,
       },
       {
         source: '/locations/miami',
-        destination: '/locations/managed-it-services-miami',
+        destination: '/locations/ai-governance-miami',
         permanent: true,
       },
       {
         source: '/locations/new-york',
-        destination: '/locations/managed-it-services-new-york',
+        destination: '/locations/ai-governance-new-york',
         permanent: true,
       },
       {
         source: '/locations/west-palm-beach',
-        destination: '/locations/managed-it-services-for-financial-firms-west-palm-beach',
+        destination: '/locations/ai-governance-palm-beach',
         permanent: true,
       },
       {
         source: '/locations/west-palm-beach-new',
-        destination: '/locations/managed-it-services-west-palm-beach',
+        destination: '/locations/ai-governance-palm-beach',
         permanent: true,
       },
       // Legacy page URLs
