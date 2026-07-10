@@ -42,8 +42,9 @@ const ConsentBanner = () => {
     <div className="fixed bottom-0 left-0 right-0 z-[9999] bg-card border-t border-border shadow-xl">
       <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
-          We use analytics tools (Google Analytics, Microsoft Clarity) to understand site usage and
-          improve our services. No data is collected until you consent.{' '}
+          We use privacy-first analytics to understand site usage. Anonymous, cookieless
+          measurement runs by default. Click Accept to enable full analytics — Google Analytics
+          cookies and Microsoft Clarity session insights.{' '}
           <Link href="/privacy-policy" className="text-accent underline hover:text-accent/80 transition-colors">
             Privacy Policy
           </Link>

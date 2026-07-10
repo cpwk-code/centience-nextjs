@@ -129,7 +129,8 @@ export default function RootLayout({
         {/* Vercel Web Analytics — cookieless, no PII, no consent gate required.
             Captures 100% of traffic volume (unlike the consent-gated GA/Clarity below). */}
         <Analytics />
-        {/* GA + Clarity mount only after explicit user consent — § 638.51(a) CIPA / CCPA */}
+        {/* GA4 with Consent Mode v2: loads always, but cookieless (denied) until
+            the user accepts. Clarity stays fully gated — § 638.51(a) CIPA / CCPA. */}
         <Suspense fallback={null}><GoogleAnalytics /></Suspense>
         <MicrosoftClarity />
         <ConsentBanner />
