@@ -11,6 +11,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
 import ConsentBanner from '@/components/ConsentBanner';
 import ScrollToTop from '@/components/ScrollToTop';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = DM_Sans({
   subsets: ['latin'],
@@ -125,7 +126,10 @@ export default function RootLayout({
         }) }} />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
-        {/* Analytics only mount after explicit user consent — § 638.51(a) CIPA / CCPA */}
+        {/* Vercel Web Analytics — cookieless, no PII, no consent gate required.
+            Captures 100% of traffic volume (unlike the consent-gated GA/Clarity below). */}
+        <Analytics />
+        {/* GA + Clarity mount only after explicit user consent — § 638.51(a) CIPA / CCPA */}
         <Suspense fallback={null}><GoogleAnalytics /></Suspense>
         <MicrosoftClarity />
         <ConsentBanner />
