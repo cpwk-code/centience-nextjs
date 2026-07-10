@@ -12,16 +12,16 @@ export async function generateMetadata(): Promise<Metadata> {
 
   // ── Lovable defaults (extracted from <SEO> component at sync time) ──────
   const baseMetadata: Metadata = {
-  title: "Contact Centience – IT & Cybersecurity Support",
-  description: "Contact Centience for expert managed IT, cybersecurity, and compliance support. Reach our New York & Florida teams today!",
-  keywords: ["contact managed IT services", "Centience IT support", "cybersecurity contact", "compliance IT support", "financial services IT help", "legal IT support contact", "healthcare IT services contact", "SEC compliance IT support", "FINRA compliance IT contact", "HIPAA IT support", "SOC 2 compliance IT", "CMMC IT support"],
+  title: "Contact Centience — AI & Technology Governance for Regulated Firms",
+  description: "Contact Centience to discuss the Governance Program for your regulated organization — AI governance, cybersecurity, data, and infrastructure oversight. Offices in New York and South Florida.",
+  keywords: ["contact Centience", "AI governance contact", "technology governance program", "cybersecurity governance", "regulated industries governance", "SEC FINRA governance", "HIPAA governance", "governance readiness review"],
   robots: "index, follow",
   alternates: {
     canonical: "https://centience.ai/contact",
   },
   openGraph: {
-    title: "Contact Centience | Managed IT Services & Cybersecurity Support",
-    description: "Get in touch with Centience for compliance-first managed IT and cybersecurity support. Offices in New York & Florida ready to assist you.",
+    title: "Contact Centience | AI & Technology Governance",
+    description: "Get in touch with Centience to discuss the Governance Program for your regulated organization. Offices in New York and South Florida.",
     url: "https://centience.ai/contact",
     type: "website",
     siteName: 'Centience',
@@ -30,14 +30,14 @@ export async function generateMetadata(): Promise<Metadata> {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: "Contact Centience | Managed IT Services & Cybersecurity Support",
+        alt: "Contact Centience | AI & Technology Governance",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Contact Centience | Managed IT Services & Cybersecurity Support",
-    description: "Get in touch with Centience for compliance-first managed IT and cybersecurity support. Offices in New York & Florida ready to assist you.",
+    title: "Contact Centience | AI & Technology Governance",
+    description: "Get in touch with Centience to discuss the Governance Program for your regulated organization. Offices in New York and South Florida.",
     images: ['/og-image.png'],
   },
 };
@@ -135,7 +135,7 @@ export default function Page() {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "Contact Centience",
-  "description": "Contact Centience for expert managed IT services, cybersecurity, and compliance support. Our teams in New York and Florida are ready to assist your business.",
+  "description": "Contact Centience to discuss the Governance Program for your regulated organization — AI governance, cybersecurity, data, and infrastructure oversight. Teams in New York and South Florida.",
   "url": "https://centience.ai/contact",
   "provider": {
     "@id": "https://centience.ai/#organization"
@@ -168,73 +168,24 @@ export default function Page() {
   ]
 }) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How can I contact Centience for IT support?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can contact Centience via email at hello@centience.ai or by phone at 877.945.7177. Our support team is available 24/7."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What industries does Centience support?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Centience specializes in managed IT and cybersecurity services for financial services, legal, healthcare, and professional services organizations."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Centience provide compliance support?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Centience offers compliance-first IT services specializing in SEC, FINRA, HIPAA, SOC 2, and CMMC compliance requirements."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where are Centience\u2019s offices located?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Centience has offices in New York City and Florida to provide local and remote IT support."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How quickly will Centience respond to a contact inquiry?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Once you fill out the contact form, a Centience specialist will reach out within 24 hours to discuss your needs."
-      }
-    }
-  ]
-}) }}
-      />
 
       {/* ── Semantic KeyFacts for AI Search Engines ──────────────────── */}
       <KeyFacts
         entityName="Centience"
         entityType="ProfessionalService"
-        description="Centience is a managed IT services and cybersecurity provider specializing in compliance for regulated industries. Founded in 2005, with offices in New York and Florida."
+        description="Centience runs continuous AI and technology governance programs for regulated organizations — AI governance, cybersecurity, data, and infrastructure oversight. Offices in New York and South Florida."
         facts={[
       {
-            "label": "Founded",
-            "value": "2005"
+            "label": "Experience",
+            "value": "20+ years governing regulated technology"
       },
       {
             "label": "Offices",
-            "value": "New York, Florida"
+            "value": "New York, South Florida"
       },
       {
-            "label": "Compliance Specialties",
-            "value": "SEC, FINRA, HIPAA, SOC 2, CMMC"
+            "label": "Regulatory Focus",
+            "value": "SEC, FINRA, HIPAA"
       },
       {
             "label": "Support Availability",
@@ -250,9 +201,10 @@ export default function Page() {
       }
 ]}
         services={[
-      "Managed IT Services",
-      "Cybersecurity",
-      "Compliance Support"
+      "AI Governance",
+      "Cybersecurity Governance",
+      "Data Governance",
+      "Infrastructure Governance"
 ]}
         contactInfo={{
           phone: '+1-877-945-7177',

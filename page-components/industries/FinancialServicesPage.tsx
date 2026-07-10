@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Shield, FileText, Brain, Lock, BarChart3, Users } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import { financialServicesFaqs } from "@/data/industryFaqs";
 
 const capabilities = [
   {
@@ -320,6 +322,8 @@ const FinancialServicesPage = () => (
       </div>
     </section>
 
+
+    <FAQSection items={financialServicesFaqs} heading="Financial Services Governance — FAQ" />
 
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">

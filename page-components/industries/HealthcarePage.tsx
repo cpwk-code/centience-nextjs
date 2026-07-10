@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Shield, Brain, Lock, Users, FileText, AlertTriangle } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import { healthcareFaqs } from "@/data/industryFaqs";
 
 const pressurePoints = [
   { title: "HIPAA Technical Safeguard Requirements", body: "HIPAA requires technical safeguards protecting ePHI — access controls, audit controls, integrity controls, and transmission security. Most organizations have policies describing these controls. Fewer have technically verified that the controls are operating." },
@@ -172,6 +174,8 @@ const HealthcarePage = () => (
       </div>
     </section>
 
+
+    <FAQSection items={healthcareFaqs} heading="Healthcare AI Governance — FAQ" />
 
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
