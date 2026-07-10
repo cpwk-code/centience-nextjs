@@ -3,6 +3,7 @@
 import SEO from "@/components/SEO";
 import { useParams } from 'next/navigation';
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, User, Tag, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -182,7 +183,10 @@ const BlogPostPage = ({ slug: slugProp }: { slug?: string } = {}) => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="max-w-4xl mx-auto">
-              <img
+              <div className="relative w-full aspect-video rounded-2xl shadow-xl overflow-hidden">
+              <Image
+                fill
+                sizes="(max-width: 896px) 100vw, 896px"
                 src={getSrc(post.image)}
                 alt={post.slug === 'top-6-managed-it-providers-west-palm-beach-financial-services'
                   ? 'an image showing Compuwork IT specialists providing managed IT services for financial firms in West Palm Beach, ensuring audit-ready compliance and cybersecurity.'
@@ -201,10 +205,10 @@ const BlogPostPage = ({ slug: slugProp }: { slug?: string } = {}) => {
                    : post.slug === 'top-managed-it-providers-florida-private-equity-firms'
                    ? 'Top Managed IT Providers in Florida for Private Equity Firms – Compliance-first cybersecurity and governance-ready IT services.'
                    : post.title}
-                className="w-full aspect-video object-cover rounded-2xl shadow-xl"
+                className="object-cover"
                 loading="lazy"
-                decoding="async"
               />
+              </div>
             </div>
           </AnimatedSection>
         </div>
