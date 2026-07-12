@@ -1,521 +1,439 @@
-# Centience Go-to-Market & Lead-Funnel Plan → $50M ARR by End of 2028
+# Centience Go-to-Market & Growth Plan → $50M ARR by End of 2028
 
 **Owner:** Orville Matias, Founder & CEO
-**Prepared:** July 2026
+**Prepared:** July 2026 · **Version 2** (platform-led model)
 **Horizon:** Q3 2026 → Q4 2028 (10 quarters)
-**Objective:** Build the demand engine and lead funnel that takes Centience from early-stage to **$50M annual recurring revenue**, establishing Centience as *the* continuous governance platform for regulated industries — **finance first, then healthcare, then legal.**
+**Objective:** Grow Centience from its Compuwork installed base to **$50M ARR**, becoming *the* continuous-governance **platform** for regulated industries — **finance first, then healthcare, then legal.**
 
-> This is a working operating plan, not a pitch deck. Numbers are modeled assumptions to be replaced with live data as the funnel produces it. Every channel section is written to be *turned on*, mapped to the tools already connected to the business (HubSpot, Apollo, HeyReach, Resend, Canva, Make, Slack).
+> **What changed in v2.** This plan is now built on three facts established with the founder:
+> 1. **Starting point is real, not zero.** Centience evolved from **Compuwork, an MSP with ~75 clients and ~$2.2M revenue.** That base is the launchpad, the reference factory, and the fastest revenue in the plan.
+> 2. **We're building a platform, not just a service.** A tiered, productized model (automated Score → self-serve Platform → Managed Program) is what makes $50M *scalable* — pure high-touch services cannot get there in 2.5 years.
+> 3. **The "assessment" is an automated, self-scored tool** (the *Centience Governance Score*), not a delivered 5-day engagement. It is a hook and a lead engine, priced at zero marginal cost.
+> 4. **LinkedIn outreach is run by Marketing Shed** (agency), fueled by lists and sequences we supply. Our job is to arm and measure them, not to operate the tooling.
 
 ---
 
 ## Table of Contents
 
 1. [Executive Summary](#1-executive-summary)
-2. [Where We Are Today — Product & Positioning](#2-where-we-are-today)
-3. [The Category Bet: "Continuous Governance"](#3-the-category-bet)
-4. [Revenue Model & the Math to $50M](#4-revenue-model--the-math-to-50m)
-5. [Ideal Customer Profile by Phase](#5-ideal-customer-profile-by-phase)
-6. [Funnel Architecture & Required Volume](#6-funnel-architecture--required-volume)
-7. [Channel Playbooks](#7-channel-playbooks)
-   - 7.1 LinkedIn (organic + outbound)
-   - 7.2 Email (outbound + lifecycle nurture)
-   - 7.3 Website, SEO & Conversion
-   - 7.4 Content & Thought Leadership
-   - 7.5 Partnerships & Channel
-   - 7.6 Events, Webinars & Field
-   - 7.7 Paid Media
-   - 7.8 PR, Analyst & Community
-8. [Martech Stack & Automation](#8-martech-stack--automation)
-9. [Org, Team & Hiring Plan](#9-org-team--hiring-plan)
-10. [Budget & Unit Economics](#10-budget--unit-economics)
-11. [Quarterly Roadmap](#11-quarterly-roadmap)
-12. [KPIs, Dashboards & Governance Cadence](#12-kpis-dashboards--governance-cadence)
-13. [Risks & Mitigations](#13-risks--mitigations)
-14. [First 90 Days — Concrete Checklist](#14-first-90-days)
+2. [The Strategic Reframe: Service → Platform](#2-the-strategic-reframe)
+3. [The Compuwork Base — Our Unfair Advantage](#3-the-compuwork-base)
+4. [Product & Revenue Architecture (3 Tiers)](#4-product--revenue-architecture)
+5. [The Math to $50M](#5-the-math-to-50m)
+6. [The Growth Engines (5 of them)](#6-the-growth-engines)
+7. [ICP by Phase: Finance → Healthcare → Legal](#7-icp-by-phase)
+8. [The Funnel: Scored-Assessment-Led](#8-the-funnel)
+9. [Channel Playbooks](#9-channel-playbooks)
+   - 9.1 The Governance Score (the wedge)
+   - 9.2 LinkedIn via Marketing Shed
+   - 9.3 Email (outbound + lifecycle)
+   - 9.4 Website, SEO & PLG conversion
+   - 9.5 Content & the benchmark flywheel
+   - 9.6 Partnerships & channel
+   - 9.7 Events & webinars
+   - 9.8 Paid media
+10. [Martech & Automation Stack](#10-martech--automation-stack)
+11. [Org, Team & Hiring](#11-org-team--hiring)
+12. [Budget & Unit Economics](#12-budget--unit-economics)
+13. [Quarterly Roadmap](#13-quarterly-roadmap)
+14. [KPIs & Cadence](#14-kpis--cadence)
+15. [Risks & Mitigations](#15-risks--mitigations)
+16. [First 90 Days](#16-first-90-days)
 
 ---
 
 ## 1. Executive Summary
 
-Centience sells a **continuous AI & technology governance program** to regulated organizations — managed infrastructure, cybersecurity governance, and AI/data governance delivered as one accountable program, with audit evidence assembled continuously rather than reconstructed before an exam. The wedge is a **Free 5-Day Assessment** that produces a prioritized gap map and converts into a recurring program.
+Centience sells **continuous AI & technology governance** to regulated firms — managed infrastructure, cybersecurity, and AI/data governance as one accountable program with audit evidence maintained continuously. It grew out of **Compuwork**, an MSP with **~75 clients and ~$2.2M revenue** — an installed base of trusting relationships that most 2026 startups would kill for.
 
-**The goal:** $50M ARR by the end of 2028. At a blended annual contract value (ACV) of **~$90K**, that is roughly **560 active governed clients** — up from an early base. This is aggressive and requires a purpose-built, multi-channel demand engine plus a channel/partner motion, not organic word-of-mouth alone.
+**Goal:** $50M ARR by end of 2028. We get there **not** by operating 560 high-touch service accounts (delivery-bound, unscalable), but by becoming a **platform with three tiers**:
 
-**The strategy in one paragraph:** Own the phrase *"prove it's controlled"* in regulated finance. Run an outbound-led motion (LinkedIn + email) in 2026–2027 to manufacture pipeline fast and cheaply while compounding an inbound SEO + content moat. Anchor every campaign on the Free 5-Day Assessment. Layer a channel motion (RIA custodians, PE firms, fractional-CCO/compliance-consultant networks, MSP referrals) that produces high-trust, low-CAC volume at scale. Sequence markets: **finance (now) → healthcare/HIPAA (2027 H2) → legal (2028)**, reusing the same program, funnel, and content engine with vertical skins.
+- **Governance Score** — a free, automated, instant self-assessment (0–100 + peer benchmark). Zero delivery cost. The universal top-of-funnel and a proprietary data moat.
+- **Governance Platform** — a low-touch software subscription (continuous monitoring, evidence vault, policy/register templates, score tracking). Software margins. **This carries the volume.**
+- **Managed Program** — the fully operated service sold today. Services margins. **The enterprise tier and the ACV driver.**
 
-**The three levers that get us to $50M:**
-1. **Assessment as the universal CTA.** One irresistible, low-friction, high-intent offer feeds the entire funnel across every channel and vertical.
-2. **Outbound now, inbound compounding.** Buy pipeline predictably today; build the SEO/content asset that lowers blended CAC every quarter.
-3. **Channel leverage.** Regulated buyers move on trusted referral. Partners (compliance consultants, custodians, PE operating partners) become a force multiplier no ad budget can match.
+**Five engines, in priority order:**
+1. **Expand the Compuwork base** — upsell governance onto 75 existing clients. Fastest, cheapest, highest-trust revenue; also our first case studies and benchmark data. *(Start here.)*
+2. **The scored-assessment funnel** — one frictionless CTA ("Get your Governance Score") feeding every channel, auto-qualifying leads into the right tier.
+3. **Product-led + sales-assisted acquisition** — self-serve Platform tier for volume; sales-led Managed tier for ACV.
+4. **Channel & partnerships** — custodians, PE operating partners, compliance consultants, MSP referrals. The scale multiplier for a regulated buyer who moves on trust.
+5. **MSP tuck-in rollups (accelerator)** — Centience *is* an MSP; acquiring regional MSP/vCISO books in regulated niches and converting them to the platform is instant ARR + warm upsell base. Deploy if organic + channel trail plan and capital allows.
 
----
-
-## 2. Where We Are Today
-
-**Product — The Centience Governance Program.** Three layers, one accountable firm:
-- **Managed Infrastructure** — workstations, servers, cloud, endpoints, DR/BCP. *"You cannot govern what you do not control."*
-- **Cybersecurity Governance** — posture monitoring, vulnerability & vendor risk, incident response, control mapping to SEC/FINRA/HIPAA/NIST.
-- **AI & Data Governance** — AI use inventory, approved/prohibited register, policy framework, data classification/retention (FINRA 17a-4, HIPAA, SEC), access controls.
-
-**The differentiator that marketing must hammer:** Because Centience *operates* the infrastructure, controls are **technically enforced** and **audit evidence is maintained in real time** — versus one-time assessors who hand over a report, or GRC tools that document controls someone else has to implement and prove. *"All three layers, one firm. Continuous — never stops."*
-
-**Proof assets already live:**
-- Website (centience.ai) with vertical pages: financial services, private equity, accounting/CPA, healthcare, law firms, non-profit, professional services.
-- Location SEO pages (NYC, Manhattan, Westchester, Greenwich/Stamford CT, Miami, Palm Beach, etc.).
-- **Lead-capture funnel already built:** Free 5-Day Assessment + per-industry assessments; downloadable guides (AI Governance, Cybersecurity, Infrastructure, Governance Program, Compliance Readiness); HIPAA & DR checklists; newsletter. Backed by Supabase + Resend notifications and API routes (`/api/assessment-lead`, `/api/guide-leads`, `/api/newsletter-signup`, `/api/contact`).
-- Founder credibility: Orville Matias — founded Compuwork (managed IT/cybersecurity for regulated firms), architected OfficeSafe (HIPAA/PCI platform), co-founded CyberGRID (GRC advisory). Decades of SEC/FINRA/HIPAA operational experience.
-- Social presence: LinkedIn company page, YouTube.
-
-**Implication:** The conversion infrastructure exists. What's missing is a **demand engine to fill it** and a **lifecycle system to convert and nurture** what it captures. That is what this plan builds.
+**Why this works:** software carries the client count, services carry the ACV, the base de-risks the launch, and the automated Score makes lead generation scale without adding headcount.
 
 ---
 
-## 3. The Category Bet
+## 2. The Strategic Reframe
 
-Regulated firms are being told to "adopt AI" while their examiners are being told to "scrutinize AI." That gap is the market. Centience should own a defensible category position:
+**The trap we're avoiding.** A pure managed service at ~$90K ACV needs ~560 fully-operated accounts to reach $50M. Every account requires onboarding and continuous human operation, so growth is capped by hiring and training governance teams. That is a healthy ~$15–20M business — not a scalable $50M-in-2.5-years business. The "5-day assessment we might not be able to deliver" was the symptom: a labor-bound hook doesn't scale.
 
-> **Continuous Governance** — governance that is *operated and evidenced continuously*, not assessed once and rebuilt before every exam.
+**The move.** Separate the *hook*, the *volume product*, and the *premium service* into three tiers, and automate the hook completely.
 
-**Messaging pillars (use verbatim across channels):**
-1. **"Can you prove to an examiner it's controlled?"** — the fear/urgency hook. (Already the homepage hero.)
-2. **"You cannot govern what you do not control."** — why operating the infrastructure matters; the moat vs. advisors and tools.
-3. **"Audit-ready is a state, not a project."** — evidence maintained daily, never reconstructed.
-4. **"Deploy AI with documented oversight from day one."** — governed AI as competitive advantage, not constraint.
-5. **"All three layers, one accountable firm."** — consolidation vs. stitching together an MSP + a vCISO + a GRC tool.
-
-**Category villains to position against:** one-time assessments that end at document delivery; GRC SaaS that documents controls the client still has to implement and prove; generalist MSPs with no regulatory expertise; DIY governance that collapses the week before an SEC exam.
-
----
-
-## 4. Revenue Model & the Math to $50M
-
-### 4.1 Offer & pricing architecture
-
-Recurring program revenue, tiered by firm size, seat count, and regulatory complexity. (Illustrative — validate against current book.)
-
-| Tier | Target profile | Monthly | ACV |
-|---|---|---|---|
-| **Essentials** | Small RIA / single-office firm, <$500M AUM, ~10–30 seats | $3.5K–5K | **$45–60K** |
-| **Professional** | Mid-market RIA / broker-dealer / PE-backed, 30–100 seats | $8K–12K | **$100–150K** |
-| **Enterprise** | Multi-entity, PE platform, large practice/health org | $18K+ | **$220K+** |
-| **Assessment (wedge)** | Free 5-Day Assessment → converts to a tier | $0 | — |
-
-**Blended ACV target: ~$90K.** Land with Essentials/Professional; expand seats, entities, and layers over time (net revenue retention target **115%+**).
-
-### 4.2 The math
-
-$50M ARR ÷ $90K blended ACV ≈ **560 active clients**. Sensitivity:
-
-| Blended ACV | Clients needed for $50M |
-|---|---|
-| $75K | 667 |
-| **$90K** | **556** |
-| $110K | 455 |
-| $150K | 333 |
-
-**Higher ACV is the single biggest lever** — every $15K of blended ACV removes ~90–110 clients from the acquisition burden. Bias the ICP and packaging upward (Professional/Enterprise, multi-entity PE platforms) rather than chasing logo count.
-
-### 4.3 ARR ramp (base case, blended ACV $90K, ~90% gross retention)
-
-| Period | New logos (period) | Active clients (end) | ARR (end) |
-|---|---|---|---|
-| Q3 2026 (start) | — | ~20 | **$1.8M** |
-| End 2026 | +18 | ~36 | **$3.2M** |
-| End 2027 | +150 | ~180 | **$16M** |
-| End 2028 | +380 | ~556 | **$50M** |
-
-New-logo velocity climbs from ~3/mo (late 2026) to a **2028 steady state of ~32 net new clients/month.** Everything downstream — funnel volume, headcount, budget — is sized to hit and sustain that 32/month.
-
-> This is a demanding curve for a firm founded in 2026. Two accelerants make it credible and should be pursued in parallel: (a) **channel/partner-sourced volume** (custodians, PE operating partners, compliance-consultant networks) that scales faster than direct sales; (b) **tuck-in M&A of regional MSPs/vCISO books** in regulated niches, converting their clients to the governance program (each acquisition is instant ARR + a warm base to cross-sell). If organic + channel underdeliver, M&A closes the gap.
-
----
-
-## 5. Ideal Customer Profile by Phase
-
-### Phase 1 — FINANCE (Q3 2026 → 2027) — *land the beachhead*
-
-| Segment | Titles to target | Why now |
+| | Old (v1) | New (v2) |
 |---|---|---|
-| **RIAs** ($250M–$5B AUM) | Founder/Managing Partner, COO, CCO, CTO/Head of IT | SEC exam pressure + AI adoption; underserved by generalist MSPs |
-| **Broker-dealers / hybrid** | CCO, CTO, Ops Director | FINRA 4511/17a-4 archiving + supervision pain |
-| **Private equity & family offices** | Operating Partner, CFO, CTO, Head of Portfolio Ops | One relationship → many portfolio companies (channel-in-a-box) |
-| **Accounting / CPA firms** | Managing Partner, IT Director | Adjacent regulatory + AI exposure; easy content overlap |
+| Hook | Free 5-day assessment (human-delivered) | **Governance Score** (automated, instant, $0 marginal cost) |
+| Volume revenue | — (services only) | **Platform subscription** (software margin) |
+| Premium revenue | Managed program | Managed program (unchanged) |
+| Clients for $50M | ~560 (all heavy delivery) | ~1,600 total, only ~230 heavy delivery |
+| Scalability | Headcount-bound | **Software- and channel-leveraged** |
 
-**Beachhead within the beachhead:** RIAs and PE firms in Centience's geographic strongholds (NYC metro, Fairfield County CT, South Florida). Win locally, referenceably, loudly — then go national.
-
-### Phase 2 — HEALTHCARE (2027 H2 → 2028) — *expand on HIPAA*
-
-- Multi-location physician groups, specialty practices, dental/DSOs, behavioral health.
-- Digital-health / health-tech vendors needing HIPAA + AI governance to close enterprise deals.
-- Health-system business associates and their vendor ecosystems.
-- Titles: Practice Administrator, Compliance Officer, CISO, CIO, COO. Leverage existing HIPAA checklist + healthcare assessment assets.
-
-### Phase 3 — LEGAL (2028) — *the third vertical*
-
-- Mid-size law firms (20–200 attorneys); AmLaw-200 practice groups.
-- Drivers: client-data protection, AI use in legal work, ethics-rule exposure (ABA Model Rules on tech competence/confidentiality), client security questionnaires (OCG/audit).
-- Titles: Managing Partner, General Counsel/Risk Partner, Director of IT/Security, COO.
-
-**Sequencing rationale:** each vertical reuses the same program, funnel, martech, and content engine — only the regulatory skin, proof points, and ICP filters change. Finance funds the machine; healthcare and legal are lower-marginal-cost expansions of it.
+This is also literally what you asked for — *"a leading governance **platform**"* and *"build this so it can easily scale."*
 
 ---
 
-## 6. Funnel Architecture & Required Volume
+## 3. The Compuwork Base
 
-### 6.1 Stages (anchored on the Free 5-Day Assessment)
+**75 clients · ~$2.2M · ~$29K average revenue per client.** This is Phase 0 and it runs from day one.
+
+**Why it's the single highest-ROI play:**
+- **Warm and trusting.** No CAC, no cold trust-building — they already pay Compuwork for managed IT.
+- **Natural expansion.** Governance (cyber + AI + data) layers *on top of* the IT they already buy. Take blended revenue per client from ~$29K toward $60K+ by adding the governance program → the base alone can grow from $2.2M to ~$4.5M with no new logos.
+- **Proof engine.** These become the first **case studies**, **references**, and **benchmark data points** that make cold acquisition convert.
+- **Segmentation now.** Score every base client (free), rank by governance gap + regulatory exposure, and prioritize upsell outreach to the highest-risk, highest-fit accounts first.
+
+**The base-expansion play (Q3–Q4 2026):**
+1. Run the Governance Score across all 75 accounts (we control the data — instant).
+2. Rank by gap severity × regulatory exposure × account size.
+3. Founder-led QBR / "governance readiness review" with the top ~30; present score, benchmark, and a Platform or Managed proposal.
+4. Convert 60–70% within two quarters (warm base converts far above cold).
+5. Capture 5–8 anonymized case studies from early converts → fuel the acquisition funnel.
+
+> Treat the base as sacred: it funds the build, proves the model, and generates the social proof the rest of the plan depends on. Do not let new-logo chasing starve base expansion — it's the best money in the company.
+
+---
+
+## 4. Product & Revenue Architecture
+
+### 4.1 The three tiers
+
+| Tier | What the customer gets | Delivery load | Target ACV | Motion |
+|---|---|---|---|---|
+| **Governance Score** | ~20–30 questions → instant 0–100 score, per-domain breakdown (infra/cyber/AI/data), peer benchmark, PDF report | **None** (automated) | $0 | Self-serve |
+| **Governance Platform** | Continuous monitoring dashboard, evidence vault, AI/vendor registers, policy templates, control mapping, score re-tracking, alerts, light-touch support | **Light** | **$8–25K** | Product-led + inside sales |
+| **Managed Program** | Fully operated: managed infra + cyber governance + AI/data governance + evidence assembled continuously + reporting (today's offering) | **Heavy** | **$75–250K+** | Sales-led |
+
+**Upgrade path:** Score (free) → Platform (self-serve/assisted) → Managed (sales-led). Each tier is a natural step up; the Score routes each prospect to the right entry tier automatically based on firm size, complexity, and gap severity.
+
+**The Governance Score is already 80% built.** The site runs quiz engines today (`aiComplianceQuestions`, `riskAssessmentQuestions`, `hipaaComplianceQuestions`, `aiReadinessQuestions`) with lead-capture APIs. v2 productizes them into a single branded, scored, benchmarked, gated experience with instant output and CRM routing.
+
+### 4.2 Product build (the dependency you signed up for)
+
+Reaching $50M on this model requires real product investment, sequenced so revenue funds the next stage:
+- **2026 H2 — Score MVP:** unify the quizzes into the branded Governance Score with scoring logic, benchmark, PDF, and CRM routing. (Mostly front-end + logic on the existing Next.js app + Supabase.)
+- **2027 — Platform v1:** the low-touch subscription product — monitoring dashboard, evidence vault, registers, policy library, re-scoring. This is the scalable ARR engine; prioritize it.
+- **2028 — Platform v2 + verticalization:** healthcare (HIPAA) and legal skins, deeper integrations, partner/portal features.
+
+---
+
+## 5. The Math to $50M
+
+**Blended path (illustrative target mix at end of 2028):**
+
+| Tier | Customers | Avg ACV | ARR |
+|---|---|---|---|
+| Managed Program | ~230 | ~$110K | **$25.3M** |
+| Governance Platform | ~1,400 | ~$15K | **$21.0M** |
+| Compuwork base (expanded + residual) | ~75 | ~$50K | **$3.7M** |
+| **Total** | **~1,700** | — | **~$50M** |
+
+Only ~230 accounts carry heavy delivery; the other ~1,400 are software-margin. **That's the difference between reachable and not.**
+
+**ARR ramp:**
+
+| Period | ARR (end) | Notes |
+|---|---|---|
+| Q3 2026 (start) | **$2.2M** | Compuwork base |
+| End 2026 | **$4.5M** | Base expansion + Score live + first Platform/Managed converts |
+| End 2027 | **$18M** | Platform v1 scaling; acquisition funnel humming; healthcare opens |
+| End 2028 | **$50M** | Full engine; legal opens; ~54 new customers/mo steady state |
+
+**New-customer velocity** rises to ~**54/month blended** in 2028 (≈45 Platform + ≈9 Managed). Platform's self-serve motion makes that volume attainable without a proportional army of AEs; Managed stays sales-led.
+
+**Sensitivity:** the biggest levers are (a) **base-expansion rate**, (b) **Platform ACV** (each +$3K ≈ –230 customers needed), and (c) **channel/partner share of acquisition** (lowers blended CAC). If organic trails, **MSP tuck-in rollups** close the gap: each acquired MSP book is instant ARR plus a warm upsell base.
+
+---
+
+## 6. The Growth Engines
+
+Ranked by ROI and sequenced accordingly.
+
+1. **Base expansion (Compuwork → Centience).** *Now.* Highest ROI, lowest CAC, fastest revenue, proof factory. (Section 3.)
+2. **The Governance Score funnel.** *Now.* One automated CTA feeding every channel; auto-qualifies and routes to a tier. (Section 9.1.)
+3. **Product-led + sales-assisted acquisition.** *2027+.* Self-serve Platform for volume; sales for Managed. The scalable core.
+4. **Channel & partnerships.** *2026 H2+.* Custodians, PE operating partners, compliance consultants, MSP referrals. Trust-based volume no ad budget buys. (Section 9.6.)
+5. **MSP tuck-in rollups.** *Accelerator, 2027+.* Buy regional MSP/vCISO/GRC books in regulated niches, convert to platform. Instant ARR + warm base. Requires capital; deploy to close any gap to plan.
+
+---
+
+## 7. ICP by Phase
+
+### Phase 1 — FINANCE (Q3 2026 → 2027)
+- **RIAs** ($250M–$5B AUM): Founder/Managing Partner, COO, **CCO**, CTO/Head of IT.
+- **Broker-dealers / hybrids:** CCO, Ops Director, CTO (FINRA 4511/17a-4 pain).
+- **PE & family offices:** Operating Partner, CFO, Head of Portfolio Ops — one relationship → many portfolio companies.
+- **Accounting/CPA firms:** Managing Partner, IT Director (adjacent regulatory + AI exposure).
+- **Beachhead geos:** NYC metro, Fairfield County CT, South Florida (Compuwork's footprint).
+
+### Phase 2 — HEALTHCARE (2027 H2 → 2028)
+- Multi-location physician groups, specialty practices, DSOs, behavioral health; digital-health vendors needing HIPAA + AI governance to close enterprise deals. Leverage existing HIPAA Score/checklist assets.
+
+### Phase 3 — LEGAL (2028)
+- Mid-size firms (20–200 attorneys) + AmLaw practice groups. Drivers: client-data protection, AI in legal work, ABA ethics rules, client security questionnaires.
+
+Each phase **reuses the same platform, Score, funnel, and content engine** — only the regulatory skin and ICP filters change. Finance funds the machine; healthcare and legal are low-marginal-cost expansions.
+
+---
+
+## 8. The Funnel
+
+**Scored-assessment-led. The Governance Score is the qualifying event; humans engage only warm, scored, ICP-fit leads.**
 
 ```
-Reach ──▶ Lead ──▶ MQL ──▶ Meeting (SAL) ──▶ Assessment ──▶ Client ──▶ Expansion
- (impr.)  (form/    (ICP-fit  (discovery      (free 5-day    (program    (seats,
-          connect/   +engaged) booked)         gap map)       signed)     entities,
-          reply/                                                           layers)
-          download)
+Reach ─▶ Governance Score ─▶ Scored & Segmented ─▶ Tier routing
+ (LinkedIn/         (free, automated,      (fit + gap +      │
+  email/SEO/        instant)               firm size)        ├─▶ Platform (self-serve / inside sales)
+  partners/                                                  └─▶ Managed  (strategy call → sales)
+  base)
 ```
 
-The Assessment is the hinge: it's the primary CTA on every asset, the qualifying event for sales, and the natural bridge to a paid program.
-
-### 6.2 Conversion assumptions (high-consideration regulated B2B)
+**Conversion assumptions (to be replaced with live data):**
 
 | Transition | Rate |
 |---|---|
-| Lead → MQL | 40% |
-| MQL → Meeting | 25% |
-| Meeting → Assessment | 60% |
-| Assessment → Client | 35% |
-| **Lead → Client (net)** | **~2.1%** |
+| Reach → Score started | 3–5% (outbound), higher for warm/base |
+| Score started → completed | 60% |
+| Completed Score → Platform (self-serve) | ~8% |
+| Completed Score → strategy call (Managed track) | ~15% |
+| Strategy call → Managed close | ~30% |
 
-### 6.3 Volume required at 2028 steady state (32 clients/month)
+**Volume at 2028 steady state (~45 Platform + ~9 Managed / month):**
 
-| Stage | Monthly volume needed |
+| Stage | Monthly |
 |---|---|
-| Clients | **32** |
-| Assessments | ~91 |
-| Meetings | ~152 (~7–8/business day) |
-| MQLs | ~610 |
-| **Leads** | **~1,525** |
-| Reach (impressions, ~0.6% → lead across mix) | ~250K+ |
+| New Platform customers | ~45 |
+| New Managed customers | ~9 |
+| Strategy calls (Managed) | ~30 |
+| **Completed Scores** | **~850** |
+| **Scores started (≈ "leads")** | **~1,400** |
 
-### 6.4 Lead source mix at steady state (~1,525 leads/mo)
-
-| Source | Leads/mo | Notes |
-|---|---|---|
-| Inbound SEO / content | ~600 | Lowest CAC; compounding; the long-term moat |
-| Referral / partner / channel | ~300 | Highest trust, high close rate |
-| LinkedIn outbound (HeyReach) | ~150 | Fast to stand up; scales with sender seats |
-| Cold email (Apollo-sourced) | ~150 | Predictable at volume; needs deliverability discipline |
-| Paid media (LinkedIn + Google) | ~200 | Buys reach around lead magnets & assessment |
-| Webinars / events / field | ~125 | High-intent, high-ACV, brand-building |
-
-**Early quarters invert this mix:** 2026 H2 is ~70% outbound (LinkedIn + email) because it's fast and controllable; inbound and channel become the majority by mid-2028 as the content/SEO asset and partner network mature — which is also what drives blended CAC *down* over the plan.
+Early quarters are outbound- and base-weighted; by 2028 inbound SEO + partners + product-led self-serve dominate, pulling blended CAC down every quarter.
 
 ---
 
-## 7. Channel Playbooks
+## 9. Channel Playbooks
 
-Every play routes to one of three conversion events: **Book the Free 5-Day Assessment** (BOFU), **Download a guide/checklist** (MOFU), or **Take the industry self-assessment quiz** (MOFU→BOFU). All three already exist on the site.
+Every channel drives **one CTA: "Get your free Governance Score."**
 
-### 7.1 LinkedIn — organic + outbound
+### 9.1 The Governance Score — the wedge
 
-LinkedIn is the primary channel for reaching CCOs, COOs, and Managing Partners in finance. Two engines run in parallel:
+- **Build:** unify existing quizzes into one branded, ~20–30-question assessment → instant 0–100 score + per-domain breakdown + **peer benchmark** + downloadable PDF. Gate the full report behind email/firmographics.
+- **Routing (automated via Make → HubSpot):** score + firm size + gap severity → route to Platform self-serve, or create a Managed deal + book a strategy call.
+- **Re-scoring loop:** quarterly re-score reminders keep the list warm and feed the benchmark.
+- **Data moat:** aggregate (anonymized) scores power the annual *State of Governance* report, PR, and "you vs. peers" hooks across every channel.
 
-**A) Founder-led organic (Orville + company page).**
-- **Cadence:** 4–5 posts/week from Orville's personal profile (10–20× the reach of the company page). Company page reposts + runs paid.
-- **Content spine:** the "examiner" narrative. Formats that work: *"What an SEC examiner actually asks for" checklists; real (anonymized) exam-prep war stories; "3 AI tools already in your firm you haven't governed"; teardown of a governance gap; short founder POV videos (repurpose YouTube).* 
-- **Engagement loop:** every post ends with a soft CTA to a guide or the assessment; comments answered within the hour; DM anyone who engages meaningfully (routed to HeyReach inbox).
-- **Employee amplification:** every team member reshares; build a simple internal Slack prompt so new posts get first-hour engagement (drives the algorithm).
+### 9.2 LinkedIn — via Marketing Shed
 
-**B) Outbound via HeyReach (multi-seat LinkedIn automation, already connected).**
-- **Sourcing:** build ICP lead lists in **Apollo** (Phase-1 finance filters below), push to **HeyReach** lists.
-- **Seat plan:** start 2 sender seats (Orville + 1 SDR), scale to 6–8 by 2028. ~20–25 connection requests/seat/day (stay under LinkedIn limits to protect accounts).
-- **Sequence (personalized, value-first — not pitchy):**
-  1. Connection request, no pitch (personalized to firm/role/region).
-  2. Day 2 after accept: pattern-interrupt value — *"Most RIAs we assess have 3–5 ungoverned AI tools in the environment. Want the 5-point checklist we use?"* (link to AI Governance guide).
-  3. Day 5: soft proof — a one-line result/insight + offer the Free 5-Day Assessment.
-  4. Day 9: breakup / permission-to-close.
-- **Targets:** 6 seats × ~500 connects/mo × 30% accept = ~900 conversations/mo → ~150 leads/mo at maturity.
-- **Rules:** rotate messaging monthly; A/B two openers per segment; never more than one link in the first two touches; route positive replies to HubSpot as MQLs via Make.
+Marketing Shed runs the sends; **we supply the fuel and hold the metrics.**
+- **We provide:**
+  1. **Target lists** — ICP-filtered contacts built in **Apollo** (Phase-1 finance filters in Appendix A), refreshed monthly.
+  2. **Sequences/messaging** — value-first, personalized, single CTA = the Governance Score. (Appendix B angles.)
+  3. **Hand-off SLA** — positive replies routed into HubSpot within 1 hour; who follows up and how.
+- **We measure them on:** connection-accept rate (>28%), reply rate (>10%), positive-reply → Score-started (>20%), Score-started → SQL. Monthly review; kill/iterate underperforming sequences.
+- **Founder-led organic (parallel, in-house):** Orville posts 4–5×/week (the "examiner" narrative); every post soft-CTAs the Score; team amplifies via Slack. This is the brand/authority layer Marketing Shed's outbound can't buy.
 
-**KPIs:** connection-accept rate (>28%), reply rate (>12%), positive-reply → meeting (>25%), account health (0 restrictions).
+### 9.3 Email — outbound + lifecycle
 
-### 7.2 Email — outbound + lifecycle nurture
+- **Outbound (new pipeline):** Apollo-sourced, sent from **warmed secondary domains** (never `centience.ai`); 4-touch sequences, one idea each, CTA = Score. Deliverability discipline is non-negotiable (SPF/DKIM/DMARC, volume ramp, reputation monitoring).
+- **Lifecycle (Resend, already wired to the site):**
+  - **Post-Score nurture:** score recap → what the gaps mean → peer benchmark → Platform trial or strategy-call CTA.
+  - **The Governance Brief (biweekly newsletter):** SEC/FINRA/HIPAA updates + one practical checklist per issue. Best retention + warming asset; also re-warms cold outbound targets.
+  - **Base nurture:** dedicated track for Compuwork clients on the governance upsell.
 
-**A) Cold outbound (new pipeline).**
-- **Source & enrich** ICP contacts in **Apollo** (verified emails, firmographics, intent). Do *not* send high-volume cold email from the primary domain.
-- **Deliverability infrastructure (do this before sending a single email):** register 2–4 secondary sending domains via **GoDaddy** (e.g., `getcentience.com`, `centience-governance.com`), warm them for 3–4 weeks, SPF/DKIM/DMARC on all. Keep `centience.ai` for brand + lifecycle only.
-- **Volume ramp:** 3–5 sends/inbox/day during warmup → steady state ~15,000 sends/mo across the pool.
-- **Sequence (4 touches over ~12 days), one idea per email, plain-text, <90 words:**
-  1. *Trigger + question:* reference a real regulatory event (e.g., new SEC AI guidance) → *"Can your firm show an examiner every AI tool in use and who approved it?"*
-  2. *Insight + soft proof:* the 3-layer gap most firms miss.
-  3. *The offer:* Free 5-Day Assessment → prioritized gap map, no cost, no obligation.
-  4. *Breakup.*
-- **Targets:** ~40% open, ~4% reply, ~25% of replies positive → ~150 leads/mo at volume.
+### 9.4 Website, SEO & PLG conversion
 
-**B) Lifecycle & nurture (Resend, already wired into the site).**
-Everyone who downloads a guide, takes a quiz, or requests an assessment enters an automated track. Build these in **Resend** (or HubSpot if the CRM owns lifecycle):
-- **Guide-download nurture (5 emails / 3 weeks):** deliver the guide → related insight → case-style proof → *"here's what the assessment reveals"* → book the assessment.
-- **Assessment-requested track:** instant confirmation → what to expect → prep checklist → (post-assessment) results recap + program proposal → follow-ups.
-- **Newsletter — "The Governance Brief" (biweekly):** regulatory changes (SEC/FINRA/HIPAA), AI-governance developments, one practical checklist per issue. This is the single best retention + top-of-mind asset; it also warms cold-outbound targets over time.
-- **Re-engagement:** quarterly "regulatory update" broadcast to the full list with a fresh lead magnet.
+- **SEO (compounding inbound moat, biggest long-term lever):** expand the proven industry × regulation × geo page pattern; own bottom-funnel intent ("outsourced CISO for RIA," "SEC exam IT prep," "HIPAA IT compliance vendor," "AI governance policy for advisors"). Target ~20K organic visits/mo by end 2028.
+- **PLG conversion:** the Score *is* the primary conversion surface on every page. Self-serve Platform signup/trial with transparent pricing to minimize sales friction on the volume tier. Instrument every step.
 
-**KPIs:** nurture → assessment conversion (>8%), newsletter open (>35%), unsubscribe (<0.5%), domain reputation (Google Postmaster/Resend analytics green).
+### 9.5 Content & the benchmark flywheel
 
-### 7.3 Website, SEO & Conversion
+- **Flagship annual report — *The State of AI Governance in Regulated Finance*** — powered by aggregated Score data. PR magnet, sales leave-behind, link-building asset, and the reason press quotes Orville. Healthcare & legal editions in 2027–28.
+- Guides/checklists (exist) → keep expanding; each is a Score entry point.
+- **Case studies from the base** → highest-converting BOFU asset; collect from day one.
+- Video (YouTube) → founder explainers, clipped to LinkedIn/Shorts. Produce assets in **Canva** on a locked brand template.
 
-The site converts; now make it *found* and make it convert harder.
+### 9.6 Partnerships & channel — the scale multiplier
 
-**SEO (the compounding inbound moat — biggest 2028 lever):**
-- **Programmatic vertical × regulation × geo pages.** The pattern is already proven on the site (industry + location pages). Expand systematically: `{industry} governance in {city}`, `{regulation} compliance for {firm type}` (e.g., "SEC AI books-and-records compliance for RIAs," "FINRA 17a-4 archiving for broker-dealers," "HIPAA IT compliance for physician groups").
-- **Bottom-funnel intent clusters** where buying happens: *"outsourced CISO for RIA," "SEC exam IT preparation," "AI governance policy for financial advisors," "vCISO for broker-dealer," "HIPAA risk assessment vendor."*
-- **Pillar + cluster content** around each messaging pillar; internal-link to assessment/guide CTAs.
-- **Target:** grow to **~20,000 organic visits/mo by end of 2028** at ~3% lead conversion → ~600 leads/mo.
-
-**Conversion-rate optimization (CRO):**
-- Exit-intent + scroll-triggered assessment CTA on every industry page.
-- "Am I audit-ready?" interactive scorecard (extends existing quiz engine) as a MOFU magnet with instant scored result + email capture.
-- Social proof blocks (anonymized outcomes, regulatory frameworks covered, years/logos) on every landing page.
-- Fast, obvious booking: calendar embed on the assessment page (no back-and-forth).
-- Instrument everything: event tracking on every CTA, form, and quiz step → HubSpot + analytics.
-
-**KPIs:** organic sessions, assessment-page conversion (>6%), guide-page conversion (>25%), page speed/Core Web Vitals green.
-
-### 7.4 Content & Thought Leadership
-
-Content feeds SEO, LinkedIn, email, and sales enablement from one production line.
-
-- **Flagship annual report:** *"The State of AI Governance in Regulated Finance"* — original survey data (run via newsletter list + partners). This is the PR magnet, the sales leave-behind, and the top-of-funnel link-building asset. Repeat annually; add healthcare & legal editions in 2027–2028.
-- **The Governance Brief** newsletter (see 7.2).
-- **Guides & checklists** (already built) — keep expanding: an "SEC Exam Readiness Checklist," "AI Vendor Risk Questionnaire template," "FINRA 17a-4 archiving buyer's guide."
-- **Video (YouTube @Centience):** short founder explainers ("What examiners actually check"), assessment walkthroughs, regulatory-update reactions. Clip into LinkedIn/Shorts.
-- **Case studies / outcome stories:** as clients accumulate, publish anonymized "before/after gap map" stories — the highest-converting BOFU asset. Prioritize collecting these from day one.
-
-**Design/production:** use **Canva** (connected) for guide PDFs, LinkedIn carousels, one-pagers, report layout, and ad creative — on a locked brand template (navy + gold, matching the site).
-
-### 7.5 Partnerships & Channel — *the scale unlock*
-
-Regulated buyers move on trusted referral. This is how Centience reaches 32 clients/month without an infinite ad budget, and it is the highest-leverage workstream in the plan.
-
-| Partner type | Why they refer | Deal structure |
+| Partner | Why they refer | Structure |
 |---|---|---|
-| **Compliance consultants / fractional CCOs** | They advise on *what's* required; Centience *operates* it. Complementary, not competitive. | Referral fee or revenue share; co-branded assessments |
-| **RIA custodians & platforms** (Schwab, Fidelity, Altruist ecosystems) | They want their advisors de-risked on tech/AI | Preferred-vendor listing, webinar co-marketing |
-| **PE firms & operating partners** | Portfolio-wide governance mandate | Master agreement → roll into portfolio companies |
-| **Accountants / audit & law firms** | Adjacent trusted advisors to the same buyers | Mutual referral |
-| **Regional MSPs without regulatory depth** | Refer regulated clients they can't serve well | Referral or white-label the governance layer |
-| **Cyber-insurance brokers** | Insureds with strong controls = better risk | Referral; controls attestation |
+| Compliance consultants / fractional CCOs | They advise *what's* required; we *operate/evidence* it | Referral / rev-share; co-branded Score |
+| RIA custodians & platforms | Want advisors de-risked on tech/AI | Preferred-vendor, co-marketing |
+| PE firms & operating partners | Portfolio-wide governance mandate | Master agreement → portfolio rollout |
+| Accountants / audit / law firms | Adjacent trusted advisors | Mutual referral |
+| Regional MSPs (no regulatory depth) | Refer regulated clients they can't serve | Referral / white-label the platform |
+| Cyber-insurance brokers | Better-controlled insureds = better risk | Referral / controls attestation |
 
-**Build motion:** launch/relaunch the existing Partner Program page as a formal program with tiers, a partner portal, deal-registration, co-marketing kit (Canva-built), and a referral fee schedule. Target the first 10 signed partners by end of 2026; 50+ by end of 2028. Track partner-sourced pipeline as its own funnel in HubSpot.
+Formalize the existing Partner Program: tiers, portal, deal registration, co-marketing kit, referral schedule. Target 10 partners by end 2026, 50+ by end 2028; track partner-sourced pipeline as its own funnel.
 
-**Target:** partners/referral → ~300 leads/mo and a disproportionate share of *closed* revenue by 2028 (highest close rate, lowest CAC).
+### 9.7 Events & webinars
+- Monthly webinar tied to the regulatory calendar ("Prep for your next SEC exam," "Govern AI before FINRA asks"), co-hosted with partners; register → Score → nurture.
+- Field: sponsor RIA/PE events (Schwab IMPACT, Future Proof, T3); booth CTA = take the Score on the spot. Executive roundtables in NYC/Greenwich/Miami/Palm Beach for enterprise Managed deals. Healthcare (HIMSS, MGMA) and legal (ILTA, Legalweek) as those phases open.
 
-### 7.6 Events, Webinars & Field
-
-- **Monthly webinar series** — *"Governance for Regulated Firms."* Topics tied to the regulatory calendar (e.g., "Preparing for your next SEC exam," "Governing AI before FINRA asks"). Co-host with partners for shared audiences. Promote via LinkedIn + email + paid. Register → nurture → assessment.
-- **Industry conferences** (Phase 1): sponsor/attend RIA & PE events — Schwab IMPACT, Future Proof, MActive, T3, regional FPA/IA chapters. Booth CTA = on-the-spot assessment sign-up (badge scan → HubSpot).
-- **Executive roundtables / dinners** in stronghold metros (NYC, Greenwich, Miami, Palm Beach) — 8–12 CCOs/COOs per table. Highest-trust, highest-ACV top-of-funnel for enterprise deals.
-- **Phase 2/3:** healthcare (HIMSS, MGMA, regional MGMA chapters) and legal (ILTA, ABA TECHSHOW, Legalweek) as those verticals open.
-
-### 7.7 Paid Media
-
-Paid buys *reach around the assets*, not cold conversions. Support, not foundation.
-
-- **LinkedIn Ads:** the precision channel. Target by title (CCO, COO, Managing Partner) × industry × company size × geo. Promote the annual report, webinars, and the assessment (retargeting only for the assessment — cold traffic gets a lead magnet first). Document/lead-gen form ads for guides.
-- **Google Search:** capture BOTF intent — "outsourced CISO RIA," "SEC exam IT preparation," "HIPAA IT compliance vendor." High intent, high ACV justifies the CPC.
-- **Retargeting:** everyone who hit an industry page or started a quiz → assessment offer across LinkedIn/Google display.
-- **Budget discipline:** start small ($8–12K/mo), scale only what beats a target blended CAC; kill the rest. Ramp toward ~$60–80K/mo across channels by 2028 as attribution proves out.
-
-**Target:** ~200 leads/mo at maturity; treat as the accelerant on top of organic/outbound.
-
-### 7.8 PR, Analyst & Community
-
-- **Founder as the category voice:** pitch Orville for commentary on AI-governance and SEC/FINRA/HIPAA developments to trade press (InvestmentNews, ThinkAdvisor, WealthManagement.com, RIABiz; later Fierce Healthcare, Legaltech News). The annual report is the hook.
-- **Awards & listings:** RIA-tech vendor lists, fintech/regtech awards, MSP/MSSP rankings.
-- **Community:** active presence in RIA/compliance communities (e.g., relevant Slack/LinkedIn groups, XYPN, NSCP for compliance officers). Contribute, don't pitch.
+### 9.8 Paid media
+- **LinkedIn Ads:** title × industry × size × geo; promote the Score, the annual report, and webinars. **Google Search:** capture BOFU intent. **Retargeting:** page/quiz visitors → Score. Start small ($8–12K/mo), scale only what beats target CAC, ramp toward ~$60–80K/mo by 2028. Accelerant, not foundation.
 
 ---
 
-## 8. Martech Stack & Automation
+## 10. Martech & Automation Stack
 
-Map to tools already connected to the business. Everything routes into **HubSpot as the single source of truth.**
+Everything flows into **HubSpot** as the single source of truth. *(Note: connectors must be authorized in an interactive session before automations can run — see close of this doc.)*
 
 | Layer | Tool | Role |
 |---|---|---|
-| **CRM / pipeline / lifecycle** | **HubSpot** | Contacts, deals, pipeline stages (Lead→MQL→Meeting→Assessment→Client→Expansion), lead scoring, campaign analytics, landing pages, reporting |
-| **Lead sourcing & enrichment** | **Apollo.io** | Build ICP lists (finance filters now, healthcare/legal later), verified contacts, enrichment, intent |
-| **LinkedIn outbound** | **HeyReach** | Multi-seat connection + message sequences, inbox, list sync |
-| **Email (transactional + lifecycle + broadcast)** | **Resend** | Site notifications (already live), nurture automations, newsletter broadcasts, segments |
-| **Cold-email domains** | **GoDaddy** | Secondary sending domains + DNS (SPF/DKIM/DMARC) for outbound, isolated from `centience.ai` |
-| **Automation glue** | **Make** | Route HeyReach/Apollo/site-form events → HubSpot; positive-reply → MQL; assessment-request → deal + Slack alert |
-| **Creative** | **Canva** | Guides, carousels, one-pagers, ad creative, report design (locked brand template) |
-| **Internal ops / alerts** | **Slack** | Real-time lead alerts, post-amplification prompts, pipeline standups |
-| **Website** | Next.js (this repo) | Landing pages, assessment/quiz engine, lead-capture APIs (already built) |
+| CRM / pipeline / lifecycle | **HubSpot** | Contacts, deals, tiered pipelines (Platform vs. Managed), lead scoring, reporting |
+| Lead sourcing & enrichment | **Apollo** | ICP list building for Marketing Shed + cold email; enrichment |
+| LinkedIn outreach | **Marketing Shed (agency)** | Runs sends from our lists + sequences; we measure |
+| Email (lifecycle + broadcast) | **Resend** | Site notifications (live), post-Score nurture, newsletter, base track |
+| Cold-email domains | Secondary domains | Isolated, warmed sending pool (never `centience.ai`) |
+| Product / Score / site | **Next.js + Supabase** (this repo) | Score app, Platform product, lead-capture APIs |
+| Automation glue | **Make** | Score result → HubSpot routing; positive reply → SQL + Slack; form → nurture |
+| Creative | **Canva** | Reports, carousels, one-pagers, ad creative (brand template) |
+| Internal ops | **Slack** | Lead alerts, amplification prompts, pipeline standups |
 
-**Key automations to build (via Make):**
-1. Apollo list → HeyReach campaign enrollment (ICP-fit only).
-2. HeyReach positive reply → HubSpot contact + MQL + Slack alert to owner.
-3. Site form submit (assessment/guide/newsletter) → HubSpot contact + lifecycle stage + Resend nurture enrollment.
-4. Assessment requested → HubSpot deal created at "Assessment" stage + calendar link sent + Slack #pipeline alert.
-5. Deal → Client (won) → trigger onboarding sequence + kick off case-study capture task.
-6. Weekly funnel snapshot → Slack + dashboard refresh.
-
-**Attribution:** UTM discipline on every link; first-touch + multi-touch in HubSpot; a single weekly funnel dashboard (Section 12).
+**Key automations (Make):** (1) Score completed → HubSpot contact + score fields + tier routing; (2) high-fit score → Managed deal + strategy-call link + Slack alert; (3) Platform signup → onboarding sequence; (4) positive LinkedIn/email reply → SQL + owner alert; (5) base-client score → upsell task for founder/AE; (6) weekly funnel snapshot → Slack + dashboard.
 
 ---
 
-## 9. Org, Team & Hiring Plan
+## 11. Org, Team & Hiring
 
-Sized to the 32-clients/month 2028 target. Hire ahead of the ramp, not behind it.
+Sized to ~54 new customers/mo by 2028, with delivery gated so sales never outruns onboarding.
 
 | Function | 2026 H2 | 2027 | 2028 |
 |---|---|---|---|
-| **Demand gen / marketing** | Founder + 1 generalist (content+ops) + agency/contractors | + Head of Marketing, content lead, SEO/paid contractor | + demand-gen manager, designer |
-| **SDR / outbound** | 1 SDR | 2–3 SDRs | 4–6 SDRs |
-| **Sales (AE / governance advisors)** | Founder-led | 2–3 AEs + sales lead | 4–6 AEs |
-| **Partnerships** | Founder-led | 1 partner manager | 2 partner managers |
-| **Delivery (must scale with sales!)** | Existing team | Scale governance analysts / engineers | Pod model per cohort |
+| Product/eng (Score + Platform) | Contract + existing | **Dedicated product lead + 2–3 eng** | Product team of 5–7 |
+| Marketing / demand | Founder + 1 generalist + contractors | + Head of Marketing, content/SEO, ops | + demand-gen, designer |
+| Inside sales (Platform) | Founder-led | 2 reps | 4–6 reps |
+| AEs (Managed) | Founder-led | 2–3 + sales lead | 4–6 |
+| Partnerships | Founder-led | 1 partner manager | 2 |
+| Delivery (Managed) | Existing Compuwork team | Scale governance pods | Pod model per cohort |
 
-**Critical dependency:** this is a *delivery-heavy* recurring service. Sales cannot outrun the ability to onboard and operate governance programs. Delivery capacity planning belongs in every quarterly review — a stalled onboarding is a churned client and a dead reference. Tie AE hiring to delivery-pod readiness.
-
-**Ratios to hold:** ~1 SDR feeds ~1.5–2 AEs; each AE closes ~5–6 clients/mo at maturity; each delivery pod operates ~40–60 clients depending on tier mix.
+**Critical:** Platform (light delivery) is what lets client count scale without a proportional delivery army — protect that design. Managed delivery capacity is reviewed every quarter and gates AE hiring.
 
 ---
 
-## 10. Budget & Unit Economics
+## 12. Budget & Unit Economics
 
-### 10.1 Unit economics
+- **Platform:** ~$15K ACV, software-like margins (70–85% at scale), low CAC via PLG/self-serve. Target CAC < $6K, payback < 12 mo.
+- **Managed:** ~$110K ACV, services margins (~65–75%), sales-led. Target CAC < $40K (<0.4× ACV), payback < 15 mo.
+- **Base expansion:** near-zero CAC — the best economics in the company.
+- **Retention:** MSP heritage = long relationships; target >90% gross / >115% net revenue retention.
 
-- **Blended ACV:** ~$90K. **Gross margin (managed service):** ~65–75% at scale.
-- **Retention:** avg client relationship measured in years (founder's book historically ~decade); model **>90% gross / >115% net** revenue retention.
-- **LTV:** at $90K ACV, ~70% GM, ~5-yr life → **~$315K gross-profit LTV.**
-- **CAC target:** blended **< $35K** (≈ <0.4× ACV; LTV:CAC ~9:1). Outbound-heavy early quarters run hotter (~$45–55K); channel + inbound pull blended CAC down over time.
-- **Payback:** target **<15 months** on gross profit.
+**S&M + product investment (illustrative, funded by base + ramp):**
 
-### 10.2 S&M investment (illustrative)
-
-Growth-stage norm: spend **~40–50% of *new* ARR** on sales & marketing during the build.
-
-| Year | New ARR added | S&M budget (~45% of new ARR) | Notes |
+| Year | New ARR | S&M + product | Emphasis |
 |---|---|---|---|
-| 2026 H2 | ~$1.4M | ~$0.6M | Outbound tooling, foundational content, first SDR/hire, deliverability setup |
-| 2027 | ~$13M | ~$5–6M | Scale team, paid ramp, events, partner program, SEO investment |
-| 2028 | ~$34M | ~$14–16M | Full engine: AEs, SDRs, partner managers, paid, field, PR, report |
+| 2026 H2 | ~$2.3M | ~$1.0M | Score MVP, base expansion, foundational content, deliverability, Marketing Shed |
+| 2027 | ~$13.5M | ~$6–7M | Platform v1 build, inside-sales + AE hiring, partner program, SEO, paid ramp |
+| 2028 | ~$32M | ~$14–16M | Full engine, verticalization, field/PR, optional M&A |
 
-Marketing-program spend (ex-headcount) skews to: content/SEO (compounding), events/field (high-ACV), paid (accelerant), tooling. Reallocate quarterly toward the lowest-CAC, highest-close channels — which the model expects to be **channel/referral and inbound** by 2028.
-
----
-
-## 11. Quarterly Roadmap
-
-### Q3 2026 — Foundation (finance)
-- Stand up HubSpot as source of truth; define pipeline stages + lead scoring.
-- Build the Make automations (site forms, HeyReach, Apollo → HubSpot).
-- Deliverability: register + warm secondary domains (GoDaddy), configure SPF/DKIM/DMARC.
-- Launch founder-led LinkedIn cadence (4–5×/week) + HeyReach with 2 seats.
-- Turn on lifecycle nurtures in Resend; launch **The Governance Brief** newsletter.
-- Ship first BOTF SEO cluster (RIA/BD/PE × SEC/FINRA × geo).
-- First webinar; sign first 3–5 referral partners.
-
-### Q4 2026 — Prove the motion (finance)
-- Optimize outbound (messaging A/Bs, best-converting segments).
-- First case studies / outcome stories captured and published.
-- Hire SDR #1 + marketing generalist. Launch Partner Program v1.
-- Begin LinkedIn Ads + Google Search (small, measured).
-- **Exit:** repeatable assessment→client motion; ~$3.2M ARR.
-
-### 2027 — Scale finance + open healthcare
-- H1: scale AEs/SDRs; expand SEO to full finance footprint; monthly webinars; first executive roundtables; publish *State of AI Governance in Regulated Finance*.
-- H2: **launch Healthcare** — activate HIPAA assets, healthcare ICP in Apollo, healthcare landing/SEO pages, HIMSS/MGMA presence, healthcare-specific outbound + partners.
-- Scale partner program to 25+; paid media ramps; PR/analyst push.
-- **Exit:** ~$16M ARR; inbound + channel becoming meaningful.
-
-### 2028 — Full engine + open legal
-- H1: **launch Legal** — legal assets, ABA/ILTA presence, legal ICP + partners.
-- Hit steady-state ~1,525 leads/mo and ~32 clients/mo.
-- Blended CAC declining as inbound/channel dominate mix.
-- Consider tuck-in M&A to accelerate to target if organic + channel trail plan.
-- **Exit:** **$50M ARR.**
+Reallocate quarterly toward the lowest-CAC, highest-close channels — expected to be **base, partners, and product-led inbound** by 2028.
 
 ---
 
-## 12. KPIs, Dashboards & Governance Cadence
+## 13. Quarterly Roadmap
 
-**North-star:** Net new ARR per month (path to $30K×32 ≈ ~$2.9M net new ARR/mo run-rate in 2028).
+**Q3 2026 — Foundation + base**
+- Score every Compuwork client; rank and begin top-30 upsell QBRs.
+- Build the **Governance Score MVP** (unify quizzes → branded scored/benchmarked tool + PDF + routing).
+- HubSpot as source of truth; tiered pipelines; Make automations.
+- Arm Marketing Shed (Apollo lists + sequences + SLA); launch founder LinkedIn cadence.
+- Launch The Governance Brief; deliverability infra for cold email.
+- First 3–5 referral partners; first webinar.
 
-**Funnel KPIs (weekly dashboard):** leads by source, lead→MQL, MQL→meeting, meeting→assessment, assessment→client, CAC by channel, pipeline created vs. target, sales-cycle length.
+**Q4 2026 — Prove the motion**
+- Convert first Platform + Managed logos from cold funnel; capture 5–8 base case studies.
+- Optimize Score→tier conversion; hire marketing generalist + first inside-sales rep.
+- Partner Program v1 live; measured paid pilots. **Exit: ~$4.5M ARR.**
 
-**Channel KPIs:** LinkedIn accept/reply rates; email open/reply/deliverability; organic sessions + assessment-page CVR; nurture→assessment; partner-sourced pipeline; webinar reg→assessment; paid CAC & ROAS.
+**2027 — Scale finance + build Platform + open healthcare**
+- Ship **Platform v1**; scale self-serve + inside sales.
+- Publish *State of AI Governance in Regulated Finance*; scale SEO, webinars, roundtables.
+- H2: **launch Healthcare** (HIPAA Score skin, ICP, pages, MGMA/HIMSS, partners).
+- Partners to 25+. **Exit: ~$18M ARR.**
 
-**Revenue KPIs (monthly):** ARR, new logos, ACV trend, gross/net retention, expansion revenue, LTV:CAC, payback.
-
-**Cadence:**
-- **Daily:** Slack lead alerts; SDR/AE activity.
-- **Weekly:** funnel review (marketing + sales); pipeline standup.
-- **Monthly:** full metrics review; channel reallocation; content/SEO review.
-- **Quarterly:** strategy + budget review; delivery-capacity check; vertical-launch gate reviews.
-
----
-
-## 13. Risks & Mitigations
-
-| Risk | Impact | Mitigation |
-|---|---|---|
-| **Delivery can't keep pace with sales** | Churn, dead references, reputation | Hire delivery ahead of ramp; pod model; gate AE hiring on onboarding capacity |
-| **$50M in ~2.5 yrs is steep organically** | Miss target | Channel motion + tuck-in M&A as parallel accelerants; raise blended ACV |
-| **Email deliverability / domain burn** | Outbound collapses | Isolated warmed domains; volume discipline; monitor reputation; never send cold from `centience.ai` |
-| **LinkedIn account restrictions** | Outbound seats lost | Stay under limits; warm accounts; diversify seats; never over-automate |
-| **Long, committee-driven regulated sales cycles** | Slow pipeline velocity | Free assessment lowers commitment; multithread (CCO+COO+IT); ROI/exam-risk framing |
-| **Category confusion (MSP vs. GRC vs. advisor)** | Weak differentiation | Relentless "operate + evidence continuously" messaging; the 3-layer, one-firm story |
-| **Over-reliance on paid (high CAC)** | Unsustainable economics | Bias to compounding inbound + channel; paid as accelerant only |
-| **Regulatory tailwind reverses (AI dereg.)** | Softer urgency | Governance value persists (cyber, exam, client trust); diversify across 3 verticals |
+**2028 — Full engine + open legal**
+- Platform v2 + verticalization; **launch Legal**.
+- Hit ~54 new customers/mo; blended CAC declining as base/partners/PLG dominate.
+- Deploy **MSP tuck-in M&A** if needed to close the gap. **Exit: $50M ARR.**
 
 ---
 
-## 14. First 90 Days
+## 14. KPIs & Cadence
 
-**Systems & data**
-- [ ] HubSpot: pipeline stages, lead scoring, deal properties, dashboards.
-- [ ] Make automations #1–6 (Section 8) live and tested.
-- [ ] GoDaddy: register + configure 2–4 secondary sending domains; begin warmup.
-- [ ] Confirm all site lead-capture APIs write to HubSpot (not just Supabase/Resend notify).
-- [ ] UTM + attribution scheme documented; tracking on every CTA/form/quiz step.
+**North star:** net new ARR/month (path to ~$2.6M/mo run-rate in 2028).
 
-**Content & assets**
-- [ ] Lock Canva brand template (navy/gold).
-- [ ] Launch **The Governance Brief** newsletter; migrate existing list.
-- [ ] Ship 5 BOTF SEO articles + 1 pillar page (finance).
-- [ ] Repackage existing guides as gated, nurture-linked magnets.
-- [ ] Draft *State of AI Governance in Regulated Finance* survey.
+- **Funnel (weekly):** Scores started/completed by source, Score→Platform, Score→call, call→Managed close, CAC by channel/tier, pipeline vs. target.
+- **Base (monthly):** % of 75 scored, % upsold, base ARR, blended revenue/base-client.
+- **Product (monthly):** Platform signups, activation, trial→paid, net revenue retention, churn.
+- **Revenue (monthly):** ARR by tier, new customers by tier, ACV trend, gross/net retention, LTV:CAC, payback.
+- **Cadence:** daily lead alerts; weekly funnel + pipeline review; monthly metrics + channel reallocation; quarterly strategy/budget + delivery-capacity + vertical-gate reviews.
+
+---
+
+## 15. Risks & Mitigations
+
+| Risk | Mitigation |
+|---|---|
+| **Platform product slips** (it's the scale engine) | Ship Score MVP fast for cash/leads; dedicate product lead + eng in 2027; base + Managed carry revenue meanwhile |
+| **$50M in 2.5 yrs is steep from $2.2M** | Base expansion + channel + PLG in parallel; MSP tuck-in M&A as the gap-closer |
+| **Base upsell underperforms** | Founder-led QBRs, score-driven urgency, bundle pricing; base is warmest audience we'll ever have |
+| **Email deliverability / domain burn** | Isolated warmed domains, volume discipline, reputation monitoring; never cold-send from `centience.ai` |
+| **Marketing Shed underdelivers** | Hold to hard metrics; own the lists/sequences so we can move agencies without losing IP |
+| **Delivery can't keep pace (Managed)** | Platform absorbs volume with light delivery; pod model; gate AE hiring on onboarding capacity |
+| **Category confusion (MSP vs GRC vs advisor)** | Relentless "operate + evidence continuously, all three layers, one firm" messaging |
+| **Regulatory tailwind softens** | Value persists (cyber, exam, client trust); diversified across 3 verticals |
+
+---
+
+## 16. First 90 Days
+
+**Base (highest ROI — do first)**
+- [ ] Score all 75 Compuwork clients; rank by gap × exposure × size.
+- [ ] Founder QBR / governance review with top 30; present score + upgrade path.
+- [ ] Capture first 5 case studies from early converts.
+
+**Product**
+- [ ] Ship Governance Score MVP (unify quizzes → scored, benchmarked, gated, routed).
+- [ ] Scope Platform v1 (monitoring, evidence vault, registers, policy library, re-scoring).
+
+**Systems**
+- [ ] HubSpot: tiered pipelines (Platform / Managed), lead scoring, dashboards.
+- [ ] Make automations #1–6; confirm site APIs write to HubSpot.
+- [ ] Secondary sending domains registered + warming; SPF/DKIM/DMARC.
+- [ ] UTM/attribution scheme; tracking on every CTA/step.
 
 **Demand**
-- [ ] Orville LinkedIn cadence live (4–5 posts/week); employee amplification loop in Slack.
-- [ ] Apollo Phase-1 finance lists built; HeyReach 2 seats sequencing.
-- [ ] Cold-email sequences drafted; begin sending post domain-warmup.
-- [ ] Resend lifecycle nurtures (guide, assessment, newsletter) live.
-- [ ] First webinar scheduled + promoted.
-
-**Channel & sales**
-- [ ] Partner Program v1 (tiers, referral schedule, one-pager) live; outreach to first 10 target partners.
-- [ ] Assessment booking calendar embedded; SDR follow-up SLA (<1 hr) defined.
-- [ ] Weekly funnel dashboard reviewed every Monday.
+- [ ] Arm Marketing Shed: Apollo Phase-1 lists + sequences + 1-hr hand-off SLA + metrics dashboard.
+- [ ] Orville LinkedIn cadence (4–5/wk) + Slack amplification loop.
+- [ ] Cold-email sequences drafted; send post-warmup.
+- [ ] Resend nurtures (post-Score, base, newsletter) live; launch The Governance Brief.
+- [ ] First webinar scheduled; Partner Program v1 live; outreach to first 10 partners.
 
 ---
 
 ### Appendix A — Example Apollo ICP filters (Phase 1, finance)
-
-- **RIAs:** SIC/keyword "registered investment adviser," "wealth management," "asset management"; headcount 15–300; AUM proxy via headcount/title density; geo: NY, CT, FL (then national). Titles: Chief Compliance Officer, COO, Managing Partner, Founder, CTO/Head of IT.
+- **RIAs:** keywords "registered investment adviser," "wealth management," "asset management"; headcount 15–300; geo NY/CT/FL then national. Titles: CCO, COO, Managing Partner, Founder, CTO/Head of IT.
 - **Broker-dealers:** "broker-dealer," "FINRA member"; CCO, Ops Director, CTO.
-- **Private equity / family offices:** "private equity," "family office"; Operating Partner, CFO, Head of Portfolio Operations, CTO.
+- **PE / family offices:** "private equity," "family office"; Operating Partner, CFO, Head of Portfolio Operations, CTO.
 
-### Appendix B — Assessment-first campaign angles (swap per vertical)
-
+### Appendix B — Governance Score campaign angles (swap per vertical)
 | Angle | Hook |
 |---|---|
-| Exam fear | "Can you prove to an examiner it's controlled?" |
-| Shadow AI | "You likely have 3–5 ungoverned AI tools in your firm right now." |
-| Consolidation | "MSP + vCISO + GRC tool = 3 vendors, 0 accountability. One firm does all three." |
-| Evidence | "Audit-ready is a state, not a scramble the week before an exam." |
-| AI-as-advantage | "Deploy AI with documented oversight from day one." |
+| Exam fear | "Can you prove to an examiner it's controlled? Find out your score in 5 minutes." |
+| Shadow AI | "You likely have 3–5 ungoverned AI tools in your firm. See where you rank." |
+| Benchmark | "RIAs average 74/100 on governance readiness. What's your score?" |
+| Consolidation | "MSP + vCISO + GRC tool = 3 vendors, 0 accountability. Score your stack." |
+| Evidence | "Audit-ready is a state, not a scramble. Measure yours." |
 
 ---
 
-*Prepared as a living operating plan. Update ramp, conversion rates, and channel mix with live funnel data monthly; re-forecast quarterly.*
+*Living operating plan. Replace all conversion rates, ACVs, and channel mix with live data monthly; re-forecast quarterly. v2 reflects the platform-led model, the Compuwork installed base, the automated Governance Score, and Marketing Shed as the LinkedIn channel.*
