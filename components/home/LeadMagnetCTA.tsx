@@ -18,7 +18,7 @@ const LeadMagnetCTA = () => (
     >
       <div className="flex items-center gap-3 justify-center mb-6">
         <div className="gold-line" />
-        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">Governance Readiness Review</p>
+        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">Free 5-Day Assessment</p>
         <div className="gold-line" />
       </div>
 
@@ -26,7 +26,7 @@ const LeadMagnetCTA = () => (
         Know Where You Stand Before Regulators Ask.
       </h2>
       <p className="text-lg opacity-60 leading-relaxed mb-8 max-w-2xl mx-auto">
-        The Governance Readiness Review evaluates your technology governance posture across infrastructure, cybersecurity, AI usage, and compliance readiness — then delivers a prioritized gap map and program enrollment recommendation. Available for qualified regulated organizations evaluating enrollment in the Centience Governance Program.
+        The Free 5-Day Assessment evaluates your technology governance posture across infrastructure, cybersecurity, AI usage, and compliance readiness — then delivers a prioritized gap map and action plan — free, with no commitment.
       </p>
 
       <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm opacity-50 mb-12">
@@ -38,7 +38,7 @@ const LeadMagnetCTA = () => (
 
       <Button variant="cta" size="xl" asChild>
         <Link href="/readiness">
-          Request a Governance Readiness Review <ArrowRight size={16} />
+          Get the Free 5-Day Assessment <ArrowRight size={16} />
         </Link>
       </Button>
       <p className="text-sm opacity-50 mt-6">

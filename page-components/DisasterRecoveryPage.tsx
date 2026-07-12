@@ -147,7 +147,7 @@ const DisasterRecoveryPage = () => {
             >
               <Button variant="gold" size="lg" className="shadow-gold" asChild>
                 <Link href="/schedule-assessment">
-                  Request a Governance Readiness Review
+                  Get the Free 5-Day Assessment
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>

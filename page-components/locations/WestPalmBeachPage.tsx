@@ -183,7 +183,7 @@ const WestPalmBeachPage = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Managed IT Services for Financial Services in West Palm Beach | Compuwork"
-        description="Managed IT services for financial services firms in West Palm Beach. Compliance-first IT, cybersecurity, and 24/7 support for SEC and FINRA-regulated organizations. Request a Governance Readiness Review."
+        description="Managed IT services for financial services firms in West Palm Beach. Compliance-first IT, cybersecurity, and 24/7 support for SEC and FINRA-regulated organizations. Get the Free 5-Day Assessment."
         canonical="/locations/managed-it-services-for-financial-firms-west-palm-beach"
         keywords={[
           "managed IT services West Palm Beach",

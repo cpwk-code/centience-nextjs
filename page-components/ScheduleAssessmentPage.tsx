@@ -66,7 +66,7 @@ const ScheduleAssessmentPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Request a Governance Readiness Review | CompuWork"
+        title="Get the Free 5-Day Assessment | CompuWork"
         description="Book a complimentary IT risk assessment with our experts. Fill in your details and pick a time that works for you."
         keywords={["free IT assessment", "risk assessment", "schedule consultation", "managed IT"]}
         canonical="/schedule-assessment"
@@ -83,7 +83,7 @@ const ScheduleAssessmentPage = () => {
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-3">
-            Request a Governance Readiness Review
+            Get the Free 5-Day Assessment
           </h1>
           <p className="text-center text-muted-foreground mb-8 max-w-md mx-auto">
             Enter your details below and pick the best time for your complimentary risk assessment.

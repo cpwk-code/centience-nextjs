@@ -63,7 +63,7 @@ const CoManagementPage = () => (
           <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="cta" size="xl" asChild>
               <Link href="/readiness">
-                Request a Governance Readiness Review <ArrowRight size={16} />
+                Get the Free 5-Day Assessment <ArrowRight size={16} />
               </Link>
             </Button>
             <Button variant="cta-outline" size="xl" asChild>
@@ -193,18 +193,18 @@ const CoManagementPage = () => (
       <div className="container mx-auto max-w-3xl text-center">
         <div className="flex items-center gap-3 justify-center mb-6">
           <div className="gold-line" />
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">Program Enrollment</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">Get Started</p>
           <div className="gold-line" />
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-5 leading-tight">
           Ready to Enroll in the Centience Governance Program?
         </h2>
         <p className="text-lg opacity-60 leading-relaxed mb-8 max-w-xl mx-auto">
-          The Governance Readiness Review is the first step. Available for qualified regulated organizations. Results within 5 business days.
+          The Free 5-Day Assessment is the first step. Results within 5 business days.
         </p>
         <Button variant="cta" size="xl" asChild>
           <Link href="/readiness">
-            Request a Governance Readiness Review <ArrowRight size={16} />
+            Get the Free 5-Day Assessment <ArrowRight size={16} />
           </Link>
         </Button>
         <p className="text-sm opacity-50 mt-6">

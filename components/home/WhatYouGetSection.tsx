@@ -67,12 +67,12 @@ const WhatYouGetSection = () => (
             One program. One accountable firm. Everything above — continuously maintained.
           </p>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Qualified regulated organizations enroll in the Centience Governance Program after a readiness review. The program is ongoing — it does not end at a report.
+            After a free 5-day assessment, regulated firms bring Centience on to run the program continuously — it does not end at a report.
           </p>
         </div>
         <Button variant="cta" size="lg" asChild className="shrink-0">
           <Link href="/resources/assessments">
-            Request a Readiness Review <ArrowRight size={15} />
+            Get the Free 5-Day Assessment <ArrowRight size={15} />
           </Link>
         </Button>
       </div>

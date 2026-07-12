@@ -329,7 +329,7 @@ const BocaRatonPage = () => {
               >
                 <Button variant="gold" size="lg" className="group animate-pulse-glow" asChild>
                     <Link href="/schedule-assessment">
-                    Request a Governance Readiness Review
+                    Get the Free 5-Day Assessment
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>

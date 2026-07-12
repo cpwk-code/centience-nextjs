@@ -7,7 +7,7 @@ const lifecycle = [
     icon: Search,
     number: "01",
     label: "BASELINE",
-    title: "Governance Readiness Review",
+    title: "Free 5-Day Assessment",
     description: "We assess your current posture across infrastructure, cybersecurity, AI usage, vendor risk, and compliance readiness. You receive a prioritized gap map and a clear picture of where you stand before the program begins.",
   },
   {

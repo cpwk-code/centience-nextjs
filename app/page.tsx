@@ -3,15 +3,15 @@ import Index from '@/page-components/Index';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "The Centience Governance Program — AI & Technology Governance for Regulated Organizations",
-  description: "The Centience Governance Program builds and operates continuous AI and technology governance for regulated organizations — managed infrastructure, cybersecurity, AI oversight, and evidence assembly in one enrollment. Serving broker-dealers, RIAs, healthcare, private equity, and legal firms.",
-  keywords: ["Centience Governance Program","AI governance program","technology governance program","AI governance for regulated organizations","cybersecurity governance","managed infrastructure","SEC FINRA compliance","HIPAA compliance","AI oversight","continuous technology governance","governance program enrollment"],
+  title: "AI & IT Governance for RIAs & Regulated Firms | Centience",
+  description: "Prove your technology is compliant before regulators ask. Centience runs IT, cybersecurity, and AI oversight for RIAs, broker-dealers, and regulated firms — with audit evidence kept ready continuously. Free 5-day assessment.",
+  keywords: ["RIA cybersecurity compliance","SEC AI books and records","outsourced CISO for RIA","vCISO for RIA","FINRA IT compliance","MSP for financial advisors","AI governance for regulated firms","broker-dealer technology compliance","HIPAA IT compliance","technology governance"],
   alternates: {
     canonical: "https://centience.ai",
   },
   openGraph: {
-    title: "The Centience Governance Program — AI & Technology Governance for Regulated Organizations",
-    description: "The Centience Governance Program: AI and technology governance for regulated organizations. Built, operated, and evidenced continuously. Serving financial services, healthcare, private equity, and legal firms.",
+    title: "AI & IT Governance for RIAs & Regulated Firms | Centience",
+    description: "Prove your technology is compliant before regulators ask. Centience runs IT, cybersecurity, and AI oversight for regulated firms — audit evidence kept ready continuously. Free 5-day assessment.",
     url: "https://centience.ai",
     type: 'website',
     siteName: 'Centience',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: "https://centience.ai/og-image.png",
         width: 1200,
         height: 630,
-        alt: "The Centience Governance Program — AI & Technology Governance for Regulated Organizations",
+        alt: "AI & IT Governance for RIAs & Regulated Firms | Centience",
       },
     ],
   },

@@ -33,31 +33,27 @@ const HeroSection = () => (
           <div className="flex items-center gap-3 mb-8">
             <div className="gold-line" />
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              The Centience Governance Program
+              For RIAs, Broker-Dealers &amp; Regulated Firms
             </p>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-extrabold leading-[1.1] mb-6">
-            Your AI &amp; Technology Governance Program —{" "}
-            <span className="text-gradient-gold">Built, Run, and Evidenced Continuously.</span>
+          <h1 className="text-4xl md:text-5xl lg:text-[3.3rem] font-display font-extrabold leading-[1.1] mb-6">
+            Your firm is using AI on client data.{" "}
+            <span className="text-gradient-gold">Can you prove to an examiner it&rsquo;s controlled?</span>
           </h1>
 
-          <p className="text-lg leading-relaxed mb-3 opacity-70">
-            Centience builds and operates the governance program for regulated organizations — covering AI tools, cybersecurity controls, vendors, infrastructure, support operations, and evidence requirements. One continuously operated program with enforcement, reporting, and audit-ready evidence included.
-          </p>
-
-          <p className="text-sm leading-relaxed mb-10 opacity-50 font-semibold uppercase tracking-wider">
-            Not a vendor engagement. An ongoing governance program that regulated firms enroll in.
+          <p className="text-lg leading-relaxed mb-10 opacity-70">
+            Centience runs your IT, cybersecurity, and AI oversight as one program — and keeps the audit evidence assembled, so you&rsquo;re ready before the SEC, FINRA, or a client ever asks.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 w-full">
             <Button variant="cta" size="xl" asChild className="w-full sm:w-auto">
               <Link href="/readiness">
-                Request a Governance Readiness Review <ArrowRight size={16} />
+                Get the Free 5-Day Assessment <ArrowRight size={16} />
               </Link>
             </Button>
             <Button variant="cta-outline" size="xl" asChild className="w-full sm:w-auto">
-              <Link href="/governance">See What the Program Includes</Link>
+              <Link href="/governance">See how it works</Link>
             </Button>
           </div>
 
@@ -76,6 +72,9 @@ const HeroSection = () => (
               </div>
             ))}
           </div>
+          <p className="text-xs text-warm-white/40 mt-4 leading-relaxed">
+            Built on 20+ years and 1,000+ organizations served through our OfficeSafe → Compuwork heritage — now delivered as Centience.
+          </p>
         </motion.div>
 
         <motion.div
@@ -91,7 +90,7 @@ const HeroSection = () => (
               { icon: Database, title: "Data Governance", desc: "Classification, retention, lineage, and access controls — continuously maintained", href: "/data-governance" },
               { icon: Brain, title: "AI Governance", desc: "Policy, oversight, and ongoing monitoring for regulated AI adoption", href: "/ai-governance" },
               { icon: Shield, title: "Technology Governance", desc: "Integrated GRC across infrastructure, cybersecurity, data, and AI — one accountable firm", href: "/governance" },
-              { icon: Users, title: "Program Enrollment", desc: "Works with your existing IT team, vCISO, or compliance counsel — Centience is the accountable governance operator", href: "/co-management" },
+              { icon: Users, title: "Works With Your Team", desc: "Works alongside your existing IT team, vCISO, or compliance counsel — Centience is the accountable operator", href: "/co-management" },
             ].map((item, i) => (
               <Link
                 key={item.title}
