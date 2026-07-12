@@ -1003,7 +1003,7 @@ A strong checklist should include:
 
 Organizations that maintain structured checklists are better positioned to demonstrate regulatory readiness.
 
-[RELATED_SERVICE:NYDFS Compliance Assessment|Get a structured compliance review to identify gaps and build a practical path toward NYDFS Part 500 readiness.|/free-risk-assessment]
+[RELATED_SERVICE:NYDFS Compliance Assessment|Get a structured compliance review to identify gaps and build a practical path toward NYDFS Part 500 readiness.|/readiness]
 
 ## How Can Compuwork Help Financial Institutions Achieve NYDFS Part 500 Compliance?
 
@@ -1028,7 +1028,7 @@ The April 15, 2026 milestone is approaching quickly, and organizations that begi
 
 If your organization is unsure about its current cybersecurity posture, a structured compliance review can help identify gaps and prioritize improvements.
 
-[CTA_BUTTON:Schedule a NYDFS Compliance Assessment|/free-risk-assessment]
+[CTA_BUTTON:Schedule a NYDFS Compliance Assessment|/readiness]
 [/CTA_BOX]
 
 
@@ -1173,7 +1173,7 @@ Private equity firms and regulated businesses across USA that view IT as part of
 Compuwork is the strongest fit on this list for private equity firms and regulated portfolio companies that require audit-ready, governance-aligned IT operations. Its compliance-first structure differentiates it from general MSPs.
 
 [CTA_BOX]
-**Request a Governance Readiness Review with our team and discover how we can help protect your business.**
+**Get the Free 5-Day Assessment with our team and discover how we can help protect your business.**
 
 [CTA_BUTTON:Book Your Free Consultation|/contact]
 [/CTA_BOX]
@@ -1386,7 +1386,7 @@ Private equity firms and investment organizations that want IT designed around s
 Compuwork is the strongest fit in this list for private equity firms that view IT as part of risk management and compliance infrastructure.
 
 [CTA_BOX]
-**Request a Governance Readiness Review with our team and discover how we can help protect your business.**
+**Get the Free 5-Day Assessment with our team and discover how we can help protect your business.**
 
 [CTA_BUTTON:Book Your Free Consultation|/contact]
 [/CTA_BOX]
@@ -1665,7 +1665,7 @@ Financial services firms and regulated businesses that want IT operations design
 Compuwork is the strongest fit on this list for financial services firms that view IT as part of compliance and risk management, not just technical support.
 
 [CTA_BOX]
-**Request a Governance Readiness Review with our team and discover how we can help protect your business.**
+**Get the Free 5-Day Assessment with our team and discover how we can help protect your business.**
 
 [CTA_BUTTON:Book Your Free Consultation|/contact]
 [/CTA_BOX]
@@ -1909,7 +1909,7 @@ Compuwork integrates cybersecurity into daily IT operations rather than treating
 **Best for:** Regulated and risk-sensitive organizations seeking a structured, compliance-first cybersecurity approach.
 
 [CTA_BOX]
-**Request a Governance Readiness Review with our team and discover how we can help protect your business.**
+**Get the Free 5-Day Assessment with our team and discover how we can help protect your business.**
 
 [CTA_BUTTON:Book Your Free Consultation|/contact]
 [/CTA_BOX]
@@ -2269,7 +2269,7 @@ Can IT compliance services assist when an organisation is being audited?|Yes. Qu
 
 Schedule a free risk assessment with CompuWork's IT compliance experts today.
 
-[CTA_BUTTON:Request a Governance Readiness Review|/schedule-assessment]
+[CTA_BUTTON:Get the Free 5-Day Assessment|/readiness]
 [/CTA_BOX]
     `,
   },
@@ -2326,7 +2326,7 @@ Compuwork is a national managed IT and cybersecurity provider serving regulated 
 Regulated businesses & hedge funds that require audit readiness, documented controls, and predictable cybersecurity governance.
 
 [CTA_BOX]
-**Request a Governance Readiness Review with our team and discover how we can help protect your business.**
+**Get the Free 5-Day Assessment with our team and discover how we can help protect your business.**
 
 [CTA_BUTTON:Book Your Free Consultation|/contact]
 [/CTA_BOX]
@@ -2566,7 +2566,7 @@ Compuwork is a national managed IT and cybersecurity provider serving regulated 
 Wealth management firms & regulated businesses across the USA that require audit readiness, documented controls, and predictable cybersecurity governance.
 
 [CTA_BOX]
-**Request a Governance Readiness Review with our team and discover how we can help protect your business.**
+**Get the Free 5-Day Assessment with our team and discover how we can help protect your business.**
 
 [CTA_BUTTON:Book Your Free Consultation|/contact]
 [/CTA_BOX]
@@ -4570,7 +4570,7 @@ Centience builds Reg S-P compliance programs on managed infrastructure. Your end
 
 Centience delivers a Reg S-P readiness assessment and program build for smaller RIAs — documentation, technical controls, and vendor review assembled and ready before the examiner asks.
 
-[CTA_BUTTON:Book Your Reg S-P Assessment|/ai-governance-risk-assessment]
+[CTA_BUTTON:Book Your Reg S-P Assessment|/readiness]
 [/CTA_BOX]
     `,
   },
@@ -4699,7 +4699,7 @@ The starting point is an AI Governance Assessment that identifies every tool, ma
 
 Schedule your AI Governance Assessment. Results delivered within 5 business days.
 
-[CTA_BUTTON:Book Your AI Governance Assessment|/ai-governance-risk-assessment]
+[CTA_BUTTON:Book Your AI Governance Assessment|/readiness]
 [/CTA_BOX]
     `,
   },
@@ -4811,7 +4811,7 @@ Centience builds AI governance programs on managed infrastructure. Your endpoint
 
 Schedule your AI Governance Assessment. We identify gaps before the examiner does.
 
-[CTA_BUTTON:Book Your AI Governance Assessment|/ai-governance-risk-assessment]
+[CTA_BUTTON:Book Your AI Governance Assessment|/readiness]
 [/CTA_BOX]
     `,
   },
@@ -4903,7 +4903,7 @@ Most firms can write the policies. The harder problem is enforcement — and enf
 
 Schedule your AI Governance Assessment. We identify gaps before FINRA does.
 
-[CTA_BUTTON:Book Your AI Governance Assessment|/ai-governance-risk-assessment]
+[CTA_BUTTON:Book Your AI Governance Assessment|/readiness]
 [/CTA_BOX]
     `,
   },
@@ -5009,7 +5009,7 @@ Centience builds cybersecurity governance programs on the infrastructure we mana
 
 Schedule your AI Governance Assessment. We evaluate cybersecurity controls alongside AI governance.
 
-[CTA_BUTTON:Book Your Assessment|/ai-governance-risk-assessment]
+[CTA_BUTTON:Book Your Assessment|/readiness]
 [/CTA_BOX]
     `,
   },
@@ -5110,7 +5110,7 @@ Centience builds cybersecurity governance programs for SEC-regulated organizatio
 
 Schedule your AI Governance Assessment — we evaluate cybersecurity governance alongside AI governance.
 
-[CTA_BUTTON:Book Your Assessment|/ai-governance-risk-assessment]
+[CTA_BUTTON:Book Your Assessment|/readiness]
 [/CTA_BOX]
     `,
   },
@@ -5208,7 +5208,7 @@ The gap between having these components documented and having them technically e
 
 Schedule your AI Governance Assessment. We evaluate cybersecurity and AI governance together.
 
-[CTA_BUTTON:Book Your Assessment|/ai-governance-risk-assessment]
+[CTA_BUTTON:Book Your Assessment|/readiness]
 [/CTA_BOX]
     `,
   },
@@ -5341,7 +5341,7 @@ Document the Review Process | Even for claims you remove — documenting your re
 [CTA_BOX]
 ## Does your firm have an AI governance program that protects against enforcement exposure?
 Schedule your AI Governance Assessment. We identify gaps before the SEC does.
-[CTA_BUTTON:Book Your AI Governance Assessment|/ai-governance-risk-assessment]
+[CTA_BUTTON:Book Your AI Governance Assessment|/readiness]
 [/CTA_BOX]
     `,
   },
@@ -5446,7 +5446,7 @@ The question is not whether shadow AI is running inside your organization. Based
 [CTA_BOX]
 ## Find Out Where You Stand in 5 Days
 Centience conducts a structured 5-Day AI Governance Assessment for regulated organizations in financial services and healthcare. Clear exposure picture. Regulatory gap analysis. A technically enforced governance roadmap — not a policy template.
-[CTA_BUTTON:Schedule Your Assessment|/ai-governance-risk-assessment]
+[CTA_BUTTON:Schedule Your Assessment|/readiness]
 [/CTA_BOX]
 
 ---

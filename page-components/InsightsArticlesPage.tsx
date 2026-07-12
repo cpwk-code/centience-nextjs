@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { ArrowRight, Tag, User, Calendar, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { blogPosts, getSrc } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
@@ -98,14 +99,15 @@ const InsightsArticlesPage = () => {
                   <a
                     href={post.externalUrl ?? `/insights/${post.slug}`}
                     {...(post.externalUrl ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="block overflow-hidden aspect-video bg-muted flex-shrink-0"
+                    className="relative block overflow-hidden aspect-video bg-muted flex-shrink-0"
                   >
-                    <img
+                    <Image
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       src={getSrc(post.image)}
                       alt={post.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
-                      decoding="async"
                     />
                   </a>
 
