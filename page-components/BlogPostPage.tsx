@@ -10,7 +10,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
-import { blogPosts, firmImages, getSrc } from "@/data/blogPosts";
+import { blogPosts, getSrc } from "@/data/blogPosts";
 import KeyFacts from "@/components/KeyFacts";
 import BlogFAQAccordion from "@/components/BlogFAQAccordion";
 import BlogAuthorCard from "@/components/BlogAuthorCard";
@@ -254,13 +254,6 @@ const BlogPostPage = ({ slug: slugProp }: { slug?: string } = {}) => {
                     });
                     tocHtml += '</ul></div></nav>';
                     return tocHtml;
-                  })
-                  .replace(/\[FIRM_IMAGE:(.*?)\]/g, (_match, firmKey) => {
-                    const firmData = firmImages[firmKey.trim()];
-                    if (firmData) {
-                      return `<div class="my-8 flex justify-center"><img src="${getSrc(firmData.src)}" alt="${firmData.alt}" class="w-full max-h-[400px] object-cover object-top rounded-xl shadow-lg border border-border" loading="lazy" /></div>`;
-                    }
-                    return '';
                   })
                   .replace(/\[COMPARISON_TABLE\]([\s\S]*?)\[\/COMPARISON_TABLE\]/g, (_match, tableContent) => {
                     const lines = tableContent.trim().split('\n').filter((line: string) => line.trim());

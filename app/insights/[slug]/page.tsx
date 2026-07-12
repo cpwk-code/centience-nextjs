@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blogPosts';
 import BlogPostPage from '@/page-components/BlogPostPage';
 
@@ -43,6 +44,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default function Page({ params }: { params: { slug: string } }) {
   const post = blogPosts.find((p) => p.slug === params.slug && p.id >= 11);
+
+  // Unknown / removed slug (e.g. retired legacy articles) → real 404, not a soft-404.
+  if (!post) notFound();
 
   const postImagePath = typeof post?.image === 'string' ? post.image : (post?.image as any)?.src ?? '';
   const postImageUrl = postImagePath.startsWith('http') ? postImagePath : `https://centience.ai${postImagePath}`;
