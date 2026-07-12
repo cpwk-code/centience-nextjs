@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { blogPosts } from '@/data/blogPosts';
-import BlogPostClient from './BlogPostClient';
+import BlogPostPage from '@/page-components/BlogPostPage';
 
 export async function generateStaticParams() {
   // Published articles only — exclude LinkedIn-only / empty stubs (they link out, not to a native page)
@@ -86,7 +86,10 @@ export default function Page({ params }: { params: { slug: string } }) {
     <>
       {articleJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: articleJsonLd }} />}
       {breadcrumbJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />}
-      <BlogPostClient />
+      {/* Render the article body server-side (client component still hydrates) so the
+          full text is present in the initial HTML for crawlers. Passing the slug as a
+          prop keeps server and client renders deterministic. */}
+      <BlogPostPage slug={params.slug} />
     </>
   );
 }
