@@ -63,7 +63,7 @@ const IndustriesPage = () => (
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Don't see your industry? Let's talk.</h2>
         <p className="text-lg opacity-70 mb-10">If your organization operates in a regulated environment and needs technology governance — we can help.</p>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Book Your Governance Assessment <ArrowRight size={16} /></Link>
+          <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
         </Button>
         <p className="text-sm opacity-50 mt-6">
           Or call us directly:{" "}

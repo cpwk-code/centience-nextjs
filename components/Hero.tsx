@@ -17,7 +17,7 @@ const defaultContent = {
   headline: "AI Security, Cybersecurity, & Technology Governance",
   headline_highlight: "Audit Ready Services for Regulated Industries",
   subheadline: "Stop dreading audits. We align your technology, policies, and documentation with SEC, FINRA, NIST, HIPAA, and other frameworks so your next audit feels like a formality, not a fire drill.",
-  primary_cta: "Get the Free 5-Day Assessment",
+  primary_cta: "Get Your Free Assessment",
   secondary_cta: "View Our Services",
 };
 
@@ -126,8 +126,8 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="gold" size="lg" className="group animate-pulse-glow" asChild>
-                <Link href="/schedule-assessment">
-                  Get the Free 5-Day Assessment
+                <Link href="/assessments/governance-score">
+                  Get Your Free Assessment
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>

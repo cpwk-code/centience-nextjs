@@ -4,7 +4,7 @@ import NewsletterPage from '@/page-components/resources/NewsletterPage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Governance Intelligence Newsletter | Centience",
-  description: "Subscribe to the Centience Governance Intelligence newsletter for expert insights on AI governance, regulatory developments, and technology compliance for regulated organizations.",
+  description: "Subscribe to the Centience Governance Intelligence newsletter for expert insights on AI governance, regulatory developments.",
   keywords: ["governance newsletter","AI governance updates","compliance newsletter","regulatory intelligence","technology governance news"],
   alternates: {
     canonical: "https://centience.ai/resources/newsletter",

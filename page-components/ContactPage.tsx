@@ -132,7 +132,7 @@ const ContactPage = () => {
               right starting point is a conversation. Centience serves regulated organizations across
               financial services, healthcare, private equity, legal, accounting, and non-profit sectors.
               Every engagement starts with a governance assessment — a clear picture of where you
-              stand, delivered within 5 business days.
+              stand, delivered instantly.
             </p>
           </motion.div>
         </div>
@@ -176,8 +176,8 @@ const ContactPage = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="card-premium p-8 text-center">
               <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mx-auto mb-5"><CheckCircle className="w-6 h-6" /></div>
               <h3 className="font-display font-bold text-primary text-lg mb-3">I want to understand my governance gaps</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-5">Start with the governance assessment. No commitment required. Results delivered within 5 business days.</p>
-              <a href="/ai-governance-risk-assessment" className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:opacity-80 transition-opacity">Book Your Governance Assessment <ArrowRight className="w-4 h-4" /></a>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5">Start with the governance assessment. No commitment required. Instant results — your score in minutes.</p>
+              <a href="/assessments/governance-score" className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:opacity-80 transition-opacity">Get Your Free Governance Score <ArrowRight className="w-4 h-4" /></a>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="card-premium p-8 text-center">
               <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mx-auto mb-5"><Phone className="w-6 h-6" /></div>
@@ -201,7 +201,7 @@ const ContactPage = () => {
           <div className="flex items-center gap-3 mb-4"><div className="gold-line" /><p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">What Happens Next</p></div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5">No Pressure. No Obligation. A Straight Conversation.</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">When you contact Centience, you will hear back within one business day. We will ask a few questions about your organization, your regulatory environment, and what is prompting the conversation. Then we will tell you honestly whether a governance assessment makes sense and what it would cover.</p>
-          <p className="text-muted-foreground leading-relaxed mb-8">If it does — most assessments complete within 5 business days and you leave with a clear, prioritized roadmap regardless of whether you engage further.</p>
+          <p className="text-muted-foreground leading-relaxed mb-8">If it does — most assessments complete in minutes and you leave with a clear, prioritized roadmap regardless of whether you engage further.</p>
           <blockquote className="border-l-4 border-accent pl-5 py-3 bg-card rounded-r-lg">
             <p className="text-primary font-semibold leading-relaxed">This is where most firms stop — at the assessment. This is where Centience starts.</p>
           </blockquote>
@@ -417,7 +417,7 @@ const ContactPage = () => {
               <div className="card-premium p-6">
                 <h4 className="font-display font-bold text-primary mb-4">Why Partner With Us?</h4>
                 <ul className="space-y-3">
-                  {["99%+ audit success rate", "20+ years of compliance expertise", "24/7 dedicated support", "100+ satisfied clients"].map((item) => (
+                  {["Clean audit & exam track record", "20+ years of compliance expertise", "24/7 dedicated support", "100+ satisfied clients"].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-muted-foreground text-sm">
                       <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0" />
                       {item}

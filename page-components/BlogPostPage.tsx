@@ -362,8 +362,8 @@ const BlogPostPage = ({ slug: slugProp }: { slug?: string } = {}) => {
               Centience delivers AI and technology governance built on managed infrastructure — enforceable, not just documented.
             </p>
             <Button variant="gold" size="lg" className="shadow-gold" asChild>
-              <Link href="/ai-governance-risk-assessment">
-                Book Your AI Governance Assessment
+              <Link href="/assessments/governance-score">
+                Get Your Free Governance Score
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>

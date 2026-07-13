@@ -4,7 +4,7 @@ import LawFirmsAssessment from '@/page-components/assessments/LawFirmsAssessment
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Law Firm Technology Governance Assessment | Centience",
-  description: "Free technology and AI governance assessment for law firms. Identify gaps in client data security, AI adoption governance, and technology risk management. Get your roadmap.",
+  description: "Free technology and AI governance assessment for law firms. Identify gaps in client data security, AI adoption governance, and technology risk management.",
   keywords: ["law firm governance assessment","legal technology assessment","law firm AI assessment","legal compliance assessment","attorney technology governance"],
   alternates: {
     canonical: "https://centience.ai/assessments/law-firms",

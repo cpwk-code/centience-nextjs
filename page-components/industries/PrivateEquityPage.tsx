@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Shield, Brain, Lock, BarChart3, FileText, Users } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import { privateEquityFaqs } from "@/data/industryFaqs";
 
 const pressurePoints = [
   { title: "SEC Investment Adviser Oversight", body: "Registered PE firms face SEC examination expectations that now include technology governance, cybersecurity controls, and — increasingly — AI governance. Firms must demonstrate governance at the firm level and show oversight of significant technology risks at portfolio companies." },
@@ -47,7 +49,7 @@ const PrivateEquityPage = () => (
             <p className="text-sm font-semibold text-gold">Technology risk accumulates invisibly across a portfolio. The right time to surface it is before due diligence does.</p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Portfolio Governance Assessment <ArrowRight size={16} /></Link></Button>
+            <Button variant="cta" size="xl" asChild><Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link></Button>
           </div>
           <p className="text-sm opacity-50 mt-5">
             Or call us directly:{" "}
@@ -163,10 +165,10 @@ const PrivateEquityPage = () => (
         <p className="text-lg opacity-70 mb-8">Our private equity governance assessment evaluates firm-level and portfolio-level technology governance — delivering a consolidated risk view and prioritized remediation roadmap.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results delivered within 5 business days</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> documented track record of successful outcomes across PE firm engagements</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Instant results — your governance score in minutes</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Documented track record of successful outcomes across PE firm engagements</span>
         </div>
-        <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Portfolio Governance Assessment <ArrowRight size={16} /></Link></Button>
+        <Button variant="cta" size="xl" asChild><Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link></Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}
           <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
@@ -175,6 +177,7 @@ const PrivateEquityPage = () => (
         </p>
       </div>
     </section>
+    <FAQSection items={privateEquityFaqs} heading="Private Equity Governance — FAQ" />
   </Layout>
 );
 

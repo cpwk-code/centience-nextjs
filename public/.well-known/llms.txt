@@ -55,7 +55,7 @@ URL: https://centience.ai/co-management
 
 ## AI Governance Assessment
 
-Entry-point engagement for new clients. Centience evaluates an organization's current AI usage, regulatory exposure, and governance gaps. Results delivered in 5 business days.
+Entry-point engagement for new clients. Centience evaluates an organization's current AI usage, regulatory exposure, and governance gaps. Results delivered instantly.
 URL: https://centience.ai/ai-governance-risk-assessment
 
 ## Industries Served

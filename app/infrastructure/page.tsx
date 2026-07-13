@@ -3,8 +3,8 @@ import InfrastructurePage from '@/page-components/InfrastructurePage';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Managed Infrastructure Governance — The Foundation of Governed Operations | Centience",
-  description: "Centience manages computers, networks, cloud environments, endpoints, and disaster recovery — fully governed to your specific regulatory requirements. The technical foundation that makes cybersecurity and AI governance enforceable. 99.9% uptime. 24/7 monitoring. <15 min critical response.",
+  title: "Managed Infrastructure Governance | Centience",
+  description: "Own the infrastructure. Enforce the governance. 99.9% uptime. 24/7 monitoring. The foundation of continuously governed operations.",
   keywords: ["managed infrastructure governance","infrastructure governance regulated organizations","managed IT governance","cloud governance","endpoint management","disaster recovery governance","compliance infrastructure","24/7 infrastructure monitoring"],
   alternates: {
     canonical: "https://centience.ai/infrastructure",

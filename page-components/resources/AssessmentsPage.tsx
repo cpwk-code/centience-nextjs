@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, ClipboardCheck } from "lucide-react";
 
 const assessments = [
+  { title: "Governance Score (SEC / FINRA)", href: "/assessments/governance-score", description: "Your firm's 0–100 governance score across cybersecurity, records, supervision, infrastructure, and AI — with a peer benchmark and prioritized gaps." },
+  { title: "HIPAA Governance Score", href: "/assessments/governance-score-healthcare", description: "Your 0–100 HIPAA governance score across the Security, Privacy, and Breach Notification Rules — with a peer benchmark and prioritized gaps." },
   { title: "AI Governance Readiness Assessment", href: "/assessments/ai-governance", description: "Policy, vendor oversight, NIST AI RMF & ISO 42001 alignment." },
   { title: "Financial Services Governance Assessment", href: "/assessments/financial-services", description: "SEC, FINRA, and OCC technology governance gaps." },
   { title: "Healthcare Governance Assessment", href: "/assessments/healthcare", description: "HIPAA Security Rule, technical safeguards, and AI exposure." },

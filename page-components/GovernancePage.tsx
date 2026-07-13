@@ -64,7 +64,7 @@ const lifecycle = [
     icon: Search,
     number: "01",
     label: "BASELINE",
-    title: "Free 5-Day Assessment",
+    title: "Free Governance Score",
     description: "We assess your current posture across infrastructure, cybersecurity, AI usage, vendor risk, and compliance readiness. You receive a prioritized gap map and a clear picture of where you stand before the program begins.",
   },
   {
@@ -126,7 +126,7 @@ const GovernancePage = () => (
             Every layer works together. Every control is technically enforced. Every piece of audit evidence is assembled in real time — not reconstructed before an exam.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <Link href="/readiness">Get the Free 5-Day Assessment <ArrowRight size={16} /></Link>
+            <Link href="/assessments/governance-score">Get Your Free Assessment <ArrowRight size={16} /></Link>
           </Button>
           <p className="text-sm opacity-50 mt-5">
             Or call us directly:{" "}
@@ -258,15 +258,15 @@ const GovernancePage = () => (
     {/* CTA */}
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">The Program Starts With a Free 5-Day Assessment.</h2>
-        <p className="text-lg opacity-70 mb-6">The Free 5-Day Assessment evaluates your posture across infrastructure, cybersecurity, AI, and compliance — then delivers a prioritized gap map and program enrollment recommendation within 5 business days.</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">The Program Starts With a Free Governance Score.</h2>
+        <p className="text-lg opacity-70 mb-6">The Free Governance Score evaluates your posture across infrastructure, cybersecurity, AI, and compliance — then delivers a prioritized gap map and program enrollment recommendation instantly.</p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ Free — no cost, no commitment</span>
-          <span>✓ Results within 5 business days</span>
+          <span>✓ Results instantly</span>
           <span>✓ Documented track record of successful outcomes</span>
         </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Book Your Governance Assessment <ArrowRight size={16} /></Link>
+          <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
         </Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}

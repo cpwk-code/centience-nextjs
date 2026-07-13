@@ -130,11 +130,11 @@ const FinancialServicesPage = () => (
             firm answers to.
           </p>
           <div className="inline-block border-l-4 border-accent pl-4 mb-8">
-            <p className="text-sm font-semibold text-gold">documented track record of successful outcomes across financial services engagements.</p>
+            <p className="text-sm font-semibold text-gold">Documented track record of successful outcomes across financial services engagements.</p>
           </div>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild>
-              <Link href="/ai-governance-risk-assessment">Book Your Financial Services Assessment <ArrowRight size={16} /></Link>
+              <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
             </Button>
           </div>
           <p className="text-sm opacity-50 mt-5">
@@ -246,7 +246,7 @@ const FinancialServicesPage = () => (
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6 leading-tight">
-            100% Audit Success Rate — Here's Why
+            A Clean Audit & Exam Track Record — Here's Why
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Financial services regulators do not give credit for governance that is planned. They assess governance that is operating. The difference between a successful examination and a deficiency finding is almost always evidence — documented, organized, and retrievable.
@@ -336,11 +336,11 @@ const FinancialServicesPage = () => (
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results delivered within 5 business days</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> documented track record of successful outcomes across financial services engagements</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Instant results — your governance score in minutes</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Documented track record of successful outcomes across financial services engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Book Your Financial Services Assessment <ArrowRight size={16} /></Link>
+          <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
         </Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}

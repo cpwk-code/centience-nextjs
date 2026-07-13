@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import PrivateEquityPage from '@/page-components/industries/PrivateEquityPage';
+import { privateEquityFaqs, buildFaqSchema } from '@/data/industryFaqs';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Portfolio-Level AI & Technology Governance for Private Equity Firms | Centience",
-  description: "Centience delivers portfolio-level AI and technology governance for private equity firms — from firm-level SEC examination readiness through portfolio company technology baseline. Governance built during the hold period protects value at exit. Due diligence support. AI governance for portfolio companies.",
+  title: "Portfolio-Level AI & Technology Governance for Private Equity | Centience",
+  description: "Portfolio-level governance from hold period through exit. SEC examination readiness. Due diligence support. Governance that protects portfolio value.",
   keywords: ["private equity AI governance","PE portfolio technology governance","SEC registered investment adviser compliance","portfolio company governance","PE exit due diligence technology","private equity cybersecurity governance","portfolio AI governance","PE firm SEC examination"],
   alternates: {
     canonical: "https://centience.ai/industries/private-equity",
@@ -58,10 +59,13 @@ const breadcrumbSchema = {
   ]
 };
 
+const faqSchema = buildFaqSchema(privateEquityFaqs);
+
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <PrivateEquityPage />
     </>
   );

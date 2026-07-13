@@ -40,7 +40,7 @@ const differentiators = [
 const stats = [
   { value: "20+", label: "Years Operating in Regulated Industries" },
   { value: "1,000+", label: "Organizations Served Across Financial Services, Healthcare & Legal" },
-  { value: "100%", label: "Audit Success Rate Across All Engagements" },
+  { value: "Proven", label: "Audit & Exam Track Record Across Engagements" },
   { value: "10+", label: "Average Client Relationship in Years" },
 ];
 
@@ -125,8 +125,8 @@ const AboutPage = () => (
             We have governed technology environments through FINRA examinations, HIPAA audits, SEC reviews, and the transition from traditional IT to AI-enabled operations. Every engagement has reinforced the same conviction: governance has to be technically enforced, not theoretically documented.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <Link href="/ai-governance-risk-assessment">
-              Book Your Governance Assessment <ArrowRight size={16} />
+            <Link href="/assessments/governance-score">
+              Get Your Free Governance Score <ArrowRight size={16} />
             </Link>
           </Button>
         </motion.div>
@@ -461,16 +461,16 @@ const AboutPage = () => (
           Start With a Governance Assessment. Know Exactly Where You Stand.
         </h2>
         <p className="text-lg opacity-60 leading-relaxed mb-6 max-w-2xl mx-auto">
-          Most assessments complete within 5 business days. You leave with a clear, prioritized roadmap regardless of whether you engage further.
+          Most assessments complete in minutes. You leave with a clear, prioritized roadmap regardless of whether you engage further.
         </p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>
-          <span>✓ Results delivered within 5 business days</span>
+          <span>✓ Instant results — your score in minutes</span>
           <span>✓ documented track record of successful outcomes across client engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">
-            Book Your Governance Assessment <ArrowRight size={16} />
+          <Link href="/assessments/governance-score">
+            Get Your Free Governance Score <ArrowRight size={16} />
           </Link>
         </Button>
         <p className="text-sm opacity-50 mt-6">

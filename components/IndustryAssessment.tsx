@@ -121,14 +121,14 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
       icon: AlertTriangle,
       headline: "Moderate Risk — Governance Gaps Identified",
       body: "Your organization has governance foundations in place but meaningful gaps exist. These gaps create regulatory exposure that should be addressed through a structured governance program.",
-      cta: "Book Your Governance Assessment",
+      cta: "Get Your Free Governance Score",
     };
     return {
       level: "red" as const,
       icon: XCircle,
       headline: "Significant Governance Exposure",
       body: "Your organization has significant technology governance gaps that create material regulatory risk. An immediate governance assessment is recommended before your next examination or audit cycle.",
-      cta: "Book Your Governance Assessment — Urgently",
+      cta: "Get Your Free Governance Score — Urgently",
     };
   };
 
@@ -195,7 +195,7 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
 
               <div className="text-center space-y-4">
                 <Button variant="cta" size="xl" asChild>
-                  <Link href="/ai-governance-risk-assessment">
+                  <Link href="/assessments/governance-score">
                     {result.cta} <ArrowRight size={16} />
                   </Link>
                 </Button>

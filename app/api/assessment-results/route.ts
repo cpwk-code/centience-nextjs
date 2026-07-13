@@ -1,13 +1,88 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
+import { upsertContact, addNoteToContact, setScoreProperties } from '@/lib/hubspot';
+
+interface AnswerRow { question?: string; answer?: string | null; domain?: string }
+
+function getSupabase() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !serviceKey) return null;
+  return createClient(url, serviceKey, {
+    auth: { autoRefreshToken: false, persistSession: false },
+  });
+}
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { email, firstName, assessmentType, score, max, resultSummary } = body;
+    const { email, firstName, lastName, company, assessmentType, score, max, resultSummary, overall, tier, domains, topGaps, answers, firmSize, industrySlug } = body;
 
     if (!email || !firstName || !assessmentType) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    }
+
+    // Persist the full result + answers to Supabase (non-fatal) so they're
+    // queryable for onboarding pre-fill and reporting.
+    try {
+      const supabase = getSupabase();
+      if (supabase) {
+        const { error: dbErr } = await supabase.from('assessment_results').insert({
+          email,
+          first_name: firstName,
+          last_name: lastName || null,
+          company: company || null,
+          assessment_type: assessmentType,
+          industry_slug: industrySlug || null,
+          firm_size: firmSize || null,
+          overall: typeof overall === 'number' ? overall : null,
+          tier: tier || null,
+          domains: Array.isArray(domains) ? domains : [],
+          top_gaps: Array.isArray(topGaps) ? topGaps : [],
+          answers: Array.isArray(answers) ? answers : [],
+          created_at: new Date().toISOString(),
+        });
+        if (dbErr) console.error('Supabase assessment_results insert error:', dbErr.message);
+      }
+    } catch (dbErr) {
+      console.error('Supabase assessment_results insert error (non-fatal):', dbErr);
+    }
+
+    // Sync the Governance Score results + the firm's actual answers onto the
+    // HubSpot record (non-fatal) so sales can use them in-conversation and to
+    // get ahead of onboarding.
+    try {
+      const contactId = await upsertContact({
+        email, firstname: firstName, lastname: lastName, company, lifecyclestage: 'lead',
+      });
+      if (contactId) {
+        const domainLines = Array.isArray(domains)
+          ? domains.map((d: { label?: string; score?: number }) => `  • ${d.label ?? ''}: ${d.score ?? '—'}/100`).join('\n')
+          : '';
+        const gapLines = Array.isArray(topGaps)
+          ? topGaps.map((g: { question?: string; regulation?: string }) => `  • ${g.question ?? ''}${g.regulation ? ` [${g.regulation}]` : ''}`).join('\n')
+          : '';
+        const answerLines = Array.isArray(answers)
+          ? (answers as AnswerRow[]).map((a) => `  • [${a.domain ?? ''}] ${a.question ?? ''}\n      → ${a.answer ?? '—'}`).join('\n')
+          : '';
+        const note =
+          `GOVERNANCE SCORE — ${assessmentType}\n` +
+          `Overall: ${typeof overall === 'number' ? overall + '/100' : (resultSummary ?? '—')}` +
+          `${firmSize ? ` · Firm size: ${firmSize}` : ''}` +
+          `${tier ? ` · Recommended track: ${tier}` : ''}\n\n` +
+          (domainLines ? `Domain scores:\n${domainLines}\n\n` : '') +
+          (gapLines ? `Priority gaps:\n${gapLines}\n\n` : '') +
+          (answerLines ? `Full responses:\n${answerLines}` : '');
+        await addNoteToContact(contactId, note);
+        await setScoreProperties(contactId, {
+          governance_score: typeof overall === 'number' ? overall : undefined,
+          governance_tier: tier,
+          governance_assessed_at: new Date().toISOString(),
+        });
+      }
+    } catch (hsErr) {
+      console.error('HubSpot results sync error (non-fatal):', hsErr);
     }
 
     const resendKey = process.env.RESEND_API_KEY;
@@ -15,7 +90,29 @@ export async function POST(req: NextRequest) {
 
     const resend = new Resend(resendKey);
 
-    const scoreDisplay = (max && max > 0) ? `${Math.round((score / max) * 100)}%` : '—';
+    // Prefer the 0–100 Governance Score when present; fall back to the legacy score/max ratio.
+    const scoreDisplay = (typeof overall === 'number')
+      ? `${overall}/100`
+      : (max && max > 0) ? `${Math.round((score / max) * 100)}%` : '—';
+
+    const tierLabel: Record<string, string> = {
+      monitor: 'Monitor — maintain your posture',
+      platform: 'Governance Platform — continuous monitoring',
+      managed: 'Managed Program — fully operated governance',
+    };
+    const domainRows = Array.isArray(domains) && domains.length > 0
+      ? `<div style="margin: 0 0 24px;">${domains.map((d: { label?: string; score?: number }) =>
+          `<div style="display:flex;justify-content:space-between;font-size:13px;color:#555;padding:4px 0;border-bottom:1px solid #eee;"><span>${d.label ?? ''}</span><strong>${d.score ?? '—'}/100</strong></div>`
+        ).join('')}</div>`
+      : '';
+    const gapRows = Array.isArray(topGaps) && topGaps.length > 0
+      ? `<p style="margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:#888;">Priority gaps</p><ul style="margin:0 0 24px;padding-left:18px;color:#555;font-size:13px;">${topGaps.map((g: { question?: string; regulation?: string }) =>
+          `<li style="margin-bottom:6px;">${g.question ?? ''}${g.regulation ? ` <em style="color:#888;">(${g.regulation})</em>` : ''}</li>`
+        ).join('')}</ul>`
+      : '';
+    const tierRow = tier && tierLabel[tier]
+      ? `<p style="font-size:14px;color:#555;margin:0 0 24px;">Recommended track: <strong>${tierLabel[tier]}</strong></p>`
+      : '';
 
     const levelColor = resultSummary === 'Strong Governance Posture'
       ? '#10b981'
@@ -45,6 +142,10 @@ export async function POST(req: NextRequest) {
               <p style="margin: 0 0 6px; font-size: 18px; font-weight: bold; color: ${levelColor};">${resultSummary}</p>
               <p style="margin: 0; font-size: 14px; color: #666;">Score: <strong>${scoreDisplay}</strong></p>
             </div>
+
+            ${domainRows}
+            ${gapRows}
+            ${tierRow}
 
             <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 24px;">
               Our team has also received a copy of your results and will reach out shortly to discuss your governance posture and next steps.

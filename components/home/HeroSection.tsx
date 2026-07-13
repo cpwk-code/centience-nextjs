@@ -6,7 +6,7 @@ import { ArrowRight, Server, Lock, Database, Brain, Shield, Users } from "lucide
 const stats = [
   { value: "20+", label: "Years Operating Governance Programs" },
   { value: "1,000+", label: "Organizations Served" },
-  { value: "100%", label: "Documented Track Record Across SEC, FINRA & HIPAA Reviews" },
+  { value: "Proven", label: "Track Record Across SEC, FINRA & HIPAA Reviews" },
   { value: "10+", label: "Year Average Client Relationship" },
 ];
 
@@ -48,8 +48,8 @@ const HeroSection = () => (
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 w-full">
             <Button variant="cta" size="xl" asChild className="w-full sm:w-auto">
-              <Link href="/readiness">
-                Get the Free 5-Day Assessment <ArrowRight size={16} />
+              <Link href="/assessments/governance-score">
+                Get Your Free Assessment <ArrowRight size={16} />
               </Link>
             </Button>
             <Button variant="cta-outline" size="xl" asChild className="w-full sm:w-auto">
@@ -64,7 +64,7 @@ const HeroSection = () => (
             </a>
           </p>
 
-          <div className="grid grid-cols-4 gap-4 pt-8 border-t border-border/10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6 pt-8 border-t border-border/10">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <p className="text-2xl font-display font-bold text-gold">{stat.value}</p>

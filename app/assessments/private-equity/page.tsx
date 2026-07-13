@@ -4,7 +4,7 @@ import PrivateEquityAssessment from '@/page-components/assessments/PrivateEquity
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Private Equity Technology Governance Assessment | Centience",
-  description: "Free technology and AI governance assessment for private equity firms. Identify gaps relative to SEC requirements and LP due diligence standards. Get your customized roadmap.",
+  description: "Free technology and AI governance assessment for private equity firms. Identify gaps relative to SEC requirements and LP due diligence standards.",
   keywords: ["private equity assessment","PE governance assessment","SEC private equity assessment","portfolio governance assessment","investment management assessment"],
   alternates: {
     canonical: "https://centience.ai/assessments/private-equity",

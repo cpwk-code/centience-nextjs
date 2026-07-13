@@ -4,7 +4,7 @@ import CoManagementPage from '@/page-components/CoManagementPage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Governance Support for Existing Teams | Centience",
-  description: "The Centience Governance Program works alongside your existing IT team, vCISO, compliance counsel, or cybersecurity providers. One accountable governance operator — no displacement required.",
+  description: "The Centience Governance Program works alongside whoever you already have in place. One accountable operator. No displacement required.",
   keywords: ["governance support existing team","technology governance operator","vCISO governance support","CISO governance program","regulated technology governance","AI governance program","governance layer","governance accountability"],
   alternates: {
     canonical: "https://centience.ai/co-management",

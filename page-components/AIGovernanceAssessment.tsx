@@ -29,7 +29,7 @@ const processSteps = [
   { icon: Search, title: "Discovery Call", description: "30-minute call. We learn your regulatory environment, current AI usage, and key compliance obligations." },
   { icon: FileText, title: "Technology Review", description: "We audit current infrastructure, AI tools, vendor platforms, and security controls — remotely, no disruption to operations." },
   { icon: BookOpen, title: "Governance Analysis", description: "We map gaps between your current controls and specific regulatory requirements applicable to your organization." },
-  { icon: Cog, title: "Executive Report", description: "Prioritized governance roadmap delivered within 5 business days. Board-ready format." },
+  { icon: Cog, title: "Executive Report", description: "Prioritized governance roadmap delivered instantly. Board-ready format." },
 ];
 
 const AIGovernanceAssessment = () => {
@@ -51,10 +51,10 @@ const AIGovernanceAssessment = () => {
             SEC, FINRA, and HIPAA regulators are scrutinizing AI governance. Find your gaps before they do.
           </h1>
           <p className="text-lg opacity-80 leading-relaxed mb-8">
-            Most firms deploying AI tools have no governance controls capable of satisfying regulators. Our assessment finds the gaps — and delivers a roadmap to fix them — in 5 business days.
+            Most firms deploying AI tools have no governance controls capable of satisfying regulators. Our assessment finds the gaps — and delivers a roadmap to fix them — instantly.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <a href="#booking">Book Your Assessment <ArrowRight size={18} /></a>
+            <a href="#booking">Get Your Free Governance Score <ArrowRight size={18} /></a>
           </Button>
         </div>
       </section>
@@ -124,10 +124,10 @@ const AIGovernanceAssessment = () => {
       <section id="booking" className="py-20 lg:py-28">
         <div className="container mx-auto max-w-lg">
           <h2 className="text-3xl font-display font-bold text-primary mb-4 text-center">
-            Book Your Governance Assessment
+            Get Your Free Governance Score
           </h2>
           <p className="text-sm text-muted-foreground text-center mb-4">
-            No commitment required. Assessment results delivered within 5 business days.
+            No commitment required. Assessment results delivered instantly.
           </p>
           <p className="text-sm text-center mb-8">
             Prefer to speak with us first? Call{" "}
@@ -139,7 +139,7 @@ const AIGovernanceAssessment = () => {
             <div className="text-center py-12">
               <CheckCircle size={48} className="text-accent mx-auto mb-4" />
               <h3 className="font-display font-semibold text-primary text-xl mb-2">Thank you</h3>
-              <p className="text-muted-foreground">We'll be in touch within one business day to schedule your assessment.</p>
+              <p className="text-muted-foreground">We'll be in touch within one business day to get your Governance Score.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">

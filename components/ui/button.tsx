@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-normal text-center rounded-lg text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -21,11 +21,11 @@ const buttonVariants = cva(
         "cta-nav": "bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-[13px] tracking-wide uppercase",
       },
       size: {
-        default: "h-10 px-5 py-2",
-        sm: "h-9 rounded-md px-4",
-        lg: "h-12 rounded-lg px-8 text-sm",
-        xl: "h-14 rounded-lg px-10 text-sm",
-        icon: "h-10 w-10",
+        default: "min-h-[2.5rem] px-5 py-2",
+        sm: "min-h-[2.25rem] rounded-md px-4 py-1.5",
+        lg: "min-h-[3rem] rounded-lg px-8 py-2.5 text-sm",
+        xl: "min-h-[3.5rem] rounded-lg px-10 py-3 text-sm",
+        icon: "h-10 w-10 shrink-0",
       },
     },
     defaultVariants: {

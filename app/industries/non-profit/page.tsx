@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import NonProfitPage from '@/page-components/industries/NonProfitPage';
+import { nonProfitFaqs, buildFaqSchema } from '@/data/industryFaqs';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "AI & Technology Governance for Non-Profit Organizations | Centience",
-  description: "Centience delivers AI and technology governance scaled for non-profit organizations — protecting donor data, meeting federal grant cybersecurity requirements (NIST SP 800-171), governing AI adoption in fundraising and program delivery, and giving boards the documentation they need to demonstrate fiduciary oversight.",
+  description: "Donor data protected. Federal grant requirements met. AI governed. Board fiduciary documentation provided. Scaled for non-profit organizations.",
   keywords: ["nonprofit AI governance","nonprofit technology governance","donor data protection","federal grant cybersecurity requirements","NIST SP 800-171 nonprofit","nonprofit HIPAA compliance","charity data governance","board fiduciary technology oversight","nonprofit AI compliance","federal grant CUI requirements"],
   alternates: {
     canonical: "https://centience.ai/industries/non-profit",
@@ -58,10 +59,13 @@ const breadcrumbSchema = {
   ]
 };
 
+const faqSchema = buildFaqSchema(nonProfitFaqs);
+
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <NonProfitPage />
     </>
   );

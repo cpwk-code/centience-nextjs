@@ -101,8 +101,8 @@ const DataGovernancePage = () => (
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6">
             <Button variant="cta" size="xl" asChild className="w-full sm:w-auto">
-              <Link href="/readiness">
-                Get the Free 5-Day Assessment <ArrowRight size={16} />
+              <Link href="/assessments/governance-score">
+                Get Your Free Assessment <ArrowRight size={16} />
               </Link>
             </Button>
             <Button variant="cta-outline" size="xl" asChild className="w-full sm:w-auto">

@@ -1,0 +1,4 @@
+Client,Firm Type,Headcount,AUM Band,Governance Score (0-100),Critical Gaps,Reg Exposure (1-5),Account Size (1-3),Current Annual $,Est. Upsell ACV,Track,Priority Score,Owner,Next Action,Review Date
+Example RIA A,RIA,120,$1B-5B,58,3,5,3,48000,95000,Whale,630,Orville,Book Managed strategy review,2026-07-21
+Example BD B,Broker-Dealer,60,$250M-1B,64,1,4,2,31000,22000,Core,288,Orville,Send Platform proposal,2026-07-23
+Example FO C,Family Office,25,$250M-1B,81,0,3,1,26000,8000,Tail,57,AM,Nurture + quarterly re-score,2026-08-15

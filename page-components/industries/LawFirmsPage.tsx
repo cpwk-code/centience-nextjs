@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Shield, Brain, Lock, MessageSquare, AlertTriangle, FileText } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import { lawFirmsFaqs } from "@/data/industryFaqs";
 
 const pressurePoints = [
   { title: "ABA Model Rules and State Bar Requirements", body: "ABA Model Rule 1.6 requires competence in technology as part of the duty of confidentiality. State bars are increasingly issuing guidance on technology governance, AI use, and cybersecurity — and several have implemented mandatory reporting requirements for security incidents." },
@@ -43,7 +45,7 @@ const LawFirmsPage = () => (
             from ungoverned AI adoption.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Law Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
+            <Button variant="cta" size="xl" asChild><Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link></Button>
           </div>
           <p className="text-sm opacity-50 mt-5">
             Or call us directly:{" "}
@@ -164,10 +166,10 @@ const LawFirmsPage = () => (
         <p className="text-lg opacity-70 mb-8">Our law firm governance assessment identifies client data exposure, AI governance gaps, and cybersecurity vulnerabilities — and delivers a prioritized roadmap aligned to ABA and state bar requirements.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results delivered within 5 business days</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> documented track record of successful outcomes across legal engagements</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Instant results — your governance score in minutes</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Documented track record of successful outcomes across legal engagements</span>
         </div>
-        <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Law Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
+        <Button variant="cta" size="xl" asChild><Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link></Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}
           <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
@@ -176,6 +178,7 @@ const LawFirmsPage = () => (
         </p>
       </div>
     </section>
+    <FAQSection items={lawFirmsFaqs} heading="Law Firm Governance — FAQ" />
   </Layout>
 );
 

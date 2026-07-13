@@ -45,7 +45,7 @@ const InfrastructurePage = () => (
             We own and operate the environment.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <Link href="/ai-governance-risk-assessment">Book Your Infrastructure Assessment <ArrowRight size={16} /></Link>
+            <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
           </Button>
           <p className="text-sm opacity-50 mt-5">
             Or call us directly:{" "}
@@ -180,14 +180,14 @@ const InfrastructurePage = () => (
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Governance Starts With Infrastructure. Build the Foundation First.</h2>
-        <p className="text-lg opacity-70 mb-6">Start with an infrastructure assessment to evaluate your current environment and establish the technical foundation your governance program requires. Results delivered within 5 business days.</p>
+        <p className="text-lg opacity-70 mb-6">Start with an infrastructure assessment to evaluate your current environment and establish the technical foundation your governance program requires. Instant results — your score in minutes.</p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>
-          <span>✓ Results within 5 business days</span>
+          <span>✓ Results instantly</span>
           <span>✓ documented track record of successful outcomes</span>
         </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Book Your Infrastructure Assessment <ArrowRight size={16} /></Link>
+          <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
         </Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}

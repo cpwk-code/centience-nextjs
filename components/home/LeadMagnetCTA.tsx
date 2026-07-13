@@ -18,7 +18,7 @@ const LeadMagnetCTA = () => (
     >
       <div className="flex items-center gap-3 justify-center mb-6">
         <div className="gold-line" />
-        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">Free 5-Day Assessment</p>
+        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">Free Governance Score</p>
         <div className="gold-line" />
       </div>
 
@@ -26,19 +26,19 @@ const LeadMagnetCTA = () => (
         Know Where You Stand Before Regulators Ask.
       </h2>
       <p className="text-lg opacity-60 leading-relaxed mb-8 max-w-2xl mx-auto">
-        The Free 5-Day Assessment evaluates your technology governance posture across infrastructure, cybersecurity, AI usage, and compliance readiness — then delivers a prioritized gap map and action plan — free, with no commitment.
+        The free Governance Score evaluates your technology governance posture across infrastructure, cybersecurity, AI usage, and compliance readiness — then delivers an instant 0–100 score, a peer benchmark, and a prioritized gap map — free, with no commitment.
       </p>
 
       <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm opacity-50 mb-12">
-        <span>✓ Results delivered within 5 business days</span>
+        <span>✓ Instant results — your score in minutes</span>
         <span>✓ Covers AI, cybersecurity, infrastructure, and vendor risk</span>
         <span>✓ Evidence-first — built for regulated environments</span>
-        <span>✓ Program enrollment available immediately following review</span>
+        <span>✓ See exactly which gaps to close first</span>
       </div>
 
       <Button variant="cta" size="xl" asChild>
-        <Link href="/readiness">
-          Get the Free 5-Day Assessment <ArrowRight size={16} />
+        <Link href="/assessments/governance-score">
+          Get Your Free Assessment <ArrowRight size={16} />
         </Link>
       </Button>
       <p className="text-sm opacity-50 mt-6">

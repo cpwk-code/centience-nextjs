@@ -4,14 +4,14 @@ import Index from '@/page-components/Index';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "AI & IT Governance for RIAs & Regulated Firms | Centience",
-  description: "Prove your technology is compliant before regulators ask. Centience runs IT, cybersecurity, and AI oversight for RIAs, broker-dealers, and regulated firms — with audit evidence kept ready continuously. Free 5-day assessment.",
+  description: "The Centience Governance Program: AI and technology governance for regulated organizations. Built, operated, and evidenced continuously.",
   keywords: ["RIA cybersecurity compliance","SEC AI books and records","outsourced CISO for RIA","vCISO for RIA","FINRA IT compliance","MSP for financial advisors","AI governance for regulated firms","broker-dealer technology compliance","HIPAA IT compliance","technology governance"],
   alternates: {
     canonical: "https://centience.ai",
   },
   openGraph: {
     title: "AI & IT Governance for RIAs & Regulated Firms | Centience",
-    description: "Prove your technology is compliant before regulators ask. Centience runs IT, cybersecurity, and AI oversight for regulated firms — audit evidence kept ready continuously. Free 5-day assessment.",
+    description: "Prove your technology is compliant before regulators ask. Centience runs IT, cybersecurity, and AI oversight for regulated firms — audit evidence kept ready continuously. Free instant Governance Score.",
     url: "https://centience.ai",
     type: 'website',
     siteName: 'Centience',

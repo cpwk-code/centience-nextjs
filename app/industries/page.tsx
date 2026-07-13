@@ -4,7 +4,7 @@ import IndustriesPage from '@/page-components/IndustriesPage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Governance for Regulated Industries | Centience",
-  description: "Centience serves financial services, healthcare, and other regulated industries with deep expertise in sector-specific compliance requirements, regulatory frameworks, and governance standards.",
+  description: "Centience serves financial services, healthcare, and other regulated industries with deep expertise in sector-specific compliance requirements.",
   keywords: ["regulated industries","financial services governance","healthcare governance","industry compliance","sector compliance","regulatory frameworks"],
   alternates: {
     canonical: "https://centience.ai/industries",

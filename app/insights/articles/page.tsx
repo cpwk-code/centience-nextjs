@@ -3,7 +3,7 @@ import InsightsArticlesPage from '@/page-components/InsightsArticlesPage';
 
 export const metadata: Metadata = {
   title: "AI Governance & Cybersecurity Articles | Centience Insights",
-  description: "Practitioner-level articles on AI governance, cybersecurity, and regulatory compliance for SEC, FINRA, and HIPAA regulated organizations. Written by Centience practitioners.",
+  description: "Practitioner-level articles on AI governance, cybersecurity, and regulatory compliance for SEC, FINRA, and HIPAA regulated organizations.",
   keywords: [
     "AI governance articles",
     "SEC compliance blog",

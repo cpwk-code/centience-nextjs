@@ -4,7 +4,7 @@ import AboutPage from '@/page-components/AboutPage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "About Centience — Built From 20 Years Inside Regulated Organizations",
-  description: "Centience was founded by Orville Matias — builder of OfficeSafe, scaled to 5,000+ healthcare practices before acquisition by Rectangle Health. 20+ years governing regulated IT environments. documented track record of successful outcomes across engagements. Continuous AI and technology governance for regulated organizations.",
+  description: "Centience was founded by Orville Matias — builder of OfficeSafe, scaled to 5,000+ healthcare practices before acquisition by Rectangle Health.",
   keywords: ["Centience about","Orville Matias","OfficeSafe","technology governance firm","AI governance company","regulated industries governance","continuous technology governance","documented track record of successful outcomes"],
   alternates: {
     canonical: "https://centience.ai/about",

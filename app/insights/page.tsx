@@ -4,7 +4,7 @@ import InsightsPage from '@/page-components/InsightsPage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Governance Insights & Resources | Centience",
-  description: "Expert insights on AI governance, technology governance, cybersecurity, and compliance for regulated organizations. Practical guidance from Centience practitioners.",
+  description: "Expert insights on AI governance, technology governance, cybersecurity, and compliance for regulated organizations.",
   keywords: ["AI governance insights","technology governance resources","compliance insights","cybersecurity guidance","regulatory updates","governance best practices"],
   alternates: {
     canonical: "https://centience.ai/insights",

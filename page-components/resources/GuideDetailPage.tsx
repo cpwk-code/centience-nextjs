@@ -156,11 +156,11 @@ const GuideDetailPage = ({ guide }: { guide: GuideData }) => {
             A guide tells you what&rsquo;s required. The program makes it real — and keeps it that way.
           </h2>
           <p className="text-lg opacity-60 leading-relaxed mb-8 max-w-xl mx-auto">
-            Centience builds and operates the governance program behind these requirements — continuously, with audit-ready evidence. Start with a Free 5-Day Assessment.
+            Centience builds and operates the governance program behind these requirements — continuously, with audit-ready evidence. Start with a Free Governance Score.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <Link href="/readiness">
-              Get the Free 5-Day Assessment <ArrowRight size={16} />
+            <Link href="/assessments/governance-score">
+              Get Your Free Assessment <ArrowRight size={16} />
             </Link>
           </Button>
         </div>

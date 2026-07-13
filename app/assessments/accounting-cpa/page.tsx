@@ -4,7 +4,7 @@ import AccountingCpaAssessment from '@/page-components/assessments/AccountingCpa
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Accounting & CPA Firm Governance Assessment | Centience",
-  description: "Free technology and AI governance assessment for accounting and CPA firms. Identify gaps relative to AICPA standards and SOC 2 requirements. Get your customized roadmap.",
+  description: "Free technology and AI governance assessment for accounting and CPA firms. Identify gaps relative to AICPA standards and SOC 2 requirements.",
   keywords: ["accounting firm assessment","CPA governance assessment","AICPA assessment","SOC 2 assessment","accounting technology assessment"],
   alternates: {
     canonical: "https://centience.ai/assessments/accounting-cpa",

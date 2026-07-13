@@ -4,8 +4,8 @@ import { MapPin, ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 export const metadata: Metadata = {
-  title: "AI Governance Locations | Centience — Serving New York, Miami & Tri-State Area",
-  description: "Centience delivers continuous AI and technology governance programs for regulated organizations in New York City, Manhattan, Westchester, Greenwich CT, Miami, Palm Beach, Fort Lauderdale, Stamford CT, and White Plains NY.",
+  title: "AI Governance Locations | Centience",
+  description: "Continuous AI and technology governance for regulated organizations across New York, Connecticut, and South Florida.",
   alternates: {
     canonical: "https://centience.ai/locations",
   },

@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import LawFirmsPage from '@/page-components/industries/LawFirmsPage';
+import { lawFirmsFaqs, buildFaqSchema } from '@/data/industryFaqs';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Legal AI Governance & Technology Governance for Law Firms | Centience",
-  description: "Centience delivers technology governance for law firms deploying AI in legal research, drafting, and document review — protecting client confidentiality, managing privilege risk, and meeting ABA and state bar professional responsibility requirements. Technically enforced. Continuously managed.",
+  description: "AI governance for legal practice. Client confidentiality protected. Privilege risk managed. ABA and state bar professional responsibility alignment.",
   keywords: ["legal AI governance","law firm AI governance","ABA technology governance","attorney client confidentiality governance","legal cybersecurity governance","law firm data security","state bar technology requirements","legal technology governance","law firm AI compliance","privilege risk AI"],
   alternates: {
     canonical: "https://centience.ai/industries/law-firms",
@@ -58,10 +59,13 @@ const breadcrumbSchema = {
   ]
 };
 
+const faqSchema = buildFaqSchema(lawFirmsFaqs);
+
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <LawFirmsPage />
     </>
   );

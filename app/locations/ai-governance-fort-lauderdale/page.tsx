@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: "AI Governance Fort Lauderdale | Centience — Technology Governance for Regulated Firms",
-  description: "Continuous AI and technology governance for regulated organizations in Fort Lauderdale and Broward County, FL. SEC, FINRA, and HIPAA compliance. Serving Fort Lauderdale, Hollywood, and Weston.",
+  description: "Continuous AI and technology governance for regulated organizations in Fort Lauderdale and Broward County, FL. SEC, FINRA, and HIPAA compliance.",
   keywords: ["AI governance Fort Lauderdale", "technology governance Broward County", "SEC FINRA compliance Fort Lauderdale", "HIPAA compliance Broward County", "managed IT governance Fort Lauderdale"],
   alternates: {
     canonical: "https://centience.ai/locations/ai-governance-fort-lauderdale",
@@ -204,11 +204,11 @@ export default function Page() {
               Start With a Governance Assessment. No Commitment Required.
             </h2>
             <p className="text-lg opacity-70 mb-8">
-              Our governance assessment identifies gaps across your infrastructure, cybersecurity posture, and AI environment — and delivers a prioritized roadmap within 5 business days.
+              Our governance assessment identifies gaps across your infrastructure, cybersecurity posture, and AI environment — and delivers a prioritized roadmap instantly.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
               <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
-              <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results within 5 business days</span>
+              <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results instantly</span>
               <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> documented track record of successful outcomes</span>
             </div>
             <Button variant="cta" size="xl" asChild>

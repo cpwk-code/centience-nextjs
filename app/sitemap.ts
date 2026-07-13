@@ -27,9 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://centience.ai/co-management', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://centience.ai/data-governance', lastModified: '2026-06-21', changeFrequency: 'monthly', priority: 0.9 },
     // Program enrollment — Governance Readiness Review (primary CTA)
-    { url: 'https://centience.ai/readiness', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.95 },
     // Assessment
-    { url: 'https://centience.ai/ai-governance-risk-assessment', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.85 },
     // Industries
     { url: 'https://centience.ai/industries', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://centience.ai/industries/financial-services', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
@@ -49,7 +47,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://centience.ai/resources/guides/governance-program', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://centience.ai/resources/guides/compliance-readiness', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://centience.ai/resources/newsletter', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.6 },
-    // Assessments
+    // Assessments — Governance Score (headline conversion funnels)
+    { url: 'https://centience.ai/assessments/governance-score', lastModified: '2026-07-13', changeFrequency: 'weekly', priority: 0.9 },
+    { url: 'https://centience.ai/assessments/governance-score-healthcare', lastModified: '2026-07-13', changeFrequency: 'weekly', priority: 0.9 },
+    { url: 'https://centience.ai/assessments/ai-governance', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://centience.ai/assessments/financial-services', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://centience.ai/assessments/healthcare', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://centience.ai/assessments/law-firms', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.75 },

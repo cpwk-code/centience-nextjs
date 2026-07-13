@@ -4,7 +4,7 @@ import AIGovernanceAssessment from '@/page-components/AIGovernanceAssessment';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Free AI Governance Risk Assessment | Centience",
-  description: "Take the free Centience AI Governance Risk Assessment. Identify gaps in your AI governance program and receive a customized roadmap aligned with NIST AI RMF and ISO 42001.",
+  description: "Take the free Centience AI Governance Risk Assessment. Identify gaps in your AI governance program and receive a customized roadmap.",
   keywords: ["AI governance risk assessment","AI risk assessment","NIST AI RMF assessment","ISO 42001 assessment","AI compliance assessment","free AI assessment"],
   alternates: {
     canonical: "https://centience.ai/ai-governance-risk-assessment",

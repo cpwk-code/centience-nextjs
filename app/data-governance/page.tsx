@@ -2,8 +2,8 @@ import DataGovernancePage from "@/page-components/DataGovernancePage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Data Governance for Regulated Organizations — Classification, Retention & Lineage | Centience",
-  description: "Centience delivers continuous data governance for regulated organizations — data classification, FINRA 17a-4 retention, AI data lineage, access control governance, and off-channel communications capture.",
+  title: "Data Governance for Regulated Organizations | Centience",
+  description: "Centience delivers continuous data governance for regulated organizations — data classification, FINRA 17a-4 retention, AI data lineage.",
   keywords: [
     "data governance regulated organizations",
     "data governance financial services",

@@ -56,7 +56,7 @@ const HealthcarePage = () => (
           </div>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild>
-              <Link href="/ai-governance-risk-assessment">Book Your Healthcare Governance Assessment <ArrowRight size={16} /></Link>
+              <Link href="/assessments/governance-score-healthcare">Get Your Free Governance Score <ArrowRight size={16} /></Link>
             </Button>
           </div>
           <p className="text-sm opacity-50 mt-5">
@@ -184,10 +184,10 @@ const HealthcarePage = () => (
         <p className="text-lg opacity-70 mb-8">Our healthcare governance assessment identifies technical safeguard gaps, AI governance exposures, and vendor risk vulnerabilities — and delivers a prioritized roadmap to HIPAA readiness.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results delivered within 5 business days</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> documented track record of successful outcomes across healthcare engagements</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Instant results — your governance score in minutes</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Documented track record of successful outcomes across healthcare engagements</span>
         </div>
-        <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Healthcare Governance Assessment <ArrowRight size={16} /></Link></Button>
+        <Button variant="cta" size="xl" asChild><Link href="/assessments/governance-score-healthcare">Get Your Free Governance Score <ArrowRight size={16} /></Link></Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}
           <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
