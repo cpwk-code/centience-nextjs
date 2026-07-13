@@ -30,18 +30,28 @@ That's all that's required. Contacts use only **standard** HubSpot properties (e
 
 ## Optional: structured score fields (for filtering/reporting in HubSpot)
 
-If you want the score as filterable contact properties (not just in the Note), create these **custom contact properties** in HubSpot, then set the flag:
+If you want the score as filterable contact properties (not just in the Note), create three **custom contact properties** in HubSpot, then set the flag:
 
 ```
 HUBSPOT_SCORE_PROPS=true
 ```
 
-Custom properties to create (Settings → Properties → Contact):
-- `governance_score` — Number
-- `governance_tier` — Single-line text (monitor / platform / managed)
-- `governance_assessed_at` — Date picker
+### Fastest way — run the script (creates all three)
 
-Until `HUBSPOT_SCORE_PROPS` is enabled, these are skipped (no errors). The Note always carries the full detail regardless.
+```bash
+export HUBSPOT_ACCESS_TOKEN="pat-na1-..."   # private-app token
+bash scripts/hubspot-create-score-properties.sh
+```
+
+The private app needs the **`crm.schemas.contacts.write`** scope for this step (in addition to the `crm.objects.contacts.write` / `crm.objects.notes.write` the runtime already uses). The script is safe to re-run — existing properties return 409 and are skipped.
+
+### Or create them by hand (Settings → Properties → Contact)
+
+- `governance_score` — **Number**
+- `governance_tier` — **Dropdown select** with options `monitor`, `platform`, `managed` (a single-line text field also works)
+- `governance_assessed_at` — **Date picker** (date & time)
+
+These exactly match `lib/hubspot.ts → setScoreProperties()`. Until `HUBSPOT_SCORE_PROPS` is enabled, they are skipped (no errors). The Note always carries the full detail regardless.
 
 ## Notes
 
