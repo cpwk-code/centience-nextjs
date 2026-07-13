@@ -57,7 +57,7 @@ const PartnerProgramPage = () => (
             <Button variant="cta" size="xl" asChild>
               <Link href="/contact">Become a Partner <ArrowRight size={16} /></Link>
             </Button>
-            <Button variant="outline" size="xl" asChild>
+            <Button variant="cta-outline" size="xl" asChild>
               <Link href="/contact">Contact Us to Discuss</Link>
             </Button>
           </div>

@@ -9,7 +9,6 @@ const footerLinks = {
     { label: "Cybersecurity", href: "/cybersecurity" },
     { label: "Infrastructure", href: "/infrastructure" },
     { label: "Technology Governance", href: "/governance" },
-    { label: "Co-Management", href: "/co-management" },
   ],
   Industries: [
     { label: "Accounting & CPA", href: "/industries/accounting-cpa" },
