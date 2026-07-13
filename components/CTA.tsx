@@ -11,8 +11,8 @@ const defaultContent = {
   badge: "Get Started Today",
   headline: "Ready to Simplify",
   headline_highlight: "Compliance",
-  description: "Schedule a free risk assessment and discover how we can transform your IT infrastructure into a compliance advantage.",
-  primary_cta: "Get the Free 5-Day Assessment",
+  description: "Get your free Governance Score in under 5 minutes — see where you stand against SEC, FINRA, and HIPAA requirements, and exactly which gaps to close.",
+  primary_cta: "Get Your Free Assessment",
   secondary_cta: "Call Us (877) 945-7177",
 };
 
@@ -68,7 +68,7 @@ const CTA = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Button variant="gold" size="xl" className="group shadow-gold-lg" asChild>
-                <Link href="/schedule-assessment">
+                <Link href="/assessments/governance-score">
                   <Calendar className="w-5 h-5" />
                   {data.primary_cta}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -93,7 +93,7 @@ const CTA = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap justify-center gap-8 text-primary-foreground/50"
           >
-            {["No obligation", "30-minute consultation", "Custom recommendations"].map((item, index) => (
+            {["No obligation", "Instant 0–100 score", "See how you rank vs. peers"].map((item, index) => (
               <motion.div 
                 key={item}
                 initial={{ opacity: 0, scale: 0.8 }}
