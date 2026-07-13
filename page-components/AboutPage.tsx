@@ -125,8 +125,8 @@ const AboutPage = () => (
             We have governed technology environments through FINRA examinations, HIPAA audits, SEC reviews, and the transition from traditional IT to AI-enabled operations. Every engagement has reinforced the same conviction: governance has to be technically enforced, not theoretically documented.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <Link href="/ai-governance-risk-assessment">
-              Book Your Governance Assessment <ArrowRight size={16} />
+            <Link href="/assessments/governance-score">
+              Get Your Free Governance Score <ArrowRight size={16} />
             </Link>
           </Button>
         </motion.div>
@@ -469,8 +469,8 @@ const AboutPage = () => (
           <span>✓ documented track record of successful outcomes across client engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">
-            Book Your Governance Assessment <ArrowRight size={16} />
+          <Link href="/assessments/governance-score">
+            Get Your Free Governance Score <ArrowRight size={16} />
           </Link>
         </Button>
         <p className="text-sm opacity-50 mt-6">

@@ -54,7 +54,7 @@ const AIGovernanceAssessment = () => {
             Most firms deploying AI tools have no governance controls capable of satisfying regulators. Our assessment finds the gaps — and delivers a roadmap to fix them — instantly.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <a href="#booking">Book Your Assessment <ArrowRight size={18} /></a>
+            <a href="#booking">Get Your Free Governance Score <ArrowRight size={18} /></a>
           </Button>
         </div>
       </section>
@@ -124,7 +124,7 @@ const AIGovernanceAssessment = () => {
       <section id="booking" className="py-20 lg:py-28">
         <div className="container mx-auto max-w-lg">
           <h2 className="text-3xl font-display font-bold text-primary mb-4 text-center">
-            Book Your Governance Assessment
+            Get Your Free Governance Score
           </h2>
           <p className="text-sm text-muted-foreground text-center mb-4">
             No commitment required. Assessment results delivered instantly.

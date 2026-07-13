@@ -177,7 +177,7 @@ const ContactPage = () => {
               <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mx-auto mb-5"><CheckCircle className="w-6 h-6" /></div>
               <h3 className="font-display font-bold text-primary text-lg mb-3">I want to understand my governance gaps</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5">Start with the governance assessment. No commitment required. Instant results — your score in minutes.</p>
-              <a href="/ai-governance-risk-assessment" className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:opacity-80 transition-opacity">Book Your Governance Assessment <ArrowRight className="w-4 h-4" /></a>
+              <a href="/assessments/governance-score" className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:opacity-80 transition-opacity">Get Your Free Governance Score <ArrowRight className="w-4 h-4" /></a>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="card-premium p-8 text-center">
               <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mx-auto mb-5"><Phone className="w-6 h-6" /></div>

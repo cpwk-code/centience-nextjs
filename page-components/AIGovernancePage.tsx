@@ -58,7 +58,7 @@ const AIGovernancePage = () => (
           </p>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild>
-              <Link href="/ai-governance-risk-assessment">Book Your AI Governance Assessment <ArrowRight size={16} /></Link>
+              <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
             </Button>
           </div>
           <p className="text-sm opacity-50 mt-5">
@@ -243,7 +243,7 @@ const AIGovernancePage = () => (
           <span>✓ documented track record of successful outcomes</span>
         </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Book Your AI Governance Assessment <ArrowRight size={16} /></Link>
+          <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
         </Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}

@@ -176,8 +176,8 @@ const InsightsArticlesPage = () => {
             Start with an AI Governance Assessment. Results instantly.
           </p>
           <Button variant="cta" size="lg" asChild>
-            <Link href="/ai-governance-risk-assessment">
-              Book Your Assessment <ArrowRight className="w-4 h-4 ml-2" />
+            <Link href="/assessments/governance-score">
+              Get Your Free Governance Score <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </Button>
         </div>

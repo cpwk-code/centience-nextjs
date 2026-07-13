@@ -45,7 +45,7 @@ const CybersecurityPage = () => (
             Centience delivers cybersecurity governance that is technically enforced at the infrastructure level — not documented in a policy binder and reviewed annually.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <Link href="/ai-governance-risk-assessment">Book Your Security Assessment <ArrowRight size={16} /></Link>
+            <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
           </Button>
           <p className="text-sm opacity-50 mt-5">
             Or call us directly:{" "}
@@ -197,7 +197,7 @@ const CybersecurityPage = () => (
           <span>✓ documented track record of successful outcomes</span>
         </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Book Your Security Assessment <ArrowRight size={16} /></Link>
+          <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
         </Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}

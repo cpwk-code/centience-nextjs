@@ -134,7 +134,7 @@ const FinancialServicesPage = () => (
           </div>
           <div className="flex flex-wrap gap-4">
             <Button variant="cta" size="xl" asChild>
-              <Link href="/assessments/governance-score">Book Your Financial Services Assessment <ArrowRight size={16} /></Link>
+              <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
             </Button>
           </div>
           <p className="text-sm opacity-50 mt-5">
@@ -340,7 +340,7 @@ const FinancialServicesPage = () => (
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Documented track record of successful outcomes across financial services engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/assessments/governance-score">Book Your Financial Services Assessment <ArrowRight size={16} /></Link>
+          <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
         </Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}

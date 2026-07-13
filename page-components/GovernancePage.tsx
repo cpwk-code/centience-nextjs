@@ -266,7 +266,7 @@ const GovernancePage = () => (
           <span>✓ Documented track record of successful outcomes</span>
         </div>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/ai-governance-risk-assessment">Book Your Governance Assessment <ArrowRight size={16} /></Link>
+          <Link href="/assessments/governance-score">Get Your Free Governance Score <ArrowRight size={16} /></Link>
         </Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}
