@@ -44,6 +44,12 @@ const nextConfig: NextConfig = {
         destination: '/assessments/governance-score',
         permanent: true,
       },
+      // Dedupe overlapping AI-governance assessment URLs → canonical (301)
+      {
+        source: '/ai-governance-risk-assessment',
+        destination: '/assessments/ai-governance',
+        permanent: true,
+      },
       // Consolidate duplicate industry pages → canonical governance-era slugs (301)
       {
         source: '/industries/legal',

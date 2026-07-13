@@ -417,7 +417,7 @@ const ContactPage = () => {
               <div className="card-premium p-6">
                 <h4 className="font-display font-bold text-primary mb-4">Why Partner With Us?</h4>
                 <ul className="space-y-3">
-                  {["99%+ audit success rate", "20+ years of compliance expertise", "24/7 dedicated support", "100+ satisfied clients"].map((item) => (
+                  {["Clean audit & exam track record", "20+ years of compliance expertise", "24/7 dedicated support", "100+ satisfied clients"].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-muted-foreground text-sm">
                       <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0" />
                       {item}

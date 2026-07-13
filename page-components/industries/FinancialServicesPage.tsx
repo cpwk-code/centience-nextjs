@@ -246,7 +246,7 @@ const FinancialServicesPage = () => (
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6 leading-tight">
-            100% Audit Success Rate — Here's Why
+            A Clean Audit & Exam Track Record — Here's Why
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Financial services regulators do not give credit for governance that is planned. They assess governance that is operating. The difference between a successful examination and a deficiency finding is almost always evidence — documented, organized, and retrievable.

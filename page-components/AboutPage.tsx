@@ -40,7 +40,7 @@ const differentiators = [
 const stats = [
   { value: "20+", label: "Years Operating in Regulated Industries" },
   { value: "1,000+", label: "Organizations Served Across Financial Services, Healthcare & Legal" },
-  { value: "100%", label: "Audit Success Rate Across All Engagements" },
+  { value: "Proven", label: "Audit & Exam Track Record Across Engagements" },
   { value: "10+", label: "Average Client Relationship in Years" },
 ];
 

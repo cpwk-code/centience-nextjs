@@ -6,7 +6,7 @@ import { ArrowRight, Server, Lock, Database, Brain, Shield, Users } from "lucide
 const stats = [
   { value: "20+", label: "Years Operating Governance Programs" },
   { value: "1,000+", label: "Organizations Served" },
-  { value: "100%", label: "Documented Track Record Across SEC, FINRA & HIPAA Reviews" },
+  { value: "Proven", label: "Track Record Across SEC, FINRA & HIPAA Reviews" },
   { value: "10+", label: "Year Average Client Relationship" },
 ];
 
