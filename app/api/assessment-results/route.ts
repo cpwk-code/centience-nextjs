@@ -1,13 +1,52 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { upsertContact, addNoteToContact, setScoreProperties } from '@/lib/hubspot';
+
+interface AnswerRow { question?: string; answer?: string | null; domain?: string }
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { email, firstName, assessmentType, score, max, resultSummary, overall, tier, domains, topGaps } = body;
+    const { email, firstName, lastName, company, assessmentType, score, max, resultSummary, overall, tier, domains, topGaps, answers, firmSize } = body;
 
     if (!email || !firstName || !assessmentType) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    }
+
+    // Sync the Governance Score results + the firm's actual answers onto the
+    // HubSpot record (non-fatal) so sales can use them in-conversation and to
+    // get ahead of onboarding.
+    try {
+      const contactId = await upsertContact({
+        email, firstname: firstName, lastname: lastName, company, lifecyclestage: 'lead',
+      });
+      if (contactId) {
+        const domainLines = Array.isArray(domains)
+          ? domains.map((d: { label?: string; score?: number }) => `  • ${d.label ?? ''}: ${d.score ?? '—'}/100`).join('\n')
+          : '';
+        const gapLines = Array.isArray(topGaps)
+          ? topGaps.map((g: { question?: string; regulation?: string }) => `  • ${g.question ?? ''}${g.regulation ? ` [${g.regulation}]` : ''}`).join('\n')
+          : '';
+        const answerLines = Array.isArray(answers)
+          ? (answers as AnswerRow[]).map((a) => `  • [${a.domain ?? ''}] ${a.question ?? ''}\n      → ${a.answer ?? '—'}`).join('\n')
+          : '';
+        const note =
+          `GOVERNANCE SCORE — ${assessmentType}\n` +
+          `Overall: ${typeof overall === 'number' ? overall + '/100' : (resultSummary ?? '—')}` +
+          `${firmSize ? ` · Firm size: ${firmSize}` : ''}` +
+          `${tier ? ` · Recommended track: ${tier}` : ''}\n\n` +
+          (domainLines ? `Domain scores:\n${domainLines}\n\n` : '') +
+          (gapLines ? `Priority gaps:\n${gapLines}\n\n` : '') +
+          (answerLines ? `Full responses:\n${answerLines}` : '');
+        await addNoteToContact(contactId, note);
+        await setScoreProperties(contactId, {
+          governance_score: typeof overall === 'number' ? overall : undefined,
+          governance_tier: tier,
+          governance_assessed_at: new Date().toISOString(),
+        });
+      }
+    } catch (hsErr) {
+      console.error('HubSpot results sync error (non-fatal):', hsErr);
     }
 
     const resendKey = process.env.RESEND_API_KEY;

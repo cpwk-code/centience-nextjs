@@ -53,6 +53,8 @@ const GovernanceScoreAssessment = ({ headline, subCopy, questions, industrySlug,
   const [gated, setGated] = useState(() => (typeof window !== "undefined" ? !hasLeadCookie() : true));
   const [leadName, setLeadName] = useState("");
   const [leadEmail, setLeadEmail] = useState("");
+  const [leadLast, setLeadLast] = useState("");
+  const [leadCompany, setLeadCompany] = useState("");
 
   const setAnswer = (index: number, value: string) => {
     const next = [...answers];
@@ -71,7 +73,12 @@ const GovernanceScoreAssessment = ({ headline, subCopy, questions, industrySlug,
       setGateOpen(true);
     } else {
       const data = await trackAssessmentStart(headline);
-      if (data) setLeadName(data.firstName);
+      if (data) {
+        setLeadName(data.firstName);
+        setLeadEmail(data.email);
+        setLeadLast(data.lastName);
+        setLeadCompany(data.company);
+      }
     }
   };
 
@@ -79,6 +86,8 @@ const GovernanceScoreAssessment = ({ headline, subCopy, questions, industrySlug,
     setGated(false);
     setLeadName(data.firstName);
     setLeadEmail(data.email);
+    setLeadLast(data.lastName);
+    setLeadCompany(data.company);
     try {
       await fetch("/api/assessment-lead", {
         method: "POST",
@@ -110,6 +119,8 @@ const GovernanceScoreAssessment = ({ headline, subCopy, questions, industrySlug,
         body: JSON.stringify({
           email: leadEmail,
           firstName: leadName,
+          lastName: leadLast,
+          company: leadCompany,
           assessmentType: headline,
           // legacy fields (kept for backward compatibility with the results email)
           score: result.overall,
@@ -117,9 +128,11 @@ const GovernanceScoreAssessment = ({ headline, subCopy, questions, industrySlug,
           resultSummary: result.bandLabel,
           // full Governance Score payload
           overall: result.overall,
+          firmSize,
           tier: routing.tier,
           domains: result.domains.map((d) => ({ domain: d.domain, label: d.label, score: d.score })),
           topGaps: result.gaps.slice(0, 3).map((g) => ({ question: g.question, regulation: g.regulation })),
+          answers: questions.map((q, i) => ({ question: q.question, domain: q.domain, answer: answers[i] })),
         }),
       }).catch(console.error);
     }

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
+import { upsertContact, addNoteToContact } from '@/lib/hubspot';
 
 function getSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -44,6 +45,20 @@ export async function POST(req: NextRequest) {
       } catch (dbErr) {
         console.error('Supabase insert error (non-fatal):', dbErr);
       }
+    }
+
+    // 1b. Upsert to HubSpot (non-fatal) — every form becomes a contact
+    try {
+      const contactId = await upsertContact({
+        email, firstname: firstName, lastname: lastName, company,
+        jobtitle: jobTitle, phone, industry, lifecyclestage: 'lead',
+      });
+      await addNoteToContact(
+        contactId,
+        `Started assessment: ${assessmentType || industry}${isReturning ? ' (returning visitor)' : ''}. Source: centience.ai assessment form.`
+      );
+    } catch (hsErr) {
+      console.error('HubSpot sync error (non-fatal):', hsErr);
     }
 
     // 2. Send email notification via Resend
