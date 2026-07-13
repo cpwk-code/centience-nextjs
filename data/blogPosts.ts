@@ -14,6 +14,94 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  // ─── Mid-Year 2026 Technology Governance Gaps (July 2026) ─────────────────
+  {
+    id: 26,
+    slug: "mid-year-2026-technology-governance-gaps-sec-finra-exams",
+    category: "AI Governance",
+    title: "Mid-Year 2026 Compliance Check: 6 Technology-Governance Gaps That Surface in SEC and FINRA Exams",
+    excerpt: "Halfway through 2026, six technology-governance gaps are the ones most likely to surface in an SEC or FINRA examination. Here is what each one is, why examiners now expect evidence, and how RIAs and broker-dealers can close them before the request letter arrives.",
+    image: "/assets/blog/centience-ai-governance-sec.png",
+    author: "Orville Matias",
+    date: "July 2026",
+    metaTitle: "Mid-Year 2026 Compliance Check: 6 SEC & FINRA Technology-Governance Gaps | Centience",
+    metaDescription: "The six technology-governance gaps most likely to surface in a 2026 SEC or FINRA exam — MFA, immutable archiving, current WSPs, shadow AI, tested backups, and continuous evidence — and how regulated firms can close them.",
+    content: `
+[STAT_CARDS]
+June 3, 2026 | Reg S-P Deadline Passed | Smaller SEC-registered advisers are now in scope
+6 Years | FINRA 17a-4 Core Retention | Records must be immutable and readily accessible
+60 Days | Reg S-P Breach Notice | The clock starts at discovery of unauthorized access
+5 Domains | What Exams Now Probe | Infrastructure, cybersecurity, data, AI, and supervision
+[/STAT_CARDS]
+
+We are halfway through 2026, and the pattern in this year's SEC and FINRA examinations is consistent: regulators are no longer satisfied with policies on paper. They want evidence that technology controls were active continuously — not just on the day of the review.
+
+That shift matters because most firms manage compliance as an annual event. They assemble documentation before an exam, pass, and move on. But a control that lapses between reviews — MFA quietly disabled for a departing executive, an archiving connector that silently stopped capturing a messaging channel — leaves a gap that a point-in-time assessment will never catch, and that an examiner increasingly will.
+
+Below are the six technology-governance gaps most likely to surface in a 2026 examination, mapped to the domains examiners now probe. If you cannot immediately answer "yes, and here is the evidence" for each, it is a gap worth closing before the request letter arrives.
+
+## 1. MFA That Is Not Enforced for Everyone
+
+Multi-factor authentication is the control examiners ask about first, because it maps directly to the amended [Reg S-P safeguards](/insights/reg-sp-june-3-2026-deadline-smaller-ria-compliance) and the GLBA Safeguards Rule. The common failure is not the absence of MFA — most firms have it. It is the exceptions: a service account, a shared mailbox, an executive who found it inconvenient, a vendor with standing access.
+
+[CALLOUT:rule]
+Reg S-P (as amended) requires firms to protect customer information with controls appropriate to the sensitivity of the data. If MFA is enforced for "most" users but not all, you cannot demonstrate that access to customer information was continuously controlled — and that is precisely the gap examiners document.
+[/CALLOUT]
+
+The fix is not a policy statement. It is a continuously monitored control that flags the moment an account falls out of MFA enforcement.
+
+## 2. Business Communications That Are Not Archived Immutably
+
+FINRA Rule 4511 and SEC Rule 17a-4 require firms to preserve business communications in a non-rewritable, non-erasable (WORM) format for the required retention period. Email is usually covered. What trips firms up in 2026 is everything else: Teams and Slack messages, collaboration tools, text messages, and the output of AI assistants that now sit inside those channels.
+
+If a communication about firm business happens on a channel that can be edited or deleted after the fact, it does not satisfy 17a-4 — even if nothing was ever altered. Off-channel communications remain one of the most heavily penalized records failures in the industry.
+
+## 3. Written Supervisory Procedures That Are Stale — or Untested
+
+FINRA Rule 3110 requires written supervisory procedures (WSPs), and Rule 3120 requires annual testing of those supervisory controls. Two gaps recur: WSPs that have not been reviewed in more than twelve months, and firms that have never documented a 3120 test.
+
+[CALLOUT:action]
+Your WSPs should reflect the technology your firm actually uses today — including any AI tools. A WSP that does not mention how the firm governs AI is already behind the examiner's questions.
+[/CALLOUT]
+
+## 4. Shadow AI: The Tools You Have Not Inventoried
+
+This is the fastest-growing exam topic, and the one firms are least prepared for. Staff are using AI tools — Copilot, ChatGPT, meeting-note assistants, research tools — often without the compliance team's knowledge. The [SEC's AI governance expectations](/insights/sec-ai-governance-requirements-investment-advisers-2026) and the NIST AI Risk Management Framework both start from the same requirement: you must know what AI is in use before you can govern it.
+
+When an examiner asks for your inventory of AI tools that touch client data, "we do not have one" is not an acceptable answer. Neither is a list you assembled the week before. The expectation is a maintained inventory with a risk assessment and an approval decision for each tool.
+
+## 5. Backups That Have Never Been Tested
+
+FINRA Rule 4370 requires a business continuity plan, and the technical foundation of any BCP is a backup that actually restores. Many firms have backups running; far fewer have documented a successful recovery test. An untested backup is an assumption, not a control — and a ransomware event is the wrong time to discover it does not restore cleanly.
+
+## 6. The Meta-Gap: No Continuous Evidence
+
+The other five gaps share a root cause. Firms treat compliance as a document to produce rather than a state to maintain. When the exam request arrives, they scramble to assemble evidence for a point in time, with no way to show the control held over the preceding months.
+
+[CALLOUT:key]
+The question examiners are really asking is: "Can you prove this control was active continuously?" A firm that maintains timestamped evidence answers with a download. A firm that does not answers with a scramble — and the scramble itself signals a systemic gap.
+[/CALLOUT]
+
+This is the difference between a checklist and a governance program. Continuous [technology governance](/governance) treats infrastructure, cybersecurity, data, AI, and supervision as one accountable program with evidence assembled as controls run — so exam readiness is a standing condition, not a quarterly fire drill.
+
+## How to See Where Your Firm Stands
+
+You do not need to guess which of these six gaps applies to you. The Centience Governance Score is a free, five-minute self-assessment that scores your firm 0–100 across all five domains, benchmarks you against peer firms, and shows you exactly which gaps to close first — mapped to the SEC and FINRA rules each one touches.
+
+[CTA_BUTTON:Get Your Free Governance Score|/assessments/governance-score]
+
+[RELATED_SERVICE:Technology Governance|Managed infrastructure, cybersecurity, and AI governance delivered as one accountable, continuously evidenced program.|/governance]
+
+For a deeper look at the records side of these obligations, see our guide to [data governance for financial services firms](/insights/data-governance-financial-services-finra-17a-4-sec-records-2026), or explore how Centience supports [financial services firms](/industries/financial-services) specifically.
+
+[FAQ_ACCORDION]
+What are examiners focused on in 2026? | Continuous evidence. The consistent theme in SEC and FINRA exams this year is a demand for proof that technology controls — MFA, archiving, retention, AI oversight — were active continuously between reviews, not just documented at a point in time.
+Does Reg S-P apply to smaller RIAs now? | Yes. The compliance deadline for smaller SEC-registered investment advisers passed on June 3, 2026, so smaller firms are now expected to demonstrate the amended safeguards, incident response, and breach-notification requirements.
+What is "shadow AI" and why do examiners care? | Shadow AI refers to AI tools employees use without the compliance team's knowledge or approval. Examiners care because ungoverned AI can expose client data and create records that are never captured. The expectation is a maintained, risk-assessed inventory of every AI tool that touches firm or client data.
+How do I know which gaps apply to my firm? | Take the free Centience Governance Score. It scores your firm 0–100 across cybersecurity, data and records, supervision, infrastructure, and AI governance, benchmarks you against peers, and prioritizes the specific gaps to close before your next exam.
+[/FAQ_ACCORDION]
+`,
+  },
   // ─── Reg S-P June 3 Deadline Post ─────────────────────────────────────────
   {
     id: 18,
