@@ -7,8 +7,8 @@ const lifecycle = [
     icon: Search,
     number: "01",
     label: "BASELINE",
-    title: "Free 5-Day Assessment",
-    description: "We assess your current posture across infrastructure, cybersecurity, AI usage, vendor risk, and compliance readiness. You receive a prioritized gap map and a clear picture of where you stand before the program begins.",
+    title: "Free Governance Score",
+    description: "Take the free Governance Score to see where you stand across infrastructure, cybersecurity, AI usage, vendor risk, and compliance readiness — an instant 0–100 score, a peer benchmark, and a prioritized gap map before the program begins.",
   },
   {
     icon: Layers,

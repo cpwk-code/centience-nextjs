@@ -50,7 +50,7 @@ const NonProfitPage = () => (
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Non-Profit Governance Assessment <ArrowRight size={16} /></Link></Button>
+            <Button variant="cta" size="xl" asChild><Link href="/assessments/governance-score">Book Your Non-Profit Governance Assessment <ArrowRight size={16} /></Link></Button>
           </div>
           <p className="text-sm opacity-50 mt-5">
             Or call us directly:{" "}
@@ -166,10 +166,10 @@ const NonProfitPage = () => (
         <p className="text-lg opacity-70 mb-8">Our non-profit governance assessment identifies donor data exposure, federal grant compliance gaps, and AI governance vulnerabilities — and delivers a prioritized roadmap scaled to your organization's capacity and budget.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results delivered within 5 business days</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Instant results — your governance score in minutes</span>
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Governance programs scaled for non-profit organizations</span>
         </div>
-        <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Non-Profit Governance Assessment <ArrowRight size={16} /></Link></Button>
+        <Button variant="cta" size="xl" asChild><Link href="/assessments/governance-score">Book Your Non-Profit Governance Assessment <ArrowRight size={16} /></Link></Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}
           <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">

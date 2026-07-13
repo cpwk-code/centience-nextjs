@@ -26,6 +26,12 @@ const footerLinks = {
     { label: "Articles", href: "/insights/articles" },
     { label: "Locations", href: "/locations" },
   ],
+  Resources: [
+    { label: "Governance Score", href: "/assessments/governance-score" },
+    { label: "HIPAA Governance Score", href: "/assessments/governance-score-healthcare" },
+    { label: "Guides", href: "/resources/guides" },
+    { label: "Newsletter", href: "/resources/newsletter" },
+  ],
 };
 
 const socialLinks = [
@@ -40,7 +46,7 @@ const Footer = () => {
         {/* Gold accent line */}
         <div className="h-px w-full mb-16" style={{ background: "var(--gradient-gold)", opacity: 0.2 }} />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">

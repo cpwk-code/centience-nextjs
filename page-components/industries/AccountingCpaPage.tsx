@@ -45,7 +45,7 @@ const AccountingCpaPage = () => (
             and defensible.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Accounting Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
+            <Button variant="cta" size="xl" asChild><Link href="/assessments/governance-score">Book Your Accounting Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
           </div>
           <p className="text-sm opacity-50 mt-5">
             Or call us directly:{" "}
@@ -161,10 +161,10 @@ const AccountingCpaPage = () => (
         <p className="text-lg opacity-70 mb-8">Our accounting firm governance assessment identifies client data exposure, AI governance gaps in tax and audit workflows, and technology vulnerabilities — and delivers a prioritized roadmap to AICPA and regulatory readiness.</p>
         <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
           <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results delivered within 5 business days</span>
-          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> documented track record of successful outcomes across accounting firm engagements</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Instant results — your governance score in minutes</span>
+          <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Documented track record of successful outcomes across accounting firm engagements</span>
         </div>
-        <Button variant="cta" size="xl" asChild><Link href="/ai-governance-risk-assessment">Book Your Accounting Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
+        <Button variant="cta" size="xl" asChild><Link href="/assessments/governance-score">Book Your Accounting Firm Governance Assessment <ArrowRight size={16} /></Link></Button>
         <p className="text-sm opacity-50 mt-5">
           Or call us directly:{" "}
           <a href="tel:+18779457177" className="text-gold hover:text-gold/80 transition-colors font-semibold">
