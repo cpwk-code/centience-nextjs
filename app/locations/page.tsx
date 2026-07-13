@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
+import { buildBreadcrumbSchema } from '@/lib/landingSchema';
 
 export const metadata: Metadata = {
   title: "AI Governance Locations | Centience",
@@ -30,9 +31,27 @@ const locations = [
   { slug: "ai-governance-fort-lauderdale", city: "Fort Lauderdale", state: "FL", desc: "Continuous governance for Broward County regulated organizations." },
 ];
 
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: 'Home', path: '' },
+  { name: 'Locations', path: '/locations' },
+]);
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: locations.map((loc, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: `${loc.city}, ${loc.state}`,
+    url: `https://centience.ai/locations/${loc.slug}`,
+  })),
+};
+
 export default function LocationsPage() {
   return (
     <Layout>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <section className="section-navy py-24 lg:py-32">
         <div className="container mx-auto">
           <div className="max-w-3xl">

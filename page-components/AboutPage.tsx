@@ -1,5 +1,6 @@
 "use client";
 import Layout from "@/components/Layout";
+import Image from "next/image";
 import orvillePhoto from "@/assets/orville-matias.png";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
@@ -256,11 +257,14 @@ const AboutPage = () => (
         </div>
         <div className="grid lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-1">
-            <div className="rounded-xl overflow-hidden bg-muted aspect-[3/4] flex items-center justify-center mb-4">
-              <img
-                src={orvillePhoto.src}
+            <div className="relative rounded-xl overflow-hidden bg-muted aspect-[3/4] mb-4">
+              <Image
+                src={orvillePhoto}
                 alt="Orville Matias — Founder & CEO, Centience"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                className="object-cover"
+                priority
               />
             </div>
             <h3 className="font-display font-bold text-primary text-xl">Orville Matias</h3>
