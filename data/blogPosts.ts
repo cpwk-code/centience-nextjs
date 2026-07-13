@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance",
     title: "Mid-Year 2026 Compliance Check: 6 Technology-Governance Gaps That Surface in SEC and FINRA Exams",
     excerpt: "Halfway through 2026, six technology-governance gaps are the ones most likely to surface in an SEC or FINRA examination. Here is what each one is, why examiners now expect evidence, and how RIAs and broker-dealers can close them before the request letter arrives.",
-    image: "/assets/blog/centience-ai-governance-sec.png",
+    image: "/assets/blog/centience-ai-governance-operating-model.png",
     author: "Orville Matias",
     date: "July 2026",
     metaTitle: "Mid-Year 2026 Compliance Check: 6 SEC & FINRA Technology-Governance Gaps | Centience",
