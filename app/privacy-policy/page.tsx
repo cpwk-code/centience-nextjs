@@ -4,7 +4,7 @@ import PrivacyPolicyPage from '@/page-components/PrivacyPolicyPage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Privacy Policy | Centience",
-  description: "Read Centience's Privacy Policy. Learn how we collect, use, and protect personal information for clients across regulated industries including finance, healthcare, and legal.",
+  description: "Read Centience's Privacy Policy. Learn how we collect, use, and protect personal information for clients across regulated industries.",
   keywords: ["Centience privacy policy","data privacy","information security","regulated industry privacy"],
   alternates: {
     canonical: "https://centience.ai/privacy-policy",

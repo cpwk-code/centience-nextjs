@@ -3,8 +3,8 @@ import PartnerProgram from '@/page-components/PartnerProgram';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Governance Partner Program — Extend Your Practice With Centience | Centience",
-  description: "Centience partners with fractional CISOs, compliance consultants, data privacy attorneys, accounting and risk firms, and technology partners — delivering the operational governance layer that makes advisory programs enforceable. Recurring revenue. Protected client relationships. Co-delivery model.",
+  title: "Governance Partner Program | Centience",
+  description: "Fractional CISOs, compliance consultants, data privacy attorneys, and advisory firms. We operate the governance. You keep the relationship. Recurring revenue.",
   keywords: ["governance partner program","fractional CISO partner","vCISO governance partner","compliance consultant partner","data privacy attorney partner","technology governance co-delivery","managed governance partner","recurring revenue governance","governance referral partner"],
   alternates: {
     canonical: "https://centience.ai/partners",

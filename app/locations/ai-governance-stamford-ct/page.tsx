@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: "AI Governance Stamford CT | Centience — Technology Governance for Regulated Organizations",
-  description: "Continuous AI and technology governance for regulated organizations in Stamford CT and Fairfield County. SEC, FINRA, and HIPAA compliance. Serving Stamford, Norwalk, and Westport.",
+  description: "Continuous AI and technology governance for regulated organizations in Stamford CT and Fairfield County. SEC, FINRA, and HIPAA compliance.",
   keywords: ["AI governance Stamford CT", "technology governance Norwalk CT", "SEC FINRA compliance Stamford", "HIPAA compliance Stamford CT", "managed IT governance Fairfield County"],
   alternates: {
     canonical: "https://centience.ai/locations/ai-governance-stamford-ct",

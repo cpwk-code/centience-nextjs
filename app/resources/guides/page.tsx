@@ -4,7 +4,7 @@ import GuidesPage from '@/page-components/resources/GuidesPage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Governance Guides & Frameworks | Centience",
-  description: "Practical governance guides, frameworks, and checklists for regulated organizations. Download free resources on AI governance, cybersecurity, and compliance program development.",
+  description: "Practical governance guides, frameworks, and checklists for regulated organizations. Download free resources on AI governance, cybersecurity.",
   keywords: ["governance guides","compliance frameworks","AI governance guide","cybersecurity checklist","governance resources","compliance program guide"],
   alternates: {
     canonical: "https://centience.ai/resources/guides",

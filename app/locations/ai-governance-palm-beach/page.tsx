@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: "AI Governance Palm Beach County FL | Centience — Technology Governance",
-  description: "Continuous AI and technology governance for regulated organizations in Palm Beach County, FL. SEC, FINRA, and HIPAA compliance. Serving West Palm Beach, Boca Raton, and Palm Beach Gardens.",
+  description: "Continuous AI and technology governance for regulated organizations in Palm Beach County, FL. SEC, FINRA, and HIPAA compliance.",
   keywords: ["AI governance Palm Beach County", "technology governance West Palm Beach", "SEC FINRA compliance Palm Beach", "HIPAA compliance Boca Raton", "managed IT governance Palm Beach Gardens"],
   alternates: {
     canonical: "https://centience.ai/locations/ai-governance-palm-beach",

@@ -4,7 +4,7 @@ import NonProfitAssessment from '@/page-components/assessments/NonProfitAssessme
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Non-Profit Technology Governance Assessment | Centience",
-  description: "Free technology and AI governance assessment for non-profit organizations. Identify gaps in donor data protection, grant compliance, and technology stewardship. Get your roadmap.",
+  description: "Free technology and AI governance assessment for non-profit organizations. Identify gaps in donor data protection, grant compliance.",
   keywords: ["non-profit governance assessment","non-profit technology assessment","donor data assessment","grant compliance assessment","charitable organization assessment"],
   alternates: {
     canonical: "https://centience.ai/assessments/non-profit",

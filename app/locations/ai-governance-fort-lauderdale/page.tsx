@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: "AI Governance Fort Lauderdale | Centience — Technology Governance for Regulated Firms",
-  description: "Continuous AI and technology governance for regulated organizations in Fort Lauderdale and Broward County, FL. SEC, FINRA, and HIPAA compliance. Serving Fort Lauderdale, Hollywood, and Weston.",
+  description: "Continuous AI and technology governance for regulated organizations in Fort Lauderdale and Broward County, FL. SEC, FINRA, and HIPAA compliance.",
   keywords: ["AI governance Fort Lauderdale", "technology governance Broward County", "SEC FINRA compliance Fort Lauderdale", "HIPAA compliance Broward County", "managed IT governance Fort Lauderdale"],
   alternates: {
     canonical: "https://centience.ai/locations/ai-governance-fort-lauderdale",

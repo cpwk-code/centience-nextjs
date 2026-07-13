@@ -4,7 +4,7 @@ import FinancialServicesAssessment from '@/page-components/assessments/Financial
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Financial Services Governance Assessment | Centience",
-  description: "Free technology and AI governance assessment for financial services firms. Identify gaps relative to SEC, FINRA, and OCC requirements. Get your customized governance roadmap.",
+  description: "Free technology and AI governance assessment for financial services firms. Identify gaps relative to SEC, FINRA, and OCC requirements.",
   keywords: ["financial services assessment","SEC governance assessment","FINRA compliance assessment","financial technology assessment","investment firm governance"],
   alternates: {
     canonical: "https://centience.ai/assessments/financial-services",

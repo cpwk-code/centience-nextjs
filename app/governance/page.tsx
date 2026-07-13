@@ -4,7 +4,7 @@ import GovernancePage from '@/page-components/GovernancePage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Continuous Technology Governance Programs | Centience",
-  description: "Centience delivers continuous technology governance as a managed operating program — combining infrastructure governance, cybersecurity oversight, and AI governance into a single continuously enforced model for regulated organizations. Not a one-time engagement.",
+  description: "Three integrated governance programs delivered as a single continuously managed operating model. Assessment → Roadmap → Ongoing Program.",
   keywords: ["continuous technology governance","managed technology governance","technology governance program","infrastructure governance","cybersecurity governance","AI governance","regulated organizations","ongoing governance program"],
   alternates: {
     canonical: "https://centience.ai/governance",

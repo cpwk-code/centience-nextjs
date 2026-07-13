@@ -3,7 +3,7 @@ import AIGovernanceAssessment from '@/page-components/assessments/AIGovernanceAs
 
 export const metadata: Metadata = {
   title: "Free AI Governance Readiness Assessment | Centience",
-  description: "Take the free Centience AI Governance Readiness Assessment. Identify gaps in your AI policy, vendor oversight, and regulatory alignment — aligned with NIST AI RMF and ISO 42001.",
+  description: "Identify gaps in your AI governance program across policy, risk management, vendor oversight, and regulatory alignment — in under 5 minutes.",
   keywords: ["AI governance assessment","AI readiness assessment","NIST AI RMF assessment","ISO 42001 assessment","AI compliance gap assessment","free AI governance assessment"],
   alternates: {
     canonical: "https://centience.ai/assessments/ai-governance",

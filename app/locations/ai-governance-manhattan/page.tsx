@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: "AI Governance Manhattan | Centience — Technology Governance for Regulated Firms",
-  description: "Continuous AI and technology governance for regulated organizations in Manhattan. SEC, FINRA, and HIPAA compliance. Serving broker-dealers, RIAs, healthcare, law firms, and private equity in Midtown and the Financial District.",
+  description: "Continuous AI and technology governance for regulated organizations in Manhattan. SEC, FINRA, and HIPAA compliance.",
   keywords: ["AI governance Manhattan", "technology governance Midtown", "SEC FINRA compliance Manhattan", "cybersecurity governance Financial District", "managed IT governance Manhattan"],
   alternates: {
     canonical: "https://centience.ai/locations/ai-governance-manhattan",

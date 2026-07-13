@@ -4,7 +4,7 @@ import CybersecurityPage from '@/page-components/CybersecurityPage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Cybersecurity Governance That Holds Up Under Examination | Centience",
-  description: "Centience delivers cybersecurity governance that is technically enforced at the infrastructure level — continuously monitored, documented, and audit-ready. Built for broker-dealers, RIAs, healthcare organizations, and legal firms facing SEC, FINRA, and HIPAA examination scrutiny.",
+  description: "Technically enforced at the infrastructure level. Continuously monitored. Audit-ready for SEC, FINRA, and HIPAA examination.",
   keywords: ["cybersecurity governance","cybersecurity governance regulated organizations","SEC cybersecurity examination","FINRA cybersecurity","HIPAA cybersecurity","continuous security monitoring","vendor risk management","incident response governance","cybersecurity compliance financial services"],
   alternates: {
     canonical: "https://centience.ai/cybersecurity",

@@ -4,8 +4,8 @@ import { financialServicesFaqs, buildFaqSchema } from '@/data/industryFaqs';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "AI & Technology Governance for Broker-Dealers, RIAs, and Financial Services Firms | Centience",
-  description: "Centience delivers continuous AI and technology governance for financial services firms — managed infrastructure, cybersecurity, AI oversight, and communication compliance aligned to SEC FY2026 and FINRA 2026 examination priorities. documented track record of successful outcomes across financial services engagements.",
+  title: "AI & Technology Governance for Financial Services | Centience",
+  description: "Aligned to SEC FY2026 and FINRA 2026 examination priorities. documented track record of successful outcomes across financial services engagements.",
   keywords: ["financial services AI governance","SEC FY2026 examination priorities","FINRA 2026 AI governance","broker dealer technology governance","RIA AI governance","SEC cybersecurity compliance","FINRA supervision AI","communication compliance SEC Rule 17a-4","financial services cybersecurity governance","documented track record of successful outcomes"],
   alternates: {
     canonical: "https://centience.ai/industries/financial-services",

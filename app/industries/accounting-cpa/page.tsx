@@ -3,8 +3,8 @@ import AccountingCpaPage from '@/page-components/industries/AccountingCpaPage';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "AI Governance for CPA and Accounting Firms — Tax, Audit & Advisory Practice | Centience",
-  description: "Centience delivers AI and technology governance for CPA and accounting firms deploying AI in tax, audit, and advisory workflows — protecting client financial data, managing professional liability risk, and meeting AICPA standards and the FTC Safeguards Rule. Governing Gramm-Leach-Bliley subject firms.",
+  title: "AI Governance for CPA & Accounting Firms | Centience",
+  description: "AI governance for tax, audit, and advisory practice. AICPA standards. FTC Safeguards Rule. Professional liability protection.",
   keywords: ["CPA AI governance","accounting firm AI governance","AICPA technology governance","FTC Safeguards Rule accounting","Gramm-Leach-Bliley CPA","tax firm AI governance","audit firm technology governance","CPA cybersecurity","accounting data governance","AI independence risk attest"],
   alternates: {
     canonical: "https://centience.ai/industries/accounting-cpa",

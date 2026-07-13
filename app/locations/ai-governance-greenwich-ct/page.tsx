@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: "AI Governance Greenwich CT | Centience — Technology Governance for Hedge Funds & RIAs",
-  description: "Continuous AI and technology governance for hedge funds, family offices, and regulated organizations in Greenwich CT and Fairfield County. SEC, FINRA compliance. Serving Greenwich, Stamford, Westport, and Norwalk.",
+  description: "Continuous AI and technology governance for hedge funds, family offices, and regulated organizations in Greenwich CT and Fairfield County.",
   keywords: ["AI governance Greenwich CT", "technology governance Fairfield County", "SEC FINRA compliance Greenwich", "hedge fund governance Greenwich", "managed IT governance Stamford CT"],
   alternates: {
     canonical: "https://centience.ai/locations/ai-governance-greenwich-ct",

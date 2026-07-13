@@ -4,7 +4,7 @@ import HealthcareGovernanceScore from '@/page-components/assessments/HealthcareG
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "HIPAA Governance Score — Free Healthcare Compliance Assessment | Centience",
-  description: "Get your healthcare organization's 0–100 HIPAA Governance Score in under 5 minutes. Instant per-domain breakdown, peer benchmark, and priority gaps mapped to the HIPAA Security, Privacy, and Breach Notification Rules.",
+  description: "Get your healthcare organization's 0–100 HIPAA Governance Score in under 5 minutes.",
   keywords: ["HIPAA governance score", "HIPAA compliance assessment", "healthcare security risk analysis", "HIPAA readiness", "ePHI protection assessment", "medical practice compliance"],
   alternates: {
     canonical: "https://centience.ai/assessments/governance-score-healthcare",

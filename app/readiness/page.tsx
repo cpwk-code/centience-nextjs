@@ -3,7 +3,7 @@ import ReadinessPage from '@/page-components/ReadinessPage';
 
 export const metadata: Metadata = {
   title: "Get Your Free Assessment | Centience",
-  description: "Request the Centience Free Governance Score — a structured evaluation of your organization's posture across infrastructure, cybersecurity, AI, vendor risk, and compliance readiness. Instant results — your score in minutes.",
+  description: "Evaluates your posture across infrastructure, cybersecurity, AI, vendor risk, and compliance readiness. Results instantly.",
   keywords: ["governance readiness review","technology governance assessment","AI governance review","cybersecurity readiness","compliance gap assessment","regulated organization governance","SEC FINRA HIPAA governance review"],
   alternates: {
     canonical: "https://centience.ai/readiness",

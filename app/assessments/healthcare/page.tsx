@@ -4,7 +4,7 @@ import HealthcareAssessment from '@/page-components/assessments/HealthcareAssess
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Healthcare Governance Assessment | Centience",
-  description: "Free technology and AI governance assessment for healthcare organizations. Identify gaps relative to HIPAA, FDA, and ONC requirements. Get your customized governance roadmap.",
+  description: "Free technology and AI governance assessment for healthcare organizations. Identify gaps relative to HIPAA, FDA, and ONC requirements.",
   keywords: ["healthcare governance assessment","HIPAA assessment","healthcare technology assessment","healthcare AI assessment","health compliance assessment"],
   alternates: {
     canonical: "https://centience.ai/assessments/healthcare",

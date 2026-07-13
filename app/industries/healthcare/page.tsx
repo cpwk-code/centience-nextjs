@@ -4,8 +4,8 @@ import { healthcareFaqs, buildFaqSchema } from '@/data/industryFaqs';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "HIPAA-Compliant AI & Technology Governance for Healthcare Organizations | Centience",
-  description: "Centience delivers HIPAA-compliant AI and technology governance for healthcare organizations deploying AI in clinical and operational environments — managing the infrastructure where patient data lives, governing AI tools from day one, and maintaining audit-ready evidence continuously. OfficeSafe heritage: 5,000+ healthcare practices governed.",
+  title: "HIPAA-Compliant AI & Technology Governance for Healthcare | Centience",
+  description: "OfficeSafe heritage: 5,000+ healthcare practices governed. HIPAA-compliant AI governance for clinical and operational environments. Continuously enforced.",
   keywords: ["HIPAA AI governance","healthcare AI governance","HIPAA technology governance","clinical AI governance","healthcare cybersecurity governance","HIPAA compliance managed services","patient data governance","OfficeSafe","healthcare IT governance","OCR audit readiness","HIPAA technical safeguards"],
   alternates: {
     canonical: "https://centience.ai/industries/healthcare",

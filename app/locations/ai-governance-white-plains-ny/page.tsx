@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: "AI Governance White Plains NY | Centience — Technology Governance",
-  description: "Continuous AI and technology governance for regulated organizations in White Plains NY and Westchester County. SEC, FINRA, and HIPAA compliance. Serving White Plains, Tarrytown, and surrounding communities.",
+  description: "Continuous AI and technology governance for regulated organizations in White Plains NY and Westchester County. SEC, FINRA, and HIPAA compliance.",
   keywords: ["AI governance White Plains NY", "technology governance Westchester", "SEC FINRA compliance White Plains", "HIPAA compliance White Plains NY", "managed IT governance Westchester County"],
   alternates: {
     canonical: "https://centience.ai/locations/ai-governance-white-plains-ny",
