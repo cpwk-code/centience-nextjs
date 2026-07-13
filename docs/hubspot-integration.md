@@ -46,5 +46,5 @@ Until `HUBSPOT_SCORE_PROPS` is enabled, these are skipped (no errors). The Note 
 ## Notes
 
 - This is the **runtime** integration (a private-app token used server-side by the site). It is separate from the HubSpot **MCP connector** used for interactive/agent work — that still needs authorizing in an interactive session before agent-driven automations can run.
-- Answers are stored in the HubSpot Note today (per request). If you also want them queryable for onboarding pre-fill, we can persist them to a Supabase `assessment_results` table as a follow-up.
+- Answers are stored in the HubSpot Note **and** persisted to a Supabase `assessment_results` table (`docs/sql/assessment_results.sql`) for queryable onboarding pre-fill and reporting. Run that SQL once in the Supabase SQL Editor.
 - Code: `lib/hubspot.ts` (`upsertContact`, `addNoteToContact`, `setScoreProperties`, `splitName`).

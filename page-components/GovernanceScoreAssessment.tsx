@@ -122,6 +122,7 @@ const GovernanceScoreAssessment = ({ headline, subCopy, questions, industrySlug,
           lastName: leadLast,
           company: leadCompany,
           assessmentType: headline,
+          industrySlug,
           // legacy fields (kept for backward compatibility with the results email)
           score: result.overall,
           max: 100,

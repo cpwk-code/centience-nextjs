@@ -1,16 +1,52 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import { upsertContact, addNoteToContact, setScoreProperties } from '@/lib/hubspot';
 
 interface AnswerRow { question?: string; answer?: string | null; domain?: string }
 
+function getSupabase() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !serviceKey) return null;
+  return createClient(url, serviceKey, {
+    auth: { autoRefreshToken: false, persistSession: false },
+  });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { email, firstName, lastName, company, assessmentType, score, max, resultSummary, overall, tier, domains, topGaps, answers, firmSize } = body;
+    const { email, firstName, lastName, company, assessmentType, score, max, resultSummary, overall, tier, domains, topGaps, answers, firmSize, industrySlug } = body;
 
     if (!email || !firstName || !assessmentType) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    }
+
+    // Persist the full result + answers to Supabase (non-fatal) so they're
+    // queryable for onboarding pre-fill and reporting.
+    try {
+      const supabase = getSupabase();
+      if (supabase) {
+        const { error: dbErr } = await supabase.from('assessment_results').insert({
+          email,
+          first_name: firstName,
+          last_name: lastName || null,
+          company: company || null,
+          assessment_type: assessmentType,
+          industry_slug: industrySlug || null,
+          firm_size: firmSize || null,
+          overall: typeof overall === 'number' ? overall : null,
+          tier: tier || null,
+          domains: Array.isArray(domains) ? domains : [],
+          top_gaps: Array.isArray(topGaps) ? topGaps : [],
+          answers: Array.isArray(answers) ? answers : [],
+          created_at: new Date().toISOString(),
+        });
+        if (dbErr) console.error('Supabase assessment_results insert error:', dbErr.message);
+      }
+    } catch (dbErr) {
+      console.error('Supabase assessment_results insert error (non-fatal):', dbErr);
     }
 
     // Sync the Governance Score results + the firm's actual answers onto the
