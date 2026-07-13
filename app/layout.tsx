@@ -6,7 +6,6 @@ import { Toaster } from '@/components/ui/toaster';
 import { Toaster as Sonner } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import QueryProvider from '@/components/QueryProvider';
-import { AuthProvider } from '@/contexts/AuthContext';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
 import ConsentBanner from '@/components/ConsentBanner';
@@ -135,14 +134,12 @@ export default function RootLayout({
         <MicrosoftClarity />
         <ConsentBanner />
         <QueryProvider>
-          <AuthProvider>
-            <TooltipProvider>
-              <Suspense fallback={null}><ScrollToTop /></Suspense>
-              {children}
-              <Toaster />
-              <Sonner />
-            </TooltipProvider>
-          </AuthProvider>
+          <TooltipProvider>
+            <Suspense fallback={null}><ScrollToTop /></Suspense>
+            {children}
+            <Toaster />
+            <Sonner />
+          </TooltipProvider>
         </QueryProvider>
       </body>
     </html>
