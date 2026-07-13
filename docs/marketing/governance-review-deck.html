@@ -1,0 +1,327 @@
+<style>
+  :root {
+    --navy: #0F1F3D;
+    --navy-deep: #0A1730;
+    --navy-line: #24354f;
+    --gold: #E8A820;
+    --ink: #F5F7FA;
+    --muted: #9AA7BD;
+    --good: #34D399;
+    --warn: #FBBF24;
+    --bad: #F87171;
+    --font-display: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    /* page chrome (theme-aware) */
+    --page-bg: #e9edf3;
+    --page-fg: #0F1F3D;
+    --page-muted: #5c6b82;
+    --card-shadow: 0 18px 50px rgba(15, 31, 61, 0.28);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --page-bg: #0b1220; --page-fg: #e7edf6; --page-muted: #8797ad; --card-shadow: 0 18px 50px rgba(0,0,0,0.5); }
+  }
+  :root[data-theme="light"] { --page-bg: #e9edf3; --page-fg: #0F1F3D; --page-muted: #5c6b82; --card-shadow: 0 18px 50px rgba(15,31,61,0.28); }
+  :root[data-theme="dark"]  { --page-bg: #0b1220; --page-fg: #e7edf6; --page-muted: #8797ad; --card-shadow: 0 18px 50px rgba(0,0,0,0.5); }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  .wrap {
+    background: var(--page-bg);
+    color: var(--page-fg);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    padding: 40px 20px 64px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .toolbar {
+    max-width: 960px; margin: 0 auto 28px; display: flex; flex-wrap: wrap; gap: 12px 20px;
+    align-items: baseline; justify-content: space-between;
+  }
+  .toolbar h1 { font-family: var(--font-display); font-size: 1.15rem; margin: 0; font-weight: 600; letter-spacing: .2px; }
+  .toolbar p { margin: 0; font-size: .82rem; color: var(--page-muted); max-width: 62ch; line-height: 1.5; }
+  .legend { display: inline-flex; align-items: center; gap: 7px; font-size: .78rem; color: var(--page-muted); }
+  .swatch { display: inline-block; padding: 1px 7px; border-radius: 4px; background: rgba(232,168,32,.16); color: #8a6410; font-weight: 600; }
+  @media (prefers-color-scheme: dark) { .swatch { color: var(--gold); } }
+  :root[data-theme="dark"] .swatch { color: var(--gold); }
+
+  /* ---- Slides ---- */
+  .deck { max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: 34px; }
+  .slide {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: var(--ink);
+    border-radius: 14px;
+    box-shadow: var(--card-shadow);
+    padding: clamp(22px, 4.2vw, 52px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--gold);
+  }
+  .idx {
+    position: absolute; top: 20px; right: 24px; font-size: .72rem; letter-spacing: .18em;
+    color: var(--muted); font-variant-numeric: tabular-nums;
+  }
+  .eyebrow { font-size: clamp(.62rem, 1.1vw, .74rem); letter-spacing: .26em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 0 0 auto; }
+  .slide h2 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; line-height: 1.08; margin: .1em 0 .35em; font-size: clamp(1.4rem, 3.6vw, 2.35rem); }
+  .slide h3 { font-family: var(--font-display); font-weight: 600; margin: 0 0 .5em; font-size: clamp(1rem, 2vw, 1.35rem); }
+  .lede { color: var(--muted); font-size: clamp(.82rem, 1.5vw, 1rem); line-height: 1.55; max-width: 60ch; margin: 0; }
+  .fill { flex: 1 1 auto; }
+  .foot { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--navy-line); display: flex; justify-content: space-between; align-items: center; font-size: clamp(.62rem,1.1vw,.74rem); color: var(--muted); letter-spacing: .04em; }
+  .wordmark { font-family: var(--font-display); font-weight: 600; letter-spacing: .5px; color: var(--ink); }
+  .wordmark b { color: var(--gold); font-weight: 600; }
+  .fld { color: var(--gold); }
+
+  /* title slide */
+  .title-slide { justify-content: center; }
+  .title-slide h2 { font-size: clamp(1.9rem, 5.2vw, 3.2rem); margin-bottom: .25em; }
+  .title-meta { color: var(--muted); font-size: clamp(.8rem,1.5vw,1rem); line-height: 1.7; }
+
+  /* score gauge */
+  .score-row { display: grid; grid-template-columns: auto 1fr; gap: clamp(20px,4vw,48px); align-items: center; flex: 1 1 auto; }
+  .bignum { font-family: var(--font-sans); font-weight: 800; font-variant-numeric: tabular-nums; line-height: .9; font-size: clamp(4.5rem, 15vw, 9rem); color: var(--warn); }
+  .bignum small { font-size: .28em; color: var(--muted); font-weight: 600; letter-spacing: .05em; }
+  .band { font-family: var(--font-display); font-size: clamp(1rem,2.4vw,1.6rem); color: var(--warn); margin: 0 0 .5em; }
+  .meter { height: 12px; border-radius: 99px; background: rgba(255,255,255,.08); position: relative; overflow: hidden; margin: 14px 0 10px; }
+  .meter > span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 99px; background: linear-gradient(90deg,#F87171,#FBBF24 60%,#34D399); }
+  .peer { position: absolute; top: -5px; bottom: -5px; width: 2px; background: var(--ink); }
+  .peer::after { content: "peer avg " attr(data-v); position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font-size: .62rem; color: var(--muted); white-space: nowrap; }
+  .scale { display: flex; justify-content: space-between; font-size: .66rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  /* domain bars */
+  .domains { display: flex; flex-direction: column; gap: clamp(9px,1.6vw,15px); flex: 1 1 auto; justify-content: center; }
+  .dom { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; }
+  .dom .name { font-size: clamp(.78rem,1.5vw,.98rem); }
+  .dom .val { font-variant-numeric: tabular-nums; font-weight: 700; font-size: clamp(.78rem,1.5vw,.98rem); }
+  .dom .track { grid-column: 1 / -1; height: 8px; border-radius: 99px; background: rgba(255,255,255,.08); overflow: hidden; }
+  .dom .track > span { display: block; height: 100%; border-radius: 99px; }
+  .b-good > span { background: var(--good); } .b-warn > span { background: var(--warn); } .b-bad > span { background: var(--bad); }
+  .b-good ~ .val, .val.good { color: var(--good); } .val.warn { color: var(--warn); } .val.bad { color: var(--bad); }
+  .dom .peerhint { grid-column: 1/-1; font-size: .64rem; color: var(--muted); margin-top: -1px; }
+
+  /* gaps */
+  .gaps { display: flex; flex-direction: column; gap: clamp(10px,1.8vw,18px); flex: 1 1 auto; justify-content: center; }
+  .gap { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; padding-left: 2px; }
+  .gap .tag { grid-row: 1 / span 3; align-self: start; font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--navy-deep); background: var(--bad); padding: 3px 8px; border-radius: 5px; margin-top: 3px; }
+  .gap .tag.warn { background: var(--warn); }
+  .gap .q { font-weight: 600; font-size: clamp(.85rem,1.7vw,1.08rem); }
+  .gap .reg { font-size: clamp(.66rem,1.2vw,.78rem); color: var(--gold); letter-spacing: .02em; }
+  .gap .why { font-size: clamp(.72rem,1.3vw,.86rem); color: var(--muted); line-height: 1.45; max-width: 66ch; }
+
+  /* two-column compare */
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px,2.6vw,30px); flex: 1 1 auto; align-items: stretch; }
+  .col { border: 1px solid var(--navy-line); border-radius: 10px; padding: clamp(14px,2.4vw,24px); display: flex; flex-direction: column; }
+  .col.hi { border-color: rgba(232,168,32,.55); background: rgba(232,168,32,.06); }
+  .col h3 small { display:block; font-family: var(--font-sans); font-weight: 600; font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
+  .col ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: clamp(7px,1.3vw,11px); }
+  .col li { font-size: clamp(.76rem,1.4vw,.92rem); line-height: 1.4; padding-left: 20px; position: relative; color: var(--ink); }
+  .col li::before { content: ""; position: absolute; left: 0; top: .5em; width: 8px; height: 8px; border-radius: 2px; }
+  .col.dim li { color: var(--muted); } .col.dim li::before { background: var(--bad); }
+  .col.hi li::before { background: var(--good); }
+  .price { margin-top: auto; padding-top: 12px; font-family: var(--font-display); font-size: clamp(1rem,2.2vw,1.5rem); color: var(--gold); }
+  .price small { display: block; font-family: var(--font-sans); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+  /* timeline */
+  .weeks { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px,2.6vw,30px); flex: 1 1 auto; align-items: stretch; }
+  .week { border-top: 2px solid var(--gold); padding-top: 14px; display: flex; flex-direction: column; }
+  .week .wk { font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+  .week ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .week li { font-size: clamp(.76rem,1.4vw,.92rem); line-height: 1.4; padding-left: 18px; position: relative; }
+  .week li::before { content: "→"; position: absolute; left: 0; color: var(--gold); }
+  .close-cta { margin-top: 18px; text-align: center; font-family: var(--font-display); font-size: clamp(1rem,2.4vw,1.5rem); }
+
+  @media (max-width: 640px) {
+    .score-row, .cols, .weeks { grid-template-columns: 1fr; }
+    .slide { aspect-ratio: auto; }
+  }
+  @media print {
+    .wrap { background: #fff; padding: 0; }
+    .toolbar { display: none; }
+    .deck { gap: 0; max-width: none; }
+    .slide { box-shadow: none; border-radius: 0; break-after: page; page-break-after: always; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="toolbar">
+    <div>
+      <h1>Governance Readiness Review — Deck Template</h1>
+      <p>Present in the base-expansion motion. Duplicate per client and replace the
+      <span class="swatch">gold values</span> with that firm's real Governance Score. Print → Save as PDF for a leave-behind, or rebuild in Canva on the brand template. Sample firm shown is illustrative.</p>
+    </div>
+    <span class="legend"><span class="swatch">gold = swap per client</span></span>
+  </div>
+
+  <div class="deck">
+
+    <!-- 1 · Title -->
+    <section class="slide title-slide">
+      <span class="idx">01 / 07</span>
+      <p class="eyebrow">Governance Readiness Review</p>
+      <div class="fill" style="display:flex;flex-direction:column;justify-content:center">
+        <h2><span class="fld">Meridian Capital Advisors</span></h2>
+        <p class="title-meta">
+          Prepared by Centience &nbsp;·&nbsp; <span class="fld">June 2026</span><br>
+          Technology &amp; compliance governance — where you stand, and how to close the gap.
+        </p>
+      </div>
+      <div class="foot">
+        <span class="wordmark">CENT<b>I</b>ENCE</span>
+        <span>Confidential — prepared for the named firm</span>
+      </div>
+    </section>
+
+    <!-- 2 · Where you stand -->
+    <section class="slide">
+      <span class="idx">02 / 07</span>
+      <p class="eyebrow">Where you stand</p>
+      <h2>Your Governance Score</h2>
+      <div class="score-row">
+        <div class="bignum"><span class="fld">61</span><small> / 100</small></div>
+        <div>
+          <p class="band">Moderate Risk — Governance Gaps Identified</p>
+          <div class="meter">
+            <span style="width: 61%"></span>
+            <i class="peer" data-v="71" style="left: 71%"></i>
+          </div>
+          <div class="scale"><span>0</span><span>60</span><span>80</span><span>100</span></div>
+          <p class="lede" style="margin-top:16px">You sit <span class="fld">below</span> the peer average of <span class="fld">71</span> for firms your size. The gap is concentrated in the domains on the next slide — and it's the kind an examiner probes first.</p>
+        </div>
+      </div>
+      <div class="foot"><span class="wordmark">CENT<b>I</b>ENCE</span><span>Score derived from the environment we manage for you</span></div>
+    </section>
+
+    <!-- 3 · Domain breakdown -->
+    <section class="slide">
+      <span class="idx">03 / 07</span>
+      <p class="eyebrow">Breakdown</p>
+      <h2>Five governance domains</h2>
+      <div class="domains">
+        <div class="dom"><span class="name">Compliance &amp; Supervision</span><span class="val good"><span class="fld">72</span></span><span class="track b-warn"><span style="width:72%"></span></span></div>
+        <div class="dom"><span class="name">Data Protection &amp; Records</span><span class="val warn"><span class="fld">60</span></span><span class="track b-warn"><span style="width:60%"></span></span></div>
+        <div class="dom"><span class="name">Cybersecurity &amp; Access</span><span class="val warn"><span class="fld">56</span></span><span class="track b-bad"><span style="width:56%"></span></span></div>
+        <div class="dom"><span class="name">Infrastructure &amp; Resilience</span><span class="val bad"><span class="fld">48</span></span><span class="track b-bad"><span style="width:48%"></span></span></div>
+        <div class="dom"><span class="name">AI Governance</span><span class="val bad"><span class="fld">40</span></span><span class="track b-bad"><span style="width:40%"></span></span></div>
+      </div>
+      <div class="foot"><span class="wordmark">CENT<b>I</b>ENCE</span><span>Each domain maps to specific SEC / FINRA obligations</span></div>
+    </section>
+
+    <!-- 4 · Priority gaps -->
+    <section class="slide">
+      <span class="idx">04 / 07</span>
+      <p class="eyebrow">Your priority gaps</p>
+      <h2>Three findings an exam would surface</h2>
+      <div class="gaps">
+        <div class="gap">
+          <span class="tag">Critical</span>
+          <span class="q"><span class="fld">MFA is not enforced for all users</span></span>
+          <span class="reg">Reg S-P (amended) / GLBA Safeguards</span>
+          <span class="why">You can't prove access to customer data was continuously controlled — one of the most-cited Reg S-P deficiencies.</span>
+        </div>
+        <div class="gap">
+          <span class="tag">Critical</span>
+          <span class="q"><span class="fld">Teams / messaging channels aren't archived immutably</span></span>
+          <span class="reg">SEC Rule 17a-4 / FINRA Rule 4511</span>
+          <span class="why">Email is captured, but other business channels aren't — a books-and-records gap that becomes a near-automatic finding.</span>
+        </div>
+        <div class="gap">
+          <span class="tag warn">Gap</span>
+          <span class="q"><span class="fld">No inventory of AI tools in use</span></span>
+          <span class="reg">NIST AI RMF / SEC AI guidance</span>
+          <span class="why">"Shadow AI" is an emerging exam question — and right now there's no list to hand over when asked.</span>
+        </div>
+      </div>
+      <div class="foot"><span class="wordmark">CENT<b>I</b>ENCE</span><span>Full gap list delivered with your report</span></div>
+    </section>
+
+    <!-- 5 · Checklist vs continuous -->
+    <section class="slide">
+      <span class="idx">05 / 07</span>
+      <p class="eyebrow">Why it matters</p>
+      <h2>Audit-ready is a state, not a scramble</h2>
+      <div class="cols">
+        <div class="col dim">
+          <h3><small>The industry default</small>Annual checklist</h3>
+          <ul>
+            <li>A snapshot of one day a year</li>
+            <li>No proof controls held between reviews</li>
+            <li>Evidence assembled in a panic before the exam</li>
+            <li>Gaps discovered by the examiner, not you</li>
+          </ul>
+        </div>
+        <div class="col hi">
+          <h3><small>The Centience model</small>Continuous &amp; evidenced</h3>
+          <ul>
+            <li>Controls monitored continuously, not once a year</li>
+            <li>Timestamped evidence maintained automatically</li>
+            <li>Six months of proof is a download, not a scramble</li>
+            <li>Gaps surfaced — and closed — before anyone asks</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot"><span class="wordmark">CENT<b>I</b>ENCE</span><span>Technically enforced. Continuously monitored.</span></div>
+    </section>
+
+    <!-- 6 · Options -->
+    <section class="slide">
+      <span class="idx">06 / 07</span>
+      <p class="eyebrow">Your options</p>
+      <h2>Two ways forward</h2>
+      <div class="cols">
+        <div class="col">
+          <h3><small>Software subscription</small>Governance Platform</h3>
+          <ul>
+            <li>Continuous monitoring dashboard + evidence vault</li>
+            <li>WSP generator, AI &amp; vendor registers, policy library</li>
+            <li>Quarterly re-scoring so the number keeps moving</li>
+            <li>Bundled onto your existing invoice — one vendor</li>
+          </ul>
+          <div class="price"><span class="fld">$2,000</span>/mo<small>Governance Platform</small></div>
+        </div>
+        <div class="col hi">
+          <h3><small>Fully operated</small>Managed Program</h3>
+          <ul>
+            <li>Everything in Platform, operated for you</li>
+            <li>Infrastructure + cyber + AI/data governance</li>
+            <li>Evidence assembled and exam packages maintained</li>
+            <li>Your dedicated governance team</li>
+          </ul>
+          <div class="price"><span class="fld">from $7,500</span>/mo<small>Managed Program</small></div>
+        </div>
+      </div>
+      <div class="foot"><span class="wordmark">CENT<b>I</b>ENCE</span><span>Pricing shown is illustrative — confirm per engagement</span></div>
+    </section>
+
+    <!-- 7 · Activation -->
+    <section class="slide">
+      <span class="idx">07 / 07</span>
+      <p class="eyebrow">Getting started</p>
+      <h2>Live and evidenced in 14 days</h2>
+      <div class="weeks">
+        <div class="week">
+          <div class="wk">Week 1</div>
+          <ul>
+            <li>Provision your platform &amp; confirm connections</li>
+            <li>Generate your WSP from current controls</li>
+            <li>Deliver your first evidence pack</li>
+          </ul>
+        </div>
+        <div class="week">
+          <div class="wk">Week 2</div>
+          <ul>
+            <li>Close the top priority gaps</li>
+            <li>Confirm continuous monitoring is live</li>
+            <li>Set your quarterly re-score cadence</li>
+          </ul>
+        </div>
+      </div>
+      <p class="close-cta">Shall we start <span class="fld">Monday</span>?</p>
+      <div class="foot"><span class="wordmark">CENT<b>I</b>ENCE</span><span>(877) 945-7177 &nbsp;·&nbsp; hello@centience.ai</span></div>
+    </section>
+
+  </div>
+</div>
