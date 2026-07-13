@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { email, firstName, assessmentType, score, max, resultSummary } = body;
+    const { email, firstName, assessmentType, score, max, resultSummary, overall, tier, domains, topGaps } = body;
 
     if (!email || !firstName || !assessmentType) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -15,7 +15,29 @@ export async function POST(req: NextRequest) {
 
     const resend = new Resend(resendKey);
 
-    const scoreDisplay = (max && max > 0) ? `${Math.round((score / max) * 100)}%` : '—';
+    // Prefer the 0–100 Governance Score when present; fall back to the legacy score/max ratio.
+    const scoreDisplay = (typeof overall === 'number')
+      ? `${overall}/100`
+      : (max && max > 0) ? `${Math.round((score / max) * 100)}%` : '—';
+
+    const tierLabel: Record<string, string> = {
+      monitor: 'Monitor — maintain your posture',
+      platform: 'Governance Platform — continuous monitoring',
+      managed: 'Managed Program — fully operated governance',
+    };
+    const domainRows = Array.isArray(domains) && domains.length > 0
+      ? `<div style="margin: 0 0 24px;">${domains.map((d: { label?: string; score?: number }) =>
+          `<div style="display:flex;justify-content:space-between;font-size:13px;color:#555;padding:4px 0;border-bottom:1px solid #eee;"><span>${d.label ?? ''}</span><strong>${d.score ?? '—'}/100</strong></div>`
+        ).join('')}</div>`
+      : '';
+    const gapRows = Array.isArray(topGaps) && topGaps.length > 0
+      ? `<p style="margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:#888;">Priority gaps</p><ul style="margin:0 0 24px;padding-left:18px;color:#555;font-size:13px;">${topGaps.map((g: { question?: string; regulation?: string }) =>
+          `<li style="margin-bottom:6px;">${g.question ?? ''}${g.regulation ? ` <em style="color:#888;">(${g.regulation})</em>` : ''}</li>`
+        ).join('')}</ul>`
+      : '';
+    const tierRow = tier && tierLabel[tier]
+      ? `<p style="font-size:14px;color:#555;margin:0 0 24px;">Recommended track: <strong>${tierLabel[tier]}</strong></p>`
+      : '';
 
     const levelColor = resultSummary === 'Strong Governance Posture'
       ? '#10b981'
@@ -45,6 +67,10 @@ export async function POST(req: NextRequest) {
               <p style="margin: 0 0 6px; font-size: 18px; font-weight: bold; color: ${levelColor};">${resultSummary}</p>
               <p style="margin: 0; font-size: 14px; color: #666;">Score: <strong>${scoreDisplay}</strong></p>
             </div>
+
+            ${domainRows}
+            ${gapRows}
+            ${tierRow}
 
             <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 24px;">
               Our team has also received a copy of your results and will reach out shortly to discuss your governance posture and next steps.
