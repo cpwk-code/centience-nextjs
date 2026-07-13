@@ -390,12 +390,12 @@ const BlogPostPage = ({ slug: slugProp }: { slug?: string } = {}) => {
                       className="block bg-card border border-border rounded-2xl overflow-hidden group h-full"
                     >
                       <div className="relative aspect-video overflow-hidden">
-                        <img
+                        <Image
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
                           src={getSrc(relatedPost.image)}
                           alt={relatedPost.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                          loading="lazy"
-                          decoding="async"
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                       </div>
                       <div className="p-6">
