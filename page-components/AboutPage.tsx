@@ -461,11 +461,11 @@ const AboutPage = () => (
           Start With a Governance Assessment. Know Exactly Where You Stand.
         </h2>
         <p className="text-lg opacity-60 leading-relaxed mb-6 max-w-2xl mx-auto">
-          Most assessments complete within 5 business days. You leave with a clear, prioritized roadmap regardless of whether you engage further.
+          Most assessments complete in minutes. You leave with a clear, prioritized roadmap regardless of whether you engage further.
         </p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>
-          <span>✓ Results delivered within 5 business days</span>
+          <span>✓ Instant results — your score in minutes</span>
           <span>✓ documented track record of successful outcomes across client engagements</span>
         </div>
         <Button variant="cta" size="xl" asChild>

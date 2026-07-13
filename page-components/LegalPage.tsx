@@ -320,7 +320,7 @@ const LegalPage = () => {
               >
                 <Button variant="gold" size="lg" className="shadow-gold" asChild>
                   <Link href="/schedule-assessment">
-                    Get the Free 5-Day Assessment
+                    Get Your Free Assessment
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>
@@ -548,7 +548,7 @@ const LegalPage = () => {
               <span className="text-gradient-gold">Your Practice</span>?
             </h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-              Get the Free 5-Day Assessment with our legal IT specialists and discover how Compuwork can protect your firm's data and reputation.
+              Get Your Free Assessment with our legal IT specialists and discover how Compuwork can protect your firm's data and reputation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="gold" size="xl" className="shadow-gold-lg" asChild>

@@ -33,6 +33,17 @@ const nextConfig: NextConfig = {
         destination: 'https://centience.ai/:path*',
         permanent: true,
       },
+      // Retired funnels → the free Governance Score (301)
+      {
+        source: '/readiness',
+        destination: '/assessments/governance-score',
+        permanent: true,
+      },
+      {
+        source: '/schedule-assessment',
+        destination: '/assessments/governance-score',
+        permanent: true,
+      },
       // Consolidate duplicate industry pages → canonical governance-era slugs (301)
       {
         source: '/industries/legal',

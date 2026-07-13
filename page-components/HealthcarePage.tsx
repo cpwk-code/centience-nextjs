@@ -321,7 +321,7 @@ const HealthcarePage = () => {
               >
                 <Button variant="gold" size="lg" className="shadow-gold" asChild>
                   <Link href="/schedule-assessment">
-                    Get the Free 5-Day Assessment
+                    Get Your Free Assessment
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>

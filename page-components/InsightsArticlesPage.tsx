@@ -173,7 +173,7 @@ const InsightsArticlesPage = () => {
             Ready to build your governance program?
           </h2>
           <p className="text-muted-foreground mb-8">
-            Start with an AI Governance Assessment. Results in 5 business days.
+            Start with an AI Governance Assessment. Results instantly.
           </p>
           <Button variant="cta" size="lg" asChild>
             <Link href="/ai-governance-risk-assessment">

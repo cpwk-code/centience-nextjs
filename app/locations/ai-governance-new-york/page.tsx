@@ -210,11 +210,11 @@ export default function Page() {
               Start With a Governance Assessment. No Commitment Required.
             </h2>
             <p className="text-lg opacity-70 mb-8">
-              Our governance assessment identifies gaps across your infrastructure, cybersecurity posture, and AI environment — and delivers a prioritized roadmap within 5 business days.
+              Our governance assessment identifies gaps across your infrastructure, cybersecurity posture, and AI environment — and delivers a prioritized roadmap instantly.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm">
               <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> No commitment required</span>
-              <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results within 5 business days</span>
+              <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> Results instantly</span>
               <span className="flex items-center gap-2 opacity-80"><CheckCircle2 size={16} className="text-accent" /> documented track record of successful outcomes</span>
             </div>
             <Button variant="cta" size="xl" asChild>

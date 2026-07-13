@@ -236,10 +236,10 @@ const AIGovernancePage = () => (
     <section className="section-navy py-20 lg:py-28">
       <div className="container mx-auto text-center max-w-2xl">
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-5">Governed AI Is Not a Constraint on Modernization. It Is What Makes Modernization Sustainable.</h2>
-        <p className="text-lg opacity-70 mb-6">Our AI governance assessment identifies AI usage across your environment, evaluates governance gaps, and delivers a prioritized roadmap to regulatory readiness — typically within 5 business days.</p>
+        <p className="text-lg opacity-70 mb-6">Our AI governance assessment identifies AI usage across your environment, evaluates governance gaps, and delivers a prioritized roadmap to regulatory readiness — typically instantly.</p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm opacity-50 mb-10">
           <span>✓ No commitment required</span>
-          <span>✓ Results within 5 business days</span>
+          <span>✓ Results instantly</span>
           <span>✓ documented track record of successful outcomes</span>
         </div>
         <Button variant="cta" size="xl" asChild>

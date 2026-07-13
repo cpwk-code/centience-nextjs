@@ -235,7 +235,7 @@ Centience builds Reg S-P compliance programs on managed infrastructure. Your end
 
 Centience delivers a Reg S-P readiness assessment and program build for smaller RIAs — documentation, technical controls, and vendor review assembled and ready before the examiner asks.
 
-[CTA_BUTTON:Book Your Reg S-P Assessment|/readiness]
+[CTA_BUTTON:Book Your Reg S-P Assessment|/assessments/governance-score]
 [/CTA_BOX]
     `,
   },
@@ -362,9 +362,9 @@ The starting point is an AI Governance Assessment that identifies every tool, ma
 [CTA_BOX]
 ## Is your organization ready for a HIPAA AI governance examination?
 
-Schedule your AI Governance Assessment. Results delivered within 5 business days.
+Schedule your AI Governance Assessment. Instant results — your score in minutes.
 
-[CTA_BUTTON:Book Your AI Governance Assessment|/readiness]
+[CTA_BUTTON:Book Your AI Governance Assessment|/assessments/governance-score]
 [/CTA_BOX]
     `,
   },
@@ -476,7 +476,7 @@ Centience builds AI governance programs on managed infrastructure. Your endpoint
 
 Schedule your AI Governance Assessment. We identify gaps before the examiner does.
 
-[CTA_BUTTON:Book Your AI Governance Assessment|/readiness]
+[CTA_BUTTON:Book Your AI Governance Assessment|/assessments/governance-score]
 [/CTA_BOX]
     `,
   },
@@ -568,7 +568,7 @@ Most firms can write the policies. The harder problem is enforcement — and enf
 
 Schedule your AI Governance Assessment. We identify gaps before FINRA does.
 
-[CTA_BUTTON:Book Your AI Governance Assessment|/readiness]
+[CTA_BUTTON:Book Your AI Governance Assessment|/assessments/governance-score]
 [/CTA_BOX]
     `,
   },
@@ -674,7 +674,7 @@ Centience builds cybersecurity governance programs on the infrastructure we mana
 
 Schedule your AI Governance Assessment. We evaluate cybersecurity controls alongside AI governance.
 
-[CTA_BUTTON:Book Your Assessment|/readiness]
+[CTA_BUTTON:Book Your Assessment|/assessments/governance-score]
 [/CTA_BOX]
     `,
   },
@@ -775,7 +775,7 @@ Centience builds cybersecurity governance programs for SEC-regulated organizatio
 
 Schedule your AI Governance Assessment — we evaluate cybersecurity governance alongside AI governance.
 
-[CTA_BUTTON:Book Your Assessment|/readiness]
+[CTA_BUTTON:Book Your Assessment|/assessments/governance-score]
 [/CTA_BOX]
     `,
   },
@@ -873,7 +873,7 @@ The gap between having these components documented and having them technically e
 
 Schedule your AI Governance Assessment. We evaluate cybersecurity and AI governance together.
 
-[CTA_BUTTON:Book Your Assessment|/readiness]
+[CTA_BUTTON:Book Your Assessment|/assessments/governance-score]
 [/CTA_BOX]
     `,
   },
@@ -1006,7 +1006,7 @@ Document the Review Process | Even for claims you remove — documenting your re
 [CTA_BOX]
 ## Does your firm have an AI governance program that protects against enforcement exposure?
 Schedule your AI Governance Assessment. We identify gaps before the SEC does.
-[CTA_BUTTON:Book Your AI Governance Assessment|/readiness]
+[CTA_BUTTON:Book Your AI Governance Assessment|/assessments/governance-score]
 [/CTA_BOX]
     `,
   },
@@ -1109,9 +1109,9 @@ KPMG's Q1 2026 AI Pulse Survey found that 44% of leaders cite cybersecurity and 
 The question is not whether shadow AI is running inside your organization. Based on the data, it almost certainly is. The question is whether you have the visibility to know it, the technical controls to govern it, and the documentation to demonstrate to regulators that you took it seriously.
 
 [CTA_BOX]
-## Find Out Where You Stand in 5 Days
-Centience conducts a structured 5-Day AI Governance Assessment for regulated organizations in financial services and healthcare. Clear exposure picture. Regulatory gap analysis. A technically enforced governance roadmap — not a policy template.
-[CTA_BUTTON:Schedule Your Assessment|/readiness]
+## Find Out Where You Stand in Minutes
+Centience conducts a structured AI Governance Score for regulated organizations in financial services and healthcare. Clear exposure picture. Regulatory gap analysis. A technically enforced governance roadmap — not a policy template.
+[CTA_BUTTON:Get Your Free Assessment|/assessments/governance-score]
 [/CTA_BOX]
 
 ---

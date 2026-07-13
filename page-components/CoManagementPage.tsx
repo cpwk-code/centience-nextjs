@@ -62,8 +62,8 @@ const CoManagementPage = () => (
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="cta" size="xl" asChild>
-              <Link href="/readiness">
-                Get the Free 5-Day Assessment <ArrowRight size={16} />
+              <Link href="/assessments/governance-score">
+                Get Your Free Assessment <ArrowRight size={16} />
               </Link>
             </Button>
             <Button variant="cta-outline" size="xl" asChild>
@@ -200,11 +200,11 @@ const CoManagementPage = () => (
           Ready to Enroll in the Centience Governance Program?
         </h2>
         <p className="text-lg opacity-60 leading-relaxed mb-8 max-w-xl mx-auto">
-          The Free 5-Day Assessment is the first step. Results within 5 business days.
+          The Free Governance Score is the first step. Results instantly.
         </p>
         <Button variant="cta" size="xl" asChild>
-          <Link href="/readiness">
-            Get the Free 5-Day Assessment <ArrowRight size={16} />
+          <Link href="/assessments/governance-score">
+            Get Your Free Assessment <ArrowRight size={16} />
           </Link>
         </Button>
         <p className="text-sm opacity-50 mt-6">

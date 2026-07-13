@@ -41,8 +41,8 @@ const ProfessionalServicesPage = () => {
 
   // Default SEO values (fallback)
   const defaultSEO = {
-    title: "Managed IT & Cybersecurity for Professional Services | Compuwork",
-    description: "Audit‑ready IT, cybersecurity, and SOC 2 compliance for accounting firms and consultancies. Secure client data and scale for busy seasons with Compuwork.",
+    title: "Managed IT & Cybersecurity for Professional Services | Centience",
+    description: "Audit‑ready IT, cybersecurity, and SOC 2 compliance for accounting firms and consultancies. Secure client data and scale for busy seasons with Centience.",
     keywords: [
       // Primary Keywords
       'professional services IT support',
@@ -194,7 +194,7 @@ const ProfessionalServicesPage = () => {
         keywords={seoKeywords}
         service={{
           serviceType: 'IT Services for Professional Services',
-          provider: 'Compuwork',
+          provider: 'Centience',
           areaServed: ['New York', 'Florida', 'United States'],
         }}
         breadcrumbs={[
@@ -220,7 +220,7 @@ const ProfessionalServicesPage = () => {
       
       {/* Semantic Key Facts for AI Search Engines */}
       <KeyFacts
-        entityName="Compuwork Professional Services IT"
+        entityName="Centience Professional Services IT"
         entityType="Service"
         description="Managed IT services for accounting firms, consulting companies, and professional services. SOC 2 certification support, secure remote work, and 24/7 IT support."
         facts={[
@@ -298,7 +298,7 @@ const ProfessionalServicesPage = () => {
                 transition={{ delay: 0.1 }}
                 className="text-xl text-primary-foreground/70 mb-4"
               >
-                Compuwork delivers expert managed IT services and cybersecurity solutions designed specifically for professional service organizations that clients trust with sensitive data. With deep experience supporting SOC 2‑aligned firms, Compuwork ensures your systems stay secure, your documentation stays audit‑ready, and your team stays confident year‑round.
+                Centience runs technology governance — managed infrastructure, cybersecurity, and AI oversight as one accountable program — for professional service firms whose clients trust them with sensitive data. We keep your controls enforced and your audit evidence continuously assembled, so you stay exam- and client-review-ready year-round instead of scrambling before each request.
               </motion.p>
               
               <motion.p
@@ -317,8 +317,8 @@ const ProfessionalServicesPage = () => {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Button variant="gold" size="lg" className="shadow-gold" asChild>
-                  <Link href="/schedule-assessment">
-                    Get the Free 5-Day Assessment
+                  <Link href="/assessments/governance-score">
+                    Get Your Free Assessment
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>
@@ -365,7 +365,7 @@ const ProfessionalServicesPage = () => {
           <AnimatedSection className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-foreground mb-6">
               Why Professional Firms{" "}
-              <span className="text-gradient-gold">Choose Compuwork</span>
+              <span className="text-gradient-gold">Choose Centience</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
               When clients demand proof of your security practices, your IT partner must deliver audit-ready infrastructure, <strong className="text-foreground">not just technology support.</strong>
@@ -507,7 +507,7 @@ const ProfessionalServicesPage = () => {
               </p>
               <Button variant="gold" size="lg" className="shadow-gold" asChild>
                 <Link href="/contact">
-                  Get the Free 5-Day Assessment
+                  Get Your Free Assessment
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
@@ -545,11 +545,11 @@ const ProfessionalServicesPage = () => {
               <span className="text-gradient-gold">Your Practice</span>?
             </h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-              Get the Free 5-Day Assessment and discover how Compuwork can transform your IT infrastructure into a competitive advantage.
+              Get your free Governance Score and see where your firm stands — and how Centience turns technology governance into audit-ready proof, not a fire drill.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="gold" size="xl" className="shadow-gold-lg" asChild>
-                <Link href="/get-started">
+                <Link href="/assessments/governance-score">
                   Get Started
                   <ArrowRight className="w-5 h-5" />
                 </Link>

@@ -27,7 +27,7 @@ export const healthcareFaqs: FaqItem[] = [
   {
     question: "How long does a HIPAA AI governance assessment take?",
     answer:
-      "Centience HIPAA governance assessments typically complete within 5 business days. The assessment identifies technical safeguard gaps, evaluates AI tools touching patient data, reviews Business Associate Agreement coverage, and delivers a prioritized remediation roadmap. No commitment is required.",
+      "Centience HIPAA governance assessments typically complete in minutes. The assessment identifies technical safeguard gaps, evaluates AI tools touching patient data, reviews Business Associate Agreement coverage, and delivers a prioritized remediation roadmap. No commitment is required.",
   },
 ];
 
@@ -50,7 +50,7 @@ export const financialServicesFaqs: FaqItem[] = [
   {
     question: "How long does a technology governance assessment take?",
     answer:
-      "Centience governance assessments typically complete within 5 business days. The assessment covers infrastructure, cybersecurity posture, AI usage across the organization, and compliance readiness — and delivers a prioritized roadmap regardless of whether you engage further. No commitment is required.",
+      "Centience governance assessments typically complete in minutes. The assessment covers infrastructure, cybersecurity posture, AI usage across the organization, and compliance readiness — and delivers a prioritized roadmap regardless of whether you engage further. No commitment is required.",
   },
 ];
 

@@ -27,7 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://centience.ai/co-management', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://centience.ai/data-governance', lastModified: '2026-06-21', changeFrequency: 'monthly', priority: 0.9 },
     // Program enrollment — Governance Readiness Review (primary CTA)
-    { url: 'https://centience.ai/readiness', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.95 },
     // Assessment
     { url: 'https://centience.ai/ai-governance-risk-assessment', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.85 },
     // Industries

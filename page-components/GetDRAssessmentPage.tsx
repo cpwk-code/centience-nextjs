@@ -418,7 +418,7 @@ const GetDRAssessmentPage = () => {
                   </motion.div>
 
                   <p className="text-center text-sm text-muted-foreground">
-                    After submitting, you'll be redirected to schedule your assessment.
+                    After submitting, you'll be redirected to get your Governance Score.
                   </p>
 
                   <div className="flex justify-center gap-4 text-sm">

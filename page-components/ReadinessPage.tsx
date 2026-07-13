@@ -31,7 +31,7 @@ const INDUSTRIES = [
 const whatToExpect = [
   {
     icon: Clock,
-    title: "Results within 5 business days",
+    title: "Results instantly",
     desc: "You receive a prioritized gap map across infrastructure, cybersecurity, AI usage, vendor risk, and compliance readiness — delivered in writing.",
   },
   {
@@ -114,7 +114,7 @@ const ReadinessPage = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
-          service: `Free 5-Day Assessment — ${form.industry}`,
+          service: `Free Governance Score — ${form.industry}`,
           captchaToken,
         }),
       });
@@ -143,13 +143,13 @@ const ReadinessPage = () => {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.1] mb-6">
               Request a{" "}
-              <span className="text-gradient-gold">Free 5-Day Assessment.</span>
+              <span className="text-gradient-gold">Free Governance Score.</span>
             </h1>
             <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-              The Free 5-Day Assessment is the first step in the Centience Governance Program. It evaluates your organization's current posture across infrastructure, cybersecurity, AI usage, vendor risk, and compliance readiness — and delivers a clear picture of where you stand before enrollment begins.
+              The Free Governance Score is the first step in the Centience Governance Program. It evaluates your organization's current posture across infrastructure, cybersecurity, AI usage, vendor risk, and compliance readiness — and delivers a clear picture of where you stand before enrollment begins.
             </p>
             <p className="text-sm leading-relaxed opacity-50 font-semibold uppercase tracking-wider">
-              Free, with results within 5 business days.
+              Free, with results instantly.
             </p>
           </motion.div>
         </div>
@@ -203,7 +203,7 @@ const ReadinessPage = () => {
                   </div>
                   <h3 className="font-display font-bold text-primary text-xl mb-3">Request received.</h3>
                   <p className="text-muted-foreground leading-relaxed max-w-md mx-auto mb-6">
-                    A member of the Centience team will reach out within one business day to confirm your Free 5-Day Assessment and schedule the intake conversation. Results are delivered within 5 business days.
+                    A member of the Centience team will reach out within one business day to confirm your Free Governance Score and schedule the intake conversation. Results are delivered instantly.
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Questions in the meantime?{" "}
@@ -341,7 +341,7 @@ const ReadinessPage = () => {
                     {status === "loading" ? (
                       <><Loader2 size={16} className="animate-spin" /> Submitting…</>
                     ) : (
-                      <>Request My Free 5-Day Assessment <ArrowRight size={16} /></>
+                      <>Request My Free Governance Score <ArrowRight size={16} /></>
                     )}
                   </Button>
 
@@ -400,7 +400,7 @@ const ReadinessPage = () => {
               <div className="card-premium p-6 border-l-4 border-gold">
                 <p className="text-xs font-bold uppercase tracking-[0.25em] text-accent mb-3">Enrollment follows the review</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  The Free 5-Day Assessment is the first step in the Centience Governance Program. Following the review, qualified organizations receive a program enrollment recommendation — including scope, structure, and timeline.
+                  The Free Governance Score is the first step in the Centience Governance Program. Following the review, qualified organizations receive a program enrollment recommendation — including scope, structure, and timeline.
                 </p>
               </div>
             </motion.div>

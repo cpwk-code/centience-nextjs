@@ -299,7 +299,7 @@ const MiamiPage = () => {
               >
                 <Button variant="gold" size="lg" className="group animate-pulse-glow" asChild>
                     <Link href="/schedule-assessment">
-                    Get the Free 5-Day Assessment
+                    Get Your Free Assessment
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
