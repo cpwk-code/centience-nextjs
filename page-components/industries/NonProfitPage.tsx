@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Shield, Brain, Lock, FileText, Server, Users } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import { nonProfitFaqs } from "@/data/industryFaqs";
 
 const pressurePoints = [
   { title: "Donor Data Protection", body: "Non-profits collect and store donor financial information, giving histories, and personal data. A data breach affecting donor records creates immediate reputational damage — and potential regulatory liability under state data protection laws." },
@@ -178,6 +180,7 @@ const NonProfitPage = () => (
         </p>
       </div>
     </section>
+    <FAQSection items={nonProfitFaqs} heading="Non-Profit Governance — FAQ" />
   </Layout>
 );
 

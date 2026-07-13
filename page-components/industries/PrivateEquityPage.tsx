@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Shield, Brain, Lock, BarChart3, FileText, Users } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import { privateEquityFaqs } from "@/data/industryFaqs";
 
 const pressurePoints = [
   { title: "SEC Investment Adviser Oversight", body: "Registered PE firms face SEC examination expectations that now include technology governance, cybersecurity controls, and — increasingly — AI governance. Firms must demonstrate governance at the firm level and show oversight of significant technology risks at portfolio companies." },
@@ -175,6 +177,7 @@ const PrivateEquityPage = () => (
         </p>
       </div>
     </section>
+    <FAQSection items={privateEquityFaqs} heading="Private Equity Governance — FAQ" />
   </Layout>
 );
 

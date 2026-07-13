@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Shield, Brain, Lock, MessageSquare, AlertTriangle, FileText } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import { lawFirmsFaqs } from "@/data/industryFaqs";
 
 const pressurePoints = [
   { title: "ABA Model Rules and State Bar Requirements", body: "ABA Model Rule 1.6 requires competence in technology as part of the duty of confidentiality. State bars are increasingly issuing guidance on technology governance, AI use, and cybersecurity — and several have implemented mandatory reporting requirements for security incidents." },
@@ -176,6 +178,7 @@ const LawFirmsPage = () => (
         </p>
       </div>
     </section>
+    <FAQSection items={lawFirmsFaqs} heading="Law Firm Governance — FAQ" />
   </Layout>
 );
 

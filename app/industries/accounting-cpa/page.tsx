@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import AccountingCpaPage from '@/page-components/industries/AccountingCpaPage';
+import { accountingCpaFaqs, buildFaqSchema } from '@/data/industryFaqs';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -58,10 +59,13 @@ const breadcrumbSchema = {
   ]
 };
 
+const faqSchema = buildFaqSchema(accountingCpaFaqs);
+
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <AccountingCpaPage />
     </>
   );

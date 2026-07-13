@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Shield, Brain, Lock, Cloud, FileText, Server } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import { accountingCpaFaqs } from "@/data/industryFaqs";
 
 const pressurePoints = [
   { title: "Client Financial Data Security", body: "CPA firms process and store tax returns, financial statements, and business records containing some of the most sensitive financial information their clients hold. This data is a high-value target — and a professional liability if compromised." },
@@ -173,6 +175,7 @@ const AccountingCpaPage = () => (
         </p>
       </div>
     </section>
+    <FAQSection items={accountingCpaFaqs} heading="Accounting and CPA Governance — FAQ" />
   </Layout>
 );
 

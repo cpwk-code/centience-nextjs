@@ -54,6 +54,98 @@ export const financialServicesFaqs: FaqItem[] = [
   },
 ];
 
+export const lawFirmsFaqs: FaqItem[] = [
+  {
+    question: "What are a law firm's ethical duties when using AI on client matters?",
+    answer:
+      "ABA Model Rules 1.1 (competence), 1.6 (confidentiality), and 5.3 (supervision of nonlawyer assistance) require lawyers to understand the AI tools they use, protect client confidential information from disclosure to third-party AI systems, and supervise how AI handles matter data. A defensible AI governance program documents which tools are approved, what data they may touch, and how confidentiality is preserved.",
+  },
+  {
+    question: "Can law firms use public AI tools like ChatGPT with client data?",
+    answer:
+      "Only with governance. Entering client confidential information into a public AI tool that may train on inputs can breach ABA Rule 1.6. Firms need a written AI use policy, approved tools with appropriate data protections and no-training terms, and technical controls that keep confidential matter data out of ungoverned tools.",
+  },
+  {
+    question: "What do client security questionnaires and outside counsel guidelines now require?",
+    answer:
+      "Corporate clients increasingly require firms to demonstrate MFA, encryption, access controls, breach-notification procedures, vendor risk management, and AI governance. Firms that cannot produce evidence these controls operate continuously lose engagements or receive findings in client security reviews.",
+  },
+  {
+    question: "How long does a law firm governance assessment take?",
+    answer:
+      "Centience governance assessments complete in minutes. You get a 0–100 score across security, confidentiality, records, and AI governance, a peer benchmark, and a prioritized roadmap — with no commitment required.",
+  },
+];
+
+export const privateEquityFaqs: FaqItem[] = [
+  {
+    question: "How does SEC oversight apply to a PE firm's technology governance?",
+    answer:
+      "SEC-registered advisers, including private equity firms, are subject to Regulation S-P safeguards, books-and-records requirements, and examination priorities covering cybersecurity governance, vendor oversight, and incident response. AI used in diligence, valuation, or portfolio monitoring falls under the same governance expectations.",
+  },
+  {
+    question: "Can a PE firm standardize governance across its portfolio companies?",
+    answer:
+      "Yes — and it is increasingly expected. Operating partners use a single governance framework to assess and uplift portfolio-company technology risk, standardize cyber controls, and produce board-level reporting. One master governance relationship can cover many portfolio companies.",
+  },
+  {
+    question: "Why is technology governance a value-creation lever in private equity?",
+    answer:
+      "Governance gaps are diligence risks and post-close liabilities — a breach or exam finding at a portfolio company can impair value and complicate exit. Standardized, evidenced governance reduces risk, improves exit readiness, and can differentiate a firm in competitive processes.",
+  },
+  {
+    question: "How long does a governance assessment take?",
+    answer:
+      "Centience governance assessments complete in minutes — scoring the firm (or a portfolio company) 0–100 across infrastructure, cybersecurity, data, and AI, with a prioritized roadmap and no commitment required.",
+  },
+];
+
+export const accountingCpaFaqs: FaqItem[] = [
+  {
+    question: "What governance do accounting and CPA firms need when adopting AI?",
+    answer:
+      "Firms using AI in tax research, audit sampling, or document analysis must govern where client financial data flows, maintain confidentiality under the AICPA Code of Professional Conduct, protect taxpayer data under IRS safeguards (Publication 4557 and IRC Section 7216), and document AI oversight. Ungoverned AI adoption creates real professional-liability exposure.",
+  },
+  {
+    question: "What are the IRS data-security requirements for firms handling taxpayer data?",
+    answer:
+      "IRS Publication 4557 and the FTC Safeguards Rule require a written information security plan, access controls, encryption, vendor management, and incident response for firms that handle taxpayer information. Many firms have the policies but cannot evidence that the controls operate continuously.",
+  },
+  {
+    question: "Does AI use affect a firm's SOC 2 or client audits?",
+    answer:
+      "Yes. Clients and their auditors increasingly ask how firms govern the AI tools that touch their data. A documented AI inventory, access controls, and vendor diligence are becoming standard items in client security reviews and SOC 2 examinations.",
+  },
+  {
+    question: "How long does a governance assessment take?",
+    answer:
+      "Centience governance assessments complete in minutes, scoring your firm 0–100 across security, records, supervision, infrastructure, and AI — with a prioritized roadmap and no commitment required.",
+  },
+];
+
+export const nonProfitFaqs: FaqItem[] = [
+  {
+    question: "What technology governance do non-profits actually need?",
+    answer:
+      "Non-profits handling donor, beneficiary, or health data face many of the same obligations as regulated businesses — data protection, breach notification, and increasingly AI governance — often with fewer resources. A right-sized governance program protects donor trust and satisfies grantor and board requirements.",
+  },
+  {
+    question: "Why do funders and boards ask about cybersecurity and AI now?",
+    answer:
+      "Grantmakers, insurers, and boards increasingly require evidence of basic controls — MFA, tested backups, access controls, and incident response — plus a policy for AI use with sensitive data. Non-profits that cannot demonstrate these controls risk funding and reputational harm after an incident.",
+  },
+  {
+    question: "How can a resource-constrained non-profit govern AI use?",
+    answer:
+      "Start with an inventory of the AI tools in use, a simple written AI use policy, and controls that keep donor and beneficiary data out of ungoverned tools. A managed governance program supplies the oversight without requiring in-house security staff.",
+  },
+  {
+    question: "How long does a governance assessment take?",
+    answer:
+      "Centience governance assessments complete in minutes — a 0–100 score across security, data, and AI governance with a prioritized, right-sized roadmap and no commitment required.",
+  },
+];
+
 /** Build FAQPage JSON-LD from a list of FAQ items. */
 export function buildFaqSchema(items: FaqItem[]) {
   return {

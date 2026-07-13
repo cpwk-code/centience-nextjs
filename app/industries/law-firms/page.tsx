@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import LawFirmsPage from '@/page-components/industries/LawFirmsPage';
+import { lawFirmsFaqs, buildFaqSchema } from '@/data/industryFaqs';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -58,10 +59,13 @@ const breadcrumbSchema = {
   ]
 };
 
+const faqSchema = buildFaqSchema(lawFirmsFaqs);
+
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <LawFirmsPage />
     </>
   );
