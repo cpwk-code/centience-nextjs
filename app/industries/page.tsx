@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import IndustriesPage from '@/page-components/IndustriesPage';
+import { buildBreadcrumbSchema } from '@/lib/landingSchema';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -32,6 +33,16 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Home', path: '' },
+  { name: 'Industries', path: '/industries' },
+]);
+
 export default function Page() {
-  return <IndustriesPage />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <IndustriesPage />
+    </>
+  );
 }

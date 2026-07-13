@@ -1,17 +1,18 @@
 "use client";
 import { Linkedin } from "lucide-react";
+import Image from "next/image";
 import authorPhoto from "@/assets/author-orville-matias.png";
 
 const BlogAuthorCard = () => {
   return (
     <div className="my-12 p-6 sm:p-8 bg-card border border-border rounded-2xl flex flex-col sm:flex-row gap-6 items-center sm:items-start">
-      <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden flex-shrink-0 bg-muted">
-        <img
-          src={typeof authorPhoto === "string" ? authorPhoto : (authorPhoto as any).src}
+      <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden flex-shrink-0 bg-muted">
+        <Image
+          src={authorPhoto}
           alt="Orville Matias, Founder and CEO of Centience"
-          className="w-full h-full object-cover"
-          loading="lazy"
-          decoding="async"
+          fill
+          sizes="128px"
+          className="object-cover"
         />
       </div>
       <div className="text-center sm:text-left">

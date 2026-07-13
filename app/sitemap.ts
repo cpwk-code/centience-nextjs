@@ -1,5 +1,11 @@
 import type { MetadataRoute } from 'next';
 import { blogPosts } from '@/data/blogPosts';
+import { complianceContent } from '@/data/complianceContent';
+import { comparePages } from '@/data/comparePages';
+import { localGovernancePages } from '@/data/localGovernancePages';
+
+// New programmatic SEO landing pages ship with the 2026-07-13 release.
+const LANDING_LASTMOD = '2026-07-13';
 
 const MONTHS: Record<string, string> = {
   January: '01', February: '02', March: '03', April: '04',
@@ -79,6 +85,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://centience.ai/locations/ai-governance-fort-lauderdale', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.65 },
   ];
 
+  const complianceLanding: MetadataRoute.Sitemap = Object.keys(complianceContent).map((slug) => ({
+    url: `https://centience.ai/compliance/${slug}`,
+    lastModified: LANDING_LASTMOD,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  const compareLanding: MetadataRoute.Sitemap = Object.keys(comparePages).map((slug) => ({
+    url: `https://centience.ai/compare/${slug}`,
+    lastModified: LANDING_LASTMOD,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }));
+
+  const localLanding: MetadataRoute.Sitemap = Object.keys(localGovernancePages).map((slug) => ({
+    url: `https://centience.ai/locations/${slug}`,
+    lastModified: LANDING_LASTMOD,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   const blogPages: MetadataRoute.Sitemap = blogPosts
     // Published Centience articles only, and exclude LinkedIn-only / empty stubs
     .filter((p) => p.id >= 11 && !p.externalUrl && p.content && p.content.trim().length > 0)
@@ -89,5 +116,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.75,
     }));
 
-  return [...staticPages, ...blogPages];
+  return [...staticPages, ...complianceLanding, ...compareLanding, ...localLanding, ...blogPages];
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import InsightsArticlesPage from '@/page-components/InsightsArticlesPage';
+import { buildBreadcrumbSchema } from '@/lib/landingSchema';
 
 export const metadata: Metadata = {
   title: "AI Governance & Cybersecurity Articles | Centience Insights",
@@ -39,6 +40,17 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Home', path: '' },
+  { name: 'Insights', path: '/insights' },
+  { name: 'Articles', path: '/insights/articles' },
+]);
+
 export default function Page() {
-  return <InsightsArticlesPage />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <InsightsArticlesPage />
+    </>
+  );
 }
