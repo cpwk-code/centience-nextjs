@@ -7,7 +7,7 @@ import { Download, ArrowRight, ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import type { GuideData } from "@/data/guideContent";
 import { GUIDES_LIST } from "@/data/guideContent";
-import LeadCaptureModal, { hasLeadCookie, trackGuideDownload } from "@/components/LeadCaptureModal";
+import LeadCaptureModal, { hasUnlockedAsset, trackGuideDownload } from "@/components/LeadCaptureModal";
 
 const GuideDetailPage = ({ guide }: { guide: GuideData }) => {
   const bodyKeys = guide.bodies ? Object.keys(guide.bodies) : [];
@@ -18,8 +18,10 @@ const GuideDetailPage = ({ guide }: { guide: GuideData }) => {
   const sections = current?.sections ?? guide.sections ?? [];
   const downloadFile = current?.file ?? guide.file;
 
+  const assetKey = `guide:${guide.slug}`;
+
   const handleDownload = () => {
-    if (hasLeadCookie()) {
+    if (hasUnlockedAsset(assetKey)) {
       trackGuideDownload(guide.title, guide.slug ?? null, downloadFile);
     } else {
       setGateOpen(true);
@@ -37,6 +39,7 @@ const GuideDetailPage = ({ guide }: { guide: GuideData }) => {
         title={`${guide.title} — Download Now`}
         guideHref={downloadFile}
         guideSlug={guide.slug}
+        assetKey={assetKey}
       />
 
       {/* Hero */}

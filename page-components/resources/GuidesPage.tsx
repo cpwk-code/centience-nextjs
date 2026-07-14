@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import { useState } from "react";
 import { GUIDES_LIST } from "@/data/guideContent";
-import LeadCaptureModal, { hasLeadCookie, trackGuideDownload } from "@/components/LeadCaptureModal";
+import LeadCaptureModal, { hasUnlockedAsset, trackGuideDownload } from "@/components/LeadCaptureModal";
 
 const GuidesPage = () => {
   const [gateOpen, setGateOpen] = useState(false);
   const [selectedGuide, setSelectedGuide] = useState<typeof GUIDES_LIST[0] | null>(null);
 
   const handleDownload = (guide: typeof GUIDES_LIST[0]) => {
-    if (hasLeadCookie()) {
+    if (hasUnlockedAsset(`guide:${guide.slug ?? guide.id}`)) {
       trackGuideDownload(guide.title, guide.slug ?? null, guide.file);
     } else {
       setSelectedGuide(guide);
@@ -29,6 +29,7 @@ const GuidesPage = () => {
         title={selectedGuide ? `${selectedGuide.title} — Download Now` : ""}
         guideHref={selectedGuide?.file}
         guideSlug={selectedGuide?.slug}
+        assetKey={selectedGuide ? `guide:${selectedGuide.slug ?? selectedGuide.id}` : undefined}
       />
 
       {/* Hero */}
