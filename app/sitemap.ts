@@ -25,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     // Core
     { url: 'https://centience.ai', lastModified: '2026-07-10', changeFrequency: 'weekly', priority: 1.0 },
+    // Platform (product)
+    { url: 'https://centience.ai/platform', lastModified: '2026-07-14', changeFrequency: 'weekly', priority: 0.95 },
     // Programs
     { url: 'https://centience.ai/governance', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://centience.ai/ai-governance', lastModified: '2026-07-10', changeFrequency: 'monthly', priority: 0.9 },
