@@ -200,9 +200,20 @@ consistent.
 - A/B the connection note per persona in batches of ~50 before scaling the whole
   list.
 
-## 9. If you run this through an outreach tool
+## 9. Manual sending (no automation)
 
-The list has a LinkedIn URL for all 316 and verified emails for 297, so it drops
-straight into a LinkedIn automation tool (e.g. HeyReach) or a HubSpot sequence.
-Map the merge fields to the spreadsheet columns exactly as named in §4. Keep the
-daily send caps in §2 — automation makes it easy to trip LinkedIn's limits.
+We are **not** using LinkedIn automation — it violates LinkedIn's terms and gets
+accounts banned. These messages are sent **by hand** by a human sender.
+
+Workflow for the sender:
+- Work from the companion tracker workbook (`linkedin-outreach-tracker.xlsx`),
+  which pre-sorts every lead into a persona track and pre-fills the Touch 1
+  connection note per person — copy, paste, send.
+- Use the message copy in §4–§5 for Touches 2–6, matched to each lead's
+  **Persona Track** column.
+- Log dates in the tracker as you go (Connection Sent → Accepted → Touch 2…6 →
+  Replied → Status) so nobody gets double-messaged or dropped mid-sequence.
+- Respect the daily cap in §2 (~20–25 new connection requests/day per account),
+  even by hand — LinkedIn throttles high-volume manual activity too.
+- The lead list contains personal contact data; keep it to the sending workbook
+  and CRM. It is intentionally **not** committed to the repo.
