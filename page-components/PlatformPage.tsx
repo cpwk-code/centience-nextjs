@@ -102,7 +102,7 @@ const PlatformPage = () => (
               <Button variant="cta" size="xl" asChild>
                 <Link href="/contact">Book a demo <ArrowRight size={16} /></Link>
               </Button>
-              <Button variant="outline" size="xl" className="text-white border-white/40 hover:bg-white/10" asChild>
+              <Button variant="outline" size="xl" className="bg-white/5 text-white border-white/40 hover:bg-white/15 hover:text-white" asChild>
                 <Link href="/assessments/governance-score">See it first — free Governance Score</Link>
               </Button>
             </div>
@@ -277,7 +277,7 @@ const PlatformPage = () => (
           <Button variant="cta" size="xl" asChild>
             <Link href="/contact">Book a demo <ArrowRight size={16} /></Link>
           </Button>
-          <Button variant="outline" size="xl" className="text-white border-white/40 hover:bg-white/10" asChild>
+          <Button variant="outline" size="xl" className="bg-white/5 text-white border-white/40 hover:bg-white/15 hover:text-white" asChild>
             <Link href="/assessments/governance-score">Get your free Governance Score</Link>
           </Button>
         </div>
