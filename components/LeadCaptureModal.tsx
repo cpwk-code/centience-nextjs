@@ -14,6 +14,7 @@ import HCaptcha from "@/components/HCaptcha";
 
 const COOKIE_NAME = "centience_lead_captured";
 const LEAD_DATA_KEY = "centience_lead_data";
+const UNLOCKED_KEY = "centience_unlocked_assets";
 const COOKIE_DAYS = 90;
 
 function setCookie(name: string, value: string, days: number) {
@@ -46,6 +47,42 @@ export function getStoredLeadData(): LeadFormData | null {
     const raw = localStorage.getItem(LEAD_DATA_KEY);
     return raw ? JSON.parse(raw) : null;
   } catch { return null; }
+}
+
+/**
+ * Per-asset gating. A lead unlocks each guide/assessment individually, so
+ * one contact-info entry no longer opens everything. We remember who they are
+ * (getStoredLeadData) to pre-fill the form, but each asset is its own gate and
+ * its own captured engagement.
+ */
+function getUnlockedAssets(): string[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const raw = localStorage.getItem(UNLOCKED_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch { return []; }
+}
+
+/** Has this specific asset (e.g. "guide:ai-governance") already been unlocked? */
+export function hasUnlockedAsset(assetKey: string): boolean {
+  if (!assetKey) return false;
+  return getUnlockedAssets().includes(assetKey);
+}
+
+/** Mark a specific asset as unlocked for this browser. */
+export function markAssetUnlocked(assetKey: string) {
+  if (typeof window === 'undefined' || !assetKey) return;
+  try {
+    const set = new Set(getUnlockedAssets());
+    set.add(assetKey);
+    localStorage.setItem(UNLOCKED_KEY, JSON.stringify([...set]));
+  } catch {}
+}
+
+/** True once the visitor has given their details at least once (for pre-fill). */
+export function hasStoredLead(): boolean {
+  const d = getStoredLeadData();
+  return !!(d && d.email);
 }
 
 /** Trigger a same-origin file download without a new tab (avoids popup blocking). */
@@ -117,6 +154,8 @@ interface LeadCaptureModalProps {
   guideHref?: string;
   /** For guide gates: the slug used to identify which guide was downloaded */
   guideSlug?: string;
+  /** Stable per-asset key (e.g. "guide:ai-governance", "assessment:...") — marked unlocked on submit */
+  assetKey?: string;
   /** For assessment gates: callback after form submit */
   onSuccess?: (data: LeadFormData) => void;
 }
@@ -140,6 +179,7 @@ const LeadCaptureModal = ({
   title,
   guideHref,
   guideSlug,
+  assetKey,
   onSuccess,
 }: LeadCaptureModalProps) => {
   const [form, setForm] = useState<LeadFormData>({
@@ -156,9 +196,30 @@ const LeadCaptureModal = ({
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [captchaToken, setCaptchaToken] = useState("");
+  // Returning lead: we already have their details, so pre-fill and skip the
+  // captcha for a near one-click confirm on each additional asset.
+  const [returning, setReturning] = useState(false);
 
   useEffect(() => {
-    if (!open) {
+    if (open) {
+      const stored = getStoredLeadData();
+      if (stored && stored.email) {
+        setReturning(true);
+        setForm((f) => ({
+          firstName: f.firstName || stored.firstName || "",
+          lastName: f.lastName || stored.lastName || "",
+          email: f.email || stored.email || "",
+          company: f.company || stored.company || "",
+          jobTitle: f.jobTitle || stored.jobTitle || "",
+          industry: f.industry || stored.industry || "",
+          phone: f.phone || stored.phone || "",
+          orgSize: f.orgSize || stored.orgSize || "",
+          regulatoryFramework: f.regulatoryFramework || stored.regulatoryFramework || "",
+        }));
+      } else {
+        setReturning(false);
+      }
+    } else {
       setLoading(false);
       setSuccess(false);
     }
@@ -176,29 +237,36 @@ const LeadCaptureModal = ({
     form.company.trim() &&
     form.jobTitle.trim() &&
     form.industry &&
-    !!captchaToken &&
+    (returning || !!captchaToken) &&
     (isGuide || (form.orgSize && form.regulatoryFramework));
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!requiredFilled) return;
     setLoading(true);
-    try {
-      await fetch('/api/guide-leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...form,
-          guideTitle: title,
-          guideSlug: guideSlug || null,
-          sourceUrl: window.location.href,
-        }),
-      });
-    } catch (err) {
-      console.error('Lead submission error (non-fatal):', err);
+    // Guides log the engagement here (which guide, is_returning). Assessments
+    // are logged by the caller's onSuccess -> /api/assessment-lead, so we don't
+    // double-post them to the guide endpoint.
+    if (isGuide) {
+      try {
+        await fetch('/api/guide-leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            ...form,
+            guideTitle: title,
+            guideSlug: guideSlug || null,
+            sourceUrl: window.location.href,
+            is_returning: returning,
+          }),
+        });
+      } catch (err) {
+        console.error('Lead submission error (non-fatal):', err);
+      }
     }
     setCookie(COOKIE_NAME, "1", COOKIE_DAYS);
     saveLeadData(form);
+    if (assetKey) markAssetUnlocked(assetKey);
     setLoading(false);
     setSuccess(true);
     if (isGuide && guideHref) {
@@ -266,9 +334,13 @@ const LeadCaptureModal = ({
                 {title}
               </h2>
               <p className="text-sm text-muted-foreground mb-6">
-                {isGuide
-                  ? "Enter your details to access this guide. We respect your privacy and will never sell your information."
-                  : "This assessment takes under 5 minutes. Enter your details and we'll send you a personalized results report."}
+                {returning
+                  ? (isGuide
+                      ? "Welcome back — confirm your details and your guide will download."
+                      : "Welcome back — confirm your details to start this assessment.")
+                  : (isGuide
+                      ? "Enter your details to access this guide. We respect your privacy and will never sell your information."
+                      : "This assessment takes under 5 minutes. Enter your details and we'll send you a personalized results report.")}
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -396,13 +468,15 @@ const LeadCaptureModal = ({
                   </>
                 )}
 
-                {/* hCaptcha */}
-                <div className="flex justify-center">
-                  <HCaptcha
-                    onVerify={(token) => setCaptchaToken(token)}
-                    onExpire={() => setCaptchaToken("")}
-                  />
-                </div>
+                {/* hCaptcha — only for first-time leads; returning leads already verified */}
+                {!returning && (
+                  <div className="flex justify-center">
+                    <HCaptcha
+                      onVerify={(token) => setCaptchaToken(token)}
+                      onExpire={() => setCaptchaToken("")}
+                    />
+                  </div>
+                )}
 
                 <Button
                   variant="cta"
@@ -416,6 +490,8 @@ const LeadCaptureModal = ({
                       <Loader2 size={16} className="mr-2 animate-spin" />
                       {isGuide ? "Preparing your guide..." : "Starting assessment..."}
                     </>
+                  ) : returning ? (
+                    isGuide ? "Confirm & Download" : "Confirm & Start"
                   ) : isGuide ? (
                     "Download My Guide"
                   ) : (

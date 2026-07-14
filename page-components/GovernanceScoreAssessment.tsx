@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Mail, CheckCircle, AlertTriangle, XCircle, ShieldCheck } from "lucide-react";
-import LeadCaptureModal, { hasLeadCookie, trackAssessmentStart } from "@/components/LeadCaptureModal";
+import LeadCaptureModal, { hasUnlockedAsset, trackAssessmentStart } from "@/components/LeadCaptureModal";
 import type { LeadFormData } from "@/components/LeadCaptureModal";
 import {
   computeScore,
@@ -46,11 +46,12 @@ function barColor(score: number): string {
 }
 
 const GovernanceScoreAssessment = ({ headline, subCopy, questions, industrySlug, guideLabel, guideHref }: Props) => {
+  const assessmentKey = `assessment:governance-score:${industrySlug ?? headline}`;
   const [firmSize, setFirmSize] = useState<FirmSize>("mid");
   const [answers, setAnswers] = useState<ScoreAnswers>(new Array(questions.length).fill(null));
   const [showResults, setShowResults] = useState(false);
   const [gateOpen, setGateOpen] = useState(false);
-  const [gated, setGated] = useState(() => (typeof window !== "undefined" ? !hasLeadCookie() : true));
+  const [gated, setGated] = useState(() => (typeof window !== "undefined" ? !hasUnlockedAsset(assessmentKey) : true));
   const [leadName, setLeadName] = useState("");
   const [leadEmail, setLeadEmail] = useState("");
   const [leadLast, setLeadLast] = useState("");
@@ -148,6 +149,7 @@ const GovernanceScoreAssessment = ({ headline, subCopy, questions, industrySlug,
         onClose={() => setGateOpen(false)}
         type="assessment"
         title={headline}
+        assetKey={assessmentKey}
         onSuccess={handleGateSuccess}
       />
 

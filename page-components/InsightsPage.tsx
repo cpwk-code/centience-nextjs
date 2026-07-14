@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select";
 import { useState } from "react";
 import HCaptcha from "@/components/HCaptcha";
-import LeadCaptureModal, { hasLeadCookie, trackGuideDownload } from "@/components/LeadCaptureModal";
+import LeadCaptureModal, { hasUnlockedAsset, trackGuideDownload } from "@/components/LeadCaptureModal";
 
 const guides = [
   {
@@ -71,7 +71,7 @@ const InsightsPage = () => {
   const [selectedGuide, setSelectedGuide] = useState<typeof guides[0] | null>(null);
 
   const handleGuideClick = (guide: typeof guides[0]) => {
-    if (hasLeadCookie()) {
+    if (hasUnlockedAsset(`guide:${guide.id}`)) {
       trackGuideDownload(guide.title, guide.id, guide.file);
     } else {
       setSelectedGuide(guide);
@@ -88,6 +88,7 @@ const InsightsPage = () => {
         type="guide"
         title={selectedGuide ? `${selectedGuide.title} — Download Now` : ""}
         guideHref={selectedGuide?.file}
+        assetKey={selectedGuide ? `guide:${selectedGuide.id}` : undefined}
       />
 
       {/* Hero */}

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Mail, CheckCircle, AlertTriangle, XCircle } from "lucide-react";
-import LeadCaptureModal, { hasLeadCookie, trackAssessmentStart } from "@/components/LeadCaptureModal";
+import LeadCaptureModal, { hasUnlockedAsset, trackAssessmentStart } from "@/components/LeadCaptureModal";
 import type { LeadFormData } from "@/components/LeadCaptureModal";
 
 export interface AssessmentQuestion {
@@ -23,10 +23,11 @@ interface IndustryAssessmentProps {
 type Answer = string | null;
 
 const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHref }: IndustryAssessmentProps) => {
+  const assessmentKey = `assessment:${headline}`;
   const [answers, setAnswers] = useState<Answer[]>(new Array(questions.length).fill(null));
   const [showResults, setShowResults] = useState(false);
   const [gateOpen, setGateOpen] = useState(false);
-  const [gated, setGated] = useState(() => typeof window !== 'undefined' ? !hasLeadCookie() : true);
+  const [gated, setGated] = useState(() => typeof window !== 'undefined' ? !hasUnlockedAsset(assessmentKey) : true);
   const [leadName, setLeadName] = useState("");
   const [leadEmail, setLeadEmail] = useState("");
 
@@ -146,6 +147,7 @@ const IndustryAssessment = ({ headline, subCopy, questions, guideLabel, guideHre
         onClose={() => setGateOpen(false)}
         type="assessment"
         title={`${headline}`}
+        assetKey={assessmentKey}
         onSuccess={handleGateSuccess}
       />
 
