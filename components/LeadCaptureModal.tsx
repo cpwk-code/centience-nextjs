@@ -48,8 +48,22 @@ export function getStoredLeadData(): LeadFormData | null {
   } catch { return null; }
 }
 
+/** Trigger a same-origin file download without a new tab (avoids popup blocking). */
+function triggerDownload(href: string) {
+  if (typeof document === 'undefined' || !href) return;
+  const a = document.createElement('a');
+  a.href = href;
+  a.download = href.split('/').pop() || '';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
 /** Silently log a guide download for a returning user (no form shown) */
 export async function trackGuideDownload(guideTitle: string, guideSlug: string | null, guideHref: string) {
+  // Fire the download first, synchronously within the click gesture, so it
+  // works even if the analytics call is slow or the stored lead data is gone.
+  triggerDownload(guideHref);
   const data = getStoredLeadData();
   if (!data) return;
   try {
@@ -65,12 +79,6 @@ export async function trackGuideDownload(guideTitle: string, guideSlug: string |
       }),
     });
   } catch {}
-  // Trigger the download
-  const a = document.createElement('a');
-  a.href = guideHref;
-  a.target = '_blank';
-  a.rel = 'noopener noreferrer';
-  a.click();
 }
 
 /** Silently log an assessment start for a returning user (no form shown) */
@@ -194,11 +202,7 @@ const LeadCaptureModal = ({
     setLoading(false);
     setSuccess(true);
     if (isGuide && guideHref) {
-      const a = document.createElement("a");
-      a.href = guideHref;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.click();
+      triggerDownload(guideHref);
     }
     onSuccess?.(form);
     setTimeout(() => onClose(), 3000);
