@@ -44,7 +44,7 @@ const PlatformSection = () => (
             <Button variant="cta" size="lg" asChild>
               <Link href="/platform">Explore the platform <ArrowRight size={16} /></Link>
             </Button>
-            <Button variant="outline" size="lg" className="text-white border-white/40 hover:bg-white/10" asChild>
+            <Button variant="outline" size="lg" className="bg-white/5 text-white border-white/40 hover:bg-white/15 hover:text-white" asChild>
               <Link href="/contact">Book a demo</Link>
             </Button>
           </div>
