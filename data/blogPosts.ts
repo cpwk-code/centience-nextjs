@@ -1819,20 +1819,6 @@ What is work product doctrine and why does it require separate classification fr
 [/FAQ_ACCORDION]
     `,
   },
-  {
-    id: 25,
-    slug: "how-centience-builds-ai-governance-regulated-firms",
-    category: "AI Governance",
-    title: "How Centience Builds AI Governance for Regulated Firms",
-    excerpt: "Most AI governance programs fail before they start. They begin with a policy document nobody can enforce. Seven modules. Built around visibility, ownership, supervision, evidence, and continuous control. We wrote down exactly how we build it.",
-    image: "/assets/blog/centience-ai-governance-operating-model.png",
-    author: "Centience AI",
-    date: "June 2026",
-    metaTitle: "How Centience Builds AI Governance for Regulated Firms | LinkedIn",
-    metaDescription: "Most AI governance programs fail before they start — they begin with a policy document nobody can enforce. Centience's seven-module operating model behind our documented track record of successful outcomes across SEC, FINRA, and HIPAA engagements.",
-    externalUrl: "https://www.linkedin.com/pulse/how-centience-builds-ai-governance-regulated-firms-centience-ai-jmgme",
-    content: "",
-  },
 ];
 
 export function getSrc(image: any): string {
