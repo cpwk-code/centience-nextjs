@@ -14,6 +14,7 @@ import { blogPosts, getSrc } from "@/data/blogPosts";
 import KeyFacts from "@/components/KeyFacts";
 import BlogFAQAccordion from "@/components/BlogFAQAccordion";
 import BlogAuthorCard from "@/components/BlogAuthorCard";
+import authorPhoto from "@/assets/author-orville-matias.png";
 
 const BlogPostPage = ({ slug: slugProp }: { slug?: string } = {}) => {
   const params = useParams();
@@ -169,8 +170,12 @@ const BlogPostPage = ({ slug: slugProp }: { slug?: string } = {}) => {
             <p className="text-xl text-muted-foreground mb-8">{post.excerpt}</p>
 
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center">
-                <User className="w-5 h-5 text-gold" />
+              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-gold/10 flex items-center justify-center shrink-0">
+                {post.author === "Orville Matias" ? (
+                  <Image src={authorPhoto} alt={post.author} fill sizes="40px" className="object-cover" />
+                ) : (
+                  <User className="w-5 h-5 text-gold" />
+                )}
               </div>
               <span className="text-foreground font-medium">{post.author}</span>
             </div>
