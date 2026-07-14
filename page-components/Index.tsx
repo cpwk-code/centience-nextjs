@@ -10,6 +10,7 @@ import DifferentiatorSection from "@/components/home/DifferentiatorSection";
 import TechnicalFoundation from "@/components/home/TechnicalFoundation";
 import CapabilitiesSection from "@/components/home/CapabilitiesSection";
 import IndustriesSection from "@/components/home/IndustriesSection";
+import PlatformSection from "@/components/home/PlatformSection";
 import LeadMagnetCTA from "@/components/home/LeadMagnetCTA";
 
 const Index = () => (
@@ -23,6 +24,7 @@ const Index = () => (
     <DifferentiatorSection />
     <TechnicalFoundation />
     <CapabilitiesSection />
+    <PlatformSection />
     <IndustriesSection />
     <LeadMagnetCTA />
   </Layout>

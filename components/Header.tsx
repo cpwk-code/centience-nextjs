@@ -20,6 +20,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
+  { label: "Platform", href: "/platform" },
   {
     label: "Services",
     children: [
