@@ -40,6 +40,7 @@ const ContactPage = () => {
     jobTitle: "",
     service: "",
     message: "",
+    smsConsent: false,
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -92,11 +93,17 @@ const ContactPage = () => {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, captchaToken }),
+        body: JSON.stringify({
+          ...form,
+          smsConsentText: form.smsConsent
+            ? "I agree to receive account, scheduling, and customer-care text messages from Centience at the number provided. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help."
+            : "",
+          captchaToken,
+        }),
       });
       if (!res.ok) throw new Error("Submission failed");
       setStatus("success");
-      setForm({ firstName: "", lastName: "", email: "", phone: "", company: "", jobTitle: "", service: "", message: "" });
+      setForm({ firstName: "", lastName: "", email: "", phone: "", company: "", jobTitle: "", service: "", message: "", smsConsent: false });
       window.hcaptcha?.reset(widgetIdRef.current ?? undefined);
       widgetIdRef.current = null;
     } catch {
@@ -329,6 +336,22 @@ const ContactPage = () => {
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent transition resize-none"
                         placeholder="Tell us about your project or challenge…"
                       />
+                    </div>
+
+                    {/* SMS opt-in (A2P 10DLC consent) — optional, unchecked by default */}
+                    <div className="flex items-start gap-3 rounded-lg border border-border bg-background/50 p-4">
+                      <input
+                        id="smsConsent"
+                        type="checkbox"
+                        checked={form.smsConsent}
+                        onChange={(e) => setForm((prev) => ({ ...prev, smsConsent: e.target.checked }))}
+                        className="mt-0.5 h-4 w-4 shrink-0 accent-accent cursor-pointer"
+                      />
+                      <label htmlFor="smsConsent" className="text-xs leading-relaxed text-muted-foreground cursor-pointer">
+                        I agree to receive account, scheduling, and customer-care text messages from Centience at the phone number provided. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. See our{" "}
+                        <a href="/privacy-policy" className="text-accent hover:underline">Privacy Policy</a> and{" "}
+                        <a href="/sms-terms" className="text-accent hover:underline">SMS Terms</a>.
+                      </label>
                     </div>
 
                     {/* hCaptcha */}

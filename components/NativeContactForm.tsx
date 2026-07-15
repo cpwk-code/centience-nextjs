@@ -25,6 +25,7 @@ const NativeContactForm = () => {
     reason: "",
     message: "",
   });
+  const [smsConsent, setSmsConsent] = useState(false);
   const [honeypot, setHoneypot] = useState("");
   const [formStartTime] = useState<number>(Date.now());
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
@@ -61,6 +62,10 @@ const NativeContactForm = () => {
           company: formData.company,
           service: formData.reason,
           message: formData.message,
+          smsConsent,
+          smsConsentText: smsConsent
+            ? "I agree to receive account, scheduling, and customer-care text messages from Centience at the number provided. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help."
+            : "",
           referringPage: window.location.pathname,
         }),
       });
@@ -206,6 +211,22 @@ const NativeContactForm = () => {
           rows={4}
           className="bg-background border-border focus:border-gold resize-none"
         />
+      </div>
+
+      {/* SMS opt-in (A2P 10DLC consent) — optional, unchecked by default */}
+      <div className="flex items-start gap-3 rounded-lg border border-border bg-background/50 p-4">
+        <input
+          id="smsConsent"
+          type="checkbox"
+          checked={smsConsent}
+          onChange={(e) => setSmsConsent(e.target.checked)}
+          className="mt-0.5 h-4 w-4 shrink-0 accent-gold cursor-pointer"
+        />
+        <Label htmlFor="smsConsent" className="text-xs leading-relaxed text-muted-foreground font-normal cursor-pointer">
+          I agree to receive account, scheduling, and customer-care text messages from Centience at the phone number provided. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. See our{" "}
+          <a href="/privacy-policy" className="text-gold hover:underline">Privacy Policy</a> and{" "}
+          <a href="/sms-terms" className="text-gold hover:underline">SMS Terms</a>.
+        </Label>
       </div>
 
       {/* hCaptcha */}

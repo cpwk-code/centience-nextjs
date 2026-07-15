@@ -20,6 +20,7 @@ export async function POST(req: NextRequest) {
       firstName, lastName, name,
       email, phone, company, jobTitle,
       service, reason, message, referringPage,
+      smsConsent, smsConsentText,
     } = body;
 
     const fullName = (firstName && lastName)
@@ -64,7 +65,9 @@ export async function POST(req: NextRequest) {
       await addNoteToContact(
         contactId,
         `Contact form submission.${serviceOrReason ? ` Reason: ${serviceOrReason}.` : ''}` +
-        `${referringPage ? ` Page: ${referringPage}.` : ''}\n\nMessage:\n${message}`
+        `${referringPage ? ` Page: ${referringPage}.` : ''}` +
+        `\nSMS consent: ${smsConsent ? `GRANTED at ${submittedAt}${phone ? ` for ${phone}` : ''} — "${smsConsentText}"` : 'not given'}` +
+        `\n\nMessage:\n${message}`
       );
     } catch (hsErr) {
       console.error('HubSpot sync error (non-fatal):', hsErr);
@@ -93,6 +96,7 @@ export async function POST(req: NextRequest) {
                   <tr style="background: #f9f9f9;"><td style="padding: 8px 4px; color: #666; font-size: 13px;">Company</td><td style="padding: 8px 4px; font-size: 14px;">${company || '—'}</td></tr>
                   <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Job Title</td><td style="padding: 8px 0; font-size: 14px;">${jobTitle || '—'}</td></tr>
                   <tr style="background: #f9f9f9;"><td style="padding: 8px 4px; color: #666; font-size: 13px;">Service / Reason</td><td style="padding: 8px 4px; font-size: 14px;">${serviceOrReason || '—'}</td></tr>
+                  <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">SMS consent</td><td style="padding: 8px 0; font-size: 14px; font-weight: bold; color: ${smsConsent ? '#1a7f37' : '#999'};">${smsConsent ? `✓ Granted${phone ? ` — ${phone}` : ''}` : 'Not given'}</td></tr>
                   <tr style="background: #f9f9f9;"><td style="padding: 8px 4px; color: #666; font-size: 13px;">Submitted</td><td style="padding: 8px 4px; font-size: 14px;">${new Date(submittedAt).toLocaleString('en-US', { timeZone: 'America/New_York' })} ET</td></tr>
                 </table>
                 <div style="margin-top: 16px; padding: 16px; background: #f9f9f9; border-radius: 6px; border-left: 3px solid #e8a820;">
