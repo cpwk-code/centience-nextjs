@@ -74,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://centience.ai/contact', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://centience.ai/privacy-policy', lastModified: '2026-05-01', changeFrequency: 'yearly', priority: 0.3 },
     { url: 'https://centience.ai/terms-of-service', lastModified: '2026-05-01', changeFrequency: 'yearly', priority: 0.3 },
+    { url: 'https://centience.ai/sms-terms', lastModified: '2026-07-14', changeFrequency: 'yearly', priority: 0.3 },
     // Locations
     { url: 'https://centience.ai/locations', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://centience.ai/locations/ai-governance-new-york', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.7 },
