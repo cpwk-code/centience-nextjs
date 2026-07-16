@@ -32,10 +32,12 @@ These are proof-and-momentum numbers, not the whole $4M. The point is a credible
 
 ## 3. The Founding Customer offer
 
-A limited, time-boxed charter cohort. Recommended structure (numbers are a starting point — confirm against your unit economics; the growth-plan Platform tier was ~$8–25K/yr):
+A limited, time-boxed charter cohort. Confirmed pricing (anchored to Nightfall/Strac, who charge $12,500/yr for DLP-for-AI *alone* — the platform does far more, so that's the floor, not the target):
 
-- **Founding price:** ~30–40% off planned list, **price-locked for 2–3 years.** (e.g., if list is $12K/yr, founding is ~$7,500/yr locked.)
-- **Reserve a launch slot with a deposit:** small refundable deposit (e.g., $500–$1,000) OR prepay year one at the founding rate for the biggest discount. Deposit applies to year one.
+- **Platform (SaaS) list at launch: $18,000/yr** (single framework) · **Platform+ $25,000/yr** (multi-framework/entity). **Floor: $12,500/yr — never below.**
+- **Founding price: $12,500/yr, locked 3 years** — the pitch: *"pay a DLP-tool price, get the whole platform,"* while list rises to $18K+.
+- **Reserve a launch slot with a deposit:** refundable **$1,000** deposit (applies to year one) OR prepay year one at the founding rate for the biggest discount.
+- **Note:** SaaS is the *wedge* and qualifier. The revenue engine is the premium managed/co-managed book (~$450–550/user/mo, $10–25K/mo accounts) — see the internal Premium Account Growth & Pricing doc.
 - **Founding perks:**
   - Direct founder access + guided white-glove onboarding at launch
   - Influence on the roadmap (they help prioritize what gets built next)
