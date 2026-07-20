@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import { upsertContact, addNoteToContact, splitName } from '@/lib/hubspot';
+import { guardSubmission } from '@/lib/submissionGuard';
 
 function getSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -15,6 +16,11 @@ function getSupabase() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
+
+    // Spam / geo gate: honeypot + USA-only + email validation (+ hCaptcha if a token is sent).
+    const guard = await guardSubmission(req, body, { captcha: 'optional' });
+    if (!guard.ok) return guard.response!;
+
     const { name, email, industry } = body;
 
     if (!name || !email) {
@@ -31,6 +37,8 @@ export async function POST(req: NextRequest) {
           name,
           email,
           industry: industry || null,
+          ip_address: guard.ip,
+          country: guard.country,
           created_at: submittedAt,
         });
         if (dbError) console.error('Supabase insert error:', dbError.message);

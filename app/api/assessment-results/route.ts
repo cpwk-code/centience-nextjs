@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import { upsertContact, addNoteToContact, setScoreProperties } from '@/lib/hubspot';
+import { guardSubmission } from '@/lib/submissionGuard';
 
 interface AnswerRow { question?: string; answer?: string | null; domain?: string }
 
@@ -17,6 +18,12 @@ function getSupabase() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
+
+    // Spam / geo gate: honeypot + USA-only + email validation. This endpoint emails
+    // an arbitrary address, so guarding it also prevents email-bombing abuse.
+    const guard = await guardSubmission(req, body, { captcha: 'optional' });
+    if (!guard.ok) return guard.response!;
+
     const { email, firstName, lastName, company, assessmentType, score, max, resultSummary, overall, tier, domains, topGaps, answers, firmSize, industrySlug } = body;
 
     if (!email || !firstName || !assessmentType) {

@@ -67,6 +67,8 @@ const NativeContactForm = () => {
             ? "I agree to receive account, scheduling, and customer-care text messages from Centience at the number provided. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help."
             : "",
           referringPage: window.location.pathname,
+          captchaToken,
+          website: honeypot,
         }),
       });
       const data = await res.json();

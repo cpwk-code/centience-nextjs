@@ -40,6 +40,7 @@ const ContactPage = () => {
     jobTitle: "",
     service: "",
     message: "",
+    website: "", // honeypot — real users leave this empty; bots fill it
     smsConsent: false,
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -254,6 +255,17 @@ const ContactPage = () => {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
+                    {/* Honeypot — hidden from real users; bots that fill it are rejected server-side */}
+                    <input
+                      type="text"
+                      name="website"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      aria-hidden="true"
+                      value={form.website}
+                      onChange={handleChange}
+                      style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+                    />
                     {/* Name row */}
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>

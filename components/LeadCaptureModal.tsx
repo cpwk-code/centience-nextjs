@@ -196,6 +196,7 @@ const LeadCaptureModal = ({
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [captchaToken, setCaptchaToken] = useState("");
+  const [hp, setHp] = useState(""); // honeypot — real users leave empty
   // Returning lead: we already have their details, so pre-fill and skip the
   // captcha for a near one-click confirm on each additional asset.
   const [returning, setReturning] = useState(false);
@@ -258,6 +259,8 @@ const LeadCaptureModal = ({
             guideSlug: guideSlug || null,
             sourceUrl: window.location.href,
             is_returning: returning,
+            captchaToken,
+            website: hp,
           }),
         });
       } catch (err) {
@@ -344,6 +347,17 @@ const LeadCaptureModal = ({
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Honeypot — hidden from real users; bots that fill it are rejected server-side */}
+                <input
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  value={hp}
+                  onChange={(e) => setHp(e.target.value)}
+                  style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+                />
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <Label htmlFor="gate-fn">First Name *</Label>

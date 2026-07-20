@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import { upsertContact, addNoteToContact } from '@/lib/hubspot';
+import { guardSubmission } from '@/lib/submissionGuard';
 
 function getSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -15,6 +16,12 @@ function getSupabase() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
+
+    // Spam / geo gate: honeypot + USA-only + hCaptcha + email validation.
+    // Returning users are captcha-exempt (silent download, no widget shown).
+    const guard = await guardSubmission(req, body, { captcha: 'required' });
+    if (!guard.ok) return guard.response!;
+
     const { firstName, lastName, email, company, jobTitle, industry, phone, guideTitle, guideSlug, sourceUrl, is_returning: isReturning } = body;
 
     // Validate required fields
@@ -42,6 +49,8 @@ export async function POST(req: NextRequest) {
           guide_slug: guideSlug || null,
           source_url: sourceUrl || null,
           is_returning: isReturning || false,
+          ip_address: guard.ip,
+          country: guard.country,
           created_at: submittedAt,
         });
         if (dbError) console.error('Supabase insert error:', dbError.message);
@@ -89,6 +98,7 @@ export async function POST(req: NextRequest) {
                   <tr style="background: #f9f9f9;"><td style="padding: 8px 4px; color: #666; font-size: 13px;">Phone</td><td style="padding: 8px 4px; font-size: 14px;">${phone || '—'}</td></tr>
                   <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Downloaded</td><td style="padding: 8px 0; font-size: 14px;">${guideTitle || guideSlug || '—'}</td></tr>
                   <tr style="background: #f9f9f9;"><td style="padding: 8px 4px; color: #666; font-size: 13px;">Submitted</td><td style="padding: 8px 4px; font-size: 14px;">${new Date(submittedAt).toLocaleString('en-US', { timeZone: 'America/New_York' })} ET</td></tr>
+                  <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">IP / Country</td><td style="padding: 8px 0; font-size: 14px;">${guard.ip} · ${guard.country || 'Unknown'}</td></tr>
                 </table>
                 <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e0e0e0;">
                   <a href="mailto:${email}?subject=Re: ${guideTitle || 'Governance Guide'} Download" style="display: inline-block; background: #e8a820; color: #0f1f3d; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px;">Reply to ${firstName}</a>
