@@ -34,13 +34,25 @@ export function getClientIp(req: NextRequest): string {
 
 /**
  * Two-letter country from Vercel's edge geolocation. Returns null when the
- * header is absent (local dev / non-Vercel), so those environments aren't
- * geo-blocked. On Vercel the header is always present (e.g. 'US', or 'XX'/'T1'
- * for unresolved / Tor), so those are treated as non-US and blocked.
+ * header is absent (local dev / non-Vercel). On Vercel it's an ISO 3166-1
+ * alpha-2 code, or an "unknown" marker ('XX', 'T1', etc.) when the IP can't be
+ * resolved (VPNs, corporate proxies, Tor).
  */
 export function getCountry(req: NextRequest): string | null {
   const c = req.headers.get('x-vercel-ip-country');
   return c && c.trim() ? c.trim().toUpperCase() : null;
+}
+
+// Markers Vercel uses when it can't resolve the IP to a real country.
+const UNKNOWN_COUNTRY = new Set(['XX', 'T1', 'A1', 'A2', 'O1']);
+
+/**
+ * True only when the request resolves to a confirmed country other than the US.
+ * Unknown/unresolved locations (null, XX, Tor, anonymized) are NOT treated as
+ * foreign, so legitimate US visitors behind VPNs/proxies aren't turned away.
+ */
+export function isConfirmedNonUS(country: string | null): boolean {
+  return country !== null && country !== 'US' && !UNKNOWN_COUNTRY.has(country);
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -109,9 +121,11 @@ export async function guardSubmission(
     };
   }
 
-  // 3. USA-only hard block (skipped when the geo header is absent, i.e. local dev).
-  if (country !== null && country !== 'US') {
-    console.warn('[guard] non-US submission blocked', { ip, country });
+  // 3. Geo gate: block only confirmed non-US locations. Unknown/unresolved
+  // (local dev, VPNs, proxies, Tor) are allowed through to avoid turning away
+  // legitimate US visitors whose IP doesn't cleanly geolocate.
+  if (isConfirmedNonUS(country)) {
+    console.warn('[guard] confirmed non-US submission blocked', { ip, country });
     return {
       ok: false,
       ip,
