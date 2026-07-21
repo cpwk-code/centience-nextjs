@@ -201,7 +201,7 @@ const PrivacyPolicyPage = () => {
           <div className="bg-card border border-border rounded-xl p-8">
             <h2 className="text-2xl font-bold text-foreground mb-4">SMS / Text Messaging</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If you provide your mobile number and opt in on one of our forms, you consent to receive conversational and customer-care text messages from Centience (such as replies, scheduling, onboarding, and account notifications). Consent is not a condition of purchase. Message frequency varies and message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time or <strong>HELP</strong> for assistance.
+              If you provide your mobile number and opt in on one of our forms, you consent to receive conversational and customer-care text messages from Centience &mdash; replies to your inquiries, scheduling and appointment coordination, onboarding assistance, and account and service notifications. Centience does not send promotional or marketing text messages under this program. Consent is not a condition of purchase. Message frequency varies and message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time or <strong>HELP</strong> for assistance.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Your mobile opt-in information and phone number are used only to deliver these messages. <strong>We do not sell, rent, or share your mobile opt-in information or phone number with third parties or affiliates for their marketing or promotional purposes.</strong> For full program details, see our{" "}
