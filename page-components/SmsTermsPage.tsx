@@ -23,7 +23,7 @@ const SmsTermsPage = () => {
           <div className="bg-card border border-border rounded-xl p-8">
             <h2 className="text-2xl font-bold text-foreground mb-4">Program description</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Centience offers an SMS/text messaging program for clients and prospective clients who provide their mobile number and consent. Messages are conversational and customer-care in nature — for example, replies to your inquiries, scheduling and appointment coordination, onboarding assistance, and account or service notifications. We do not send unsolicited promotional text messages under this program.
+              Centience offers an SMS/text messaging program for clients and prospective clients who provide their mobile number and consent. Messages are conversational and customer-care in nature &mdash; replies to your inquiries, scheduling and appointment coordination, onboarding assistance, and account and service notifications. Centience does not send promotional or marketing text messages under this program.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               By providing your mobile phone number and checking the SMS consent box on our forms, you consent to receive text messages from Centience at that number. <strong>Consent is not a condition of purchasing any product or service.</strong>

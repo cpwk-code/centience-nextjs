@@ -97,7 +97,7 @@ const ContactPage = () => {
         body: JSON.stringify({
           ...form,
           smsConsentText: form.smsConsent
-            ? "I agree to receive account, scheduling, and customer-care text messages from Centience at the number provided. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help."
+            ? "I consent to receive conversational and customer-care text messages from Centience — replies to your inquiries, scheduling and appointment coordination, onboarding assistance, and account and service notifications — at the phone number provided. My consent is not a condition of purchase. Msg & data rates may apply. Msg frequency varies. Reply HELP for assistance or STOP to opt out."
             : "",
           captchaToken,
         }),
@@ -360,7 +360,7 @@ const ContactPage = () => {
                         className="mt-0.5 h-4 w-4 shrink-0 accent-accent cursor-pointer"
                       />
                       <label htmlFor="smsConsent" className="text-xs leading-relaxed text-muted-foreground cursor-pointer">
-                        I agree to receive account, scheduling, and customer-care text messages from Centience at the phone number provided. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. See our{" "}
+                        I consent to receive conversational and customer-care text messages from Centience &mdash; replies to your inquiries, scheduling and appointment coordination, onboarding assistance, and account and service notifications &mdash; at the phone number I provided. I acknowledge that my consent is not a condition of purchase. Msg &amp; data rates may apply. Msg frequency varies. Reply HELP for assistance or STOP to opt out. See our{" "}
                         <a href="/privacy-policy" className="text-accent hover:underline">Privacy Policy</a> and{" "}
                         <a href="/sms-terms" className="text-accent hover:underline">SMS Terms</a>.
                       </label>
