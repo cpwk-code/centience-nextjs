@@ -348,3 +348,29 @@ Two of the original ten had no email, so substitutes are marked. All verified.
 **Sources:** contact records from Apollo (Aug 2026). Market research: [Best RIA Compliance Consultants](https://bestriacompliance.com/) · [NSCP](https://www.nscp.org/) / [vendor directory](https://www.nscp.org/vendor-directory) · [Schwab provider solutions](https://advisorservices.schwab.com/provider-solutions/RIA-Cyber-Liability-EO-Insurance) · [The Coyle Group](https://thecoylegroup.com/cyber-insurance-for-rias/) · [Box Professional](https://www.boxproinsurance.com/) · [HCP National](https://hcpnational.com/insurance-products/ria-insurance/) · [Golsan Scruggs](https://gsria.com/broker-dealer/) · [Stark & Stark](https://www.stark-stark.com/service/business/investment-management-securities/) · [Parker MacIntyre](https://riacompliancelawyer.com/) · [MGH Law](https://www.mgh-law.com/) · [My RIA Lawyer](https://www.myrialawyer.com/services/sec-compliance-lawyer/) · [DeVoe & Company](https://www.devoeandcompany.com/) + [2026 M&A outlook](https://www.investmentnews.com/ria-news/ria-ma-poised-for-another-record-year-in-2026-devoe-finds/263686) · [Dynasty](https://www.dynastyfinancialpartners.com/) · [RIA aggregators](https://www.dakota.com/resources/blog/best-ria-aggregators-for-advisors-asset-managers) · [NAV Fund Services](https://www.navfundservices.com/) · [AICPA commissions](https://www.njcpa.org/stayinformed/hubs/topics/commissions-and-contingent-fees) · [FINRA Rule 3270](https://www.finra.org/rules-guidance/rulebooks/finra-rules/3270) · [Refgrow referral benchmarks](https://refgrow.com/referral-fees)
 
 > **Verification note:** these are research-sourced **candidates** matched to our ICP — not vetted, contacted, or confirmed as open to a partner program. Titles and firms come from Apollo records refreshed June–August 2026 and can be stale; confirm the person is still in the role (and, for full-service firms like Stark & Stark, in the *right practice group*) before outreach.
+
+---
+
+## Wave 2 — NY metro + Southeast Florida (Aug 2026)
+
+**[`partner-referral-contacts-wave2.csv`](./partner-referral-contacts-wave2.csv)** — 34 contacts, 26 distinct firms, 32 with verified work email. All Tier A (adviser/BD compliance consultants). Adds a `metro` column: 25 NY-metro, 9 SE-FL. Combined with wave 1, the program now has **98 contacts across ~58 firms**.
+
+New firms worth noting: **Aspect Advisors**, **Asgard Regulatory Group**, **RQC Group**, **Optima Partners** (NY *and* Boca), **NorthPoint Compliance**, **altPILOT Group**, **PARC Solutions**, **Quadrant Regulatory**, **DFP Partners**, **Tölt Strategies**, **StrategyBRIX** (NY); **InnReg**, **SEC³**, **NextReg**, **Venning**, **Skematic** (SE FL). Janaya Moscony (SEC³) is a former SEC examiner — that biography sells our examiner-evidence narrative better than we can.
+
+**Email domain flags:** Thomas Cain is `@chenerygroup.com`, not chenerycompliance.com · Michael Glynn is `@sddco.com` (DFP is affiliated with the SDDCO Group) · Claire McCleskey returned `com@clarity-consultancy.com`, which looks malformed — verify before sending. No email: Patrick Harris (Abide), Gerald Roop (Treliant, now Huron).
+
+### Why this is 34 and not 250
+
+The 250 target was scoped to NY + SE Florida. Apollo pool sizing (all searches free) says that ceiling doesn't exist at a usable quality bar:
+
+| Tier | NY metro | SE FL | Finding |
+|---|---|---|---|
+| **A — adviser/BD compliance consultants** | 122 | **26** | The real pool. ~30–50% precision after stripping safety/environmental/healthcare compliance shops and hedge funds. Yielded these 34. |
+| **B — insurance brokers** (NAICS 5242 + liability tags) | 3,245 combined | | **Deep but wrong.** Dominated by MGAs and underwriters (Falcon Risk 11 of 50 results, ATRI 7) plus generalist P&C agencies (Butwin 8, Univista is retail auto). **Underwriters price risk; they don't refer clients to vendors.** The RIA-specialist brokers that fit are a handful of *national* firms — Lockton Affinity, Golsan Scruggs, Box, Coyle, HCP — all already in wave 1. |
+| **C — securities law** | 1,438 combined | | Moderate pool, but non-cash partners (§8), so low priority for paid referral. |
+| **F — fund administration** | 4,450 combined | | Real, but these are **national businesses**; a metro filter cuts quality for no gain. |
+| **D/E — platforms & M&A** | handful nationally | | Wave 1 already covers the firms that exist. |
+
+**Padding to 250 in these two metros would have meant ~150 rows of MGAs, generalist agencies, and non-financial compliance consultants** — a bigger list and a worse one, plus ~150 wasted credits.
+
+**The path to 250 is national Tier A, not two-metro multi-tier.** Adviser/BD compliance consulting is a nationally-served niche: the same firm advises RIAs in Miami and Manhattan, and we deliver remotely, so the partner's zip code is nearly irrelevant. Dropping the geo filter on Tier A alone should yield several hundred genuine firms. Geography earns its place only for insurance brokers and law firms, which are local-relationship businesses.
