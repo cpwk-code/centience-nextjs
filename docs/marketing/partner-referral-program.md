@@ -398,3 +398,31 @@ Rows are tagged `A-national` (core fit) or `A-adjacent` (real firms, weaker fit 
 `amy@compliantperformance.com` sits off Guardian Performance's own domain · **Deacon Durden's address is `extrapolated`, not verified** — Apollo guessed the pattern at 0.6 confidence, so treat it as unconfirmed · catch-all domains at Business Compliance Partners and Oyster weaken the "verified" signal · no email for Tiffany Ramirez, Sami Oudeh, Beverly Fetcko, John Durden.
 
 **Credits this pass: 47.** Zero missing records across all three waves.
+
+---
+
+## Wave 4 — national Tier A, remainder (Aug 2026)
+
+**[`partner-referral-contacts-wave4.csv`](./partner-referral-contacts-wave4.csv)** — 25 contacts, 15 firms, 22 with verified email.
+
+**Total across four waves: 170 contacts, ~105 firms.**
+
+### Tier A is now exhausted
+
+Page 2 of the 191-record national pool was the tail, and it degraded sharply: **CPA tax and audit principals** (Watkins Uiberall alone occupied ~12 slots), **EDGAR filing agents** (EdgarAgents, GlobalOne Filings), **recruiters** (Mason & Blair, RedFin Search), and unrelated vendors (UbiStor is an IT/DR provider, Cawley Gillespie are petroleum engineers, MediaShares, MarketBeam, LYTIQS). Roughly 25 of the 91 remaining records were genuine — all captured here.
+
+**Adviser/BD compliance consulting is now fully worked at this precision.** Going deeper means either loosening filters (which reintroduces the safety/environmental/CPA noise) or accepting non-decision-makers.
+
+### New firms
+
+**Dinsmore Compliance Services** (5 contacts incl. founding partner Jeff Chapman) · **Cucharale Consulting Group** · **Compliance4** · **FrontLine Compliance** · **eAdvisor Compliance** · **Integrity Compliance Consulting** · **Securities Compliance Management** · **RIA Compliance Technology** · **Eventus Advisory Group** · **Cohasset Associates** (records-management compliance — directly relevant to Reg S-P retention, a control we enforce) · **FITS Consulting** (Scott Homuth leads their regulatory practice; 30 years across broker-dealers, custodians and clearing firms).
+
+**Oyster Consulting is now covered three deep at founder level** — Buddy Doyle and Rob Hall (both Founding Principal / Managing Director) join Patrick Dennis from wave 3. Doyle came from 21 years at Wachovia Securities. That's the strongest single-firm coverage in the list; pick one and go, don't email all three.
+
+⚠️ **ACA Foreside contacts here are staff-level** (principal consultants, supervisory principals) — useful for context, weak as partner entry points. ACA's real doors remain Michael Borts (CTO) and Trey Loughran (CEO) from wave 1.
+
+### Getting to 250
+
+170 is where Tier A ends. The remaining ~80 has to come from categories still only covered by wave 1's handful, and the pools are already sized and deep: **fund administration (4,450)** and **securities/investment-management law (1,438)**, both national. Fund admins are the better spend — they're paid referral partners with an onboarding trigger, whereas counsel is a non-cash relationship (§8).
+
+**Credits: 25 this pass; 183 across all four waves.** Zero missing records throughout.
