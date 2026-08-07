@@ -8,7 +8,7 @@
 >
 > **Why they say yes (this is the whole pitch):** we do the thing they *can't* do and don't want to own — run and technically enforce the IT/cyber stack — and we make their work look good, because their WSP finally has evidence behind it. **Complementary, not competitive**, to every partner in this document. Lead with that, not with the commission.
 
-**Contact data — START HERE: [`partner-referral-contacts-ALL.csv`](./partner-referral-contacts-ALL.csv)** — all **170 contacts across 93 firms** in one HubSpot-importable file (154 with a verified work email). Columns: `wave, tier, metro, name, title, firm, firm_domain, work_email, email_status, location, firm_phone, linkedin_url, apollo_person_id`. The four per-wave CSVs remain for provenance. Pulled from Apollo, Aug 2026. **Read §14 before sending** — several firms use email domains that differ from their websites, two addresses are guessed rather than verified, and 16 contacts have no email.
+**Contact data — START HERE: [`partner-referral-contacts-ALL.csv`](./partner-referral-contacts-ALL.csv)** — all **170 contacts across 93 firms** in one HubSpot-importable file (152 verified emails, plus 2 guessed and 16 with none — all 170 have a LinkedIn profile). Columns: `wave, tier, metro, name, title, firm, firm_domain, work_email, email_status, location, firm_phone, linkedin_url, apollo_person_id`. The four per-wave CSVs remain for provenance. Pulled from Apollo, Aug 2026. **Read §14 before sending** — several firms use email domains that differ from their websites, two addresses are guessed rather than verified, and 16 contacts have no email.
 
 ---
 
@@ -431,7 +431,7 @@ Page 2 of the 191-record national pool was the tail, and it degraded sharply: **
 
 ## 14. The combined list — read before sending
 
-**[`partner-referral-contacts-ALL.csv`](./partner-referral-contacts-ALL.csv)** — all four waves merged and de-duplicated. **170 contacts, 93 distinct firms, 154 with a verified work email.** Zero duplicates across waves (matched on Apollo person ID). Sorted by tier, then firm, then name; `wave` and `metro` columns preserve where each row came from.
+**[`partner-referral-contacts-ALL.csv`](./partner-referral-contacts-ALL.csv)** — all four waves merged and de-duplicated. **170 contacts, 93 distinct firms.** Email status: **152 verified · 2 guessed · 16 none** (154 rows carry an address, but two of those are guesses — filter on `email_status = verified`). **All 170 have a LinkedIn profile URL**, making LinkedIn the better-covered channel than email. Zero duplicates across waves (matched on Apollo person ID). Sorted by tier, then firm, then name; `wave` and `metro` columns preserve where each row came from.
 
 | Tier | Contacts | What it is |
 |---|---|---|
