@@ -8,7 +8,7 @@
 >
 > **Why they say yes (this is the whole pitch):** we do the thing they *can't* do and don't want to own — run and technically enforce the IT/cyber stack — and we make their work look good, because their WSP finally has evidence behind it. **Complementary, not competitive**, to every partner in this document. Lead with that, not with the commission.
 
-**Contact data:** names, titles, and LinkedIn URLs below were pulled from Apollo in August 2026 (records refreshed June–August 2026). **Emails are not included** — Apollo's people search doesn't return them, and revealing them costs credits per contact. Say the word and I'll enrich whichever rows you want to actually work.
+**Contact data:** pulled from Apollo, August 2026. **Verified work emails, firm phone numbers, and locations for all 64 contacts are in [`partner-referral-contacts.csv`](./partner-referral-contacts.csv)** — HubSpot-importable. Read the Appendix first: five firms use email domains that differ from their websites, and 7 contacts have no email.
 
 ---
 
@@ -286,40 +286,62 @@ Sequenced by *speed to a real referral*, not by prestige. Boutiques close in one
 
 ---
 
-## Appendix — Apollo person IDs (for email enrichment)
+## Appendix — Contact data (enriched)
 
-Emails are **not** pulled yet. Apollo's people search doesn't return them, and enrichment is a separate credit-consuming call — the Apollo connection expired mid-session before it could run. These are the Apollo person IDs for every contact above, so enrichment is mechanical rather than a re-search. Feed to `apollo_people_bulk_match` (**max 10 per request**).
+**Full contact sheet: [`partner-referral-contacts.csv`](./partner-referral-contacts.csv)** — 64 rows, one per contact, columns: `tier, name, title, firm, firm_domain, work_email, email_status, location, firm_phone, linkedin_url, apollo_person_id`. Ready to import to HubSpot; generated directly from the Apollo responses, not retyped.
 
-**Priority 10 — enrich these first (one batch):**
+Pulled from Apollo, August 2026. **64 of 64 records matched; 57 have a verified work email; 7 have none.** Work emails only — no personal emails or mobile numbers were revealed.
 
-| # | Contact | Apollo person ID |
+### ⚠️ Read before you send
+
+**Email domains differ from the marketing domains in five cases.** Don't guess these from the website:
+
+| Firm | Website | Email domain |
 |---|---|---|
-| 1 | Nathan Borghardt (Lockton Affinity) | `66fb067ca2b2690001ce4cbd` |
-| 2 | Chris Coyle (The Coyle Group) | `6740b755e169080001c22ca7` |
-| 3 | Kenneth Golsan (Golsan Scruggs) | `671d78845b01f200010c5c7a` |
-| 4 | Michelle Jacko (Core Compliance) | `68cf57da40b35e00013a604e` |
-| 5 | Stefanie Little (Chenery) | `66fc1f0a3b5eed0001a5e371` |
-| 6 | Brian Hamburger (MarketCounsel) | `60e75aa2f5153b000116014f` |
-| 7 | Gena Spitzer (Oyster Consulting) | `54a629667468693b8ce290c7` |
-| 8 | Robert Ansell (Opus Fund Services) | `64256d2bc36c7000012aa669` |
-| 9 | Michael Borts (ACA Group) | `6425a54ea134440001f67af4` |
-| 10 | Leslie Norman (Dynasty Financial) | `66d854100d63900001cd6598` |
+| Dynasty Financial Partners | `dynastyfinancialpartners.com` | **`@dynastyfp.com`** |
+| DeVoe & Company | `devoeandcompany.com` | **`@devoe-co.com`** |
+| NAV Fund Services | `navfundservices.com` | **`@navconsulting.net`** |
+| Parker MacIntyre | `riacompliancelawyer.com` | **`@parkmac.com`** |
+| HC Global Fund Services | (listed as `hcglobalfundservices.com`) | **`@hcglobalfs.com`** |
 
-**Remaining contacts, by tier:**
+**Individual records to treat with care:**
 
-*Tier A — boutique consultants:* Craig Moreshead `54aab3aa7468690630efff13` · Colleen Kelly `60afd5041203cc00014edd51` · Stephen Lurie `610a381ea614ea00018458e2` · Giselle Casella `67000b23fd887b0001345983` · Joseph Stowell `5b89436c324d443417b428b7` · Gerard Clark `69f86d778476900001117acf` · Amy Yuter `54a4026074686938ac654325` · Ivan Barretto `66f49ba68fa53f000177c729` · Vick Ekizian `55706c157369646bf4db1500` · Matthew Swendiman `66fd80a967622700018dd038` · Calvin Robinson `60fced195946ac0001a6fcd2` · Glenn Marone `5dd1d040df729b000132215c` · David Lombardy `54a7c107746869705aa89750` · Stephen Murphy `5fd08a11d173d6000193434a` · Trish Davis `668cea1a7921f3000181c0e6` · Jennifer Mascioli-Tudor `66f11ab66453d300019f27a1` · Lisa Roitman `600f16e2bc34ca00016944cf` · Pete Galloway `54a48b1c7468692abf729a4f` · Richard Rondano `54a78ec07468696de776e93f`
+- **Brian Hamburger (MarketCounsel)** — Apollo returned `summit@marketcounsel.com`, which is a **generic/event alias, not his mailbox**. Don't send a founder-to-founder note there. Go in via **Walter Booker, COO — `wbooker@marketcounsel.com`** (verified), or reach Hamburger on LinkedIn.
+- **Paul Lally (MarketCounsel)** — listed as `plally@cnsl.me`, off the firm's domain. Verify before sending.
+- **Integrated Compliance Consulting** — the two contacts sit on *different* domains (`icc-comply.com` for Stephen Murphy, `integratedcomplianceconsulting.com` for Trish Davis). Confirm which is live.
+- **Andrea Dyer (HCP National)** — mailbox is `crisl@hcpnational.com`; she goes by "Cris."
+- **NAV Fund Services** — `navconsulting.net` is a **catch-all domain** (Apollo verdict: allow). A catch-all accepts mail to any address, so "verified" is a weaker signal there than elsewhere. Expect possible bounces.
 
-*Tier A — enterprise + hybrid:* Trey Loughran `611bd38a913fd10001ae0211` · Pete McAteer `54a78bb67468696829f3aa3e` · Daniel Garrett `60d46f510847b80001e77e7f` · Lisa Robinson `645bbe01684f1800014e1d21` · Jay Haas `54a611047468692fa227edbf` · Walter Booker `610cc1b53b94a90001d5c70f` · Paul Lally `658e6023e70de8000171cc72`
+### No email available (7) — LinkedIn or main line only
 
-*Tier B — insurance brokers:* Chris Powell `54a466847468692cf0407044` · Reid Robson `54a1becc74686949e7eb5d0d` · Cameron Norris `66f74e2bd68d72000171647d` · Karen Coyle `54a58dd17468693442f4569b` · Andrea "Cris" Dyer `611d5286b1d1db000183ba71` · William Dyer `57db1a87a6da984c10694de7`
+| Contact | Firm | Firm phone | Workaround |
+|---|---|---|---|
+| **Chris Coyle** | The Coyle Group | +1 845-634-3606 | ⚠️ **Priority-10 target.** Use **Karen Coyle, VP Ops — `karen@thecoylegroup.com`** (verified) as the way in |
+| **Robert Coppola** | Sanctuary Wealth (CTO) | +1 312-782-0400 | ⚠️ **Priority target.** Use **Richard Williams — `rwilliams@sanctuarywealth.com`** or **Eric Nothstein — `enothstein@sanctuarywealth.com`** |
+| **Stephen Lurie** | Adviser Compliance Consulting | +1 650-703-2159 | Use **Giselle Casella — `gcasella@outsourcecco.com`** |
+| **Jay Haas** | Cipperman (now Foreside/ACA) | +1 610-687-5320 | Covered by the ACA relationship — `michael.borts@acaglobal.com` |
+| **John Macdonald** | Stark & Stark | +1 609-896-9060 | Non-cash partner anyway; practice-group check still owed |
+| **Gerard Clark** | Regulatory Compliance LLC | — | LinkedIn |
+| **Richard Rondano** | Risk & Compliance Consulting | — | LinkedIn |
 
-*Tier C — law* (non-cash partners — enrich only if you want direct contact): Steve Parker `66fde24da00d8e0001fde4bb` · Patricia Klusmeyer `66fde837a00d8e0001ff93c2` · John Macdonald `675be25718bb110001bd0aa2`
+### Priority 10 — send-ready
 
-*Tier D — platforms:* Marc Hineman `5fb423f482c6440001a207f7` · Harris Baltch `65c0a0497aab320001510086` · Robert Coppola `6112cc65469f0d0001725846` · Richard Williams `66f30f5054eab8000166f194` · Eric Nothstein `66f39b6ae9fb070001c94a47` · Jene Hoosier `66f5746a10496c00017b9de8` · Robert Walter `66ff50cb3f12c90001deca28`
+Two of the original ten had no email, so substitutes are marked. All verified.
 
-*Tier E — M&A:* Gordon Ross `66f990f5e64ec000010f907f` · Hoyt Stastney `5ffee1f54af143000122e82a` · Aryeh Malitzky `54a745937468696b7fd1f624` · Tom Valverde `54a7d33974686965d9b33353` · Douglas Johnson `5570a2397369646e2d611900` · Brandon Kawal `60feef6cb727d10001f60a61`
+| # | Contact | Firm | Email |
+|---|---|---|---|
+| 1 | **Nathan Borghardt** — AVP Business Development | Lockton Affinity | `nborghardt@locktonaffinity.com` |
+| 2 | **Karen Coyle** — VP Operations *(sub for Chris Coyle)* | The Coyle Group | `karen@thecoylegroup.com` |
+| 3 | **Kenneth Golsan** — Co-Founder & MD | Golsan Scruggs | `kgolsan@golsanscruggs.com` |
+| 4 | **Michelle Jacko** — CEO | Core Compliance & Legal | `michelle.jacko@corecls.com` |
+| 5 | **Stefanie Little** — Founder & Managing Partner | Chenery Compliance | `slittle@chenerycompliance.com` |
+| 6 | **Walter Booker** — COO *(sub for Brian Hamburger)* | MarketCounsel | `wbooker@marketcounsel.com` |
+| 7 | **Gena Spitzer** — Managing Director | Oyster Consulting | `gena.spitzer@oysterllc.com` |
+| 8 | **Robert Ansell** — Director, Business Development | Opus Fund Services | `ransell@opusfundservices.com` |
+| 9 | **Michael Borts** — Chief Technology Officer | ACA Group | `michael.borts@acaglobal.com` |
+| 10 | **Leslie Norman** — Chief Technology Officer | Dynasty Financial | `lnorman@dynastyfp.com` |
 
-*Tier F — fund admins:* Mike Canni `64579574adf2460001816419` · Jeff Bernstein `640f25aa2c3f2c00013bb17a` · Nav Gupta `60083de1d171bb00014754a1` · Ambuj Garg `66fa8107900bf9000168fdc7` · Nick Pasco `6082ec1c1540700001fbb984` · Casper Calisin `55714ad27369642bd90e4500`
+> **Before the first send:** these are cold B2B contacts sourced from a data provider. Send from a warmed domain, keep the first touch personal and low-volume (these are 1:1 partner asks, not a campaign), and honor opt-outs. Don't load all 64 into a sequence — the boutique-owner rows are the ones that convert, and they'll spot a blast.
 
 ---
 
