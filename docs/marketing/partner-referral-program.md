@@ -374,3 +374,27 @@ The 250 target was scoped to NY + SE Florida. Apollo pool sizing (all searches f
 **Padding to 250 in these two metros would have meant ~150 rows of MGAs, generalist agencies, and non-financial compliance consultants** — a bigger list and a worse one, plus ~150 wasted credits.
 
 **The path to 250 is national Tier A, not two-metro multi-tier.** Adviser/BD compliance consulting is a nationally-served niche: the same firm advises RIAs in Miami and Manhattan, and we deliver remotely, so the partner's zip code is nearly irrelevant. Dropping the geo filter on Tier A alone should yield several hundred genuine firms. Geography earns its place only for insurance brokers and law firms, which are local-relationship businesses.
+
+---
+
+## Wave 3 — national Tier A (Aug 2026)
+
+**[`partner-referral-contacts-wave3.csv`](./partner-referral-contacts-wave3.csv)** — 47 contacts, 32 distinct firms, 43 with verified work email. Dropping the geo filter on Tier A worked exactly as predicted: the national pool at the same precision is **191**, and it surfaced firms the two-metro pass structurally could not reach.
+
+**Running total: 145 contacts across ~90 firms.**
+
+Rows are tagged `A-national` (core fit) or `A-adjacent` (real firms, weaker fit — technical-accounting, SEC-filing-agent, and compliance-software shops; filter these out for a first send).
+
+### The standouts
+
+- **Patrick Dennis — Founder, Oyster Consulting.** Ex-SEC Senior Counsel (1986–91, twice), then Wachovia Securities Assistant GC. Better entry than the Oyster MDs in wave 1, and another examiner-credibility partner. `patrick.dennis@oysterllc.com`
+- **Sara McLean — VP Business Development, *Cybersecurity*, Optima Partners.** Ex-ACA, ex-Coalfire. A compliance consultancy that has hired a dedicated cyber BD person is either the best partner on this list or the sharpest competitor — worth a call precisely to find out which. `sara.mclean@optima-partners.com`
+- **Stacie Craddock — Founder, Integrated Compliance Advisors.** Her firm already markets **vCISO services and cybersecurity assessments** alongside RIA compliance. Same read as Optima: partner or competitor, and the answer matters. `stacie@integrated-compliance.com`
+- **Richard Berthy — CEO, ACA Foreside**, and **Christopher Driscoll — Founder, Compliance Exchange Group (CXG)** — CXG was named in the original desk research and is now a real contact.
+- **Optima Partners is already in your HubSpot** — Apollo returned a linked CRM account record. Check who owns that relationship before cold-emailing three of their principals.
+
+### Flags
+
+`amy@compliantperformance.com` sits off Guardian Performance's own domain · **Deacon Durden's address is `extrapolated`, not verified** — Apollo guessed the pattern at 0.6 confidence, so treat it as unconfirmed · catch-all domains at Business Compliance Partners and Oyster weaken the "verified" signal · no email for Tiffany Ramirez, Sami Oudeh, Beverly Fetcko, John Durden.
+
+**Credits this pass: 47.** Zero missing records across all three waves.
