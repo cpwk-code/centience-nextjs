@@ -286,6 +286,43 @@ Sequenced by *speed to a real referral*, not by prestige. Boutiques close in one
 
 ---
 
+## Appendix — Apollo person IDs (for email enrichment)
+
+Emails are **not** pulled yet. Apollo's people search doesn't return them, and enrichment is a separate credit-consuming call — the Apollo connection expired mid-session before it could run. These are the Apollo person IDs for every contact above, so enrichment is mechanical rather than a re-search. Feed to `apollo_people_bulk_match` (**max 10 per request**).
+
+**Priority 10 — enrich these first (one batch):**
+
+| # | Contact | Apollo person ID |
+|---|---|---|
+| 1 | Nathan Borghardt (Lockton Affinity) | `66fb067ca2b2690001ce4cbd` |
+| 2 | Chris Coyle (The Coyle Group) | `6740b755e169080001c22ca7` |
+| 3 | Kenneth Golsan (Golsan Scruggs) | `671d78845b01f200010c5c7a` |
+| 4 | Michelle Jacko (Core Compliance) | `68cf57da40b35e00013a604e` |
+| 5 | Stefanie Little (Chenery) | `66fc1f0a3b5eed0001a5e371` |
+| 6 | Brian Hamburger (MarketCounsel) | `60e75aa2f5153b000116014f` |
+| 7 | Gena Spitzer (Oyster Consulting) | `54a629667468693b8ce290c7` |
+| 8 | Robert Ansell (Opus Fund Services) | `64256d2bc36c7000012aa669` |
+| 9 | Michael Borts (ACA Group) | `6425a54ea134440001f67af4` |
+| 10 | Leslie Norman (Dynasty Financial) | `66d854100d63900001cd6598` |
+
+**Remaining contacts, by tier:**
+
+*Tier A — boutique consultants:* Craig Moreshead `54aab3aa7468690630efff13` · Colleen Kelly `60afd5041203cc00014edd51` · Stephen Lurie `610a381ea614ea00018458e2` · Giselle Casella `67000b23fd887b0001345983` · Joseph Stowell `5b89436c324d443417b428b7` · Gerard Clark `69f86d778476900001117acf` · Amy Yuter `54a4026074686938ac654325` · Ivan Barretto `66f49ba68fa53f000177c729` · Vick Ekizian `55706c157369646bf4db1500` · Matthew Swendiman `66fd80a967622700018dd038` · Calvin Robinson `60fced195946ac0001a6fcd2` · Glenn Marone `5dd1d040df729b000132215c` · David Lombardy `54a7c107746869705aa89750` · Stephen Murphy `5fd08a11d173d6000193434a` · Trish Davis `668cea1a7921f3000181c0e6` · Jennifer Mascioli-Tudor `66f11ab66453d300019f27a1` · Lisa Roitman `600f16e2bc34ca00016944cf` · Pete Galloway `54a48b1c7468692abf729a4f` · Richard Rondano `54a78ec07468696de776e93f`
+
+*Tier A — enterprise + hybrid:* Trey Loughran `611bd38a913fd10001ae0211` · Pete McAteer `54a78bb67468696829f3aa3e` · Daniel Garrett `60d46f510847b80001e77e7f` · Lisa Robinson `645bbe01684f1800014e1d21` · Jay Haas `54a611047468692fa227edbf` · Walter Booker `610cc1b53b94a90001d5c70f` · Paul Lally `658e6023e70de8000171cc72`
+
+*Tier B — insurance brokers:* Chris Powell `54a466847468692cf0407044` · Reid Robson `54a1becc74686949e7eb5d0d` · Cameron Norris `66f74e2bd68d72000171647d` · Karen Coyle `54a58dd17468693442f4569b` · Andrea "Cris" Dyer `611d5286b1d1db000183ba71` · William Dyer `57db1a87a6da984c10694de7`
+
+*Tier C — law* (non-cash partners — enrich only if you want direct contact): Steve Parker `66fde24da00d8e0001fde4bb` · Patricia Klusmeyer `66fde837a00d8e0001ff93c2` · John Macdonald `675be25718bb110001bd0aa2`
+
+*Tier D — platforms:* Marc Hineman `5fb423f482c6440001a207f7` · Harris Baltch `65c0a0497aab320001510086` · Robert Coppola `6112cc65469f0d0001725846` · Richard Williams `66f30f5054eab8000166f194` · Eric Nothstein `66f39b6ae9fb070001c94a47` · Jene Hoosier `66f5746a10496c00017b9de8` · Robert Walter `66ff50cb3f12c90001deca28`
+
+*Tier E — M&A:* Gordon Ross `66f990f5e64ec000010f907f` · Hoyt Stastney `5ffee1f54af143000122e82a` · Aryeh Malitzky `54a745937468696b7fd1f624` · Tom Valverde `54a7d33974686965d9b33353` · Douglas Johnson `5570a2397369646e2d611900` · Brandon Kawal `60feef6cb727d10001f60a61`
+
+*Tier F — fund admins:* Mike Canni `64579574adf2460001816419` · Jeff Bernstein `640f25aa2c3f2c00013bb17a` · Nav Gupta `60083de1d171bb00014754a1` · Ambuj Garg `66fa8107900bf9000168fdc7` · Nick Pasco `6082ec1c1540700001fbb984` · Casper Calisin `55714ad27369642bd90e4500`
+
+---
+
 **Sources:** contact records from Apollo (Aug 2026). Market research: [Best RIA Compliance Consultants](https://bestriacompliance.com/) · [NSCP](https://www.nscp.org/) / [vendor directory](https://www.nscp.org/vendor-directory) · [Schwab provider solutions](https://advisorservices.schwab.com/provider-solutions/RIA-Cyber-Liability-EO-Insurance) · [The Coyle Group](https://thecoylegroup.com/cyber-insurance-for-rias/) · [Box Professional](https://www.boxproinsurance.com/) · [HCP National](https://hcpnational.com/insurance-products/ria-insurance/) · [Golsan Scruggs](https://gsria.com/broker-dealer/) · [Stark & Stark](https://www.stark-stark.com/service/business/investment-management-securities/) · [Parker MacIntyre](https://riacompliancelawyer.com/) · [MGH Law](https://www.mgh-law.com/) · [My RIA Lawyer](https://www.myrialawyer.com/services/sec-compliance-lawyer/) · [DeVoe & Company](https://www.devoeandcompany.com/) + [2026 M&A outlook](https://www.investmentnews.com/ria-news/ria-ma-poised-for-another-record-year-in-2026-devoe-finds/263686) · [Dynasty](https://www.dynastyfinancialpartners.com/) · [RIA aggregators](https://www.dakota.com/resources/blog/best-ria-aggregators-for-advisors-asset-managers) · [NAV Fund Services](https://www.navfundservices.com/) · [AICPA commissions](https://www.njcpa.org/stayinformed/hubs/topics/commissions-and-contingent-fees) · [FINRA Rule 3270](https://www.finra.org/rules-guidance/rulebooks/finra-rules/3270) · [Refgrow referral benchmarks](https://refgrow.com/referral-fees)
 
 > **Verification note:** these are research-sourced **candidates** matched to our ICP — not vetted, contacted, or confirmed as open to a partner program. Titles and firms come from Apollo records refreshed June–August 2026 and can be stale; confirm the person is still in the role (and, for full-service firms like Stark & Stark, in the *right practice group*) before outreach.
