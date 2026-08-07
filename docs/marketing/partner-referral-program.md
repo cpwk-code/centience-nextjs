@@ -8,7 +8,7 @@
 >
 > **Why they say yes (this is the whole pitch):** we do the thing they *can't* do and don't want to own — run and technically enforce the IT/cyber stack — and we make their work look good, because their WSP finally has evidence behind it. **Complementary, not competitive**, to every partner in this document. Lead with that, not with the commission.
 
-**Contact data:** pulled from Apollo, August 2026. **Verified work emails, firm phone numbers, and locations for all 64 contacts are in [`partner-referral-contacts.csv`](./partner-referral-contacts.csv)** — HubSpot-importable. Read the Appendix first: five firms use email domains that differ from their websites, and 7 contacts have no email.
+**Contact data — START HERE: [`partner-referral-contacts-ALL.csv`](./partner-referral-contacts-ALL.csv)** — all **170 contacts across 93 firms** in one HubSpot-importable file (154 with a verified work email). Columns: `wave, tier, metro, name, title, firm, firm_domain, work_email, email_status, location, firm_phone, linkedin_url, apollo_person_id`. The four per-wave CSVs remain for provenance. Pulled from Apollo, Aug 2026. **Read §14 before sending** — several firms use email domains that differ from their websites, two addresses are guessed rather than verified, and 16 contacts have no email.
 
 ---
 
@@ -426,3 +426,34 @@ Page 2 of the 191-record national pool was the tail, and it degraded sharply: **
 170 is where Tier A ends. The remaining ~80 has to come from categories still only covered by wave 1's handful, and the pools are already sized and deep: **fund administration (4,450)** and **securities/investment-management law (1,438)**, both national. Fund admins are the better spend — they're paid referral partners with an onboarding trigger, whereas counsel is a non-cash relationship (§8).
 
 **Credits: 25 this pass; 183 across all four waves.** Zero missing records throughout.
+
+---
+
+## 14. The combined list — read before sending
+
+**[`partner-referral-contacts-ALL.csv`](./partner-referral-contacts-ALL.csv)** — all four waves merged and de-duplicated. **170 contacts, 93 distinct firms, 154 with a verified work email.** Zero duplicates across waves (matched on Apollo person ID). Sorted by tier, then firm, then name; `wave` and `metro` columns preserve where each row came from.
+
+| Tier | Contacts | What it is |
+|---|---|---|
+| `A-boutique` | 55 | Small adviser/BD compliance shops — owner is the decision-maker, a $6–10K fee is material. **Best conversion.** |
+| `A-national` | 66 | Adviser/BD compliance firms found nationally |
+| `A-enterprise` | 7 | ACA, Oyster, Foreside — bigger books, longer cycles |
+| `A-hybrid` | 3 | MarketCounsel — compliance + legal + consulting, reaches RIAs at formation |
+| `B-insurance` | 9 | Cyber/E&O brokers — carrier questionnaires ask what we enforce |
+| `D-platform` | 8 | Dynasty, Sanctuary — best ARR per relationship, longest cycle |
+| `F-fundadmin` | 7 | Fund administrators — new-launch and investor-ODD trigger |
+| `E-manda` | 6 | RIA M&A advisors — diligence is the trigger |
+| `C-law` | 3 | Securities counsel — **non-cash partners only** (§8) |
+| `A-adjacent` | 6 | Real firms, weaker fit (technical accounting, filing agents, compliance software). **Exclude from a first send.** |
+
+### Before the first send
+
+- **Two addresses are `extrapolated`, not verified** — **Deacon Durden** (QCS Financial) and **Stephen Simon** (Securities Compliance Advisors). Apollo guessed the pattern; treat both as unconfirmed and expect bounces. Filter on `email_status = verified` for any send.
+- **Email domains differ from websites** at Dynasty (`@dynastyfp.com`), DeVoe (`@devoe-co.com`), NAV (`@navconsulting.net`), Parker MacIntyre (`@parkmac.com`), HC Global (`@hcglobalfs.com`), Chenery's Thomas Cain (`@chenerygroup.com`), DFP's Michael Glynn (`@sddco.com`), Guardian's Amy Jones (`@compliantperformance.com`), Integrity's David Millar (`@integrity2c.com`).
+- **Not a mailbox:** Brian Hamburger's `summit@marketcounsel.com` is an event alias — use COO Walter Booker instead. Claire McCleskey's `com@clarity-consultancy.com` looks malformed.
+- **Catch-all domains** (weakens "verified"): NAV Fund Services, Business Compliance Partners, Oyster Consulting.
+- **Don't email multiple people at one firm.** Oyster appears 6× (three at founder level), Aspect 6×, Optima 7×, Chenery 4×, ACA/Foreside 9×. One firm is one relationship — pick the best contact and hold the rest as fallbacks.
+- **Optima Partners is already a HubSpot account** — check relationship ownership before any outreach.
+- These are cold B2B contacts from a data provider. Warmed domain, personal 1:1, honor opt-outs. The §10 pitch does not survive being templated across 170 rows.
+
+**Cost to build: 183 Apollo credits.** Zero missing records across all four waves.
