@@ -14,6 +14,112 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  // ─── AI Prompts as Books and Records (August 2026) ────────────────────────
+  {
+    id: 27,
+    slug: "ai-prompts-books-and-records-sec-finra-audit-trail",
+    category: "AI Governance",
+    title: "Your AI Prompts Are Books and Records: What Examiners Expect Firms to Produce",
+    excerpt: "If an employee asks an AI assistant to summarize a client position, that exchange is a business communication. FINRA Rule 4511 and SEC Rule 17a-4 do not exempt it. Here is why most regulated firms cannot produce an AI audit trail today, and what a defensible program looks like.",
+    image: "/assets/blog/centience-ai-governance-finra.png",
+    author: "Orville Matias",
+    date: "August 2026",
+    metaTitle: "AI Prompts Are Books and Records: SEC & FINRA Audit Trail Requirements | Centience",
+    metaDescription: "FINRA 4511 and SEC 17a-4 apply to AI prompts and outputs about firm business. Why most regulated firms cannot produce an AI audit trail, the Copilot sub-processor gap, and how to build defensible AI recordkeeping.",
+    content: `
+[STAT_CARDS]
+6 Years | FINRA 17a-4 Retention | Business communications must be immutable and readily accessible
+Feb 2025 | SEC Enforcement Signal | The Cyber and Emerging Technologies Unit made AI-related misconduct an explicit priority
+$90M | Two Sigma Civil Penalties | Paid for failing to address known vulnerabilities in its investment models
+0 | What Most Firms Can Produce | The number of AI interactions the average firm can retrieve on request
+[/STAT_CARDS]
+
+Ask a compliance officer whether their firm archives email, and the answer is immediate: yes, immutably, for six years, and they can produce it. Ask the same question about the prompts their staff typed into Microsoft Copilot or ChatGPT last quarter, and the room goes quiet.
+
+That gap is the single most common technology-governance exposure we find in regulated firms right now. Not because anyone decided AI records did not matter — but because AI arrived inside tools firms already trusted, and nobody re-asked the recordkeeping question.
+
+## An AI prompt about firm business is a business communication
+
+There is no AI carve-out in the records rules. [FINRA Rule 4511](/insights/data-governance-financial-services-finra-17a-4-sec-records-2026) requires members to preserve books and records, and SEC Rule 17a-4 specifies the form: non-rewritable, non-erasable, readily accessible for the required retention period. The rules describe the *substance* of a communication, not the channel it happened to travel through.
+
+So when an employee asks an AI assistant to draft a client email, summarize a portfolio position, or analyze a trade rationale, they have created a business communication. The prompt is an input about firm business. The output may inform advice given to a client. Both are the kind of record an examiner can ask you to produce.
+
+[CALLOUT:rule]
+The test is not "was this a new technology?" It is "was this a communication relating to the firm's business?" If the answer is yes, Rule 4511 and Rule 17a-4 apply — and a record you cannot retrieve in a non-rewritable format is a records failure regardless of how modern the tool was.
+[/CALLOUT]
+
+## Three places AI records quietly disappear
+
+**Inside the assistant, not the mailbox.** When Copilot summarizes a Teams thread or drafts a document, the interaction happens in the assistant's own layer. Your email archive captures the resulting message if it is sent. It does not capture the prompt, the intermediate outputs, or the drafts that were discarded.
+
+**Through a sub-processor outside your tenant.** This one surprises the most people. Some AI features route requests through model providers that sit outside your Microsoft or Google tenant. That means data leaves the boundary your other controls are built around — and the interaction log lives with a third party, on their retention schedule, not yours. Firms who assume "it is inside Microsoft, so it is inside our archive" are frequently wrong.
+
+**On tools nobody registered.** Employees adopt AI faster than committees approve it. A consumer ChatGPT account used for a client memo produces records your firm has no visibility into and no ability to retain.
+
+## What "produce the audit trail" actually means
+
+If an examiner asks how your firm supervises AI use, a policy document is the beginning of the answer, not the end. A defensible response can produce, on request:
+
+- **Who** used which AI tool, and when
+- **What** was submitted, including whether sensitive client data was present
+- **What** the tool returned
+- **The record itself**, retained immutably for the applicable period and searchable by user, date, and content
+- **Evidence of the boundary** — that unapproved tools were detected and that policy was attested to by staff
+
+That is the same standard email archiving has met for two decades. The difference is that most firms have never applied it to AI.
+
+## The supervision problem beneath the records problem
+
+Records and supervision are the same failure wearing different clothes. [FINRA Rule 3110](/insights/ai-governance-finra-member-firms-2026) requires a supervisory system reasonably designed to achieve compliance. If AI tools are in use and the firm cannot see what is being submitted to them, the supervisory system is not reasonably designed — not because AI is inherently risky, but because the firm has no visibility into a channel where business is being conducted.
+
+The SEC's creation of its Cyber and Emerging Technologies Unit in February 2025 made AI-related misconduct an explicit enforcement priority. And the Two Sigma matter — $90 million in civil penalties for failing to address known vulnerabilities in its investment models — is a useful reminder of the pattern regulators punish: not the existence of a technology problem, but the failure to act on one the firm already knew about.
+
+[CALLOUT:action]
+The most common finding is also the most avoidable: a firm has an AI policy, staff have not attested to it, no inventory of AI tools exists, and no interaction is retained. Each of those four is fixable in weeks, and together they are what an examiner reads as a program.
+[/CALLOUT]
+
+## Do not commit to more monitoring than you will actually operate
+
+One caution that experienced compliance officers raise immediately, and they are right: be careful what your policy promises.
+
+Examiners write findings when a firm commits to a procedure and then does not follow it. A policy that pledges comprehensive AI monitoring the firm cannot sustain creates an examinable obligation where none existed. The better approach is to scope deliberately — state exactly which tools are approved, which channels are captured, what is retained and for how long — and then be able to prove that narrower commitment completely.
+
+Precision beats ambition here. A tightly scoped program you operate continuously is far more defensible than a broad one you aspire to.
+
+## What a defensible AI recordkeeping program looks like
+
+1. **An inventory** of every AI tool touching firm or client data, with an owner and a risk assessment for each.
+2. **A written policy** covering approved tools, permitted data types, and prohibited uses — scoped to what you will actually enforce.
+3. **Staff attestation** to that policy, collected and compiled into a single record you can hand an examiner. Signatures alone are not evidence; the compiled roster is.
+4. **Data protection before submission** — sensitive client information redacted or blocked before it reaches a model, not audited after.
+5. **Interaction logging** retained immutably on the applicable schedule, searchable, and exportable as an exam package.
+6. **Shadow AI detection** so unapproved tools surface as findings rather than as surprises.
+
+Note the order. Firms tend to start with the policy because it is the easiest artifact to produce. Examiners start with the evidence.
+
+## The question worth answering before someone else asks it
+
+If a request letter arrived next week asking your firm to produce every AI interaction touching client information for the past twelve months, could you?
+
+For most regulated firms today the honest answer is no — and that is not a failure of diligence so much as a control that has not caught up to a tool that arrived quietly. The firms that close this gap in 2026 will be the ones that treated AI as a records and supervision question early, rather than a technology question later.
+
+The Centience Governance Score is a free, five-minute self-assessment that scores your firm 0–100 across cybersecurity, data and records, supervision, infrastructure, and AI governance — and shows you exactly where your AI recordkeeping stands before an examiner does.
+
+[CTA_BUTTON:Get Your Free Governance Score|/assessments/governance-score]
+
+[RELATED_SERVICE:AI Governance|Policy, tool inventory, staff attestation, shadow-AI detection, and retained AI audit trails — operated continuously as part of one accountable program.|/ai-governance]
+
+For the records foundation underneath this, see our guide to [data governance and FINRA 17a-4 retention](/insights/data-governance-financial-services-finra-17a-4-sec-records-2026), or how Centience supports [financial services firms](/industries/financial-services) specifically.
+
+[FAQ_ACCORDION]
+Are AI prompts really covered by FINRA and SEC recordkeeping rules? | The rules turn on substance, not channel. FINRA Rule 4511 and SEC Rule 17a-4 require preservation of communications relating to the firm's business. A prompt asking an AI assistant to analyze a client position or draft client correspondence is such a communication, and there is no AI exemption in the rules.
+How long do we need to retain AI interaction records? | Apply the same schedule you already apply to the underlying record type. For most broker-dealer business communications that is six years under SEC Rule 17a-4, with the first two years readily accessible. Advisers, municipal advisors, and healthcare organizations have their own schedules, so retention should be set per applicable rule rather than assumed.
+Does using Microsoft Copilot keep our data inside our tenant? | Not necessarily. Some AI features route requests through model providers acting as sub-processors outside your Microsoft tenant, which means the data leaves the boundary your other controls assume and the interaction log may sit with a third party. This should be verified for your specific configuration and licensing rather than assumed.
+What is shadow AI and why does it create a records problem? | Shadow AI is any AI tool used without compliance approval or visibility. It creates a records problem because the firm cannot retain what it cannot see — business communications occur on a channel outside every archiving and supervision control the firm operates.
+Where should a firm start if it has none of this in place? | Start with the inventory and the attestation, not the technology. Knowing which AI tools are in use and having staff formally acknowledge a scoped policy produces the two artifacts examiners ask for first, and both can be completed in weeks.
+[/FAQ_ACCORDION]
+`,
+  },
   // ─── Mid-Year 2026 Technology Governance Gaps (July 2026) ─────────────────
   {
     id: 26,
