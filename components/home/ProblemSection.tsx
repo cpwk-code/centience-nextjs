@@ -34,7 +34,7 @@ const ProblemSection = () => (
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Technology Governance Gap</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          One Integrated Governance Program. Three Layers. Continuously Operated.
+          One Integrated Governance Program. Four Layers. Continuously Operated.
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
           Centience does not deliver governance frameworks and walk away. We build and operate the governance program — managing your infrastructure, governing your cybersecurity, controlling your data, and overseeing your AI environment as a single continuously enforced model.

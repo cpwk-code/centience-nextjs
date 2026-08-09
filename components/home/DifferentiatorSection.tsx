@@ -25,7 +25,7 @@ const cols = [
       { text: "Regulatory expertise on staff",        yes: false },
       { text: "Audit evidence maintained",            yes: false },
       { text: "AI oversight included",                yes: false },
-      { text: "All three layers, one firm",           yes: false },
+      { text: "All four layers, one firm",            yes: false },
     ],
   },
   {
@@ -36,8 +36,8 @@ const cols = [
       { text: "Continuous — never stops",             yes: true  },
       { text: "Controls technically enforced",        yes: true  },
       { text: "Evidence maintained in real time",     yes: true  },
-      { text: "AI, cybersecurity, infrastructure",    yes: true  },
-      { text: "One accountable firm for all three",   yes: true  },
+      { text: "AI, data, cybersecurity, infrastructure", yes: true  },
+      { text: "One accountable firm for all four",    yes: true  },
     ],
   },
 ];

@@ -120,7 +120,7 @@ const GovernancePage = () => (
             <span className="text-gradient-gold">Is Just Documentation.</span>
           </h1>
           <p className="text-lg leading-relaxed opacity-70 mb-4 max-w-2xl">
-            Governance, risk, and compliance programs that exist only in documentation do not protect organizations. They protect the documentation. Centience builds governance programs that are technically enforced across your infrastructure, cybersecurity, and AI environment — and operates them continuously.
+            Governance, risk, and compliance programs that exist only in documentation do not protect organizations. They protect the documentation. Centience builds governance programs that are technically enforced across your infrastructure, cybersecurity, data, and AI environment — and operates them continuously.
           </p>
           <p className="text-lg leading-relaxed opacity-70 mb-10 max-w-2xl">
             Every layer works together. Every control is technically enforced. Every piece of audit evidence is assembled in real time — not reconstructed before an exam.

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "AI & IT Governance for RIAs & Regulated Firms | Centience",
-    description: "Prove your technology is compliant before regulators ask. Centience runs IT, cybersecurity, and AI oversight for regulated firms — audit evidence kept ready continuously. Free instant Governance Score.",
+    description: "Prove your technology is compliant before regulators ask. Centience runs IT, cybersecurity, data, and AI oversight for regulated firms — audit evidence kept ready continuously. Free instant Governance Score.",
     url: "https://centience.ai",
     type: 'website',
     siteName: 'Centience',

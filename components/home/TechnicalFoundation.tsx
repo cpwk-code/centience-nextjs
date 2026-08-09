@@ -54,7 +54,7 @@ const TechnicalFoundation = () => (
           There are firms that write governance frameworks. There are firms that conduct compliance assessments. There are firms that manage IT infrastructure. Centience is the only firm that does all three — because effective governance requires control of the environment being governed.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          When Centience manages your infrastructure, your cybersecurity, and your AI environment, governance is not theoretical. Controls are technically enforced. Evidence is continuously collected. When regulators arrive, the documentation is already assembled.
+          When Centience manages your infrastructure, your cybersecurity, your data, and your AI environment, governance is not theoretical. Controls are technically enforced. Evidence is continuously collected. When regulators arrive, the documentation is already assembled.
         </p>
         <p className="text-muted-foreground leading-relaxed">
           That is why Centience maintains a documented track record of successful outcomes across client engagements — and why our average client relationship exceeds 10 years.
