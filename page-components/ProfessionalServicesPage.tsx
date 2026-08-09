@@ -298,7 +298,7 @@ const ProfessionalServicesPage = () => {
                 transition={{ delay: 0.1 }}
                 className="text-xl text-primary-foreground/70 mb-4"
               >
-                Centience runs technology governance — managed infrastructure, cybersecurity, and AI oversight as one accountable program — for professional service firms whose clients trust them with sensitive data. We keep your controls enforced and your audit evidence continuously assembled, so you stay exam- and client-review-ready year-round instead of scrambling before each request.
+                Centience runs technology governance — managed infrastructure, cybersecurity, data, and AI oversight as one accountable program — for professional service firms whose clients trust them with sensitive data. We keep your controls enforced and your audit evidence continuously assembled, so you stay exam- and client-review-ready year-round instead of scrambling before each request.
               </motion.p>
               
               <motion.p

@@ -210,7 +210,7 @@ const AboutPage = () => (
             of the environment being governed.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            When Centience manages your infrastructure, your cybersecurity, and your AI environment,
+            When Centience manages your infrastructure, your cybersecurity, your data, and your AI environment,
             governance is not theoretical. Controls are technically enforced. Evidence is continuously
             collected. When regulators arrive, the documentation is already assembled.
           </p>
@@ -298,7 +298,7 @@ const AboutPage = () => (
             </p>
             <p>
               In 2026, he founded Centience — purpose-built to close the gap between technology operations
-              and governance oversight across infrastructure, cybersecurity, and AI.
+              and governance oversight across infrastructure, cybersecurity, data, and AI.
             </p>
             <p>
               He currently serves as Chief Compliance Officer in an advisory capacity at CloudLayer.ai — a

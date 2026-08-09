@@ -34,7 +34,7 @@ const ProblemSection = () => (
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Technology Governance Gap</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
-          One Integrated Governance Program. Three Layers. Continuously Operated.
+          One Integrated Governance Program. Four Layers. Continuously Operated.
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
           Centience does not deliver governance frameworks and walk away. We build and operate the governance program — managing your infrastructure, governing your cybersecurity, controlling your data, and overseeing your AI environment as a single continuously enforced model.
@@ -90,14 +90,44 @@ const ProblemSection = () => (
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {[
-            { stat: "$2M+", label: "HIPAA civil penalty annual caps per violation category as of January 2026" },
-            { stat: "Feb 2025", label: "SEC Cyber and Emerging Technologies Unit launched with explicit AI governance authority" },
-            { stat: "$2.3M", label: "FINRA fines in 2025 for automated monitoring and off-channel communications failures" },
-            { stat: "$90M", label: "Two Sigma paid to SEC for failing to address known system vulnerabilities" },
+            {
+              stat: "$2.19M",
+              label: "HIPAA civil money penalty annual cap per violation category, effective January 28, 2026",
+              source: "HHS civil money penalty inflation adjustment (2026)",
+            },
+            {
+              stat: "Feb 2025",
+              label: "SEC launched its Cyber and Emerging Technologies Unit, making AI-related misconduct an explicit enforcement priority",
+              source: "SEC Press Release 2025-42",
+              href: "https://www.sec.gov/newsroom/press-releases/2025-42",
+            },
+            {
+              stat: "$1.3M",
+              label: "FINRA sanction against a single firm for off-channel communications failures — surfaced during a routine cycle examination",
+              source: "FINRA disciplinary action, June 2025",
+            },
+            {
+              stat: "$90M",
+              label: "Two Sigma paid in SEC civil penalties for failing to address known vulnerabilities in its investment models",
+              source: "SEC Press Release 2025-15",
+              href: "https://www.sec.gov/newsroom/press-releases/2025-15",
+            },
           ].map((item) => (
             <div key={item.stat} className="card-premium p-6 flex flex-col gap-3">
               <p className="text-2xl font-display font-bold text-gold">{item.stat}</p>
               <p className="text-sm text-muted-foreground leading-relaxed">{item.label}</p>
+              {item.href ? (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-muted-foreground/70 hover:text-accent underline decoration-dotted mt-auto"
+                >
+                  Source: {item.source}
+                </a>
+              ) : (
+                <p className="text-xs text-muted-foreground/70 mt-auto">Source: {item.source}</p>
+              )}
             </div>
           ))}
         </div>

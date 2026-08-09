@@ -43,7 +43,7 @@ const HeroSection = () => (
           </h1>
 
           <p className="text-lg leading-relaxed mb-10 opacity-70">
-            Centience runs your IT, cybersecurity, and AI oversight as one program — and keeps the audit evidence assembled, so you&rsquo;re ready before the SEC, FINRA, or a client ever asks.
+            Centience runs your IT, cybersecurity, data, and AI oversight as one program — and keeps the audit evidence assembled, so you&rsquo;re ready before the SEC, FINRA, or a client ever asks.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 w-full">

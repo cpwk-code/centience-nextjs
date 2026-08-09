@@ -59,10 +59,29 @@ const advantages = [
 ];
 
 const regulatoryStats = [
-  { stat: "$2.3B+", label: "FINRA and SEC fines for off-channel communications failures since 2021" },
-  { stat: "6 years", label: "Minimum FINRA 17a-4 retention requirement for broker-dealer records" },
-  { stat: "2025", label: "SEC began requiring AI data governance disclosures in examination letters" },
-  { stat: "$1.9M", label: "Average HIPAA settlement cost when PHI data governance failures are found" },
+  {
+    stat: "$600M+",
+    label: "SEC civil penalties against more than 70 firms for recordkeeping failures in fiscal year 2024 alone — including its first cases against municipal advisors",
+    source: "SEC Press Release 2024-186",
+    href: "https://www.sec.gov/newsroom/press-releases/2024-186",
+  },
+  {
+    stat: "6 years",
+    label: "Core retention period for broker-dealer records under SEC Rule 17a-4, which FINRA Rule 4511 requires members to follow",
+    source: "SEC Rule 17a-4; FINRA Rule 4511",
+  },
+  {
+    stat: "Nov 2025",
+    label: "The SEC's 2026 examination priorities name firms' use of AI and automated technologies as a focus — including whether actual AI use matches what firms tell clients and regulators",
+    source: "SEC Division of Examinations, FY2026 Examination Priorities",
+    href: "https://www.sec.gov/files/2026-exam-priorities.pdf",
+  },
+  {
+    stat: "$3M",
+    label: "Largest HIPAA settlement of 2025 — alleged Security Rule and Breach Notification Rule violations at a single provider",
+    source: "HHS OCR resolution agreements",
+    href: "https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/index.html",
+  },
 ];
 
 const DataGovernancePage = () => (
@@ -130,9 +149,21 @@ const DataGovernancePage = () => (
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {regulatoryStats.map((item) => (
-            <div key={item.stat} className="card-premium p-6">
-              <p className="text-2xl font-display font-bold text-gold mb-2">{item.stat}</p>
+            <div key={item.stat} className="card-premium p-6 flex flex-col gap-3">
+              <p className="text-2xl font-display font-bold text-gold">{item.stat}</p>
               <p className="text-sm text-muted-foreground leading-relaxed">{item.label}</p>
+              {item.href ? (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-muted-foreground/70 hover:text-accent underline decoration-dotted mt-auto"
+                >
+                  Source: {item.source}
+                </a>
+              ) : (
+                <p className="text-xs text-muted-foreground/70 mt-auto">Source: {item.source}</p>
+              )}
             </div>
           ))}
         </div>

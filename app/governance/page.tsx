@@ -4,14 +4,14 @@ import GovernancePage from '@/page-components/GovernancePage';
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Continuous Technology Governance Programs | Centience",
-  description: "Three integrated governance programs delivered as a single continuously managed operating model. Assessment → Roadmap → Ongoing Program.",
+  description: "Four integrated governance programs delivered as a single continuously managed operating model. Assessment → Roadmap → Ongoing Program.",
   keywords: ["continuous technology governance","managed technology governance","technology governance program","infrastructure governance","cybersecurity governance","AI governance","regulated organizations","ongoing governance program"],
   alternates: {
     canonical: "https://centience.ai/governance",
   },
   openGraph: {
     title: "Continuous Technology Governance Programs | Centience",
-    description: "Three integrated governance programs — infrastructure, cybersecurity, and AI — delivered as a single continuously managed operating model for regulated organizations. Assessment to roadmap to ongoing program.",
+    description: "Four integrated governance programs — infrastructure, cybersecurity, data, and AI — delivered as a single continuously managed operating model for regulated organizations. Assessment to roadmap to ongoing program.",
     url: "https://centience.ai/governance",
     type: 'website',
     siteName: 'Centience',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Continuous Technology Governance Programs | Centience",
-    description: "Three integrated governance programs delivered as a single continuously managed operating model. Assessment → Roadmap → Ongoing Program.",
+    description: "Four integrated governance programs delivered as a single continuously managed operating model. Assessment → Roadmap → Ongoing Program.",
     images: ["https://centience.ai/og-image.png"],
   },
 };
