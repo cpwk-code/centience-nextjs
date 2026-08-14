@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { buildFaqSchema } from '@/data/industryFaqs';
+import { aiGovernanceFaqs } from '@/data/serviceFaqs';
 import AIGovernancePage from '@/page-components/AIGovernancePage';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
@@ -44,6 +46,8 @@ const serviceSchema = {
   "areaServed": "Nationwide"
 };
 
+const faqSchema = buildFaqSchema(aiGovernanceFaqs);
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -59,6 +63,7 @@ export default function Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <AIGovernancePage />
     </>
   );

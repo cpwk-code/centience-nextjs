@@ -1,5 +1,7 @@
 import DataGovernancePage from "@/page-components/DataGovernancePage";
 import type { Metadata } from "next";
+import { buildFaqSchema } from "@/data/industryFaqs";
+import { dataGovernanceFaqs } from "@/data/serviceFaqs";
 
 export const metadata: Metadata = {
   title: "Data Governance for Regulated Organizations | Centience",
@@ -46,6 +48,8 @@ const serviceSchema = {
   "areaServed": "Nationwide",
 };
 
+const faqSchema = buildFaqSchema(dataGovernanceFaqs);
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -61,6 +65,7 @@ export default function Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <DataGovernancePage />
     </>
   );

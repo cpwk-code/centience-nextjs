@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { buildFaqSchema } from '@/data/industryFaqs';
+import { cybersecurityFaqs } from '@/data/serviceFaqs';
 import CybersecurityPage from '@/page-components/CybersecurityPage';
 
 // ─── SEO Metadata ────────────────────────────────────────────────────────────
@@ -44,6 +46,8 @@ const serviceSchema = {
   "areaServed": "Nationwide"
 };
 
+const faqSchema = buildFaqSchema(cybersecurityFaqs);
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -59,6 +63,7 @@ export default function Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <CybersecurityPage />
     </>
   );

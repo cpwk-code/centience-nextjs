@@ -1,5 +1,7 @@
 "use client";
 import Layout from "@/components/Layout";
+import FAQSection from "@/components/FAQSection";
+import { infrastructureFaqs } from "@/data/serviceFaqs";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
@@ -121,6 +123,8 @@ const InfrastructurePage = () => (
       </div>
     </section>
 
+    <FAQSection items={infrastructureFaqs} heading="Infrastructure Governance — FAQ" />
+
     {/* Related Industries */}
     <section className="py-16 bg-muted/50 border-t border-border">
       <div className="container mx-auto">
@@ -155,6 +159,13 @@ const InfrastructurePage = () => (
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">Your infrastructure is where data lives. Data governance classifies what it holds, controls who accesses it, and enforces how long it must be kept. Without the data layer, infrastructure management satisfies operational requirements — but not regulatory ones.</p>
             <a href="/data-governance" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
               <ArrowRight size={12} /> Data Governance Program
+            </a>
+          </div>
+          <div className="border border-border rounded-xl p-5 bg-muted/40 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground mb-2">If You Need Day-to-Day IT Rather Than Governance</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">Centience governs the environment and evidences the controls. Organizations that primarily need the environment operated &mdash; help desk, endpoint management, cloud administration, disaster recovery &mdash; are usually better served by our sister firm Compuwork, which has run managed IT for businesses across New York and Florida since 2005.</p>
+            <a href="https://compuwork.ai" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors text-sm font-medium flex items-center gap-1">
+              <ArrowRight size={12} /> Compuwork Managed IT
             </a>
           </div>
           <div className="flex flex-wrap gap-4 items-center">

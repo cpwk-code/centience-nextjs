@@ -1,5 +1,7 @@
 "use client";
 import Layout from "@/components/Layout";
+import FAQSection from "@/components/FAQSection";
+import { governanceFaqs } from "@/data/serviceFaqs";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
@@ -199,6 +201,8 @@ const GovernancePage = () => (
         </div>
       </div>
     </section>
+
+    <FAQSection items={governanceFaqs} heading="Technology Governance — FAQ" />
 
     {/* Related Industries */}
     <section className="py-16 bg-muted/50 border-t border-border">

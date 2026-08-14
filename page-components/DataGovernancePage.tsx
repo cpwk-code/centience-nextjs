@@ -1,5 +1,7 @@
 "use client";
 import Layout from "@/components/Layout";
+import FAQSection from "@/components/FAQSection";
+import { dataGovernanceFaqs } from "@/data/serviceFaqs";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -29,7 +31,7 @@ const capabilities = [
   {
     icon: MessageSquare,
     title: "Off-Channel Communications Capture",
-    description: "Capture and retain business communications across text, WhatsApp, personal email, and collaboration tools. FINRA and SEC have levied over $2.3 billion in fines since 2021 for off-channel communication failures — this is no longer optional.",
+    description: "Capture and retain business communications across text, WhatsApp, personal email, and collaboration tools. The SEC alone imposed more than $600 million in civil penalties against over 70 firms for recordkeeping failures in fiscal year 2024 — this is no longer optional.",
   },
   {
     icon: FileText,
@@ -277,6 +279,8 @@ const DataGovernancePage = () => (
         </div>
       </div>
     </section>
+
+    <FAQSection items={dataGovernanceFaqs} heading="Data Governance — FAQ" />
 
     {/* Related Industries */}
     <section className="py-16 bg-muted/50 border-t border-border">
