@@ -1,5 +1,7 @@
 "use client";
 import Layout from "@/components/Layout";
+import FAQSection from "@/components/FAQSection";
+import { cybersecurityFaqs } from "@/data/serviceFaqs";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { motion } from "framer-motion";
@@ -130,6 +132,8 @@ const CybersecurityPage = () => (
         </div>
       </div>
     </section>
+
+    <FAQSection items={cybersecurityFaqs} heading="Cybersecurity Governance — FAQ" />
 
     {/* Related Industries */}
     <section className="py-16 bg-muted/50 border-t border-border">
