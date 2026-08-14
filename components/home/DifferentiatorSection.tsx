@@ -129,9 +129,9 @@ const DifferentiatorSection = () => (
               className="bg-background border border-border rounded-xl p-6"
             >
               <p className="text-sm text-foreground leading-relaxed mb-4 italic">&ldquo;{o.quote}&rdquo;</p>
-              <div className="flex items-center gap-3">
-                <div className="h-px flex-1 bg-border" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent bg-accent/10 rounded-full px-3 py-1 shrink-0">
+              <div className="flex flex-wrap items-center gap-3">
+                <div className="h-px flex-1 min-w-[2rem] bg-border" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent bg-accent/10 rounded-full px-3 py-1">
                   {o.role}, {o.industry}
                 </span>
               </div>
