@@ -79,14 +79,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Locations
     { url: 'https://centience.ai/locations', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://centience.ai/locations/ai-governance-new-york', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.7 },
-    { url: 'https://centience.ai/locations/ai-governance-manhattan', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.7 },
-    { url: 'https://centience.ai/locations/ai-governance-westchester', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.65 },
     { url: 'https://centience.ai/locations/ai-governance-greenwich-ct', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.65 },
-    { url: 'https://centience.ai/locations/ai-governance-stamford-ct', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.65 },
-    { url: 'https://centience.ai/locations/ai-governance-white-plains-ny', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.65 },
     { url: 'https://centience.ai/locations/ai-governance-miami', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.65 },
-    { url: 'https://centience.ai/locations/ai-governance-palm-beach', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.65 },
-    { url: 'https://centience.ai/locations/ai-governance-fort-lauderdale', lastModified: '2026-05-01', changeFrequency: 'monthly', priority: 0.65 },
   ];
 
   const complianceLanding: MetadataRoute.Sitemap = Object.keys(complianceContent).map((slug) => ({

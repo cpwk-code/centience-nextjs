@@ -33,6 +33,40 @@ const nextConfig: NextConfig = {
         destination: 'https://centience.ai/:path*',
         permanent: true,
       },
+      // Nine thin city pages consolidated into three regional pages (301).
+      // Each was ~440 words and shared 78% of its text with the others, which
+      // is the doorway-page pattern. The signal follows the traffic to the
+      // region that now covers that market.
+      {
+        source: '/locations/ai-governance-manhattan',
+        destination: '/locations/ai-governance-new-york',
+        permanent: true,
+      },
+      {
+        source: '/locations/ai-governance-westchester',
+        destination: '/locations/ai-governance-new-york',
+        permanent: true,
+      },
+      {
+        source: '/locations/ai-governance-white-plains-ny',
+        destination: '/locations/ai-governance-new-york',
+        permanent: true,
+      },
+      {
+        source: '/locations/ai-governance-stamford-ct',
+        destination: '/locations/ai-governance-greenwich-ct',
+        permanent: true,
+      },
+      {
+        source: '/locations/ai-governance-fort-lauderdale',
+        destination: '/locations/ai-governance-miami',
+        permanent: true,
+      },
+      {
+        source: '/locations/ai-governance-palm-beach',
+        destination: '/locations/ai-governance-miami',
+        permanent: true,
+      },
       // Retired funnels → the free Governance Score (301)
       {
         source: '/readiness',

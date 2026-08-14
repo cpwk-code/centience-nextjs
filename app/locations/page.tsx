@@ -21,14 +21,8 @@ export const metadata: Metadata = {
 
 const locations = [
   { slug: "ai-governance-new-york", city: "New York City", state: "NY", desc: "SEC, FINRA, HIPAA compliance for broker-dealers, RIAs, healthcare, and law firms." },
-  { slug: "ai-governance-manhattan", city: "Manhattan", state: "NY", desc: "Governance for Midtown and Financial District regulated organizations." },
-  { slug: "ai-governance-westchester", city: "Westchester County", state: "NY", desc: "Continuous governance for White Plains, Yonkers, and Westchester County." },
   { slug: "ai-governance-greenwich-ct", city: "Greenwich", state: "CT", desc: "Governance for hedge funds, family offices, and RIAs in Fairfield County." },
-  { slug: "ai-governance-stamford-ct", city: "Stamford", state: "CT", desc: "Continuous governance for regulated organizations in Stamford and Norwalk CT." },
-  { slug: "ai-governance-white-plains-ny", city: "White Plains", state: "NY", desc: "Governance for regulated organizations in White Plains and Westchester." },
   { slug: "ai-governance-miami", city: "Miami", state: "FL", desc: "SEC, FINRA, HIPAA compliance for Brickell, Coral Gables, and South Florida." },
-  { slug: "ai-governance-palm-beach", city: "Palm Beach County", state: "FL", desc: "Governance for West Palm Beach, Boca Raton, and Palm Beach Gardens." },
-  { slug: "ai-governance-fort-lauderdale", city: "Fort Lauderdale", state: "FL", desc: "Continuous governance for Broward County regulated organizations." },
 ];
 
 const breadcrumbSchema = buildBreadcrumbSchema([
