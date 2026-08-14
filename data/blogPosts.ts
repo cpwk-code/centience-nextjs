@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Governance",
     title: "Your AI Prompts Are Books and Records: What Examiners Expect Firms to Produce",
     excerpt: "If an employee asks an AI assistant to summarize a client position, that exchange is a business communication. FINRA Rule 4511 and SEC Rule 17a-4 do not exempt it. Here is why most regulated firms cannot produce an AI audit trail today, and what a defensible program looks like.",
-    image: "/assets/blog/centience-ai-governance-finra.png",
+    image: "/assets/blog/centience-ai-prompts-books-and-records.png",
     author: "Orville Matias",
     date: "August 2026",
     metaTitle: "AI Prompts Are Books and Records: SEC & FINRA Audit Trail Requirements | Centience",

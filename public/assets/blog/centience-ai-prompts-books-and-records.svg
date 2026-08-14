@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0b1520"/>
+      <stop offset="100%" style="stop-color:#1a2540"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8b84b"/>
+      <stop offset="100%" style="stop-color:#f5d070"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Diagonal rule lines -->
+  <g stroke="#e8b84b" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="630" x2="630" y2="0"/>
+    <line x1="200" y1="630" x2="830" y2="0"/>
+    <line x1="400" y1="630" x2="1030" y2="0"/>
+    <line x1="600" y1="630" x2="1200" y2="30"/>
+    <line x1="800" y1="630" x2="1200" y2="230"/>
+  </g>
+
+  <!-- Rule watermark -->
+  <text x="600" y="380" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="200" font-weight="900"
+        fill="#e8b84b" fill-opacity="0.04" text-anchor="middle">17a-4</text>
+
+  <!-- Audit trail / retention ledger (right) -->
+  <g transform="translate(880, 285)">
+    <!-- Retention spine -->
+    <line x1="0" y1="-158" x2="0" y2="158" stroke="#e8b84b" stroke-opacity="0.22" stroke-width="1.5"/>
+
+    <!-- Captured record: EMAIL -->
+    <text x="-18" y="-146" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="11" font-weight="600"
+          fill="#e8b84b" fill-opacity="0.55" text-anchor="end" letter-spacing="1.2">EMAIL</text>
+    <circle cx="0" cy="-150" r="5.5" fill="#e8b84b" fill-opacity="0.7"/>
+    <rect x="18" y="-158" width="132" height="16" rx="8" fill="#e8b84b" fill-opacity="0.14" stroke="#e8b84b" stroke-opacity="0.35" stroke-width="1"/>
+
+    <!-- Captured record: TEAMS -->
+    <text x="-18" y="-86" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="11" font-weight="600"
+          fill="#e8b84b" fill-opacity="0.55" text-anchor="end" letter-spacing="1.2">TEAMS</text>
+    <circle cx="0" cy="-90" r="5.5" fill="#e8b84b" fill-opacity="0.7"/>
+    <rect x="18" y="-98" width="112" height="16" rx="8" fill="#e8b84b" fill-opacity="0.14" stroke="#e8b84b" stroke-opacity="0.35" stroke-width="1"/>
+
+    <!-- Captured record: FILES -->
+    <text x="-18" y="-26" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="11" font-weight="600"
+          fill="#e8b84b" fill-opacity="0.55" text-anchor="end" letter-spacing="1.2">FILES</text>
+    <circle cx="0" cy="-30" r="5.5" fill="#e8b84b" fill-opacity="0.7"/>
+    <rect x="18" y="-38" width="126" height="16" rx="8" fill="#e8b84b" fill-opacity="0.14" stroke="#e8b84b" stroke-opacity="0.35" stroke-width="1"/>
+
+    <!-- GAP: AI PROMPT -->
+    <text x="-18" y="34" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="11" font-weight="700"
+          fill="#f7f4ef" fill-opacity="0.9" text-anchor="end" letter-spacing="1.2">AI PROMPT</text>
+    <circle cx="0" cy="30" r="5.5" fill="none" stroke="#f7f4ef" stroke-opacity="0.7" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <rect x="18" y="22" width="140" height="16" rx="8" fill="none" stroke="#f7f4ef" stroke-opacity="0.45" stroke-width="1" stroke-dasharray="5 4"/>
+
+    <!-- GAP: AI OUTPUT -->
+    <text x="-18" y="94" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="11" font-weight="700"
+          fill="#f7f4ef" fill-opacity="0.9" text-anchor="end" letter-spacing="1.2">AI OUTPUT</text>
+    <circle cx="0" cy="90" r="5.5" fill="none" stroke="#f7f4ef" stroke-opacity="0.7" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <rect x="18" y="82" width="120" height="16" rx="8" fill="none" stroke="#f7f4ef" stroke-opacity="0.45" stroke-width="1" stroke-dasharray="5 4"/>
+
+    <!-- Captured record: TRADES -->
+    <text x="-18" y="154" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="11" font-weight="600"
+          fill="#e8b84b" fill-opacity="0.55" text-anchor="end" letter-spacing="1.2">TRADES</text>
+    <circle cx="0" cy="150" r="5.5" fill="#e8b84b" fill-opacity="0.7"/>
+    <rect x="18" y="142" width="104" height="16" rx="8" fill="#e8b84b" fill-opacity="0.14" stroke="#e8b84b" stroke-opacity="0.35" stroke-width="1"/>
+
+    <!-- Gap bracket -->
+    <path d="M 172 22 L 182 22 L 182 98 L 172 98" fill="none" stroke="#f7f4ef" stroke-opacity="0.35" stroke-width="1"/>
+    <text x="192" y="55" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="10" font-weight="700"
+          fill="#f7f4ef" fill-opacity="0.75" letter-spacing="1">NOT IN</text>
+    <text x="192" y="69" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="10" font-weight="700"
+          fill="#f7f4ef" fill-opacity="0.75" letter-spacing="1">THE ARCHIVE</text>
+
+    <!-- Spine caption -->
+    <text x="0" y="196" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="11" font-weight="700"
+          fill="#e8b84b" fill-opacity="0.6" text-anchor="middle" letter-spacing="1.6">WORM RETENTION</text>
+  </g>
+
+  <!-- Gold accent line -->
+  <rect x="0" y="0" width="4" height="630" fill="url(#gold)"/>
+
+  <!-- Category tag -->
+  <rect x="60" y="60" width="160" height="32" rx="16" fill="#e8b84b" fill-opacity="0.12" stroke="#e8b84b" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="140" y="81" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="12" font-weight="600" fill="#e8b84b" text-anchor="middle" letter-spacing="1.5">AI GOVERNANCE</text>
+
+  <text x="60" y="490" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="38" font-weight="700" fill="#f7f4ef">Your AI Prompts Are</text>
+  <text x="60" y="538" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="38" font-weight="700" fill="#e8b84b">Books and Records</text>
+
+  <!-- Centience logo mark bottom-left -->
+  <g transform="translate(82, 580) rotate(-135)">
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#c8960a" stroke-width="3"
+            stroke-dasharray="103.7 34.6" stroke-linecap="round" opacity="0.95"/>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#e8b84b" stroke-width="2.5"
+            stroke-dasharray="78.5 15.7" stroke-linecap="round" opacity="1"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#e8b84b" stroke-width="2"
+            stroke-dasharray="37.7 12.6" stroke-linecap="round" opacity="0.75"/>
+    <circle cx="0" cy="0" r="3.5" fill="#1a9b9b" opacity="1"/>
+  </g>
+  <text x="112" y="584" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="13" font-weight="700" fill="#f7f4ef" letter-spacing="1" opacity="0.9">centience</text>
+</svg>
