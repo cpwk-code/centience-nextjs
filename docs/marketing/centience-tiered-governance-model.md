@@ -508,8 +508,8 @@ Price platform access as something worth selling on its own. The failure mode is
 | 12 | Which control domains are `software_enforceable` vs `verifiable_only` vs `attestation_only`? | Orville + build | Honest dashboard labelling (§10.6) |
 | ~~13~~ | ~~Fallback executor for clients who refuse Compuwork~~ **LARGELY RESOLVED by Constitution Rule 2 — the accountable operator executes (§10.1a)** | — | — |
 | 14 | Confirm the write-scopes decision in §10.1 was intended, not inferred | Orville | Layer 3 build scope |
-| 15 | **Proposed Constitution rule — client evidence handling.** Retention, segregation, and what happens to a client's evidence record at termination | Orville | Client and examiner questions; see below |
-| 16 | **Proposed Constitution rule — aggregate data use.** Whether client control data may ever be aggregated, and on what consent | Orville | Preserves the benchmarking option cleanly; see below |
+| ~~15~~ | ~~Proposed rule — client evidence handling~~ **ADOPTED as Constitution Rule 11.** Residual: set the actual retention period and draft the termination-export clause | Orville | First client contract |
+| ~~16~~ | ~~Proposed rule — aggregate data use~~ **ADOPTED as Constitution Rule 12.** Residual: add the opt-in mechanism to the client agreement | Orville | First client contract |
 
 Items 8–11 came from the memo's §12; items 12–14 fall out of the enforcement architecture in §10.
 
@@ -521,25 +521,29 @@ Items 8–11 came from the memo's §12; items 12–14 fall out of the enforcemen
 
 ---
 
-## 13. Two rules the Constitution may be missing
+## 13. Constitution Rules 11 and 12 — adopted, and why they exist
 
-Offered as proposals for the Constitution, not inserted into it. Both concern the same asset: **the platform accumulates findings and approved baselines across many regulated firms — a map of who is weak where.** Nothing in the Constitution currently addresses that concentration, and it is the kind of gap a client's counsel or an examiner finds before we do.
+**Both are now in the Constitution.** The reasoning is kept here because a rule without its rationale gets renegotiated the first time it is inconvenient.
 
-### Proposed — client evidence handling
+Both concern the same asset: **the platform accumulates findings and approved baselines across many regulated firms — a map of who is weak where.** That concentration had no rule governing it, and it is the kind of gap a client's counsel or an examiner finds before we do.
 
-The Constitution covers what we do *with* controls but not what we do with the *record*. Worth deciding: how long a client's evidence is retained, how it is segregated between tenants, and what happens to it at termination — returned, exported, destroyed, or retained for our own defence.
+### Rule 11 — client evidence is held in trust, not owned
 
-That last one is genuinely two-sided. A departing client may want their evidence record destroyed; we may want to keep it to defend our own work if an incident later gets litigated. Those conflict, and the answer belongs in a rule and a contract rather than in an argument after the fact.
+The Constitution covered what we do *with* controls but not what we do with the *record*: how long a client's evidence is retained, how it is segregated between tenants, and what happens to it at termination.
+
+Termination is genuinely two-sided. A departing client may want their evidence record destroyed; we may want to keep it to defend our own work if an incident is later litigated. Those conflict, which is why the rule settles it in advance: **the client gets a complete export, and any copy we retain for our own defence is agreed in the contract up front rather than asserted afterwards.**
+
+The framing that matters is the last clause of the rule — the concentration is a **custodial obligation, not an asset.** Read the other way, it becomes something to monetise, which is how Rule 12 gets quietly violated.
 
 This also connects to §10.5: we would be asking regulated firms to trust us with both the map of their weaknesses and, at Layer 3b, the keys to fix them.
 
-### Proposed — aggregate data use
+### Rule 12 — aggregate use requires explicit consent and anonymity
 
 Peer benchmarking is Drawbridge's actual moat (§2.2), and at 1,300 accounts we would hold the dataset to build one. That makes it a commercial temptation with a predictable arrival date.
 
-Deciding the rule now is cheap. Deciding it later, under revenue pressure, is how trust gets spent. A rule along the lines of *aggregate use requires explicit opt-in consent and must never identify or be reasonably attributable to a firm* preserves the option while removing the temptation to reinterpret silence as permission.
+Deciding the rule now was cheap. Deciding it later, under revenue pressure, is how trust gets spent. Hence **opt-in only, never reasonably attributable to an organization, and silence is not consent** — that last clause exists because the ordinary way this rule fails is not a decision to break it but an absence of one.
 
-Note this sits in tension with §2.2's advice not to promise benchmarking. Both can hold: do not promise it now, and do not foreclose it by taking the data on terms that would make it impossible later.
+This sits alongside §2.2's advice not to promise benchmarking, and both hold: do not promise it now, and do not foreclose it by taking data on terms that would make it impossible later. Rule 12 is what keeps that option open honestly rather than by default.
 
 ---
 

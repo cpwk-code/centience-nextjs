@@ -30,6 +30,8 @@ It maps obligations to technical controls, verifies whether those controls opera
 | **8. Good channel partners must benefit from Centience.** | The product may expose failures by any party, including Centience, but it must not be designed as a hidden MSP-replacement weapon. Good MSPs and compliance firms should be able to use Centience to prove that their responsibilities are being met. |
 | **9. Growth in ACV should come from governance breadth before labor depth.** | The preferred expansion path is additional governance domains — cyber, AI, data, infrastructure, third-party, and resilience — rather than simply adding more remediation hours. |
 | **10. Human judgment is premium; repetitive work belongs in the platform.** | Governance engineers should specify, review, assign, verify, and govern exceptions. They should not become the default remediation technician, help desk, account manager, or generic consultant. ARR per governance engineer is a core scaling metric. |
+| **11. Client evidence is held in trust, not owned.** | Each client's evidence record is segregated by tenant and retained for a defined period. On termination the client receives a complete export. Any copy Centience retains to defend its own work must be agreed in the contract in advance, never asserted after the fact. The platform concentrates a map of which organizations are weak where; that concentration is a custodial obligation, not an asset. |
+| **12. Aggregate use requires explicit consent and anonymity.** | Client control data may be aggregated only under opt-in consent, and never in a form reasonably attributable to an organization. Silence is not consent. This preserves the option to build comparative insight without spending client trust to obtain it. |
 
 ---
 
