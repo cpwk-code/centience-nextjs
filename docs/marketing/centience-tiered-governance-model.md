@@ -8,6 +8,8 @@
 
 **What this is:** the operating detail for selling platform-plus-professional governance, the Abide channel that prompted it, and the product and commercial work it implies. It is not a plan of record — the pricing section is deliberately unfinished pending facts we do not have.
 
+**Decisions recorded so far:** remediation delivered by Compuwork under a Centience contract, and willingness in principle to hold platform write scopes — both in §10.1, both with their consequences worked through in §10.
+
 **Reconciliation note (August 2026).** Two things in earlier drafts of this document were wrong and have been corrected against the memo. Managed IT is no longer a Centience tier — it is a separate Compuwork purchase (§3.2). And the account-type flag needs four values rather than two, because the do-not-compete-with-your-channel rule applies to MSP partners as much as to compliance partners (§6.2, §7). A new §9 replaces the old capacity section with the memo's ARR-per-governance-engineer framing and the arithmetic it implies.
 
 ---
@@ -298,6 +300,8 @@ Get this right and Enforcement's higher ACV flows through to ARR-per-governance-
 
 This is decidable now, and it should be decided **before the first Abide accounts are staffed**, because how those accounts get delivered will become the template whether or not anyone chooses it deliberately.
 
+**Decided — see §10.1.** Compuwork technicians execute; Centience holds the contract.
+
 ### 9.4 What to measure — **[OPEN]**
 
 Per the memo's §12, by tier:
@@ -309,7 +313,101 @@ Per the memo's §12, by tier:
 
 ---
 
-## 10. Sequencing
+## 10. Enforcement architecture — how the software holds a fix in place
+
+### 10.1 Decisions recorded
+
+**Remediation delivery sits with Compuwork. The contract stays with Centience.** Resolves open question 8.
+
+Compuwork technicians execute; the governance engineer specifies, assigns and verifies. This is what makes the §9.2 arithmetic work — Enforcement's higher ACV flows through to ARR-per-governance-engineer instead of being absorbed by senior labour.
+
+The distinction matters and is easy to lose: **delivered by Compuwork, not bought from Compuwork.** If the client purchases remediation from Compuwork directly, we have reintroduced the dependency the memo forbids in §2 — Centience must not depend on who operates the environment — and Enforcement silently becomes available only to the Compuwork base. One vendor, one scope statement, one invoice, from Centience.
+
+**Fallback required for clients who will not have Compuwork in their environment:** their own MSP executes against Centience's written spec, or Centience subcontracts. Without a fallback, "Enforcement" caps out at the existing managed base.
+
+**Write scopes: yes, in principle, sequenced.** We are willing to ask non-Compuwork clients for write access rather than restricting Enforcement to Compuwork's existing admin access indefinitely — but only under the constraints in §10.4, and only after §10.5 is satisfied.
+
+> **Provenance note.** This second decision was confirmed as a one-word "yes" to a question that also asked whether to write up this section. Recorded here so it is visible and correctable rather than buried. If the intent was Compuwork-access-only enforcement, §10.4 becomes deferred rather than sequenced, and nothing else in this section changes.
+
+### 10.2 The finding lifecycle
+
+"Enforce once corrected" is a state-machine question. The states we need:
+
+| State | Meaning |
+|---|---|
+| `open` | Detected, failing, unassigned |
+| `assigned` | Owner set — firm / client IT or MSP / compliance partner / Centience |
+| `in_remediation` | Work underway |
+| `awaiting_verification` | Someone asserts it is fixed; not yet re-tested |
+| `verified` | Re-test passed, evidence and configuration captured, timestamped |
+| `drifted` | Was verified, now failing again — **the state this section exists for** |
+| `accepted_risk` | Exception with named owner, rationale and expiry (§6.2) |
+
+`awaiting_verification` must be distinct from `verified`. A client's IT saying "done" is a claim; the re-test is the evidence. Collapsing the two is how a dashboard ends up green while the control is failing, which is the exact failure we are hired to prevent.
+
+`drifted` must be distinct from `open`. A control that was verified and regressed is a different governance event from one never fixed — it implies a change-management gap rather than a backlog, and an examiner reads them differently.
+
+### 10.3 Three layers, the first two needing no write access
+
+**Layer 1 — Continuous verification.** Checks are currently on-demand only (July review), so a control verified in March is just an old timestamp by September. A scheduled re-run writing to `enforcement_results` makes "continuous governance" literally true, makes the red-turning-green dashboard trustworthy, and raises a drift event on any `verified` → failing transition.
+
+Cheapest item here, highest value, and a hard prerequisite for everything below. Nothing else in this section works without it.
+
+**Layer 2 — Approved-baseline snapshots.** On verification, capture the *observed configuration* — which Conditional Access policies, which retention labels, which exclusion groups — not merely a pass. Re-tests then compare against the approved baseline rather than against pass/fail.
+
+This catches the case a naive check misses: someone adds an exclusion group to a CA policy and it still passes. Baseline comparison sees it. That is precisely the drift an examiner cares about and that a point-in-time assessment cannot detect — a capability Drawbridge structurally does not have, since they do not hold a continuous baseline.
+
+Still no write access. Layers 1 and 2 are the differentiated product.
+
+**Layer 3 — Enforcement as re-assertion.** The framing that makes write access sellable: **do not ask for the right to configure a client's tenant. Ask for the right to restore a setting they already approved, when it drifts.**
+
+"Restore the approved baseline on drift" is a far smaller capability than "make arbitrary changes," with a proportionally smaller blast radius. It is also exactly what enforce-once-corrected means, it is straightforward to write into a scope statement, and it is much easier to obtain consent for.
+
+**Layer 3a — the free path, available now.** For Compuwork-managed clients, Compuwork already holds admin access. Re-assertion can execute through that existing access rather than through Centience platform credentials — no new consent, no new scopes, no new trust ask.
+
+Consequence of the §10.1 delivery decision: **Layer 3 ships to the managed base immediately, and the platform-credential version waits until a non-Compuwork client demands it.** Build order follows from that.
+
+### 10.4 Constraints on platform-held write access
+
+Non-negotiable if and when we hold write credentials ourselves:
+
+- **Opt-in per control domain**, never blanket. The memo's §11 already requires clear technical domains and explicit write authority.
+- **Narrowest viable Graph scopes per domain.** Not tenant admin. Some scopes — Conditional Access policy write, for instance — are extremely powerful and should be requested only for domains we actually enforce.
+- **Every write logged** with actor, prior value, new value, timestamp, and the authorising document.
+- **Reversible.** Store prior state so any assertion can be rolled back.
+- **Re-assertion only.** The platform restores an approved baseline. It does not accept arbitrary configuration instructions.
+
+### 10.5 Security precondition, not a nice-to-have
+
+Holding write credentials across many regulated tenants makes Centience a supply-chain target. We would be the single place holding keys to our clients' environments.
+
+This elevates open question 4 from an item to an absolute gate: **we cannot hold write credentials in a system where credential encryption fails open when an environment variable is missing.** `CREDENTIAL_ENCRYPTION_KEY` must be set and any plaintext backfilled before Layer 3 exists in any form — including Layer 3a, since a compromise of the platform would expose the findings and baselines that tell an attacker exactly which controls are weak.
+
+### 10.6 Not everything is software-enforceable
+
+Claiming otherwise is the overclaim §2.2 warns against. "Annual supervisory review documented" cannot be enforced by writing configuration — it is a human artifact.
+
+Every check needs an explicit enforcement mechanism:
+
+| Mechanism | Meaning | Example |
+|---|---|---|
+| `software_enforceable` | Baseline can be tested and re-asserted | MFA enforcement, retention label, CA policy |
+| `verifiable_only` | Can be tested, cannot be re-asserted | A required document exists and is current |
+| `attestation_only` | Neither tested nor asserted; a person confirms | Supervisory review performed |
+
+The dashboard must be honest per finding. A client who sees "enforced" against something we can only ask about will find out, and that is a credibility loss we do not recover from — particularly in front of a compliance partner whose own reputation is riding on the referral.
+
+### 10.7 What this produces, and why it is the product
+
+The artifact worth paying for is not the green light. It is the chain:
+
+> Control X verified 12 March · drifted 4 June · re-asserted 4 June by Y under authority Z · verified 5 June
+
+Neither a point-in-time assessment nor an MSP's ticket queue can produce that. It is what makes the evidence vault worth a recurring fee rather than a one-off report, it is the record that answers an examiner's real question — did the control operate over the period — and it only exists if Layer 1 ships.
+
+---
+
+## 11. Sequencing
 
 **Now, before any demo or client login**
 1. Get the two pricing facts from Pete (§5.1) and the referral-fee conflict question (§8)
@@ -322,8 +420,19 @@ Per the memo's §12, by tier:
 6. Owner field + dashboard filtering by owner
 7. Citation per finding
 8. Exception workflow with owner and expiry
-9. Account-type flag
+9. Account-type flag (four values — §6.2)
 10. Duty-to-remediate language in the contract
+11. Finding lifecycle states, with `awaiting_verification` distinct from `verified` and `drifted` distinct from `open` (§10.2)
+12. Enforcement-mechanism field on every check, so the dashboard cannot label something enforced that we can only ask about (§10.6)
+
+**Then, to make "continuous" true — the enforcement layers (§10.3)**
+
+Strict order. Each depends on the one before it.
+
+13. **Layer 1 — scheduled re-testing.** The prerequisite for everything else. Without it a verified control is just an old timestamp, and drift is undetectable.
+14. **Layer 2 — approved-baseline snapshots** on verification, and baseline comparison on re-test. This is the differentiated capability, and it needs no write access.
+15. **Layer 3a — re-assertion through Compuwork's existing admin access** for managed clients. No new consent, no new scopes. Ships to the managed base first.
+16. **Layer 3b — platform-held write scopes** for non-Compuwork clients. Gated on `CREDENTIAL_ENCRYPTION_KEY` (§10.5) and on confirming open question 14. Deferred until a client actually demands it.
 
 **First cohort**
 Two or three Abide clients as design partners. M365-anchored only. Priced as base plus enforcement rather than a platform subscription. Small enough that the one-org limit does not bite and we learn the delivery model before committing to volume.
@@ -336,7 +445,7 @@ Price platform access as something worth selling on its own. The failure mode is
 
 ---
 
-## 11. Open questions, consolidated
+## 12. Open questions, consolidated
 
 | # | Question | Owner | Blocks |
 |---|---|---|---|
@@ -347,18 +456,25 @@ Price platform access as something worth selling on its own. The failure mode is
 | 5 | Accounts per governance engineer, by offer, enforcement labour excluded | Orville | Intake pace, pricing floor |
 | 6 | Has any July punch-list item shipped since? | Verify in repo | Build sequencing |
 | 7 | Does Abide's own client agreement permit substituting a vendor mid-relationship? | Orville → Pete | Cohort timing |
-| 8 | **Does enforcement execution sit with Compuwork technicians rather than governance engineers?** | Orville | §9.3 — the $50M shape |
+| ~~8~~ | ~~Does enforcement execution sit with Compuwork technicians?~~ **RESOLVED — yes; Compuwork delivers, Centience contracts (§10.1)** | — | — |
 | 9 | Which control domains will Centience enforce while another MSP remains in place? | Orville | Enforcement scope statement |
 | 10 | Target gross margin and ARR-per-engineer threshold, set before final pricing | Orville | Pricing |
 | 11 | Three-year path to the **first $10M** ARR | Orville | Everything downstream of it |
+| 12 | Which control domains are `software_enforceable` vs `verifiable_only` vs `attestation_only`? | Orville + build | Honest dashboard labelling (§10.6) |
+| 13 | Fallback executor for clients who refuse Compuwork in their environment | Orville | Enforcement availability beyond the managed base (§10.1) |
+| 14 | Confirm the write-scopes decision in §10.1 was intended, not inferred | Orville | Layer 3 build scope |
 
-Items 8–11 come from the memo's §12. Item 8 is the one with the largest consequence and the least cost to decide — see §9.3.
+Items 8–11 came from the memo's §12; items 12–14 fall out of the enforcement architecture in §10.
+
+**Item 4 is now a gate, not a task.** It was "confirm an env var is set." With write credentials in scope it becomes the precondition for Layer 3 existing at all — see §10.5.
+
+**Item 14 exists because a decision was inferred from a one-word confirmation.** Cheap to close, and it changes what gets built.
 
 **On item 11:** the memo is right that a $10M path should exist before extrapolating to $50M. The near-term work is the first $10M, and the Abide cohort is the first few accounts of it — not a test of the $50M model.
 
 ---
 
-## 12. Sources
+## 13. Sources
 
 Drawbridge: [drawbridgeco.com](https://drawbridgeco.com/) · [Solutions](https://drawbridgeco.com/solutions) · [Francisco Partners investment](https://www.franciscopartners.com/media/drawbridge-announces-strategic-growth-investment-from-francisco-partners) · [Long Ridge on the Francisco round](https://long-ridge.com/long-ridge-portfolio-company-drawbridge-announces-strategic-growth-investment-from-francisco-partners/) · [Long Ridge initial investment](https://www.privateequitywire.co.uk/long-ridge-equity-partners-invests-drawbridge/)
 
