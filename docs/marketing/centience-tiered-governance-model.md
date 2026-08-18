@@ -2,10 +2,13 @@
 
 **Status:** Working draft. Open questions are marked **[OPEN]** and should be resolved before anything is quoted or built.
 **Owner:** Orville Matias
-**Started:** August 2026
+**Started:** August 2026 · **Reconciled** against *What Centience Should Be* (strategy memo, August 2026)
+**Parent document:** *What Centience Should Be — strategy memo: defining the company and designing toward $50M ARR.* Where this document and the memo disagree, **the memo governs**; this one carries the tactical detail beneath it.
 **Companion docs:** `centience-platform-standalone-review.md` (July 2026 code review) · `centience-2028-growth-plan.md` · `HANDOFF.md`
 
-**What this is:** the model established in conversation for selling platform-plus-professional governance in three tiers, the Abide channel that prompted it, and the product and commercial work it implies. It is not a plan of record yet — the pricing section is deliberately unfinished pending two facts we do not have.
+**What this is:** the operating detail for selling platform-plus-professional governance, the Abide channel that prompted it, and the product and commercial work it implies. It is not a plan of record — the pricing section is deliberately unfinished pending facts we do not have.
+
+**Reconciliation note (August 2026).** Two things in earlier drafts of this document were wrong and have been corrected against the memo. Managed IT is no longer a Centience tier — it is a separate Compuwork purchase (§3.2). And the account-type flag needs four values rather than two, because the do-not-compete-with-your-channel rule applies to MSP partners as much as to compliance partners (§6.2, §7). A new §9 replaces the old capacity section with the memo's ARR-per-governance-engineer framing and the arithmetic it implies.
 
 ---
 
@@ -76,15 +79,21 @@ Drawbridge sells platform access **bundled with a cybersecurity compliance profe
 
 They do not sell software. They sell a person with a dashboard behind them. That is why they can charge what they charge, and why self-serve governance tools struggle. **A named human is in every tier. This is not negotiable in the design.**
 
-### 3.2 Three tiers
+### 3.2 Two Centience offers — and managed IT is not one of them
 
-| Tier | Platform + named professional | Who cures | Who does support / overall IT |
+**Corrected against the memo, §4.** An earlier draft here had a third tier, "Managed Governance," in which Centience took over the whole stack. That was wrong, and the memo's position is stronger.
+
+| Offer | What Centience does | Who operates IT | Commercial role |
 |---|---|---|---|
-| **1 — Oversight** | Centience | Client's own IT | Client's own IT or existing MSP |
-| **2 — Oversight + Enforcement** | Centience | **Centience**, in systems it can reach | Client's own IT or existing MSP |
-| **3 — Managed Governance** | Centience | Centience | Centience |
+| **Governance** | Platform + named governance engineer; testing, findings, ownership, evidence, exceptions, reporting | Client IT or existing MSP | Core recurring Centience product |
+| **Governance + Enforcement** | The above, plus authority to implement defined control domains | Client IT or existing MSP **remains in place** | Higher-value Centience expansion |
+| *Managed IT* | *Not a Centience offer* | Compuwork | **Separate Compuwork purchase** |
 
-The customer's existing IT or MSP keeps support and overall management in tiers 1 and 2. We are not asking anyone to rip out an incumbent on a first purchase.
+**Why this matters more than it looks.** If Centience culminates in becoming the customer's MSP, then Centience is an MSP lead-generation motion wearing a platform costume, and it cannot be sold to the ~1,300 organisations the $50M shape requires — because most of them will never fire their incumbent. Centience has to be commercially viable when Compuwork never wins the account.
+
+It also makes Governance + Enforcement the genuinely differentiated product: the customer keeps their MSP, and Centience governs and enforces specific technical domains. That is a cleaner category than "another assessment" and a more scalable identity than "eventually replace your MSP."
+
+The customer's existing IT or MSP keeps support and overall operations in both offers. We are not asking anyone to rip out an incumbent, ever — not as a first purchase and not at renewal under the Centience brand.
 
 ### 3.3 Why land-and-expand is the right shape
 
@@ -111,11 +120,13 @@ They win that argument if findings read as opinion. They cannot touch it if ever
 
 Responsibility needs named roles for the firm itself, their IT or MSP, the compliance consultant (Abide), and Centience.
 
-The consequence: **some findings can never be cured by anyone we are selling to.** "Annual supervisory review not documented" is a CCO task. "Staff attestation not collected" belongs to the firm. Those are not IT gaps and not ours — but they sit red on the dashboard, and a tier-1 client's IT will reasonably say "half of this isn't mine."
+**Note the fifth ecosystem role.** The memo's boundary table (§2) also names an **independent assessor**, who owns attestation and independent review where required. That party does not own findings — so finding ownership stays four-valued plus accepted-risk — but it exists in the ecosystem and it is the role Centience explicitly must not claim (§2.2, and the memo's §10: never "a self-declared independent assessor of controls it implemented"). Where independence is required, that assessor **consumes** Centience evidence rather than competing with it. That is a distribution channel, not a lost sale.
+
+The consequence: **some findings can never be cured by anyone we are selling to.** "Annual supervisory review not documented" is a CCO task. "Staff attestation not collected" belongs to the firm. Those are not IT gaps and not ours — but they sit red on the dashboard, and a Governance client's IT will reasonably say "half of this isn't mine."
 
 **Required:** owner field with at least four values, and dashboard filtering by owner.
 
-Without it, tier-1 clients experience the product as a list of complaints rather than a work plan, and the renewal conversation starts from defence. With it, the upgrade sells itself honestly:
+Without it, Governance clients experience the product as a list of complaints rather than a work plan, and the renewal conversation starts from defence. With it, the upgrade sells itself honestly:
 
 > Of these 40 findings, 12 are yours, 8 are Abide's, 20 need someone with write access to your tenant — that's the enforcement add-on.
 
@@ -143,7 +154,15 @@ Not three flat prices — a base plus two defined expansions.
 
 Advantage: the base is never renegotiated as the account expands. We add lines rather than redoing the deal, which avoids a discount conversation every time we grow.
 
-### 5.3 Scaling variable
+### 5.3 Who this is priced for
+
+Per the memo (§5), the beachhead is **alternative investment managers and investment advisers, roughly 10–150 employees** — hedge funds, PE firms, RIAs, and family offices where the governance profile fits. Not "regulated industries," which is the long-term market and would create framework sprawl if attempted at launch.
+
+Three reasons this is the right first market, and the third is why the Abide conversation matters: the buyer is **already educated by Drawbridge** so we are not funding category creation, Compuwork has real implementation experience in these environments, and Abide is a trusted distribution path into exactly this population.
+
+Expansion only once delivery is repeatable: investment management → accounting / legal / insurance → additional regulated verticals.
+
+### 5.4 Scaling variable
 
 **Headcount band × registration type.** Not AUM.
 
@@ -151,15 +170,15 @@ AUM is what alts firms are used to quoting, but it swings, it is awkward for acc
 
 Also easier to defend in negotiation — the client can see what drives it.
 
-### 5.4 Abide channel economics — **[OPEN]**
+### 5.5 Abide channel economics — **[OPEN]**
 
 - Percentage of first-year revenue on **services**, consistent with the Jeneca structure.
 - **No perpetual revenue share on the platform base.** That is the software margin the 2028 plan rests on.
 - Floor is set by whatever Drawbridge was paying them — see §5.1.
 
-### 5.5 What must be bounded in tier 1
+### 5.6 What must be bounded in the Governance offer
 
-**Argument is the unbounded cost.** An incumbent IT team that disputes every finding will consume the professional's time without limit, and tier 1 has the thinnest margin.
+**Argument is the unbounded cost.** An incumbent IT team that disputes every finding will consume the governance engineer's time without limit, and Governance has the thinnest margin.
 
 Define what is included — quarterly review, monthly triage, a stated number of hours — and what is billable beyond it.
 
@@ -189,7 +208,7 @@ All three are the same thing: **findings become a governed, attributed work queu
 
 *Channel:* it lets an incumbent MSP formally push back on a finding in a way that gets recorded rather than argued — their disagreement becomes part of the evidence trail with their name on it.
 
-**Account-type flag** for Abide-referred vs. direct, to drive the role split in §7. Convention is not enough; conventions erode the first time somebody is short of quota.
+**Account-type flag — four values, not two.** An earlier draft scoped this as Abide-referred versus direct. The memo generalises it correctly: **direct, compliance-partner, MSP-partner, Compuwork-linked**, each with different role boundaries. The rule about not competing with the party who brought you the account applies to MSP partners just as much as to compliance firms — an MSP will only let Centience govern underneath it if Centience visibly is not trying to replace it. Convention is not enough here; conventions erode the first time somebody is short of quota.
 
 ### 6.3 Framing the first login
 
@@ -239,19 +258,54 @@ Disclosure disarms it. Being caught not disclosing it does not.
 
 ## 8. Contract and legal
 
-**Duty-to-remediate boundary, in writing, before the first tier-1 client.** If the platform flagged a deficiency, the client's MSP was supposed to fix it, nobody did, and there is an incident — we are the party holding timestamped proof that everyone knew, and we will be in discovery. Platform access is assessment and evidence, **not an obligation to cure**; remediation responsibility sits with whoever holds it. Cheap now, expensive later.
+**Duty-to-remediate boundary, in writing, before the first Governance client.** If the platform flagged a deficiency, the client's MSP was supposed to fix it, nobody did, and there is an incident — we are the party holding timestamped proof that everyone knew, and we will be in discovery. Platform access is assessment and evidence, **not an obligation to cure**; remediation responsibility sits with whoever holds it. Cheap now, expensive later.
 
 **Abide referral-fee conflict — [OPEN].** If Abide is a compliance consultancy serving RIAs, compensation for vendor referrals may be a conflict their clients must be told about. Same shape as the AICPA independence problem on CPA referrals. Raise it with Pete before money moves — better from us than from someone's examiner.
 
 ---
 
-## 9. Capacity — the real constraint
+## 9. The economics that decide whether this reaches $50M
 
-Every tier includes a human. The question is not whether the platform scales but **how many accounts one governance engineer carries at tier 1.**
+Every offer includes a human. Commercially useful, economically dangerous — the memo (§8) names the metric to obsess over as **ARR per governance engineer**, with a design target of **$1M+**.
 
-**[OPEN]** Establish that number. If it is 15–25, a twenty-client Abide cohort is a full hire, and we need to decide whether we fund ahead of revenue or pace intake to match.
+### 9.1 What the memo's own numbers imply
 
-**That number sets how fast we say yes to Pete — not the size of his book.**
+The illustrative mature book is 1,300 accounts at $50M. Against a $1M-per-engineer target:
+
+| | |
+|---|---|
+| Governance engineers at maturity | **~50** |
+| Average accounts per engineer | **~26** |
+
+Twenty-six is just above the top of the 15–25 range estimated in conversation. **The plan is reachable, but with no margin.**
+
+### 9.2 The structural trap inside it
+
+**Governance + Enforcement pays roughly 1.8× more but must not consume 1.8× more governance-engineer time.**
+
+If enforcement work lands on the same senior person who runs the testing and assembles the evidence, it will consume more — and the ratio degrades exactly where the ACV improves. The arithmetic is unforgiving:
+
+- $45K ACV × 12 accounts per engineer = **$540K per engineer** — well under target, despite a healthy-looking ACV
+- $45K ACV × 22 accounts per engineer = **$990K per engineer** — on target
+
+The difference between those two rows is not pricing. It is who does the fixing.
+
+### 9.3 The delivery-model decision this forces
+
+**The governance engineer must not be the one doing the remediation.** They specify the fix, assign it, and verify it. Execution routes to Compuwork's technician pool at a lower cost basis.
+
+Get this right and Enforcement's higher ACV flows through to ARR-per-governance-engineer. Get it wrong and Enforcement revenue is absorbed by senior labour, and Centience becomes a consulting firm with good software — the memo's §8 warning, arriving through the delivery model rather than through pricing.
+
+This is decidable now, and it should be decided **before the first Abide accounts are staffed**, because how those accounts get delivered will become the template whether or not anyone chooses it deliberately.
+
+### 9.4 What to measure — **[OPEN]**
+
+Per the memo's §12, by tier:
+- Accounts per governance engineer at Governance, sustained without service degradation
+- Accounts per governance engineer at Governance + Enforcement, **with enforcement labour excluded** — that exclusion is the whole point of §9.3
+- Hours per account per year at each, split into judgment work versus repetitive evidence work. The second number is the automation backlog.
+
+**Intake pace follows this number, not the size of Pete's book.** A twenty-client cohort is most of one engineer's capacity at Governance if 26 holds, and more than one if it does not.
 
 ---
 
@@ -264,7 +318,7 @@ Every tier includes a human. The question is not whether the platform scales but
 4. Rewrite remediation copy for a customer audience
 5. Establish the capacity number (§9)
 
-**Then, before the first tier-1 client**
+**Then, before the first Governance client**
 6. Owner field + dashboard filtering by owner
 7. Citation per finding
 8. Exception workflow with owner and expiry
@@ -286,13 +340,21 @@ Price platform access as something worth selling on its own. The failure mode is
 
 | # | Question | Owner | Blocks |
 |---|---|---|---|
-| 1 | What does Drawbridge charge, by firm size? | Orville → Pete | All pricing |
+| 1 | What does Drawbridge charge by firm size, and what is included? | Orville → Pete | All pricing |
 | 2 | What was Abide earning on Drawbridge referrals? | Orville → Pete | Channel economics |
 | 3 | Does Abide have a referral-compensation conflict to disclose? | Orville → Pete | First contract |
 | 4 | Is `CREDENTIAL_ENCRYPTION_KEY` set in Vercel? | Orville | First client tenant |
-| 5 | Accounts per governance engineer at tier 1? | Orville | Intake pace |
+| 5 | Accounts per governance engineer, by offer, enforcement labour excluded | Orville | Intake pace, pricing floor |
 | 6 | Has any July punch-list item shipped since? | Verify in repo | Build sequencing |
 | 7 | Does Abide's own client agreement permit substituting a vendor mid-relationship? | Orville → Pete | Cohort timing |
+| 8 | **Does enforcement execution sit with Compuwork technicians rather than governance engineers?** | Orville | §9.3 — the $50M shape |
+| 9 | Which control domains will Centience enforce while another MSP remains in place? | Orville | Enforcement scope statement |
+| 10 | Target gross margin and ARR-per-engineer threshold, set before final pricing | Orville | Pricing |
+| 11 | Three-year path to the **first $10M** ARR | Orville | Everything downstream of it |
+
+Items 8–11 come from the memo's §12. Item 8 is the one with the largest consequence and the least cost to decide — see §9.3.
+
+**On item 11:** the memo is right that a $10M path should exist before extrapolating to $50M. The near-term work is the first $10M, and the Abide cohort is the first few accounts of it — not a test of the $50M model.
 
 ---
 
