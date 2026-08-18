@@ -3,7 +3,8 @@
 **Status:** Working draft. Open questions are marked **[OPEN]** and should be resolved before anything is quoted or built.
 **Owner:** Orville Matias
 **Started:** August 2026 · **Reconciled** against *What Centience Should Be* (strategy memo, August 2026)
-**Parent document:** *What Centience Should Be — strategy memo: defining the company and designing toward $50M ARR.* Where this document and the memo disagree, **the memo governs**; this one carries the tactical detail beneath it.
+**Governing documents, in order:** `centience-constitution.md` → *What Centience Should Be* (the $50M ARR strategy memo) → this document.
+Where they disagree, **the higher document wins.** This one carries operating detail beneath both.
 **Companion docs:** `centience-platform-standalone-review.md` (July 2026 code review) · `centience-2028-growth-plan.md` · `HANDOFF.md`
 
 **What this is:** the operating detail for selling platform-plus-professional governance, the Abide channel that prompted it, and the product and commercial work it implies. It is not a plan of record — the pricing section is deliberately unfinished pending facts we do not have.
@@ -110,7 +111,11 @@ The customer's existing IT or MSP keeps support and overall operations in both o
 
 Two outcomes. They quietly fix the findings themselves — we did free consulting and lost both the add-on and the expansion case. Or, more likely from a threatened incumbent, they attack the tool's credibility to the client: *"these findings aren't applicable, Centience is drumming up work."*
 
-They win that argument if findings read as opinion. They cannot touch it if every finding cites the obligation and the client's own policy:
+**The Constitution's Rule 8 gives a better answer than this defensive one.** Citation stops an incumbent dismissing a finding, but Rule 8 goes further: a *good* MSP should be able to use Centience **to prove their own responsibilities are being met.** That flips the incentive from adversarial to aligned — the scoreboard becomes their evidence rather than only their indictment.
+
+Product consequence worth building: an operator-facing view showing what they have **cured and kept verified**, not only what is outstanding. A competent MSP then has a reason to want Centience in the account, and the ones who fight it are self-selecting.
+
+Citation still matters, for the incumbents who are not good. They win the argument if findings read as opinion; they cannot touch it if every finding cites the obligation and the client's own policy:
 
 > MFA not enforced on 12 accounts · Advisers Act 204-2 · your WSP §4.2
 
@@ -163,6 +168,21 @@ Per the memo (§5), the beachhead is **alternative investment managers and inves
 Three reasons this is the right first market, and the third is why the Abide conversation matters: the buyer is **already educated by Drawbridge** so we are not funding category creation, Compuwork has real implementation experience in these environments, and Abide is a trusted distribution path into exactly this population.
 
 Expansion only once delivery is repeatable: investment management → accounting / legal / insurance → additional regulated verticals.
+
+### 5.3a The expansion ladder is domains, not labour
+
+**Constitution, Rule 9:** ACV growth should come from governance breadth before labour depth — additional domains (cyber, AI, data, infrastructure, third-party, resilience) rather than more remediation hours.
+
+That reorders what earlier drafts here assumed. The ladder is **not** Governance → Enforcement. It is:
+
+> one domain → additional domains → enforcement where explicitly authorised
+
+Enforcement is a capability layered on top, not the next rung. Two consequences:
+
+- Pricing should be **per governed domain**, with enforcement as a separate authorisation per domain rather than an account-level upsell.
+- The memo's illustrative book splits 600 Governance / 600 Governance + Enforcement. Under Rule 9 the more useful cut is **by domain count**, since that is the lever we intend to pull. Flagged rather than changed here, as that table belongs to the memo.
+
+Domain expansion is also the answer to §9's margin problem: a second domain on an existing account reuses the connection, the tenant knowledge and the relationship. That is close to pure leverage, which is exactly what Rule 10 asks for.
 
 ### 5.4 Scaling variable
 
@@ -323,11 +343,33 @@ Compuwork technicians execute; the governance engineer specifies, assigns and ve
 
 The distinction matters and is easy to lose: **delivered by Compuwork, not bought from Compuwork.** If the client purchases remediation from Compuwork directly, we have reintroduced the dependency the memo forbids in §2 — Centience must not depend on who operates the environment — and Enforcement silently becomes available only to the Compuwork base. One vendor, one scope statement, one invoice, from Centience.
 
-**Fallback required for clients who will not have Compuwork in their environment:** their own MSP executes against Centience's written spec, or Centience subcontracts. Without a fallback, "Enforcement" caps out at the existing managed base.
+**Clients who will not have Compuwork in their environment:** their own accountable operator executes against Centience's written specification. See §10.1a — under Constitution Rule 2 this is the default rather than a fallback, and it is why Enforcement does not cap out at the existing managed base.
 
 **Write scopes: yes, in principle, sequenced.** We are willing to ask non-Compuwork clients for write access rather than restricting Enforcement to Compuwork's existing admin access indefinitely — but only under the constraints in §10.4, and only after §10.5 is satisfied.
 
 > **Provenance note.** This second decision was confirmed as a one-word "yes" to a question that also asked whether to write up this section. Recorded here so it is visible and correctable rather than buried. If the intent was Compuwork-access-only enforcement, §10.4 becomes deferred rather than sequenced, and nothing else in this section changes.
+
+### 10.1a Reconciling the delivery decision with Constitution Rule 2
+
+Rule 2 says the **accountable IT operator** executes remediation whenever practical — Compuwork for Compuwork clients, an MSP partner for partner-led accounts, internal IT for internally managed environments.
+
+At first read that conflicts with §10.1. It does not, and the reconciliation is worth stating because it makes the model cleaner than the version in §10.1:
+
+**§10.1 is a special case of Rule 2, not an exception to it.** Compuwork executes for Compuwork clients *because Compuwork is the accountable operator there* — not because Centience subcontracted to it. In a partner-led account the MSP partner executes. In an internally managed environment internal IT executes. **Centience never becomes the executor.**
+
+Two consequences, both good:
+
+**Open question 13 is largely answered.** There is no need for a Centience-arranged fallback executor for clients who refuse Compuwork — their own accountable operator executes, which is the Rule 2 default. The Constitution's "or a lower-cost execution layer" leaves room for a Centience-arranged option, but it is the alternative, not the design.
+
+**The §9.2 arithmetic gets easier, not harder.** Earlier framing treated Compuwork as a lower-cost execution layer beneath a Centience Enforcement offer — labour arbitrage. Under Rule 2 there is no remediation labour on Centience's books to keep off a governance engineer's plate, because it was never Centience's work. What the client pays the Enforcement premium for is:
+
+- **Write authority and automated re-assertion** of approved baselines (Rule 7, and §10.3 Layer 3)
+- **Remediation specification** precise enough that the operator can execute without interpreting
+- **Cycle time** — drift caught and corrected on a schedule rather than at the next assessment
+
+All three are leverage rather than hours, which is what Rule 9 and Rule 10 ask for. The premium is a governance premium, not a marked-up labour rate.
+
+**Terminology this forces.** *Remediation* is the first-time human fix and belongs to the accountable operator. *Enforcement* is automated maintenance of an already-approved state and belongs to the platform. Rules 2 and 7 only look contradictory if those two words are used interchangeably — so they should not be, anywhere in the product or a contract.
 
 ### 10.2 The finding lifecycle
 
@@ -342,8 +384,11 @@ The distinction matters and is easy to lose: **delivered by Compuwork, not bough
 | `verified` | Re-test passed, evidence and configuration captured, timestamped |
 | `drifted` | Was verified, now failing again — **the state this section exists for** |
 | `accepted_risk` | Exception with named owner, rationale and expiry (§6.2) |
+| `not_applicable` | The control does not apply to this environment; rationale and approval recorded |
 
 `awaiting_verification` must be distinct from `verified`. A client's IT saying "done" is a claim; the re-test is the evidence. Collapsing the two is how a dashboard ends up green while the control is failing, which is the exact failure we are hired to prevent.
+
+`not_applicable` is required and was missing from earlier drafts here. Without it a control that genuinely does not apply either sits `open` forever as permanent noise, or gets filed as `accepted_risk` — which asserts the firm accepted a risk when there was no risk to accept. That is a misstatement in an evidence record, and it needs rationale and approval for exactly that reason (Constitution, finding-state standard).
 
 `drifted` must be distinct from `open`. A control that was verified and regressed is a different governance event from one never fixed — it implies a change-management gap rather than a backlog, and an examiner reads them differently.
 
@@ -461,8 +506,10 @@ Price platform access as something worth selling on its own. The failure mode is
 | 10 | Target gross margin and ARR-per-engineer threshold, set before final pricing | Orville | Pricing |
 | 11 | Three-year path to the **first $10M** ARR | Orville | Everything downstream of it |
 | 12 | Which control domains are `software_enforceable` vs `verifiable_only` vs `attestation_only`? | Orville + build | Honest dashboard labelling (§10.6) |
-| 13 | Fallback executor for clients who refuse Compuwork in their environment | Orville | Enforcement availability beyond the managed base (§10.1) |
+| ~~13~~ | ~~Fallback executor for clients who refuse Compuwork~~ **LARGELY RESOLVED by Constitution Rule 2 — the accountable operator executes (§10.1a)** | — | — |
 | 14 | Confirm the write-scopes decision in §10.1 was intended, not inferred | Orville | Layer 3 build scope |
+| 15 | **Proposed Constitution rule — client evidence handling.** Retention, segregation, and what happens to a client's evidence record at termination | Orville | Client and examiner questions; see below |
+| 16 | **Proposed Constitution rule — aggregate data use.** Whether client control data may ever be aggregated, and on what consent | Orville | Preserves the benchmarking option cleanly; see below |
 
 Items 8–11 came from the memo's §12; items 12–14 fall out of the enforcement architecture in §10.
 
@@ -474,7 +521,29 @@ Items 8–11 came from the memo's §12; items 12–14 fall out of the enforcemen
 
 ---
 
-## 13. Sources
+## 13. Two rules the Constitution may be missing
+
+Offered as proposals for the Constitution, not inserted into it. Both concern the same asset: **the platform accumulates findings and approved baselines across many regulated firms — a map of who is weak where.** Nothing in the Constitution currently addresses that concentration, and it is the kind of gap a client's counsel or an examiner finds before we do.
+
+### Proposed — client evidence handling
+
+The Constitution covers what we do *with* controls but not what we do with the *record*. Worth deciding: how long a client's evidence is retained, how it is segregated between tenants, and what happens to it at termination — returned, exported, destroyed, or retained for our own defence.
+
+That last one is genuinely two-sided. A departing client may want their evidence record destroyed; we may want to keep it to defend our own work if an incident later gets litigated. Those conflict, and the answer belongs in a rule and a contract rather than in an argument after the fact.
+
+This also connects to §10.5: we would be asking regulated firms to trust us with both the map of their weaknesses and, at Layer 3b, the keys to fix them.
+
+### Proposed — aggregate data use
+
+Peer benchmarking is Drawbridge's actual moat (§2.2), and at 1,300 accounts we would hold the dataset to build one. That makes it a commercial temptation with a predictable arrival date.
+
+Deciding the rule now is cheap. Deciding it later, under revenue pressure, is how trust gets spent. A rule along the lines of *aggregate use requires explicit opt-in consent and must never identify or be reasonably attributable to a firm* preserves the option while removing the temptation to reinterpret silence as permission.
+
+Note this sits in tension with §2.2's advice not to promise benchmarking. Both can hold: do not promise it now, and do not foreclose it by taking the data on terms that would make it impossible later.
+
+---
+
+## 14. Sources
 
 Drawbridge: [drawbridgeco.com](https://drawbridgeco.com/) · [Solutions](https://drawbridgeco.com/solutions) · [Francisco Partners investment](https://www.franciscopartners.com/media/drawbridge-announces-strategic-growth-investment-from-francisco-partners) · [Long Ridge on the Francisco round](https://long-ridge.com/long-ridge-portfolio-company-drawbridge-announces-strategic-growth-investment-from-francisco-partners/) · [Long Ridge initial investment](https://www.privateequitywire.co.uk/long-ridge-equity-partners-invests-drawbridge/)
 
