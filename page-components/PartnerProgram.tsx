@@ -20,6 +20,44 @@ const steps = [
   { num: "04", title: "Ongoing", description: "Referral compensation is paid per program terms. You maintain visibility into the engagement. Your client relationship is protected — in writing." },
 ];
 
+/**
+ * Named partners.
+ *
+ * Every entry here describes what the partner owns, not only who they are. That
+ * framing is the point of the section: Centience is not a compliance
+ * consultancy and never acts as a substitute CCO, so a compliance firm can
+ * bring us into an account without introducing a competitor. Competitors in
+ * this category who put "principal sign-off" in their own pitch cannot say
+ * that, and the referral layer notices.
+ *
+ * Do not add a firm here without its written consent. These are regulated
+ * advisers whose own clients read this page, and one of them sits as CCO of
+ * record on client filings.
+ */
+const currentPartners = [
+  {
+    name: "Abide Consulting Group",
+    discipline: "Regulatory compliance consulting",
+    description:
+      "A compliance consultancy serving investment advisers and funds, with a practice built around the day-to-day operation of a compliance programme rather than one-off assessments.",
+    owns: "Regulatory interpretation, written supervisory procedures, the compliance calendar and the examination relationship.",
+  },
+  {
+    name: "NextReg",
+    discipline: "Outsourced compliance management",
+    description:
+      "Compliance management for fintech RIAs and broker-dealers, founded and run by compliance officers. NextReg serves as chief compliance officer of record for its clients rather than advising from outside the function.",
+    owns: "The compliance function itself, including CCO responsibilities, SEC, FinCEN and NFA programme management, and broker-dealer principal work.",
+  },
+  {
+    name: "PARC Solutions",
+    discipline: "Compliance and cybersecurity advisory",
+    description:
+      "A boutique advisory to fintechs and regulated firms covering regulatory frameworks, AML and KYC, PCI DSS and SOC 2 readiness, with independent specialists engaged for audit and penetration testing.",
+    owns: "Programme design, framework selection and the regulatory judgement behind both.",
+  },
+];
+
 const PartnerProgramPage = () => (
   <Layout>
     {/* Hero */}
@@ -113,6 +151,53 @@ const PartnerProgramPage = () => (
               </div>
               <h3 className="font-display font-bold text-primary text-lg mb-3">{partner.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{partner.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Current Partners */}
+    <section className="py-24 lg:py-32 bg-background">
+      <div className="container mx-auto">
+        <div className="max-w-3xl mb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="gold-line" />
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Who We Work With</p>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
+            We don&apos;t compete with your compliance partner
+          </h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Centience is not a compliance consultancy and never acts as a substitute chief compliance
+            officer. Regulatory interpretation, written supervisory procedures and the examination
+            relationship stay with the firms below and with our clients&apos; own compliance teams.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We operate the technology those commitments depend on, and we keep the evidence that it
+            worked. That boundary is deliberate — it is what lets a compliance partner bring us into an
+            account without introducing a competitor.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {currentPartners.map((partner, i) => (
+            <motion.div
+              key={partner.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="card-premium p-8 flex flex-col"
+            >
+              <h3 className="font-display font-bold text-primary text-lg mb-1">{partner.name}</h3>
+              <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-4">{partner.discipline}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">{partner.description}</p>
+              <div className="pt-4 border-t border-border">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                  They own
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{partner.owns}</p>
+              </div>
             </motion.div>
           ))}
         </div>
