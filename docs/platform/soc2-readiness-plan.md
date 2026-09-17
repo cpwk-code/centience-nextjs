@@ -1,7 +1,7 @@
 # SOC 2 Readiness Plan — Centience
 
-**Status:** Proposal. Nothing here is committed.
-**Written:** 15 September 2026
+**Status:** The decision to pursue SOC 2 was made on 17 September 2026 (§8, decision 1). Scope, timing and tooling remain open.
+**Written:** 15 September 2026 · **Updated:** 17 September 2026 with §4a, on what may be claimed publicly before a report exists.
 **Companion:** `completeness-gap-list.md` — several items there are prerequisites here and are marked as such.
 
 ---
@@ -72,6 +72,35 @@ The observation window is the long pole and it cannot be compressed by spending 
 **Realistically 6–9 months from a standing start to a report in hand.** A first Type II commonly uses a 3-month window; subsequent reports move to 6 or 12 months for continuous coverage.
 
 The practical consequence: if a report is wanted for the 2027 selling season, readiness starts now, not in January.
+
+---
+
+## 4a. What can be said on the website, and when
+
+The stated reason for pursuing this is to put it on the website. §4 says a Type II report is realistically 6–9 months out, so the website question needs an answer for the interim — and getting that answer wrong costs more here than it would at most companies.
+
+**Why the wording matters more for us than for others.** The entire product argument is that a claim without a record behind it is not evidence. A SOC 2 claim with no report is precisely the failure mode we sell against, made by us, on our own front page. The first sophisticated buyer asks for the report; if there is none, we have demonstrated the opposite of the pitch. And the audience knows exactly what the words mean — NextReg sits as CCO of record, Abide's clients commission Drawbridge assessments, and Plural's team reads vendor questionnaires for a living.
+
+**Not available at any stage:**
+
+- Any badge or seal. There is no SOC 2 badge, because there is no certification (§2).
+- **"SOC 2 certified."** The thing does not exist and saying it marks us as not knowing the category.
+- **"SOC 2 compliant."** Technically meaningless and read as a claim that a report exists.
+
+**Available as each becomes true, in order:**
+
+| Stage | Claim | When it becomes true |
+|---|---|---|
+| 0 | Say nothing | Now |
+| 1 | "SOC 2 Type II readiness underway" | A gap assessment is actually commissioned — not when it is planned |
+| 2 | **"SOC 2 Type II observation window in progress; report expected [quarter]"** | The window opens |
+| 3 | "SOC 2 Type II report available under NDA" | The report is issued |
+
+**The commercially important milestone is stage 2, not stage 3.** Most vendor questionnaires ask whether a SOC 2 is held with a yes / no / in-progress answer, and for a firm our size "in progress, report expected Q_" scores close to a yes — a reviewer can diarise a date. The benefit therefore arrives when the observation window *opens*, not when the report lands, which argues for opening the window as early as a defensible control set allows rather than polishing readiness first.
+
+**Where it belongs when true:** the trust or security page, the vendor due-diligence one-pager, and the footer. Not a homepage badge — badges are what companies without reports use.
+
+Until stage 1 is genuinely true, the honest and still useful thing to publish is what we already do: control testing, evidence retention, tenant segregation, encryption at rest, sub-processor list. That answers most of what a SOC 2 question is actually asking, and it can go up now.
 
 ---
 
@@ -152,14 +181,17 @@ Three options, and the honest comparison:
 
 | # | Decision | Owner |
 |---|---|---|
-| 1 | Type II confirmed as the target, with Type I only as a described interim | Orville |
+| ~~1~~ | ~~Whether to pursue this at all~~ **DECIDED, 17 September 2026 — yes, pursue it, in order to state it on the website.** Residual: confirm Type II as the target, with Type I only as a described interim | Orville |
 | 2 | Scope: Security + Confidentiality, and whether Availability is in | Orville |
 | 3 | Observation window length and start date — which determines report availability | Orville |
 | 4 | Tooling: bought platform, Centience, or both | Orville |
 | 5 | Auditor selected, and the self-produced-evidence question raised in scoping | Orville |
 | 6 | Whether this competes with the first Abide cohort for capacity, and which wins | Orville |
+| 7 | Observation window **start** date, tracked separately from the report date — it is the milestone that unlocks the website claim and the questionnaire answer (§4a) | Orville |
 
 Decision 6 is the real one. The rest are execution.
+
+**Sequencing note following the 17 September decision.** Because the commercial benefit arrives when the observation window opens rather than when the report is issued (§4a), the readiness phase should be scoped to the minimum defensible control set and the window opened early, rather than extended until readiness is complete. Everything not ready at window open can be remediated during it; findings mid-window are normal and are described in the report, whereas a window that has not started cannot be described at all.
 
 ---
 
