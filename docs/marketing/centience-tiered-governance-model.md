@@ -204,6 +204,93 @@ Also easier to defend in negotiation — the client can see what drives it.
 
 Define what is included — quarterly review, monthly triage, a stated number of hours — and what is billable beyond it.
 
+### 5.7 Standalone platform pricing — the app sold on its own
+
+**Status: proposed, not decided. Nothing here is quotable yet.**
+
+§5.1–5.6 price the bundled offer — platform access plus a named governance engineer. This subsection answers a question the document has never addressed: **what the app costs when a firm buys only the app.** That became live in September 2026, because the platform is now going into proposals (Plural) and will be quoted again shortly.
+
+#### 5.7a The comparable that sets the buyer's anchor
+
+Skematic publishes its price list openly, which is unusual in this category and makes them the reference point whether or not we meet them in deals.
+
+| Line | Basic | Standard | Premium |
+|---|---|---|---|
+| Firm Compliance, annual | $6,000 | $12,000 | $24,000 |
+| Employee Compliance, annual | $6,000 | $12,000 | $24,000 |
+| Implementation, one-off | $1,000 | $2,000 | $2,000 |
+
+Mechanics worth copying, each for a reason:
+
+- **Firm tiers gate on entities and geographies**, not headcount. Employee tiers gate on seats (20 / 50 / 150). They separated the two axes rather than forcing one to stand in for the other.
+- **Seats are capped per tier with priced overage** — $1,500 per full-access user per year, $500 per limited-access user. The tiers are engineered so that upgrading is cheaper than buying overage, which makes expansion happen without a salesperson.
+- **Add-ons are discrete published SKUs** — Legal Document Manager at $2,500/year, $50 per additional document.
+- **Custom pricing begins only above 151 employees.** The entire SMB range is on the page; negotiation is reserved for deals large enough to repay it.
+- **The list is dated** — "effective through 30 September 2026." They can reprice annually without reopening a single contract, and it creates a deadline nobody had to manufacture.
+
+Scale reported on their own site: 450+ firms, $3.3T AUM, 10+ countries. A real business assembled from small tickets and almost no negotiation.
+
+#### 5.7b What the comparable does and does not constrain
+
+**It constrains the anchor.** A buyer in our segment believes compliance software costs $6–24K per line, because an incumbent told them so in public. We can price above that. We cannot price four times above it unless the difference is visible in the first meeting.
+
+**It does not constrain the ceiling, because Skematic is a different kind of product.** Theirs is a system of record and workflow — policies, tasks, cases, attestations, pre-clearance, marketing review. It does not connect to a tenant and test whether a control is actually operating. That gap is precisely what Jason at Plural named unprompted when he said our GRC module beats Hadrius' document-management module *"because it is tied to technology requirements."*
+
+**The live demo is what carries the premium.** In the 14 September demo the platform flagged DMARC disabled for the prospect's own domain, live, during the call. No system of record produces that moment at any price. It is the single most efficient justification we have for pricing above the published band, and it argues for making a consented read-only connection a standard part of the demo rather than an implementation step.
+
+#### 5.7c Recommended structure
+
+Same shape as Skematic — base gated by complexity, seat rider on top — with four deliberate departures.
+
+| Element | Decision | Why |
+|---|---|---|
+| **Gating variable** | **Registrations × connected systems.** RIA / BD / dual / NFA / NYDFS-covered, and how many tenants we test against | Consistent with §5.4. Entities and geographies are the right axis for a policy system; ours is regulatory footprint, which is both our cost driver and our value driver |
+| **List price** | **Published, up to the top of the ICP.** Custom only above ~150 employees | This is the decision that determines sales motion. A published list removes the pricing conversation from most deals, which is the only way one person carries many accounts. An unpublished price makes every sale a work-through and caps deals per head — the same constraint as ARR per governance engineer, arriving through a different door |
+| **Band** | **Roughly 2× the Skematic band — indicatively $12K / $24K / $48K annual** | Justified by live control testing, which they cannot do. Marked indicative, not decided — see §5.7f |
+| **Onboarding** | **A separate, published scoping fee, materially larger than Skematic's $1–2K** | Their fee is subsidised to reduce friction. Ours corresponds to the real cost: determining the applicable rule set was the one objection raised in the Plural demo, and it is genuine work. Publishing it recovers the cost, signals that scoping is not a setup wizard, and gives us something to discount that is not the subscription |
+| **AI governance** | **A second published line, priced per seat, with a bundle discount** | Supersedes the earlier suggestion of a percentage uplift. A separate line with a *published* price does not create a second negotiation; an unpublished one does. And the AI observation layer is the one component that genuinely scales with headcount, because it counts paid seats |
+| **Partner seats** | **Free and uncapped, stated on the page** | The one place not to copy Skematic. They cap full-access users at 2 because compliance teams are small. Our channel depends on Abide, NextReg and PARC holding logins into their clients' accounts — that is how the platform reaches the next twenty prospects. Charging $1,500 for the consultant's seat taxes our own distribution |
+
+#### 5.7d Why not per user
+
+Per-seat pricing alone fails here for a structural reason: **headcount drives neither our cost nor our value.**
+
+A 15-person RIA and a 60-person RIA with the same registrations have the same regulatory scope, the same check set, the same onboarding pass and the same rule-scoping cost. At $75/user/month one pays $13.5K and the other $54K for identical work. Meanwhile a 20-person dual registrant with NFA exposure — genuinely our most expensive account to run — pays less than a 40-person single-registration adviser that is trivial.
+
+Pure per-seat therefore produces the worst of both ends: the small account may sit below cost to serve, and the large one reaches a number big enough to trigger procurement, which is the friction per-user pricing exists to avoid.
+
+Worth noting that the adjacent category has already converged on the hybrid. Vanta and Drata price on employee count **plus** number of frameworks. Buyers in this segment have seen the shape and will not argue with its logic.
+
+#### 5.7e Anchor against the compliance retainer, not the IT budget
+
+A positioning decision hiding inside a pricing decision.
+
+Priced as a fraction of IT spend, we are a tool and we compete with tools. Priced as a fraction of the compliance programme — against the Abide or NextReg retainer, against one Drawbridge assessment, against answering the same DDQ twice — we are part of the programme, which is where both budget authority and willingness to pay sit.
+
+That is also how a premium becomes something a client wants rather than resents. A premium is wanted when it is indexed to something the buyer already believes is expensive and painful. Our stated promise is *answer the questionnaire once* (`one-pager-vendor-due-diligence.md`); the price should be visibly less than the cost of answering it twice, and the page should say so.
+
+#### 5.7f The design-partner floor — **[OPEN, and time-sensitive]**
+
+**Plural and Tabluex have both closed at heavily discounted numbers**, deliberately, in exchange for feedback and proof of concept. That was the right call while the concept was unproven. It creates one specific liability now that it is proving out.
+
+**Every price set during proof of concept becomes the floor when the product is sold properly.** The mechanism is not that we feel bound by it — it is that the client believes it is the price, tells a peer it is the price, and renewal becomes a price-increase negotiation starting from zero, which is the hardest conversation in software.
+
+The fix is cheap and has to happen before either account renews:
+
+1. **Put a list price on paper, even retroactively.** Both agreements should state the list price and express what they paid as a named discount off it. A number with no list price beside it *is* the list price.
+2. **Tell them they are design partners.** This is the part that converts a low price from a market signal into a gift. A client who thinks $X is the price tells peers that $X is the price. A client who knows they received design-partner terms as the first account tells peers about the discount they earned — which is a reference rather than a leak.
+3. **Name what we get in exchange** — case study rights, reference calls, roadmap input, logo use. A discount without a stated exchange is just a low price.
+4. **Write the renewal step-up into the original agreement**, as a schedule rather than an intention. Term one at the design-partner rate, term two at a defined percentage of list, term three at list. Agreed while they are grateful, not while they are renewing.
+5. **Never quote the design-partner number verbally without the list price alongside it.**
+
+The same discipline applies to the next quote. Riverstone and the Abide cohort will price against whatever exists on paper by then.
+
+#### 5.7g What is still missing before this can be decided
+
+**The cost to serve one platform-only account.** Item 5 in §12 asks for accounts per governance engineer for the bundled offer; the platform-only figure is a different and smaller number, and it is what determines whether the base tier is profitable standalone. §5.2 already requires that the base be profitable on its own — *"if it is a loss-leader we are running a services business with a software cost centre"* — and that test cannot be applied to a band we have not costed.
+
+The indicative $12K / $24K / $48K above is a band to test against buyers, not a decision. It is consistent with the anchor, with the compliance-retainer framing, and with being roughly double an incumbent we materially outperform on the one axis the buyer can see in ninety seconds. That is enough to justify putting it in front of someone. It is not enough to publish.
+
 ---
 
 ## 6. Product requirements this model creates
@@ -510,8 +597,14 @@ Price platform access as something worth selling on its own. The failure mode is
 | 14 | Confirm the write-scopes decision in §10.1 was intended, not inferred | Orville | Layer 3 build scope |
 | ~~15~~ | ~~Proposed rule — client evidence handling~~ **ADOPTED as Constitution Rule 11.** Residual: set the actual retention period and draft the termination-export clause | Orville | First client contract |
 | ~~16~~ | ~~Proposed rule — aggregate data use~~ **ADOPTED as Constitution Rule 12.** Residual: add the opt-in mechanism to the client agreement | Orville | First client contract |
+| 17 | Platform list price confirmed, and the tier gating variable fixed (§5.7c) | Orville | Plural and Tabluex renewal, Riverstone quote, Abide cohort |
+| 18 | Cost to serve one **platform-only** account — the smaller sibling of item 5 | Orville | Whether the base tier is profitable standalone, per §5.2 |
+| 19 | Do Plural and Tabluex have written design-partner terms stating list price, the exchange, and a renewal step-up schedule? (§5.7f) | Orville | Reference-price integrity, both renewals |
+| 20 | What Hadrius charges, by firm size | Orville → market | Sizing the premium over the published Skematic band |
 
-Items 8–11 came from the memo's §12; items 12–14 fall out of the enforcement architecture in §10.
+Items 8–11 came from the memo's §12; items 12–14 fall out of the enforcement architecture in §10. Items 17–20 fall out of §5.7.
+
+**Item 19 is the time-sensitive one.** It is cheap to fix now and expensive at renewal, because a discount with no list price beside it becomes the list price by default.
 
 **Item 4 is now a gate, not a task.** It was "confirm an env var is set." With write credentials in scope it becomes the precondition for Layer 3 existing at all — see §10.5.
 
@@ -548,6 +641,8 @@ This sits alongside §2.2's advice not to promise benchmarking, and both hold: d
 ---
 
 ## 14. Sources
+
+Skematic pricing (§5.7a): [skematic.com/pricing](https://skematic.com/pricing/), retrieved 17 September 2026, list stated effective through 30 September 2026.
 
 Drawbridge: [drawbridgeco.com](https://drawbridgeco.com/) · [Solutions](https://drawbridgeco.com/solutions) · [Francisco Partners investment](https://www.franciscopartners.com/media/drawbridge-announces-strategic-growth-investment-from-francisco-partners) · [Long Ridge on the Francisco round](https://long-ridge.com/long-ridge-portfolio-company-drawbridge-announces-strategic-growth-investment-from-francisco-partners/) · [Long Ridge initial investment](https://www.privateequitywire.co.uk/long-ridge-equity-partners-invests-drawbridge/)
 
