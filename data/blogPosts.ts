@@ -14,6 +14,144 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  // ─── Vendor Due Diligence / Third-Party Risk (September 2026) ─────────────
+  {
+    id: 28,
+    slug: "vendor-due-diligence-third-party-risk-reg-sp-finra-2026",
+    category: "Third-Party Risk",
+    title: "You Are Someone Else's Third-Party Risk: What Vendor Due Diligence Actually Tests in 2026",
+    excerpt: "Amended Regulation S-P now applies to advisers and broker-dealers of every size, and FINRA has been explicit that outsourcing does not transfer supervisory responsibility. The result is that every regulated firm is now both the assessor and the assessed — answering questionnaires it also sends. Here is what those assessments actually test, and why most firms answer the same questions from scratch every time.",
+    image: "/assets/blog/centience-vendor-due-diligence-third-party-risk.png",
+    author: "Orville Matias",
+    date: "September 2026",
+    metaTitle: "Vendor Due Diligence in 2026: Reg S-P, FINRA 21-29, and What Assessors Test | Centience",
+    metaDescription: "Amended Reg S-P service provider oversight, the 72-hour breach notice expectation, and FINRA Notice 21-29's four phases. What vendor due diligence questionnaires actually test and how to build an evidence record you can reuse.",
+    content: `
+[STAT_CARDS]
+72 Hours | Reg S-P Service Provider Notice | Policies must be reasonably designed to obtain breach notification from providers this quickly
+30 Days | Customer Notification Clock | From determining that sensitive customer information was, or likely was, accessed without authorization
+June 3, 2026 | Smaller Entity Compliance Date | Amended Reg S-P now applies to advisers and broker-dealers of every size
+4 Phases | FINRA's Vendor Framework | Decide, diligence, onboard, supervise — Regulatory Notice 21-29
+[/STAT_CARDS]
+
+There is a moment that repeats itself across regulated firms every quarter, and it is worth naming precisely because nobody plans for it.
+
+A firm spends three weeks assembling answers to a due diligence questionnaire sent by a client's investors. Two months later, the same firm sends a nearly identical questionnaire to one of its own service providers. The people doing both jobs sit in the same office. Neither exercise made the other easier.
+
+This is the structural condition of third-party risk in 2026: **every regulated firm is simultaneously the assessor and the assessed.** And for most firms, neither side of that produces anything durable, because none of the work was ever captured as a record.
+
+## What changed: you are in somebody's vendor register now
+
+Two developments made this everyone's problem rather than a large-firm problem.
+
+The first is amended Regulation S-P. The SEC adopted the amendments in May 2024, with compliance dates of December 3, 2025 for larger entities and **June 3, 2026 for smaller entities** — a date that has now passed. There is no longer a size threshold below which a registered adviser or broker-dealer can treat service provider oversight as an aspiration.
+
+The second is that investors and institutional allocators have industrialised their own diligence. A firm managing outside capital is now routinely assessed by an allocator's chosen cybersecurity assessor, on that assessor's schedule, against that assessor's framework — and the findings go to the allocator, not only to the firm.
+
+The practical consequence is that your control posture is being read by people who are not your regulator and who will not wait for your next annual review.
+
+## What amended Reg S-P actually requires — and one thing it does not
+
+This is worth getting right, because it is widely misreported.
+
+Amended Reg S-P requires covered institutions to adopt an **incident response program** within their written policies and procedures, reasonably designed to detect, respond to and recover from unauthorized access to customer information. Two elements draw the most attention:
+
+- **Service provider oversight.** Policies and procedures must be reasonably designed to ensure service providers take appropriate measures to protect customer information, including **notifying the covered institution as soon as possible and no later than 72 hours** after becoming aware of a breach of a customer information system.
+- **Customer notification.** Affected individuals must be notified as soon as practicable, and **not later than 30 days** after the firm becomes aware that sensitive customer information was, or was reasonably likely to have been, accessed or used without authorization.
+
+[CALLOUT:Rule]
+A common misreading: the final rule does **not** mandate a written contract with every service provider. The proposing release contemplated that; the adopted rule did not carry it through. What is required is policies and procedures reasonably designed to achieve the outcome. A contractual representation is one way to get there — and generally the cleanest — but formal notice to the provider of the expectation, with a record that it was sent and acknowledged, can also satisfy a reasonably designed program. Firms that assumed a contract amendment was mandatory have sometimes delayed the whole project waiting on counsel, when the evidence of a reasonable design was available sooner.
+[/CALLOUT]
+
+The word doing the work in both requirements is **reasonably designed**. That is an evidentiary standard, not a documentary one. A policy that describes an oversight program, with no record of the program having operated, is not a reasonably designed program. It is a description of one.
+
+## FINRA Notice 21-29: outsourcing does not transfer the obligation
+
+For broker-dealers and dually registered firms, [FINRA Regulatory Notice 21-29](https://www.finra.org/rules-guidance/notices/21-29) remains the clearest statement of the expectation. Its central principle is a single sentence: outsourcing an activity or function does not relieve a member firm of its regulatory compliance and supervision obligations over that function.
+
+The Notice frames vendor management as four sequential phases, and it is a better planning structure than most commercial frameworks because it is what examiners have in mind.
+
+[TIMELINE]
+Phase 1 — The Decision to Outsource | Whether a function should be performed by a third party at all, documented as a decision rather than as a purchase. Examiners ask who approved it, on what analysis, and whether the function is one that can be supervised once it leaves the building.
+Phase 2 — Due Diligence on Prospective Vendors | Assessment before selection, proportionate to the criticality of the function and the sensitivity of the data involved. This is where SOC 2 reports, penetration test summaries and financial condition are reviewed — and where the review needs to be recorded, not merely performed.
+Phase 3 — Onboarding | Contract terms, data handling commitments, access provisioning, breach notification expectations, and the definition of what the firm will monitor. The Reg S-P 72-hour expectation belongs here.
+Phase 4 — Ongoing Supervision | The phase most firms treat as optional. Re-assessment on a defined cadence, tracking of the vendor's own sub-processors, re-collection of expiring SOC 2 reports, and evidence that the monitoring described in the WSP actually happened.
+[/TIMELINE]
+
+FINRA has grouped the obligations it expects firms to consider under four headings — supervision, registration, cybersecurity and business continuity — and its more recent annual oversight reporting has kept third-party and vendor risk in view rather than retiring it.
+
+## What assessors actually test, as distinct from what the questionnaire asks
+
+A due diligence questionnaire asks whether you have multi-factor authentication. The assessment tests whether MFA is enforced for every account including service accounts and break-glass administrators, whether any conditional access policy grants an exclusion, and when that exclusion was last reviewed.
+
+The gap between the two is where findings come from. In our experience the recurring items are consistent:
+
+- **Access reviews that happened but were never recorded.** The review occurred. There is no artifact, so for assessment purposes it did not.
+- **Retention configured once and never tested.** A policy sets a retention period. Nobody has confirmed the platform is applying it to the mailboxes and sites that actually hold the regulated records.
+- **A policy that promises more than the environment enforces.** The WSP commits to a control the tenant does not implement — the single most damaging category, because the firm supplied the evidence against itself.
+- **Offboarding that is fast for email and slow for everything else.** The mailbox is disabled the same day. The SaaS account, the file share and the API token linger.
+- **Sub-processors nobody mapped.** The firm assessed its vendor. It did not ask whom that vendor sends data to, which is precisely what Phase 4 contemplates.
+- **Backups that have never been restored.** A backup job reporting success is not evidence of recoverability. A documented restore is.
+
+None of these is exotic. All of them are ordinary operational drift, and drift is invisible without something watching for it.
+
+## Why firms answer the same questions twice
+
+Here is the part that costs the most and gets discussed the least.
+
+When a firm completes a questionnaire, it produces a document. The document is sent, filed, and — in nearly every case we have seen — never reused. Six months later a different requester asks materially the same questions, and the work starts over: the same screenshots recaptured, the same configuration re-checked, the same people interrupted.
+
+The reason is not laziness. It is that the first exercise produced **a deliverable rather than a record.** A screenshot of a settings page proves what was true on the afternoon someone took it. It cannot tell you whether the setting held last Tuesday, and it cannot be queried.
+
+An evidence record is a different object. It is produced continuously as controls are tested, it carries a timestamp and the observed configuration, and it answers the next questionnaire by retrieval instead of by reconstruction. The difference compounds: the second assessment costs a fraction of the first, and the fifth costs almost nothing.
+
+## "It's been remediated" is not evidence
+
+The most consequential sentence in this entire process is the one firms send in response to findings.
+
+A finding arrives. The firm fixes it, or believes it has, and replies that the item has been remediated. That reply is an assertion. It may well be true. But the assessor has no way to distinguish it from an assertion that is not true, and neither, in most cases, does the firm — because nobody re-tested.
+
+[CALLOUT:action]
+Treat a claimed fix as a claim until a re-test says otherwise. A finding should move to awaiting verification, not to closed, when someone says it is done. It closes when a test confirms it, with a timestamp. Then it stays watched, because the configuration that was corrected in March is the one that quietly changes in September. This single distinction — asserted versus verified — is what separates a governance program from a remediation habit.
+[/CALLOUT]
+
+The same logic applies to risk you decide not to fix. A deliberate acceptance, with a named owner, a written rationale and a review date, reads as governance. An open item with no decision record reads as neglect. The underlying facts are identical; the conclusion an assessor draws is not.
+
+## What a reusable evidence record looks like
+
+1. **A current inventory** of systems holding regulated or customer information, and of the third parties with access to any of it — including sub-processors.
+2. **Controls tested against the live environment on a schedule**, rather than attested annually, with results timestamped as they are produced.
+3. **Findings that carry an owner and a citation** — the obligation or the policy clause the finding comes from, so remediation is a defined task rather than a debate.
+4. **A verification state**, so a claimed fix is recorded as a claim until a re-test confirms it, and drift afterwards reopens it.
+5. **An exception register** with rationale, named owner and expiry, and a process that reopens an acceptance when it lapses.
+6. **A vendor register with expiry tracking** — SOC 2 reports diarised before they lapse, and the Reg S-P notification expectation recorded as having been communicated.
+7. **An export you can hand over**, because an evidence record you cannot produce on request is not a record the firm meaningfully has.
+
+Note what is not on this list: a new policy document. Most firms in this position do not have a policy gap. They have an evidence gap, and writing another document does not close it.
+
+## The question worth answering before somebody else asks it
+
+If a due diligence questionnaire arrived tomorrow from a client's investors, how much of it could you answer from records you already hold — and how much would you rebuild from scratch?
+
+For most regulated firms the honest answer is that nearly all of it gets rebuilt. That is not a reflection of a weak compliance function. It is what happens when assessment is treated as an event rather than as a by-product of operating. The firms that change this in 2026 will not be the ones with the longest policy manuals. They will be the ones who can answer the second questionnaire in an afternoon.
+
+The Centience Governance Score is a free, five-minute self-assessment that scores your firm 0–100 across cybersecurity, data and records, supervision, infrastructure, and AI governance — and shows you where your evidence record stands before an assessor does.
+
+[CTA_BUTTON:Get Your Free Governance Score|/assessments/governance-score]
+
+[RELATED_SERVICE:Cybersecurity Governance|Control testing against your live environment, findings with a named owner and a citation, vendor and sub-processor tracking, and an evidence record that accumulates as it is produced.|/cybersecurity]
+
+For the records foundation underneath this, see our guide to [data governance and FINRA 17a-4 retention](/insights/data-governance-financial-services-finra-17a-4-sec-records-2026), what [Reg S-P now requires of smaller RIAs](/insights/reg-sp-june-3-2026-deadline-smaller-ria-compliance), or how Centience supports [financial services firms](/industries/financial-services) specifically.
+
+[FAQ_ACCORDION]
+Does amended Reg S-P require a written contract with every service provider? | No. The proposing release contemplated a written contract requirement, but the adopted rule requires policies and procedures reasonably designed to ensure service providers protect customer information and provide breach notification within 72 hours. A contractual representation is the cleanest route, but documented notice of the expectation with evidence it was sent and acknowledged can also support a reasonably designed program.
+Who counts as a service provider for these purposes? | Any third party that receives, maintains, processes or is otherwise permitted access to customer information through its provision of services to the firm. In practice that is broader than most vendor registers reflect — it typically includes cloud platforms, archiving and backup providers, portfolio and CRM systems, outsourced IT, and often the sub-processors those parties rely on.
+How often should vendor due diligence be repeated? | Set a cadence proportionate to criticality and data sensitivity rather than assessing everything annually. A provider with access to customer information warrants at minimum an annual re-assessment plus re-collection of its SOC 2 report before the current one lapses. Lower-risk vendors can sit on a longer cycle, provided the tiering itself is documented.
+Is a SOC 2 report enough to satisfy vendor due diligence? | It is strong evidence, not a complete answer. Read the report rather than filing it: check the report type, the period covered, whether the scope includes the service you actually consume, the complementary user entity controls it assumes you operate, and any exceptions in the testing. A Type II covering a period is materially more informative than a Type I describing a design at a point in time.
+What is the difference between a finding being remediated and being verified? | Remediated is what somebody tells you. Verified is what a re-test confirms, with a timestamp. The distinction matters because assessors and examiners have no way to evaluate an assertion, and because configurations drift after they are corrected. A defensible program records the claim, tests it, records the verification, and continues watching for drift afterwards.
+[/FAQ_ACCORDION]
+`,
+  },
   // ─── AI Prompts as Books and Records (August 2026) ────────────────────────
   {
     id: 27,

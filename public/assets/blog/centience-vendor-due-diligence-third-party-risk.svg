@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0b1520"/>
+      <stop offset="100%" style="stop-color:#1a2540"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8b84b"/>
+      <stop offset="100%" style="stop-color:#f5d070"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Diagonal rule lines -->
+  <g stroke="#e8b84b" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="630" x2="630" y2="0"/>
+    <line x1="200" y1="630" x2="830" y2="0"/>
+    <line x1="400" y1="630" x2="1030" y2="0"/>
+    <line x1="600" y1="630" x2="1200" y2="30"/>
+    <line x1="800" y1="630" x2="1200" y2="230"/>
+  </g>
+
+  <!-- Rule watermark -->
+  <text x="600" y="380" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="185" font-weight="900"
+        fill="#e8b84b" fill-opacity="0.04" text-anchor="middle">REG S-P</text>
+
+  <!-- Questionnaire / evidence exchange (right) -->
+  <g transform="translate(880, 315)">
+    <!-- Two questionnaire sheets, sent and received -->
+    <g transform="translate(-118, -170)">
+      <rect x="0" y="0" width="116" height="150" rx="5" fill="#0b1520" fill-opacity="0.55" stroke="#e8b84b" stroke-opacity="0.26" stroke-width="1.5"/>
+      <g stroke="#e8b84b" stroke-opacity="0.3" stroke-width="2.5" stroke-linecap="round">
+        <line x1="16" y1="28" x2="76" y2="28"/>
+        <line x1="16" y1="48" x2="96" y2="48"/>
+        <line x1="16" y1="68" x2="88" y2="68"/>
+        <line x1="16" y1="88" x2="96" y2="88"/>
+        <line x1="16" y1="108" x2="64" y2="108"/>
+        <line x1="16" y1="128" x2="84" y2="128"/>
+      </g>
+      <text x="58" y="176" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+            font-size="15" font-weight="700" fill="#e8b84b" fill-opacity="0.62" text-anchor="middle" letter-spacing="1.5">SENT</text>
+    </g>
+
+    <g transform="translate(24, -170)">
+      <rect x="0" y="0" width="116" height="150" rx="5" fill="#0b1520" fill-opacity="0.55" stroke="#e8b84b" stroke-opacity="0.26" stroke-width="1.5"/>
+      <g stroke="#e8b84b" stroke-opacity="0.3" stroke-width="2.5" stroke-linecap="round">
+        <line x1="16" y1="28" x2="76" y2="28"/>
+        <line x1="16" y1="48" x2="96" y2="48"/>
+        <line x1="16" y1="68" x2="88" y2="68"/>
+        <line x1="16" y1="88" x2="96" y2="88"/>
+        <line x1="16" y1="108" x2="64" y2="108"/>
+        <line x1="16" y1="128" x2="84" y2="128"/>
+      </g>
+      <text x="58" y="176" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+            font-size="15" font-weight="700" fill="#e8b84b" fill-opacity="0.62" text-anchor="middle" letter-spacing="1.5">RECEIVED</text>
+    </g>
+
+    <!-- Both feed one record -->
+    <g stroke="#e8b84b" stroke-opacity="0.28" stroke-width="1.5" fill="none">
+      <path d="M -60 20 L -60 48 L 0 48"/>
+      <path d="M 82 20 L 82 48 L 0 48"/>
+      <line x1="0" y1="48" x2="0" y2="70"/>
+    </g>
+
+    <!-- The evidence record: verified states -->
+    <g transform="translate(0, 96)">
+      <rect x="-130" y="-16" width="260" height="46" rx="5" fill="#e8b84b" fill-opacity="0.09" stroke="#e8b84b" stroke-opacity="0.34" stroke-width="1.5"/>
+      <circle cx="-104" cy="7" r="7" fill="none" stroke="#e8b84b" stroke-opacity="0.75" stroke-width="2"/>
+      <path d="M -108 7 l 3 3.5 l 6 -7.5" fill="none" stroke="#e8b84b" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="-84" y="12" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+            font-size="16" font-weight="600" fill="#f5d070" fill-opacity="0.82">VERIFIED · timestamped</text>
+
+      <rect x="-130" y="42" width="260" height="46" rx="5" fill="#0b1520" fill-opacity="0.5" stroke="#e8b84b" stroke-opacity="0.2" stroke-width="1.5"/>
+      <circle cx="-104" cy="65" r="7" fill="none" stroke="#e8b84b" stroke-opacity="0.45" stroke-width="2"/>
+      <line x1="-104" y1="61" x2="-104" y2="66" stroke="#e8b84b" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-104" y1="69" x2="-104" y2="69.5" stroke="#e8b84b" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/>
+      <text x="-84" y="70" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+            font-size="16" font-weight="600" fill="#e8b84b" fill-opacity="0.5">AWAITING VERIFICATION</text>
+    </g>
+  </g>
+
+  <!-- Left: title block -->
+  <g transform="translate(88, 214)">
+    <rect x="0" y="-52" width="58" height="4" fill="url(#gold)"/>
+    <text x="0" y="-18" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="17" font-weight="700" fill="#e8b84b" letter-spacing="3.4">THIRD-PARTY RISK</text>
+
+    <text x="0" y="36" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="52" font-weight="800" fill="#ffffff">You Are Someone</text>
+    <text x="0" y="96" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="52" font-weight="800" fill="#ffffff">Else's Third-Party</text>
+    <text x="0" y="156" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="52" font-weight="800" fill="url(#gold)">Risk</text>
+
+    <text x="0" y="212" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="21" font-weight="500" fill="#ffffff" fill-opacity="0.58">What vendor due diligence actually tests</text>
+    <text x="0" y="244" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="21" font-weight="500" fill="#ffffff" fill-opacity="0.58">— and why firms answer it twice</text>
+  </g>
+
+  <!-- Footer brand -->
+  <g transform="translate(88, 556)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="23" font-weight="800" fill="#ffffff" fill-opacity="0.9" letter-spacing="1.2">CENTIENCE</text>
+    <text x="0" y="26" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="15" font-weight="500" fill="#e8b84b" fill-opacity="0.68" letter-spacing="0.6">Technology governance for regulated firms</text>
+  </g>
+</svg>
