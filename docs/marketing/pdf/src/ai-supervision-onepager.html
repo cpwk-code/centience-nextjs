@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Centience — Supervise AI Without Promising to Read Everything</title>
+<style>/*__FONTS__*/</style>
+<style>
+  :root{
+    --navy-900:#0b1520; --navy-800:#141d2e; --navy-700:#1a2540;
+    --gold:#e8b84b; --gold-light:#f5d070;
+    --ink:#16203a; --body:#414c60; --muted:#6b7686;
+    --rule:#e3e7ee; --tint:#f7f8fb;
+  }
+  @page { size: Letter; margin: 0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{
+    font-family:"DM Sans","Inter",system-ui,sans-serif;
+    color:var(--body); font-size:9.6pt; line-height:1.47;
+    font-feature-settings:"kern" 1;
+  }
+  .page{ width:8.5in; height:1056px; overflow:hidden; position:relative; page-break-after:always; }
+  .page:last-child{ page-break-after:auto; }
+  .pad{ padding:0 0.82in; }
+
+  /* ─── Hero ─── */
+  .hero{
+    background:linear-gradient(135deg,var(--navy-900) 0%,var(--navy-700) 100%);
+    padding:0.46in 0.82in 0.34in; color:#fff; position:relative; overflow:hidden;
+  }
+  .hero::after{
+    content:""; position:absolute; inset:0; opacity:.05;
+    background:repeating-linear-gradient(-52deg,transparent 0 46px,var(--gold) 46px 47px);
+  }
+  .hero > *{ position:relative; z-index:1; }
+  .logo{ height:30px; display:block; margin-bottom:19px; }
+  .goldrule{ width:52px; height:3px; background:linear-gradient(90deg,var(--gold),var(--gold-light)); margin-bottom:13px; }
+  .eyebrow{ font-size:7.6pt; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+  h1{
+    font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-weight:800;
+    font-size:22.5pt; line-height:1.13; letter-spacing:-.018em; color:#fff; margin-bottom:12px;
+  }
+  h1 em{ font-style:normal; color:var(--gold-light); }
+  .lede{ font-size:9.9pt; line-height:1.5; color:rgba(255,255,255,.72); max-width:5.6in; }
+
+  /* ─── Sections ─── */
+  section{ padding-top:9px; }
+  h2{
+    font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-weight:700;
+    font-size:12.8pt; line-height:1.22; color:var(--ink); letter-spacing:-.012em;
+    margin-bottom:7px; padding-left:12px; border-left:3px solid var(--gold);
+  }
+  p{ margin-bottom:5.5px; }
+  p:last-child{ margin-bottom:0; }
+  .strong{ color:var(--ink); font-weight:700; }
+  .pull{
+    font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-weight:700;
+    color:var(--ink); font-size:10.4pt; line-height:1.4; margin:8px 0 2px;
+  }
+
+  /* ─── Capability list ─── */
+  .caps{ margin-top:10px; }
+  .cap{ display:flex; gap:12px; padding:4.5px 0; border-top:1px solid var(--rule); }
+  .cap:last-child{ border-bottom:1px solid var(--rule); }
+  .cap .n{
+    flex:0 0 22px; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-weight:800;
+    font-size:9pt; color:var(--gold); padding-top:1px; letter-spacing:.04em;
+  }
+  .cap .t{ font-weight:700; color:var(--ink); }
+
+  /* ─── Cards ─── */
+  .cards{ display:flex; gap:14px; margin-top:10px; }
+  .card{ flex:1; background:var(--tint); border:1px solid var(--rule); border-top:3px solid var(--gold); padding:12px 14px 13px; }
+  .card h3{
+    font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-weight:700;
+    font-size:10pt; color:var(--ink); line-height:1.28; margin-bottom:6px;
+  }
+  .card p{ font-size:8.9pt; line-height:1.46; margin-bottom:0; }
+
+  /* ─── Fit rows ─── */
+  .fit{ margin-top:8px; }
+  .fit div{ padding:4px 0 4px 14px; border-left:2px solid var(--rule); margin-bottom:4px; }
+  .fit div:last-child{ margin-bottom:0; }
+  .fit b{ color:var(--ink); }
+
+  /* ─── Footer ─── */
+  .footer{
+    position:absolute; bottom:0; left:0; right:0;
+    background:linear-gradient(135deg,var(--navy-900) 0%,var(--navy-700) 100%);
+    color:#fff; padding:15px 0.82in 16px;
+  }
+  .footer .row{ display:flex; justify-content:space-between; align-items:flex-end; }
+  .footer .flogo{ height:26px; display:block; }
+  .footer .tag{ font-size:8.6pt; color:var(--gold); margin-top:6px; }
+  .footer .contact{ text-align:right; font-size:9pt; line-height:1.62; color:rgba(255,255,255,.8); }
+  .footer .contact .gold{ color:var(--gold); font-weight:700; }
+  .footer .fine{ font-size:7.4pt; color:rgba(255,255,255,.45); margin-top:9px; border-top:1px solid rgba(255,255,255,.13); padding-top:9px; }
+
+  .about{ margin-top:10px; padding:10px 14px; background:var(--tint); border:1px solid var(--rule); border-left:3px solid var(--gold); }
+  .about p{ font-size:9pt; line-height:1.5; margin-bottom:5px; }
+  .about p:last-child{ margin-bottom:0; color:var(--muted); font-size:8.6pt; }
+  .pagemark{ position:absolute; bottom:0.42in; right:0.82in; font-size:7.6pt; color:var(--muted); letter-spacing:.08em; }
+  .runner{ position:absolute; top:0.42in; right:0.82in; font-size:7.4pt; color:var(--muted); letter-spacing:.14em; text-transform:uppercase; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ PAGE 1 ══════════════════ -->
+<div class="page">
+  <div class="hero">
+    <img class="logo" src="__LOGO__" alt="Centience">
+    <div class="goldrule"></div>
+    <div class="eyebrow">AI Governance · Independent Broker-Dealers &amp; RIAs</div>
+    <h1>Supervise AI without<br>promising to <em>read everything.</em></h1>
+    <p class="lede">Technology governance for broker-dealers and RIAs with independent field forces.</p>
+  </div>
+
+  <div class="pad">
+    <section>
+      <h2>The position you're in</h2>
+      <p>Your advisors are adopting AI faster than any approval process can move. Note-takers, assistants and general-purpose models — bought individually, on personal subscriptions, sometimes on accounts that don't carry your domain.</p>
+      <p>You can see that it's happening. What you can't see is what's going into those tools, what comes back, or what an AI agent did on its own. There are no logs to review, so there is no supervision to document — and <span class="strong">"we have a policy" is not an answer to that.</span></p>
+      <p>The instinct is to archive everything and review it. That instinct creates two new problems: a body of records you can later be compelled to produce, and a supervisory standard you have implicitly promised to meet on every item.</p>
+      <p class="pull">There is a better-established answer, and your firm already uses it for email.</p>
+    </section>
+
+    <section>
+      <h2>What we do</h2>
+      <p>We centralize AI access, capture what passes through it, and turn that into a <span class="strong">risk-ranked review queue</span> — the same shape as lexicon-based communications supervision, applied to a channel that currently has none.</p>
+      <div class="caps">
+        <div class="cap"><div class="n">01</div><div><span class="t">Ingest.</span> AI interactions across approved tools, collected centrally rather than left on individual advisor accounts.</div></div>
+        <div class="cap"><div class="n">02</div><div><span class="t">Risk-rank.</span> Scored against lexicons and data types you define — client PII, account numbers, trade and suitability language, advisors on heightened supervision. Not everything surfaces. That is the point.</div></div>
+        <div class="cap"><div class="n">03</div><div><span class="t">Flag autonomous activity.</span> Where an AI agent acted without a human in the loop, so it can be reviewed as a category rather than discovered later.</div></div>
+        <div class="cap"><div class="n">04</div><div><span class="t">Route and evidence the review.</span> Who reviewed what, on what sampling basis, on what cadence, with what disposition. The artifact is the record that supervision occurred.</div></div>
+        <div class="cap"><div class="n">05</div><div><span class="t">Redact before submission.</span> PII and firm-defined sensitive categories removed in real time, before they reach a model, rather than audited afterwards.</div></div>
+        <div class="cap"><div class="n">06</div><div><span class="t">Retain on your terms.</span> A 30-day auto-delete is as supported as a seven-year hold. See overleaf.</div></div>
+      </div>
+    </section>
+    <div class="about">
+      <p><span class="strong">Centience</span> is the technology governance practice built out of <span class="strong">Compuwork</span>, an IT services firm of 21 years focused on financial services for the last twelve — roughly 90% of the client base sits under SEC, FINRA or NFA oversight. AI governance grew out of that work, because the available tooling assumes one office and a managed device fleet rather than a field force of independent contractors.</p>
+      <p>Beyond AI, the same engine covers identity and access · communications supervision and archiving · records and retention · device and infrastructure posture · third-party exposure · incident response, including the Regulation S-P notification clock.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ PAGE 2 ══════════════════ -->
+<div class="page">
+  <div class="runner">Centience · AI Supervision</div>
+  <div class="pad" style="padding-top:0.5in; padding-bottom:1.3in;">
+    <section style="padding-top:0;">
+      <h2>Two things we will say plainly</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Scope supervision to what you will actually operate</h3>
+          <p>A firm that commits to reviewing every AI interaction has created an examinable obligation, and will eventually be measured against the one it missed. A defined, risk-ranked sample with a documented methodology is the stronger position — and it is the one examiners already understand from communications review. We would rather build a narrow program you can prove completely than a broad one you can only describe.</p>
+        </div>
+        <div class="card">
+          <h3>Retention is your decision, not our default</h3>
+          <p>Whether AI prompts constitute required records is genuinely unsettled, and there is a real argument for keeping the window short. The platform supports a 30-day auto-delete as readily as a seven-year hold. We will give you the tradeoff honestly and configure whichever way your counsel and CCO land — and we will not manufacture a recordkeeping obligation to enlarge our scope.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>The third-party exposure most diligence misses</h2>
+      <p>A model provider's SOC 2 report and a no-training commitment are meaningful — and they are not the whole picture. Those commitments sit on top of a sub-processor chain most firms have never enumerated, and a provider's own policy language often preserves more latitude than the summary suggests.</p>
+      <p>This matters because a breach anywhere in that chain lands as <span class="strong">your</span> notification obligation, on <span class="strong">your</span> clock, under Regulation S-P — which has applied to firms of every size since 3 June 2026. You cannot assess a dependency you have not mapped. We maintain the vendor and sub-processor register alongside the supervision.</p>
+    </section>
+
+    <section>
+      <h2>What has to be true first</h2>
+      <p><span class="strong">Centralized access.</span> None of this works against tools bought individually by advisors on personal accounts. There has to be one point of management to connect to.</p>
+      <p>That does not mean issuing corporate devices or mandating a single stack. You can stay technology-agnostic about <em>which</em> tools advisors use while still requiring that approved tools run through firm-held tenancy — sequenced, with the tools already in widest use first.</p>
+      <p>Before the engagement starts we tell you which of your controls are enforceable in software, which are verifiable but not enforceable, and which come down to attestation. Labelling the third as the first is how programs fail examinations.</p>
+    </section>
+
+    <section>
+      <h2>Where we fit</h2>
+      <div class="fit">
+        <div><b>Your compliance function stays yours.</b> We don't interpret regulation, own your WSP or run your exam. We translate your obligations into technical controls and produce the evidence.</div>
+        <div><b>Your IT provider stays in place.</b> We govern the technology regardless of who operates it. Where you authorize us to enforce a specific control domain, that authority is named in writing and reversible.</div>
+        <div><b>We don't assess our own work.</b> Where genuine independence is required, an independent assessor consumes our evidence rather than competing with it.</div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="footer">
+    <div class="row">
+      <div>
+        <img class="flogo" src="__LOGO__" alt="Centience">
+        <div class="tag">Technology governance for regulated firms</div>
+      </div>
+      <div class="contact">
+        <span class="gold">centience.ai</span><br>
+        hello@centience.ai<br>
+        (877) 945-7177
+      </div>
+    </div>
+    <div class="fine">Managed technology operations by Compuwork — #77, CRN 2026 Fast Growth 150. This document is an overview of services and is not legal or compliance advice.</div>
+  </div>
+</div>
+
+</body>
+</html>
