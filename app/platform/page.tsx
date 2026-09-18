@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import PlatformPage from "@/page-components/PlatformPage";
 import { buildBreadcrumbSchema } from "@/lib/landingSchema";
 
-const title = "The Centience Platform — Governance Software for Regulated Firms";
+const title = "The Centience Platform — AI Governance Software for Regulated Firms";
 const description =
-  "Continuous technology and AI governance in software. Connect Microsoft 365 or Google, get scored against SEC, FINRA, and HIPAA, and keep a standing evidence trail. Book a demo.";
+  "Find the AI tools already in use, reconcile them against the seats you pay for, and govern them alongside access and records. We implement enterprise AI too. SEC, FINRA and HIPAA. Book a demo.";
 const url = "https://centience.ai/platform";
 
 export const metadata: Metadata = {
@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     "SEC FINRA governance software",
     "continuous compliance monitoring platform",
     "AI governance software financial services",
+    "shadow AI discovery",
+    "AI tool inventory RIA broker-dealer",
+    "AI implementation for regulated firms",
+    "enterprise AI deployment compliance",
+    "AI usage monitoring financial services",
     "evidence vault exam readiness",
     "HIPAA governance platform",
     "technology governance software",
@@ -44,7 +49,7 @@ const softwareSchema = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description:
-    "Continuous technology and AI governance platform for SEC, FINRA, and HIPAA regulated firms — control monitoring, evidence vault, policy generation, incident and Regulation S-P workflows, and control mapping.",
+    "AI and technology governance platform for SEC, FINRA, and HIPAA regulated firms — shadow-AI discovery, AI tool inventory and approval, usage and seat reconciliation, continuous control monitoring, evidence vault, policy generation, incident and Regulation S-P workflows, and control mapping.",
   url,
   provider: { "@id": "https://centience.ai/#organization" },
   offers: {
