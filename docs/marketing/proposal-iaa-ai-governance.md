@@ -124,7 +124,19 @@ Configuration is done with you. No third-party implementation consultant is requ
 
 ## 6. Vendor due diligence
 
-Enclosed separately: information security policy, business continuity and disaster recovery plan, incident response plan, most recent risk assessment, penetration test summary, and sub-processor register.
+Enclosed separately, from the policy set at `../policies/`:
+
+- Information Security Policy, and the twelve policies beneath it — access control, acceptable use, data classification, retention and disposal, encryption and key management, change management and secure development, logging and monitoring, vendor management, risk management, onboarding and offboarding
+- Incident Response Plan, including our 72-hour client breach notification commitment
+- Business Continuity and Disaster Recovery Plan
+- Sub-processor register with data location and assurance status
+
+> **[ORVILLE — RISK ASSESSMENT AND PENETRATION TEST]**
+>
+> The 23 September call stated both were done. If they exist, attach them and delete this block.
+> If they do not, remove them from this list — do not leave an offer of a document that cannot
+> be produced on request. A reviewer who asks for one and is told it is coming has learned
+> something about every other claim in this package.
 
 > **[ORVILLE — DECISION REQUIRED BEFORE SENDING]**
 >
