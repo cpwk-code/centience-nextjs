@@ -14,6 +14,129 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  // ─── The accountability gap after a finding (October 2026) ───────────────
+  {
+    id: 29,
+    slug: "governance-findings-who-chases-remediation-accountability",
+    category: "Governance Operations",
+    title: "Nobody Is Reading the Dashboard: Why Compliance Programs Fail After the Finding, Not Before It",
+    excerpt: "Detection is close to solved. A firm can buy a platform that finds every gap in its environment by Friday. What almost no firm has is the person whose job it is to make somebody fix one — and the rules the SEC, FINRA and NYDFS actually enforce are about implementation, not documentation. Two Sigma paid $90 million for a vulnerability its own people had identified four years earlier.",
+    image: "/assets/blog/centience-findings-accountability-gap.png",
+    author: "Orville Matias",
+    date: "October 2026",
+    metaTitle: "Who Chases the Finding? Remediation Accountability in Compliance Programs | Centience",
+    metaDescription: "Compliance programs fail at follow-through, not detection. What SEC Rule 206(4)-7, FINRA 3110/3120 and NYDFS 500.17 require about implementation, why findings sit unfixed, and how to assign accountability that holds.",
+    content: `
+[STAT_CARDS]
+4 Years | How Long Two Sigma's Known Flaw Sat | Identified by March 2019, addressed August 2023
+$90M | Civil Penalties | Plus $165M voluntarily repaid to affected funds during the investigation
+206(4)-7 | The Annual Review Standard | The adequacy of the policies, and the effectiveness of their implementation
+3120 | FINRA Supervisory Control | Test and verify that supervisory procedures actually work
+[/STAT_CARDS]
+
+A compliance officer said something to us recently that has not stopped being true since.
+
+**The dashboards are picking everything up. Nobody is paying attention to them.**
+
+That is the state of a great many governance programmes in 2026, and it is not a detection problem. Detection is close to solved. A firm can buy a platform this week that will enumerate every misconfiguration, every unreviewed access right, every vendor whose SOC 2 lapsed in March. The findings will be accurate, well-presented, and correctly prioritised.
+
+And then a notification count will grow in the corner of a screen, and the person who could act on it will be closing a deal instead.
+
+## What regulators actually punish
+
+The clearest statement of this in recent enforcement is the SEC's January 2025 action against Two Sigma.
+
+The firm's own employees identified vulnerabilities in certain investment models **in or before March 2019**. The vulnerabilities were addressed in **August 2023**. In the intervening four years the firm did not adopt written policies to address what it knew, and failed to supervise an employee who made unauthorised changes to more than a dozen models.
+
+Two Sigma voluntarily repaid **$165 million** to affected funds and accounts during the investigation and agreed to pay **$90 million** in civil penalties, split evenly between two entities.
+
+[CALLOUT:Rule]
+Read what the Commission charged. Not the existence of a flaw in a model — flaws exist in every complex system, and finding them is evidence the firm was looking. What it charged was the four years between knowing and acting, the absence of a written response to a known problem, and the supervisory failure that let unauthorised changes through in the meantime. **A firm is not penalised for having findings. It is penalised for having findings that nobody owned.**
+[/CALLOUT]
+
+## The rules are written about implementation
+
+This is not a novel reading. It is what the obligations say.
+
+**[SEC Rule 206(4)-7](https://www.sec.gov/rules-regulations/2003/12/compliance-programs-investment-companies-investment-advisers)** requires an adviser to review, no less frequently than annually, the adequacy of its policies and procedures **and the effectiveness of their implementation**. Those are two separate tests, and the second one is the one firms fail. A well-drafted policy that nobody followed does not satisfy the rule; it documents the gap.
+
+**FINRA Rule 3110** requires a supervisory system reasonably designed to achieve compliance. **Rule 3120** goes further and requires a member to test and verify that its supervisory procedures are reasonably designed, amend them where they are not, and report to senior management annually. **Rule 3130** puts the chief executive's name on an annual certification that the firm has processes to establish, maintain, review, test and modify those procedures.
+
+**[NYDFS 23 NYCRR Part 500](https://www.dfs.ny.gov/industry_guidance/cybersecurity)** is the most explicit of the three. Since the 2023 amendments, the annual certification under 500.17(b) is signed by both the highest-ranking executive and the CISO — and the rule contemplates two possible filings. Either material compliance, or **a written acknowledgement that the firm was not compliant, identifying the areas requiring material improvement and setting out a remediation plan with a timeline.**
+
+That second option deserves more attention than it gets. The regulator has built a formal path for *we know, and here is when it will be fixed.* It is only available to a firm that is actually tracking the gap. A firm that cannot say what is outstanding cannot use it.
+
+## Why findings sit
+
+Having watched this across a lot of environments, the failure is almost never ignorance or bad faith. It is four ordinary things.
+
+- **The owner is a category, not a person.** "IT" is assigned the finding. IT is three people and an outsourced provider, and the finding belongs to all of them, which means none.
+- **Nothing happens if it is ignored.** An unclosed finding generates another email. A missed trade deadline generates a phone call. People are rational.
+- **The person who can fix it has a day job that pays.** At a 30-person firm the one who can reconfigure conditional access is the same one onboarding a new fund. If those two compete, the fund wins every time, and the firm is not wrong to make that choice in the moment.
+- **The record of who was told is thin.** Six months later nobody can say when the finding was raised, who it went to, or whether anybody replied. The absence of that record is what turns an operational lapse into a supervisory one.
+
+Notice that none of these is fixed by a better dashboard. Three of the four are fixed by naming a person and attaching a consequence.
+
+## What "assigned" has to mean
+
+An assignment that holds has four parts, and most finding workflows have one of them.
+
+[TIMELINE]
+A named individual | Not a department, not a role, not a shared mailbox. One person, by name, who knows they have it. A finding assigned to a function is a finding assigned to nobody.
+A date | Proportionate to severity, set when the finding is raised rather than negotiated afterwards. A target date set later is a target date chosen to be achievable.
+An escalation path with a time on it | What happens, and to whom, when the date passes. Escalation that depends on somebody noticing is not escalation.
+A record of each step | Raised on, assigned to, acknowledged on, disputed on, extended to, closed on, verified on. This is the artifact that answers an examiner, and it is produced as a by-product of the process or not at all.
+[/TIMELINE]
+
+And the step most often skipped: **a claimed fix is a claim until a re-test confirms it.** Somebody saying a control is remediated and a check proving it operated are different facts. A finding should move to awaiting verification, not to closed, on somebody's word — and then be watched, because a configuration corrected in March is the one that quietly reverts in September.
+
+## Accepted risk is not the same as ignored risk
+
+This is the distinction that most changes how a programme reads from outside, and it costs almost nothing to adopt.
+
+A risk the firm decided to accept — with a named accepting owner, a written rationale, the residual rating, and an **expiry date** — reads as governance. The firm looked, understood, decided, and wrote it down.
+
+The identical technical gap, with no decision record attached, reads as neglect.
+
+Same facts. Opposite conclusion in an examination. And an acceptance that reaches its expiry without renewal should reopen, because an acceptance is a decision with a clock on it, not a permanent waiver.
+
+## The role nobody has named
+
+Here is the uncomfortable part, and it is the reason this gap persists.
+
+**Somebody has to chase.** Not design the programme, not interpret the rule, not test the control — chase. Confirm the finding reached a human, confirm the human accepted it, confirm the date is real, escalate when it is not, and keep the record of each of those.
+
+It is unglamorous, it is nobody's idea of a career, and it is about half of what compliance work actually consists of. Firms are reluctant to resource it because it looks like administration, and compliance teams have been getting leaner for a decade.
+
+The firms that solve it do one of three things. They name an internal owner with genuine authority and accept that it is a real portion of someone's week. They give the accountability to an outsourced compliance partner who already holds the client relationship and can make the call that lands. Or they engage the provider operating the controls to own the remediation loop as well as the detection.
+
+What does not work is assuming the dashboard will do it. The dashboard is doing its job already. It found the thing.
+
+## The question worth answering before somebody else asks it
+
+Pick the oldest open finding in your environment. Not the worst — the oldest.
+
+**Who owns it by name, what date did they commit to, and what happened when that date passed?**
+
+If the answer takes more than a minute to assemble, the gap in the programme is not in detection. And the four years between March 2019 and August 2023 started exactly the same way: with a finding that was correctly identified, accurately recorded, and assigned to nobody in particular.
+
+The Centience Governance Score is a free, five-minute self-assessment that scores your firm 0–100 across cybersecurity, data and records, supervision, infrastructure, and AI governance — including whether your findings carry an owner and a verification record.
+
+[CTA_BUTTON:Get Your Free Governance Score|/assessments/governance-score]
+
+[RELATED_SERVICE:Governance Program Operations|Control testing against your live environment, findings with a named owner and a citation, verification before a finding closes, and an exception register with expiry — operated continuously, alongside your existing IT and your compliance partner.|/governance]
+
+For what an assessor tests when your controls are the ones under review, see [vendor due diligence in 2026](/insights/vendor-due-diligence-third-party-risk-reg-sp-finra-2026), or how Centience supports [financial services firms](/industries/financial-services) specifically.
+
+[FAQ_ACCORDION]
+Is an open finding itself a violation? | Generally no. Findings are the expected output of a programme that is looking. What creates exposure is the gap between identifying an issue and acting on it, the absence of a written response to something known, and the inability to show who owned it. The Two Sigma matter turned on four years of inaction, not on the existence of the vulnerability.
+How quickly do findings need to be remediated? | No rule sets a universal clock. The defensible approach is to publish your own severity-based targets, apply them consistently, and record an exception with a named owner and an expiry when a target cannot be met. A firm measured against its own stated SLA is in a far stronger position than one with no stated target at all.
+Can a finding be accepted rather than fixed? | Yes, and deliberate acceptance is a legitimate risk decision. It requires a named accepting owner with the authority to make it, a written rationale, the residual rating, and a review or expiry date. An acceptance that lapses without renewal should reopen. What is not defensible is an open item with no decision attached to it.
+Who should own remediation if the firm has no internal IT? | Someone by name, in every case. In practice that is either an outsourced compliance partner who holds the relationship and can escalate effectively, or the provider operating the technical controls under an explicit scope. What fails is assigning it to a function or a provider generally, because a finding assigned to an organisation is assigned to nobody in it.
+What evidence should a remediation record contain? | When the finding was raised and by what test, who it was assigned to by name, when they acknowledged it, the committed date and any extensions with reasons, the escalation steps taken, and the re-test that verified the fix with its timestamp. Produced as the process runs, that record answers most of what an examiner asks about supervision without a separate exercise.
+[/FAQ_ACCORDION]
+`,
+  },
   // ─── Vendor Due Diligence / Third-Party Risk (September 2026) ─────────────
   {
     id: 28,
