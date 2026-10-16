@@ -1,6 +1,7 @@
 # SOC 2 Readiness Plan — Centience
 
-**Status:** The decision to pursue SOC 2 was made on 17 September 2026 (§8, decision 1). Scope, timing and tooling remain open.
+**Status:** The decision to pursue SOC 2 was made on 17 September 2026 (§8, decision 1). **Readiness begins 25 September 2026.** Scope, timing and tooling remain open.
+**Policy set:** the formal policies this plan calls for in §5 are now drafted at `../policies/`, pending verification of every `[VERIFY]` marker. The risk assessment and penetration test remain outstanding — both are records of work performed, not documents that can be drafted ahead of the work.
 **Written:** 15 September 2026 · **Updated:** 17 September 2026 with §4a, on what may be claimed publicly before a report exists.
 **Companion:** `completeness-gap-list.md` — several items there are prerequisites here and are marked as such.
 
@@ -190,6 +191,8 @@ Three options, and the honest comparison:
 | 7 | Observation window **start** date, tracked separately from the report date — it is the milestone that unlocks the website claim and the questionnaire answer (§4a) | Orville |
 
 Decision 6 is the real one. The rest are execution.
+
+**Claims made externally, 23 September.** On the International Assets Advisory demonstration the SOC report was described as "in process" and expected "by the end of the year." Against §4 that is not achievable for a Type II, and readiness had not begun at the time it was said. The buyer maintains a vendor due diligence checklist and will hold the date. **Correct this in writing before the proposal is issued** — §4a stage 2 gives the defensible form. This is recorded here rather than left in a chat thread because it is the kind of commitment that is cheap to fix in September and expensive in December.
 
 **Sequencing note following the 17 September decision.** Because the commercial benefit arrives when the observation window opens rather than when the report is issued (§4a), the readiness phase should be scoped to the minimum defensible control set and the window opened early, rather than extended until readiness is complete. Everything not ready at window open can be remediated during it; findings mid-window are normal and are described in the report, whereas a window that has not started cannot be described at all.
 

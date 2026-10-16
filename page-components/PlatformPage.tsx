@@ -15,7 +15,52 @@ import {
   Network,
   Plug,
   Gauge,
+  Radar,
+  ClipboardList,
+  Receipt,
+  SlidersHorizontal,
 } from "lucide-react";
+
+/**
+ * AI governance capabilities.
+ *
+ * Every claim here maps to something that actually executes in
+ * `centience-platform` — discovery across three sources (EC-020), the
+ * discovered-tool inventory, seat reconciliation in `lib/adoption`, and the
+ * monitoring-scope rules. Two of these descriptions exist to state a design
+ * decision rather than a feature, because both are the reason a compliance
+ * buyer trusts the rest:
+ *
+ *  - Discovery reports "we could not look" separately from "we looked and
+ *    found nothing". A clean result produced by a missing Graph scope would
+ *    make a firm stop looking, which is worse than shipping no check at all.
+ *  - Nothing is monitored unless the firm turns it on. A commitment to monitor
+ *    is an examinable obligation, so it is granted, never assumed.
+ *
+ * Do not soften either one into a capability boast. They are the product.
+ */
+const aiGovernance = [
+  {
+    icon: Radar,
+    title: "Shadow-AI discovery that degrades honestly",
+    body: "Three independent signals — OAuth app consents, sign-in activity, and endpoint inventory — because each one alone gives a confident and wrong picture. If a connector or permission is missing, you are told the sweep could not run. You will never be shown a clean result that only means we could not look.",
+  },
+  {
+    icon: ClipboardList,
+    title: "AI tool inventory and approval",
+    body: "Discovered tools land as unapproved, for triage. Once someone records a decision, re-scanning never overwrites it — so the inventory converges on your firm's judgment instead of quietly undoing it every time the check runs.",
+  },
+  {
+    icon: Receipt,
+    title: "Usage and spend, reconciled against what you pay for",
+    body: "Adoption per user across API, chat, code and collaborative surfaces, reconciled against the seats you actually bought. It surfaces both problems at once: licenses nobody uses, and use on accounts you are not paying for.",
+  },
+  {
+    icon: SlidersHorizontal,
+    title: "A monitoring scope you grant, never one we assume",
+    body: "Nothing is monitored by default, and enabling one capability never cascades into others. Firms get findings for committing to procedures they don't follow — so the scope you can sustain is the scope the platform operates.",
+  },
+];
 
 const capabilities = [
   {
@@ -58,8 +103,8 @@ const steps = [
   },
   {
     n: "02",
-    title: "Assess",
-    body: "The governance engine runs its checks against your live environment and returns a 0–100 Governance Score with your priority gaps mapped to the rules.",
+    title: "Discover",
+    body: "The engine sweeps for AI tools already in use and runs its checks against your live environment, returning a 0–100 Governance Score with your priority gaps mapped to the rules.",
   },
   {
     n: "03",
@@ -90,13 +135,13 @@ const PlatformPage = () => (
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">The Centience Platform</p>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-extrabold leading-[1.08] mb-6">
-              The governance platform for regulated firms
+              AI governance, and the control set underneath it
             </h1>
             <p className="text-lg leading-relaxed opacity-75 mb-5 max-w-xl">
-              Continuous technology and AI governance in software: connect your environment, get scored against SEC, FINRA, and HIPAA obligations, and keep a standing evidence trail your examiners will actually accept.
+              Your people adopted AI faster than any approval process could move. Centience finds the tools already in use, reconciles them against what you actually pay for, and governs them alongside access, records, and everything else an examiner asks about.
             </p>
             <p className="text-lg leading-relaxed opacity-75 mb-8 max-w-xl">
-              It runs alongside your internal IT or existing MSP — the governance layer that proves your controls are operating.
+              We implement the AI too — and then govern what we implemented. It runs alongside your internal IT or existing MSP, without replacing either.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button variant="cta" size="xl" asChild>
@@ -135,7 +180,7 @@ const PlatformPage = () => (
                   </div>
                 </div>
                 <div className="space-y-2 text-sm w-full">
-                  {[["Access & MFA", "92"], ["Data protection", "68"], ["Recordkeeping", "71"]].map(([label, val]) => (
+                  {[["Access & MFA", "92"], ["AI governance", "64"], ["Recordkeeping", "71"]].map(([label, val]) => (
                     <div key={label}>
                       <div className="flex justify-between text-warm-white/70 text-xs mb-1"><span>{label}</span><span>{val}</span></div>
                       <div className="h-1.5 rounded-full bg-white/10"><div className="h-1.5 rounded-full" style={{ width: `${val}%`, background: "var(--gradient-gold)" }} /></div>
@@ -144,7 +189,7 @@ const PlatformPage = () => (
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-2 text-xs">
-                {[["Evidence items", "1,240"], ["Controls mapped", "SEC · FINRA · HIPAA"], ["Reg S-P clock", "On track"], ["Open gaps", "6 priority"]].map(([k, v]) => (
+                {[["Evidence items", "1,240"], ["Controls mapped", "SEC · FINRA · HIPAA"], ["AI tools found", "3 unapproved"], ["Reg S-P clock", "On track"]].map(([k, v]) => (
                   <div key={k} className="rounded-lg bg-white/[0.04] border border-white/10 px-3 py-2">
                     <p className="text-warm-white/45 text-[10px] uppercase tracking-wide">{k}</p>
                     <p className="text-warm-white/90 font-semibold">{v}</p>
@@ -158,15 +203,111 @@ const PlatformPage = () => (
       </div>
     </section>
 
+    {/* AI governance */}
+    <section className="py-20 lg:py-28 bg-background">
+      <div className="container mx-auto">
+        <div className="max-w-3xl mb-14">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="gold-line" />
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">AI Governance</p>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
+            You can't govern the AI you can't see
+          </h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Most firms discover their AI exposure the same way: someone asks which tools are in use, and nobody can answer. The tools arrived on personal subscriptions, inside software the firm already trusted, or on accounts that don't carry the firm's domain — and none of it produced a log.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Centience starts by finding out, and is careful about the difference between a clean answer and no answer at all.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {aiGovernance.map((c, i) => (
+            <motion.div
+              key={c.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.45, delay: i * 0.05 }}
+              className="card-premium p-7"
+            >
+              <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                <c.icon className="w-5 h-5 text-accent" />
+              </div>
+              <h3 className="font-display font-bold text-primary text-lg mb-2">{c.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{c.body}</p>
+            </motion.div>
+          ))}
+        </div>
+        <p className="text-sm text-muted-foreground mt-8 max-w-3xl">
+          Policies and the control map come from the same engine, so the AI policy you hand an examiner describes the environment the checks are actually testing.
+        </p>
+      </div>
+    </section>
+
+    {/* AI implementation */}
+    <section className="py-20 lg:py-28 bg-muted">
+      <div className="container mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="gold-line" />
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">AI Implementation</p>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-5 leading-tight">
+              We implement the AI, then govern what we implemented
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Governance is far easier when the deployment was built to be governed. Most firms inherit the opposite — tools adopted individually, with no central tenancy to connect to and no record of anything.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Centience deploys enterprise AI properly: firm-held tenancy rather than personal subscriptions, the connectors your people actually need into Microsoft 365 and your line-of-business systems, sensitive data redacted in real time before it reaches a model, and interactions captured into your own tenant on a retention period you choose.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              You can also hand us an environment somebody else deployed. We'll find what's running first.
+            </p>
+          </div>
+          <div className="space-y-4 lg:pt-16">
+            {[
+              { t: "Enterprise deployment", b: "Firm-held tenancy, SSO and group-based access, so approved tools sit inside the boundary your other controls already assume." },
+              { t: "Connectors, scoped", b: "Integration with the systems your people work in, with access scoped per group rather than granted wholesale." },
+              { t: "Redaction before submission", b: "Client PII and firm-defined sensitive categories removed in real time, before they reach a model — not audited afterwards." },
+              { t: "Capture and retention you set", b: "Interactions retained in your own tenant. A 30-day auto-delete is as supported as a multi-year hold, and the choice is yours to make with counsel." },
+              { t: "Rollout and enablement", b: "Training and usage review, so adoption is something the firm can evidence rather than guess at." },
+            ].map((item, i) => (
+              <motion.div
+                key={item.t}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                className="flex items-start gap-3.5"
+              >
+                <CheckCircle2 size={18} className="text-accent mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-display font-bold text-primary text-sm mb-1">{item.t}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.b}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
     {/* Capabilities */}
     <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto">
         <div className="max-w-2xl mb-14">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="gold-line" />
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">The Wider Control Set</p>
+          </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4 leading-tight">
-            Everything a governance program needs — in one system
+            AI is one domain. The engine covers the rest.
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            The platform is built on a real governance engine, not a checklist. Here's what it does.
+            An AI finding and an access finding are the same kind of object here — an owner, a citation, and a timestamped record of when it was last verified. One engine, one evidence trail.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
