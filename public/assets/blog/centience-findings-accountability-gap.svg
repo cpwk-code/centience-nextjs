@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0b1520"/>
+      <stop offset="100%" style="stop-color:#1a2540"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8b84b"/>
+      <stop offset="100%" style="stop-color:#f5d070"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8b84b;stop-opacity:0.55"/>
+      <stop offset="100%" style="stop-color:#e8b84b;stop-opacity:0.12"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Diagonal rule lines -->
+  <g stroke="#e8b84b" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="630" x2="630" y2="0"/>
+    <line x1="200" y1="630" x2="830" y2="0"/>
+    <line x1="400" y1="630" x2="1030" y2="0"/>
+    <line x1="600" y1="630" x2="1200" y2="30"/>
+    <line x1="800" y1="630" x2="1200" y2="230"/>
+  </g>
+
+  <!-- Watermark -->
+  <text x="600" y="392" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif" font-size="150" font-weight="900"
+        fill="#e8b84b" fill-opacity="0.04" text-anchor="middle" letter-spacing="6">UNASSIGNED</text>
+
+  <!-- The four-year gap, right side -->
+  <g transform="translate(700, 150)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="14" font-weight="700" fill="#e8b84b" fill-opacity="0.6" letter-spacing="2.6">THE GAP THAT GETS CHARGED</text>
+
+    <!-- Timeline spine -->
+    <line x1="8" y1="46" x2="8" y2="286" stroke="#e8b84b" stroke-opacity="0.2" stroke-width="1.5"/>
+
+    <!-- Identified -->
+    <circle cx="8" cy="56" r="7.5" fill="none" stroke="#e8b84b" stroke-opacity="0.8" stroke-width="2.5"/>
+    <text x="30" y="52" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="21" font-weight="700" fill="#ffffff" fill-opacity="0.92">Identified</text>
+    <text x="30" y="76" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="16" font-weight="500" fill="#f5d070" fill-opacity="0.72">by March 2019</text>
+
+    <!-- The silence -->
+    <g transform="translate(0, 104)">
+      <rect x="2" y="0" width="12" height="130" fill="url(#fade)" opacity="0.35"/>
+      <text x="30" y="52" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+            font-size="40" font-weight="900" fill="#e8b84b" fill-opacity="0.85">4 years</text>
+      <text x="30" y="80" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+            font-size="16" font-weight="500" fill="#ffffff" fill-opacity="0.45">no written response,</text>
+      <text x="30" y="102" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+            font-size="16" font-weight="500" fill="#ffffff" fill-opacity="0.45">no owner</text>
+    </g>
+
+    <!-- Addressed -->
+    <circle cx="8" cy="276" r="7.5" fill="#e8b84b" fill-opacity="0.85"/>
+    <text x="30" y="272" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="21" font-weight="700" fill="#ffffff" fill-opacity="0.92">Addressed</text>
+    <text x="30" y="296" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="16" font-weight="500" fill="#f5d070" fill-opacity="0.72">August 2023</text>
+
+    <!-- Penalty -->
+    <g transform="translate(0, 332)">
+      <line x1="0" y1="0" x2="330" y2="0" stroke="#e8b84b" stroke-opacity="0.16" stroke-width="1"/>
+      <text x="0" y="30" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+            font-size="27" font-weight="800" fill="#f5d070" fill-opacity="0.9">$90M penalty</text>
+      <text x="0" y="54" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+            font-size="15" font-weight="500" fill="#ffffff" fill-opacity="0.42">plus $165M repaid · SEC, Jan 2025</text>
+    </g>
+  </g>
+
+  <!-- Left: title block -->
+  <g transform="translate(88, 196)">
+    <rect x="0" y="-56" width="58" height="4" fill="url(#gold)"/>
+    <text x="0" y="-22" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="17" font-weight="700" fill="#e8b84b" letter-spacing="3.2">GOVERNANCE OPERATIONS</text>
+
+    <text x="0" y="34" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="50" font-weight="800" fill="#ffffff">Nobody Is Reading</text>
+    <text x="0" y="94" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="50" font-weight="800" fill="url(#gold)">the Dashboard</text>
+
+    <text x="0" y="150" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="21" font-weight="500" fill="#ffffff" fill-opacity="0.58">Why compliance programs fail after</text>
+    <text x="0" y="182" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="21" font-weight="500" fill="#ffffff" fill-opacity="0.58">the finding, not before it</text>
+  </g>
+
+  <!-- Footer brand -->
+  <g transform="translate(88, 556)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="23" font-weight="800" fill="#ffffff" fill-opacity="0.9" letter-spacing="1.2">CENTIENCE</text>
+    <text x="0" y="26" font-family="system-ui, -apple-system, 'Segoe UI', 'Liberation Sans', sans-serif"
+          font-size="15" font-weight="500" fill="#e8b84b" fill-opacity="0.68" letter-spacing="0.6">Technology governance for regulated firms</text>
+  </g>
+</svg>
