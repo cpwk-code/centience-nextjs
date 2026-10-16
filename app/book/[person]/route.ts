@@ -22,10 +22,30 @@ import { NextResponse } from 'next/server';
  *     and never intend to move. This one stays revocable.
  *
  * To add someone: add an entry below. The key becomes the public path.
+ *
+ * Two URL shapes come out of Microsoft Bookings and they are not equally
+ * durable:
+ *
+ *   /book/<mailbox>/                  — a published shared booking page.
+ *                                       Stable, publicly reachable, no code.
+ *   /bookwithme/user/<id>/meetingtype/<id>?bookingcode=<uuid>
+ *                                     — a personal "book with me" link. The
+ *                                       booking code rotates and the link dies
+ *                                       when the meeting type is changed or
+ *                                       removed.
+ *
+ * Prefer the first shape where a mailbox exists for the purpose. If a personal
+ * link stops resolving, it needs regenerating in Bookings — no redirect here
+ * can repair it.
  */
 const BOOKING_LINKS: Record<string, string> = {
+  // Personal "book with me" page. Carries a rotating booking code.
   orvillem:
     'https://bookings.cloud.microsoft/bookwithme/user/d262028309eb4a55b36d34827efbd937%40Compuwork.ai/meetingtype/r3HBcBLKrk25a4c7QwJ3rQ2?bookingcode=d3e1335e-dda2-4ce2-9347-4a915524bb08&anonymous&ismsaljsauthenabled',
+
+  // Published shared booking page for the support mailbox — the durable shape.
+  support:
+    'https://bookings.cloud.microsoft/book/CentienceSupport@centience.ai/?ismsaljsauthenabled=true',
 };
 
 export async function GET(
