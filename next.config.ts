@@ -210,6 +210,21 @@ const nextConfig: NextConfig = {
         destination: '/industries/financial-services',
         permanent: true,
       },
+
+      // ─── Branded booking links ───────────────────────────────────────────
+      // centience.ai/book/<person> is handled by app/book/[person]/route.ts,
+      // not here — a Bookings URL carries valueless query flags that this
+      // redirector would rewrite, and the response needs `no-store` so a
+      // rotated booking code is never cached into a dead link. The reasoning
+      // is in that file.
+      //
+      // Bare /book has no page of its own; send it somewhere useful rather
+      // than 404 when someone trims the path.
+      {
+        source: '/book',
+        destination: '/contact',
+        permanent: false,
+      },
     ];
   },
 
