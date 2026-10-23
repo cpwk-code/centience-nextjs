@@ -204,94 +204,117 @@ Also easier to defend in negotiation — the client can see what drives it.
 
 Define what is included — quarterly review, monthly triage, a stated number of hours — and what is billable beyond it.
 
-### 5.7 Standalone platform pricing — the app sold on its own
+### 5.7 Platform pricing — the app sold on its own
 
-**Status: proposed, not decided. Nothing here is quotable yet.**
+**Status: proposed. Nothing published yet. Supersedes the tier bands drafted on 17 September**, which were built before the market comparables were gathered and before two live prospects supplied real numbers.
 
-§5.1–5.6 price the bundled offer — platform access plus a named governance engineer. This subsection answers a question the document has never addressed: **what the app costs when a firm buys only the app.** That became live in September 2026, because the platform is now going into proposals (Plural) and will be quoted again shortly.
+§5.1–5.6 price the bundled offer — platform plus a named governance engineer. This subsection prices **the app**, which is now going into proposals.
 
-#### 5.7a The comparable that sets the buyer's anchor
+#### 5.7a What the market actually charges
 
-Skematic publishes its price list openly, which is unusual in this category and makes them the reference point whether or not we meet them in deals.
+Gathered 23 September 2026. Sources in §14.
 
-| Line | Basic | Standard | Premium |
+| Vendor | What it is | Price | Model |
 |---|---|---|---|
-| Firm Compliance, annual | $6,000 | $12,000 | $24,000 |
-| Employee Compliance, annual | $6,000 | $12,000 | $24,000 |
-| Implementation, one-off | $1,000 | $2,000 | $2,000 |
+| **Skematic** | Compliance workflow, policies, cases | **$6K / $12K / $24K** per line, +$1–2K implementation | Tiered flat by entity and geography, capped seats, overage $1,500/full user |
+| **Vanta** | Compliance automation | $12–28K (1–50 staff) · $35–70K (50–200) · $100–250K+ (500+). Median ~$20K. +$5K per framework | Employee count × frameworks |
+| **Drata** | Compliance automation | Foundation ~$15K (≤50 FTE, one framework) · $32–65K mid-market. Median ~$25K | Employees × frameworks × modules |
+| **Hadrius** | RIA/BD compliance + e-comms | Unpublished. Skematic's own comparison reports Hadrius discounting to **half price, or giving features away, to win** | Bundled |
+| **Nightfall** | AI DLP + AI governance | **$15K for up to 100 users** — $150/user/yr. *Quoted directly to us, not public* | Per user |
+| **Prompt Security** | DLP | **$2.50/user/month, no minimum** — available to us as a resold layer. *Direct* | Per user |
+| **Smarsh** | Archiving | From ~$5/user/month | Per user, per channel |
+| **AI governance category** | Dedicated platforms | $30–100K/yr small and mid-market · $150–500K+ enterprise | Models governed, or people |
 
-Mechanics worth copying, each for a reason:
+Benchmarks for the same buyer's wallet: outsourced CCO **$30–125K/yr**, ongoing compliance consulting **$8–15K/yr**, an SEC examination roughly **$70K** for a sub-$500M RIA.
 
-- **Firm tiers gate on entities and geographies**, not headcount. Employee tiers gate on seats (20 / 50 / 150). They separated the two axes rather than forcing one to stand in for the other.
-- **Seats are capped per tier with priced overage** — $1,500 per full-access user per year, $500 per limited-access user. The tiers are engineered so that upgrading is cheaper than buying overage, which makes expansion happen without a salesperson.
-- **Add-ons are discrete published SKUs** — Legal Document Manager at $2,500/year, $50 per additional document.
-- **Custom pricing begins only above 151 employees.** The entire SMB range is on the page; negotiation is reserved for deals large enough to repay it.
-- **The list is dated** — "effective through 30 September 2026." They can reprice annually without reopening a single contract, and it creates a deadline nobody had to manufacture.
+**Three readings that matter.**
 
-Scale reported on their own site: 450+ firms, $3.3T AUM, 10+ countries. A real business assembled from small tickets and almost no negotiation.
+**AI-only is priced above compliance workflow, not below it.** The dedicated AI governance category starts near $30K; Skematic's entire firm line tops out at $24K. A prospect saying "we only want the AI part" is not asking for a discount.
 
-#### 5.7b What the comparable does and does not constrain
+**Almost nobody publishes.** Skematic is the exception and says so on its own site. Publishing to the top of the ICP remains the single highest-leverage structural choice available, because it removes the pricing conversation from most deals and is the only way one person carries many accounts.
 
-**It constrains the anchor.** A buyer in our segment believes compliance software costs $6–24K per line, because an incumbent told them so in public. We can price above that. We cannot price four times above it unless the difference is visible in the first meeting.
+**Hadrius will undercut on price.** That cannot be beaten and should not be chased. The counter is the live-tenant demo — a discounted document repository still cannot test a live environment, which is what produced the DMARC finding in the Plural demo.
 
-**It does not constrain the ceiling, because Skematic is a different kind of product.** Theirs is a system of record and workflow — policies, tasks, cases, attestations, pre-clearance, marketing review. It does not connect to a tenant and test whether a control is actually operating. That gap is precisely what Jason at Plural named unprompted when he said our GRC module beats Hadrius' document-management module *"because it is tied to technology requirements."*
+#### 5.7b The two-competitor frame
 
-**The live demo is what carries the premium.** In the 14 September demo the platform flagged DMARC disabled for the prospect's own domain, live, during the call. No system of record produces that moment at any price. It is the single most efficient justification we have for pricing above the published band, and it argues for making a consented read-only connection a standard part of the demo rather than an implementation step.
+The lines map to different comparables, and a buyer can check both:
 
-#### 5.7c Recommended structure
-
-Same shape as Skematic — base gated by complexity, seat rider on top — with four deliberate departures.
-
-| Element | Decision | Why |
+| Line | Competes with | Their price |
 |---|---|---|
-| **Gating variable** | **Registrations × connected systems.** RIA / BD / dual / NFA / NYDFS-covered, and how many tenants we test against | Consistent with §5.4. Entities and geographies are the right axis for a policy system; ours is regulatory footprint, which is both our cost driver and our value driver |
-| **List price** | **Published, up to the top of the ICP.** Custom only above ~150 employees | This is the decision that determines sales motion. A published list removes the pricing conversation from most deals, which is the only way one person carries many accounts. An unpublished price makes every sale a work-through and caps deals per head — the same constraint as ARR per governance engineer, arriving through a different door |
-| **Band** | **Roughly 2× the Skematic band — indicatively $12K / $24K / $48K annual** | Justified by live control testing, which they cannot do. Marked indicative, not decided — see §5.7f |
-| **Onboarding** | **A separate, published scoping fee, materially larger than Skematic's $1–2K** | Their fee is subsidised to reduce friction. Ours corresponds to the real cost: determining the applicable rule set was the one objection raised in the Plural demo, and it is genuine work. Publishing it recovers the cost, signals that scoping is not a setup wizard, and gives us something to discount that is not the subscription |
-| **AI governance** | **A second published line, priced per seat, with a bundle discount** | Supersedes the earlier suggestion of a percentage uplift. A separate line with a *published* price does not create a second negotiation; an unpublished one does. And the AI observation layer is the one component that genuinely scales with headcount, because it counts paid seats |
-| **Partner seats** | **Free and uncapped, stated on the page** | The one place not to copy Skematic. They cap full-access users at 2 because compliance teams are small. Our channel depends on Abide, NextReg and PARC holding logins into their clients' accounts — that is how the platform reaches the next twenty prospects. Charging $1,500 for the consultant's seat taxes our own distribution |
+| Platform access | Skematic | $6–24K |
+| AI governance module | Nightfall | $15K / 100 users |
 
-#### 5.7d Why not per user
+A firm assembling the same coverage separately pays **$21–39K for two systems and two evidence trails**. That is the number to price into, and it is the sentence to say when a Nightfall quote appears — which with a technical buyer, it will.
 
-Per-seat pricing alone fails here for a structural reason: **headcount drives neither our cost nor our value.**
+**Be honest internally:** at 100 seats Centience is around $27K before DLP against Nightfall's $15K. That is not the same product at a premium. The comparison is Nightfall *plus* a compliance platform, and Centience lands inside that range as one system.
 
-A 15-person RIA and a 60-person RIA with the same registrations have the same regulatory scope, the same check set, the same onboarding pass and the same rule-scoping cost. At $75/user/month one pays $13.5K and the other $54K for identical work. Meanwhile a 20-person dual registrant with NFA exposure — genuinely our most expensive account to run — pays less than a 40-person single-registration adviser that is trivial.
+#### 5.7c The list
 
-Pure per-seat therefore produces the worst of both ends: the small account may sit below cost to serve, and the large one reaches a number big enough to trigger procurement, which is the friction per-user pricing exists to avoid.
+| | |
+|---|---|
+| **Platform access** — one connected tenant, unlimited entities and registrations, evidence record, policy and WSP engine, findings with owner and citation, exam export | **$12,000/yr** · +$6,000 per additional tenant |
+| **AI Governance module** — discovery, tool inventory and approval, usage and spend reconciled against purchased seats, monitoring scope, control map, AI policy | **$9,000** ≤50 seats · **$15,000** ≤100 · **$28,000** ≤250 · overage **$150/seat/yr** |
+| **DLP and redaction** — optional, and configurable per group | **$4/user/month** |
+| **Other governed domains** — identity and access · records and retention · device and infrastructure · third-party · incident | **$6–8,000** each · all six **$30,000** |
+| **Implementation** | **$3,500** one-off |
+| **Partner seats** | Free and uncapped |
+| Custom | Above 500 governed users |
 
-Worth noting that the adjacent category has already converged on the hybrid. Vanta and Drata price on employee count **plus** number of frameworks. Buyers in this segment have seen the shape and will not argue with its logic.
+**Set overage so it stays cheaper than the next band well past it.** At $150/seat, 150 users costs $22.5K against $28K for the 250 band — overage wins until roughly 187 seats. Nobody is ever pushed into a tier they do not need, which is the opposite of Skematic's tier engineering and the right choice for a land-and-expand motion.
 
-#### 5.7e Anchor against the compliance retainer, not the IT budget
+#### 5.7d Seats mean governed humans, not connected tools
 
-A positioning decision hiding inside a pricing decision.
+The sharpest question and the one most easily got wrong.
 
-Priced as a fraction of IT spend, we are a tool and we compete with tools. Priced as a fraction of the compliance programme — against the Abide or NextReg retainer, against one Drawbridge assessment, against answering the same DDQ twice — we are part of the programme, which is where both budget authority and willingness to pay sit.
+- The review burden is per person. A CCO supervises people, not integrations.
+- A buyer can count their people. Connection counts change weekly and invite disputes.
+- **Decisive: per-connection pricing charges the client more for routing more tools through governance.** That pushes them to approve fewer tools, which pushes staff to shadow AI — the exact risk being sold against. Never price against your own outcome.
 
-That is also how a premium becomes something a client wants rather than resents. A premium is wanted when it is indexed to something the buyer already believes is expensive and painful. Our stated promise is *answer the questionnaire once* (`one-pager-vendor-due-diligence.md`); the price should be visibly less than the cost of answering it twice, and the page should say so.
+Connections belong in the platform fee as **connected tenants**, because each tenant is a distinct environment to connect, test and maintain. Not each app.
+
+> **Tenants drive the platform fee. Humans drive the seat fee. Apps drive neither.**
+
+#### 5.7e DLP is an add-on, and the objection runs both ways
+
+Strac is only required where DLP is in scope, and Prompt Security supplies the same layer at **$2.50/user/month with no minimum**. At a $4 sell price that is a 37% margin on a line worth about $1,800 a year at a hundred seats — **do not optimise it for margin.** Its value is that "redaction before submission" stays a true claim, and that a governance-only competitor cannot match it.
+
+**No minimum is the part that matters, because it makes per-group DLP possible.** Redaction can run for the groups where it helps and stay off where client PII in the model *is* the workload — an AML analyst, for instance. That is a better answer than either "you need DLP" or "fine, no DLP".
+
+**The objection is not stable, and it inverts.** IAA's CISO pushed back on redaction on 17 September — *"we need the PII uploaded because that identifies issues for us"* — and asked for it on 23 September, once he understood that the alternative was granting Centience read access to his file server. Whether DLP reads as intrusive or as privacy-preserving depends entirely on what it is being compared against. Ask which comparison the buyer is making before assuming the answer.
 
 #### 5.7f The design-partner floor — **[OPEN, and time-sensitive]**
 
-**Plural and Tabluex have both closed at heavily discounted numbers**, deliberately, in exchange for feedback and proof of concept. That was the right call while the concept was unproven. It creates one specific liability now that it is proving out.
+**Plural and Tabluex both closed at heavily discounted numbers**, deliberately, for feedback and proof of concept. Right while the concept was unproven; a liability now that it is proving out.
 
-**Every price set during proof of concept becomes the floor when the product is sold properly.** The mechanism is not that we feel bound by it — it is that the client believes it is the price, tells a peer it is the price, and renewal becomes a price-increase negotiation starting from zero, which is the hardest conversation in software.
+**Every price set during proof of concept becomes the floor when the product is sold properly.** Not because we feel bound by it, but because the client believes it is the price, tells a peer it is the price, and renewal becomes a price-increase negotiation from zero.
 
-The fix is cheap and has to happen before either account renews:
+Before either renews:
 
-1. **Put a list price on paper, even retroactively.** Both agreements should state the list price and express what they paid as a named discount off it. A number with no list price beside it *is* the list price.
-2. **Tell them they are design partners.** This is the part that converts a low price from a market signal into a gift. A client who thinks $X is the price tells peers that $X is the price. A client who knows they received design-partner terms as the first account tells peers about the discount they earned — which is a reference rather than a leak.
-3. **Name what we get in exchange** — case study rights, reference calls, roadmap input, logo use. A discount without a stated exchange is just a low price.
-4. **Write the renewal step-up into the original agreement**, as a schedule rather than an intention. Term one at the design-partner rate, term two at a defined percentage of list, term three at list. Agreed while they are grateful, not while they are renewing.
-5. **Never quote the design-partner number verbally without the list price alongside it.**
+1. **Put a list price on paper, retroactively if need be.** A number with no list price beside it *is* the list price.
+2. **Tell them they are design partners.** This converts a low price from a market signal into a gift. A client who thinks $X is the price leaks $X; a client who knows they earned the first-account discount tells peers about the discount.
+3. **Name what we get in exchange** — case study rights, reference calls, roadmap input, logo.
+4. **Write the renewal step-up into the original agreement**, as a schedule rather than an intention. Agreed while they are grateful, not while they are renewing.
+5. **Never quote the design-partner number verbally without the list price beside it.**
 
-The same discipline applies to the next quote. Riverstone and the Abide cohort will price against whatever exists on paper by then.
+This is now urgent for a second reason. Plural's compliance officer is loading policies, desktop procedures and version control into the app; he is turning it into his document system of record. That is Skematic's core business and it is switching cost accruing at a design-partner price.
 
-#### 5.7g What is still missing before this can be decided
+#### 5.7g ICP consequence, accepted deliberately
 
-**The cost to serve one platform-only account.** Item 5 in §12 asks for accounts per governance engineer for the bundled offer; the platform-only figure is a different and smaller number, and it is what determines whether the base tier is profitable standalone. §5.2 already requires that the base be profitable on its own — *"if it is a loss-leader we are running a services business with a software cost centre"* — and that test cannot be applied to a band we have not costed.
+At this structure a 15-person single-entity RIA pays roughly $29K against Skematic's $6–12K. **That deal is not winnable and should not be chased.**
 
-The indicative $12K / $24K / $48K above is a band to test against buyers, not a decision. It is consistent with the anchor, with the compliance-retainer framing, and with being roughly double an incumbent we materially outperform on the one axis the buyer can see in ninety seconds. That is enough to justify putting it in front of someone. It is not enough to publish.
+**The app's ICP is 50–500 governed users, multi-entity** — which describes both live prospects. IAA is two RIAs and three broker-dealers; Plural is a BD, an RIA and Plural Markets across three countries. Smaller firms remain a *services* customer, not a platform customer.
 
----
+That is narrower than the memo's §5.3 beachhead of 10–150 employees, and the difference is deliberate: 10–150 is right for the bundled governance offer, where a named engineer carries the value. It is wrong for the app sold alone.
+
+#### 5.7h Still open
+
+| # | Question | Blocks |
+|---|---|---|
+| 1 | Cost to serve one **platform-only** account, excluding services. §5.2 requires the base be profitable standalone and that test cannot be applied to an uncosted band | Publishing the list |
+| 2 | Whether Prompt Security's $2.50 carries any volume or term commitment beyond "no minimum" | The DLP line |
+| 3 | A platform reference who is a paying customer at list, not a design partner | Every competitive deal — IAA asked for one on 23 September |
+
+The band is consistent with the anchors, with the compliance-retainer framing, and with being roughly double an incumbent we outperform on the one axis a buyer can see in ninety seconds. That is enough to put in front of someone. It is not yet enough to publish.
 
 ## 6. Product requirements this model creates
 
@@ -600,7 +623,10 @@ Price platform access as something worth selling on its own. The failure mode is
 | 17 | Platform list price confirmed, and the tier gating variable fixed (§5.7c) | Orville | Plural and Tabluex renewal, Riverstone quote, Abide cohort |
 | 18 | Cost to serve one **platform-only** account — the smaller sibling of item 5 | Orville | Whether the base tier is profitable standalone, per §5.2 |
 | 19 | Do Plural and Tabluex have written design-partner terms stating list price, the exchange, and a renewal step-up schedule? (§5.7f) | Orville | Reference-price integrity, both renewals |
-| 20 | What Hadrius charges, by firm size | Orville → market | Sizing the premium over the published Skematic band |
+| ~~20~~ | ~~What Hadrius charges~~ **PARTLY ANSWERED (§5.7a)** — unpublished, and Skematic reports them discounting to half price or giving features away to win. Residual: not a number to chase | — | — |
+| 21 | Cost to serve one platform-only account, excluding services (supersedes the framing in item 18) | Orville | Publishing the price list |
+| 22 | Does Prompt Security's $2.50/user carry any volume or term commitment beyond "no minimum"? | Orville → Prompt | The DLP line |
+| 23 | A platform reference who is a paying customer at list rather than a design partner | Orville | Every competitive deal — IAA asked on 23 September |
 
 Items 8–11 came from the memo's §12; items 12–14 fall out of the enforcement architecture in §10. Items 17–20 fall out of §5.7.
 
@@ -642,7 +668,10 @@ This sits alongside §2.2's advice not to promise benchmarking, and both hold: d
 
 ## 14. Sources
 
-Skematic pricing (§5.7a): [skematic.com/pricing](https://skematic.com/pricing/), retrieved 17 September 2026, list stated effective through 30 September 2026.
+**Pricing comparables (§5.7a), retrieved 23 September 2026:**
+[Skematic pricing](https://skematic.com/pricing/) (list stated effective through 30 September 2026) · [Skematic vs Hadrius](https://skematic.com/hadrius/) · [Vanta pricing](https://sprinto.com/blog/vanta-pricing/) · [Drata pricing](https://sprinto.com/blog/drata-pricing/) · [RIA compliance software pricing](https://regfin.com/blog/ria-compliance-software-cost) · [Smarsh pricing](https://www.vendr.com/marketplace/smarsh) · [Nightfall pricing](https://www.nightfall.ai/pricing) · [AI governance cost ranges](https://elevateconsult.com/insights/ai-governance-framework-costs-and-budget-ranges-to-expect/)
+
+Nightfall's $15K/100 users and Prompt Security's $2.50/user/month were quoted to us directly and are not public. Treat both as commercially sensitive.
 
 Drawbridge: [drawbridgeco.com](https://drawbridgeco.com/) · [Solutions](https://drawbridgeco.com/solutions) · [Francisco Partners investment](https://www.franciscopartners.com/media/drawbridge-announces-strategic-growth-investment-from-francisco-partners) · [Long Ridge on the Francisco round](https://long-ridge.com/long-ridge-portfolio-company-drawbridge-announces-strategic-growth-investment-from-francisco-partners/) · [Long Ridge initial investment](https://www.privateequitywire.co.uk/long-ridge-equity-partners-invests-drawbridge/)
 
