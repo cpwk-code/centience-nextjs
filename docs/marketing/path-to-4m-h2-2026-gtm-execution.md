@@ -115,7 +115,7 @@ Wk 2: remediate top gaps (or ticket to Managed ops) → deliver first evidence p
 Stand this up in the background so 2027 starts with pipeline, but don't let it steal H2 focus:
 - **The wedge:** one CTA everywhere — "Get your Governance Score." Gated Score landing page on the site (Phase A PDF output feeds it).
 - **Warm-first order:** base → whale referrals → channel (custodians, PE operating partners, compliance consultants) → cold last.
-- **Channel is the highest-ROI "new" source** — one custodian/PE/consultant relationship > 100 cold emails for this buyer. Line up the first 3–5 partner conversations in Q4.
+- **Channel is the highest-ROI "new" source** — one custodian/PE/consultant relationship > 100 cold emails for this buyer. Line up the first 3–5 partner conversations in Q4. → **Target list, commission structure, and legal guardrails: `partner-referral-program.md`.**
 - **Cold infrastructure (Q4 build):** Apollo Phase-1 finance lists → Marketing Shed LinkedIn brief → Resend post-Score nurture + "Governance Brief" newsletter → Make routing Score→HubSpot. Warm the sending domains now so they're ready in January.
 - **Founder LinkedIn authority cadence** (4–5×/wk, the "examiner" narrative): compounds, near-zero cost, start now.
 
